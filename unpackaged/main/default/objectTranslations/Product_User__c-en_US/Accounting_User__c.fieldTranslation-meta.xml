@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Used by Mycase to identify a platform user that is also identified as an accounting user. --></help>
+        <label><!-- Accounting User --></label>
+        <name>Accounting_User__c</name>
+    </CustomFieldTranslation>

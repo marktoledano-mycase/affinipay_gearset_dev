@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment</fullName>
+    <active>true</active>
+    <label>Payment</label>
+    <picklistValues>
+        <picklist>Card_Vault_Feature__c</picklist>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Integration_Owner__c</picklist>
+        <values>
+            <fullName>First Party</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Third Party</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Payment_Feature__c</picklist>
+        <values>
+            <fullName>Hosted Fields</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JS Tokenization</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment Page</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quick Bill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Titan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Titan Quick Bill</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product_Line__c</picklist>
+        <values>
+            <fullName>LawPay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MyCase</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Soluno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Woodpecker</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reconciliation_Feature__c</picklist>
+        <values>
+            <fullName>All</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Origin Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Titan</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Signup_Feature__c</picklist>
+        <values>
+            <fullName>Custom Flow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Landing Page</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Our Flow</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Disabled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enabled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Trial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requested</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

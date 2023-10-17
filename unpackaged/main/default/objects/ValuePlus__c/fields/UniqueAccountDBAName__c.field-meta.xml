@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UniqueAccountDBAName__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( (CreatedDate &lt; DATETIMEVALUE(&quot;2016-12-15 08:00:00&quot;))&amp;&amp; AND(NOT(ISBLANK(ProfitStars_Merchant_ID__c))), Account_DBA_Name__c, (Account_DBA_Name__c +&#39;-&#39;+ CASESAFEID(Id)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>UniqueAccountDBAName</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

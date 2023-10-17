@@ -1,0 +1,24 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" controller="MyCaseBankAccountButtonsController">
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="actionName" type="String"/>
+    <aura:attribute name="successMessage" type="String"/>
+    
+    <aura:attribute name="record" type="Bank_Account__c" />
+    
+    <force:recordData layoutType="FULL"
+                  recordId="{!v.recordId}"
+                  targetFields="{!v.record}"/>
+    
+    <div class="slds-card slds-m-around_x-small">
+        <Center>
+            <br/>
+            <!-- This is the button part -->
+            <p>
+                <lightning:button variant="brand" label="Push Bank Account" onclick="{!c.pushBankToPS}" />
+                <lightning:button variant="brand" label="Add Bank Account To Vantiv" onclick="{!c.addBankToVantiv}" />
+                <lightning:button variant="brand" label="Update Bank Account in Vantiv" onclick="{!c.updateBankInVantiv}" />
+            </p>
+            <br/>
+        </Center>
+    </div>
+</aura:component>

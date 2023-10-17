@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Units_Managed</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISBLANK( Minimum_Units_Managed__c )</errorConditionFormula>
+    <errorMessage>Minimum Units Managed value is incorrect. Please enter 0 if units managed is not applicable.</errorMessage>
+</ValidationRule>

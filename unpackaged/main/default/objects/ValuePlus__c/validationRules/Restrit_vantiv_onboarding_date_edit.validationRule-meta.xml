@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrit_vantiv_onboarding_date_edit</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF($User.Id == &#39;00580000005IGTL&#39;, false, 
+IF($User.Id == &#39;0053g000001K3J6&#39;, false, 
+IF($User.Id == &#39;00580000008A1Km&#39;, false, 
+
+IF( 
+AND( 
+NOT( 
+ISBLANK( 
+PRIORVALUE(Vantiv_Enrolled_Date__c) 
+) 
+), 
+ISCHANGED(Vantiv_Enrolled_Date__c), 
+NOT( 
+OR( 
+ISPICKVAL(Vantiv_Onboarding_Status__c, &#39;Retry&#39;), 
+ISPICKVAL(PRIORVALUE(Vantiv_Onboarding_Status__c), &#39;Retry&#39;) 
+) 
+) 
+), 
+true, false) 
+) 
+) 
+)</errorConditionFormula>
+    <errorDisplayField>of_Monthly_Contributions__c</errorDisplayField>
+    <errorMessage>Date can&#39;t be changed. Merchant was already onboarded in Vantiv.</errorMessage>
+</ValidationRule>

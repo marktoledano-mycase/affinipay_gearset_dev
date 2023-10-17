@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Outreach_Sync__c</fullName>
+    <description>Enabling Accounts to auto-sync with Outreach</description>
+    <externalId>false</externalId>
+    <formula>IF( AND( 
+
+OwnerId != &quot;0053g000001K3XAAA0&quot;, 
+
+OwnerId != &quot;0053g000000nESpAAM&quot;,
+
+RecordType.Name = &quot;MyCase Account&quot;),
+
+TRUE, FALSE)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Enabling Accounts to auto-sync with Outreach</inlineHelpText>
+    <label>Outreach Sync</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

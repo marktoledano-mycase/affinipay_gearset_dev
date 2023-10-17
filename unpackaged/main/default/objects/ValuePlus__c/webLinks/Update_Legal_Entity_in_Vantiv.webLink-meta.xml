@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Update_Legal_Entity_in_Vantiv</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Update Legal Entity in Vantiv</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)} 
+var c = new sforce.SObject(&quot;ValuePlus__c&quot;); 
+c.id = &quot;{!ValuePlus__c.Id}&quot;; 
+
+if(&quot;{!ValuePlus__c.Vantiv_Legal_Entity_Id__c}&quot; == null || 
+&quot;{!ValuePlus__c.Vantiv_Legal_Entity_Id__c}&quot; == &#39;&#39; || 
+&quot;{!ValuePlus__c.Vantiv_Legal_Entity_Id__c}&quot; == undefined) 
+{ 
+alert(&#39;Vantiv legal Entity Id is unavailable. Please enroll the merchant before update&#39;); 
+}
+else if(&#39;Approved&#39; != &quot;{!ValuePlus__c.Vantiv_Onboarding_Status__c}&quot;) 
+{ 
+alert(&#39;Vantiv onboarding status is not &quot;Approved&quot;. Please update the record and retry.&#39;); 
+}
+else if(&#39;Ready To Update&#39; != &quot;{!ValuePlus__c.Vantiv_Legal_Entity_Update_Status__c}&quot;) 
+{ 
+alert(&#39;Vantiv update legal entity status is not &quot;Ready To Update&quot;. Please update the record and retry.&#39;); 
+} 
+else 
+{ 
+var r = confirm(&#39;Update will be sent to Vantiv; continue?&#39;) 
+if(r==true) 
+{ 
+var result = sforce.apex.execute(&quot;VantivButtons&quot;, &quot;callLegalEntityUpdateReq&quot;, { 
+id: &quot;{!ValuePlus__c.Id}&quot;}); 
+var parsed = JSON.parse(result); 
+if (parsed.didPass == true) 
+{ 
+document.location.reload(true); 
+alert(parsed.result);	
+} 
+else 
+{ 
+document.location.reload(true); 
+alert(parsed.result); 
+} 
+} 
+}</url>
+</WebLink>

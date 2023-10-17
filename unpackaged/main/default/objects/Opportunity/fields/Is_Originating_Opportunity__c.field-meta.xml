@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Originating_Opportunity__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is populated upon Lead conversion or when an Opportunity is created from a Contact. It is used to calculate SDR and BDR commissions.</description>
+    <externalId>false</externalId>
+    <label>Is Originating Opportunity</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

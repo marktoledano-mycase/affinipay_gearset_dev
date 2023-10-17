@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Merchant_App_Add_On_Form</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>false</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>175</height>
+    <isResizable>false</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>DEPRECATED 2/17 - Send Merchant App Add-On Form</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>https://composer.congamerge.com
+?SessionId={!API.Session_ID}
+&amp;ServerUrl={!API.Partner_Server_URL_210}
+&amp;Id={!Add_On_Batch__c.Id}
+&amp;QueryId=[AddOnBatchInfo]a1U80000002REOY?pv0={!Add_On_Batch__c.Id},
+[BankAcct1]a1U80000002RFBq?pv0={!Add_On_Batch__c.Id},
+[BankAcct2]a1U80000002RFBr?pv0={!Add_On_Batch__c.Id},
+[BankAcct3]a1U80000002RFBs?pv0={!Add_On_Batch__c.Id},
+[BankAcct4]a1U80000002RFBt?pv0={!Add_On_Batch__c.Id},
+[BankAcct5]a1U80000002RFBu?pv0={!Add_On_Batch__c.Id},
+[BankAcct6]a1U80000002RFBv?pv0={!Add_On_Batch__c.Id},
+[BankAcct7]a1U80000002RFBw?pv0={!Add_On_Batch__c.Id},
+[BankAcct8]a1U80000002RFBx?pv0={!Add_On_Batch__c.Id},
+[BankAcct9]a1U80000002RFBy?pv0={!Add_On_Batch__c.Id},
+[BankAcct10]a1U80000002RFBz?pv0={!Add_On_Batch__c.Id},
+[BankAcct11]a1U80000002RFC0?pv0={!Add_On_Batch__c.Id},
+[BankAcct12]a1U80000002RFC1?pv0={!Add_On_Batch__c.Id},
+[BankAcct13]a1U80000002RFC2?pv0={!Add_On_Batch__c.Id},
+[BankAcct14]a1U80000002RFC3?pv0={!Add_On_Batch__c.Id},
+[BankAccounts]a1U80000002RG6H?pv0={!Add_On_Batch__c.Id}
+&amp;TemplateId={!Add_On_Batch__c.Conga_Template__c}
+&amp;ds7=7
+&amp;DocuSignSendReminders=1
+&amp;DocuSignRemindIn=2
+&amp;DocuSignRemindAgainIn=1
+&amp;DocuSignExpireIn=30
+&amp;DocuSignWarnIn=15
+&amp;defaultPDF=1
+&amp;DS7Preview=1
+&amp;ExcelAutoFitRows=1
+&amp;ExcelAutoFitColumns=1
+&amp;bml=Hear+ye,+hear+ye!+{!User.FirstName}+is+in+need+of+a+Merchant+Add-On+App+for+{!Add_On_Batch__c.Account_Name__c}.+And+here+it+is,+just+for+thee.
+&amp;DocuSignEmailBody=Please+review+and+sign+the+AppFolio+Payments+Add-On+Form++using+the+link+below.+If+you+have+any+questions,+please+contact+me+at+{!User.Email}+or+{!User.Phone}.
+&amp;DocuSignEmailSubject=Payments+Add-On+Form+for+{!Add_On_Batch__c.Account_Name__c}
+&amp;OFN=Payment+Add-On+Form+for+{!Add_On_Batch__c.Account_Name__c}
+&amp;DocuSignR1Type=Signer
+&amp;DocuSignR1Role=Signer+1
+&amp;DocuSignR1Id={!Add_On_Batch__c.Customer_ContactId__c}
+&amp;DocuSignR1AccessCode=AppFolio2015
+&amp;DocuSignR2Id=00580000005HPNn
+&amp;DocuSignR2Type=Carbon+Copy
+&amp;DocuSignR2Role=Carbon+Copy
+&amp;DocuSignR2AccessCode=AppFolio2015
+&amp;DocuSignR3Id=00580000005EXD6
+&amp;DocuSignR3Type=Carbon+Copy
+&amp;DocuSignR3Role=Carbon+Copy
+&amp;DocuSignR3AccessCode=AppFolio2015
+&amp;DocuSignR4Id=00580000005HNPW
+&amp;DocuSignR4Type=Carbon+Copy
+&amp;DocuSignR4Role=Carbon+Copy
+&amp;DocuSignR4AccessCode=AppFolio2015
+&amp;DocuSignR5Id=00580000005IRee
+&amp;DocuSignR5Type=Carbon+Copy
+&amp;DocuSignR5Role=Carbon+Copy
+&amp;DocuSignR5AccessCode=AppFolio2015
+&amp;DocuSignVisible=1
+&amp;DocuSignExpireVoidEnv=0</url>
+    <width>300</width>
+</WebLink>

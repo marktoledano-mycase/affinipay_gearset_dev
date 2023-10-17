@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MQLs_LawPay</fullName>
+    <columns>Type__c</columns>
+    <columns>Brand__c</columns>
+    <columns>LawPay_Product_Tier__c</columns>
+    <columns>MQL_Date_Time__c</columns>
+    <columns>Lead__c</columns>
+    <columns>Contact__c</columns>
+    <columns>NAME</columns>
+    <columns>Account_ID__c</columns>
+    <columns>Campaign_Name__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>LeadSource__c</columns>
+    <columns>Person_Owner__c</columns>
+    <columns>Product_Interest__c</columns>
+    <columns>MQL_Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Is_MQL__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Brand__c</field>
+        <operation>equals</operation>
+        <value>LawPay</value>
+    </filters>
+    <label>MQLs: LawPay</label>
+    <sharedTo>
+        <role>BDR_Payments</role>
+    </sharedTo>
+</ListView>

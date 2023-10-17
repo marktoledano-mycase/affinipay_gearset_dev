@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">Hi {{{Recipient.FirstName}}},<br />
+<br />
+Thank you for reaching out!<br />
+<br />
+We are currently unable to make edits to your website because we need to finalize the migration to our newly upgraded platform.<br />
+<br />
+<b>Please choose one of the following steps below to complete this:</b><br />
+<br />
+1.&nbsp;If your domain is hosted on&nbsp;<b>GoDaddy</b>,&nbsp;you can grant us the delegated access level "Products and Domains" using the following instructions:<br />
+<br />
+<b>Name:</b> MyCase Websites<br />
+<b>Email:&nbsp;</b>websites@mycase.com&nbsp;<br />
+<br />
+<b>Step 1:</b>&nbsp;<a href="https://www.godaddy.com/help/invite-a-delegate-to-access-my-godaddy-account-12376">https://www.godaddy.com/help/invite-a-delegate-to-access-my-godaddy-account-12376</a><br />
+<b>Step 2:</b>&nbsp;<a href="https://www.godaddy.com/help/assign-delegate-folder-permissions-32180">https://www.godaddy.com/help/assign-delegate-folder-permissions-32180&nbsp;</a><br />
+<br />
+2. You can also provide us with the following information and we would be happy to handle this on your behalf:<br />
+<br />
+<b>Name of Domain Host</b> (ex. Network Solutions, Domain.com, Google, etc.):<br />
+<b>Domain host URL:<br />
+Username:<br />
+Password:</b><br />
+<br />
+3. You can update your DNS records directly in your domain host. You can find instructions on how to accomplish that using the following link:&nbsp;<a href="https://help.mycase.com/s/article/Websites-Resources-for-our-New-MyCase-Website-Platform#UpdateDNSRecords">https://help.mycase.com/s/article/Websites-Resources-for-our-New-MyCase-Website-Platform#UpdateDNSRecords</a><br />
+<br />
+Please let me know if you have any questions.<br />
+<br />
+Thank you,<br />
+{{{Sender.FirstName}}}<br />
+MyCase Website Services Team<br />
+Case #{{{Case.CaseNumber}}}</body>
+</html>

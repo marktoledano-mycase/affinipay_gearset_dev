@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_MyCasePayments</fullName>
+    <availability>online</availability>
+    <description>R151947</description>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New Case</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>/500/e?CF00N80000005DprA={!ValuePlus__c.Name}&amp;
+CF00N80000005DprA_lkid={!ValuePlus__c.Id}&amp;
+cas3={!ValuePlus__c.On_Boarding_Contact_Primary__c}&amp;
+cas3_lkid={!ValuePlus__c.On_Boarding_Contact_PrimaryId__c}&amp;
+cas4={!ValuePlus__c.Account__c}&amp;
+cas4_lkid={!ValuePlus__c.AccountId__c}&amp;
+retURL=/{!ValuePlus__c.Id}&amp;
+&amp;RecordType=01280000000Q6wz&amp;ent=Case&amp;
+00N80000004ZvsU=MyCase Payments</url>
+</WebLink>

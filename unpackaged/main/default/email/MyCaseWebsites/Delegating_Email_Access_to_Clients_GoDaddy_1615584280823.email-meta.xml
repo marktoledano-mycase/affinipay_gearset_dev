@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Use this when a client wants MyCase to make changes to their DNS Zone File</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Delegating Email Access to Clients GoDaddy</name>
+    <style>none</style>
+    <subject>MyCase Website Services | Case # {{{Case.CaseNumber}}}</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

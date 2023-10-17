@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Win/Loss Reason --></label>
+        <name>Buy_No_Buy_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Auto Drip / Dead Number</masterLabel>
+            <translation><!-- Auto Drip / Dead Number --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Competition</masterLabel>
+            <translation><!-- Competition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Competitor</masterLabel>
+            <translation><!-- Competitor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contact Left Organization</masterLabel>
+            <translation><!-- Contact Left Organization --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Migration</masterLabel>
+            <translation><!-- Data Migration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disqualified</masterLabel>
+            <translation><!-- Disqualified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Feature Gaps</masterLabel>
+            <translation><!-- Feature Gaps --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MC Integration</masterLabel>
+            <translation><!-- MC Integration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Market Fit</masterLabel>
+            <translation><!-- Market Fit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Migration Issue</masterLabel>
+            <translation><!-- Migration Issue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missing Integrations</masterLabel>
+            <translation><!-- Missing Integrations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MyCase Sales Team Owned</masterLabel>
+            <translation><!-- MyCase Sales Team Owned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Needs Feature</masterLabel>
+            <translation><!-- Needs Feature --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never Got Back To Me</masterLabel>
+            <translation><!-- Never Got Back To Me --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Never Spoke</masterLabel>
+            <translation><!-- Never Spoke --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Budget</masterLabel>
+            <translation><!-- No Budget --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Decision</masterLabel>
+            <translation><!-- No Decision --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Need</masterLabel>
+            <translation><!-- No Need --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Reason Provided</masterLabel>
+            <translation><!-- No Reason Provided --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non ICP</masterLabel>
+            <translation><!-- Non ICP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Enough Immediate Need</masterLabel>
+            <translation><!-- Not Enough Immediate Need --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Qualified</masterLabel>
+            <translation><!-- Not Qualified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Technical Reason</masterLabel>
+            <translation><!-- Other Technical Reason --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Parked</masterLabel>
+            <translation><!-- Parked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Poor Qualification</masterLabel>
+            <translation><!-- Poor Qualification --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pre MS Word 2013</masterLabel>
+            <translation><!-- Pre MS Word 2013 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Price</masterLabel>
+            <translation><!-- Price --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pricing</masterLabel>
+            <translation><!-- Pricing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product</masterLabel>
+            <translation><!-- Product --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product Fit</masterLabel>
+            <translation><!-- Product Fit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product/Features</masterLabel>
+            <translation><!-- Product/Features --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Self Service</masterLabel>
+            <translation><!-- Self Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stayed Current Solution</masterLabel>
+            <translation><!-- Stayed Current Solution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technical Issue</masterLabel>
+            <translation><!-- Technical Issue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Timing</masterLabel>
+            <translation><!-- Timing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trial Extension Data Export</masterLabel>
+            <translation><!-- Trial Extension Data Export --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trial Extension Log In - No Interest</masterLabel>
+            <translation><!-- Trial Extension Log In - No Interest --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unresponsive</masterLabel>
+            <translation><!-- Unresponsive --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

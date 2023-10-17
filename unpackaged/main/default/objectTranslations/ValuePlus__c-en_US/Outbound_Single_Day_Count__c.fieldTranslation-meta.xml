@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Auto populates value from field &apos;# of Owners/Vendors x 1.5&apos; when Record Type = APM Payments &amp; Outbound On-Boarding Status=Pending Peer Review. Auto updates only one time upon meeting criteria &amp; can be manually updated before/after auto update. --></help>
+        <label><!-- Outbound Single Day Count --></label>
+        <name>Outbound_Single_Day_Count__c</name>
+    </CustomFieldTranslation>

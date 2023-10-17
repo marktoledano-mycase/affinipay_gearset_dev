@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MyCase_Payments</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Account_DBA_Name__c</columns>
+    <columns>Active__c</columns>
+    <columns>Bank_Account_Count__c</columns>
+    <columns>GiactStatus__c</columns>
+    <columns>PMT_ProfitStars_On_Boarding_Status__c</columns>
+    <columns>ProfitStars_Update__c</columns>
+    <columns>Tax_ID__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Record_Type_Name__c</field>
+        <operation>equals</operation>
+        <value>MyCase Payments</value>
+    </filters>
+    <label>MyCase Payments</label>
+</ListView>

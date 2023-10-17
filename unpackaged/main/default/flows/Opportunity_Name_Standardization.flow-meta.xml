@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <decisions>
+        <name>Evaluate_Opportunity_Name</name>
+        <label>Evaluate Opportunity Name</label>
+        <locationX>176</locationX>
+        <locationY>311</locationY>
+        <defaultConnector>
+            <targetReference>Update_Opportunity_Name</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Rename Opportunity</defaultConnectorLabel>
+        <rules>
+            <name>Same_Name</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>fmlaOpportunityName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Name</elementReference>
+                </rightValue>
+            </conditions>
+            <label>Same Name</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>fmlaOpportunityName</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Account.Name} &amp; &quot; - &quot; &amp; {!$Record.RecordType.Name}</expression>
+    </formulas>
+    <interviewLabel>Opportunity - Name Standardization {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity - Name Standardization</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Opportunity_Name</name>
+        <label>Update Opportunity Name</label>
+        <locationX>308</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>fmlaOpportunityName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Evaluate_Opportunity_Name</targetReference>
+        </connector>
+        <filterFormula>AND(
+{!$Record.Bypass_VR_and_Automation__c} = FALSE,
+{!$Record__Prior.RecordTypeId} &lt;&gt; {!$Record.RecordTypeId}
+)</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+    <triggerOrder>1200</triggerOrder>
+</Flow>

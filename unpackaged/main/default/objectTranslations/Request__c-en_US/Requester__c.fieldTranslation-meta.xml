@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Requester --></label>
+        <lookupFilter>
+            <errorMessage><!-- User is Inactive or doesn&apos;t exist --></errorMessage>
+        </lookupFilter>
+        <name>Requester__c</name>
+        <relationshipLabel><!-- Requests (Requester) --></relationshipLabel>
+    </CustomFieldTranslation>

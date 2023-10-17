@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- When checked will not permit billing period adjustment on Opportunity Promo --></help>
+        <label><!-- Discount Duration Lock --></label>
+        <name>Discount_Duration_Lock__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Used to determine how many transaction records are associated to this SKU record; Primarily for troubleshooting purposes. --></help>
+        <label><!-- Contract SKU Tx Count --></label>
+        <name>Contract_SKU_Tx_Count__c</name>
+    </CustomFieldTranslation>

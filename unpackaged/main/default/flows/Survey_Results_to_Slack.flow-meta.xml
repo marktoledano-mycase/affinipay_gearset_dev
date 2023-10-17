@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Send_MC_NPS_to_Slack</name>
+        <label>Send MC NPS to Slack</label>
+        <locationX>1168</locationX>
+        <locationY>516</locationY>
+        <actionName>slackPostMessage</actionName>
+        <actionType>slackPostMessage</actionType>
+        <faultConnector>
+            <targetReference>end_flow</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>slackAppIdForToken</name>
+            <value>
+                <stringValue>A03269G3DNE</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackConversationId</name>
+            <value>
+                <elementReference>Channel_MyCase_NPS</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackMessage</name>
+            <value>
+                <elementReference>tex_MC_NPS_Results</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackWorkspaceIdForToken</name>
+            <value>
+                <stringValue>T03FBNR53</stringValue>
+            </value>
+        </inputParameters>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <apiVersion>57.0</apiVersion>
+    <assignments>
+        <name>end_flow</name>
+        <label>end flow</label>
+        <locationX>976</locationX>
+        <locationY>439</locationY>
+        <assignmentItems>
+            <assignToReference>var_End_Flow</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>end</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Score_Emoji</name>
+        <label>Score Emoji</label>
+        <locationX>1168</locationX>
+        <locationY>370</locationY>
+        <assignmentItems>
+            <assignToReference>slack_Score_Emoji</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>MC_NPS_Score_Emoji</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Send_MC_NPS_to_Slack</targetReference>
+        </connector>
+    </assignments>
+    <constants>
+        <name>Channel_B_Test_Channel</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>C04RZSNSUNT</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <description>Slack Channel #mycase-NPS</description>
+        <name>Channel_MyCase_NPS</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>C04U520UZ7Y</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <name>Template</name>
+        <label>What Template</label>
+        <locationX>1006</locationX>
+        <locationY>213</locationY>
+        <defaultConnectorLabel>Error</defaultConnectorLabel>
+        <rules>
+            <name>Survey_NPS</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>invar_Template_Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Survey - MC Support NPS</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Score_Emoji</targetReference>
+            </connector>
+            <label>Survey - MC Support NPS</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>MC_NPS_Score_Emoji</name>
+        <dataType>String</dataType>
+        <expression>Case(TEXT({!inrv_Survey_Record.Score__c}),
+&#39;0&#39;, &#39;:red-ci:&#39;,
+&#39;1&#39;, &#39;:red-ci:&#39;,
+&#39;2&#39;, &#39;:red-ci:&#39;,
+&#39;3&#39;, &#39;:red-ci:&#39;,
+&#39;4&#39;, &#39;:red-ci:&#39;,
+&#39;5&#39;, &#39;:red-ci:&#39;,
+&#39;6&#39;, &#39;:red-ci:&#39;,
+&#39;7&#39;, &#39;:large_yellow_circle:&#39;,
+&#39;8&#39;, &#39;:large_yellow_circle:&#39;,
+&#39;9&#39;, &#39;:tada:&#39;,
+&#39;10&#39;, &#39;:gold_star:  :tada:&#39;,
+&#39;:question-block:&#39;
+)</expression>
+    </formulas>
+    <interviewLabel>Survey - Results to Slack {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Survey - Results to Slack</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <start>
+        <locationX>888</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Template</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>tex_MC_NPS_Results</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>:mycase:   * &lt;https://affinipaymain.lightning.force.com/{!inrv_Survey_Record.Id} | {!inrv_Survey_Record.Score__c} &gt;*   {!slack_Score_Emoji}
+*Firm Name: &lt;https://affinipaymain.lightning.force.com/{!inrv_Survey_Record.Product_Environment__r.Id} | {!inrv_Survey_Record.Product_Environment__r.Firm_Name__c}&gt;*
+*Users Name: &lt;https://affinipaymain.lightning.force.com/{!inrv_Survey_Record.Product_User__r.Id} | {!inrv_Survey_Record.Product_User__r.Name}&gt;* ({!inrv_Survey_Record.Product_User__r.User_Email__c})
+
+*SURVEY RESPONSE*
+*Score:  &lt;https://affinipaymain.lightning.force.com/{!inrv_Survey_Record.Id} | {!inrv_Survey_Record.Score__c} &gt;* 
+*Question: {!inrv_Survey_Record.Score_Explanation_Question__c}*
+ _{!inrv_Survey_Record.Score_Explanation__c}_
+
+*FIRM DETAILS*
+*MyCase Admin Portal:* &lt;https://{!inrv_Survey_Record.Product_Environment__r.Subdomain__c}.mycase.com/admin/firm | CLICK HERE &gt; 
+*Firm UUID:*  {!inrv_Survey_Record.Product_Environment__r.Firm_UUID__c}
+*Subscription Tier:* {!inrv_Survey_Record.Product_Environment__r.Subscription_Tier__c}
+*Total Users:* {!inrv_Survey_Record.Product_Environment__r.Total_Users__c}  
+*First Purchase Date:* {!inrv_Survey_Record.Product_Environment__r.First_Purchase_Date__c}
+*Users Role:* {!inrv_Survey_Record.Product_User__r.User_Role__c}</text>
+    </textTemplates>
+    <variables>
+        <name>inrv_Survey_Record</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Survey__c</objectType>
+    </variables>
+    <variables>
+        <name>invar_Template_Name</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>slack_Score_Emoji</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>var_End_Flow</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+</Flow>

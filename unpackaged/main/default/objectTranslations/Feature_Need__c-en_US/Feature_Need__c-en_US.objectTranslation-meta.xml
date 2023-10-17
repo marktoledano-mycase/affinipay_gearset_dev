@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Feature Need</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Feature Needs</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <recordTypes>
+        <description><!-- R1812595 --></description>
+        <label><!-- APM --></label>
+        <name>APM</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- R1812595 --></description>
+        <label><!-- MyCase --></label>
+        <name>MyCase</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Feature Notes are require when selecting Sub Category of &quot;Other&quot; --></errorMessage>
+        <name>Require_Feature_Notes</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- New --></label>
+        <name>New</name>
+    </webLinks>
+</CustomObjectTranslation>

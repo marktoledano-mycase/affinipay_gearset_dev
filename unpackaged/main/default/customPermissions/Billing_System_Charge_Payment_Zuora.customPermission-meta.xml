@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPermission xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>For access to running payment for any outstanding balance the firm has in Zuora from Salesforce</description>
+    <isLicensed>false</isLicensed>
+    <label>Billing System Charge Payment Zuora</label>
+</CustomPermission>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>MyCase_Conversion_Closed_Won</fullName>
+        <ccEmails>rockstars@mycase.com</ccEmails>
+        <description>MyCase Conversion Closed &amp; Won</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>Automated_Emails_Do_Not_Use/MyCase_Conversion_Closed_Won</template>
+    </alerts>
+    <alerts>
+        <fullName>Soluno_New_Big_Deal_Email</fullName>
+        <ccEmails>shawn.moore@mycase.com</ccEmails>
+        <ccEmails>sales@soluno.legal</ccEmails>
+        <description>Soluno New Big Deal Email</description>
+        <protected>false</protected>
+        <senderAddress>donotreply@mycase.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Soluno_Internal/Big_Deal_Alert</template>
+    </alerts>
+    <outboundMessages>
+        <fullName>New_Opportunity_for_Notion</fullName>
+        <apiVersion>58.0</apiVersion>
+        <endpointUrl>https://hooks.zapier.com/hooks/catch/13135061/3djz5k1/</endpointUrl>
+        <fields>AccountId</fields>
+        <fields>Id</fields>
+        <fields>Name</fields>
+        <fields>OwnerId</fields>
+        <fields>Sales_Engineer__c</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>lindsay.bushong@mycase.com</integrationUser>
+        <name>New Opportunity for Notion</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+</Workflow>

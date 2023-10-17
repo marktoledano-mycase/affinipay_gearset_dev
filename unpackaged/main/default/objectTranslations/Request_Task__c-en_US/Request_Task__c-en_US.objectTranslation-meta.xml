@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Request Task</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Request Tasks</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <recordTypes>
+        <description><!-- R178187 --></description>
+        <label><!-- Project Retrospective --></label>
+        <name>Project_Retrospective</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- R178187 --></description>
+        <label><!-- Request Task --></label>
+        <name>Request_Task</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- New --></label>
+        <name>New</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Project_Retrospective --></label>
+        <name>Project_Retrospective</name>
+    </webLinks>
+</CustomObjectTranslation>

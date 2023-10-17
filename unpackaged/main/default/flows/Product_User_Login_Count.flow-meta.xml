@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <assignments>
+        <name>Add_to_Login_Count</name>
+        <label>Add to Login Count</label>
+        <locationX>443</locationX>
+        <locationY>337</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Login_Count__c</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>New_Login</name>
+        <label>New Login</label>
+        <locationX>266</locationX>
+        <locationY>334</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Last_Login__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.Last_Login__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Add_to_Login_Count</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>Counts the number of times a user logs in to MyCase based on changes in Last Login Date</description>
+    <interviewLabel>Product User Login Count {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Product User Login Count</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>148</locationX>
+        <locationY>53</locationY>
+        <connector>
+            <targetReference>New_Login</targetReference>
+        </connector>
+        <object>Product_User__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>LoginCount</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <elementReference>$Record.Login_Count__c</elementReference>
+        </value>
+    </variables>
+</Flow>

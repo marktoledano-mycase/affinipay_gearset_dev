@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contracted_Users__c</fullName>
+    <externalId>false</externalId>
+    <label>Contracted Users</label>
+    <summarizedField>Contract__c.Contracted_Users_Roll_up__c</summarizedField>
+    <summaryFilterItems>
+        <field>Contract__c.Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Contract__c.Account__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

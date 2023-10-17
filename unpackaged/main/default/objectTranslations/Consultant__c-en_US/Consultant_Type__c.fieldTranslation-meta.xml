@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Consultant Type --></label>
+        <name>Consultant_Type__c</name>
+        <picklistValues>
+            <masterLabel>Certified Consultant</masterLabel>
+            <translation><!-- Certified Consultant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consultant</masterLabel>
+            <translation><!-- Consultant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IT Consultant</masterLabel>
+            <translation><!-- IT Consultant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Integration Partner</masterLabel>
+            <translation><!-- Integration Partner --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>Create_Onboarding_after_Opportunity_Is_Closed</name>
+    </customPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Create Onboarding after Opportunity Is Closed</label>
+</PermissionSet>

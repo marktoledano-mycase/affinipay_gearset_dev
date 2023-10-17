@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Attendee__c</fullName>
+    <description>Who attended this event?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Who attended this event?</inlineHelpText>
+    <label>Attendee</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bobby Bookout</fullName>
+                <default>false</default>
+                <label>Bobby Bookout</label>
+            </value>
+            <value>
+                <fullName>Brandon Townsell</fullName>
+                <default>false</default>
+                <label>Brandon Townsell</label>
+            </value>
+            <value>
+                <fullName>Dan Reed</fullName>
+                <default>false</default>
+                <label>Dan Reed</label>
+            </value>
+            <value>
+                <fullName>Eric Jenne</fullName>
+                <default>false</default>
+                <label>Eric Jenne</label>
+            </value>
+            <value>
+                <fullName>Hailey Thompson</fullName>
+                <default>false</default>
+                <label>Hailey Thompson</label>
+            </value>
+            <value>
+                <fullName>Heidi Rogers</fullName>
+                <default>false</default>
+                <label>Heidi Rogers</label>
+            </value>
+            <value>
+                <fullName>Jeff Stringer</fullName>
+                <default>false</default>
+                <label>Jeff Stringer</label>
+            </value>
+            <value>
+                <fullName>Kenrick Tyrrell</fullName>
+                <default>false</default>
+                <label>Kenrick Tyrrell</label>
+            </value>
+            <value>
+                <fullName>Kevin Barry</fullName>
+                <default>false</default>
+                <label>Kevin Barry</label>
+            </value>
+            <value>
+                <fullName>Valarie Santos</fullName>
+                <default>false</default>
+                <label>Valarie Santos</label>
+            </value>
+            <value>
+                <fullName>Lloyd Blaine</fullName>
+                <default>false</default>
+                <label>Lloyd Blaine</label>
+            </value>
+            <value>
+                <fullName>Non-Sales Staff</fullName>
+                <default>false</default>
+                <label>Non-Sales Staff</label>
+            </value>
+            <value>
+                <fullName>Outside Rep</fullName>
+                <default>false</default>
+                <label>Outside Rep</label>
+            </value>
+            <value>
+                <fullName>Sean Womack</fullName>
+                <default>false</default>
+                <label>Sean Womack</label>
+            </value>
+            <value>
+                <fullName>Shannon Yocum</fullName>
+                <default>false</default>
+                <label>Shannon Yocum</label>
+            </value>
+            <value>
+                <fullName>Courtney Williams</fullName>
+                <default>false</default>
+                <label>Courtney Williams</label>
+            </value>
+            <value>
+                <fullName>Ruben Arce</fullName>
+                <default>false</default>
+                <label>Ruben Arce</label>
+            </value>
+            <value>
+                <fullName>Sponsor Only</fullName>
+                <default>false</default>
+                <label>Sponsor Only</label>
+            </value>
+            <value>
+                <fullName>Stan Rudenko</fullName>
+                <default>false</default>
+                <label>Stan Rudenko</label>
+            </value>
+            <value>
+                <fullName>Steven Berry</fullName>
+                <default>false</default>
+                <label>Steven Berry</label>
+            </value>
+            <value>
+                <fullName>Ellie Mizell</fullName>
+                <default>false</default>
+                <label>Ellie Mizell</label>
+            </value>
+            <value>
+                <fullName>Maryn Meldrum</fullName>
+                <default>false</default>
+                <label>Maryn Meldrum</label>
+            </value>
+            <value>
+                <fullName>Carolina Corrales</fullName>
+                <default>false</default>
+                <label>Carolina Corrales</label>
+            </value>
+            <value>
+                <fullName>Sam Portillo</fullName>
+                <default>false</default>
+                <label>Sam Portillo</label>
+            </value>
+            <value>
+                <fullName>Xazoc Campos</fullName>
+                <default>false</default>
+                <label>Xazoc Campos</label>
+            </value>
+            <value>
+                <fullName>Kyle Fleher</fullName>
+                <default>false</default>
+                <label>Kyle Fleher</label>
+            </value>
+            <value>
+                <fullName>Coltin Lash</fullName>
+                <default>false</default>
+                <label>Coltin Lash</label>
+            </value>
+            <value>
+                <fullName>Tye Calhoun</fullName>
+                <default>false</default>
+                <label>Tye Calhoun</label>
+            </value>
+            <value>
+                <fullName>Cynthia Bayne</fullName>
+                <default>false</default>
+                <label>Cynthia Bayne</label>
+            </value>
+            <value>
+                <fullName>Keith Kauffman</fullName>
+                <default>false</default>
+                <label>Keith Kauffman</label>
+            </value>
+            <value>
+                <fullName>Chris Villarreal</fullName>
+                <default>false</default>
+                <label>Chris Villarreal</label>
+            </value>
+            <value>
+                <fullName>David Reat</fullName>
+                <default>false</default>
+                <label>David Reat</label>
+            </value>
+            <value>
+                <fullName>Haitham Amara</fullName>
+                <default>false</default>
+                <label>Haitham Amara</label>
+            </value>
+            <value>
+                <fullName>Kyle Shepperd</fullName>
+                <default>false</default>
+                <label>Kyle Shepperd</label>
+            </value>
+            <value>
+                <fullName>Mae Butterfield</fullName>
+                <default>false</default>
+                <label>Mae Butterfield</label>
+            </value>
+            <value>
+                <fullName>Matt Motl</fullName>
+                <default>false</default>
+                <label>Matt Motl</label>
+            </value>
+            <value>
+                <fullName>Ryan Camardo</fullName>
+                <default>false</default>
+                <label>Ryan Camardo</label>
+            </value>
+            <value>
+                <fullName>Steven Laman</fullName>
+                <default>false</default>
+                <label>Steven Laman</label>
+            </value>
+            <value>
+                <fullName>Tessa Hunt</fullName>
+                <default>false</default>
+                <label>Tessa Hunt</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

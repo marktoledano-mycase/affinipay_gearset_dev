@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Person_Owner_Active__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+					NOT(ISBLANK(Contact__c)), 
+					Contact__r.Owner_Active__c,
+ 				Lead__r.Owner_Active__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>If Contact is not null, Contact: Owner Active. Otherwise, Lead: Owner Active</inlineHelpText>
+    <label>Person Owner Active</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

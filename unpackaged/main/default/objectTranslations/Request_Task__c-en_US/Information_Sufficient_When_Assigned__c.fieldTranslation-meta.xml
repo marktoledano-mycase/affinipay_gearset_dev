@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Was this request assigned with enough information to execute? --></help>
+        <label><!-- Information Sufficient When Assigned ? --></label>
+        <name>Information_Sufficient_When_Assigned__c</name>
+    </CustomFieldTranslation>

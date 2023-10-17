@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Employees</fullName>
+    <active>false</active>
+    <errorConditionFormula>$Permission.Bypass_Defined_VR_s = FALSE &amp;&amp;
+$Permission.Create_Onboarding_after_Opportunity_Is_Closed = FALSE &amp;&amp;
+
+(
+    ISNEW() ||
+    ISCHANGED(StageName) ||
+    ISCHANGED(Number_of_Employees__c)
+) &amp;&amp;
+
+ISBLANK(TEXT(Number_of_Employees__c)) &amp;&amp;
+
+CASE(
+    StageName,
+    &quot;Decision Making&quot;, 1,
+    &quot;Approvals&quot;, 0,
+    &quot;Closed Won&quot;, 1,
+    0
+) = 1 &amp;&amp;
+
+RecordType.Name != &#39;Parent&#39;</errorConditionFormula>
+    <errorDisplayField>Number_of_Employees__c</errorDisplayField>
+    <errorMessage>Number of Employees is required when Stage is &quot;Decision Making,&quot; &quot;Approvals,&quot; or &quot;Closed Won.&quot;</errorMessage>
+</ValidationRule>

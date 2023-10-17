@@ -1,0 +1,7 @@
+Hello,
+
+{!Approval_Requesting_User.FirstName} {!Approval_Requesting_User.LastName} has requested your approval for a billing adjustment.
+
+Please navigate to the following Case and review the Adjustments related list to Approve or Reject this request
+
+Case Link: {!Case.Link}

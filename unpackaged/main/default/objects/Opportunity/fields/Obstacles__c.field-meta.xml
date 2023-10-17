@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Obstacles__c</fullName>
+    <description>Obstacles to overcome throughout sales process</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Obstacles to overcome for successful sale</inlineHelpText>
+    <label>Obstacles</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

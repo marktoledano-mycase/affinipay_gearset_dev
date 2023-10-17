@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Vantiv Legal Entity Update Status --></label>
+        <name>Vantiv_Legal_Entity_Update_Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Change Unknown</masterLabel>
+            <translation><!-- Change Unknown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Failed</masterLabel>
+            <translation><!-- Failed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready To Update</masterLabel>
+            <translation><!-- Ready To Update --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

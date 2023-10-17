@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Use this template when a customer would prefer to update the records on their own.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Duda Migration — Manually Update DNS Records</name>
+    <style>none</style>
+    <subject>How to Manually Update Your DNS Records | Case # {{{Case.CaseNumber}}}</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

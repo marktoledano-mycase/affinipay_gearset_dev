@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Use this email template to list out what information we still need from the customer in order to complete their request.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>MyCase Website Services - More Information Needed</name>
+    <relatedEntityType>Case</relatedEntityType>
+    <style>none</style>
+    <subject>MyCase Website Services | More Information Needed</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

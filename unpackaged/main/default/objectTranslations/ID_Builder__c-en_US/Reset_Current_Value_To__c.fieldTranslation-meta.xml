@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Number set as last used when reset is enabled --></help>
+        <label><!-- Reset Current Value To --></label>
+        <name>Reset_Current_Value_To__c</name>
+    </CustomFieldTranslation>

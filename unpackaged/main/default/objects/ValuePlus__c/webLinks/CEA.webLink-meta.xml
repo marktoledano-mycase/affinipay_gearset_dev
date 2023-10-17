@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CEA</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>CEA</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>/apex/Sertifi2_0__CreateSignatureRequest?ObjectId={!ValuePlus__c.Id}
+&amp;filename=Commercial Entity Agreement
+&amp;Customsettings=ValuePlus
+&amp;ResourceGroup=MyCase CEA
+&amp;AttachmentId=a383g0000006Pnt
+&amp;ExpireFolderOn={!TODAY()+40}
+&amp;1stsigner={!ValuePlus__c.On_Boarding_Contact_PrimaryId__c}
+&amp;ReturnTo != SContract</url>
+</WebLink>

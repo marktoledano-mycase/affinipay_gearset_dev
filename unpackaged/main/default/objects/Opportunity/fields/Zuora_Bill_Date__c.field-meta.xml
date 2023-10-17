@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Zuora_Bill_Date__c</fullName>
+    <description>Date for billing case to align account with First Purchase Date</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Bill Date/First Purchase Date for billing case</inlineHelpText>
+    <label>FP Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

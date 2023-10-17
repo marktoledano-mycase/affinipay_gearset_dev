@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dml_Exception_Type__c</fullName>
+    <description>This field describes the exception type for DML operation exceptions. This field will  be populated with the Exception.getDmlType() method for APEX exceptions where the exception type is DMLException.</description>
+    <externalId>false</externalId>
+    <label>Dml Exception Type</label>
+    <length>80</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

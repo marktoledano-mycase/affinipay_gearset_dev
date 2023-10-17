@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- When selected, it will auto reset the current value number --></help>
+        <label><!-- Auto Reset Current Value --></label>
+        <name>Auto_Reset_Current_Value__c</name>
+    </CustomFieldTranslation>

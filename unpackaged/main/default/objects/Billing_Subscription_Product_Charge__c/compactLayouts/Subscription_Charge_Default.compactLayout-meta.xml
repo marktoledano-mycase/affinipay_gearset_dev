@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subscription_Charge_Default</fullName>
+    <fields>Firm_ID__c</fields>
+    <fields>Name</fields>
+    <fields>Quantity__c</fields>
+    <fields>Effective_Start_Date__c</fields>
+    <fields>Zuora_Effective_End_Date__c</fields>
+    <fields>Subscription_Number__c</fields>
+    <label>Subscription Charge Default</label>
+</CompactLayout>

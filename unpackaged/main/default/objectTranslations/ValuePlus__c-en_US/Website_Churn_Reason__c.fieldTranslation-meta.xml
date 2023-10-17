@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Website Churn Reason --></label>
+        <name>Website_Churn_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Churning from Software</masterLabel>
+            <translation><!-- Churning from Software --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Firm Closed / Merged</masterLabel>
+            <translation><!-- Firm Closed / Merged --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Full Admin Access</masterLabel>
+            <translation><!-- Full Admin Access --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missing Features</masterLabel>
+            <translation><!-- Missing Features --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rebuild</masterLabel>
+            <translation><!-- Rebuild --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Requires Additional SEO</masterLabel>
+            <translation><!-- Requires Additional SEO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Requires Additional SEO/Marketing</masterLabel>
+            <translation><!-- Requires Additional SEO/Marketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Too Expensive</masterLabel>
+            <translation><!-- Too Expensive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unresponsive</masterLabel>
+            <translation><!-- Unresponsive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsatisfied with Service</masterLabel>
+            <translation><!-- Unsatisfied with Service --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

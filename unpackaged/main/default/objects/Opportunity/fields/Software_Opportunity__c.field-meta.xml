@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Software_Opportunity__c</fullName>
+    <externalId>false</externalId>
+    <formula>Record_Type_Name__c=&quot;Casepeer&quot;||
+Record_Type_Name__c=&quot;Docketwise&quot;||
+Record_Type_Name__c=&quot;LawPay Software&quot;||
+Record_Type_Name__c=&quot;MyCase&quot;||
+Record_Type_Name__c=&quot;Soluno&quot;||
+Record_Type_Name__c=&quot;Woodpecker&quot;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Software Opportunity</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

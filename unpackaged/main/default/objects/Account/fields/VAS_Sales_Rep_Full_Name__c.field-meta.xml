@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VAS_Sales_Rep_Full_Name__c</fullName>
+    <description>R152172; Removed FLS for R1917684</description>
+    <externalId>false</externalId>
+    <formula>VAS_Sales_Rep__r.FirstName &amp; &quot; &quot; &amp; VAS_Sales_Rep__r.LastName</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>VAS Sales Rep Full Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

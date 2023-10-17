@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MLPredictionDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aiApplicationDeveloperName>OpportunityPushedOutInsight_1691634116274</aiApplicationDeveloperName>
+    <developerName>OpportunityPushedOutInsightPredictionDefinition_1691634116274</developerName>
+    <masterLabel>OpportunityPushedOutInsightPredictionDefinition_1691634116274</masterLabel>
+    <predictionField>Opportunity.CloseDate</predictionField>
+    <priority>0</priority>
+    <status>Enabled</status>
+    <type>Regression</type>
+</MLPredictionDefinition>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Days_Active_Converted__c</fullName>
+    <description>R165289</description>
+    <externalId>false</externalId>
+    <formula>if( BLANKVALUE(Churn_Date__c, DATEVALUE(&quot;1900-1-1&quot;))= DATEVALUE(&quot;1900-1-1&quot;), today()- Conversion_Date__c,Churn_Date__c - Conversion_Date__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Days Active (Converted)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

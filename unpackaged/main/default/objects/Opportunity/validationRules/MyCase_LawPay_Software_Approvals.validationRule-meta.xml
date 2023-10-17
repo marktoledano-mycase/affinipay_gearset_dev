@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MyCase_LawPay_Software_Approvals</fullName>
+    <active>false</active>
+    <description>Validates Approvals stage for MC and LPP opportunities</description>
+    <errorConditionFormula>$Permission.Bypass_Defined_VR_s = FALSE &amp;&amp;
+
+(
+ISNEW() ||
+ISCHANGED(StageName)
+) &amp;&amp;
+
+(
+TEXT(StageName) = &quot;Approvals&quot;
+) &amp;&amp;
+
+(
+
+Record_Type_Name__c = &quot;MyCase&quot; || Record_Type_Name__c = &quot;LawPay Software&quot;
+
+)
+
+&amp;&amp; (
+ISBLANK( Product_Environment__c ) ||
+ISBLANK( Billing_Subscription__c )
+)
+
+&amp;&amp; TEXT(Type) != &quot;Existing Business&quot;</errorConditionFormula>
+    <errorMessage>MyCase and LawPay Software Opportunities can only be moved to Approvals through automation or Firm ID Finder</errorMessage>
+</ValidationRule>

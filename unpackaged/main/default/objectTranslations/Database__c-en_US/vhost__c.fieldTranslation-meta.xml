@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- The name of the database. 
+Must start with a letter and can contain letters and numbers only. No special characters allowed. 
+Max length: 48
+Please do NOT enter the database name with .appfolio.com --></help>
+        <label><!-- DB Name --></label>
+        <name>vhost__c</name>
+    </CustomFieldTranslation>

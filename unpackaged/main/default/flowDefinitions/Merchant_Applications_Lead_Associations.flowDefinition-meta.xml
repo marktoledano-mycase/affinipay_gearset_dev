@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>5</activeVersionNumber>
+    <description>Associates new/updated leads to existing Merchant Applications Records</description>
+    <masterLabel>Merchant Applications - Lead Trigger</masterLabel>
+</FlowDefinition>

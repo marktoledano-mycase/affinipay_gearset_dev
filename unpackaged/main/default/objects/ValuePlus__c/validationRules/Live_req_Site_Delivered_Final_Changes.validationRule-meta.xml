@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Live_req_Site_Delivered_Final_Changes</fullName>
+    <active>true</active>
+    <description>Site Delivered/Final changes is required to set to Live</description>
+    <errorConditionFormula>RecordType.Name = &#39;MyCase Websites&#39; &amp;&amp; TEXT(Stage__c) = &#39;Live&#39; &amp;&amp;  ISNULL( Site_Delivered_Final_Changes__c )</errorConditionFormula>
+    <errorMessage>&#39;Site Delivered/Final Changes&#39; must be completed before setting to &quot;Live&#39;</errorMessage>
+</ValidationRule>

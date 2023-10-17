@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Integration --></label>
+        <name>Integration__c</name>
+        <picklistValues>
+            <masterLabel>Answering Legal</masterLabel>
+            <translation><!-- Answering Legal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Callrail</masterLabel>
+            <translation><!-- Callrail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Case Status</masterLabel>
+            <translation><!-- Case Status --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ClientCredit</masterLabel>
+            <translation><!-- ClientCredit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Courtdrive</masterLabel>
+            <translation><!-- Courtdrive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DecisionVault</masterLabel>
+            <translation><!-- DecisionVault --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Docketwise</masterLabel>
+            <translation><!-- Docketwise --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Esquiretek</masterLabel>
+            <translation><!-- Esquiretek --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hona</masterLabel>
+            <translation><!-- Hona --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>InfoTrack</masterLabel>
+            <translation><!-- InfoTrack --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intaker</masterLabel>
+            <translation><!-- Intaker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kenect</masterLabel>
+            <translation><!-- Kenect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LawPay</masterLabel>
+            <translation><!-- LawPay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LawToolBox</masterLabel>
+            <translation><!-- LawToolBox --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lawbrokr</masterLabel>
+            <translation><!-- Lawbrokr --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lawmatics</masterLabel>
+            <translation><!-- Lawmatics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Legalboards</masterLabel>
+            <translation><!-- Legalboards --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lex Reception</masterLabel>
+            <translation><!-- Lex Reception --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Proof</masterLabel>
+            <translation><!-- Proof --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quickbooks</masterLabel>
+            <translation><!-- Quickbooks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ruby</masterLabel>
+            <translation><!-- Ruby --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ruby Receptionists</masterLabel>
+            <translation><!-- Ruby Receptionists --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scorpion</masterLabel>
+            <translation><!-- Scorpion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Smith AI</masterLabel>
+            <translation><!-- Smith AI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Truve</masterLabel>
+            <translation><!-- Truve --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vxt</masterLabel>
+            <translation><!-- Vxt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Zapier</masterLabel>
+            <translation><!-- Zapier --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

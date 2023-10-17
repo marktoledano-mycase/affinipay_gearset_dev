@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MQL_MyCase_BDR</fullName>
+    <columns>Assignment_Group__c</columns>
+    <columns>NAME</columns>
+    <columns>User__c</columns>
+    <columns>Status__c</columns>
+    <columns>Min_Number_of_Employees__c</columns>
+    <columns>Last_Assignment__c</columns>
+    <columns>Is_Active__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Assignment_Group__c</field>
+        <operation>startsWith</operation>
+        <value>MQL - MyCase BDR</value>
+    </filters>
+    <label>MQL - MyCase BDR</label>
+</ListView>

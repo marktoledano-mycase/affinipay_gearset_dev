@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>CS User</label>
+    <permissionSets>Case_Assignment_Code_Access</permissionSets>
+    <permissionSets>Flow_User</permissionSets>
+    <permissionSets>Gong__Gong_Users</permissionSets>
+    <permissionSets>Inbound_Requests_Readonly</permissionSets>
+    <permissionSets>Product_Picker_Read_Write</permissionSets>
+    <permissionSets>bizible2__Bizible_Standard_User</permissionSets>
+    <permissionSets>dfsle__DocuSign_Sender</permissionSets>
+    <permissionSets>dfsle__DocuSign_User</permissionSets>
+    <permissionSets>force__SalesConsoleUser</permissionSets>
+    <permissionSets>zoom_app__Zoom_User</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

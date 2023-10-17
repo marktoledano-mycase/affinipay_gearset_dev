@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closed_Lost_Feature</fullName>
+    <active>true</active>
+    <description>Lost reasons is a critical input in how we prioritize features to develop, adjust our sales &amp; marketing strategy, and focus training efforts.</description>
+    <errorConditionFormula>$Permission.Bypass_Defined_VR_s = FALSE &amp;&amp;
+
+(
+	ISNEW() ||
+	ISCHANGED(StageName) ||
+	ISCHANGED(Loss_Reason__c) ||
+	ISCHANGED(Loss_Due_to_Feature__c)
+) &amp;&amp;
+
+ISPICKVAL(StageName, &quot;Closed Lost&quot;) &amp;&amp;
+ISPICKVAL(Loss_Reason__c, &quot;Feature&quot;) &amp;&amp;
+ISBLANK(Loss_Due_to_Feature__c)</errorConditionFormula>
+    <errorMessage>Lost Due to Feature is required when Stage is &quot;Closed Lost&quot; and Lost Reason is &quot;Feature.&quot; Click the Closed Lost button to fill out this information.</errorMessage>
+</ValidationRule>

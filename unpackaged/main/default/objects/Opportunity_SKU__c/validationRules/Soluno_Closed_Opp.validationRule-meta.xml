@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Soluno_Closed_Opp</fullName>
+    <active>true</active>
+    <description>Produces error if more then 1 Opp SKU is created for Soluno Opportunity</description>
+    <errorConditionFormula>and(
+Opportunity__r.RecordTypeId = &#39;01253000000CkO9&#39;,
+ Text (Opportunity__r.StageName) = &#39;Closed won&#39;
+)</errorConditionFormula>
+    <errorMessage>Record is Locked from changes due related opportunity stage</errorMessage>
+</ValidationRule>

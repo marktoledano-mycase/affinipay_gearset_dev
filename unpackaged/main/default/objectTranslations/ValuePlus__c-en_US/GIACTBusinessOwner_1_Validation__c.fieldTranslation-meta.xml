@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Business Owner 1 Validation --></label>
+        <name>GIACTBusinessOwner_1_Validation__c</name>
+        <picklistValues>
+            <masterLabel>Automated Approval</masterLabel>
+            <translation><!-- Automated Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Declined</masterLabel>
+            <translation><!-- Declined --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exception</masterLabel>
+            <translation><!-- Exception --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manual Approval</masterLabel>
+            <translation><!-- Manual Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Needs Review</masterLabel>
+            <translation><!-- Needs Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready To Transmit To GIACT</masterLabel>
+            <translation><!-- Ready To Transmit To GIACT --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

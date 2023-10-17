@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_MyCase_V</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>true</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>600</height>
+    <isResizable>true</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>New MyCase V+</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>/lightning/o/ValuePlus__c/new?defaultFieldValues=RecordTypeId=0128W000001DlmEQAS,Account__c={!Account.Id}, onboarding_specialist__c={!Contact.OwnerId},On_Boarding_Contact_Primary__c={!Contact.Id},Stage__c=Agreement%20Pending,Stage_Entered__c={!YEAR(TODAY())}-{!MONTH(TODAY())}-{!DAY(TODAY())},Annual_CreditCard_Volume__c=50000,CreditCard_Single_Trans_Amount__c=50000, Single_Day_Count__c=20,Single_Trans_Amount__c=10000,Period_Amount__c=68000,AMEX_OptBlue__c=TRUE,Single_Day_Amount__c=34000</url>
+</WebLink>

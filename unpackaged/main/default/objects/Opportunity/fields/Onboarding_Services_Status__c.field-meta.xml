@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Onboarding_Services_Status__c</fullName>
+    <description>All Website Hosting will have this value set to Accepted
+All non-parent RT opportunities with Type = New Customer will have the option to select either
+All non-parent RT opportunities except Website Hosting with Type &lt;&gt; New Customer will default to Unnecessary
+The opportunity triggered flow that will be created to accommodate the creation of an onboarding record will be designed to use this field to determine if an onboarding record should be created.</description>
+    <externalId>false</externalId>
+    <label>Onboarding Services Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Requested</fullName>
+                <default>false</default>
+                <label>Requested</label>
+            </value>
+            <value>
+                <fullName>Unnecessary</fullName>
+                <default>false</default>
+                <label>Unnecessary</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

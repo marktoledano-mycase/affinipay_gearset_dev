@@ -1,0 +1,39 @@
+Hello,
+ 
+We are dedicated to excelling in our service to you, so we want you to know we have received your request and it is being routed to the appropriate person for action and follow-up.
+
+Please ensure you have included the following information in your request. 
+Legal Business Name
+Billing Address
+Phone Number
+Tax EIN 
+Company website url link
+Business Type (must be one of the following: Sole Proprietorship, Partnership, Limited Liability Corporation, Co-operative, Non-profit Corporation)
+
+ 
+Should you need to refer to this case in the future, here are the details:
+ 
+Case Number: {!Case.CaseNumber}
+Case Created Date: {!Case.CreatedDate}
+Case Subject: {!Case.Subject}
+Case Description: {!Case.Description}
+ 
+ 
+All the best,
+ 
+MyCase Customer Success Team
+ 
+MyCase
+9201 Spectrum Center Blvd. Ste. 100 | San Diego, CA | 92123
+Phone: 800.571.8062
+www.mycase.com
+ 
+Follow us on Social!
+https://www.facebook.com/MyCase
+https://www.instagram.com/mycaselegal
+https://twitter.com/mycaseinc
+https://www.linkedin.com/company/mycase
+ 
+------------------------------
+ 
+{!Case.Thread_Id}

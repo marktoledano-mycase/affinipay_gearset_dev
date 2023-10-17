@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PartnerStack_Partner_Key__c</fullName>
+    <description>Brings down the Partner Stack ID when Partnership is Partner Stack</description>
+    <externalId>false</externalId>
+    <formula>IF( RecordType.DeveloperName = &quot;Partner Stack&quot;,  Partner_Account__r.PartnerStack_Partner_Key__c , &quot;&quot;)</formula>
+    <label>PartnerStack Partner Key</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

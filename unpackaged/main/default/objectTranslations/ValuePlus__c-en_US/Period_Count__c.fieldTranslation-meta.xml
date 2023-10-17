@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- APM Only: Auto calculates to: &apos;# of Units x 2&apos; when Record Type = APM Payments &amp; Outbound On-Boarding Status=Pending Peer Review. Auto updates only one time upon meeting criteria &amp; can be manually updated before/after auto update. --></help>
+        <label><!-- Period Count --></label>
+        <name>Period_Count__c</name>
+    </CustomFieldTranslation>

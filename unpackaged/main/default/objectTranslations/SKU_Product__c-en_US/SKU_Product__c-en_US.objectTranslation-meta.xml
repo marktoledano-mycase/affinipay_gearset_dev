@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>SKU Product</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SKU Products</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>SKU Product Layout</layout>
+        <sections>
+            <label><!-- Billing Details --></label>
+            <section>Billing Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label><!-- Pricing Information --></label>
+            <section>Pricing Information</section>
+        </sections>
+        <sections>
+            <label><!-- Product Details --></label>
+            <section>Product Details</section>
+        </sections>
+        <sections>
+            <label><!-- Quantity Settings --></label>
+            <section>Quantity Settings</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Soluno Product Layout</layout>
+        <sections>
+            <label><!-- Billing Details --></label>
+            <section>Billing Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label><!-- Pricing Information --></label>
+            <section>Pricing Information</section>
+        </sections>
+        <sections>
+            <label><!-- Product Details --></label>
+            <section>Product Details</section>
+        </sections>
+        <sections>
+            <label><!-- Quantity Settings --></label>
+            <section>Quantity Settings</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- AffiniPay --></label>
+        <name>AffiniPay</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- For use with CASEpeer products and services --></description>
+        <label><!-- CASEpeer --></label>
+        <name>CASEpeer</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- For use with CPACharge products and services --></description>
+        <label><!-- CPACharge --></label>
+        <name>CPACharge</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- For use with ClientPay products and services --></description>
+        <label><!-- ClientPay --></label>
+        <name>ClientPay</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- For use with Docketwise products and services --></description>
+        <label><!-- Docketwise --></label>
+        <name>Docketwise</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- For use with LawPay products and services --></description>
+        <label><!-- LawPay --></label>
+        <name>LawPay</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- MedPay --></label>
+        <name>MedPay</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- For use with MyCase products and services --></description>
+        <label><!-- MyCase --></label>
+        <name>MyCase</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- For use with Soluno products and services --></description>
+        <label><!-- Soluno --></label>
+        <name>Soluno</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- For use with Website Hosting products and services --></description>
+        <label><!-- Websites --></label>
+        <name>Websites</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- For use with Woodpecker products and services --></description>
+        <label><!-- Woodpecker --></label>
+        <name>Woodpecker</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

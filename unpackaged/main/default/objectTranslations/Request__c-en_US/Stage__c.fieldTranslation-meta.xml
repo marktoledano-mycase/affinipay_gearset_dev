@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Stage --></label>
+        <name>Stage__c</name>
+        <picklistValues>
+            <masterLabel>Awaiting Requirements Sign-off</masterLabel>
+            <translation><!-- Awaiting Requirements Sign-off --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancelled - Business Systems Team</masterLabel>
+            <translation><!-- Cancelled - Business Systems Team --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancelled - Business Unit</masterLabel>
+            <translation><!-- Cancelled - Business Unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Complete</masterLabel>
+            <translation><!-- Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Developing</masterLabel>
+            <translation><!-- Developing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Estimated</masterLabel>
+            <translation><!-- Estimated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance Approval Requested</masterLabel>
+            <translation><!-- Finance Approval Requested --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance Approved</masterLabel>
+            <translation><!-- Finance Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Groomed</masterLabel>
+            <translation><!-- Groomed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grooming</masterLabel>
+            <translation><!-- Grooming --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Needs Grooming</masterLabel>
+            <translation><!-- Needs Grooming --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Hold: Business Systems</masterLabel>
+            <translation><!-- On Hold: Business Systems --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Hold: Requester</masterLabel>
+            <translation><!-- On Hold: Requester --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Hold: Vendor</masterLabel>
+            <translation><!-- On Hold: Vendor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Peer Review</masterLabel>
+            <translation><!-- Peer Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prioritized</masterLabel>
+            <translation><!-- Prioritized --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Requirements Signed Off</masterLabel>
+            <translation><!-- Requirements Signed Off --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scheduled</masterLabel>
+            <translation><!-- Scheduled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted</masterLabel>
+            <translation><!-- Submitted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UAT Complete</masterLabel>
+            <translation><!-- UAT Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User Acceptance Testing</masterLabel>
+            <translation><!-- User Acceptance Testing --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

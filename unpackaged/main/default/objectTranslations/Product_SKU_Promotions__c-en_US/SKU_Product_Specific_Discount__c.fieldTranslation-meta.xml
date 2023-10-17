@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Used as a placeholder for overrides in product picker or as a means to deviate from discount set at the Promotion level. --></help>
+        <label><!-- SKU Product Specific Discount --></label>
+        <name>SKU_Product_Specific_Discount__c</name>
+    </CustomFieldTranslation>

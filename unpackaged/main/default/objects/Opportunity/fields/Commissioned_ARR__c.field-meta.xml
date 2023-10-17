@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Commissioned_ARR__c</fullName>
+    <description>This is used to calculate commissions. It includes sales discounts normalized to an annual value and excludes company promotions.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Used to calculate commissions; includes sales discounts normalized to an annual value and excludes company promotions.</inlineHelpText>
+    <label>Commissioned ARR</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Currency</type>
+</CustomField>

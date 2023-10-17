@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email sent by salesforce cases to notify of a data migration task request</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>SF System Email: Data Migration</name>
+    <style>none</style>
+    <subject>Data Migration Request: {!Account.Name}: {!Case.Primary_Task__c}:  {!Case.Current_Software_Product__c}</subject>
+    <textOnly>Hi, 
+
+You have a new Data Migration request:
+
+Account: {!Account.Name}
+CRM: {!Account.Client_Services_Rep__c} 
+Case Created By: {!Case.CreatedBy} 
+
+Database Name: {!Case.Database_Name__c} 
+SCP File Name: {!Case.SCP_File_Name__c} 
+
+Current Software: {!Case.Current_Software_Product__c} 
+Migration Type: {!Case.Migration_Type__c} 
+
+Primary Task: {!Case.Primary_Task__c} 
+Additional Notes: {!Case.Additional_Tasks_Notes__c} 
+
+Case Link: {!Case.Link}
+
+Thank you.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

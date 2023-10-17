@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Woodpecker initial sale monthly recurring revenue --></help>
+        <label><!-- Initial Sale MRR --></label>
+        <name>Initial_Sale_MRR__c</name>
+    </CustomFieldTranslation>

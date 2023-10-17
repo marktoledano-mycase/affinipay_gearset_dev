@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Activation_Email__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>TRUE if activation email is sent to user added to trial by Sales</description>
+    <externalId>false</externalId>
+    <label>Send Activation Email</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

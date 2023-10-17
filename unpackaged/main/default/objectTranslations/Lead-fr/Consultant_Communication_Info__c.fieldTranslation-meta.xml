@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- PartnerStack consultants will provide information for this type of lead here. --></help>
+        <label><!-- Consultant Communication Info --></label>
+        <name>Consultant_Communication_Info__c</name>
+    </CustomFieldTranslation>

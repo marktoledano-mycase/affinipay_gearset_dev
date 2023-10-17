@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">
+<p style="line-height:1.38">Hi {{{Recipient.FirstName}}},<br />
+<br />
+My name is <span style="color:#c0392b;">________</span> from the MyCase Websites team, and we'll be working together to develop your new MyCase website. I'm excited to get started creating a professional and powerful online presence for your company!<br />
+<br />
+<a href="https://www.mycasewebhub.com/build-questionnaire">This link</a>&nbsp;sends you over to our Design Hub, where the digital questionnaire is hosted. The questions should take 10-15 minutes to complete.<br />
+<br />
+Once it has been completed, I will get notified then will reach out with the next steps.<br />
+<br />
+I am looking forward to working on this project with you and completing your new website in the next 30 days!<br />
+<br />
+Please let me know if you have any questions.<br />
+<br />
+Thank you,<br />
+{{{Sender.FirstName}}}<br />
+MyCase Websites Team</p>
+</body>
+</html>

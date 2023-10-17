@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Business Validated --></label>
+        <name>Business_Validated__c</name>
+        <picklistValues>
+            <masterLabel>Approved - Other</masterLabel>
+            <translation><!-- Approved - Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved - SOS</masterLabel>
+            <translation><!-- Approved - SOS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Declined</masterLabel>
+            <translation><!-- Declined --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

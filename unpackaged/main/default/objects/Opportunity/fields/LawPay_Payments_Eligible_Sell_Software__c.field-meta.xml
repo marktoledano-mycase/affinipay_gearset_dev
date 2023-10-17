@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LawPay_Payments_Eligible_Sell_Software__c</fullName>
+    <description>LawPay Payments Opportunity Eligible to sell Software To</description>
+    <externalId>false</externalId>
+    <formula>IF(AND(Record_Type_Name__c= &quot;LawPay Payments&quot;, Referral_Partnership_Channel__c !=&quot;Tech Partner&quot;,
+Docketwise_Customer_Status__c !=&quot;Active&quot;,  MyCase_Customer_Status__c != &quot;Active&quot;, CASEpeer_Customer_Status__c != &quot;Active&quot;),
+&quot;Yes&quot;, &quot;No&quot;)</formula>
+    <inlineHelpText>LawPay Payments Opportunity Eligible to sell Software To</inlineHelpText>
+    <label>LawPay Payments Eligible Sell Software</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

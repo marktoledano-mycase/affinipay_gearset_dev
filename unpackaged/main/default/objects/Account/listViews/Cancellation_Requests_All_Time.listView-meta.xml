@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancellation_Requests_All_Time</fullName>
+    <columns>Customer_Contacted_Cancellation_Date__c</columns>
+    <columns>AffiniPay_VT__c</columns>
+    <columns>List_ZD_Ticket__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Customer_Retention_Owner__c</columns>
+    <columns>Customer_Retained__c</columns>
+    <columns>Strategy_Used_to_Retain__c</columns>
+    <columns>Closed_Reason__c</columns>
+    <columns>Cancellation_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Customer_Contacted_Cancellation_Date__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>List_ZD_Ticket__c</field>
+        <operation>notContain</operation>
+        <value>Slipping</value>
+    </filters>
+    <label>Cancellation Requests - All Time</label>
+    <sharedTo>
+        <group>Customer_Retention_Team</group>
+    </sharedTo>
+</ListView>

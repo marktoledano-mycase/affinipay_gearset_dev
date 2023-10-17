@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_SKU_Tx_Count__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Used to determine how many transaction records are associated to this SKU record; Primarily for troubleshooting purposes.</inlineHelpText>
+    <label>Contract SKU Tx Count</label>
+    <summaryForeignKey>Contract_SKU_Transaction__c.Contract_SKU__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

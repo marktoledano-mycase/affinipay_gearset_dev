@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DocketWise_Active</fullName>
+    <columns>NAME</columns>
+    <columns>Status__c</columns>
+    <columns>Product_Type__c</columns>
+    <columns>Product_Line_Type__c</columns>
+    <columns>Product_Tier__c</columns>
+    <columns>Pricing_Type__c</columns>
+    <columns>CURRENCY_ISO_CODE</columns>
+    <columns>Price_Base__c</columns>
+    <columns>Quantity_Locked__c</columns>
+    <columns>Default_Quantity__c</columns>
+    <columns>Billing_Seq__c</columns>
+    <columns>Billing_Plan__c</columns>
+    <columns>Required_for_Parent__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>SKU_Product__c.Docketwise</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Active,Grand-Fathered</value>
+    </filters>
+    <label>DocketWise - Active</label>
+</ListView>

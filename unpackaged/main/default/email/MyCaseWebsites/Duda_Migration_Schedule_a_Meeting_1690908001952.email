@@ -1,0 +1,15 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">Hi {{{Recipient.FirstName}}},<br />
+<br />
+Thank you for speaking with me over the phone this <em><strong>[morning/afternoon]</strong></em>. Please use this <a href="https://calendly.com/d/26p-syj-sww/mycase-website-services-meeting">link</a>&nbsp;to schedule a Zoom meeting with a member of our team to upgrade your website to our new platform.<br />
+<br />
+We look forward to assisting you. Let us know if you have any questions, comments, or concerns.<br />
+<br />
+Best,<br />
+{{{Sender.FirstName}}}<br />
+MyCase Website Services Team<br />
+Case #{{{Case.CaseNumber}}}</body>
+</html>

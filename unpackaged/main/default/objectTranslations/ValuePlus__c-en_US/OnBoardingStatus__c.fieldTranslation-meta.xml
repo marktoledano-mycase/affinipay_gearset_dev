@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- On-Boarding Status --></label>
+        <name>OnBoardingStatus__c</name>
+        <picklistValues>
+            <masterLabel>Apm data pull failure</masterLabel>
+            <translation><!-- Apm data pull failure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Canceled</masterLabel>
+            <translation><!-- Canceled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Collecting Documents</masterLabel>
+            <translation><!-- Collecting Documents --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Complete</masterLabel>
+            <translation><!-- Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Compliance Review Rejected</masterLabel>
+            <translation><!-- Compliance Review Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Declined</masterLabel>
+            <translation><!-- Declined --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Denied</masterLabel>
+            <translation><!-- Denied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Documents Received</masterLabel>
+            <translation><!-- Documents Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Escalated to Compliance</masterLabel>
+            <translation><!-- Escalated to Compliance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Initial Review</masterLabel>
+            <translation><!-- Initial Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inspection Ordered</masterLabel>
+            <translation><!-- Inspection Ordered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lost</masterLabel>
+            <translation><!-- Lost --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Merchant App Received</masterLabel>
+            <translation><!-- Merchant App Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Merchant App Sent</masterLabel>
+            <translation><!-- Merchant App Sent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Peer Review Rejected</masterLabel>
+            <translation><!-- Peer Review Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Compliance Review</masterLabel>
+            <translation><!-- Pending Compliance Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Data Ver</masterLabel>
+            <translation><!-- Pending Data Ver --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Peer Review</masterLabel>
+            <translation><!-- Pending Peer Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready for APM</masterLabel>
+            <translation><!-- Ready for APM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready to Go Live</masterLabel>
+            <translation><!-- Ready to Go Live --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready to transmit</masterLabel>
+            <translation><!-- Ready to transmit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sent to Underwriting</masterLabel>
+            <translation><!-- Sent to Underwriting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transmitted</masterLabel>
+            <translation><!-- Transmitted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Underwritten</masterLabel>
+            <translation><!-- Underwritten --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Welcome Missed</masterLabel>
+            <translation><!-- Welcome Missed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Welcome Scheduled</masterLabel>
+            <translation><!-- Welcome Scheduled --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

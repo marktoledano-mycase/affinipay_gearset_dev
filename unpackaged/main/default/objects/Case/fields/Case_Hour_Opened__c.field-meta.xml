@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Hour_Opened__c</fullName>
+    <description>updated R179428; R1921603; R2025371</description>
+    <externalId>false</externalId>
+    <formula>CASE(VALUE(MID(TEXT(CreatedDate),12,2)),
+23,&quot;4:00 PM PT&quot;,
+0,&quot;5:00 PM PT&quot;,
+1,&quot;6:00 PM PT&quot;,
+2,&quot;7:00 PM PT&quot;,
+3,&quot;8:00 PM PT&quot;,
+4,&quot;9:00 PM PT&quot;,
+5,&quot;10:00 PM PT&quot;,
+6,&quot;11:00 PM PT&quot;,
+7,&quot;12:00 AM PT&quot;,
+8,&quot;1:00 AM PT&quot;,
+9,&quot;2:00 AM PT&quot;,
+10,&quot;3:00 AM PT&quot;,
+11,&quot;4:00 AM PT&quot;,
+12,&quot;5:00 AM PT&quot;,
+13,&quot;6:00 AM PT&quot;,
+14,&quot;7:00 AM PT&quot;,
+15,&quot;8:00 AM PT&quot;,
+16,&quot;9:00 AM PT&quot;,
+17,&quot;10:00 AM PT&quot;,
+18,&quot;11:00 AM PT&quot;,
+19,&quot;12:00 PM PT&quot;,
+20,&quot;1:00 PM PT&quot;,
+21,&quot;2:00 PM PT&quot;,
+22,&quot;3:00 PM PT&quot;,
+&quot;The formula did not calculate correctly. Contact salesforce@appfolio.com&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Case Hour Opened</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

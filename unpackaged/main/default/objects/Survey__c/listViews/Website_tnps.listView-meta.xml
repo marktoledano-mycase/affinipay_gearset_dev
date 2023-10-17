@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Website_tnps</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Case__c</columns>
+    <columns>Case_Owner__c</columns>
+    <columns>Score__c</columns>
+    <columns>Internal_Feedback__c</columns>
+    <columns>Score_Explanation__c</columns>
+    <columns>Completed_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Survey__c.MyCase_Websites_tNPS</value>
+    </filters>
+    <label>Website tnps</label>
+</ListView>

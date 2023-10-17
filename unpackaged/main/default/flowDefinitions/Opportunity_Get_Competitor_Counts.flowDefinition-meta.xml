@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>1</activeVersionNumber>
+    <description>This autolaunched flow is used to calculate Competitor counts. It is used in the Closed Lost screen.</description>
+    <masterLabel>Opportunity - Get Competitor Counts</masterLabel>
+</FlowDefinition>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_to_Billing_MC</fullName>
+    <availability>online</availability>
+    <description>R177846</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Send to Billing</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/31.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/support/console/25.0/integration.js&quot;)} 
+
+var caseObj = new sforce.SObject(&quot;Case&quot;); 
+
+if(&#39;{!Case.Case_Sub_Reason__c}&#39; == &#39;Refund/Credit&#39;){ 
+alert(&#39;Cases with Sub Reason of &quot;Refund/Credit&quot; need to be approved, please cancel and click &quot;Submit for Approval.&#39;); 
+} 
+
+else if(&#39;{!Case.Contact}&#39; == &quot;&quot;){ 
+alert(&#39;You must associated a contact with the case before it can be sent to Billing.&#39;); 
+} 
+
+else { 
+caseObj.Id = &#39;{!Case.Id}&#39;; 
+caseObj.OwnerId = &quot;00G80000004MXsI&quot;; /* Change owner */ 
+caseObj.Status = &quot;New&quot;; /* Change status */ 
+} 
+
+var result = sforce.connection.update([caseObj]); 
+
+
+
+location.reload( true );</url>
+</WebLink>

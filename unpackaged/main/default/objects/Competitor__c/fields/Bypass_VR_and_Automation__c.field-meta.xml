@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bypass_VR_and_Automation__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This is used by admins to bypass validation rules (VR) and automation as needed. It is automatically unchecked after it is used.</description>
+    <externalId>false</externalId>
+    <label>Bypass VR and Automation</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

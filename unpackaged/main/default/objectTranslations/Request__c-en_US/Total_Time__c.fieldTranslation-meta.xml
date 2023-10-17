@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Hours from time request was submitted to time it was completed. --></help>
+        <label><!-- Total Time --></label>
+        <name>Total_Time__c</name>
+    </CustomFieldTranslation>

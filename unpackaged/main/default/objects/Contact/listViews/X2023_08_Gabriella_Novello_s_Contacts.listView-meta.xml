@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2023_08_Gabriella_Novello_s_Contacts</fullName>
+    <columns>mkto_si__Current_Sales_Campaign__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>FULL_NAME</columns>
+    <columns>Account.Contract_Effective_Start__c</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>Status__c</columns>
+    <columns>CONTACT.LAST_ACTIVITY</columns>
+    <columns>Number_of_Employees__c</columns>
+    <columns>Primary_Practice_Area__c</columns>
+    <columns>Last_MQL_Brand__c</columns>
+    <columns>Last_MQL_Date__c</columns>
+    <columns>Last_MQL_Type__c</columns>
+    <columns>Outreach_Actively_Being_Sequenced__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>mkto_si__Current_Sales_Campaign__c</field>
+        <operation>contains</operation>
+        <value>2023-08 - Reassignment of Gabriella&#39;s leads/contacts/opps</value>
+    </filters>
+    <label>2023-08 - Gabriella Novello&#39;s Contacts</label>
+    <sharedTo>
+        <role>Account_Executive_MyCase_Mid_Market</role>
+    </sharedTo>
+</ListView>

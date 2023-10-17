@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Describes the overall status of the Customer account. --></help>
+        <label><!-- Customer Status - Overall --></label>
+        <name>Customer_Status_Overall__c</name>
+    </CustomFieldTranslation>

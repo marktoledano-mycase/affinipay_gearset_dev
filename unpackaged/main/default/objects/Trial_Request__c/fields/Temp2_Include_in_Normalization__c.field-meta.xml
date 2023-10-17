@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Temp2_Include_in_Normalization__c</fullName>
+    <externalId>false</externalId>
+    <formula>/* Low-Value MyCase Trials */
+IF(
+   ISPICKVAL(Brand__c, &quot;MyCase&quot;) &amp;&amp;
+   ISBLANK(Opportunity__c) &amp;&amp;
+  (ISPICKVAL(Type__c, &quot;Trial&quot;) ||
+   ISPICKVAL(Type__c, &quot;Demo&quot;)) &amp;&amp;
+      (
+          (LEN(Person_Company__c)-LEN(SUBSTITUTE(Person_Company__c,&quot; &quot;,&quot;&quot;))) &lt;=1 ||
+           Person_Disqualified_Reason__c = &quot;Customer Client&quot; ||
+           CONTAINS(LOWER( Person_Email__c ), &quot;.edu&quot;) ||
+           CONTAINS(LOWER(Person_Company__c), &quot;test&quot;) ||
+           CONTAINS(LOWER(Person_Company__c), &quot;heating&quot;) ||
+           CONTAINS(LOWER(Person_Company__c), &quot;roofing&quot;) ||
+           CONTAINS(LOWER(Person_Company__c), &quot;cooling&quot;) ||
+           CONTAINS(LOWER(Person_Company__c), &quot;flooring&quot;) ||
+           LOWER(Person_Company__c) = &quot;none&quot; ||
+           LOWER(Person_Company__c) = &quot;na&quot; ||
+           LOWER(Person_Company__c) = &quot;n/a&quot; 
+       )
+         ,FALSE,TRUE 
+  )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Temp2 - Include in Normalization</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

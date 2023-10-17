@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GIACTIdentifyResponse__c</fullName>
+    <externalId>false</externalId>
+    <label>GIACT Identify Response</label>
+    <referenceTo>GIACTIdentifyResponses__c</referenceTo>
+    <relationshipLabel>GIdentifyEntityInformations</relationshipLabel>
+    <relationshipName>GIdentifyEntityInformations</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

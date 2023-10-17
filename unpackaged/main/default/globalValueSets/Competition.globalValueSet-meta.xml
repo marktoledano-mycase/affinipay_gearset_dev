@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Clio Grow</fullName>
+        <default>false</default>
+        <label>Clio Grow</label>
+    </customValue>
+    <customValue>
+        <fullName>Clio Manage</fullName>
+        <default>false</default>
+        <label>Clio Manage</label>
+    </customValue>
+    <customValue>
+        <fullName>FileVine</fullName>
+        <default>false</default>
+        <label>FileVine</label>
+    </customValue>
+    <customValue>
+        <fullName>Practice Panther</fullName>
+        <default>false</default>
+        <label>Practice Panther</label>
+    </customValue>
+    <customValue>
+        <fullName>Rocket Matter</fullName>
+        <default>false</default>
+        <label>Rocket Matter</label>
+    </customValue>
+    <customValue>
+        <fullName>Smokeball</fullName>
+        <default>false</default>
+        <label>Smokeball</label>
+    </customValue>
+    <customValue>
+        <fullName>Zola suite</fullName>
+        <default>false</default>
+        <label>Zola suite</label>
+    </customValue>
+    <customValue>
+        <fullName>Abacus</fullName>
+        <default>false</default>
+        <label>Abacus</label>
+    </customValue>
+    <customValue>
+        <fullName>ACT! CRM</fullName>
+        <default>false</default>
+        <label>ACT! CRM</label>
+    </customValue>
+    <customValue>
+        <fullName>ActionStep</fullName>
+        <default>false</default>
+        <label>ActionStep</label>
+    </customValue>
+    <customValue>
+        <fullName>Aderant</fullName>
+        <default>false</default>
+        <label>Aderant</label>
+    </customValue>
+    <customValue>
+        <fullName>Amicus</fullName>
+        <default>false</default>
+        <label>Amicus</label>
+    </customValue>
+    <customValue>
+        <fullName>BestCase</fullName>
+        <default>false</default>
+        <label>BestCase</label>
+    </customValue>
+    <customValue>
+        <fullName>Bill4Time</fullName>
+        <default>false</default>
+        <label>Bill4Time</label>
+    </customValue>
+    <customValue>
+        <fullName>CaseFox</fullName>
+        <default>false</default>
+        <label>CaseFox</label>
+    </customValue>
+    <customValue>
+        <fullName>CASEpeer</fullName>
+        <default>false</default>
+        <label>CASEpeer</label>
+    </customValue>
+    <customValue>
+        <fullName>Cerenade/Serenade</fullName>
+        <default>false</default>
+        <label>Cerenade/Serenade</label>
+    </customValue>
+    <customValue>
+        <fullName>Cosmolex</fullName>
+        <default>false</default>
+        <label>Cosmolex</label>
+    </customValue>
+    <customValue>
+        <fullName>Daylite</fullName>
+        <default>false</default>
+        <label>Daylite</label>
+    </customValue>
+    <customValue>
+        <fullName>Docketwise</fullName>
+        <default>false</default>
+        <label>Docketwise</label>
+    </customValue>
+    <customValue>
+        <fullName>E-Bility</fullName>
+        <default>false</default>
+        <label>E-Bility</label>
+    </customValue>
+    <customValue>
+        <fullName>Firm Central</fullName>
+        <default>false</default>
+        <label>Firm Central</label>
+    </customValue>
+    <customValue>
+        <fullName>High Rise</fullName>
+        <default>false</default>
+        <label>High Rise</label>
+    </customValue>
+    <customValue>
+        <fullName>Hubspot</fullName>
+        <default>false</default>
+        <label>Hubspot</label>
+    </customValue>
+    <customValue>
+        <fullName>INSZoom</fullName>
+        <default>false</default>
+        <label>INSZoom</label>
+    </customValue>
+    <customValue>
+        <fullName>Juris</fullName>
+        <default>false</default>
+        <label>Juris</label>
+    </customValue>
+    <customValue>
+        <fullName>Law Logix</fullName>
+        <default>false</default>
+        <label>Law Logix</label>
+    </customValue>
+    <customValue>
+        <fullName>Lawcus</fullName>
+        <default>false</default>
+        <label>Lawcus</label>
+    </customValue>
+    <customValue>
+        <fullName>Lawyaw</fullName>
+        <default>false</default>
+        <label>Lawyaw</label>
+    </customValue>
+    <customValue>
+        <fullName>Leap</fullName>
+        <default>false</default>
+        <label>Leap</label>
+    </customValue>
+    <customValue>
+        <fullName>Legal Master</fullName>
+        <default>false</default>
+        <label>Legal Master</label>
+    </customValue>
+    <customValue>
+        <fullName>Lolly Law</fullName>
+        <default>false</default>
+        <label>Lolly Law</label>
+    </customValue>
+    <customValue>
+        <fullName>MerusCase</fullName>
+        <default>false</default>
+        <label>MerusCase</label>
+    </customValue>
+    <customValue>
+        <fullName>Needles</fullName>
+        <default>false</default>
+        <label>Needles</label>
+    </customValue>
+    <customValue>
+        <fullName>No Competition</fullName>
+        <default>false</default>
+        <label>No Competition</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>PC Law</fullName>
+        <default>false</default>
+        <label>PC Law</label>
+    </customValue>
+    <customValue>
+        <fullName>Perfect Practice</fullName>
+        <default>false</default>
+        <label>Perfect Practice</label>
+    </customValue>
+    <customValue>
+        <fullName>PerfectLaw</fullName>
+        <default>false</default>
+        <label>PerfectLaw</label>
+    </customValue>
+    <customValue>
+        <fullName>PrimaFacie</fullName>
+        <default>false</default>
+        <label>PrimaFacie</label>
+    </customValue>
+    <customValue>
+        <fullName>Pro Docs</fullName>
+        <default>false</default>
+        <label>Pro Docs</label>
+    </customValue>
+    <customValue>
+        <fullName>ProLaw</fullName>
+        <default>false</default>
+        <label>ProLaw</label>
+    </customValue>
+    <customValue>
+        <fullName>Quickbooks</fullName>
+        <default>false</default>
+        <label>Quickbooks</label>
+    </customValue>
+    <customValue>
+        <fullName>Rippe &amp; Kingston</fullName>
+        <default>false</default>
+        <label>Rippe &amp; Kingston</label>
+    </customValue>
+    <customValue>
+        <fullName>Salesforce</fullName>
+        <default>false</default>
+        <label>Salesforce</label>
+    </customValue>
+    <customValue>
+        <fullName>TABS3</fullName>
+        <default>false</default>
+        <label>TABS3</label>
+    </customValue>
+    <customValue>
+        <fullName>Time and Chaos</fullName>
+        <default>false</default>
+        <label>Time and Chaos</label>
+    </customValue>
+    <customValue>
+        <fullName>Time Tracker</fullName>
+        <default>false</default>
+        <label>Time Tracker</label>
+    </customValue>
+    <customValue>
+        <fullName>Time59</fullName>
+        <default>false</default>
+        <label>Time59</label>
+    </customValue>
+    <customValue>
+        <fullName>TimeMatters</fullName>
+        <default>false</default>
+        <label>TimeMatters</label>
+    </customValue>
+    <customValue>
+        <fullName>TimeSlips</fullName>
+        <default>false</default>
+        <label>TimeSlips</label>
+    </customValue>
+    <customValue>
+        <fullName>TimeSolv</fullName>
+        <default>false</default>
+        <label>TimeSolv</label>
+    </customValue>
+    <customValue>
+        <fullName>TrialWorks</fullName>
+        <default>false</default>
+        <label>TrialWorks</label>
+    </customValue>
+    <customValue>
+        <fullName>Amicus Cloud</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Amicus Cloud</label>
+    </customValue>
+    <customValue>
+        <fullName>Amicus Small Firm Edition</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Amicus Small Firm Edition</label>
+    </customValue>
+    <customValue>
+        <fullName>Axxess</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Axxess</label>
+    </customValue>
+    <customValue>
+        <fullName>Excel</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Excel</label>
+    </customValue>
+    <customValue>
+        <fullName>Harvest</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Harvest</label>
+    </customValue>
+    <customValue>
+        <fullName>Interbill</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Interbill</label>
+    </customValue>
+    <customValue>
+        <fullName>LeadTrac</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>LeadTrac</label>
+    </customValue>
+    <customValue>
+        <fullName>MyCase</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>MyCase</label>
+    </customValue>
+    <customValue>
+        <fullName>One Drive</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>One Drive</label>
+    </customValue>
+    <customValue>
+        <fullName>OneNote</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>OneNote</label>
+    </customValue>
+    <customValue>
+        <fullName>Outlook</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Outlook</label>
+    </customValue>
+    <customValue>
+        <fullName>Pen &amp; Paper</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Pen &amp; Paper</label>
+    </customValue>
+    <customValue>
+        <fullName>PIKA</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>PIKA</label>
+    </customValue>
+    <customValue>
+        <fullName>Prevail</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Prevail</label>
+    </customValue>
+    <customValue>
+        <fullName>QB online</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>QB online</label>
+    </customValue>
+    <customValue>
+        <fullName>Simplicity</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Simplicity</label>
+    </customValue>
+    <customValue>
+        <fullName>SQL database</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>SQL database</label>
+    </customValue>
+    <customValue>
+        <fullName>TriTek</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>TriTek</label>
+    </customValue>
+    <customValue>
+        <fullName>Word</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Word</label>
+    </customValue>
+    <customValue>
+        <fullName>Worldox</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Worldox</label>
+    </customValue>
+    <customValue>
+        <fullName>XML files</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>XML files</label>
+    </customValue>
+    <customValue>
+        <fullName>AZZ Cardfile</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>AZZ Cardfile</label>
+    </customValue>
+    <customValue>
+        <fullName>BillingsPro</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>BillingsPro</label>
+    </customValue>
+    <customValue>
+        <fullName>Case Status</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Case Status</label>
+    </customValue>
+    <customValue>
+        <fullName>CaseLode</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>CaseLode</label>
+    </customValue>
+    <customValue>
+        <fullName>ClaimWizard</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>ClaimWizard</label>
+    </customValue>
+    <customValue>
+        <fullName>CoCounselor</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>CoCounselor</label>
+    </customValue>
+    <customValue>
+        <fullName>E-Law</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>E-Law</label>
+    </customValue>
+    <customValue>
+        <fullName>EXpd8 (Expediate)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>EXpd8 (Expediate)</label>
+    </customValue>
+    <customValue>
+        <fullName>File Maker Pro</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>File Maker Pro</label>
+    </customValue>
+    <customValue>
+        <fullName>Legal Perfection</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Legal Perfection</label>
+    </customValue>
+    <customValue>
+        <fullName>Legal Visions</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Legal Visions</label>
+    </customValue>
+    <customValue>
+        <fullName>Loanpost</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Loanpost</label>
+    </customValue>
+    <customValue>
+        <fullName>Ring Central</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Ring Central</label>
+    </customValue>
+    <customValue>
+        <fullName>SnapDone</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>SnapDone</label>
+    </customValue>
+    <customValue>
+        <fullName>Velocify</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Velocify</label>
+    </customValue>
+    <customValue>
+        <fullName>Winvan</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Winvan</label>
+    </customValue>
+    <description>List of competitors in the LPM landscape.</description>
+    <masterLabel>Competition</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GiactMissingTaxIdBusiness_MyCase</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND ( 
+$RecordType.Name=&#39;MyCase Payments&#39;, 
+ISPICKVAL(GIACTBusinessOwner_1_Validation__c, &#39;Ready To Transmit To GIACT&#39;), 
+LEN(Tax_ID__c)=0 
+)</errorConditionFormula>
+    <errorMessage>Business Tax Id details are missing on Value Plus. Please provide these details to process the GIACT Call</errorMessage>
+</ValidationRule>

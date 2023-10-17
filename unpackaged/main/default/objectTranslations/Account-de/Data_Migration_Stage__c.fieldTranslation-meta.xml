@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Data Migration Stage --></label>
+        <name>Data_Migration_Stage__c</name>
+        <picklistValues>
+            <masterLabel>Application Review</masterLabel>
+            <translation><!-- Application Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Build Data</masterLabel>
+            <translation><!-- Build Data --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Financial Data</masterLabel>
+            <translation><!-- Financial Data --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kick-Off</masterLabel>
+            <translation><!-- Kick-Off --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Migration Complete</masterLabel>
+            <translation><!-- Migration Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Re-Migration</masterLabel>
+            <translation><!-- Re-Migration --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Database__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Prod Database</label>
+    <lookupFilter>
+        <active>false</active>
+        <errorMessage>Database MUST be production and MUST be for Property Manager.  If one does not exist, please populate Non-Prod Database Field or check No Database Exists checkbox.</errorMessage>
+        <filterItems>
+            <field>Database__c.Account__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.AccountId</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Database__c.Type__c</field>
+            <operation>equals</operation>
+            <value>Production</value>
+        </filterItems>
+        <filterItems>
+            <field>Database__c.Application_Name__c</field>
+            <operation>equals</operation>
+            <value>property</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Database__c</referenceTo>
+    <relationshipLabel>Cases</relationshipLabel>
+    <relationshipName>Cases</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

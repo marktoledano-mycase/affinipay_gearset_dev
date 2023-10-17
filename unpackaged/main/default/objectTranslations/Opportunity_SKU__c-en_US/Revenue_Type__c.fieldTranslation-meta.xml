@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Reflects the Revenue Type of the related SKU Product --></help>
+        <label><!-- Revenue Type --></label>
+        <name>Revenue_Type__c</name>
+    </CustomFieldTranslation>

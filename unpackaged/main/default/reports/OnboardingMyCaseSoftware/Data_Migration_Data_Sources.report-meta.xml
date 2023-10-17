@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_ID</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Account.Current_LPM__c</field>
+    </columns>
+    <columns>
+        <field>Onboarding__c.Current_Solution__c</field>
+    </columns>
+    <columns>
+        <field>Onboarding__c.Data_Migration_Stage__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Onboarding__c.Data_Migration_Stage__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,New,KOC Scheduled,KOC Completed,Phase 1: Import In Progress,Phase 1: Import Sign-off,Phase 1: Import Complete,Phase 2: Import In Progress,Phase 2: Import Sign-Off,Phase 2: Import Complete,Onboarding,Churn Risk,Non-responsive,Live,Lost</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Onboarding__c.Data_Migration_Specialist__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Kimia Hadidi,Elizabeth Esquivel,Ryan Manny,Justin Dempsey,Mitchell Murray</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Onboarding__c.Data_Migration_Specialist__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Data Migration: Data Sources</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountCustomEntity$Onboarding__c@Onboarding__c.Product_Environment__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>FK_$Product_Environment__c.Conversion_Date__c</dateColumn>
+        <interval>INTERVAL_PREVCURFY</interval>
+    </timeFrameFilter>
+</Report>

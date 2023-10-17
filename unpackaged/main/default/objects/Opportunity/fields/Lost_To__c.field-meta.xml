@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lost_To__c</fullName>
+    <description>Tracking closed lost information is a critical step in adapting our sales and marketing strategic, helping R&amp;D prioritize features to develop, and focus training efforts. This field tracks whether we lost an Opportunity to a competitor, incumbent (current solution), or other/unknown. It is required when an Opportunity Stage is updated to &quot;Closed Lost.&quot;</description>
+    <externalId>false</externalId>
+    <label>Lost To</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Competitor</fullName>
+                <default>false</default>
+                <label>Competitor</label>
+            </value>
+            <value>
+                <fullName>Incumbent</fullName>
+                <default>false</default>
+                <label>Incumbent</label>
+            </value>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+                <label>Not Applicable</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

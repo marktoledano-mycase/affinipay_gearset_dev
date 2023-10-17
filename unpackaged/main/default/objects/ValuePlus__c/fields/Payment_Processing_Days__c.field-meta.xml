@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_Processing_Days__c</fullName>
+    <description>The number of days for Profit Stars to process a payment - R2025316</description>
+    <externalId>false</externalId>
+    <label>Payment Processing Days</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>3 Days</fullName>
+                <default>true</default>
+                <label>3 Days</label>
+            </value>
+            <value>
+                <fullName>0 Days</fullName>
+                <default>false</default>
+                <label>0 Days</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

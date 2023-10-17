@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Last user login time --></help>
+        <label><!-- Last Login Date/Time --></label>
+        <name>Last_Login_Date_Time__c</name>
+    </CustomFieldTranslation>

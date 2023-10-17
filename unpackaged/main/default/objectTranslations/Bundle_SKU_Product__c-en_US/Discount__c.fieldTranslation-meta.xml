@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Represents the discount off of list price being extended through the bundle.  To be used for the addition of the SKU Product onto the selecting Opportunity(ies). --></help>
+        <label><!-- Discount (%) --></label>
+        <name>Discount__c</name>
+    </CustomFieldTranslation>

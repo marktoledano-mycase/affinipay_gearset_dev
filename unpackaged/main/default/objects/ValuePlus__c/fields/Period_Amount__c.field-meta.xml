@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Period_Amount__c</fullName>
+    <defaultValue>IF($RecordType.Name = &#39;MyCase Payments&#39;, 68000, NULL)</defaultValue>
+    <description>Updated per R152784</description>
+    <externalId>false</externalId>
+    <inlineHelpText>APM Only: Auto calculates to: &#39;Total Rent Roll x 2&#39; when Record Type = APM Payments &amp; Outbound On-Boarding Status=Pending Peer Review. Auto updates only one time upon meeting criteria &amp; can be manually updated before/after auto update.</inlineHelpText>
+    <label>Period Amount</label>
+    <precision>10</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

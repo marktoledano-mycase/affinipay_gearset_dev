@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>Application with all the needed areas to manage the Sales Process</description>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>Sales Process Manager</label>
+    <navType>Standard</navType>
+    <tabs>Billing_Plans__c</tabs>
+    <tabs>SKU_Product__c</tabs>
+    <tabs>Promotions__c</tabs>
+    <tabs>Product_SKU_Promotions__c</tabs>
+    <tabs>standard-Opportunity</tabs>
+    <tabs>Opportunity_Promo__c</tabs>
+    <tabs>Opportunity_SKU__c</tabs>
+    <tabs>Request__c</tabs>
+    <tabs>Survey__c</tabs>
+    <tabs>Onboarding__c</tabs>
+    <tabs>Partnership_Discount__c</tabs>
+    <tabs>Bundle__c</tabs>
+    <tabs>Partnerships__c</tabs>
+    <tabs>Bundle_SKU_Product__c</tabs>
+    <tabs>Trial_Request__c</tabs>
+    <tabs>Available_Integration__c</tabs>
+    <tabs>Partner_Contract__c</tabs>
+    <tabs>sf_devops__Work_Item__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Sales_Process_Manager_UtilityBar</utilityBar>
+</CustomApplication>

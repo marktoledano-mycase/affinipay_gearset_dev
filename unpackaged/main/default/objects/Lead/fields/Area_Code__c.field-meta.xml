@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Area_Code__c</fullName>
+    <description>updated R178062</description>
+    <externalId>false</externalId>
+    <formula>IF(BEGINS(Phone,&quot;(&quot;)&amp;&amp; LEN(Phone)&gt;= 12,MID(Phone,2,3), 
+IF(BEGINS(Phone,&quot;+1(&quot;)&amp;&amp; LEN(Phone) &gt;= 14,MID(Phone,4,3), 
+IF(BEGINS(Phone,&quot;+1&quot;)&amp;&amp; LEN(Phone)&gt;= 12,MID(Phone,3,3), 
+IF(LEN(Phone)=10,LEFT(Phone, 3), 
+IF(LEN(Phone)=12&amp;&amp;CONTAINS(Phone, &quot;-&quot;),LEFT(Phone,3), &#39;&#39; 
+)))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Area Code</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

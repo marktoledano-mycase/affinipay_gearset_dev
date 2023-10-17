@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Group_Assignment__c</fullName>
+    <description>Rollup to show the most recent assignment date for members of the group</description>
+    <externalId>false</externalId>
+    <label>Last Group Assignment</label>
+    <summarizedField>Assignment_Groups__c.Last_Assignment__c</summarizedField>
+    <summaryForeignKey>Assignment_Groups__c.Group_Name__c</summaryForeignKey>
+    <summaryOperation>max</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

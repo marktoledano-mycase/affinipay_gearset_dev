@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Reduction applied the Monthly Total to bring existing accounts to correct rate during Salesforce cutover --></help>
+        <label><!-- Historical Reduction --></label>
+        <name>Historical_Reduction__c</name>
+    </CustomFieldTranslation>

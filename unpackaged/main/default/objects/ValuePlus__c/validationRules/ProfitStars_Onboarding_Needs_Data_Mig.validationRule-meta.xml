@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ProfitStars_Onboarding_Needs_Data_Mig</fullName>
+    <active>true</active>
+    <errorConditionFormula>((ispickval(PMT_ProfitStars_On_Boarding_Status__c, &#39;Complete&#39;) &amp;&amp; RecordType.Name == &#39;MyCase Payments&#39;) || (ispickval(OnBoardingStatus__c, &#39;Complete&#39;) &amp;&amp; RecordType.Name == &#39;APM Payments&#39;)) &amp;&amp; NOT(ISPICKVAL( Account__r.Data_Migration_Stage__c, &#39;Migration Complete&#39;)) &amp;&amp; NOT( $User.ProfileId = &#39;00e3g000000EbAD&#39;) &amp;&amp;(NOT(CONTAINS($Profile.Name, &#39;Integration - &#39;)))</errorConditionFormula>
+    <errorMessage>ProfitStars On-Boarding Status cannot be set to &#39;Complete&#39; until Data Migration Stage is &#39;Migration Complete&#39;.  Please contact Data Migration Specialist for an update on status of data migration.</errorMessage>
+</ValidationRule>

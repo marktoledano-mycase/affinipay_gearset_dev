@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Add_On_Users__c</fullName>
+    <externalId>false</externalId>
+    <label>Add-On Users</label>
+    <summarizedField>Contract_SKU_Transaction__c.Quantity__c</summarizedField>
+    <summaryFilterItems>
+        <field>Contract_SKU_Transaction__c.Quantity_Type__c</field>
+        <operation>equals</operation>
+        <value>Units</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Contract_SKU_Transaction__c.Contract_SKU__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

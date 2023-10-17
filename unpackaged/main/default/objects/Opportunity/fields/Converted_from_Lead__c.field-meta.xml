@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Converted_from_Lead__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is populated upon conversion (through field mapping) to signal whether the Opportunity was created through Lead conversion. It is used in validation and automation.</description>
+    <externalId>false</externalId>
+    <label>Converted from Lead</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

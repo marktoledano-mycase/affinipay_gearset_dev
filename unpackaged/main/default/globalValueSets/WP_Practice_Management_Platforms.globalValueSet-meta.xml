@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Actionstep</fullName>
+        <default>false</default>
+        <label>Actionstep</label>
+    </customValue>
+    <customValue>
+        <fullName>CASEpeer</fullName>
+        <default>false</default>
+        <label>CASEpeer</label>
+    </customValue>
+    <customValue>
+        <fullName>Clio</fullName>
+        <default>false</default>
+        <label>Clio</label>
+    </customValue>
+    <customValue>
+        <fullName>Cosmolex</fullName>
+        <default>false</default>
+        <label>Cosmolex</label>
+    </customValue>
+    <customValue>
+        <fullName>Filevine</fullName>
+        <default>false</default>
+        <label>Filevine</label>
+    </customValue>
+    <customValue>
+        <fullName>Firm Central</fullName>
+        <default>false</default>
+        <label>Firm Central</label>
+    </customValue>
+    <customValue>
+        <fullName>Microsoft Dynamics</fullName>
+        <default>false</default>
+        <label>Microsoft Dynamics</label>
+    </customValue>
+    <customValue>
+        <fullName>MyCase</fullName>
+        <default>false</default>
+        <label>MyCase</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Pipedrive</fullName>
+        <default>false</default>
+        <label>Pipedrive</label>
+    </customValue>
+    <customValue>
+        <fullName>PracticeMaster</fullName>
+        <default>false</default>
+        <label>PracticeMaster</label>
+    </customValue>
+    <customValue>
+        <fullName>Practice Panther</fullName>
+        <default>false</default>
+        <label>Practice Panther</label>
+    </customValue>
+    <customValue>
+        <fullName>Rocket Matter</fullName>
+        <default>false</default>
+        <label>Rocket Matter</label>
+    </customValue>
+    <customValue>
+        <fullName>Zoho</fullName>
+        <default>false</default>
+        <label>Zoho</label>
+    </customValue>
+    <description>Requested by Woodpecker</description>
+    <masterLabel>WP Practice Management Platforms</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

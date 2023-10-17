@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payments_Closed_Won_Validation</fullName>
+    <active>true</active>
+    <description>To prevent opportunities for payments from moving to Closed Won without a provisioned merchant application</description>
+    <errorConditionFormula>AND
+( 
+
+$Permission.Bypass_Defined_VR_s = FALSE, 
+
+AND( 
+OR( 
+ISBLANK( Merchant_Application__c), 
+ISBLANK( Merchant_Application__r.Provisioned_Date__c )
+),
+Canadian_Application__c = FALSE
+),
+
+OR(
+ISNEW(),
+ISCHANGED(StageName)
+),
+
+TEXT(StageName) = &quot;Closed Won&quot;,
+
+OR(
+Record_Type_Name__c = &quot;LawPay Payments&quot;,
+Record_Type_Name__c = &quot;CPACharge&quot;,
+Record_Type_Name__c = &quot;ClientPay&quot;,
+Record_Type_Name__c = &quot;AffiniPay&quot;
+)
+
+)</errorConditionFormula>
+    <errorMessage>Payments Opportunities need an associated Provisioned Merchant Application to move to Closed Won.</errorMessage>
+</ValidationRule>

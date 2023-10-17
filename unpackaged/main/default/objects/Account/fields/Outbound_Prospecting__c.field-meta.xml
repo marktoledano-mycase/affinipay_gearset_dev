@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Outbound_Prospecting__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checked through automation when account is being outbound prospected by BDR or AE</description>
+    <externalId>false</externalId>
+    <label>Outbound Prospecting</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

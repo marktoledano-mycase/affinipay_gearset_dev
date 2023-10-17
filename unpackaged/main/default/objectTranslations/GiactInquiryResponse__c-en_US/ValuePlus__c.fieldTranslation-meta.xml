@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- This helps is showing all the GIACT audit Logs in with each value plus records. --></help>
+        <label><!-- Value+ --></label>
+        <name>ValuePlus__c</name>
+        <relationshipLabel><!-- GIACT Inquiry Responses --></relationshipLabel>
+    </CustomFieldTranslation>

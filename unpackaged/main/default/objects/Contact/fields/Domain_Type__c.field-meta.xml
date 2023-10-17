@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Domain_Type__c</fullName>
+    <description>To help sift through personal and junk email domains for prospecting</description>
+    <externalId>false</externalId>
+    <formula>CASE( Email_Domain__c,
+
+&quot;gmail.com&quot;,&quot;gmail&quot;,
+&quot;yahoo.com&quot;,&quot;yahoo&quot;,
+&quot;aol.com&quot;,&quot;personal&quot;,
+&quot;msn.com&quot;,&quot;personal&quot;,
+&quot;comcast.net&quot;,&quot;personal&quot;,
+&quot;hotmail.com&quot;,&quot;personal&quot;,
+&quot;icloud.com&quot;,&quot;personal&quot;,
+&quot;att.net&quot;,&quot;personal&quot;,
+&quot;outlook.com&quot;,&quot;personal&quot;,
+&quot;live.com&quot;,&quot;personal&quot;,
+&quot;mycase.com&quot;,&quot;internal&quot;,
+&quot;affinipay.com&quot;,&quot;internal&quot;,
+&quot;guerrillamail.com&quot;,&quot;fake&quot;,
+&quot;yopmail.com&quot;,&quot;fake&quot;,
+&quot;tempmailio.com&quot;,&quot;fake&quot;,
+&quot;mailinator.com&quot;,&quot;fake&quot;,
+&quot;emailondeck.com&quot;,&quot;fake&quot;,
+&quot;protonmail.com&quot;,&quot;personal&quot;,
+&quot;ymail.com&quot;,&quot;personal&quot;,
+&quot;spiralize.com&quot;,&quot;internal&quot;,
+&quot;plutustec.com&quot;,&quot;fake&quot;,
+&quot;backgroundcheckmexico.com&quot;,&quot;fake&quot;,
+
+&quot;business&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Domain Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

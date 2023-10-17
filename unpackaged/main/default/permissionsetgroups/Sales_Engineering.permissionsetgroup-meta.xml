@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Additional permissions permissions for Sales Engineers</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Sales Engineering</label>
+    <permissionSets>Create_Report_and_Dashboard_Folders</permissionSets>
+    <permissionSets>Dashboards_Manager_Level_Access</permissionSets>
+    <permissionSets>Reports_Manager_Level_Access</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>LawPay Classic Account</fullName>
+        <default>false</default>
+        <label>LawPay Classic Account</label>
+    </customValue>
+    <customValue>
+        <fullName>Net New Free Trial Form</fullName>
+        <default>false</default>
+        <label>Net New Free Trial Form</label>
+    </customValue>
+    <description>On the Lead and the Contact indicates where the LawPay Pro Trial started from</description>
+    <masterLabel>MQL LawPay Pro Trial Started From</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

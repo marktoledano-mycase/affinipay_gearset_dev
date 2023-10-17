@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Paused__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    (
+        ISBLANK(Pause_Start_At__c) ||
+        Pause_End_At__c &lt; NOW() 
+    ),
+    FALSE,
+    TRUE
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Is Paused</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

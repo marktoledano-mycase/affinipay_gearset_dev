@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CaseSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAutoProcUser>false</caseAutoProcUser>
+    <caseFeedItemSettings>
+        <characterLimit>400</characterLimit>
+        <displayFormat>Default</displayFormat>
+        <feedItemType>EmailMessageEvent</feedItemType>
+    </caseFeedItemSettings>
+    <caseFeedReadUnreadLtng>true</caseFeedReadUnreadLtng>
+    <caseMergeInLightning>false</caseMergeInLightning>
+    <closeCaseThroughStatusChange>false</closeCaseThroughStatusChange>
+    <defaultCaseFeedLayoutOn>false</defaultCaseFeedLayoutOn>
+    <defaultCaseOwner>sfdc.admin@affinipay.com</defaultCaseOwner>
+    <defaultCaseOwnerType>User</defaultCaseOwnerType>
+    <defaultCaseUser>sfdc.admin@affinipay.com</defaultCaseUser>
+    <emailToCase>
+        <enableE2CAttachmentAsFile>false</enableE2CAttachmentAsFile>
+        <enableE2CSourceTracking>true</enableE2CSourceTracking>
+        <enableEmailToCase>true</enableEmailToCase>
+        <enableHtmlEmail>true</enableHtmlEmail>
+        <enableOnDemandEmailToCase>true</enableOnDemandEmailToCase>
+        <enableThreadIDInBody>true</enableThreadIDInBody>
+        <enableThreadIDInSubject>true</enableThreadIDInSubject>
+        <notifyOwnerOnNewCaseEmail>true</notifyOwnerOnNewCaseEmail>
+        <overEmailLimitAction>Requeue</overEmailLimitAction>
+        <preQuoteSignature>false</preQuoteSignature>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>MyCase_Accounting</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Normal</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>accounting.support@mycase.com</emailAddress>
+            
+            
+            <routingName>Accounting Support, MyCase</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email (LawPay)</caseOrigin>
+            <caseOwner>LawPay_Support</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Normal</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>support@lawpayplus.com</emailAddress>
+            <emailServicesAddress>support@249nhb70y6k6dke4g8yv84p467w0f1ymwaetxqh0vwf9xt9sro.8w-4lzhluao.na207.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>LawPay Support</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email (Billing)</caseOrigin>
+            <caseOwner>MyCase_Billing</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Normal</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>sfbillingcase@mycase.com</emailAddress>
+            <emailServicesAddress>sfbillingcase@b-13jwhd4i43wvrd6e0dg31qj3dzmg7z3w47nnm1vbojokg4fmbg.8w-4lzhluao.na207.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>MyCase Billing Support - Internal</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email (MyCase Subscription Change)</caseOrigin>
+            <caseOwner>MyCase_Team</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Normal</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>subscription.change@mycase.com</emailAddress>
+            <emailServicesAddress>subscription.change@1cn7yoq7wnu8rx4n28jlvfiks5dt1jw8ovmlrwy607szhpvh3l.8w-4lzhluao.na207.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>MyCase Subscription Change</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email (MyCase)</caseOrigin>
+            <casePriority>Normal</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>support@mycase.com</emailAddress>
+            <emailServicesAddress>support@2vrwyxjkcisx33s1c0r2duxqxm17ojxhylywvkjllxpo87hw8h.8w-4lzhluao.na207.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>MyCase Support</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email (MyCase Websites)</caseOrigin>
+            <caseOwner>MyCase_Websites</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Normal</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>websites@mycase.com</emailAddress>
+            <emailServicesAddress>websites@w-2cshv84ar2fi956mq91x9hbc4a0axyaw9ns13qaumd2ou7ik5m.8w-4lzhluao.na207.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>MyCase Websites</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email (Soluno)</caseOrigin>
+            <caseOwner>Soluno_Support</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Normal</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>support@devlossoftware.com</emailAddress>
+            <emailServicesAddress>support@1anparjmncn9zwq4l6owdkz3d632rd104a2ugu8pshvb3yp679.8w-4lzhluao.na207.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Soluno Support - DevlossSoftware.com</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email (Soluno)</caseOrigin>
+            <caseOwner>Soluno_Support</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Normal</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>support@soluno.legal</emailAddress>
+            <emailServicesAddress>support@h-1tv1khrpct5z6e7rdomlfceahgolsa7nrh71c3a9bx5dqe4kdn.8w-4lzhluao.na207.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Soluno Support - Soluno.legal</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Phone VM (Soluno)</caseOrigin>
+            <caseOwner>Soluno_Support</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Normal</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>solunosupportvmsfdccase@soluno.legal</emailAddress>
+            <emailServicesAddress>solunosupportvmsfdccase@1paz0qg3c85hry38mwxm8op0w6ft6e231pc9g7j58mg5sokux1.8w-4lzhluao.na207.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Soluno Support - Voice Mail</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email (Woodpecker Support)</caseOrigin>
+            <caseOwner>MyCase_Team</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Normal</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>help@woodpeckerweb.com</emailAddress>
+            <emailServicesAddress>help@i-10noshq8gnh31ovdtynye0ot1gzfr4fsec07pb3aw24j09x8lp.8w-4lzhluao.na207.case.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Woodpecker Support</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <unauthorizedSenderAction>Discard</unauthorizedSenderAction>
+    </emailToCase>
+    <enableCaseFeed>true</enableCaseFeed>
+    <enableCaseSwarming>false</enableCaseSwarming>
+    <enableCollapseEmailThread>true</enableCollapseEmailThread>
+    <enableDraftEmails>true</enableDraftEmails>
+    <enableEarlyEscalationRuleTriggers>false</enableEarlyEscalationRuleTriggers>
+    <enableEmailActionDefaultsHandler>false</enableEmailActionDefaultsHandler>
+    <enableEscalateQfiToCaseInternal>false</enableEscalateQfiToCaseInternal>
+    <enableMultiLangSolnSrchCSS>false</enableMultiLangSolnSrchCSS>
+    <enableMultiLangSolnSrchPKB>false</enableMultiLangSolnSrchPKB>
+    <enableMultiLangSolution>false</enableMultiLangSolution>
+    <enableSolutionCategory>false</enableSolutionCategory>
+    <enableSolutionInlineCategory>true</enableSolutionInlineCategory>
+    <enableSolutionShortSummary>true</enableSolutionShortSummary>
+    <enableSuggestedArticlesApplication>false</enableSuggestedArticlesApplication>
+    <enableSuggestedArticlesCustomerPortal>false</enableSuggestedArticlesCustomerPortal>
+    <enableSuggestedArticlesPartnerPortal>false</enableSuggestedArticlesPartnerPortal>
+    <enableSuggestedSolutions>true</enableSuggestedSolutions>
+    <escalateCaseBefore>false</escalateCaseBefore>
+    <keepRecordTypeOnAssignmentRule>true</keepRecordTypeOnAssignmentRule>
+    <notifyContactOnCaseComment>false</notifyContactOnCaseComment>
+    <notifyDefaultCaseOwner>false</notifyDefaultCaseOwner>
+    <notifyOwnerOnCaseComment>true</notifyOwnerOnCaseComment>
+    <notifyOwnerOnCaseOwnerChange>false</notifyOwnerOnCaseOwnerChange>
+    <showEmailAttachmentsInCaseAttachmentsRL>true</showEmailAttachmentsInCaseAttachmentsRL>
+    <systemUserEmail>automatedcase@00d8w000004lzhluao.ext</systemUserEmail>
+    <useSystemEmailAddress>true</useSystemEmailAddress>
+    <useSystemUserAsDefaultCaseUser>false</useSystemUserAsDefaultCaseUser>
+    <visibleInCssCheckbox>false</visibleInCssCheckbox>
+    <webToCase>
+        <enableWebToCase>false</enableWebToCase>
+    </webToCase>
+</CaseSettings>

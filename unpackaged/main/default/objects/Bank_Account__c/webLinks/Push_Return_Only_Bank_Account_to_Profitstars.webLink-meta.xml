@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Push_Return_Only_Bank_Account_to_Profitstars</fullName>
+    <availability>online</availability>
+    <description>This adds a &#39;Return-Only&#39; Bank Account to ProfitStars. Created for R1915805.</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Push Return-Only Bank Account to Profitstars</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)}
+var c = new sforce.SObject(&quot;Bank_Account__c&quot;);
+c.id = &quot;{!Bank_Account__c.Id}&quot;;
+
+if(&quot;{!Bank_Account__c.Return_Account_Add_Status__c}&quot; != null &amp;&amp; &quot;{!Bank_Account__c.Return_Account_Add_Status__c}&quot; == &#39;Submitted&#39;) 
+{ 
+alert(&#39;This record was already pushed to ProfitStars.&#39;);
+}
+else if(&quot;{!Bank_Account__c.LID__c}&quot; == null || &quot;{!Bank_Account__c.LID__c}&quot; == &#39;&#39; || &quot;{!Bank_Account__c.LID__c}&quot; == undefined)
+{
+alert(&#39;LID is not available for this bank account.&#39;);
+}
+else if(&quot;{!Bank_Account__c.Return_Routing_Number__c}&quot; == null || &quot;{!Bank_Account__c.Return_Routing_Number__c}&quot; == &#39;&#39; || &quot;{!Bank_Account__c.Return_Routing_Number__c}&quot; == undefined)
+{
+alert(&#39;Return Routing Number is blank for this bank account. \nPlease update the record with the missing information and try again!&#39;);
+}
+else if(&quot;{!Bank_Account__c.Return_Account_Number__c}&quot; == null || &quot;{!Bank_Account__c.Return_Account_Number__c}&quot; == &#39;&#39; || &quot;{!Bank_Account__c.Return_Account_Number__c}&quot; == undefined)
+{
+alert(&#39;Return Account Number is blank for this bank account. \nPlease update the record with the missing information and try again!&#39;);
+}
+else if(&quot;{!ValuePlus__c.ProfitStars_Merchant_ID__c}&quot; == null || &quot;{!ValuePlus__c.ProfitStars_Merchant_ID__c}&quot; == &#39;&#39; 
+	|| &quot;{!ValuePlus__c.ProfitStars_Merchant_ID__c}&quot; == undefined)
+{
+alert(&#39;ProfitStars Merchant ID is not available for the V+ record related to this bank account.&#39;);
+}
+else
+{
+var r = confirm(&quot;Return-Only Bank Account will be added in ProfitStars; continue?&quot;);
+if (r == true) 
+{
+var result = sforce.apex.execute(&quot;ps_buttonMethods&quot;, &quot;callAddReturnAccount&quot;, {
+id: &quot;{!Bank_Account__c.Id}&quot;});
+var parsed = JSON.parse(result);
+if (parsed.didPass == true) 
+{
+document.location.reload(true);
+alert(&quot;Sent to ProfitStars!&quot;);	
+} 
+else 
+{
+document.location.reload(true);
+alert(&quot;Return-Only Bank Account request failed with the following error: \n\n&quot; + parsed.result + &quot; \n\nPlease update the record with the missing information and try again!&quot;);
+}
+}
+}</url>
+</WebLink>

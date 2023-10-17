@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bank_Auth_Spreadsheet</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>true</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>600</height>
+    <isResizable>true</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>DEPRECATED 2/17 - Bank Auth Spreadsheet</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>https://composer.congamerge.com
+?SessionId={!API.Session_ID}
+&amp;ServerUrl={!API.Partner_Server_URL_210}
+&amp;Id={!Add_On_Batch__c.Id}
+&amp;QueryId=[BankAccounts]a1U80000002TUb4?pv0={!Add_On_Batch__c.Id}
+&amp;TemplateId=a1T80000000MZpt
+&amp;fp0=2
+&amp;ds7=3
+&amp;ExcelAutoFitRows=1
+&amp;ExcelAutoFitColumns=1</url>
+</WebLink>

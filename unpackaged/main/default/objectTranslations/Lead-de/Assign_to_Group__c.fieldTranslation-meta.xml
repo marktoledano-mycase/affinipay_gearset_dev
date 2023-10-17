@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Trigger an assignment by inputting the Assignment Group Name. --></help>
+        <label><!-- Assign to Group --></label>
+        <name>Assign_to_Group__c</name>
+    </CustomFieldTranslation>

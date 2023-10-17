@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- User Stories/Requirements must be populated in order to submit for approval --></help>
+        <label><!-- Needs Requirement Signoff --></label>
+        <name>Needs_Requirement_Signoff__c</name>
+    </CustomFieldTranslation>

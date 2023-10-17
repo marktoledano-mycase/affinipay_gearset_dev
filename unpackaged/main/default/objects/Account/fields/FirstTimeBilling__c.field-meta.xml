@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FirstTimeBilling__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This filed is checked when the Account Balance is first time changed from Non-Zero value to 0.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This filed is checked when the Account Balance is first time changed from Non-Zero value to 0.</inlineHelpText>
+    <label>First Time Billing</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

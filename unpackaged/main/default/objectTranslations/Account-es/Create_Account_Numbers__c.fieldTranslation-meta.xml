@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- When selected Customer Number and first Serial Number will be created --></help>
+        <label><!-- Create Account/Subscription Numbers --></label>
+        <name>Create_Account_Numbers__c</name>
+    </CustomFieldTranslation>

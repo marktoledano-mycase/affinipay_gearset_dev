@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Date that has been confirmed for the Prospect to meet with an AE. --></help>
+        <label><!-- Demo Scheduled Date --></label>
+        <name>BDR_Demo_Scheduled_Date__c</name>
+    </CustomFieldTranslation>

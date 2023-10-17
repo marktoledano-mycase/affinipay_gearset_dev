@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Displays the timezone value that may have been in the source data during the Newco migration --></help>
+        <label><!-- Legacy Time Zone --></label>
+        <name>Legacy_Time_Zone__c</name>
+    </CustomFieldTranslation>

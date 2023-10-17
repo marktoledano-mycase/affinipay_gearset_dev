@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Estimated_Hours_ADA__c</fullName>
+    <description>Total Estimated Hours as entered on the Qty for the ADA SKU</description>
+    <externalId>false</externalId>
+    <label>Estimated Hours ADA</label>
+    <summarizedField>Opportunity_SKU__c.Qty__c</summarizedField>
+    <summaryFilterItems>
+        <field>Opportunity_SKU__c.Name</field>
+        <operation>equals</operation>
+        <value>Advanced Document Automation</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Opportunity_SKU__c.Opportunity__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

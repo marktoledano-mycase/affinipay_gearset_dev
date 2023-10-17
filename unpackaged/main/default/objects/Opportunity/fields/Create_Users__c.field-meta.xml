@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_Users__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checked when sales rep is going to create users for the firm during the direct purchase flow (hidden from layout)</description>
+    <externalId>false</externalId>
+    <label>Create Users</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

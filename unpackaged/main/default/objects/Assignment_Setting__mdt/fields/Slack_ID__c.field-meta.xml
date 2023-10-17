@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Slack_ID__c</fullName>
+    <description>The ID of the channel or direct message to send the message to. Alternatively, specify a Slack user ID to send the message to the user via the Messages tab of the Slack app.
+
+You can obtain the Slack conversation ID by logging in to Slack.com and launching Slack in your browser. The conversation ID is the last parameter in the URL. For example, in this URL, the conversation ID is C56789FGHIJ:
+
+https://app.slack.com/client/T01234ABCDE/C56789FGHIJ</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>ID of the channel, direct message, or Slack user</inlineHelpText>
+    <label>Slack ID</label>
+    <length>255</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

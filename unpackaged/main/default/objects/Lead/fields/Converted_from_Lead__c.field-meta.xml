@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Converted_from_Lead__c</fullName>
+    <description>This is a helper field used to map values to checkbox fields on Accounts, Contacts, and Opportunities upon conversion.</description>
+    <externalId>false</externalId>
+    <formula>TRUE</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Converted from Lead</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

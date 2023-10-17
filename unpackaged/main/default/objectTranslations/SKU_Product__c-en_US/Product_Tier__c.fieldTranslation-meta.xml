@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Product offering tier that SKU is available for. If SKU can be used under many tiers, then add all that apply. 
+Used in automation --></help>
+        <label><!-- Product Tier --></label>
+        <name>Product_Tier__c</name>
+    </CustomFieldTranslation>

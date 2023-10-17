@@ -1,0 +1,21 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">Hi {{{Recipient.FirstName}}},&nbsp;<br />
+<br />
+This is {{{Sender.FirstName}}} reaching out from the Website Services team here at MyCase.<br />
+<br />
+We’ve received your change request and we’re having a difficult time understanding your instructions. Can you please provide clarification on the following:
+<ul>
+	<li>(Insert here)</li>
+	<li>(Insert here)</li>
+	<li>(Insert here)</li>
+</ul>
+Once we have clarification on the information above we can direct your change requests to the correct point of contact.&nbsp;<br />
+<br />
+Thank you,&nbsp;<br />
+{{{Sender.FirstName}}}<br />
+MyCase Website Services Team&nbsp;<br />
+Case # {{{Case.CaseNumber}}}
+</body></html>

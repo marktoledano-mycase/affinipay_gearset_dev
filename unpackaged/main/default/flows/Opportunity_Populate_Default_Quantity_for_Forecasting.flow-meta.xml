@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <assignments>
+        <name>Assign_Default_Quantity</name>
+        <label>Assign Default Quantity</label>
+        <locationX>487</locationX>
+        <locationY>304</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.TotalOpportunityQuantity</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>Populates 1 for Quantity field to forecast logos/deals</description>
+    <environments>Default</environments>
+    <interviewLabel>Opportunity: Populate Default Quantity for Forecasting {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity: Populate Default Quantity for Forecasting</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>91</locationX>
+        <locationY>70</locationY>
+        <connector>
+            <targetReference>Assign_Default_Quantity</targetReference>
+        </connector>
+        <object>Opportunity</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

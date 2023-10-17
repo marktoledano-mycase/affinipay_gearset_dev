@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Billing_Support</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Billing Support</label>
+        <sharedTo>
+            <roleAndSubordinates>VP_Accounting</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Billing - MyCase</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>MyCase_Intercom</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>MyCase Intercom</label>
+        <sharedTo>
+            <group>MyCase_Intercom</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>MyCase Support</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>MyCase_Support</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>MyCase Support</label>
+        <sharedTo>
+            <roleAndSubordinates>Software_Customer_Success_Manager_MyCase</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>MyCase Support</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>MyCase_Support_Case</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>MyCase Support Case</label>
+        <sharedTo>
+            <roleAndSubordinates>Software_Customer_Success_Specialist_MyCase</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>MyCase Support</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Org_Visibility</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Org Visibility</label>
+        <sharedTo>
+            <roleAndSubordinates>EXECUTIVE</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>MyCase Accounting,MyCase,MyCase Websites,MyCase Support,Soluno - Support Case,Billing - MyCase,Payment Services</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Soluno_Support</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Soluno Support</label>
+        <sharedTo>
+            <roleAndSubordinates>Software_Customer_Success_Manager_Soluno</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Soluno - Support Case</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Support_PM</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Support PM</label>
+        <sharedTo>
+            <role>Project_Manager</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Soluno - Support Case,MyCase Accounting,MyCase,MyCase Support</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Exec_et_al_Read</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Exec et al Read</label>
+        <sharedTo>
+            <roleAndSubordinates>EXECUTIVE</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>EXECUTIVE</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

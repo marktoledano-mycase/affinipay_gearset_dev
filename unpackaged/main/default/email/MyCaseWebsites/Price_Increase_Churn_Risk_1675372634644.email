@@ -1,0 +1,18 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;">Hi {{{Recipient.FirstName}}},</span></span>
+<p style="line-height:1.38"><span style="font-size:11pt; font-variant:normal; white-space:pre-wrap"><span style="font-family:Arial"><span style="color:#000000"><span style="font-weight:400"><span style="font-style:normal"><span style="text-decoration:none">I definitely understand why a pricing update would make you unhappy but I hope you will reconsider. We do strive to offer you great value at a competitive price, and we are confident MyCase still provides a better value for the included features than our leading competitors. This price change allows us to continue offering the best modern technologies &amp; features available with best in class support, while also regularly adding new features and upgrades included in your subscription.&nbsp;&nbsp;</span></span></span></span></span></span><br />
+<br />
+<span style="font-size:11pt; font-variant:normal; white-space:pre-wrap"><span style="font-family:Arial"><span style="color:#000000"><span style="font-weight:400"><span style="font-style:normal"><span style="text-decoration:none">We’re actively making additional investments in data protection tools and resources to maintain the highest levels of data security and a strong security posture. We know privacy and security are critically important to our customers, and we allocate significant resources to ensure we are best in class in that area, even though these upgrades are not as visible or exciting as new features.</span></span></span></span></span></span></p>
+
+<p style="line-height:1.38"><span style="font-size:11pt; font-variant:normal; white-space:pre-wrap"><span style="font-family:Arial"><span style="color:#000000"><span style="font-weight:400"><span style="font-style:normal"><span style="text-decoration:none">We are also adding many new partner integrations and product enhancements and are always looking for new ways to help you maximize productivity and connect MyCase to your other favorite tools. If you have additional partnership ideas that would benefit your firm, let us know and we can send them to our Product Team.</span></span></span></span></span></span></p>
+
+<p style="line-height:1.38"><span style="font-size:11pt; font-variant:normal; white-space:pre-wrap"><span style="font-family:Arial"><span style="color:#000000"><span style="font-weight:400"><span style="font-style:normal"><span style="text-decoration:none">Finally, like many other industries, our operating costs have risen over the past year, driven by inflation and other economic factors. We want to sustain our ability to offer you the highest quality products and customer support possible, which means we have to increase our prices.&nbsp;</span></span></span></span></span></span><br />
+<br />
+<span style="font-size:11pt; font-variant:normal; white-space:pre-wrap"><span style="font-family:Arial"><span style="color:#000000"><span style="font-weight:400"><span style="font-style:normal"><span style="text-decoration:none">For example, we are very proud that our support specialists, like myself, are all based in the USA and are highly trained product experts. This price increase helps us maintain that level of support rather than outsourcing to a 3rd party call center as many companies do.</span></span></span></span></span></span></p>
+<span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;">Thank you,<br />
+{{{Sender.FirstName}}}<br />
+Case #{{{Case.CaseNumber}}}</span></span></body>
+</html>

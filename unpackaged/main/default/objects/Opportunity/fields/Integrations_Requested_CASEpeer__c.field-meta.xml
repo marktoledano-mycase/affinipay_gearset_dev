@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Integrations_Requested_CASEpeer__c</fullName>
+    <description>CASEpeer Integrations requested</description>
+    <externalId>false</externalId>
+    <inlineHelpText>CASEpeer Integrations Requested</inlineHelpText>
+    <label>Integrations Requested</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>CASEpeer_Integrations</valueSetName>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

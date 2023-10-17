@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Temp_Personal_Domain_Check__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+     (NOT(CONTAINS(LOWER(Person_Email__c), &quot;ymail.com&quot;)) &amp;&amp;
+      NOT(CONTAINS(LOWER(Person_Email__c), &quot;protonmail.com&quot;)) &amp;&amp;
+      NOT(CONTAINS(LOWER(Person_Email__c), &quot;live.com&quot;)) &amp;&amp;
+      NOT(CONTAINS(LOWER(Person_Email__c), &quot;outlook.com&quot;)) &amp;&amp;
+      NOT(CONTAINS(LOWER(Person_Email__c), &quot;att.net&quot;)) &amp;&amp;
+      NOT(CONTAINS(LOWER(Person_Email__c), &quot;icloud.com&quot;)) &amp;&amp;
+      NOT(CONTAINS(LOWER(Person_Email__c), &quot;hotmail.com&quot;)) &amp;&amp;
+      NOT(CONTAINS(LOWER(Person_Email__c), &quot;comcast.net&quot;))&amp;&amp;
+      NOT(CONTAINS(LOWER(Person_Email__c), &quot;msn.com&quot;)) &amp;&amp;
+      NOT(CONTAINS(LOWER(Person_Email__c), &quot;aol.com&quot;)) &amp;&amp;
+      NOT(CONTAINS(LOWER(Person_Email__c), &quot;yahoo.com&quot;)) &amp;&amp;
+      NOT(CONTAINS(LOWER(Person_Email__c), &quot;msn.com&quot;)) &amp;&amp;
+      NOT(CONTAINS(LOWER(Person_Email__c), &quot;gmail.com&quot;))
+     ), &quot;N/A&quot;,
+       IF(
+           (CONTAINS(LOWER(Person_Company__c), &quot;lpp&quot;) ||
+            CONTAINS(LOWER(Person_Company__c), &quot;legal&quot;) ||
+            CONTAINS(LOWER(Person_Company__c), &quot;law&quot;) ||
+            CONTAINS(LOWER(Person_Company__c), &quot;llc&quot;) ||
+            CONTAINS(LOWER(Person_Company__c), &quot;pllc&quot;) ||
+            CONTAINS(LOWER(Person_Company__c), &quot;attorney&quot;) ||
+            CONTAINS(LOWER(Person_Company__c), &quot;agency&quot;) ||
+            CONTAINS(LOWER(Person_Company__c), &quot;apc&quot;) ||
+            CONTAINS(LOWER(Person_Company__c), &quot;office&quot;) ||
+            CONTAINS(LOWER(Person_Company__c), &quot;firm&quot;) ||
+            CONTAINS(LOWER(Person_Company__c), &quot;associates&quot;) ||
+            CONTAINS(LOWER(Person_Company__c), &quot;partners&quot;) ||
+            CONTAINS(LOWER(Person_Company__c), &quot;service&quot;) ||
+            CONTAINS(LOWER(Person_Company__c), &quot;PC&quot;) ||
+            CONTAINS(LOWER(Person_Company__c), &quot;esq&quot;) ||
+            CONTAINS(LOWER(Person_Company__c), &quot;plc&quot;) ||
+            CONTAINS(LOWER(Person_Company__c), &quot;esquire&quot;) ||
+            CONTAINS(LOWER(Person_Company__c), &quot;inc&quot;) ||
+            CONTAINS(LOWER(Person_Company__c), &quot;itd&quot;) ||
+            CONTAINS(LOWER(Person_Company__c), &quot;group&quot;)
+           ), &quot;Include&quot;, &quot;Remove&quot;)
+    )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Temp - Personal Domain Check</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- 1: Systems are not accessible for 2+ users.
+2: Systems not accessible for one user.
+3: Systems are working, not fully operational, no workaround.
+4: Systems working, not fully operational, have workaround.
+5: Low to no impact. --></help>
+        <label><!-- Severity --></label>
+        <name>Severity__c</name>
+        <picklistValues>
+            <masterLabel>1 - Systems are not accessible for 2+ users.</masterLabel>
+            <translation><!-- 1 - Systems are not accessible for 2+ users. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 - Systems not accessible for one user.</masterLabel>
+            <translation><!-- 2 - Systems not accessible for one user. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 - Systems are working, not fully operational, no workaround.</masterLabel>
+            <translation><!-- 3 - Systems are working, not fully operational, no workaround. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 - Systems working, not fully operational, have workaround.</masterLabel>
+            <translation><!-- 4 - Systems working, not fully operational, have workaround. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 - Low to no impact.</masterLabel>
+            <translation><!-- 5 - Low to no impact. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>High (many users affected)</masterLabel>
+            <translation><!-- High (many users affected) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low (one user affected)</masterLabel>
+            <translation><!-- Low (one user affected) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium (5 or less users affected)</masterLabel>
+            <translation><!-- Medium (5 or less users affected) --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,20 @@
+Hello!
+
+We successfully received your billing-support request and are currently routing it to the appropriate person for research and follow-up. 
+Below are your case details if you need to reference them in the future: 
+
+Case Number: {!Case.CaseNumber}
+Case Subject: {!Case.Subject}
+
+We are dedicated to providing excellent customer service and look forward to assisting you! 
+
+Thank you, 
+
+Billing Team | AppFolio, Inc. 
+Billing Support Center: https://www.appfolio.com/help/billing?utm_source=customer-communications&utm_medium=email&utm_campaign=Billing-Case-Auto-Response
+
+
+PLEASE NOTE: We are currently experiencing a high volume of billing-support requests. Our team is working hard to process your case as quickly as possible, but your request may take additional time to complete. We appreciate your patience during this time.
+------------------------------ 
+
+{!Case.Thread_Id}

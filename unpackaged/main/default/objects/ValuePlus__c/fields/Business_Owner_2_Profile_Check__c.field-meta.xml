@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Owner_2_Profile_Check__c</fullName>
+    <externalId>false</externalId>
+    <label>Business Owner 2 Profile Check</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Approved</fullName>
+                <default>false</default>
+                <label>Approved</label>
+            </value>
+            <value>
+                <fullName>Declined - OFAC</fullName>
+                <default>false</default>
+                <label>Declined - OFAC</label>
+            </value>
+            <value>
+                <fullName>Declined - Score</fullName>
+                <default>false</default>
+                <label>Declined - Score</label>
+            </value>
+            <value>
+                <fullName>Declined - Bankruptcy</fullName>
+                <default>false</default>
+                <label>Declined - Bankruptcy</label>
+            </value>
+            <value>
+                <fullName>Declined - TaxLien</fullName>
+                <default>false</default>
+                <label>Declined - TaxLien</label>
+            </value>
+            <value>
+                <fullName>Declined - Documentation</fullName>
+                <default>false</default>
+                <label>Declined - Documentation</label>
+            </value>
+            <value>
+                <fullName>Pending</fullName>
+                <default>false</default>
+                <label>Pending</label>
+            </value>
+            <value>
+                <fullName>Exception</fullName>
+                <default>false</default>
+                <label>Exception</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

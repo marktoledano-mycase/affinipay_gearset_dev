@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Partnerships__c</entityName>
+    <fieldName>Status__c</fieldName>
+    <masterLabel>Consultant Partnership</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Status__c</fieldNames>
+        <fieldNames>RecordTypeId</fieldNames>
+        <info>&lt;p&gt;&lt;strong&gt;TBD by NewCo&lt;/strong&gt;&lt;/p&gt;</info>
+        <picklistValueName>Active</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Consultant</recordTypeName>
+</PathAssistant>

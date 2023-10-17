@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_Card_Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>Credit Card Stage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Credentialing Complete</fullName>
+                <default>false</default>
+                <label>Credentialing Complete</label>
+            </value>
+            <value>
+                <fullName>Ready to Transmit to Wells Fargo</fullName>
+                <default>false</default>
+                <label>Ready to Transmit to Wells Fargo</label>
+            </value>
+            <value>
+                <fullName>Transmitted to Wells Fargo</fullName>
+                <default>false</default>
+                <label>Transmitted to Wells Fargo</label>
+            </value>
+            <value>
+                <fullName>Needs Review</fullName>
+                <default>false</default>
+                <label>Needs Review</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

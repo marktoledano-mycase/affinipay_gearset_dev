@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- This is updated automatically when Next Step is edited. --></help>
+        <label><!-- Next Step Last Edited --></label>
+        <name>Next_Step_Last_Edited__c</name>
+    </CustomFieldTranslation>

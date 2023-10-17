@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enroll_in_Vantiv</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Enroll in Vantiv</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)}
+var c = new sforce.SObject(&quot;ValuePlus__c&quot;);
+c.id = &quot;{!ValuePlus__c.Id}&quot;;
+alert(&quot;{!ValuePlus__c.Vantiv_Onboarding_Status__c}&quot;);
+if(&quot;{!ValuePlus__c.Vantiv_Enrolled_Date__c}&quot; != null &amp;&amp;
+       &quot;{!ValuePlus__c.Vantiv_Enrolled_Date__c}&quot; != &#39;&#39; &amp;&amp;
+            &quot;{!ValuePlus__c.Vantiv_Enrolled_Date__c}&quot; != undefined &amp;&amp;
+                  &#39;Retry&#39; != &quot;{!ValuePlus__c.Vantiv_Onboarding_Status__c}&quot;)
+{
+    alert(&#39;Vantiv Enrolled Date is not empty. Merchant was already onboarded&#39;);
+}
+else if(&#39;Ready To Transmit&#39; != &quot;{!ValuePlus__c.Vantiv_Onboarding_Status__c}&quot; &amp;&amp;
+             &#39;Retry&#39; != &quot;{!ValuePlus__c.Vantiv_Onboarding_Status__c}&quot;)
+{
+    alert(&#39;TEST Vantiv Onboarding status is not &quot;Ready To Transmit&quot;. Please update the record and retry.&#39;);
+}
+else
+{
+    var r = confirm(&#39;Merchant will be sent to Vantiv; continue?&#39;)
+    if(r==true)
+    {
+        var result = sforce.apex.execute(&quot;VantivButtons&quot;, &quot;callLegalEntity&quot;, {
+        id: &quot;{!ValuePlus__c.Id}&quot;});
+        var parsed = JSON.parse(result);
+        if (parsed.didPass == true) 
+        { 
+          alert(parsed.result);	  
+          document.location.reload(true);
+        } 
+        else 
+        {
+          alert(parsed.result);
+          document.location.reload(true);
+        }
+    }
+}</url>
+</WebLink>

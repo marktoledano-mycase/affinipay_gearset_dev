@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data_Migration_Sources__c</fullName>
+    <externalId>false</externalId>
+    <label>Data Migration Sources</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cerenade</fullName>
+                <default>false</default>
+                <label>Cerenade</label>
+            </value>
+            <value>
+                <fullName>Clio</fullName>
+                <default>false</default>
+                <label>Clio</label>
+            </value>
+            <value>
+                <fullName>Docketwise</fullName>
+                <default>false</default>
+                <label>Docketwise</label>
+            </value>
+            <value>
+                <fullName>Excel</fullName>
+                <default>false</default>
+                <label>Excel</label>
+            </value>
+            <value>
+                <fullName>INS Zoom</fullName>
+                <default>false</default>
+                <label>INS Zoom</label>
+            </value>
+            <value>
+                <fullName>Law Logix</fullName>
+                <default>false</default>
+                <label>Law Logix</label>
+            </value>
+            <value>
+                <fullName>LollyLaw</fullName>
+                <default>false</default>
+                <label>LollyLaw</label>
+            </value>
+            <value>
+                <fullName>MyCase</fullName>
+                <default>false</default>
+                <label>MyCase</label>
+            </value>
+            <value>
+                <fullName>MySql</fullName>
+                <default>false</default>
+                <label>MySql</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Practice Panther</fullName>
+                <default>false</default>
+                <label>Practice Panther</label>
+            </value>
+            <value>
+                <fullName>Primafacie</fullName>
+                <default>false</default>
+                <label>Primafacie</label>
+            </value>
+            <value>
+                <fullName>Quickbooks</fullName>
+                <default>false</default>
+                <label>Quickbooks</label>
+            </value>
+            <value>
+                <fullName>SAP</fullName>
+                <default>false</default>
+                <label>SAP</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

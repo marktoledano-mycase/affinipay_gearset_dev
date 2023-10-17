@@ -1,0 +1,39 @@
+Hello,
+
+We are dedicated to excelling in our service to you, so we want you to know we have received your request and it is being routed to the appropriate person for action and follow-up.
+
+In the meantime, please check out the following Help & Training resources for more support and see our current special offers that can help you save:
+
+Special offer: 
+- Right now if you successfully refer another customer to MyCase they can get a discount on their first year and you will get a $500 gift card! You can make a referral through the form linked here and ask your support specialist if you want to learn more. https://lp.mycase.com/referral
+
+Help and Training Resources:
+- Search the Help File: https://help.mycase.com/s/
+
+- View Training Videos: http://www.mycase.com/support/webinars
+
+- View real-time information on system performance: http://status.mycase.com/
+
+- Process your client payments easily and affordably through MyCase! Ask your Success Specialist about the Payments feature to learn more. https://www.mycase.com/features/legal-billing/accept-online-payments
+
+Should you need to refer to this case in the future, here are the details:
+
+Case Number: {!Case.CaseNumber}
+Case Created Date: {!Case.CreatedDate}
+Case Subject: {!Case.Subject}
+Case Description: {!Case.Description}
+
+
+All the best,
+
+MyCase Customer Success Team
+
+MyCase
+9201 Spectrum Center Blvd. Ste. 100 | San Diego, CA | 92123
+Phone: 800.571.8062
+www.mycase.com
+
+Follow us on Social!
+
+https://www.facebook.com/MyCase
+https://www.instagram.com/mycaselegal

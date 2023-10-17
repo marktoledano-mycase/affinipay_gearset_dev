@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Created for request R1916591 | This survey has been sending to customers with Onboarding Stage of Live as of 4/2019</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>MyCase Onboarding tNPS Email</name>
+    <style>none</style>
+    <subject>MyCase Onboarding Customer Experience Survey</subject>
+    <textOnly>MyCase Onboarding Customer Experience Survey
+
+Hello {!Onboarding__c.Firm_POC_First_Name__c}!
+
+Congratulations on being fully onboarded as a MyCase customer! We trust MyCase will simplify your day-to-day operations, from billing and invoicing, to document and case management (and much more). 
+
+Please take a moment to answer this brief one minute survey about your experience with [Onboarding_Manager__c].
+
+https://www.surveygizmo.com/s3/7196913/NEWCO-MyCase-Onboarding-Survey?m={!Onboarding__c.Id}&amp;a={!Account.Id}&amp;f={!Onboarding__c.Firm_POCId__c}
+
+Thank you for your time and thoughts, we appreciate your feedback!
+
+Adam Wilson
+Sr. Director, Client Services
+MyCase
+www.mycase.com
+
+© 2016 MyCase, Inc. | 9201 Spectrum Center Blvd STE 100, San Diego, CA 92123</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

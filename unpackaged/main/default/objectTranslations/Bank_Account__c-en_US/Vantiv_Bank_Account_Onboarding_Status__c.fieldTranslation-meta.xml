@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Vantiv Bank Account Onboarding Status --></label>
+        <name>Vantiv_Bank_Account_Onboarding_Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Duplicate</masterLabel>
+            <translation><!-- Duplicate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Failed</masterLabel>
+            <translation><!-- Failed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manual Review</masterLabel>
+            <translation><!-- Manual Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready To Transmit</masterLabel>
+            <translation><!-- Ready To Transmit --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

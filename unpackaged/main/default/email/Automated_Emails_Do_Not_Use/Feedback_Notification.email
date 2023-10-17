@@ -1,0 +1,5 @@
+Feedback Details:
+---------------------------
+Rating : {!Help_Center_Feedback__c.Satisfaction_Level__c}
+Comments : {!Help_Center_Feedback__c.Comments__c}
+Submitted By: {!Help_Center_Feedback__c.CreatedBy}

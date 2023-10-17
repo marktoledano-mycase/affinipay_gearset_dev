@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subscription_Charge__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Lookup relationship to the subscription charge from the billing system that is related to the Contract SKU if applicable</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Lookup relationship to the subscription charge from the billing system that is related to the Contract SKU if applicable</inlineHelpText>
+    <label>Subscription Charge</label>
+    <referenceTo>Billing_Subscription_Product_Charge__c</referenceTo>
+    <relationshipLabel>Contract SKUs</relationshipLabel>
+    <relationshipName>Contract_SKUs</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

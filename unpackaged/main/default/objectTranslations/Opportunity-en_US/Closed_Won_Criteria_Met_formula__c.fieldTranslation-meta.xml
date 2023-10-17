@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Evalutes Closed Won Criteria per RT/Brand. When all Closed Won fields per RT/Brand are completed, the checkbox evaluates to True. This checkbox is used in automation to ensure Closed Won fields are created prior to Initiating Onbording --></help>
+        <label><!-- Closed Won Criteria Met formula --></label>
+        <name>Closed_Won_Criteria_Met_formula__c</name>
+    </CustomFieldTranslation>

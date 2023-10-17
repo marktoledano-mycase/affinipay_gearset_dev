@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Customer Authentication Status --></label>
+        <name>CustomerAuthenticationStatus__c</name>
+        <picklistValues>
+            <masterLabel>Failed-AcceptWithRisk</masterLabel>
+            <translation><!-- Failed-AcceptWithRisk --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Failed-Declined</masterLabel>
+            <translation><!-- Failed-Declined --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Failed-RiskAlert</masterLabel>
+            <translation><!-- Failed-RiskAlert --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No-Information</masterLabel>
+            <translation><!-- No-Information --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Success-Pass</masterLabel>
+            <translation><!-- Success-Pass --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

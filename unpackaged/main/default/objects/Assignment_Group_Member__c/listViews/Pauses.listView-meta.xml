@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pauses</fullName>
+    <booleanFilter>(1 OR 2)</booleanFilter>
+    <columns>Assignment_Group__c</columns>
+    <columns>NAME</columns>
+    <columns>User__c</columns>
+    <columns>Is_Active__c</columns>
+    <columns>Is_Paused__c</columns>
+    <columns>Pause_Start_At__c</columns>
+    <columns>Pause_End_At__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Pause_End_At__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Pause_Start_At__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Pauses</label>
+</ListView>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Signup Reason --></label>
+        <name>Signup_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Better communication with clients/client portal</masterLabel>
+            <translation><!-- Better communication with clients/client portal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Just taking a look</masterLabel>
+            <translation><!-- Just taking a look --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Looking for a cheaper solution</masterLabel>
+            <translation><!-- Looking for a cheaper solution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Losing valuable time</masterLabel>
+            <translation><!-- Losing valuable time --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Need an integrated calendar</masterLabel>
+            <translation><!-- Need an integrated calendar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Need better mobile access</masterLabel>
+            <translation><!-- Need better mobile access --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sick of current solution</masterLabel>
+            <translation><!-- Sick of current solution --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

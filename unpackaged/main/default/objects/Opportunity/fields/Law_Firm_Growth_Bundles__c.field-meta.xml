@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Law_Firm_Growth_Bundles__c</fullName>
+    <description>NEW: Select which features the firm is taking advantage of in the Law Firm Growth Bundle (MyCase Annual Advanced, Accounting, Woodpecker, LawPay)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select all products the firm will use in the Law Firm Growth Bundle.</inlineHelpText>
+    <label>Law Firm Growth Bundle</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accounting</fullName>
+                <default>false</default>
+                <label>Accounting</label>
+            </value>
+            <value>
+                <fullName>LawPay</fullName>
+                <default>false</default>
+                <label>LawPay</label>
+            </value>
+            <value>
+                <fullName>Woodpecker</fullName>
+                <default>false</default>
+                <label>Woodpecker</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

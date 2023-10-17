@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Admin_Test</fullName>
+    <availability>online</availability>
+    <displayType>link</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>true</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>600</height>
+    <isResizable>true</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>Admin Test</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>/apex/CM8ConsoleLauncher
+?SessionId={!API.Session_ID}
+&amp;ServerUrl={!API.Partner_Server_URL_210}
+&amp;id={!ValuePlus__c.Id}
+&amp;TemplateId=a1T80000000NIB4
+&amp;DefaultPDF=1
+&amp;DS7=7
+&amp;FlattenPDFForms=1
+&amp;BML=Generating+an+agreement+for+{!ValuePlus__c.Account__c}...+Hang+tight!
+&amp;DocuSignExpireIn=14
+&amp;DocuSignWarnIn=2
+&amp;DocuSignRemindIn=2
+&amp;DocuSignRemindAgainIn=3
+&amp;DocuSignExpireVoidEnv=1
+&amp;DocuSignSendReminders=1
+&amp;DocuSignR1Type=Signer
+&amp;DocuSignR1Role=Signer+1
+&amp;DocuSignRelatedAccountId={!ValuePlus__c.Account__c}
+&amp;DocuSignR1Id={!ValuePlus__c.On_Boarding_Contact_PrimaryId__c}
+&amp;DocuSignEmailBody=Please+complete+and+sign+the+MyCase+Payments+agreement.+You+can+access+it+by+selecting+the+Review+Document+button.+Please+note+that+all+red+fields+are+required+to+finish+signing+the+agreement.+Strict+formatting+is+also+required.+If+you+have+any+questions,+please+contact+me+at+{!$User.Phone}+or+{!$User.Email}.
+&amp;DocuSignEmailSubject=MyCase+Payments+Agreement+for+{!ValuePlus__c.Account__c}
+&amp;OFN=Payments+Agreement+for+{!ValuePlus__c.Account__c}</url>
+</WebLink>

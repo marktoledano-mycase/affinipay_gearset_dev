@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Onboarding Stage --></label>
+        <name>Data_Migration_Stage__c</name>
+        <picklistValues>
+            <masterLabel>Account Setup</masterLabel>
+            <translation><!-- Account Setup --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Churn Risk</masterLabel>
+            <translation><!-- Churn Risk --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Migration</masterLabel>
+            <translation><!-- Data Migration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Introduction sent</masterLabel>
+            <translation><!-- Introduction sent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KOC Completed</masterLabel>
+            <translation><!-- KOC Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KOC Scheduled</masterLabel>
+            <translation><!-- KOC Scheduled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Live</masterLabel>
+            <translation><!-- Live --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lost</masterLabel>
+            <translation><!-- Lost --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-responsive</masterLabel>
+            <translation><!-- Non-responsive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Onboarding</masterLabel>
+            <translation><!-- Onboarding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phase 1: Import Complete</masterLabel>
+            <translation><!-- Phase 1: Import Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phase 1: Import In Progress</masterLabel>
+            <translation><!-- Phase 1: Import In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phase 1: Import Sign-off</masterLabel>
+            <translation><!-- Phase 1: Import Sign-off --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phase 2: Import Complete</masterLabel>
+            <translation><!-- Phase 2: Import Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phase 2: Import In Progress</masterLabel>
+            <translation><!-- Phase 2: Import In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phase 2: Import Sign-Off</masterLabel>
+            <translation><!-- Phase 2: Import Sign-Off --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scheduling Training</masterLabel>
+            <translation><!-- Scheduling Training --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Training Scheduled</masterLabel>
+            <translation><!-- Training Scheduled --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

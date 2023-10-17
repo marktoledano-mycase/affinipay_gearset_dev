@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cross_Sell_Base__c</fullName>
+    <description>Stamped via automation when an Opportunity is created based on the brands with Active contracts in the account</description>
+    <externalId>false</externalId>
+    <label>Cross-Sell Base</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Brands</valueSetName>
+    </valueSet>
+</CustomField>

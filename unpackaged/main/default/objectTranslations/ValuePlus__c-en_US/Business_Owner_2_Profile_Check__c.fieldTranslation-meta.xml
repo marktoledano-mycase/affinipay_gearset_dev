@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Business Owner 2 Profile Check --></label>
+        <name>Business_Owner_2_Profile_Check__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Declined - Bankruptcy</masterLabel>
+            <translation><!-- Declined - Bankruptcy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Declined - Documentation</masterLabel>
+            <translation><!-- Declined - Documentation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Declined - OFAC</masterLabel>
+            <translation><!-- Declined - OFAC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Declined - Score</masterLabel>
+            <translation><!-- Declined - Score --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Declined - TaxLien</masterLabel>
+            <translation><!-- Declined - TaxLien --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exception</masterLabel>
+            <translation><!-- Exception --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

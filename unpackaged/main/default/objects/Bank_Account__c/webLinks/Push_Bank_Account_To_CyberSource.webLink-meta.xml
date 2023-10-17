@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Push_Bank_Account_To_CyberSource</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Push Bank Account To CyberSource</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)}
+var c = new sforce.SObject(&quot;Bank_Account__c&quot;);
+c.id = &quot;{!Bank_Account__c.Id}&quot;;
+
+if(&#39;Ready To Transmit&#39; != &quot;{!Bank_Account__c.CybersourceUpdateStatus__c}&quot;) { 
+    alert(&#39;CyberSource update status is not &quot;Ready To Transmit&quot;. Please update the record and retry.&#39;); 
+} else{
+    var r=confirm(&quot;Bank Account will be added/updated in CyberSource; continue?&quot;);
+    if(r==true){
+        var result=sforce.apex.execute(&quot;ps_eCheckButtonMethods&quot;, &quot;createCyberSourceSubcription&quot;,{id: &quot;{!Bank_Account__c.Id}&quot;});
+        var parsed=JSON.parse(result);
+        if(parsed.didPass==true){
+            document.location.reload(true);alert(&quot;Sent to CyberSource&quot;);
+        }else{
+            document.location.reload(true);
+            alert(&quot;Bank Account Add on failed with the following error: \n\n&quot;+parsed.result+&quot; \n\nPlease update the Value+ record with missing information and try again&quot;);
+        }
+    }   
+}</url>
+</WebLink>

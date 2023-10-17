@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Value_Product__c</fullName>
+    <description>APM; R2027500; Edited by: Users, Auto</description>
+    <externalId>false</externalId>
+    <label>Value+ Product</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Payments</fullName>
+                <default>false</default>
+                <label>Payments</label>
+            </value>
+            <value>
+                <fullName>Website</fullName>
+                <default>false</default>
+                <label>Website</label>
+            </value>
+            <value>
+                <fullName>Screening</fullName>
+                <default>false</default>
+                <label>Screening</label>
+            </value>
+            <value>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+                <label>Insurance</label>
+            </value>
+            <value>
+                <fullName>Collections</fullName>
+                <default>false</default>
+                <label>Collections</label>
+            </value>
+            <value>
+                <fullName>Premium Leads</fullName>
+                <default>false</default>
+                <label>Premium Leads</label>
+            </value>
+            <value>
+                <fullName>Maintenance Contact Center</fullName>
+                <default>false</default>
+                <label>Maintenance Contact Center</label>
+            </value>
+            <value>
+                <fullName>Contact Center</fullName>
+                <default>false</default>
+                <label>Contact Center</label>
+            </value>
+            <value>
+                <fullName>Lost - Contact Center</fullName>
+                <default>false</default>
+                <label>Lost - Contact Center</label>
+            </value>
+            <value>
+                <fullName>Lost - Insurance</fullName>
+                <default>false</default>
+                <label>Lost - Insurance</label>
+            </value>
+            <value>
+                <fullName>Lost - Payments</fullName>
+                <default>false</default>
+                <label>Lost - Payments</label>
+            </value>
+            <value>
+                <fullName>Lost - Screening</fullName>
+                <default>false</default>
+                <label>Lost - Screening</label>
+            </value>
+            <value>
+                <fullName>Lost - Website</fullName>
+                <default>false</default>
+                <label>Lost - Website</label>
+            </value>
+            <value>
+                <fullName>Won - Contact Center</fullName>
+                <default>false</default>
+                <label>Won - Contact Center</label>
+            </value>
+            <value>
+                <fullName>Won - Insurance</fullName>
+                <default>false</default>
+                <label>Won - Insurance</label>
+            </value>
+            <value>
+                <fullName>Won - Payments</fullName>
+                <default>false</default>
+                <label>Won - Payments</label>
+            </value>
+            <value>
+                <fullName>Won - Screening</fullName>
+                <default>false</default>
+                <label>Won - Screening</label>
+            </value>
+            <value>
+                <fullName>Won - Website</fullName>
+                <default>false</default>
+                <label>Won - Website</label>
+            </value>
+            <value>
+                <fullName>Leasing Contact Center</fullName>
+                <default>false</default>
+                <label>Leasing Contact Center</label>
+            </value>
+            <value>
+                <fullName>LISA</fullName>
+                <default>false</default>
+                <label>LISA</label>
+            </value>
+            <value>
+                <fullName>Utility Management</fullName>
+                <default>false</default>
+                <label>Utility Management</label>
+            </value>
+            <value>
+                <fullName>Mailing Service</fullName>
+                <default>false</default>
+                <label>Mailing Service</label>
+            </value>
+            <value>
+                <fullName>Automated AP</fullName>
+                <default>false</default>
+                <label>Automated AP</label>
+            </value>
+            <value>
+                <fullName>Accounting</fullName>
+                <default>false</default>
+                <label>Accounting</label>
+            </value>
+            <value>
+                <fullName>Woodpecker</fullName>
+                <default>false</default>
+                <label>Woodpecker</label>
+            </value>
+            <value>
+                <fullName>Drive</fullName>
+                <default>false</default>
+                <label>Drive</label>
+            </value>
+            <value>
+                <fullName>LawToolBox</fullName>
+                <default>false</default>
+                <label>LawToolBox</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

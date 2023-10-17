@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>RingLead_Merge_Bypass_Flows</name>
+    </customPermissions>
+    <description>Used to bypass flows when RingLead is running Lead/Contact/Account duplicate merges</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>RingLead Merge</label>
+</PermissionSet>

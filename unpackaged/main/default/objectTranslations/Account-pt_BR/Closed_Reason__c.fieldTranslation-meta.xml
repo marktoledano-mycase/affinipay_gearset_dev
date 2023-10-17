@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Closed Reason --></label>
+        <name>Closed_Reason__c</name>
+        <picklistValues>
+            <masterLabel>*Other (see closed other explained)</masterLabel>
+            <translation><!-- *Other (see closed other explained) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2022 Price Change</masterLabel>
+            <translation><!-- 2022 Price Change --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ACH Rejects</masterLabel>
+            <translation><!-- ACH Rejects --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Backbill Issue</masterLabel>
+            <translation><!-- Backbill Issue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Change of Ownership</masterLabel>
+            <translation><!-- Change of Ownership --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closing Business / No Longer in Business</masterLabel>
+            <translation><!-- Closing Business / No Longer in Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit cards no longer accepted</masterLabel>
+            <translation><!-- Credit cards no longer accepted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deposit (Day) Delay</masterLabel>
+            <translation><!-- Deposit (Day) Delay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Equipment Issues/Malfunctioning</masterLabel>
+            <translation><!-- Equipment Issues/Malfunctioning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Excessive Chargebacks</masterLabel>
+            <translation><!-- Excessive Chargebacks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fraud</masterLabel>
+            <translation><!-- Fraud --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Merged/Joined firm already using our service</masterLabel>
+            <translation><!-- Merged/Joined firm already using our service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Processing / No Activity</masterLabel>
+            <translation><!-- Not Processing / No Activity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCI Fee</masterLabel>
+            <translation><!-- PCI Fee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pass-Through Fees</masterLabel>
+            <translation><!-- Pass-Through Fees --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reason Unknown</masterLabel>
+            <translation><!-- Reason Unknown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Software Change</masterLabel>
+            <translation><!-- Software Change --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Switched Processors</masterLabel>
+            <translation><!-- Switched Processors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Switched to Local Bank</masterLabel>
+            <translation><!-- Switched to Local Bank --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TAX ID EIN Change</masterLabel>
+            <translation><!-- TAX ID EIN Change --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsatisfied with Rates &amp; Fees</masterLabel>
+            <translation><!-- Unsatisfied with Rates &amp; Fees --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsatisfied with Service</masterLabel>
+            <translation><!-- Unsatisfied with Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsatisfied with product features</masterLabel>
+            <translation><!-- Unsatisfied with product features --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WorldPay Cancellation</masterLabel>
+            <translation><!-- WorldPay Cancellation --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

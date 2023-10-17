@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Classification Code --></label>
+        <name>ClassificationCode__c</name>
+        <picklistValues>
+            <masterLabel>531311</masterLabel>
+            <translation><!-- 531311 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>531312</masterLabel>
+            <translation><!-- 531312 --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

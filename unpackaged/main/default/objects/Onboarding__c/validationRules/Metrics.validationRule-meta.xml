@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Metrics</fullName>
+    <active>false</active>
+    <description>R1814404</description>
+    <errorConditionFormula>NOT(CONTAINS( $Profile.Name, &#39;Integration - &#39; )) &amp;&amp;
+NOT(CONTAINS($Profile.Name,&#39;System Administrator&#39;)) &amp;&amp;
+OR(  ISPICKVAL( Data_Migration_Stage__c ,&quot;live&quot;),  ISPICKVAL( Data_Migration_Stage__c ,&quot;lost&quot;) ) &amp;&amp; 
+ISBLANK( Metrics__c )</errorConditionFormula>
+    <errorMessage>Please provide a value for the Metrics field</errorMessage>
+</ValidationRule>

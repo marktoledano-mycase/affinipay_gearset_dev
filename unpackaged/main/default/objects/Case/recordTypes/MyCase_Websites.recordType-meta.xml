@@ -1,0 +1,908 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MyCase_Websites</fullName>
+    <active>true</active>
+    <businessProcess>MyCase Websites</businessProcess>
+    <compactLayoutAssignment>Billing_Finance_Lightning_Risk_Billing_Case_Compact_Layout</compactLayoutAssignment>
+    <description>R176835</description>
+    <label>MyCase Websites</label>
+    <picklistValues>
+        <picklist>Bug_Status__c</picklist>
+        <values>
+            <fullName>Assigned</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Filed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fixed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Started</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CS_Lead__c</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training 101</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training Billing %26 Invoicing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training Doc Automation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training Workflow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Websites</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Case_Resolution__c</picklist>
+        <values>
+            <fullName>Admin%2FDuplicate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E-Mail</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>No Response</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Case_Sub_Reason__c</picklist>
+        <values>
+            <fullName>Account Suspended</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Article</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Backup Files</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Blog</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bug</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Content Updates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Copy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Design</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Formatting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Questions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google Analytics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hosting %2F Domain Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meta Tag Updates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pages</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Photo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Practice Area</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scripts and Integrations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Setup%2FTech Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website Down</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website Only</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Category__c</picklist>
+        <values>
+            <fullName>Administrator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bank Admin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Billing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contacts and Files</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dashboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Entry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Defects</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financials</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integrations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reporting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Consumer_Inquiry_Type__c</picklist>
+        <values>
+            <fullName>Copy of Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Dispute</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Inquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Criminal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Criminal Dispute</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Criminal Inquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eviction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eviction Dispute</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expungement Order Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>File Disclosure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Question</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ID Theft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missed Criminal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missed Eviction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Permissible Purpose</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RentBureau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subpoena Debt Collection Request</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Engineering_Classification__c</picklist>
+        <values>
+            <fullName>Accounting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Feature</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Property%2FUnit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recurring Transaction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tenancy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Work Order</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Escalation_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confirmed Bug</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delegated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Investigating</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Escalated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resolved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unresponsive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting on CSM</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Level_MyCase_Websites__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Level__c</picklist>
+        <values>
+            <fullName>0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin</picklist>
+        <values>
+            <fullName>Email %28MyCase Payments%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email %28MyCase Websites%29</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web%3A Product Request</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>Critical%3A Work Stoppage%3B unable to work</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Default</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Normal</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product__c</picklist>
+        <values>
+            <fullName>MyCase Payments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MyCase Websites</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Reason</picklist>
+        <values>
+            <fullName>Admin%2FDuplicates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Churning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Content Changes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Creative Brief</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Feature Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rebuild</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SEO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webmaster</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Request_Submitted_By__c</picklist>
+        <values>
+            <fullName>Attorney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal Representative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Property Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Self %28Consumer%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Resolution_mc__c</picklist>
+        <values>
+            <fullName>Administrative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Feedback</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Special Ops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>System Performance %2F Bug</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unresponsive</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Send_To__c</picklist>
+        <values>
+            <fullName>Billing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consumer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Relations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Retention</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Followup</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retention</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Stage__c</picklist>
+        <values>
+            <fullName>closed%C2%A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>open%C2%A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>pre-arb 1%C2%A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>pre-arb 2%C2%A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>reversed%C2%A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>second chargeback</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Category__c</picklist>
+        <values>
+            <fullName>Accounting questions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Adjust Invoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Balancing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bank Accounts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bank Reconciliation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Batch Check Print</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cash Flow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conflict Search</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom Layouts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deposit Slips</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Document Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email Configuration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emailing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expenses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>File</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>File Groups</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>File Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Ledger Accounts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Heat Map</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nacha</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opening balances</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Operating In%2FOut</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Past Due Statements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payables</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Practice Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quick Entry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Releasing Check</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Report Reconciliation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reporting errors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Requesting Invoices</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reviewing Charges</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Security%2FUsers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Settings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Settlement Statements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Setup</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TFS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tax Groups</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Templates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Time Overview</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Time%2FFees</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transfers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trust In%2FOut</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Validate</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Document Upload</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Feature Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internally Identified Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payments Support %28Escalation%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tech Support Escalation</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>User_Role__c</picklist>
+        <values>
+            <fullName>Accountant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Accounts Payable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Accounts Receivable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Attorney</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leasing Agent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On-Site Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paralegal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>President</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Property Manager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Staff</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>View Only</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

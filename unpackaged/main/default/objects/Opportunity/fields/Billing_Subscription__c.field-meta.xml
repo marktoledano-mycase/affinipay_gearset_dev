@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_Subscription__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Billing subscription from billing system that triggered the opportunity to moved to Approvals or Closed Won</description>
+    <externalId>false</externalId>
+    <label>Billing Subscription</label>
+    <referenceTo>Billing_Subscription__c</referenceTo>
+    <relationshipLabel>Opportunities</relationshipLabel>
+    <relationshipName>Opportunities</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

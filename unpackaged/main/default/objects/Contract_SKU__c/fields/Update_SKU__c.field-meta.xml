@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Update_SKU__c</fullName>
+    <description>Evaluates to TRUE if charge quantity related to contract SKU is different from contract SKU quantity or charge rate plan is changed</description>
+    <externalId>false</externalId>
+    <formula>IF( AND( Subscription_Charge_Status__c = &quot;Active&quot;, ISBLANK( Effective_End_Date__c ) ),
+
+IF( 
+
+IF( Subscription_Charge__c = &quot;&quot;, 0,
+
+CASE( 
+
+SKU_Product__r.Product_Type__c, 
+
+&quot;Main&quot;, 
+
+IF( OR( Subscription_Charge__r.Quantity__c != User_Count_Rollup__c, NOT(ISBLANK(Subscription_Charge__r.Zuora_Effective_End_Date__c)), Subscription_Charge__r.Zuora_Product_Rate_Plan_Id__c != SKU_Product__r.Billing_Plan__r.Zuora_Rate_Plan_Id__c ), 1, 0),
+
+&quot;Add-On&quot;,
+
+IF( OR( Subscription_Charge__r.Quantity__c != Add_On_Users__c, NOT(ISBLANK(Subscription_Charge__r.Zuora_Effective_End_Date__c))), 1, 0), 
+
+0)) = 1, 
+
+TRUE, FALSE
+
+), FALSE)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Evaluates to TRUE if charge quantity related to contract SKU is different from contract SKU quantity or charge rate plan is changed</inlineHelpText>
+    <label>Update SKU</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

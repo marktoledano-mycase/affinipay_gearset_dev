@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Opportunities_MyCase</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>Next_Step_Date__c</columns>
+    <columns>Forecasted_Users__c</columns>
+    <columns>Number_of_Employees__c</columns>
+    <columns>Primary_Contact__c</columns>
+    <columns>Primary_Contact_Phone__c</columns>
+    <columns>Primary_Contact_Email__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.MyCase</value>
+    </filters>
+    <label>My Opportunities- MyCase</label>
+    <sharedTo>
+        <roleAndSubordinates>Account_Executive_MyCase_Core_A</roleAndSubordinates>
+        <roleAndSubordinates>Account_Executive_MyCase_Core_B</roleAndSubordinates>
+        <roleAndSubordinates>Account_Executive_MyCase_Core_C</roleAndSubordinates>
+        <roleAndSubordinates>Account_Executive_MyCase_Mid_Market</roleAndSubordinates>
+        <roleAndSubordinates>Account_Executive_MyCase_Special_Operations</roleAndSubordinates>
+    </sharedTo>
+</ListView>

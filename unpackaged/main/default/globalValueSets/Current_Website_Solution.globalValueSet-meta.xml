@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>FindLaw</fullName>
+        <default>false</default>
+        <label>FindLaw</label>
+    </customValue>
+    <customValue>
+        <fullName>LawLytics</fullName>
+        <default>false</default>
+        <label>LawLytics</label>
+    </customValue>
+    <customValue>
+        <fullName>LegalFit</fullName>
+        <default>false</default>
+        <label>LegalFit</label>
+    </customValue>
+    <customValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <label>None</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Personally Owned Website</fullName>
+        <default>false</default>
+        <label>Personally Owned Website</label>
+    </customValue>
+    <customValue>
+        <fullName>Scorpion</fullName>
+        <default>false</default>
+        <label>Scorpion</label>
+    </customValue>
+    <description>List of possible website solutions.</description>
+    <masterLabel>Current Website Solution</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

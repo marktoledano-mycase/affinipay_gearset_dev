@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Survey</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Surveys</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>MyCase NPS Survey</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Intercom Details --></label>
+            <section>Intercom Details</section>
+        </sections>
+        <sections>
+            <label><!-- Internal Feedback --></label>
+            <section>Internal Feedback</section>
+        </sections>
+        <sections>
+            <label><!-- Survey Data --></label>
+            <section>Survey Data</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>MyCase tnps Survey</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Intercom Details --></label>
+            <section>Intercom Details</section>
+        </sections>
+        <sections>
+            <label><!-- Internal Feedback --></label>
+            <section>Internal Feedback</section>
+        </sections>
+        <sections>
+            <label><!-- Rep Details --></label>
+            <section>Rep Details</section>
+        </sections>
+        <sections>
+            <label><!-- Survey Data --></label>
+            <section>Survey Data</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Survey Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Related Records --></label>
+            <section>Related Records</section>
+        </sections>
+        <sections>
+            <label><!-- Survey Results --></label>
+            <section>Survey Results</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- R178186 --></description>
+        <label><!-- BizSys Requests --></label>
+        <name>BizSys_Requests</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- MyCase: NPS --></label>
+        <name>MyCase_NPS</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- MyCase: NPS 2014 --></label>
+        <name>MyCase_NPS_2014</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- MyCase: Onboarding tNPS --></label>
+        <name>MyCase_Onboarding_tNPS</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- R164986 --></description>
+        <label><!-- MyCase: Payments tNPS --></label>
+        <name>MyCase_Payments_tNPS</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- MyCase Support NPS --></label>
+        <name>MyCase_Support_NPS</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Created by request R151468 --></description>
+        <label><!-- MyCase: Websites tNPS --></label>
+        <name>MyCase_Websites_tNPS</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Rentlinx: Success --></label>
+        <name>Rentlinx_Success</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Create_Risk_Case --></label>
+        <name>Create_Risk_Case</name>
+    </webLinks>
+</CustomObjectTranslation>

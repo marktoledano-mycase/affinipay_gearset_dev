@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- BusinessStructure = &apos;2&apos; or SecondaryOfficerName ≠ &apos;&apos; or SecondaryOfficerPercent ≥ 25 --></help>
+        <label><!-- SecondaryCondition2 --></label>
+        <name>SecondaryCondition2__c</name>
+    </CustomFieldTranslation>

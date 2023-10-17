@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Lead Workflow MQL Last Assigned --></label>
+        <name>Lead_Workflow_MQL_Last_Assigned__c</name>
+        <relationshipLabel><!-- Contacts (Lead Workflow MQL Last Assigned) --></relationshipLabel>
+    </CustomFieldTranslation>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Use_SF_Logic__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Determines if we are going to use the Salesforce apex code or the mulesoft flows to process the records. - R2030880</description>
+    <externalId>false</externalId>
+    <label>Use SF Logic</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Service</fullName>
+        <default>false</default>
+        <label>Service</label>
+    </customValue>
+    <customValue>
+        <fullName>Add-On</fullName>
+        <default>false</default>
+        <label>Add-On</label>
+    </customValue>
+    <customValue>
+        <fullName>Main</fullName>
+        <default>false</default>
+        <label>Main</label>
+    </customValue>
+    <customValue>
+        <fullName>Website</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Website</label>
+    </customValue>
+    <customValue>
+        <fullName>Subscription</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Subscription</label>
+    </customValue>
+    <customValue>
+        <fullName>Woodpecker</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Woodpecker</label>
+    </customValue>
+    <description>Used in SKU Product setup for classifying the type of product
+
+Subscription and Service Selections are related to Soluno process only and will need to be modified</description>
+    <masterLabel>SKU Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,16 @@
+<html><head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">Hi {{{Recipient.FirstName}}},<br />
+<br />
+This is&nbsp;{{{Sender.FirstName}}} from the MyCase Website Services Team and I'm currently working on your website request that we received on {{{Case.CreatedDate}}}.<br />
+<meta />See case details below:<br />
+<meta />Case #&nbsp;{{{Case.CaseNumber}}}<br />
+Case Subject:&nbsp;{{{Case.Subject}}}<br />
+<br />
+I will send you an email notification once all website changes have been completed on my end.<br />
+<br />
+Thank you,<br />
+{{{Sender.FirstName}}}&nbsp;<br />
+MyCase Website Services Team<br />
+Case #&nbsp;{{{Case.CaseNumber}}}</body></html>

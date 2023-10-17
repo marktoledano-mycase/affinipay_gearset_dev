@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Checking this box will initiate a process to evaluate Contact Status of the contact(s) associated to this record --></help>
+        <label><!-- Evaluate Contact Status --></label>
+        <name>Evaluate_Contact_Status__c</name>
+    </CustomFieldTranslation>

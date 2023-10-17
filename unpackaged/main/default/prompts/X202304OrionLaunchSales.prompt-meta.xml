@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Prompt xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>2023-04 Orion Launch Sales</masterLabel>
+    <promptVersions>
+        <actionButtonLabel>Get trained</actionButtonLabel>
+        <actionButtonLink>https://affinipayllc.highspot.com/items/64062addeb99e4eaa88ef036</actionButtonLink>
+        <body>&lt;p&gt;Your brand new Salesforce awaits you.&lt;/p&gt;</body>
+        <delayDays>1</delayDays>
+        <dismissButtonLabel>Let&#39;s go</dismissButtonLabel>
+        <displayPosition>TopRight</displayPosition>
+        <displayType>FloatingPanel</displayType>
+        <image>chillzen</image>
+        <imageAltText>Take a breath</imageAltText>
+        <imageLocation>Right</imageLocation>
+        <isPublished>false</isPublished>
+        <masterLabel>2023-04 Orion Launch Sales</masterLabel>
+        <shouldDisplayActionButton>true</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>true</shouldIgnoreGlobalDelay>
+        <startDate>2023-04-01</startDate>
+        <targetPageKey1>home</targetPageKey1>
+        <targetPageType>standard__namedPage</targetPageType>
+        <themeColor>Theme2</themeColor>
+        <themeSaturation>Light</themeSaturation>
+        <timesToDisplay>1</timesToDisplay>
+        <title>Take a deep breath</title>
+        <uiFormulaRule>
+            <criteria>
+                <leftValue>{!$User.Profile.Key}</leftValue>
+                <operator>EQUAL</operator>
+                <rightValue>custom_sales</rightValue>
+            </criteria>
+        </uiFormulaRule>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>SpecificProfiles</userProfileAccess>
+        <versionNumber>1</versionNumber>
+    </promptVersions>
+</Prompt>

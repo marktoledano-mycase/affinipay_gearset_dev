@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subdomain__c</fullName>
+    <description>Subdomain for the firm&#39;s product environment</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Subdomain for the firm&#39;s product environment</inlineHelpText>
+    <label>Subdomain</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

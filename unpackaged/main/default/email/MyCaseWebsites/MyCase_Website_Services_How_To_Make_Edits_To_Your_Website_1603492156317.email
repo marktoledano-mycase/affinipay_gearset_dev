@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">Hi {{{Recipient.FirstName}}},<br />
+<br />
+Thank you for reaching out!&nbsp;<br />
+<br />
+The Website Services Team is more than happy to assist you with making changes to your website.&nbsp;<br />
+<br />
+Please use the following link for information on how to submit changes:&nbsp;<a href="https://help.mycase.com/s/article/How-to-Submit-MyCase-Website-Changes">https://help.mycase.com/s/article/How-to-Submit-MyCase-Website-Changes</a><br />
+<br />
+Once prepared to make changes, please email <b>websites@mycase.com,&nbsp;</b>or if you are ready to update your website now, simply reply to this email with the aforementioned information and we will begin the update process!&nbsp;<br />
+<br />
+Please let us know if you have any questions.<br />
+<br />
+Thank you,&nbsp;<br />
+{{{Sender.FirstName}}}<br />
+MyCase Website Services Team&nbsp;<br />
+Case # <meta />{{{Case.CaseNumber}}}<br />
+&nbsp;</body>
+</html>

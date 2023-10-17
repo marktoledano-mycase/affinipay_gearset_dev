@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Category__c</fullName>
+    <description>Sub Categories used by Soluno. Child of Categories</description>
+    <externalId>false</externalId>
+    <label>Sub Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Category__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accounting questions</fullName>
+                <default>false</default>
+                <label>Accounting questions</label>
+            </value>
+            <value>
+                <fullName>Adjust Invoice</fullName>
+                <default>false</default>
+                <label>Adjust Invoice</label>
+            </value>
+            <value>
+                <fullName>Balancing</fullName>
+                <default>false</default>
+                <label>Balancing</label>
+            </value>
+            <value>
+                <fullName>Bank Accounts</fullName>
+                <default>false</default>
+                <label>Bank Accounts</label>
+            </value>
+            <value>
+                <fullName>Bank Reconciliation</fullName>
+                <default>false</default>
+                <label>Bank Reconciliation</label>
+            </value>
+            <value>
+                <fullName>Batch Check Print</fullName>
+                <default>false</default>
+                <label>Batch Check Print</label>
+            </value>
+            <value>
+                <fullName>Cash Flow</fullName>
+                <default>false</default>
+                <label>Cash Flow</label>
+            </value>
+            <value>
+                <fullName>Conflict Search</fullName>
+                <default>false</default>
+                <label>Conflict Search</label>
+            </value>
+            <value>
+                <fullName>Contact Management</fullName>
+                <default>false</default>
+                <label>Contact Management</label>
+            </value>
+            <value>
+                <fullName>Credit Card</fullName>
+                <default>false</default>
+                <label>Credit Card</label>
+            </value>
+            <value>
+                <fullName>Custom Layouts</fullName>
+                <default>false</default>
+                <label>Custom Layouts</label>
+            </value>
+            <value>
+                <fullName>Deposit Slips</fullName>
+                <default>false</default>
+                <label>Deposit Slips</label>
+            </value>
+            <value>
+                <fullName>Document Management</fullName>
+                <default>false</default>
+                <label>Document Management</label>
+            </value>
+            <value>
+                <fullName>Email Configuration</fullName>
+                <default>false</default>
+                <label>Email Configuration</label>
+            </value>
+            <value>
+                <fullName>Emailing</fullName>
+                <default>false</default>
+                <label>Emailing</label>
+            </value>
+            <value>
+                <fullName>Expenses</fullName>
+                <default>false</default>
+                <label>Expenses</label>
+            </value>
+            <value>
+                <fullName>File</fullName>
+                <default>false</default>
+                <label>File</label>
+            </value>
+            <value>
+                <fullName>File Groups</fullName>
+                <default>false</default>
+                <label>File Groups</label>
+            </value>
+            <value>
+                <fullName>File Management</fullName>
+                <default>false</default>
+                <label>File Management</label>
+            </value>
+            <value>
+                <fullName>General</fullName>
+                <default>false</default>
+                <label>General</label>
+            </value>
+            <value>
+                <fullName>General Ledger Accounts</fullName>
+                <default>false</default>
+                <label>General Ledger Accounts</label>
+            </value>
+            <value>
+                <fullName>Heat Map</fullName>
+                <default>false</default>
+                <label>Heat Map</label>
+            </value>
+            <value>
+                <fullName>Nacha</fullName>
+                <default>false</default>
+                <label>Nacha</label>
+            </value>
+            <value>
+                <fullName>Opening balances</fullName>
+                <default>false</default>
+                <label>Opening balances</label>
+            </value>
+            <value>
+                <fullName>Operating In/Out</fullName>
+                <default>false</default>
+                <label>Operating In/Out</label>
+            </value>
+            <value>
+                <fullName>Past Due Statements</fullName>
+                <default>false</default>
+                <label>Past Due Statements</label>
+            </value>
+            <value>
+                <fullName>Payables</fullName>
+                <default>false</default>
+                <label>Payables</label>
+            </value>
+            <value>
+                <fullName>Practice Management</fullName>
+                <default>false</default>
+                <label>Practice Management</label>
+            </value>
+            <value>
+                <fullName>Quick Entry</fullName>
+                <default>false</default>
+                <label>Quick Entry</label>
+            </value>
+            <value>
+                <fullName>Releasing Check</fullName>
+                <default>false</default>
+                <label>Releasing Check</label>
+            </value>
+            <value>
+                <fullName>Reporting errors</fullName>
+                <default>false</default>
+                <label>Reporting errors</label>
+            </value>
+            <value>
+                <fullName>Report Reconciliation</fullName>
+                <default>false</default>
+                <label>Report Reconciliation</label>
+            </value>
+            <value>
+                <fullName>Requesting Invoices</fullName>
+                <default>false</default>
+                <label>Requesting Invoices</label>
+            </value>
+            <value>
+                <fullName>Reviewing Charges</fullName>
+                <default>false</default>
+                <label>Reviewing Charges</label>
+            </value>
+            <value>
+                <fullName>Security/Users</fullName>
+                <default>false</default>
+                <label>Security/Users</label>
+            </value>
+            <value>
+                <fullName>Settings</fullName>
+                <default>false</default>
+                <label>Settings</label>
+            </value>
+            <value>
+                <fullName>Settlement Statements</fullName>
+                <default>false</default>
+                <label>Settlement Statements</label>
+            </value>
+            <value>
+                <fullName>Setup</fullName>
+                <default>false</default>
+                <label>Setup</label>
+            </value>
+            <value>
+                <fullName>Tax Groups</fullName>
+                <default>false</default>
+                <label>Tax Groups</label>
+            </value>
+            <value>
+                <fullName>Templates</fullName>
+                <default>false</default>
+                <label>Templates</label>
+            </value>
+            <value>
+                <fullName>TFS</fullName>
+                <default>false</default>
+                <label>TFS</label>
+            </value>
+            <value>
+                <fullName>Time/Fees</fullName>
+                <default>false</default>
+                <label>Time/Fees</label>
+            </value>
+            <value>
+                <fullName>Time Overview</fullName>
+                <default>false</default>
+                <label>Time Overview</label>
+            </value>
+            <value>
+                <fullName>Transfers</fullName>
+                <default>false</default>
+                <label>Transfers</label>
+            </value>
+            <value>
+                <fullName>Trust In/Out</fullName>
+                <default>false</default>
+                <label>Trust In/Out</label>
+            </value>
+            <value>
+                <fullName>Validate</fullName>
+                <default>false</default>
+                <label>Validate</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Reporting</controllingFieldValue>
+            <controllingFieldValue>Financials</controllingFieldValue>
+            <valueName>Custom Layouts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporting</controllingFieldValue>
+            <controllingFieldValue>Financials</controllingFieldValue>
+            <valueName>Reporting errors</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporting</controllingFieldValue>
+            <valueName>Report Reconciliation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrator</controllingFieldValue>
+            <valueName>Bank Accounts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrator</controllingFieldValue>
+            <valueName>Email Configuration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrator</controllingFieldValue>
+            <valueName>File Groups</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrator</controllingFieldValue>
+            <valueName>General Ledger Accounts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrator</controllingFieldValue>
+            <valueName>Security/Users</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrator</controllingFieldValue>
+            <valueName>Settings</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrator</controllingFieldValue>
+            <valueName>Setup</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrator</controllingFieldValue>
+            <valueName>Tax Groups</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Administrator</controllingFieldValue>
+            <valueName>Templates</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales</controllingFieldValue>
+            <controllingFieldValue>General</controllingFieldValue>
+            <valueName>General</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bank Admin</controllingFieldValue>
+            <valueName>Bank Reconciliation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bank Admin</controllingFieldValue>
+            <valueName>Batch Check Print</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bank Admin</controllingFieldValue>
+            <valueName>Deposit Slips</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bank Admin</controllingFieldValue>
+            <valueName>Nacha</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Bank Admin</controllingFieldValue>
+            <valueName>Releasing Check</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Billing</controllingFieldValue>
+            <valueName>Adjust Invoice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Billing</controllingFieldValue>
+            <valueName>Emailing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Billing</controllingFieldValue>
+            <valueName>Past Due Statements</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Billing</controllingFieldValue>
+            <valueName>Requesting Invoices</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Billing</controllingFieldValue>
+            <valueName>Reviewing Charges</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Billing</controllingFieldValue>
+            <valueName>Settlement Statements</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contacts and Files</controllingFieldValue>
+            <valueName>Conflict Search</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contacts and Files</controllingFieldValue>
+            <valueName>Contact Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contacts and Files</controllingFieldValue>
+            <controllingFieldValue>Defects</controllingFieldValue>
+            <valueName>File Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dashboard</controllingFieldValue>
+            <valueName>Cash Flow</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dashboard</controllingFieldValue>
+            <valueName>File</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dashboard</controllingFieldValue>
+            <valueName>Heat Map</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dashboard</controllingFieldValue>
+            <controllingFieldValue>Data Entry</controllingFieldValue>
+            <valueName>Time/Fees</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Dashboard</controllingFieldValue>
+            <valueName>Validate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Entry</controllingFieldValue>
+            <valueName>Expenses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Entry</controllingFieldValue>
+            <valueName>Operating In/Out</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Entry</controllingFieldValue>
+            <valueName>Payables</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Entry</controllingFieldValue>
+            <valueName>Quick Entry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Entry</controllingFieldValue>
+            <valueName>Transfers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Data Entry</controllingFieldValue>
+            <valueName>Trust In/Out</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financials</controllingFieldValue>
+            <valueName>Accounting questions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financials</controllingFieldValue>
+            <valueName>Balancing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financials</controllingFieldValue>
+            <valueName>Opening balances</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Integrations</controllingFieldValue>
+            <valueName>Credit Card</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Integrations</controllingFieldValue>
+            <valueName>Document Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Integrations</controllingFieldValue>
+            <valueName>Practice Management</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

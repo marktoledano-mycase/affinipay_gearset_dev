@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Department_s_Impacted__c</fullName>
+    <description>R163888</description>
+    <externalId>false</externalId>
+    <label>Department(s) Impacted</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accounting</fullName>
+                <default>false</default>
+                <label>Accounting</label>
+            </value>
+            <value>
+                <fullName>APM+</fullName>
+                <default>false</default>
+                <label>APM+</label>
+            </value>
+            <value>
+                <fullName>APM Client Services</fullName>
+                <default>false</default>
+                <label>APM Client Services</label>
+            </value>
+            <value>
+                <fullName>APM Marketing</fullName>
+                <default>false</default>
+                <label>APM Marketing</label>
+            </value>
+            <value>
+                <fullName>APM Operations</fullName>
+                <default>false</default>
+                <label>APM Operations</label>
+            </value>
+            <value>
+                <fullName>APM Sales</fullName>
+                <default>false</default>
+                <label>APM Sales</label>
+            </value>
+            <value>
+                <fullName>Business Systems</fullName>
+                <default>false</default>
+                <label>Business Systems</label>
+            </value>
+            <value>
+                <fullName>CA Segment</fullName>
+                <default>false</default>
+                <label>CA Segment</label>
+            </value>
+            <value>
+                <fullName>Corporate Segment</fullName>
+                <default>false</default>
+                <label>Corporate Segment</label>
+            </value>
+            <value>
+                <fullName>Executive</fullName>
+                <default>false</default>
+                <label>Executive</label>
+            </value>
+            <value>
+                <fullName>Human Resources</fullName>
+                <default>false</default>
+                <label>Human Resources</label>
+            </value>
+            <value>
+                <fullName>IM Client Services</fullName>
+                <default>false</default>
+                <label>IM Client Services</label>
+            </value>
+            <value>
+                <fullName>IM Sales</fullName>
+                <default>false</default>
+                <label>IM Sales</label>
+            </value>
+            <value>
+                <fullName>Mid Market Segment</fullName>
+                <default>false</default>
+                <label>Mid Market Segment</label>
+            </value>
+            <value>
+                <fullName>MyCase</fullName>
+                <default>false</default>
+                <label>MyCase</label>
+            </value>
+            <value>
+                <fullName>Order to Cash</fullName>
+                <default>false</default>
+                <label>Order to Cash</label>
+            </value>
+            <value>
+                <fullName>Payments</fullName>
+                <default>false</default>
+                <label>Payments</label>
+            </value>
+            <value>
+                <fullName>Product/Engineering</fullName>
+                <default>false</default>
+                <label>Product/Engineering</label>
+            </value>
+            <value>
+                <fullName>SMB Segment</fullName>
+                <default>false</default>
+                <label>SMB Segment</label>
+            </value>
+            <value>
+                <fullName>Value+</fullName>
+                <default>false</default>
+                <label>Value+</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

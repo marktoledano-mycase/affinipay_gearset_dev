@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Magic permissions to fix things. 🧙</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Senior Marketing Operations 🧙</label>
+    <permissionSets>API_Enabled</permissionSets>
+    <permissionSets>Campaign_Editor</permissionSets>
+    <permissionSets>Edit_Attribution_Fields</permissionSets>
+    <permissionSets>Edit_MQL_Fields</permissionSets>
+    <permissionSets>Edit_Opportunities</permissionSets>
+    <permissionSets>Inbound_Requests_Edit</permissionSets>
+    <permissionSets>Modify_All_Contacts</permissionSets>
+    <permissionSets>Modify_All_Inbound_Requests</permissionSets>
+    <permissionSets>Modify_All_Leads</permissionSets>
+    <permissionSets>Modify_All_Referral_Partnerships</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

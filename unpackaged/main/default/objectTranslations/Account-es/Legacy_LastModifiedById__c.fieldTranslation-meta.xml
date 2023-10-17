@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Legacy LastModifiedById --></label>
+        <name>Legacy_LastModifiedById__c</name>
+        <relationshipLabel><!-- Accounts (Legacy LastModifiedById) --></relationshipLabel>
+    </CustomFieldTranslation>

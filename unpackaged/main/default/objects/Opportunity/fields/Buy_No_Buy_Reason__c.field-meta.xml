@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Buy_No_Buy_Reason__c</fullName>
+    <description>MC; R165465; R1915436; Edited: users</description>
+    <externalId>false</externalId>
+    <label>Win/Loss Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Auto Drip / Dead Number</fullName>
+                <default>false</default>
+                <label>Auto Drip / Dead Number</label>
+            </value>
+            <value>
+                <fullName>Competition</fullName>
+                <default>false</default>
+                <label>Competition</label>
+            </value>
+            <value>
+                <fullName>Competitor</fullName>
+                <default>false</default>
+                <label>Competitor</label>
+            </value>
+            <value>
+                <fullName>Contact Left Organization</fullName>
+                <default>false</default>
+                <label>Contact Left Organization</label>
+            </value>
+            <value>
+                <fullName>Data Migration</fullName>
+                <default>false</default>
+                <label>Data Migration</label>
+            </value>
+            <value>
+                <fullName>Disqualified</fullName>
+                <default>false</default>
+                <label>Disqualified</label>
+            </value>
+            <value>
+                <fullName>Feature Gaps</fullName>
+                <default>false</default>
+                <label>Feature Gaps</label>
+            </value>
+            <value>
+                <fullName>Market Fit</fullName>
+                <default>false</default>
+                <label>Market Fit</label>
+            </value>
+            <value>
+                <fullName>MC Integration</fullName>
+                <default>false</default>
+                <label>MC Integration</label>
+            </value>
+            <value>
+                <fullName>Migration Issue</fullName>
+                <default>false</default>
+                <label>Migration Issue</label>
+            </value>
+            <value>
+                <fullName>Missing Integrations</fullName>
+                <default>false</default>
+                <label>Missing Integrations</label>
+            </value>
+            <value>
+                <fullName>MyCase Sales Team Owned</fullName>
+                <default>false</default>
+                <label>MyCase Sales Team Owned</label>
+            </value>
+            <value>
+                <fullName>Needs Feature</fullName>
+                <default>false</default>
+                <label>Needs Feature</label>
+            </value>
+            <value>
+                <fullName>Never Got Back To Me</fullName>
+                <default>false</default>
+                <label>Never Got Back To Me</label>
+            </value>
+            <value>
+                <fullName>Never Spoke</fullName>
+                <default>false</default>
+                <label>Never Spoke</label>
+            </value>
+            <value>
+                <fullName>No Budget</fullName>
+                <default>false</default>
+                <label>No Budget</label>
+            </value>
+            <value>
+                <fullName>No Decision</fullName>
+                <default>false</default>
+                <label>No Decision</label>
+            </value>
+            <value>
+                <fullName>No Need</fullName>
+                <default>false</default>
+                <label>No Need</label>
+            </value>
+            <value>
+                <fullName>Non ICP</fullName>
+                <default>false</default>
+                <label>Non ICP</label>
+            </value>
+            <value>
+                <fullName>No Reason Provided</fullName>
+                <default>false</default>
+                <label>No Reason Provided</label>
+            </value>
+            <value>
+                <fullName>Not Enough Immediate Need</fullName>
+                <default>false</default>
+                <label>Not Enough Immediate Need</label>
+            </value>
+            <value>
+                <fullName>Not Qualified</fullName>
+                <default>false</default>
+                <label>Not Qualified</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Other Technical Reason</fullName>
+                <default>false</default>
+                <label>Other Technical Reason</label>
+            </value>
+            <value>
+                <fullName>Parked</fullName>
+                <default>false</default>
+                <label>Parked</label>
+            </value>
+            <value>
+                <fullName>Poor Qualification</fullName>
+                <default>false</default>
+                <label>Poor Qualification</label>
+            </value>
+            <value>
+                <fullName>Pre MS Word 2013</fullName>
+                <default>false</default>
+                <label>Pre MS Word 2013</label>
+            </value>
+            <value>
+                <fullName>Price</fullName>
+                <default>false</default>
+                <label>Price</label>
+            </value>
+            <value>
+                <fullName>Pricing</fullName>
+                <default>false</default>
+                <label>Pricing</label>
+            </value>
+            <value>
+                <fullName>Product</fullName>
+                <default>false</default>
+                <label>Product</label>
+            </value>
+            <value>
+                <fullName>Product/Features</fullName>
+                <default>false</default>
+                <label>Product/Features</label>
+            </value>
+            <value>
+                <fullName>Product Fit</fullName>
+                <default>false</default>
+                <label>Product Fit</label>
+            </value>
+            <value>
+                <fullName>Self Service</fullName>
+                <default>false</default>
+                <label>Self Service</label>
+            </value>
+            <value>
+                <fullName>Stayed Current Solution</fullName>
+                <default>false</default>
+                <label>Stayed Current Solution</label>
+            </value>
+            <value>
+                <fullName>Technical Issue</fullName>
+                <default>false</default>
+                <label>Technical Issue</label>
+            </value>
+            <value>
+                <fullName>Timing</fullName>
+                <default>false</default>
+                <label>Timing</label>
+            </value>
+            <value>
+                <fullName>Trial Extension Data Export</fullName>
+                <default>false</default>
+                <label>Trial Extension Data Export</label>
+            </value>
+            <value>
+                <fullName>Trial Extension Log In - No Interest</fullName>
+                <default>false</default>
+                <label>Trial Extension Log In - No Interest</label>
+            </value>
+            <value>
+                <fullName>Unresponsive</fullName>
+                <default>false</default>
+                <label>Unresponsive</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

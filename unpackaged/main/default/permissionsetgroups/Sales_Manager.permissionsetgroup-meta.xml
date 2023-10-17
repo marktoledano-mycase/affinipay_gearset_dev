@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Sales Manager</label>
+    <permissionSets>Flow_User</permissionSets>
+    <permissionSets>Gong__Gong_Users</permissionSets>
+    <permissionSets>Inbound_Requests_Readonly</permissionSets>
+    <permissionSets>Product_Picker_Read_Write</permissionSets>
+    <permissionSets>bizible2__Bizible_Standard_User</permissionSets>
+    <permissionSets>dfsle__DocuSign_Login</permissionSets>
+    <permissionSets>dfsle__DocuSign_Sender</permissionSets>
+    <permissionSets>dfsle__DocuSign_User</permissionSets>
+    <permissionSets>force__SalesConsoleUser</permissionSets>
+    <permissionSets>mkto_si__Marketo_App_Access</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

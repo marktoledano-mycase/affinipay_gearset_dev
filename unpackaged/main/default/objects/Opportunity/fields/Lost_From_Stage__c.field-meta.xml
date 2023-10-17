@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lost_From_Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>Lost From Stage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Disco/Demo</fullName>
+                <default>false</default>
+                <label>Disco/Demo</label>
+            </value>
+            <value>
+                <fullName>Decision Making</fullName>
+                <default>false</default>
+                <label>Decision Making</label>
+            </value>
+            <value>
+                <fullName>Application/Approval</fullName>
+                <default>false</default>
+                <label>Application/Approval</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

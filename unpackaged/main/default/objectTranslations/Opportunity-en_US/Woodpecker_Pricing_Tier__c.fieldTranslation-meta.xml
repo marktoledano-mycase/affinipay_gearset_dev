@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Woodpecker Pricing Tier --></label>
+        <name>Woodpecker_Pricing_Tier__c</name>
+        <picklistValues>
+            <masterLabel>Pro</masterLabel>
+            <translation><!-- Pro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Starter</masterLabel>
+            <translation><!-- Starter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Teams</masterLabel>
+            <translation><!-- Teams --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

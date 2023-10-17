@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MyCase_Escalation_Status</fullName>
+    <active>true</active>
+    <description>R1812440</description>
+    <errorConditionFormula>RecordType.DeveloperName = &#39;MyCase_Support&#39; &amp;&amp; 
+ISCHANGED(Escalation_Status__c)&amp;&amp; 
+OR ($User.ProfileId = &#39;00e3g000000QMcV&#39;)&amp;&amp; 
+OR ( 
+TEXT( Escalation_Status__c ) = &#39;Waiting on CSM&#39;, 
+TEXT( Escalation_Status__c ) = &#39;Confirmed Bug&#39;, 
+TEXT( Escalation_Status__c ) = &#39;Resolved&#39;)</errorConditionFormula>
+    <errorDisplayField>Escalation_Status__c</errorDisplayField>
+    <errorMessage>Your role cannot change Escalation Status to this value</errorMessage>
+</ValidationRule>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Sending to clients who currently don&#39;t have the $100 fee applied</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>MyCase Website Services- Adding $100 Fee</name>
+    <style>none</style>
+    <subject>MyCase Website Services |  Case # {{{Case.CaseNumber}}}</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

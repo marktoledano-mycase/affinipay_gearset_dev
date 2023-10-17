@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>VerticalColumn</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>CDF1</groupingColumn>
+        <location>CHART_BOTTOM</location>
+        <showAxisLabels>false</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Trial_Request__c.Lead_Contact__c</field>
+    </columns>
+    <columns>
+        <field>Trial_Request__c.LeadSource__c</field>
+    </columns>
+    <columns>
+        <field>Trial_Request__c.Lead_Channel__c</field>
+    </columns>
+    <columns>
+        <field>Trial_Request__c.Acquisition_Program__c</field>
+    </columns>
+    <columns>
+        <field>Trial_Request__c.Last_Touch_Program__c</field>
+    </columns>
+    <columns>
+        <field>Trial_Request__c.MQL_Status__c</field>
+    </columns>
+    <columns>
+        <field>Trial_Request__c.Brand__c</field>
+    </columns>
+    <currency>USD</currency>
+    <customDetailFormulas>
+        <calculatedFormula>IF(NOT(ISBLANK(Trial_Request__c.Opportunity__c)), 
+
+&quot;3 - Opportunity&quot;, 
+
+CASE( Trial_Request__c.Person_Owner_Role__c,
+
+&quot;EXECUTIVE&quot;, &quot;0 - Assignment Issue&quot;,
+&quot;System Admins&quot;, &quot;0 - Assignment Issue&quot;,
+&quot;Systems Intergration&quot;, &quot;0 - Assignment Issue&quot;,
+&quot;Queue&quot;, &quot;0 - Assignment Issue&quot;,
+
+CASE(Trial_Request__c.Person_Status__c, 
+&quot;New&quot;, &quot;1 - Not Yet Worked&quot;,
+&quot;Working&quot;, &quot;2 - Working/Engaged&quot;,
+&quot;Engaged&quot;, &quot;2 - Working/Engaged&quot;,
+&quot;Marketing Nurture&quot;, &quot;0 - Marketing Nurture&quot;,
+&quot;Disqualified&quot;, &quot;0 - Disqualified&quot;, 
+&quot;2 - Working/Engaged&quot;)
+))</calculatedFormula>
+        <dataType>Text</dataType>
+        <developerName>CDF1</developerName>
+        <label>Lead Status</label>
+        <scale>2</scale>
+    </customDetailFormulas>
+    <filter>
+        <criteriaItems>
+            <column>Trial_Request__c.MQL_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>,Existing Customer,Non-MQL Interaction</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Trial_Request__c.Person_Disqualified_Reason__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>UW Junk,UW Fraud,UW Payment Attempt,UW Not Approved Business</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Trial_Request__c.Brand__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>MyCase</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Trial_Request__c.LeadSource__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>webinar</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Trial_Request__c.Last_Touch_Program__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>MC-D-WB-2023-09: 5 Law Office Mishaps</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Trial_Request__c.Type__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Trial_Request__c.Person_Owner__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CDF1</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>092023 Law Office Mishaps MQLs</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Trial_Request__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Trial_Request__c.MQL_Date__c</dateColumn>
+        <interval>INTERVAL_LAST60</interval>
+    </timeFrameFilter>
+</Report>

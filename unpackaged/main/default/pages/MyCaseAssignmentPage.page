@@ -1,0 +1,69 @@
+<apex:page controller="MyCaseAssignmentController" standardStylesheets="false">
+    <apex:form >
+    <style type="text/css">
+        .table{
+            border-color:#E8E7E6;
+            font-family:'SalesforceSans-Regular',Helvetica,Arial,sans-serif;
+            font-size:12.5px;color:#16325C;
+            font-weight:normal;
+        }
+        .button{
+            color:white !important;
+            background:#0070d2 !important;
+            font-size: 20px;
+            width: 150px;
+            height: 30px;
+            text-decoration: none;
+            background-image:none;
+        }
+        .noCases{
+            font-size: 20px;
+        }
+    </style>
+    <apex:includeScript value="/support/console/22.0/integration.js"/>
+    <script type="text/javascript">
+        function openCaseTab(){
+            sforce.console.openPrimaryTab(null,"/" + "{!nextCase.Id}", false, "{!nextCase.CaseNumber}", location.reload(), 'salesforceTab');
+        }
+    </script>
+    <br/>
+    <table align="center" style="width: 100%">
+        <tr align="center">
+            <td>
+                <apex:commandButton value="Assign Next" action="{!assignNext}" oncomplete="openCaseTab();" styleClass="button" rendered="{!availableCases.size > 0}" />
+                <apex:commandButton value="Refresh" action="{!refreshPage}" styleClass="button"/>
+            </td>
+        </tr>
+        <apex:pageMessages ></apex:pageMessages>
+        <!--UnAssigned MyCase Tickets-->
+        <tr style="width: 100%">
+            <td><apex:dataTable value="{!availableCases}" var="c" rowClasses="odd,even" cellpadding="12px" cellspacing="12px" width="95%" rules="rows" styleClass="table" frame="above" align="center" id="table">
+                <apex:column headerValue="CASE NUMBER" onmousemove="this.parentNode.style.backgroundColor='#FCFCFC'" onmouseout="this.parentNode.style.backgroundColor =''">
+                    <apex:outputLink value="{!'/'+c.Id}">{!c.CaseNumber}</apex:outputLink>
+                </apex:column>
+                <apex:column headerValue="# Total Users" onmousemove="this.parentNode.style.backgroundColor='#FCFCFC'" onmouseout="this.parentNode.style.backgroundColor =''">
+                    <apex:outputField value="{!c.Total_Users__c}" />
+                </apex:column> 
+                <apex:column headerValue="CONTACT NAME" onmousemove="this.parentNode.style.backgroundColor='#FCFCFC'" onmouseout="this.parentNode.style.backgroundColor =''">
+                    <apex:outputField value="{!c.Contact.Name}" />
+                </apex:column>
+                <apex:column headerValue="SUBJECT" onmousemove="this.parentNode.style.backgroundColor='#FCFCFC'" onmouseout="this.parentNode.style.backgroundColor =''">
+                    <apex:outputField value="{!c.Subject}" />
+                </apex:column>
+                <apex:column headerValue="STATUS" onmousemove="this.parentNode.style.backgroundColor='#FCFCFC'" onmouseout="this.parentNode.style.backgroundColor =''">
+                    <apex:outputField value="{!c.Status}" />
+                </apex:column>
+                <apex:column headerValue="PRIORITY" onmousemove="this.parentNode.style.backgroundColor='#FCFCFC'" onmouseout="this.parentNode.style.backgroundColor =''">
+                    <apex:outputField value="{!c.Priority}" />
+                </apex:column>
+                <apex:column headerValue="DATE/TIME OPENED" onmousemove="this.parentNode.style.backgroundColor='#FCFCFC'" onmouseout="this.parentNode.style.backgroundColor =''">
+                    <apex:outputField value="{!c.CreatedDate}" />
+                </apex:column> 
+            </apex:dataTable></td>
+        </tr>
+    </table><br />
+    <div align="center">
+        <apex:outputText rendered="{!availableCases.size == 0}" value="There are no cases to assign." styleClass="noCases" />
+    </div>
+    </apex:form>
+</apex:page>

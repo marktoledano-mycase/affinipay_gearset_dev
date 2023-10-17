@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <assignments>
+        <name>asg_OpportunityToUpdate</name>
+        <label>Assign Opportunity to Update</label>
+        <locationX>1326</locationX>
+        <locationY>1214</locationY>
+        <assignmentItems>
+            <assignToReference>var_OpportunityToUpdate.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_OpportunityToUpdate.RecordTypeId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>inp_RecordType</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_OpportunityToUpdate.Number_of_Employees__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>inp_NumberOfEmployees</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_OpportunityToUpdate.OwnerId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>sub_GetAssignmentGroupMember.var_AssignmentGroupMemberUserID</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>up_Opportunity</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>dec_AssignmentGroupMemberUserIDIsNull</name>
+        <label>Assignment Group Member User ID Is Null</label>
+        <locationX>1172</locationX>
+        <locationY>1106</locationY>
+        <defaultConnector>
+            <targetReference>asg_OpportunityToUpdate</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>out_AssignmentGroupMemberUserIDIsNull</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>sub_GetAssignmentGroupMember.var_AssignmentGroupMemberUserID</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>sub_GetAssignmentGroupMember.var_AssignmentGroupMemberUserID</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>scr_ErrorUnknown</targetReference>
+            </connector>
+            <label>True</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>dec_AssignmentSettingIsNull</name>
+        <label>Assignment Setting Is Null</label>
+        <locationX>1007</locationX>
+        <locationY>890</locationY>
+        <defaultConnector>
+            <targetReference>sub_GetAssignmentGroupMember</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Out_AssignmentSettingIsNullTrue</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>sub_GetAssignmentSetting.var_AssignmentGroupName</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>sub_GetAssignmentSetting.var_AssignmentGroupName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>scr_ErrorUnknown</targetReference>
+            </connector>
+            <label>True</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>dec_IsClosed</name>
+        <label>Is Closed</label>
+        <locationX>301</locationX>
+        <locationY>350</locationY>
+        <defaultConnector>
+            <targetReference>scr_ConfirmRouting</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>out_IsClosedTrue</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>get_Opportunity.IsClosed</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>scr_IsClosedError</targetReference>
+            </connector>
+            <label>True</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>dec_IsParent</name>
+        <label>Is Parent</label>
+        <locationX>553</locationX>
+        <locationY>566</locationY>
+        <defaultConnector>
+            <targetReference>dec_NumberOfEmployeesNegative</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>out_IsParentTrue</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>inp_RecordType</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>get_ParentRecordTypeID.Id</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>scr_Is_Parent</targetReference>
+            </connector>
+            <label>True</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>dec_NumberOfEmployeesNegative</name>
+        <label>Number of Employees &lt; 0</label>
+        <locationX>792</locationX>
+        <locationY>674</locationY>
+        <defaultConnector>
+            <targetReference>sub_GetAssignmentSetting</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>out</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>inp_NumberOfEmployees</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>scr_NegativeEmployeesError</targetReference>
+            </connector>
+            <label>True</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>dec_SlackIDIsNull</name>
+        <label>Slack ID Is Null</label>
+        <locationX>1326</locationX>
+        <locationY>1430</locationY>
+        <defaultConnector>
+            <targetReference>sub_SendSlackMessageToUser</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>out_SlackIDIsNullTrue</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>sub_GetAssignmentGroupMember.var_AssignmentGroupMemberUserSlackID</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>sub_GetAssignmentGroupMember.var_AssignmentGroupMemberUserSlackID</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>sub_SendSlackMessageMissingSlackID</targetReference>
+            </connector>
+            <label>True</label>
+        </rules>
+    </decisions>
+    <description>Send Opps to &quot;alert-sql-software&quot;</description>
+    <dynamicChoiceSets>
+        <name>chc_RecordType</name>
+        <dataType>String</dataType>
+        <displayField>Name</displayField>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SobjectType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Opportunity</stringValue>
+            </value>
+        </filters>
+        <object>RecordType</object>
+        <outputAssignments>
+            <assignToReference>var_OpportunityBrand</assignToReference>
+            <field>Name</field>
+        </outputAssignments>
+        <sortField>Name</sortField>
+        <sortOrder>Asc</sortOrder>
+        <valueField>Id</valueField>
+    </dynamicChoiceSets>
+    <environments>Default</environments>
+    <interviewLabel>Opportunity - Assign Screen {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity - Assign Screen</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordLookups>
+        <name>get_Opportunity</name>
+        <label>Get Opportunity</label>
+        <locationX>301</locationX>
+        <locationY>134</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>get_ParentRecordTypeID</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>scr_UnhandledFault</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Opportunity</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>get_ParentRecordTypeID</name>
+        <label>Get Parent Record Type ID</label>
+        <locationX>301</locationX>
+        <locationY>242</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>dec_IsClosed</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>scr_UnhandledFault</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>SobjectType</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Opportunity</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Parent</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>RecordType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>up_Opportunity</name>
+        <label>Update Opportunity</label>
+        <locationX>1326</locationX>
+        <locationY>1322</locationY>
+        <connector>
+            <targetReference>dec_SlackIDIsNull</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>scr_UnhandledFault</targetReference>
+        </faultConnector>
+        <inputReference>var_OpportunityToUpdate</inputReference>
+    </recordUpdates>
+    <screens>
+        <name>scr_ConfirmRouting</name>
+        <label>Confirm Routing</label>
+        <locationX>553</locationX>
+        <locationY>458</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <backButtonLabel>Cancel</backButtonLabel>
+        <connector>
+            <targetReference>dec_IsParent</targetReference>
+        </connector>
+        <fields>
+            <name>txt_Heading</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 16px;&quot;&gt;Assign Opportunity&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>txt_Instructions</name>
+            <fieldText>&lt;p&gt;Confirm the Record Type and Number of Employees, then click Assign.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>inp_RecordType</name>
+            <choiceReferences>chc_RecordType</choiceReferences>
+            <dataType>String</dataType>
+            <defaultValue>
+                <elementReference>get_Opportunity.RecordTypeId</elementReference>
+            </defaultValue>
+            <fieldText>Record Type</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>inp_NumberOfEmployees</name>
+            <dataType>Number</dataType>
+            <defaultValue>
+                <elementReference>get_Opportunity.Number_of_Employees__c</elementReference>
+            </defaultValue>
+            <fieldText>Number of Employees</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+            <scale>0</scale>
+            <validationRule>
+                <errorMessage>&lt;p&gt;Number of Employees cannot be less than 0.&lt;/p&gt;</errorMessage>
+                <formulaExpression>IF({!inp_NumberOfEmployees} &gt; 0,TRUE,FALSE)</formulaExpression>
+            </validationRule>
+        </fields>
+        <nextOrFinishButtonLabel>Assign</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>scr_ErrorUnknown</name>
+        <label>Unknown Error</label>
+        <locationX>1007</locationX>
+        <locationY>2222</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>Copy_1_of_txt_HeadingNegativeEmployees</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 16px;&quot;&gt;Uh oh&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Copy_1_of_txt_ErrorMessageNegativeEmployees</name>
+            <fieldText>&lt;p&gt;Something went wrong.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Reach out in &lt;a href=&quot;https://affinipay.slack.com/archives/C04TN10T493&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;#help-sales-ops&lt;/a&gt; and include a link to the record.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Cancel</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>scr_Is_Parent</name>
+        <label>Is Parent Error</label>
+        <locationX>314</locationX>
+        <locationY>674</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>txt_HeadingIsParent</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 16px;&quot;&gt;Error: Parent Opportunity&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>txt_ErrorMessageIsParent</name>
+            <fieldText>&lt;p&gt;Parent Opportunities cannot be reassigned.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Cancel</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>scr_IsClosedError</name>
+        <label>Is Closed Error</label>
+        <locationX>50</locationX>
+        <locationY>458</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>txt_HeadingIsClosed</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 16px;&quot;&gt;Error: Closed Opportunity&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>txt_ErrorMessageIsClosed</name>
+            <fieldText>&lt;p&gt;Only open Opportunities can be reassigned.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Cancel</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>scr_NegativeEmployeesError</name>
+        <label>Negative Employees Error</label>
+        <locationX>578</locationX>
+        <locationY>782</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>txt_HeadingNegativeEmployees</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 16px;&quot;&gt;Error: Number of Employees&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>txt_ErrorMessageNegativeEmployees</name>
+            <fieldText>&lt;p&gt;Number of Employees cannot be less than 0.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Cancel</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>scr_UnhandledFault</name>
+        <label>Unhandled Fault</label>
+        <locationX>1722</locationX>
+        <locationY>1430</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>txt_HeadingUnhandledFault</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 16px;&quot;&gt;Uh oh&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>txt_ErrorMessageUnhandledFault</name>
+            <fieldText>&lt;p&gt;Something went wrong.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Reach out in &lt;a href=&quot;https://affinipay.slack.com/archives/C04TN10T493&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;#help-sales-ops&lt;/a&gt; and reference this error message:&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;{!$Flow.FaultMessage}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Cancel</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>175</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>get_Opportunity</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <description>Send New opportunities to second slack channel #alert-sql-software</description>
+        <name>Send_Opportunities_to_alert_sql_software</name>
+        <label>Send Opportunities to alert-sql-software</label>
+        <locationX>1326</locationX>
+        <locationY>1838</locationY>
+        <flowName>Autolaunched_Send_Slack_Message</flowName>
+        <inputAssignments>
+            <name>var_SlackConversationID</name>
+            <value>
+                <stringValue>C05HN1YNF8W</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_SlackMessage</name>
+            <value>
+                <elementReference>txt_SlackMessageToChannel</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>sub_GetAssignmentGroupMember</name>
+        <label>Get Assignment Group Member</label>
+        <locationX>1172</locationX>
+        <locationY>998</locationY>
+        <connector>
+            <targetReference>dec_AssignmentGroupMemberUserIDIsNull</targetReference>
+        </connector>
+        <flowName>Autolaunched_Get_Assignment_Group_Member</flowName>
+        <inputAssignments>
+            <name>var_AssignmentGroupName</name>
+            <value>
+                <elementReference>sub_GetAssignmentSetting.var_AssignmentGroupName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_NumberOfEmployees</name>
+            <value>
+                <elementReference>inp_NumberOfEmployees</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_RecordId</name>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <subflows>
+        <name>sub_GetAssignmentSetting</name>
+        <label>Get Assignment Setting</label>
+        <locationX>1007</locationX>
+        <locationY>782</locationY>
+        <connector>
+            <targetReference>dec_AssignmentSettingIsNull</targetReference>
+        </connector>
+        <flowName>Autolaunched_Get_Assignment_Setting_for_Opportunity</flowName>
+        <inputAssignments>
+            <name>var_OpportunityBrand</name>
+            <value>
+                <elementReference>var_OpportunityBrand</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_QualifyingRepBrand</name>
+            <value>
+                <elementReference>get_Opportunity.Qualifying_Rep_Brand__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_RecordId</name>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <subflows>
+        <name>sub_SendSlackMessageMissingSlackID</name>
+        <label>Send Slack Message (Missing Slack ID)</label>
+        <locationX>1194</locationX>
+        <locationY>1538</locationY>
+        <connector>
+            <targetReference>sub_SendSlackMessageToChannel</targetReference>
+        </connector>
+        <flowName>Autolaunched_Send_Slack_Message</flowName>
+        <inputAssignments>
+            <name>var_SlackConversationID</name>
+            <value>
+                <stringValue>C04UVF7SD5H</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_SlackMessage</name>
+            <value>
+                <elementReference>txt_SlackMessageMissingSlackID</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>sub_SendSlackMessageToChannel</name>
+        <label>Send Slack Message To Channel</label>
+        <locationX>1326</locationX>
+        <locationY>1730</locationY>
+        <connector>
+            <targetReference>Send_Opportunities_to_alert_sql_software</targetReference>
+        </connector>
+        <flowName>Autolaunched_Send_Slack_Message</flowName>
+        <inputAssignments>
+            <name>var_SlackConversationID</name>
+            <value>
+                <stringValue>C04UNPZNF2P</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_SlackMessage</name>
+            <value>
+                <elementReference>txt_SlackMessageToChannel</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>sub_SendSlackMessageToUser</name>
+        <label>Send Slack Message To User</label>
+        <locationX>1458</locationX>
+        <locationY>1538</locationY>
+        <connector>
+            <targetReference>sub_SendSlackMessageToChannel</targetReference>
+        </connector>
+        <flowName>Autolaunched_Send_Slack_Message</flowName>
+        <inputAssignments>
+            <name>var_SlackConversationID</name>
+            <value>
+                <elementReference>sub_GetAssignmentGroupMember.var_AssignmentGroupMemberUserSlackID</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_SlackMessage</name>
+            <value>
+                <elementReference>txt_SlackMessageToUser</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <textTemplates>
+        <name>txt_SlackMessageMissingSlackID</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>:error-triangle: *Missing Slack ID*
+
+&gt; *What*
+&gt; An Opportunity was round robined via an Assignment Group; however, the assignee&#39;s Slack ID was blank.
+&gt;
+&gt; *User*
+&gt; &lt;{!$Setup.Instance_Configuration__c.Instance_URL__c}/{!sub_GetAssignmentGroupMember.var_AssignmentGroupMemberUserID} |{!sub_GetAssignmentGroupMember.var_AssignmentGroupMemberUserName}&gt;
+&gt; 
+&gt; *Impact*
+&gt; The record was assigned; however, the Slack notification did not fire.
+&gt; 
+&gt; *Investigation Required*
+&gt; 1. Add the user&#39;s Slack ID in Salesforce.
+&gt; 2. Notify the user of the Opportunity.
+&gt; 3. Escalate this to Business Systems and/or Transformation to address the root cause and prevent it from happening again.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>txt_SlackMessageToChannel</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>:moneybag: *New Opportunity*
+
+&gt; *Opportunity:* &lt;{!$Setup.Instance_Configuration__c.Instance_URL__c}/{!recordId} |{!get_Opportunity.Name}&gt;
+&gt; *Account:* {!get_Opportunity.Account_Name__c}
+&gt; *Record Type:* {!var_OpportunityBrand}
+&gt; *Employees:* {!var_OpportunityToUpdate.Number_of_Employees__c}
+&gt; *Source:*  {!get_Opportunity.LeadSource}
+&gt;
+&gt; :salesforce-2: &lt;{!$Setup.Instance_Configuration__c.Instance_URL__c}/{!recordId} |View in Salesforce&gt;
+&gt; 
+&gt; _Assigned to {!sub_GetAssignmentGroupMember.var_AssignmentGroupMemberUserName}_</text>
+    </textTemplates>
+    <textTemplates>
+        <name>txt_SlackMessageToUser</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>:moneybag: *New Opportunity*
+
+&gt; *Opportunity:* &lt;{!$Setup.Instance_Configuration__c.Instance_URL__c}/{!recordId} |{!get_Opportunity.Name}&gt;
+&gt; *Account:* {!get_Opportunity.Account_Name__c}
+&gt; *Record Type:* {!var_OpportunityBrand}
+&gt; *Employees:* {!var_OpportunityToUpdate.Number_of_Employees__c}
+&gt; 
+&gt; :salesforce-2: &lt;{!$Setup.Instance_Configuration__c.Instance_URL__c}/{!recordId} |View in Salesforce&gt;</text>
+    </textTemplates>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var_OpportunityBrand</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var_OpportunityToUpdate</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Opportunity</objectType>
+    </variables>
+</Flow>

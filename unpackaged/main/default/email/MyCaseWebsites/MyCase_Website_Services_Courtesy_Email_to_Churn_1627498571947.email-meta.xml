@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>use this when you see a client has moved to a new host but didn&#39;t let us know</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>MyCase Website Services- Courtesy Email to Churn</name>
+    <style>none</style>
+    <subject>MyCase Website Services |  Case # {{{Case.CaseNumber}}}</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

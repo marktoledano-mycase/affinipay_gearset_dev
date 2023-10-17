@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Successful_Communication__c</fullName>
+    <description>R178187</description>
+    <externalId>false</externalId>
+    <inlineHelpText>How successful was the communication on this request? (bizsys team, with customer, channels used/not used, areas for improvement)</inlineHelpText>
+    <label>Successful Communication ?</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

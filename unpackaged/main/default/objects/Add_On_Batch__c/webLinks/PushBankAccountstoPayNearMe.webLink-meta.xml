@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PushBankAccountstoPayNearMe</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Push Bank Accounts to Pay Near Me</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)}
+	//set the add on batch
+	var addOnBatch = new sforce.SObject(&quot;Add_On_Batch__c&quot;);
+	addOnBatch.id = &quot;{!Add_On_Batch__c.Id}&quot;;
+
+	//query the records to make sure that there aren&#39;t going to be any issues
+	var query = sforce.connection.query(&quot;SELECT Id,Name,RoutingNo__c,Account_Label__c,AccountNo__c,Bank_Name__c FROM Bank_Account__c where Bank_Account_Add_On_Batch__r.id = &#39;{!Add_On_Batch__c.Id}&#39; and Status__c = &#39;Active&#39;&quot;);
+	var records = query.getArray(&quot;records&quot;);
+
+	//validate the records before proceeding with setting off the batch
+	var isValidated = true;
+
+	alert(&quot;Records : &quot; + records.length);
+
+	for (var i = 0; i &lt; records.length; i++) {
+		record = records[i];
+		//check to see if the records have routing numbers	
+		if(record.RoutingNo__c === &#39;&#39; &amp;&amp; isValidated === true){
+			alert(record.Name + &quot; Routing Number is Blank. Please review &quot; + record.Name + &quot;.&quot;);
+			isValidated = false;
+		//check to see if the records have Account Labels	
+		} else if(record.Account_Label__c === &#39;&#39; &amp;&amp; isValidated===true){
+			alert(record.Name + &quot; Account Label is Blank. Please review &quot; + record.Name + &quot;.&quot;);
+			isValidated = false;
+		//check to see if the records have Account Numbers
+		} else if(record.AccountNo__c === &#39;&#39; &amp;&amp; isValidated===true){
+			alert(record.Name + &quot; Account Number is Blank. Please review &quot; + record.Name + &quot;.&quot;);
+			isValidated = false;
+		//check to see if the bank accounts have Bank Names
+		} else if(record.Bank_Name__c === &#39;&#39; &amp;&amp; isValidated===true){
+			alert(record.Name + &quot; Bank Name is Blank. Please review &quot; + record.Name + &quot;.&quot;);
+			isValidated = false;
+		}
+	}
+
+	//if every record is valid, start the batch
+	if (isValidated===true){
+		var lastCheck = confirm(&quot;All Bank Accounts will be added in Pay Near Me; continue?&quot;);
+		if (lastCheck == true){
+			var result = sforce.apex.execute(&quot;PayNearMeButtonMethods&quot;, &quot;CallBankAddonBatch&quot;, {id: &quot;{!Add_On_Batch__c.Id}&quot;});
+			alert(&quot;Batch Pay Near Me Job successfully started - you will receive a email notification when finished.&quot;);
+		}
+	}</url>
+</WebLink>

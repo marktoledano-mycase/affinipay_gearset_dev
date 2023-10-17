@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Type of update to be made to Contract SKU based on subscription charge from billing system --></help>
+        <label><!-- Update SKU Type --></label>
+        <name>Update_SKU_Type__c</name>
+    </CustomFieldTranslation>

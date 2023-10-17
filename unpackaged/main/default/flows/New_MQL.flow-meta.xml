@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <apiVersion>58.0</apiVersion>
+    <choices>
+        <name>chiceAssociations</name>
+        <choiceText>&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 11.36px; font-family: Helvetica; color: rgb(0, 0, 0);&quot;&gt;Associations&lt;/span&gt;</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Associations</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>choiceAffiniPay</name>
+        <choiceText>&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 11.36px; font-family: Helvetica; color: rgb(0, 0, 0);&quot;&gt;AffiniPay&lt;/span&gt;</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>AffiniPay</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>choiceClientPay</name>
+        <choiceText>&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 11.36px; font-family: Helvetica; color: rgb(0, 0, 0);&quot;&gt;ClientPay&lt;/span&gt;</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>ClientPay</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>choiceCPACharge</name>
+        <choiceText>&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 11.36px; font-family: Helvetica; color: rgb(0, 0, 0);&quot;&gt;CPACharge&lt;/span&gt;</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>CPACharge</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>choiceIncompleteApplication</name>
+        <choiceText>&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 11.36px; font-family: Helvetica; color: rgb(0, 0, 0);&quot;&gt;Self-Serve Signup: Incomplete Application&lt;/span&gt;</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Self-Serve Signup: Incomplete Application</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>choiceLawPay</name>
+        <choiceText>&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 11.36px; font-family: Helvetica; color: rgb(0, 0, 0);&quot;&gt;LawPay&lt;/span&gt;</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>LawPay</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>choiceMissingDocuments</name>
+        <choiceText>&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 11.36px; font-family: Helvetica; color: rgb(0, 0, 0);&quot;&gt;Self-Serve Signup: Missing Documents&lt;/span&gt;</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Self-Serve Signup: Missing Documents</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>choiceUpsell</name>
+        <choiceText>&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 11.36px; font-family: Helvetica; color: rgb(0, 0, 0);&quot;&gt;Self-Serve Signup: Upsell&lt;/span&gt;</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Self-Serve Signup: Upsell</stringValue>
+        </value>
+    </choices>
+    <decisions>
+        <name>Contact_or_Lead</name>
+        <label>Contact or Lead</label>
+        <locationX>314</locationX>
+        <locationY>242</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Self_Serve_Signup_Rep_Assisted_Type</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Contact</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>recordId</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>003</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Contact</targetReference>
+            </connector>
+            <label>Contact</label>
+        </rules>
+        <rules>
+            <name>Lead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>recordId</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>00Q</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Lead</targetReference>
+            </connector>
+            <label>Lead</label>
+        </rules>
+    </decisions>
+    <dynamicChoiceSets>
+        <name>pickchoiceNewMQLBrand</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true" />
+        <object xsi:nil="true" />
+        <picklistField>New_MQL_Brand__c</picklistField>
+        <picklistObject>Contact</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>pickchoiceNewMQLType</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true" />
+        <object xsi:nil="true" />
+        <picklistField>New_MQL_Type__c</picklistField>
+        <picklistObject>Contact</picklistObject>
+    </dynamicChoiceSets>
+    <environments>Default</environments>
+    <formulas>
+        <name>fxFormComments</name>
+        <dataType>String</dataType>
+        <expression>IF({!Contact},TEXT({!$Flow.CurrentDate})&amp;&#39; - &#39;&amp;{!Form_Comments},
+IF({!Lead},TEXT({!$Flow.CurrentDate})&amp;&#39; - &#39;&amp;{!Form_Comments},
+&#39;&#39;))</expression>
+    </formulas>
+    <interviewLabel>New MQL {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>New MQL</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordUpdates>
+        <name>Update_Contact</name>
+        <label>Update Contact</label>
+        <locationX>50</locationX>
+        <locationY>350</locationY>
+        <connector>
+            <targetReference>Assign_Self_Serve_Signup_Rep_Assisted_Type</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Form_Comments__c</field>
+            <value>
+                <elementReference>fxFormComments</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>New_MQL_Brand__c</field>
+            <value>
+                <elementReference>New_MQL_Brand</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>New_MQL_Date__c</field>
+            <value>
+                <elementReference>New_MQL_Date</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>New_MQL_Type__c</field>
+            <value>
+                <elementReference>New_MQL_Type</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Lead</name>
+        <label>Update Lead</label>
+        <locationX>314</locationX>
+        <locationY>350</locationY>
+        <connector>
+            <targetReference>Assign_Self_Serve_Signup_Rep_Assisted_Type</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Form_Comments__c</field>
+            <value>
+                <elementReference>fxFormComments</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>New_MQL_Brand__c</field>
+            <value>
+                <elementReference>New_MQL_Brand</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>New_MQL_Date__c</field>
+            <value>
+                <elementReference>New_MQL_Date</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>New_MQL_Type__c</field>
+            <value>
+                <elementReference>New_MQL_Type</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Lead</object>
+    </recordUpdates>
+    <screens>
+        <name>New_MQL_Details</name>
+        <label>New MQL Details</label>
+        <locationX>314</locationX>
+        <locationY>134</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Contact_or_Lead</targetReference>
+        </connector>
+        <fields>
+            <name>New_MQL_Type</name>
+            <choiceReferences>choiceIncompleteApplication</choiceReferences>
+            <choiceReferences>choiceMissingDocuments</choiceReferences>
+            <choiceReferences>choiceUpsell</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>New MQL Type</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>New_MQL_Date</name>
+            <dataType>Date</dataType>
+            <fieldText>New MQL Date</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>New_MQL_Brand</name>
+            <choiceReferences>chiceAssociations</choiceReferences>
+            <choiceReferences>choiceAffiniPay</choiceReferences>
+            <choiceReferences>choiceCPACharge</choiceReferences>
+            <choiceReferences>choiceClientPay</choiceReferences>
+            <choiceReferences>choiceLawPay</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>New MQL Brand</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Form_Comments</name>
+            <fieldText>Form Comments</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <nextOrFinishButtonLabel>Assign</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>New_MQL_Details</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>Assign_Self_Serve_Signup_Rep_Assisted_Type</name>
+        <label>Assign Self-Serve Signup Rep Assisted Type</label>
+        <locationX>314</locationX>
+        <locationY>542</locationY>
+        <flowName>Autolaunched_Assign_Self_Serve_Signup_Rep_Assisted_Type</flowName>
+        <inputAssignments>
+            <name>recordId</name>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

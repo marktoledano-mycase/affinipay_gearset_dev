@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DRAFT_LawPay_MQLs</fullName>
+    <booleanFilter>1 AND (2 or 3 or 7) AND 4 and 5 and 6</booleanFilter>
+    <columns>FULL_NAME</columns>
+    <columns>Status__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>Timezone__c</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>Last_MQL_Date__c</columns>
+    <columns>Last_MQL_Brand__c</columns>
+    <columns>Last_MQL_Product_Tier__c</columns>
+    <columns>Last_MQL_Type__c</columns>
+    <columns>Accepts_Online_Payments__c</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Last_MQL_Brand__c</field>
+        <operation>equals</operation>
+        <value>LawPay</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>mql</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>LawPay MQLs</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Marketing Nurture,Disqualified</value>
+    </filters>
+    <filters>
+        <field>Last_MQL_Type__c</field>
+        <operation>notEqual</operation>
+        <value>Self-Serve Sign Up</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>New,Working,Engaged</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>data</value>
+    </filters>
+    <label>LawPay MQLs</label>
+    <sharedTo>
+        <roleAndSubordinates>Sales_Manager_LawPay</roleAndSubordinates>
+        <roleAndSubordinates>Sales_Manager_Payments_BDR</roleAndSubordinates>
+    </sharedTo>
+</ListView>

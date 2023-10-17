@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_Keyword__c</fullName>
+    <description>TRUE if email contains a keyword</description>
+    <externalId>false</externalId>
+    <formula>IF(
+OR(
+CONTAINS( LOWER(Email), &quot;law&quot;),
+CONTAINS( LOWER(Email), &quot;firm&quot;),
+CONTAINS( LOWER(Email), &quot;attorney&quot;),
+CONTAINS( LOWER(Email), &quot;legal&quot;),
+CONTAINS( LOWER(Email), &quot;office&quot;),
+CONTAINS( LOWER(Email), &quot;lawyer&quot;),
+CONTAINS( LOWER(Email), &quot;mediation&quot;),
+CONTAINS( LOWER(Email), &quot;group&quot;),
+CONTAINS( LOWER(Email), &quot;partners&quot;),
+CONTAINS( LOWER(Email), &quot;services&quot;)
+),
+
+TRUE, FALSE)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Email Keyword</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

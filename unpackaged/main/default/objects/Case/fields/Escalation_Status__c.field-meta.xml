@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Escalation_Status__c</fullName>
+    <description>R1812440; Modified FLS &amp; added new picklist values for R1919025</description>
+    <externalId>false</externalId>
+    <label>Escalation Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Escalated</fullName>
+                <default>false</default>
+                <label>Not Escalated</label>
+            </value>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Investigating</fullName>
+                <default>false</default>
+                <label>Investigating</label>
+            </value>
+            <value>
+                <fullName>Delegated</fullName>
+                <default>false</default>
+                <label>Delegated</label>
+            </value>
+            <value>
+                <fullName>Waiting on CSM</fullName>
+                <default>false</default>
+                <label>Waiting on CSM</label>
+            </value>
+            <value>
+                <fullName>Confirmed Bug</fullName>
+                <default>false</default>
+                <label>Confirmed Bug</label>
+            </value>
+            <value>
+                <fullName>Resolved</fullName>
+                <default>false</default>
+                <label>Resolved</label>
+            </value>
+            <value>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>Approved</fullName>
+                <default>false</default>
+                <label>Approved</label>
+            </value>
+            <value>
+                <fullName>Denied</fullName>
+                <default>false</default>
+                <label>Denied</label>
+            </value>
+            <value>
+                <fullName>Unresponsive</fullName>
+                <default>false</default>
+                <label>Unresponsive</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Affinity</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Custom_Compact_Layout</compactLayoutAssignment>
+    <description>Trade organization/professional society organization</description>
+    <label>Affinity</label>
+    <picklistValues>
+        <picklist>Brand__c</picklist>
+        <values>
+            <fullName>AffiniPay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>All</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>All Payment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>All Software</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPACharge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CasePeer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ClientPay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DocketWise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LawPay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MyCase</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Soluno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website Hosting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Woodpecker</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Certification_Status__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Started</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Competitive_Marketing__c</picklist>
+        <values>
+            <fullName>All Selling OK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Cross-Selling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Selling</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Consultant_Effort__c</picklist>
+        <values>
+            <fullName>Full Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Process Only</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contract_Type__c</picklist>
+        <values>
+            <fullName>Integrated Vol</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment Hybrid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral Vol</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Software Leads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Their Form</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Level__c</picklist>
+        <values>
+            <fullName>Full Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Preferred</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Self-Service</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rev_Share_Direction__c</picklist>
+        <values>
+            <fullName>Both</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incoming</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outgoing</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Defunct_Low_Activity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Informal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prelaunch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Terminated</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

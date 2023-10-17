@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Canadian_Application__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checked when opportunity is related to a Canadian merchant app that is provisioned</description>
+    <externalId>false</externalId>
+    <label>Manually Close Won Payments Opportunity</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Installed On Premise MICR Font --></label>
+        <name>Installed_On_Premise_MICR_Font__c</name>
+    </CustomFieldTranslation>

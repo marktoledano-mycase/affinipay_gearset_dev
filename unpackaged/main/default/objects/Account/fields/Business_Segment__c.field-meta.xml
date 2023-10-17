@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Segment__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Distinguishes the enterprise level clients from the smaller (SMB) clients</inlineHelpText>
+    <label>Business Segment</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Business_Segment</valueSetName>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

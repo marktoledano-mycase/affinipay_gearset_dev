@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bizible_Lead_Source_Formula__c</fullName>
+    <description>R165612, updated R177626</description>
+    <externalId>false</externalId>
+    <formula>If(bizible2__Touchpoint_Source_FT__c = &quot;Google AdWords&quot;,&quot;Google AdWords&quot;,
+If(bizible2__Touchpoint_Source_FT__c = &quot;Bing Ads&quot;, &quot;Bing Ads&quot;,
+If(bizible2__Touchpoint_Source_FT__c = &quot;bing&quot;, &quot;Bing Ads&quot;,
+If(bizible2__Touchpoint_Source_FT__c = &quot;Yahoo Ads&quot;, &quot;Yahoo Ads&quot;,
+If(bizible2__Touchpoint_Source_FT__c = &quot;Organic - Google&quot;,&quot;Organic - Google&quot;,
+If(bizible2__Touchpoint_Source_FT__c = &quot;Organic - Bing&quot;,&quot;Organic - Bing&quot;,
+If(bizible2__Touchpoint_Source_FT__c = &quot;Organic - Yahoo&quot;,&quot;Organic - Yahoo&quot;,
+If(bizible2__Touchpoint_Source_FT__c = &quot;Organic - Google&quot;,&quot;Organic - Google&quot;,
+If(bizible2__Touchpoint_Source_FT__c = &quot;Web Direct&quot;,&quot;Web Direct&quot;,
+If(contains(bizible2__Touchpoint_Source_FT__c, &quot;acebook&quot;),&quot;Social&quot;,
+If(contains(bizible2__Touchpoint_Source_FT__c, &quot;witter&quot;),&quot;Social&quot;,
+If(contains(bizible2__Touchpoint_Source_FT__c, &quot;inked&quot;),&quot;Social&quot;,
+If(contains(bizible2__Touchpoint_Source_FT__c, &quot;mail&quot;),&quot;Email&quot;,
+If(contains(bizible2__Touchpoint_Source_FT__c, &quot;mkto-&quot;),&quot;Email&quot;,
+&quot;Web Referral&quot;))))))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Bizible Lead Source Formula</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

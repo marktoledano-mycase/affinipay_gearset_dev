@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- The number of Product User records with the User Role of Staff --></help>
+        <label><!-- Staff Count --></label>
+        <name>Staff_Count__c</name>
+    </CustomFieldTranslation>

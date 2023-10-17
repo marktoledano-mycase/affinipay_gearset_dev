@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Update_SKU_Type__c</fullName>
+    <description>Type of update to be made to Contract SKU based on subscription charge from billing system</description>
+    <externalId>false</externalId>
+    <formula>IF( Update_SKU__c,
+
+CASE( SKU_Product__r.Product_Type__c ,
+
+&quot;Main&quot;, 
+IF( OR( Subscription_Charge__r.Name = &quot;Monthly User License&quot;, Subscription_Charge__r.Name = &quot;Annual User License&quot;, Subscription_Charge__r.Name = &quot;Website Management Fee&quot; ), &quot;Skip&quot;, 
+IF( AND( Subscription_Charge__r.Quantity__c != User_Count_Rollup__c, ISBLANK( Subscription_Charge__r.Zuora_Effective_End_Date__c )), &quot;Quantity&quot;, &quot;Plan Change&quot; )),
+
+&quot;Add-On&quot;, 
+IF( AND( Subscription_Charge__r.Quantity__c != Add_On_Users__c, ISBLANK( Subscription_Charge__r.Zuora_Effective_End_Date__c )), &quot;Quantity&quot;, &quot;Remove Plan&quot;),
+
+&quot;&quot;),
+
+&quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Type of update to be made to Contract SKU based on subscription charge from billing system</inlineHelpText>
+    <label>Update SKU Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

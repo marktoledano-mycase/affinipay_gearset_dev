@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Current LPM aka Current_Solution__c --></help>
+        <label><!-- Current LPM --></label>
+        <name>Current_LPM__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>EntityDefinition$ExternalId</field>
+    </columns>
+    <columns>
+        <field>EntityDefinition.FieldDefinitions$ExternalId</field>
+    </columns>
+    <columns>
+        <field>EntityDefinition$Label</field>
+    </columns>
+    <columns>
+        <field>EntityDefinition.FieldDefinitions$Label</field>
+    </columns>
+    <columns>
+        <field>EntityDefinition.FieldDefinitions$DataType</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>EntityDefinition$Label</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Lead,Contact,Account</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>EntityDefinition.FieldDefinitions$DataType</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Picklist (Multi-Select)</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>2023-08 - Lead/Contact/Acct MSP</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Objects_Fields__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>EntityDefinition$Label</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>EntityDefinition$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

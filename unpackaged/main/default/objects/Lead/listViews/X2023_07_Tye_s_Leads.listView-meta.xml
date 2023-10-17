@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2023_07_Tye_s_Leads</fullName>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.LAST_ACTIVITY</columns>
+    <columns>Last_MQL_Date__c</columns>
+    <columns>Last_MQL_Type__c</columns>
+    <columns>LEAD.EMPLOYEES</columns>
+    <columns>Last_MQL_Brand__c</columns>
+    <columns>Primary_Practice_Area__c</columns>
+    <columns>Outreach_Actively_being_sequenced__c</columns>
+    <columns>mkto_si__Current_Sales_Campaign__c</columns>
+    <columns>Sales_Lead_Type__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>mkto_si__Current_Sales_Campaign__c</field>
+        <operation>contains</operation>
+        <value>Tye&#39;s Contacts</value>
+    </filters>
+    <label>2023-07 - Tye&#39;s Leads</label>
+    <sharedTo>
+        <role>BDR_Payments</role>
+    </sharedTo>
+</ListView>

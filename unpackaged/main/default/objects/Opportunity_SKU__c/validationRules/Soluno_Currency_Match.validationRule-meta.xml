@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Soluno_Currency_Match</fullName>
+    <active>true</active>
+    <description>Checks to make sure the Currency is the same as the Opportunity</description>
+    <errorConditionFormula>and(
+Opportunity__r.RecordTypeId = &#39;0123g000000TWbn&#39;,
+ Text(CurrencyIsoCode) &lt;&gt;  Text(Opportunity__r.CurrencyIsoCode) 
+
+)</errorConditionFormula>
+    <errorDisplayField>CurrencyIsoCode</errorDisplayField>
+    <errorMessage>Currency must match currency used on Opportunity.</errorMessage>
+</ValidationRule>

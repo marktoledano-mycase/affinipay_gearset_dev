@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Feedback_Category__c</fullName>
+    <description>For Sales Engineering product feedback on deals</description>
+    <externalId>false</externalId>
+    <inlineHelpText>For Sales Engineering product feedback on deals</inlineHelpText>
+    <label>Product Feedback Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accounting</fullName>
+                <default>false</default>
+                <label>Accounting</label>
+            </value>
+            <value>
+                <fullName>AI &amp; Automation</fullName>
+                <default>false</default>
+                <label>AI &amp; Automation</label>
+            </value>
+            <value>
+                <fullName>Court Forms</fullName>
+                <default>false</default>
+                <label>Court Forms</label>
+            </value>
+            <value>
+                <fullName>Email Automation</fullName>
+                <default>false</default>
+                <label>Email Automation</label>
+            </value>
+            <value>
+                <fullName>Evergreen Retainers</fullName>
+                <default>false</default>
+                <label>Evergreen Retainers</label>
+            </value>
+            <value>
+                <fullName>Group Permissions</fullName>
+                <default>false</default>
+                <label>Group Permissions</label>
+            </value>
+            <value>
+                <fullName>Payable Statements</fullName>
+                <default>false</default>
+                <label>Payable Statements</label>
+            </value>
+            <value>
+                <fullName>Rate Schedules</fullName>
+                <default>false</default>
+                <label>Rate Schedules</label>
+            </value>
+            <value>
+                <fullName>Reporting</fullName>
+                <default>false</default>
+                <label>Reporting</label>
+            </value>
+            <value>
+                <fullName>Security &amp; Compliance</fullName>
+                <default>false</default>
+                <label>Security &amp; Compliance</label>
+            </value>
+            <value>
+                <fullName>Split Billing</fullName>
+                <default>false</default>
+                <label>Split Billing</label>
+            </value>
+            <value>
+                <fullName>Updating Case Rates</fullName>
+                <default>false</default>
+                <label>Updating Case Rates</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

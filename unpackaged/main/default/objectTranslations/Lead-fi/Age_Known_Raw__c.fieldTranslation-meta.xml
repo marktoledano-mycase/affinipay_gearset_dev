@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Displays the stored time that the lead has been in the status of Known --></help>
+        <label><!-- Age - Known (Raw) --></label>
+        <name>Age_Known_Raw__c</name>
+    </CustomFieldTranslation>

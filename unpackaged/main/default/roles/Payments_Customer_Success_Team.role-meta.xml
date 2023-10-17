@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>Read</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>Payments Customer Success Team</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Payments Customer Success Team</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>Payments_Customer_Success_Manager</parentRole>
+</Role>

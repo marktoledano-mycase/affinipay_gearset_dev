@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Person_Current_Sequence_Step_Number__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+				NOT(ISBLANK(Contact__c)),
+				Contact__r.Outreach_Current_Sequence_Step_Number__c,
+				Lead__r.Outreach_Current_Sequence_Step_Number__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>If Contact is not null, Contact: Current Sequence Step Number. Otherwise, Lead: Current Sequence Step Number</inlineHelpText>
+    <label>Person Current Sequence Step Number</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NewCo_Onboarding</fullName>
+    <fields>Onboarding_Manager__c</fields>
+    <fields>RecordTypeId</fields>
+    <fields>Account__c</fields>
+    <fields>Opportunity__c</fields>
+    <fields>Current_Solution__c</fields>
+    <fields>Data_Migration_Stage__c</fields>
+    <fields>Churn_Risk__c</fields>
+    <label>NewCo Onboarding</label>
+</CompactLayout>

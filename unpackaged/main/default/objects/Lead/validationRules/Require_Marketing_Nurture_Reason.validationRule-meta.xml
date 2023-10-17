@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Marketing_Nurture_Reason</fullName>
+    <active>true</active>
+    <description>This person is in our ideal customer profile (ICP) and could be ready to buy sometime, but not now. By tracking the reason, we are better equipped to nurture and get them ready to buy in the future.</description>
+    <errorConditionFormula>$Permission.Bypass_Defined_VR_s = FALSE &amp;&amp;
+
+(
+   ISCHANGED( Status ) ||
+   ISCHANGED( Nurture_Marketing_Reasons__c )
+) &amp;&amp;
+
+TEXT( Status ) = &quot;Marketing Nurture&quot; &amp;&amp;
+ISBLANK( TEXT( Nurture_Marketing_Reasons__c ))</errorConditionFormula>
+    <errorDisplayField>Nurture_Marketing_Reasons__c</errorDisplayField>
+    <errorMessage>Marketing Nurture Reason is required when Lead Status is &quot;Marketing Nurture.&quot;</errorMessage>
+</ValidationRule>

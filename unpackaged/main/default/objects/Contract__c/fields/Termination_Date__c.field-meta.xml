@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Termination_Date__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Reflects the termination date of the contract. May be set in the future and will drive the status field to Inactive once the date is reached</inlineHelpText>
+    <label>Termination Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

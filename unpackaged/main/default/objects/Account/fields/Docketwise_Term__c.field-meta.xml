@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Docketwise_Term__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Monthly or Annual billing term for Active Docketwise contract</inlineHelpText>
+    <label>Docketwise Term</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Billing_Term</valueSetName>
+    </valueSet>
+</CustomField>

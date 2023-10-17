@@ -1,0 +1,117 @@
+<body bgcolor="#ebebeb" style="background-color:#ebebeb;">
+<table width="700" align="center" cellpadding="0" cellspacing="0" border="0">
+
+<tr>
+<td width="700" align="center" valign="top" height="15" colspan="3">&nbsp;</td>
+</tr>
+
+<tr>
+<td width="700" valign="top" align="center" colspan="3">
+<a href="http://www.appfolio.com"><img src="http://www.appfolio.com/newsletters/images/em_newyear_header.png" height="47" width="700" border="0" alt="AppFolio Property Manager" style="display: block;"></a></td>
+</tr>
+
+<tr>
+<td bgcolor="#cccccc" width="1"></td> 
+
+<!-- content starts here -->
+
+<td bgcolor="#ffffff" width="698" align="center">
+<table width="698" align="center" cellpadding="0" cellspacing="0">
+
+</table>
+
+<!-- CONTENT -->
+
+<table width="698" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td style="width:35px; background-color:#fff; vertical-align:top"></td>
+<td style="width:628px; background-color:#fff; vertical-align:top;">
+<p style="text-align:left; margin:0; padding:0;">
+
+<br>
+<br>
+<span style="font-family:georgia, serif; font-size:24px; color:#006782;">Your Recent AppFolio Support Experience</span><br /><br />
+
+
+
+
+</p>
+</td>
+<td style="width:35px; background-color:#fff; vertical-align:top"></td>
+</tr>
+<tr>
+<!-- this is a spacer-->
+<td  height="10" bgcolor="#ffffff"></td>
+</tr>
+</table>
+
+
+
+
+<!-- CONTENT -->
+
+<table width="698" align="center" cellpadding="0" cellspacing="0">
+<tr>
+<td style="width:35px; background-color:#fff; vertical-align:top"></td>
+<td style="width:628px; background-color:#fff; vertical-align:top;">
+<p style="text-align:left; margin:0; padding:0;"> 
+<br>
+
+
+<span style="font-family:helvetica, arial, sans-serif; font-size:13px; color:#484848;">
+	Hello {!Contact.FirstName},<br><br>
+	We are committed to making your AppFolio support experience the best possible!<br><br>
+	To help us do that, we invite you to complete this brief questionnaire about your recent support experience with {!Case.OwnerFullName}. This helps us discover how we can best meet your future support needs:<br><br>
+<ul style="font-family:helvetica, arial, sans-serif; font-size:13px; color:#484848; line-height:18px;">
+<li><a href="http://sgiz.mobi/s3/52ce063c0ec0?c={!Case.ContactId}&caseid={!Case.Id}&r={!Case.OwnerId}&a={!Case.AccountId}&repname={!Case.OwnerFirstName}&closedate={!Case.ClosedDate}&rt=01280000000QA3N&cnum={!Case.CaseNumber}">AppFolio Support Experience Survey</a> </li>
+</ul>
+</span>
+<br>
+<span style="font-family:helvetica, arial, sans-serif; font-size:13px; color:#484848;">If you have any feedback on how we can improve the product, the Product Suggestion Board is the best channel for submitting ideas directly to our Product team. To access this:
+<ul style="font-family:helvetica, arial, sans-serif; font-size:13px; color:#484848; line-height:18px;"><li>Login to your AppFolio database.
+<li>Click the "Help & Training" link at the top. 
+<li>Select the "Make a Suggestion" option.</a><br><br></span></li>
+</li>
+</ul>
+If your support case was closed in error, or if you require additional assistance, simply reply to this email or contact us at <a href="mailto:support@appfolio.com">support@appfolio.com.</a> We are always happy to help! </a>
+<br><br>
+Please note you can view the detail and status of all cases submitted through the Help Center on your Profile page. To access your Profile and case list, log on to the Help Center and click your name in the upper right and select My Profile.
+<br><br><br>
+<i>AppFolio Customer Success Team</i>
+<br>
+AppFolio, Inc.
+<br>
+<a href="mailto:support@appfolio.com">support@appfolio.com</a>
+<br>
+<a href="www.appfolio.com">www.appfolio.com</a><br><br><br>
+</span>
+															
+</p>
+</td>
+<td style="width:35px; background-color:#fff; vertical-align:top"></td>
+</tr>
+<tr>
+<!-- this is a spacer-->
+<td  height="10" bgcolor="#ffffff"></td>
+</tr>
+</table>
+
+									
+<!--footer stuff -->
+									
+</td>
+<td bgcolor="#cccccc" width="1"></td>
+</tr>
+<tr>
+<td width="700" align="center" colspan="3" bgcolor="#ffffff"><img src="http://info.appfolio.com/rs/appFolio/images/border_bottom.gif" height="5" width="700" border="0" style="display: block;"></td>
+</tr>	
+
+<!-- content ends -->
+
+<tr>
+<td valign="bottom" align="center" colspan="3" height="30">
+<p style="font-family:helvetica, arial, sans-serif; font-size:10px; color:#919191; text-align:center;">&copy; AppFolio, Inc.</p>
+</td>
+</tr>
+</table>
+</body>

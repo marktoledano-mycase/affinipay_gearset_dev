@@ -1,0 +1,8 @@
+Opportunity:  {!Opportunity.Name}
+Sales Rep: {!Opportunity.OwnerFullName}
+No. Of Employees: {!Opportunity.MyCase_No_Of_Employees__c}
+Total Users: {!Opportunity.Total_Number_of_Users__c}
+Created Date: {!Opportunity.CreatedDate} 
+Close Date: {!Opportunity.CloseDate}
+Type: {!Opportunity.Opportunity_Type__c}
+View in SFDC: {!Opportunity.Link}

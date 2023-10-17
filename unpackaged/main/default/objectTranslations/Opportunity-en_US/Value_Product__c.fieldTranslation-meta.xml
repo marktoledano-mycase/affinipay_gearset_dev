@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Value+ Product --></label>
+        <name>Value_Product__c</name>
+        <picklistValues>
+            <masterLabel>Accounting</masterLabel>
+            <translation><!-- Accounting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Automated AP</masterLabel>
+            <translation><!-- Automated AP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Collections</masterLabel>
+            <translation><!-- Collections --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contact Center</masterLabel>
+            <translation><!-- Contact Center --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Drive</masterLabel>
+            <translation><!-- Drive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance</masterLabel>
+            <translation><!-- Insurance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LISA</masterLabel>
+            <translation><!-- LISA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LawToolBox</masterLabel>
+            <translation><!-- LawToolBox --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leasing Contact Center</masterLabel>
+            <translation><!-- Leasing Contact Center --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lost - Contact Center</masterLabel>
+            <translation><!-- Lost - Contact Center --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lost - Insurance</masterLabel>
+            <translation><!-- Lost - Insurance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lost - Payments</masterLabel>
+            <translation><!-- Lost - Payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lost - Screening</masterLabel>
+            <translation><!-- Lost - Screening --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lost - Website</masterLabel>
+            <translation><!-- Lost - Website --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mailing Service</masterLabel>
+            <translation><!-- Mailing Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maintenance Contact Center</masterLabel>
+            <translation><!-- Maintenance Contact Center --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payments</masterLabel>
+            <translation><!-- Payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Premium Leads</masterLabel>
+            <translation><!-- Premium Leads --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Screening</masterLabel>
+            <translation><!-- Screening --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utility Management</masterLabel>
+            <translation><!-- Utility Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Website</masterLabel>
+            <translation><!-- Website --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Won - Contact Center</masterLabel>
+            <translation><!-- Won - Contact Center --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Won - Insurance</masterLabel>
+            <translation><!-- Won - Insurance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Won - Payments</masterLabel>
+            <translation><!-- Won - Payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Won - Screening</masterLabel>
+            <translation><!-- Won - Screening --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Won - Website</masterLabel>
+            <translation><!-- Won - Website --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Woodpecker</masterLabel>
+            <translation><!-- Woodpecker --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

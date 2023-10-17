@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Integrations_Requested__c</fullName>
+    <externalId>false</externalId>
+    <label>Integrations Requested</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Abacus</fullName>
+                <default>false</default>
+                <label>Abacus</label>
+            </value>
+            <value>
+                <fullName>ACT</fullName>
+                <default>false</default>
+                <label>ACT</label>
+            </value>
+            <value>
+                <fullName>Aderant</fullName>
+                <default>false</default>
+                <label>Aderant</label>
+            </value>
+            <value>
+                <fullName>Alert Communications</fullName>
+                <default>false</default>
+                <label>Alert Communications</label>
+            </value>
+            <value>
+                <fullName>Amicus</fullName>
+                <default>false</default>
+                <label>Amicus</label>
+            </value>
+            <value>
+                <fullName>ApexChat</fullName>
+                <default>false</default>
+                <label>ApexChat</label>
+            </value>
+            <value>
+                <fullName>Calendar Rules</fullName>
+                <default>false</default>
+                <label>Calendar Rules</label>
+            </value>
+            <value>
+                <fullName>Capterra</fullName>
+                <default>false</default>
+                <label>Capterra</label>
+            </value>
+            <value>
+                <fullName>CasePacer</fullName>
+                <default>false</default>
+                <label>CasePacer</label>
+            </value>
+            <value>
+                <fullName>Case Status</fullName>
+                <default>false</default>
+                <label>Case Status</label>
+            </value>
+            <value>
+                <fullName>ChartSquad</fullName>
+                <default>false</default>
+                <label>ChartSquad</label>
+            </value>
+            <value>
+                <fullName>Client Chat Live</fullName>
+                <default>false</default>
+                <label>Client Chat Live</label>
+            </value>
+            <value>
+                <fullName>Client Profiles</fullName>
+                <default>false</default>
+                <label>Client Profiles</label>
+            </value>
+            <value>
+                <fullName>Clio</fullName>
+                <default>false</default>
+                <label>Clio</label>
+            </value>
+            <value>
+                <fullName>Cloudlex</fullName>
+                <default>false</default>
+                <label>Cloudlex</label>
+            </value>
+            <value>
+                <fullName>CoCounselor</fullName>
+                <default>false</default>
+                <label>CoCounselor</label>
+            </value>
+            <value>
+                <fullName>CosmoLex</fullName>
+                <default>false</default>
+                <label>CosmoLex</label>
+            </value>
+            <value>
+                <fullName>Custom Solution</fullName>
+                <default>false</default>
+                <label>Custom Solution</label>
+            </value>
+            <value>
+                <fullName>Dropbox</fullName>
+                <default>false</default>
+                <label>Dropbox</label>
+            </value>
+            <value>
+                <fullName>File Manager</fullName>
+                <default>false</default>
+                <label>File Manager</label>
+            </value>
+            <value>
+                <fullName>Filevine</fullName>
+                <default>false</default>
+                <label>Filevine</label>
+            </value>
+            <value>
+                <fullName>Growpath</fullName>
+                <default>false</default>
+                <label>Growpath</label>
+            </value>
+            <value>
+                <fullName>Kenect</fullName>
+                <default>false</default>
+                <label>Kenect</label>
+            </value>
+            <value>
+                <fullName>LawBase</fullName>
+                <default>false</default>
+                <label>LawBase</label>
+            </value>
+            <value>
+                <fullName>LawPay</fullName>
+                <default>false</default>
+                <label>LawPay</label>
+            </value>
+            <value>
+                <fullName>LeadDocket</fullName>
+                <default>false</default>
+                <label>LeadDocket</label>
+            </value>
+            <value>
+                <fullName>Litify</fullName>
+                <default>false</default>
+                <label>Litify</label>
+            </value>
+            <value>
+                <fullName>Mailchimp</fullName>
+                <default>false</default>
+                <label>Mailchimp</label>
+            </value>
+            <value>
+                <fullName>Merus Case</fullName>
+                <default>false</default>
+                <label>Merus Case</label>
+            </value>
+            <value>
+                <fullName>Milestones</fullName>
+                <default>false</default>
+                <label>Milestones</label>
+            </value>
+            <value>
+                <fullName>Multus Medical</fullName>
+                <default>false</default>
+                <label>Multus Medical</label>
+            </value>
+            <value>
+                <fullName>MyCase</fullName>
+                <default>false</default>
+                <label>MyCase</label>
+            </value>
+            <value>
+                <fullName>Needles</fullName>
+                <default>false</default>
+                <label>Needles</label>
+            </value>
+            <value>
+                <fullName>Needles Neos</fullName>
+                <default>false</default>
+                <label>Needles Neos</label>
+            </value>
+            <value>
+                <fullName>Ngage Live Chat</fullName>
+                <default>false</default>
+                <label>Ngage Live Chat</label>
+            </value>
+            <value>
+                <fullName>OneDrive</fullName>
+                <default>false</default>
+                <label>OneDrive</label>
+            </value>
+            <value>
+                <fullName>OneDrive for Business</fullName>
+                <default>false</default>
+                <label>OneDrive for Business</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>PC Law</fullName>
+                <default>false</default>
+                <label>PC Law</label>
+            </value>
+            <value>
+                <fullName>Practice Master</fullName>
+                <default>false</default>
+                <label>Practice Master</label>
+            </value>
+            <value>
+                <fullName>Practice Panther</fullName>
+                <default>false</default>
+                <label>Practice Panther</label>
+            </value>
+            <value>
+                <fullName>Prevail</fullName>
+                <default>false</default>
+                <label>Prevail</label>
+            </value>
+            <value>
+                <fullName>ProLaw</fullName>
+                <default>false</default>
+                <label>ProLaw</label>
+            </value>
+            <value>
+                <fullName>Quickbooks</fullName>
+                <default>false</default>
+                <label>Quickbooks</label>
+            </value>
+            <value>
+                <fullName>Records on Time</fullName>
+                <default>false</default>
+                <label>Records on Time</label>
+            </value>
+            <value>
+                <fullName>Rocket Matter</fullName>
+                <default>false</default>
+                <label>Rocket Matter</label>
+            </value>
+            <value>
+                <fullName>Salesforce</fullName>
+                <default>false</default>
+                <label>Salesforce</label>
+            </value>
+            <value>
+                <fullName>Smart Advocate</fullName>
+                <default>false</default>
+                <label>Smart Advocate</label>
+            </value>
+            <value>
+                <fullName>Smokeball</fullName>
+                <default>false</default>
+                <label>Smokeball</label>
+            </value>
+            <value>
+                <fullName>Soluno</fullName>
+                <default>false</default>
+                <label>Soluno</label>
+            </value>
+            <value>
+                <fullName>Tabs 3</fullName>
+                <default>false</default>
+                <label>Tabs 3</label>
+            </value>
+            <value>
+                <fullName>Time Matters</fullName>
+                <default>false</default>
+                <label>Time Matters</label>
+            </value>
+            <value>
+                <fullName>Trial Works</fullName>
+                <default>false</default>
+                <label>Trial Works</label>
+            </value>
+            <value>
+                <fullName>Tritek</fullName>
+                <default>false</default>
+                <label>Tritek</label>
+            </value>
+            <value>
+                <fullName>Zola</fullName>
+                <default>false</default>
+                <label>Zola</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

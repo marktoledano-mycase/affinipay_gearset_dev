@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>Soluno_Customer_Number_Management</name>
+    </customPermissions>
+    <description>Allows user to see and trigger creation of Customer and Serial Numbers from the Account record, outside of the Opportunity Close Won process</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Create_Account_Numbers__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Customer_Number__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Serial_Number__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Soluno - Customer Number Management</label>
+</PermissionSet>

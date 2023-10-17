@@ -1,0 +1,1399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MyCase</fullName>
+    <active>true</active>
+    <label>MyCase</label>
+    <picklistValues>
+        <picklist>Brand__c</picklist>
+        <values>
+            <fullName>AffiniPay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CASEpeer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPACharge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ClientPay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Docketwise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LawPay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MyCase</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Soluno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Websites</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Woodpecker</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Can_use_as_Reference__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Churn_Reason__c</picklist>
+        <values>
+            <fullName>Adoption Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Auto-Canceled After Suspension</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Issue%3A Health%2FAudit%2FUnderwriting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Issue%3A Out of Business%2FDownsized%2FDidn%27t Grow%2FOther Focus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declined Credit Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Development Resources Not Available</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Don%E2%80%99t Know%3A Went Dark%2FNon-Payment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expectations%3A Business Fit%2FProduct Features%2FValue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expectations%3A Implementation%2FSupport%2FTraining</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expired Credit Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I am closing my business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I am using a different software</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I can%27t afford it</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I don%27t use it enough</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>It%27s too expensive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>My firm is closing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MyCase doesn%27t have the features I need</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Others</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner Opted out of Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Fit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Support Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>We Opted Out of Partnership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>We are switching to a different product</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>We don%27t use it enough</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Went Dark %2F Past Due</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Deployment__c</picklist>
+        <values>
+            <fullName>Cloud</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Premise</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Entity__c</picklist>
+        <values>
+            <fullName>CasePEER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MyCase</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Soluno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Woodpecker</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Initiated_From__c</picklist>
+        <values>
+            <fullName>Direct Purchase</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trial</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Merchant_Category_Code__c</picklist>
+        <values>
+            <fullName>---------------------------------------</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1520 General Contractors-Residential and Commercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1711 Air Conditioning Contractors %E2%80%93 Sales and Installation%2C Heating Contractors %E2%80%93 Sales%2C Service%2C Installation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1731 Electrical Contractors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1740 Insulation %E2%80%93 Contractors%2C Masonry%2C Stonework Contractors%2C Plastering Contractors%2C Stonework and Masonry Contractors%2C Tile Settings Contractors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1750 Carpentry Contractors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1761 Roofing %E2%80%93 Contractors%2C Sheet Metal Work %E2%80%93 Contractors%2C Siding %E2%80%93 Contractors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1771 Contractors %E2%80%93 Concrete Work</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1799 Contractors %E2%80%93 Special Trade%2C Not Elsewhere Classified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2741 Miscellaneous Publishing and Printing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2791 Typesetting%2C Plate Making%2C %26 Related Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2842 Specialty Cleaning%2C Polishing%2C and Sanitation Preparations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3000-3299 AIRLINES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3300-3500 Car Rental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3500-4000 Hotels%2FMotels%2FInns%2FResorts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4011 Railroads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4111 Local%2FSuburban Commuter Passenger Transportation %E2%80%93 Railroads%2C Feries%2C Local Water Transportation%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4112 Passenger Railways</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4119 Ambulance Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4121 Taxicabs and Limousines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4131 Bus Lines%2C Including Charters%2C Tour Buses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4214 Motor Freight Carriers%2C Moving and Storage Companies%2C Trucking %E2%80%93 Local%2FLong Distance%2C Delivery Services %E2%80%93 Local</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4215 Courier Services %E2%80%93 Air or Ground%2C Freight forwarders</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4225 Public warehousing%2C Storage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4411 Cruise and Steamship Lines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4457 Boat Rentals and Leases</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4468 Marinas%2C Marine Service%2C and Supplies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4511 Airlines%2C Air Carriers %28 not listed elsewhere%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4582 Airports%2C Airport Terminals%2C Flying Fields</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4722 Travel Agencies and Tour Operations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4723 Package Tour Operators %28For use in Germany only%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4784 Toll and Bridge Fees</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4789 Transportation Services%2C Not elsewhere classified%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4812 Telecommunications Equipment including telephone sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4814 Fax services%2C Telecommunication Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4815 VisaPhone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4816 Computer Network Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4821 Telegraph services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4829 Money Orders %E2%80%93 Wire Transfer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4899 Cable and other pay television %28previously Cable Services%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4900 Electric%2C Gas%2C Sanitary and Water Utilities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5013 Motor vehicle supplies and new parts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5021 Office and Commercial Furniture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5039 Construction Materials%2C Not Elsewhere Classified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5044 Office%2C Photographic%2C Photocopy%2C and Microfilm Equipment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5045 Computers%2C Computer Peripheral Equipment%2C Software</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5046 Commercial Equipment%2C Not Elsewhere Classified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5047 Medical%2C Dental Ophthalmic%2C Hospital Equipment and Supplies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5051 Metal Service Centers and Offices</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5065 Electrical Parts and Equipment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5072 Hardware Equipment and Supplies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5074 Plumbing and Heating Equipment and Supplies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5085 Industrial Supplies%2C Not Elsewhere Classified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5094 Precious Stones and Metals%2C Watches and Jewelry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5099 Durable Goods%2C Not Elsewhere Classified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5111 Stationery%2C Office Supplies%2C Printing%2C and Writing Paper</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5122 Drugs%2C Drug Proprietors%2C and Druggist%E2%80%99s Sundries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5131 Piece Goods%2C Notions%2C and Other Dry Goods</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5137 Men%E2%80%99s Women%E2%80%99s and Children%E2%80%99s Uniforms and Commercial Clothing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5139 Commercial Footwear</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5169 Chemicals and Allied Products%2C Not Elsewhere Classified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5172 Petroleum and Petroleum Products</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5192 Books%2C Periodicals%2C and Newspapers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5193 Florists Supplies%2C Nursery Stock and Flowers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5198 Paints%2C Varnishes%2C and Supplies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5199 Non-durable Goods%2C Not Elsewhere Classified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5200 Home Supply Warehouse Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5211 Lumber and Building Materials Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5231 Glass%2C Paint%2C and Wallpaper Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5251 Hardware Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5261 Nurseries %E2%80%93 Lawn and Garden Supply Store</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5271 Mobile Home Dealers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5300 Wholesale Clubs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5309 Duty Free Store</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5310 Discount Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5311 Department Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5331 Variety Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5399 Misc%2E General Merchandise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5411 Grocery Stores%2C Supermarkets</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5422 Meat Provisioners %E2%80%93 Freezer and Locker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5441 Candy%2C Nut%2C and Confectionery Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5451 Dairy Products Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5462 Bakeries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5499 Misc%2E Food Stores %E2%80%93 Convenience Stores and Specialty Markets</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5511 Car and Truck Dealers %28New and Used%29 Sales%2C Service%2C Repairs%2C Parts%2C and Leasing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5521 Automobile and Truck Dealers %28Used Only%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5531 Automobile Supply Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5532 Automotive Tire Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5533 Automotive Parts%2C Accessories Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5541 Service Stations %28 with or without ancillary services%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5542 Automated Fuel Dispensers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5551 Boat Dealers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5561 Recreational and Utility Trailers%2C Camp Dealers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5571 Motorcycle Dealers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5592 Motor Home Dealers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5598 Snowmobile Dealers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5599 Miscellaneous Auto Dealers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5611 Men%E2%80%99s and Boy%E2%80%99s Clothing and Accessories Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5621 Women%E2%80%99s Ready-to-Wear Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5631 Women%E2%80%99s Accessory and Specialty Shops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5641 Children%E2%80%99s and Infant%E2%80%99s Wear Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5651 Family Clothing Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5655 Sports Apparel%2C Riding Apparel Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5661 Shoe Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5681 Furriers and Fur Shops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5691 Men%E2%80%99s and Women%E2%80%99s Clothing Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5697 Tailors%2C Seamstress%2C Mending%2C and Alterations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5698 Wig and Toupee Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5699 Miscellaneous Apparel and Accessory Shops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5712 Furniture%2C Home Furnishings%2C and Equipment Stores%2C ExceptAppliances</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5713 Floor Covering Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5714 Drapery%2C Window Covering and Upholstery Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5718 Fireplace%2C Fireplace Screens%2C and Accessories Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5719 Miscellaneous Home Furnishing Specialty Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5722 Household Appliance Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5732 Electronic Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5733 Music Stores%2C Musical Instruments%2C Piano Sheet Music</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5734 Computer Software Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5735 Record Shops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5811 Caterers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5812 Eating places and Restaurants</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5813 Drinking Places %28Alcoholic Beverages%29%2C Bars%2C Taverns%2C Cocktail lounges%2C Nightclubs and Discotheques</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5814 Fast Food Restaurants</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5832 Antique Shops %E2%80%93 Sales%2C Repairs%2C and Restoration Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5912 Drug Stores and Pharmacies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5921 Package Stores %E2%80%93 Beer%2C Wine%2C and Liquor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5931 Used Merchandise and Secondhand Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5932 Antique Shops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5933 Pawn Shops and Salvage Yards</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5935 Wrecking and Salvage Yards</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5937 Antique Reproductions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5940 Bicycle Shops %E2%80%93 Sales and Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5941 Sporting Goods Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5942 Book Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5943 Stationery Stores%2C Office and School Supply Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5944 Watch%2C Clock%2C Jewelry%2C and Silverware Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5945 Hobby%2C Toy%2C and Game Shops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5946 Camera and Photographic Supply Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5947 Card Shops%2C Gift%2C Novelty%2C and Souvenir Shops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5948 Leather Foods Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5949 Sewing%2C Needle%2C Fabric%2C and Price Goods Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5950 Glassware%2FCrystal Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5960 Direct Marketing- Insurance Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5961 Mail Order Houses Including Catalog Order Stores%2C Book%2FRecord Clubs %28No longer permitted for U%2ES%2E original presentments%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5962 Direct Marketing %E2%80%93 Travel Related Arrangements Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5963 Door-to-Door Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5964 Direct Marketing %E2%80%93 Catalog Merchant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5965 Direct Marketing %E2%80%93 Catalog and Catalog and Retail Merchant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5966 Direct Marketing- Outbound Telemarketing Merchant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5967 Direct Marketing %E2%80%93 Inbound Teleservices Merchant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5968 Direct Marketing %E2%80%93 Continuity%2FSubscription Merchant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5969 Direct Marketing %E2%80%93 Not Elsewhere Classified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5970 Artist%E2%80%99s Supply and Craft Shops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5971 Art Dealers and Galleries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5972 Stamp and Coin Stores %E2%80%93 Philatelic and Numismatic Supplies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5973 Religious Goods Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5975 Hearing Aids %E2%80%93 Sales%2C Service%2C and Supply Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5976 Orthopedic Goods Prosthetic Devices</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5977 Cosmetic Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5978 Typewriter Stores %E2%80%93 Sales%2C Rental%2C Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5983 Fuel %E2%80%93 Fuel Oil%2C Wood%2C Coal%2C Liquefied Petroleum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5992 Florists</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5993 Cigar Stores and Stands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5994 News Dealers and Newsstands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5995 Pet Shops%2C Pet Foods%2C and Supplies Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5996 Swimming Pools %E2%80%93 Sales%2C Service%2C and Supplies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5997 Electric Razor Stores %E2%80%93 Sales and Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5998 Tent and Awning Shops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5999 Miscellaneous and Specialty Retail Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6010 Financial Institutions %E2%80%93 Manual Cash Disbursements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6011 Financial Institutions %E2%80%93 Manual Cash Disbursements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6012 Financial Institutions %E2%80%93 Merchandise and Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6051 Non-Financial Institutions %E2%80%93 Foreign Currency%2C Money Orders %28not wire transfer%29 and Travelers Cheques</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6211 Security Brokers%2FDealers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6300 Insurance Sales%2C Underwriting%2C and Premiums</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6381 Insurance Premiums%2C %28no longer valid for first presentment work%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6399 Insurance%2C Not Elsewhere Classified %28 no longer valid forfirst presentment work%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6513 Real Estate Agents and Managers - Rentals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7011 Lodging %E2%80%93 Hotels%2C Motels%2C Resorts%2C Central Reservation Services %28not elsewhere classified%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7012 Timeshares</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7032 Sporting and Recreational Camps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7033 Trailer Parks and Camp Grounds</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7210 Laundry%2C Cleaning%2C and Garment Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7211 Laundry %E2%80%93 Family and Commercial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7216 Dry Cleaners</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7217 Carpet and Upholstery Cleaning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7221 Photographic Studios</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7230 Barber and Beauty Shops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7251 Shop Repair Shops and Shoe Shine Parlors%2C and Hat Cleaning Shops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7261 Funeral Service and Crematories</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7273 Dating and Escort Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7276 Tax Preparation Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7277 Counseling Service %E2%80%93 Debt%2C Marriage%2C Personal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7278 Buying%2FShopping Services%2C Clubs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7296 Clothing Rental %E2%80%93 Costumes%2C Formal Wear%2C Uniforms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7297 Massage Parlors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7298 Health and Beauty Shops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7299 Miscellaneous Personal Services %28 not elsewhere classifies%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7311 Advertising Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7321 Consumer Credit Reporting Agencies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7332 Blueprinting and Photocopying Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7333 Commercial Photography%2C Art and Graphics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7338 Quick Copy%2C Reproduction and Blueprinting Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7339 Stenographic and Secretarial Support Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7342 Exterminating and Disinfecting Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7349 Cleaning and Maintenance%2C Janitorial Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7361 Employment Agencies%2C Temporary Help Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7372 Computer Programming%2C Integrated Systems Design and Data Processing Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7375 Information Retrieval Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7379 Computer Maintenance and Repair Services%2C Not Elsewhere Classified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7392 Management%2C Consulting%2C and Public Relations Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7393 Protective and Security Services %E2%80%93 Including Armored Carsand Guard Dogs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7394 Equipment Rental and Leasing Services%2C Tool Rental%2C Furniture Rental%2C and Appliance Rental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7395 Photofinishing Laboratories%2C Photo Developing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7399 Business Services%2C Not Elsewhere Classified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>742 Veterinary Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7511 Truck Stop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7512 Car Rental Companies %28 Not Listed Below%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7513 Truck and Utility Trailer Rentals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7519 Motor Home and Recreational Vehicle Rentals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7523 Automobile Parking Lots and Garages</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7531 Automotive Body Repair Shops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7534 Tire Re-treading and Repair Shops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7535 Paint Shops %E2%80%93 Automotive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7538 Automotive Service Shops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7542 Car Washes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7549 Towing Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7622 Radio Repair Shops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7623 Air Conditioning and Refrigeration Repair Shops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7629 Electrical And Small Appliance Repair Shops</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>763 Agricultural Co-operatives</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7631 Watch%2C Clock%2C and Jewelry Repair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7641 Furniture%2C Furniture Repair%2C and Furniture Refinishing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7692 Welding Repair</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7699 Repair Shops and Related Services %E2%80%93Miscellaneous</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>780 Horticultural Services%2C Landscaping Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7829 Motion Pictures and Video Tape Production and Distribution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7832 Motion Picture Theaters</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7841 Video Tape Rental Stores</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7911 Dance Halls%2C Studios and Schools</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7922 Theatrical Producers %28Except Motion Pictures%29%2C Ticket Agencies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7929 Bands%2C Orchestras%2C and Miscellaneous Entertainers %28Not Elsewhere Classified%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7932 Billiard and Pool Establishments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7933 Bowling Alleys</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7941 Commercial Sports%2C Athletic Fields%2C Professional Sport Clubs%2C and Sport Promoters</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7991 Tourist Attractions and Exhibits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7992 Golf Courses %E2%80%93 Public</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7993 Video Amusement Game Supplies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7994 Video Game Arcades%2FEstablishments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7995 Betting %28including Lottery Tickets%2C Casino Gaming Chips%2C Off-track Betting and Wagers%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7996 Amusement Parks%2C Carnivals%2C Circuses%2C Fortune Tellers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7997 Membership Clubs %28Sports%2C Recreation%2C Athletic%29%2C Country Clubs%2C and Private Golf Courses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7998 Aquariums%2C Sea-aquariums%2C Dolphinariums</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7999 Recreation Services %28Not Elsewhere Classified%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8011 Doctors and Physicians %28Not Elsewhere Classified%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8021 Dentists and Orthodontists</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8031 Osteopaths</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8041 Chiropractors</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8042 Optometrists and Ophthalmologists</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8043 Opticians%2C Opticians Goods and Eyeglasses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8044 Opticians%2C Optical Goods%2C and Eyeglasses %28no longer validfor first presentments%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8049 Podiatrists and Chiropodists</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8050 Nursing and Personal Care Facilities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8062 Hospitals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8071 Medical and Dental Laboratories</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8099 Medical Services and Health Practitioners %28Not Elsewhere Classified%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8111 Legal Services and Attorneys</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8211 Elementary and Secondary Schools</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8220 Colleges%2C Junior Colleges%2C Universities%2C and ProfessionalSchools</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8241 Correspondence Schools</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8244 Business and Secretarial Schools</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8249 Vocational Schools and Trade Schools</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8299 Schools and Educational Services %28 Not Elsewhere Classified%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8351 Child Care Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8398 Charitable and Social Service Organizations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8641 Civic%2C Fraternal%2C and Social Associations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8651 Political Organizations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8661 Religious Organizations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8675 Automobile Associations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8699 Membership Organizations %28 Not Elsewhere Classified%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8734 Testing Laboratories %28 non-medical%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8911 Architectural %E2%80%93 Engineering and Surveying Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8931 Accounting%2C Auditing%2C and Bookkeeping Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8999 Professional Services %28 Not Elsewhere Defined%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9211 Court Costs%2C including Alimony and Child Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9222 Fines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9223 Bail and Bond Payments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9311 Tax Payments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9399 Government Services %28 Not Elsewhere Classified%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9402 Postal Services %E2%80%93 Government Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9405 Intra %E2%80%93 Government Transactions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9700 Automated Referral Service %28 For Visa Only%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9701 Visa Credential Service %28 For Visa Only%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9702 GCAS Emergency Services %28 For Visa Only%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9950 Intra %E2%80%93 Company Purchases %28 For Visa Only%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

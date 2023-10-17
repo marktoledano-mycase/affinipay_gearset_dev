@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data_Migration_Stage__c</fullName>
+    <description>Removed FLS for R1917684</description>
+    <externalId>false</externalId>
+    <label>Data Migration Stage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Kick-Off</fullName>
+                <default>false</default>
+                <label>Kick-Off</label>
+            </value>
+            <value>
+                <fullName>Build Data</fullName>
+                <default>false</default>
+                <label>Build Data</label>
+            </value>
+            <value>
+                <fullName>Financial Data</fullName>
+                <default>false</default>
+                <label>Financial Data</label>
+            </value>
+            <value>
+                <fullName>Application Review</fullName>
+                <default>false</default>
+                <label>Application Review</label>
+            </value>
+            <value>
+                <fullName>Migration Complete</fullName>
+                <default>false</default>
+                <label>Migration Complete</label>
+            </value>
+            <value>
+                <fullName>Re-Migration</fullName>
+                <default>false</default>
+                <label>Re-Migration</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

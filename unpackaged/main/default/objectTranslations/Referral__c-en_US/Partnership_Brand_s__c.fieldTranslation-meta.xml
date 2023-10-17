@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Displays which brand(s) the linked partnership is defined with. --></help>
+        <label><!-- Partnership Brand(s) --></label>
+        <name>Partnership_Brand_s__c</name>
+    </CustomFieldTranslation>

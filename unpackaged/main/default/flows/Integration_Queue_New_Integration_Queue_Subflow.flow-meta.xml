@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <assignments>
+        <name>Assign_Integration_Queue_Record</name>
+        <label>Assign Integration Queue Record</label>
+        <locationX>472</locationX>
+        <locationY>81</locationY>
+        <assignmentItems>
+            <assignToReference>varNewIntegrationQueue.Integration_Record_Id__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>inputRecordId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varNewIntegrationQueue.Process_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ProcessName</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varNewIntegrationQueue.Sub_Process__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>SubProcess</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varNewIntegrationQueue.Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>In Process</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Create_Integration_Queue</targetReference>
+        </connector>
+    </assignments>
+    <description>Subflow to enable integration queue records to be created from a calling flow anywhere an automation is needed via Workato</description>
+    <environments>Default</environments>
+    <interviewLabel>Integration Queue - New Integration Queue Subflow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Integration Queue - New Integration Queue Subflow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Integration_Queue</name>
+        <label>Create Integration Queue</label>
+        <locationX>638</locationX>
+        <locationY>81</locationY>
+        <inputReference>varNewIntegrationQueue</inputReference>
+    </recordCreates>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <start>
+        <locationX>90</locationX>
+        <locationY>64</locationY>
+        <connector>
+            <targetReference>Assign_Integration_Queue_Record</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Id of the record to be queried in Workato for the defined automated process (ex: new lead notification for the lead object would be the Id of that lead record)</description>
+        <name>inputRecordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Process name for specific recipe automation queue in Workato (ex: Workbot Notifications)</description>
+        <name>ProcessName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Unique sub process name to let Workato know how to dynamically handle different sub processes within a given process (ex: Process Name = Workbot Notifications, Sub Process = Opportunity Alert)</description>
+        <name>SubProcess</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Record variable for Integration Queue object to assign values to from calling flow</description>
+        <name>varNewIntegrationQueue</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Integration_Queue__c</objectType>
+    </variables>
+</Flow>

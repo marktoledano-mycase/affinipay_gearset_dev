@@ -1,0 +1,23 @@
+Hello, 
+
+We are dedicated to excelling in our service to you, so we want you to know we have received your request and it is being routed to the appropriate person for action and follow-up.
+
+Should you need to refer to this case in the future, here are the details: 
+
+Case Number: {!Case.CaseNumber}
+Case Created Date: {!Case.CreatedDate}
+Case Subject: {!Case.Subject}
+Case Description: {!Case.Description}
+Email address: {!Case.SuppliedEmail}
+
+
+
+All the best,
+
+LawPay Customer Success Team
+
+LawPay
+lawpay.com
+800-723-4560
+
+{!Case.Thread_Id}

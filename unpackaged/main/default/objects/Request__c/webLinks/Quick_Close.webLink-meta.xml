@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quick_Close</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Quick Close</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/31.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/support/console/25.0/integration.js&quot;)}
+
+var reqObj = new sforce.SObject(&quot;Request__c&quot;);
+reqObj.Id = &#39;{!Request__c.Id}&#39;;
+
+if(&#39;{!Request__c.RecordType}&#39; != &#39;User Maintenance&#39; &amp;&amp; &#39;{!Request__c.RecordType}&#39; != &#39;Record Maintenance/Mass Update&#39;){
+    alert(&#39;You can only use this button on User and Record Maintenance Requests&#39;); 
+} else {
+    var newRequestTask = new sforce.SObject(&quot;Request_Task__c&quot;);
+    newRequestTask.Subject__c = &#39;Production Development&#39;;
+    newRequestTask.Hours_Worked__c = &#39;0.1&#39;;
+    newRequestTask.Status__c = &#39;Completed&#39;;
+    newRequestTask.Request__c = &#39;{!Request__c.Id}&#39;;
+    newRequestTask.Information_Sufficient_When_Assigned__c = &#39;TRUE&#39;;
+    newRequestTask.Information_Submitted_Sufficient__c = &#39;TRUE&#39;;
+    newRequestTask.RecordTypeId = &#39;01280000000GJHX&#39;;
+    newRequestTask.Assigned_To__c = window.UserContext.userId;
+    var result1 = sforce.connection.create([newRequestTask]);
+
+    if (result1[0].success==&#39;false&#39;) {
+        alert(result1[0].errors.message);
+    } else {
+        if (&#39;{!Request__c.RecordType}&#39; == &#39;User Maintenance&#39;){
+                reqObj.Stage__c = &#39;Complete&#39;;
+                reqObj.Resolution_Detail__c = &#39;User has been updated&#39;;
+                reqObj.Resolution__c = &#39;Business Systems Team Resolved&#39;;
+                reqObj.Type__c = &#39;User Maintenance/Creation&#39;;
+                reqObj.System_s_Impacted__c = &#39;Salesforce&#39;;
+                var result = sforce.connection.update([reqObj]); 
+
+                if (result[0].success==&#39;false&#39;) { 
+                    alert(result[0].errors.message); 
+                } else { 
+                    location.reload(true); 
+                }
+            }
+        }
+
+        if (&#39;{!Request__c.RecordType}&#39; == &#39;Record Maintenance/Mass Update&#39;){
+            reqObj.Resolution_Detail__c = &#39;Updated opp with SDR info&#39;;
+            reqObj.Resolution__c = &#39;Business Systems Team Resolved&#39;;
+            reqObj.Type__c = &#39;Record Maintenance&#39;;
+            reqObj.System_s_Impacted__c = &#39;Salesforce&#39;;
+            var result = sforce.connection.update([reqObj]); 
+
+            if (result[0].success==&#39;false&#39;) { 
+                alert(result[0].errors.message); 
+            } else { 
+                location.reload(true); 
+            }
+        }
+    }</url>
+</WebLink>

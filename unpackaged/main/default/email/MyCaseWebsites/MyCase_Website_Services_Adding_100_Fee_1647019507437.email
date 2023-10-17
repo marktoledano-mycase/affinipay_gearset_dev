@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">Hi {{{Recipient.FirstName}}},<br />
+<br />
+This is Chelsea, from the MyCase Websites team. I am reaching out because our team noticed that your firm is currently not being charged the monthly $100 website management fee. Moving forward, you can expect to see this fee applied to your firm’s account beginning on your next invoice from MyCase.<br />
+<br />
+This fee is being applied because at the time of the sale, an agreement was signed to pay the onboarding fee in addition to the maintenance fee.&nbsp;<br />
+<br />
+The $100 maintenance fee includes:
+<ul>
+	<li>Secure hosting of the website</li>
+	<li>Access to a team of web services specialists for edits/additions</li>
+	<li>Best practices for on-page Search Engine Optimization (SEO) of new pages</li>
+	<li>Site maintenance including security updates &amp; platform upgrades</li>
+	<li>Domain name management &amp; renewal (as needed)</li>
+</ul>
+In regards to edits from our team, there's no limit on the number of changes you can send in or pages you can add, and you are never paying for edits out of pocket everything is included in the flat monthly fee. This way, you can focus on what matters most: running your firm and providing stellar service to your clients!<br />
+<br />
+If you'd like our team to make any updates on your site, just simply send an email to <b>websites@mycase.com</b> with your requested changes, and our team will reach out when the revisions are done. We can complete edits within 1-3 business days.<br />
+<br />
+Please reach out if you have any questions!&nbsp;<br />
+<br />
+Thank you,<br />
+Chelsea<br />
+Website Operations Manager<br />
+Case #{{{Case.CaseNumber}}}
+</body></html>

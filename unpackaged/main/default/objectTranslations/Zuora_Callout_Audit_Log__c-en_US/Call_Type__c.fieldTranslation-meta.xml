@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Call Type --></label>
+        <name>Call_Type__c</name>
+        <picklistValues>
+            <masterLabel>Amend Quantity</masterLabel>
+            <translation><!-- Amend Quantity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Product Amendment</masterLabel>
+            <translation><!-- New Product Amendment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Remove Amendment</masterLabel>
+            <translation><!-- Remove Amendment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal Amendment</masterLabel>
+            <translation><!-- Renewal Amendment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Zuora Get Call</masterLabel>
+            <translation><!-- Zuora Get Call --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Zuora Put Call</masterLabel>
+            <translation><!-- Zuora Put Call --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Zuora Rev Rec Update</masterLabel>
+            <translation><!-- Zuora Rev Rec Update --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

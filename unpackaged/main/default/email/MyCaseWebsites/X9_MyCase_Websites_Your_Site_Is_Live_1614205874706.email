@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;"><meta />
+<p><span style="font-size:14px;"><span style="font-family:Helvetica,Arial,Helvetica,sans-serif;">Hi {{{Recipient.FirstName}}},<br />
+<br />
+Congratulations! Your new MyCase website is now live here: <span style="color:#c0392b;">(LINK)</span><br />
+<br />
+<u><b>New Site Availability</b></u><br />
+It's normal for your new site to be intermittently available for up to (48) hours; this is due to the fact that the DNS settings sometimes take time to filter throughout the Internet. It can also take a while for your SSL certificate to propagate, so don't worry if the site shows a 'this site is not secure' message in the meantime. If availability issues are present after (48) hours, please let me know.<br />
+<br />
+<u><b>Access to Your Website</b></u><br />
+If you would like access to edit your site, you will receive an email from <b>"donotreply@mycase.com"</b> prompting you to create a username and password. From there you can access your website dashboard. Here are helpful guidelines on making your own edits: <b>https://support.multiscreensite.com/hc/en-us</b>. If you would like to add another user, please just let me know. Here is how to add, edit and publish your blog posts: <b>https://support.multiscreensite.com/hc/en-us/sections/360008414154-Blog&nbsp;</b><br />
+<br />
+<u><b>Website Services</b></u><br />
+You may send any future change requests or questions to <b>websites@mycase.com</b>. To ensure completion in a timely manner, please include detailed instructions in your request. Our Website Services team has a 1-3 business day response time.<br />
+<br />
+Thanks for all of your time and hard work! It has been a pleasure working on this project with you!<br />
+<br />
+Thank you,<br />
+{{{Sender.FirstName}}}<br />
+MyCase Websites&nbsp;Team</span></span></p>
+</body>
+</html>

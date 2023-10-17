@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Reflect the Partnership Status, and not the Status between the customer Account and the Partnership --></help>
+        <label><!-- Partnership Status --></label>
+        <name>Partnership_Status__c</name>
+    </CustomFieldTranslation>

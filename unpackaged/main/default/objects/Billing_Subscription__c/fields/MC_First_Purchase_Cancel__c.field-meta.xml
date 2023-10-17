@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MC_First_Purchase_Cancel__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checked through automation from Workato when subscription is cancelled during first purchase process. Used to filter out for reporting and not trigger downstream automation.</description>
+    <externalId>false</externalId>
+    <label>MC First Purchase Cancel</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

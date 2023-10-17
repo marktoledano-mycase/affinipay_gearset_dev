@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Percent discount for sales or company promotion applied credits --></help>
+        <label><!-- Percent Discount --></label>
+        <name>Percent_Discount__c</name>
+    </CustomFieldTranslation>

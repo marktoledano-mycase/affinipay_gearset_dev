@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Data Migration Sources --></label>
+        <name>Data_Migration_Sources__c</name>
+        <picklistValues>
+            <masterLabel>Cerenade</masterLabel>
+            <translation><!-- Cerenade --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Clio</masterLabel>
+            <translation><!-- Clio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Docketwise</masterLabel>
+            <translation><!-- Docketwise --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Excel</masterLabel>
+            <translation><!-- Excel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INS Zoom</masterLabel>
+            <translation><!-- INS Zoom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Law Logix</masterLabel>
+            <translation><!-- Law Logix --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LollyLaw</masterLabel>
+            <translation><!-- LollyLaw --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MyCase</masterLabel>
+            <translation><!-- MyCase --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MySql</masterLabel>
+            <translation><!-- MySql --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Practice Panther</masterLabel>
+            <translation><!-- Practice Panther --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Primafacie</masterLabel>
+            <translation><!-- Primafacie --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quickbooks</masterLabel>
+            <translation><!-- Quickbooks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SAP</masterLabel>
+            <translation><!-- SAP --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

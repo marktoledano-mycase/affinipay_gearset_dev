@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Months_to_Credit__c</fullName>
+    <description>Number of months to credit for sales or company applied promotional discounts</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Number of months to credit for sales or company applied promotional discounts</inlineHelpText>
+    <label>Months to Credit</label>
+    <precision>14</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

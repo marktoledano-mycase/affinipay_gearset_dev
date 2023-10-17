@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Letterhead xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <backgroundColor>#FFFFFF</backgroundColor>
+    <bodyColor>#FFFFFF</bodyColor>
+    <bottomLine>
+        <color>#2B2A31</color>
+        <height>0</height>
+    </bottomLine>
+    <description>MyCase rebranding, logo on upper left corner + wordmark on lower left corner.</description>
+    <footer>
+        <backgroundColor>#FFFFFF</backgroundColor>
+        <height>0</height>
+        <horizontalAlignment>Left</horizontalAlignment>
+        <logo>Company_Logos/MyCase_Wordmark_color.png</logo>
+        <verticalAlignment>Top</verticalAlignment>
+    </footer>
+    <header>
+        <backgroundColor>#FFFFFF</backgroundColor>
+        <height>0</height>
+        <horizontalAlignment>Left</horizontalAlignment>
+        <logo>Company_Logos/MyCase_Logo_color.png</logo>
+        <verticalAlignment>Top</verticalAlignment>
+    </header>
+    <middleLine>
+        <color>#2B2A31</color>
+        <height>0</height>
+    </middleLine>
+    <name>MyCase Inc_v3</name>
+    <topLine>
+        <color>#8c96b4</color>
+        <height>0</height>
+    </topLine>
+</Letterhead>

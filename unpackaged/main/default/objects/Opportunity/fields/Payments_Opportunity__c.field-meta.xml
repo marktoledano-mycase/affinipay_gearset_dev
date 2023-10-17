@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payments_Opportunity__c</fullName>
+    <externalId>false</externalId>
+    <formula>Record_Type_Name__c=&quot;Affinipay&quot;||
+Record_Type_Name__c=&quot;CPQCharge&quot;||
+Record_Type_Name__c=&quot;ClientPay&quot; ||
+Record_Type_Name__c=&quot;LawPay Payments&quot;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Payments Opportunity</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Accounting_Free_User__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Product Users with Accounting Trial Status = Purchased and Accounting User License = Free User</inlineHelpText>
+    <label>Accounting Free User</label>
+    <summaryFilterItems>
+        <field>Product_User__c.Accounting_Status__c</field>
+        <operation>equals</operation>
+        <value>Purchased</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>Product_User__c.Accounting_User_License__c</field>
+        <operation>equals</operation>
+        <value>Free User</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Product_User__c.Product_Environment__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

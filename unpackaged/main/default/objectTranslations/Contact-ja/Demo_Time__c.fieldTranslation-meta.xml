@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Time of the day lead or contact requested a demo --></help>
+        <label><!-- Demo Time --></label>
+        <name>Demo_Time__c</name>
+    </CustomFieldTranslation>

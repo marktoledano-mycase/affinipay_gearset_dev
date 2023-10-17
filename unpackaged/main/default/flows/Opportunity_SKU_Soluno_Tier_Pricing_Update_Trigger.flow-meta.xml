@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>Opportunity SKU: Soluno Tier Pricing Update Trigger {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity SKU: Soluno Tier Pricing Update Trigger</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>701</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Calculate_Tier_Pricing</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Product_Sub_Family__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Soluno</stringValue>
+            </value>
+        </filters>
+        <object>Opportunity_SKU__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+    <subflows>
+        <name>Calculate_Tier_Pricing</name>
+        <label>Calculate Tier Pricing</label>
+        <locationX>827</locationX>
+        <locationY>363</locationY>
+        <flowName>Opportunity_SKU_Soluno_Tier_Calcs</flowName>
+        <inputAssignments>
+            <name>in_Oppty_SKU_Record</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+</Flow>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Forecasted_MRR__c</fullName>
+    <description>Multiplies forecasting users times the monthly price per user for the selected pricing tier</description>
+    <externalId>false</externalId>
+    <formula>IF( Forecasted_Users__c &gt; 0,
+
+CASE( Pricing_Tier__c,
+
+&quot;Basic&quot;, 39 * Forecasted_Users__c,
+59 * Forecasted_Users__c),
+
+0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>zz Forecasted MRR</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

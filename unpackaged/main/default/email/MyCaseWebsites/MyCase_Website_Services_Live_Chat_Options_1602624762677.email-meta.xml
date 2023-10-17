@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Send to client if they are requesting more information about a &quot;live chat&quot; option for their website.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>MyCase Website Services - Live Chat Options</name>
+    <relatedEntityType>Case</relatedEntityType>
+    <style>none</style>
+    <subject>MyCase Websites | Live Chat Options</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

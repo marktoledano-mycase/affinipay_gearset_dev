@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessHoursSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <businessHours>
+        <active>true</active>
+        <default>true</default>
+        <fridayEndTime>17:00:00.000Z</fridayEndTime>
+        <fridayStartTime>09:00:00.000Z</fridayStartTime>
+        <mondayEndTime>17:00:00.000Z</mondayEndTime>
+        <mondayStartTime>09:00:00.000Z</mondayStartTime>
+        <name>Central Business Hours</name>
+        <thursdayEndTime>17:00:00.000Z</thursdayEndTime>
+        <thursdayStartTime>09:00:00.000Z</thursdayStartTime>
+        <timeZoneId>America/Chicago</timeZoneId>
+        <tuesdayEndTime>17:00:00.000Z</tuesdayEndTime>
+        <tuesdayStartTime>09:00:00.000Z</tuesdayStartTime>
+        <wednesdayEndTime>17:00:00.000Z</wednesdayEndTime>
+        <wednesdayStartTime>09:00:00.000Z</wednesdayStartTime>
+    </businessHours>
+    <holidays>
+        <activityDate>2023-07-04</activityDate>
+        <businessHours>Central Business Hours</businessHours>
+        <description>July 4th</description>
+        <isRecurring>false</isRecurring>
+        <name>4th of July</name>
+    </holidays>
+    <holidays>
+        <businessHours>Central Business Hours</businessHours>
+        <description>December 26</description>
+        <isRecurring>true</isRecurring>
+        <name>Boxing Day</name>
+        <recurrenceDayOfMonth>26</recurrenceDayOfMonth>
+        <recurrenceMonthOfYear>December</recurrenceMonthOfYear>
+        <recurrenceStartDate>2023-12-26</recurrenceStartDate>
+        <recurrenceType>RecursYearly</recurrenceType>
+    </holidays>
+    <holidays>
+        <businessHours>Central Business Hours</businessHours>
+        <description>December 25</description>
+        <isRecurring>true</isRecurring>
+        <name>Christmas</name>
+        <recurrenceDayOfMonth>25</recurrenceDayOfMonth>
+        <recurrenceMonthOfYear>December</recurrenceMonthOfYear>
+        <recurrenceStartDate>2023-12-25</recurrenceStartDate>
+        <recurrenceType>RecursYearly</recurrenceType>
+    </holidays>
+    <holidays>
+        <businessHours>Central Business Hours</businessHours>
+        <description>June 19</description>
+        <isRecurring>true</isRecurring>
+        <name>Juneteenth</name>
+        <recurrenceDayOfMonth>19</recurrenceDayOfMonth>
+        <recurrenceMonthOfYear>June</recurrenceMonthOfYear>
+        <recurrenceStartDate>2023-06-19</recurrenceStartDate>
+        <recurrenceType>RecursYearly</recurrenceType>
+    </holidays>
+    <holidays>
+        <businessHours>Central Business Hours</businessHours>
+        <description>1st Monday of September</description>
+        <isRecurring>true</isRecurring>
+        <name>Labor Day</name>
+        <recurrenceDayOfWeek>Sunday</recurrenceDayOfWeek>
+        <recurrenceDayOfWeek>Monday</recurrenceDayOfWeek>
+        <recurrenceDayOfWeek>Tuesday</recurrenceDayOfWeek>
+        <recurrenceDayOfWeek>Wednesday</recurrenceDayOfWeek>
+        <recurrenceDayOfWeek>Thursday</recurrenceDayOfWeek>
+        <recurrenceDayOfWeek>Friday</recurrenceDayOfWeek>
+        <recurrenceDayOfWeek>Saturday</recurrenceDayOfWeek>
+        <recurrenceInstance>First</recurrenceInstance>
+        <recurrenceMonthOfYear>September</recurrenceMonthOfYear>
+        <recurrenceStartDate>2024-09-01</recurrenceStartDate>
+        <recurrenceType>RecursYearlyNth</recurrenceType>
+    </holidays>
+    <holidays>
+        <businessHours>Central Business Hours</businessHours>
+        <description>3rd Monday of January</description>
+        <isRecurring>true</isRecurring>
+        <name>MLK Day</name>
+        <recurrenceDayOfWeek>Sunday</recurrenceDayOfWeek>
+        <recurrenceDayOfWeek>Monday</recurrenceDayOfWeek>
+        <recurrenceDayOfWeek>Tuesday</recurrenceDayOfWeek>
+        <recurrenceDayOfWeek>Wednesday</recurrenceDayOfWeek>
+        <recurrenceDayOfWeek>Thursday</recurrenceDayOfWeek>
+        <recurrenceDayOfWeek>Friday</recurrenceDayOfWeek>
+        <recurrenceDayOfWeek>Saturday</recurrenceDayOfWeek>
+        <recurrenceInstance>Third</recurrenceInstance>
+        <recurrenceMonthOfYear>January</recurrenceMonthOfYear>
+        <recurrenceStartDate>2025-01-03</recurrenceStartDate>
+        <recurrenceType>RecursYearlyNth</recurrenceType>
+    </holidays>
+    <holidays>
+        <activityDate>2023-05-29</activityDate>
+        <businessHours>Central Business Hours</businessHours>
+        <description>Last Monday of May</description>
+        <isRecurring>false</isRecurring>
+        <name>Memorial Day</name>
+    </holidays>
+    <holidays>
+        <activityDate>2023-05-12</activityDate>
+        <businessHours>Central Business Hours</businessHours>
+        <description>Flex: 5/12/23</description>
+        <isRecurring>false</isRecurring>
+        <name>Mental Health</name>
+    </holidays>
+    <holidays>
+        <activityDate>2023-07-03</activityDate>
+        <description>One time mental health - July 3 2023</description>
+        <isRecurring>false</isRecurring>
+        <name>Mental Health Day</name>
+    </holidays>
+    <holidays>
+        <businessHours>Central Business Hours</businessHours>
+        <isRecurring>true</isRecurring>
+        <name>New Years Day</name>
+        <recurrenceDayOfMonth>1</recurrenceDayOfMonth>
+        <recurrenceMonthOfYear>January</recurrenceMonthOfYear>
+        <recurrenceStartDate>2024-01-01</recurrenceStartDate>
+        <recurrenceType>RecursYearly</recurrenceType>
+    </holidays>
+    <holidays>
+        <businessHours>Central Business Hours</businessHours>
+        <description>3rd Monday in February</description>
+        <isRecurring>true</isRecurring>
+        <name>President&#39;s Day</name>
+        <recurrenceDayOfWeek>Monday</recurrenceDayOfWeek>
+        <recurrenceInstance>Third</recurrenceInstance>
+        <recurrenceMonthOfYear>February</recurrenceMonthOfYear>
+        <recurrenceStartDate>2024-02-19</recurrenceStartDate>
+        <recurrenceType>RecursYearlyNth</recurrenceType>
+    </holidays>
+    <holidays>
+        <businessHours>Central Business Hours</businessHours>
+        <description>4th Thursday of November</description>
+        <isRecurring>true</isRecurring>
+        <name>Thanksgiving Day</name>
+        <recurrenceDayOfWeek>Thursday</recurrenceDayOfWeek>
+        <recurrenceInstance>Fourth</recurrenceInstance>
+        <recurrenceMonthOfYear>November</recurrenceMonthOfYear>
+        <recurrenceStartDate>2024-11-28</recurrenceStartDate>
+        <recurrenceType>RecursYearlyNth</recurrenceType>
+    </holidays>
+</BusinessHoursSettings>

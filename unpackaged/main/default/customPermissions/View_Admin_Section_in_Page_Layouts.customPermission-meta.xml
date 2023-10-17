@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPermission xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Where appropriate, we have added an Admin section on objects which have Lightning Record Pages. These sections house additional information only relevant to administrators. This permission is used to set that component&#39;s visibility on the page.</description>
+    <isLicensed>false</isLicensed>
+    <label>View Admin Section in Page Layouts</label>
+</CustomPermission>

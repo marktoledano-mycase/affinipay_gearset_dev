@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Update Brand(s) from null to prospect</description>
+    <flowDefinition>Contact_Change_Brand_to_Prospect</flowDefinition>
+    <label>Update Brand to Prospect</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

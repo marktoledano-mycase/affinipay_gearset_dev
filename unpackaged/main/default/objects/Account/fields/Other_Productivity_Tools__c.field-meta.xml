@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Productivity_Tools__c</fullName>
+    <description>R1813150</description>
+    <externalId>false</externalId>
+    <label>Other Productivity Tools</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Office 365</fullName>
+                <default>false</default>
+                <label>Office 365</label>
+            </value>
+            <value>
+                <fullName>MS Office (includes Outlook)</fullName>
+                <default>false</default>
+                <label>MS Office (includes Outlook)</label>
+            </value>
+            <value>
+                <fullName>QB Online</fullName>
+                <default>false</default>
+                <label>QB Online</label>
+            </value>
+            <value>
+                <fullName>QB Desktop</fullName>
+                <default>false</default>
+                <label>QB Desktop</label>
+            </value>
+            <value>
+                <fullName>G Suite (includes Gmail)</fullName>
+                <default>false</default>
+                <label>G Suite (includes Gmail)</label>
+            </value>
+            <value>
+                <fullName>Dropbox</fullName>
+                <default>false</default>
+                <label>Dropbox</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>WordPerfect</fullName>
+                <default>false</default>
+                <label>WordPerfect</label>
+            </value>
+            <value>
+                <fullName>Sharepoint</fullName>
+                <default>false</default>
+                <label>Sharepoint</label>
+            </value>
+            <value>
+                <fullName>Paper System</fullName>
+                <default>false</default>
+                <label>Paper System</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

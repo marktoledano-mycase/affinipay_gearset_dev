@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data_Migration_Tier__c</fullName>
+    <externalId>false</externalId>
+    <label>Data Migration Tier</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>General Excel</fullName>
+                <default>false</default>
+                <label>General Excel</label>
+            </value>
+            <value>
+                <fullName>Custom Excel</fullName>
+                <default>false</default>
+                <label>Custom Excel</label>
+            </value>
+            <value>
+                <fullName>Custom Pro</fullName>
+                <default>false</default>
+                <label>Custom Pro</label>
+            </value>
+            <value>
+                <fullName>Custom Premium</fullName>
+                <default>false</default>
+                <label>Custom Premium</label>
+            </value>
+            <value>
+                <fullName>CASEpeer to CASEpeer Basic</fullName>
+                <default>false</default>
+                <label>CASEpeer to CASEpeer Basic</label>
+            </value>
+            <value>
+                <fullName>CASEpeer to CASEpeer Pro</fullName>
+                <default>false</default>
+                <label>CASEpeer to CASEpeer Pro</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

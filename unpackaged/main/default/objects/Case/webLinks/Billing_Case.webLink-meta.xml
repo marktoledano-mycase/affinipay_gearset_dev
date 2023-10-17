@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_Case</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Billing Case</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/31.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/support/console/25.0/integration.js&quot;)} 
+
+var caseObj = new sforce.SObject(&quot;Case&quot;); 
+caseObj.id = &#39;{!Case.Id}&#39;; /* Need Id field to update Case */ 
+
+//Change Record Type 
+var contactCheck = sforce.connection.query(&quot;SELECT Id, Name FROM RecordType WHERE SobjectType = &#39;Case&#39; and DeveloperName = &#39;Billing_MyCase&#39;&quot;); 
+records = contactCheck.getArray(&quot;records&quot;); 
+for (var i=0; i&lt; records.length; i++) { 
+var record = records[i]; 
+caseObj.RecordTypeId = record.Id; 
+
+} 
+
+caseObj.Reason = &#39;MyCase Billing&#39;;
+
+
+/* update method takes an array of Cases; init to 1 element - &#39;caseObj&#39; */ 
+var result = sforce.connection.update([caseObj]); 
+
+
+
+if(result[0].getBoolean(&quot;success&quot;)){
+window.location = &quot;/&quot;+caseObj.id+&quot;/e?retURL=%2F&quot;+caseObj.id+&quot;&quot;;
+}else{
+alert(&#39;Could not create record &#39;+result);
+}</url>
+</WebLink>

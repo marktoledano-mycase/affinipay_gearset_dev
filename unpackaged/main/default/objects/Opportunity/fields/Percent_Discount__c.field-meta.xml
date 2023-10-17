@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Percent_Discount__c</fullName>
+    <description>Percent discount for sales or company promotion applied credits</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Percent discount for sales or company promotion applied credits</inlineHelpText>
+    <label>Percent Discount</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Percent</type>
+</CustomField>

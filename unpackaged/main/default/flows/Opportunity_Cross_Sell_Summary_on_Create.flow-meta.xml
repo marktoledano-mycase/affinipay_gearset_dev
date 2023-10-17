@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <decisions>
+        <name>Account_Status_Check</name>
+        <label>Account Status Check</label>
+        <locationX>1077</locationX>
+        <locationY>810</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Null_Account</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Account</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Null Account</label>
+        </rules>
+        <rules>
+            <name>No_Active_Status</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>f_CrossSellBase</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>None</stringValue>
+                </rightValue>
+            </conditions>
+            <label>No Active Status</label>
+        </rules>
+        <rules>
+            <name>LawPay_Cross_Sell</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>f_CrossSellBase</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>MyCase</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>LP_Cross_Sell_to_MC_Customer</targetReference>
+            </connector>
+            <label>LawPay Cross Sell</label>
+        </rules>
+        <rules>
+            <name>MC_LPP_Cross_Sell</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>f_CrossSellBase</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>LawPay</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>MC_Cross_Sell_to_LP_Customer</targetReference>
+            </connector>
+            <label>MC/LPP Cross Sell</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Active_Contract_Check</name>
+        <label>Active Contract Check</label>
+        <locationX>660</locationX>
+        <locationY>546</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Check_Account_Status</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Active_Subscription_Contract</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Account</targetReference>
+            </connector>
+            <label>Check Account Status</label>
+        </rules>
+        <rules>
+            <name>LawPay_Customer_Cross_Sell</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Active_Subscription_Contract.Record_Type_Name__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>LawPay</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>MC_Cross_Sell_to_LP_Customer</targetReference>
+            </connector>
+            <label>LawPay Customer Cross-Sell</label>
+        </rules>
+        <rules>
+            <name>MC_Customer_Cross_Sell</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Active_Subscription_Contract.Record_Type_Name__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>MyCase</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>LP_Cross_Sell_to_MC_Customer</targetReference>
+            </connector>
+            <label>MC Customer Cross-Sell</label>
+        </rules>
+        <rules>
+            <name>LPP_Cross_Sell</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Record_Type_Name.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>LawPay Software</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>MC_Cross_Sell_to_LP_Customer</targetReference>
+            </connector>
+            <label>LPP Cross-Sell</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Record_Type_Check</name>
+        <label>Record Type Check</label>
+        <locationX>432</locationX>
+        <locationY>338</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Check_for_Cross_Sell</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Record_Type_Name.Name</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Parent</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Record_Type_Name.Name</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Integrations</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>f_SubscriptionContractBrand</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Not Applicable</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Active_Subscription_Contract</targetReference>
+            </connector>
+            <label>Check for Cross-Sell</label>
+        </rules>
+    </decisions>
+    <description>Before save on create flow that looks for active contract from LawPay or MyCase to summarize cross-sell</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>BeginningOfMonth</name>
+        <dataType>Date</dataType>
+        <expression>DATE( YEAR({!$Flow.CurrentDate}), MONTH({!$Flow.CurrentDate}), 1)</expression>
+    </formulas>
+    <formulas>
+        <name>f_CrossSellBase</name>
+        <dataType>String</dataType>
+        <expression>IF( 
+OR( {!Record_Type_Name.Name} = &quot;MyCase&quot;, {!Record_Type_Name.Name} = &quot;LawPay Software&quot;) ,
+CASE( {!Account.LawPay_Customer_Status__c}, &quot;Active&quot;, 
+&quot;LawPay&quot;, &quot;None&quot;),
+CASE( {!Account.MyCase_Customer_Status__c}, &quot;Active&quot;, 
+&quot;MyCase&quot;, &quot;None&quot;)
+)</expression>
+    </formulas>
+    <formulas>
+        <name>f_SubscriptionContractBrand</name>
+        <dataType>String</dataType>
+        <expression>CASE( {!Record_Type_Name.Name}, 
+&quot;LawPay Payments&quot;, &quot;MyCase&quot;, 
+&quot;MyCase&quot;, &quot;LawPay&quot;, 
+&quot;LawPay Software&quot;, &quot;LawPay&quot;,
+&quot;Not Applicable&quot;)</expression>
+    </formulas>
+    <interviewLabel>Opportunity: Cross-Sell Summary on Create {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity: Cross-Sell Summary on Create</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Account</name>
+        <label>Account</label>
+        <locationX>678</locationX>
+        <locationY>814</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Account_Status_Check</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Active_Subscription_Contract</name>
+        <label>Active Subscription Contract</label>
+        <locationX>668</locationX>
+        <locationY>336</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Active_Contract_Check</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Record_Type_Name__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>f_SubscriptionContractBrand</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Effective_Date__c</field>
+            <operator>LessThan</operator>
+            <value>
+                <elementReference>BeginningOfMonth</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Active</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Account__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Contract__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Record_Type_Name</name>
+        <label>Record Type Name</label>
+        <locationX>275</locationX>
+        <locationY>336</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Record_Type_Check</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.RecordTypeId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>RecordType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>LP_Cross_Sell_to_MC_Customer</name>
+        <label>LP Cross-Sell to MC Customer</label>
+        <locationX>1076</locationX>
+        <locationY>421</locationY>
+        <inputAssignments>
+            <field>Cross_Sell_Base__c</field>
+            <value>
+                <stringValue>MyCase</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>MC_Cross_Sell_to_LP_Customer</name>
+        <label>MC Cross-Sell to LP Customer</label>
+        <locationX>954</locationX>
+        <locationY>657</locationY>
+        <inputAssignments>
+            <field>Cross_Sell_Base__c</field>
+            <value>
+                <stringValue>LawPay</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>149</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Record_Type_Name</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Bypass_VR_and_Automation__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

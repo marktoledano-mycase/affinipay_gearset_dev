@@ -1,0 +1,18 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">Hi {{{Recipient.FirstName}}},<br />
+<br />
+We are sorry to hear that you wish to cancel your MyCase website subscription.<br />
+<br />
+<strong>In order to complete this request, please reply with the following information:</strong><br />
+<br />
+- What day should the site be removed from public view? For information, you are paid through<b>&nbsp;<i><u>(enter next billing date here)</u></i></b>.&nbsp;<br />
+- Since we are always looking to improve our products and services, can you please let us know why you've decided to cancel your MyCase website subscription?<br />
+<br />
+Thank you,<br />
+{{{Sender.FirstName}}}<br />
+MyCase Website Services Team<br />
+Case #{{{Case.CaseNumber}}}</body>
+</html>

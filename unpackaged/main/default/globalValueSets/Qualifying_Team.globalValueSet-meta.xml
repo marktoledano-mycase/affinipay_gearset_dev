@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>LawPay Customer Success</fullName>
+        <default>false</default>
+        <label>LawPay Customer Success</label>
+    </customValue>
+    <customValue>
+        <fullName>LawPay Customer Support</fullName>
+        <default>false</default>
+        <label>LawPay Customer Support</label>
+    </customValue>
+    <customValue>
+        <fullName>LawPay Engagement</fullName>
+        <default>false</default>
+        <label>LawPay Engagement</label>
+    </customValue>
+    <customValue>
+        <fullName>MyCase Accounting</fullName>
+        <default>false</default>
+        <label>MyCase Accounting</label>
+    </customValue>
+    <customValue>
+        <fullName>MyCase Customer Engagement</fullName>
+        <default>false</default>
+        <label>MyCase Customer Engagement</label>
+    </customValue>
+    <customValue>
+        <fullName>MyCase Onboarding</fullName>
+        <default>false</default>
+        <label>MyCase Onboarding</label>
+    </customValue>
+    <customValue>
+        <fullName>MyCase Support</fullName>
+        <default>false</default>
+        <label>MyCase Support</label>
+    </customValue>
+    <customValue>
+        <fullName>MyCase Websites</fullName>
+        <default>false</default>
+        <label>MyCase Websites</label>
+    </customValue>
+    <description>Field on Contacts, Leads, Inbound Requests</description>
+    <masterLabel>Qualifying Team</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

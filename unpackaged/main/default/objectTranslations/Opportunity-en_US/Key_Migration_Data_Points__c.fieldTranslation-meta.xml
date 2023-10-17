@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Key Migration Data Points --></label>
+        <name>Key_Migration_Data_Points__c</name>
+        <picklistValues>
+            <masterLabel>Calendar</masterLabel>
+            <translation><!-- Calendar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client Trust</masterLabel>
+            <translation><!-- Client Trust --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Costs</masterLabel>
+            <translation><!-- Costs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Documents</masterLabel>
+            <translation><!-- Documents --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tasks</masterLabel>
+            <translation><!-- Tasks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Worker Assignments</masterLabel>
+            <translation><!-- Worker Assignments --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

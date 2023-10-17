@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Displays the Associated Main Product for the Addon User record based on the SKU Product --></help>
+        <label><!-- Associated Main Product ID --></label>
+        <name>Associated_Main_Product_ID__c</name>
+    </CustomFieldTranslation>

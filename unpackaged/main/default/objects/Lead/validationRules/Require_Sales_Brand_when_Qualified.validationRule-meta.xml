@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Sales_Brand_when_Qualified</fullName>
+    <active>true</active>
+    <description>Before converting a Lead to an Opportunity, we expect Sales update that Lead to “Qualified.” They will be prompted with required 
+
+Sales Brand is required before Lead conversion to ensure the Lead converts to the appropriate Opportunity Record Type.</description>
+    <errorConditionFormula>$Permission.Bypass_Defined_VR_s = FALSE &amp;&amp;
+Bypass_VR_and_Automation__c = FALSE &amp;&amp;
+
+(
+   ISNEW() ||
+   ISCHANGED(Status) ||
+   ISCHANGED(Sales_Brand__c)
+) &amp;&amp;
+
+TEXT(Status) = &quot;Qualified&quot; &amp;&amp;
+ISBLANK(TEXT(Sales_Brand__c))</errorConditionFormula>
+    <errorDisplayField>Sales_Brand__c</errorDisplayField>
+    <errorMessage>Sales Brand is required when Lead Status is &quot;Qualified.&quot;</errorMessage>
+</ValidationRule>

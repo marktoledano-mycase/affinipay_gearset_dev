@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_Onboarding_Record__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Overrides the 3 or more requirement for creating onboarding record when Opportunity moves to Closed Won</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Creates Onboarding record when opportunity is for less than 3 users</inlineHelpText>
+    <label>Create Onboarding Record</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

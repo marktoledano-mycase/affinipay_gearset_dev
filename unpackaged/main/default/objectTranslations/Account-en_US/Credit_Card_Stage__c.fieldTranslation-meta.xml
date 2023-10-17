@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Credit Card Stage --></label>
+        <name>Credit_Card_Stage__c</name>
+        <picklistValues>
+            <masterLabel>Credentialing Complete</masterLabel>
+            <translation><!-- Credentialing Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Needs Review</masterLabel>
+            <translation><!-- Needs Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready to Transmit to Wells Fargo</masterLabel>
+            <translation><!-- Ready to Transmit to Wells Fargo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transmitted to Wells Fargo</masterLabel>
+            <translation><!-- Transmitted to Wells Fargo --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

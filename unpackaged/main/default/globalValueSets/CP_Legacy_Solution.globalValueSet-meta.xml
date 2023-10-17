@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Abacus</fullName>
+        <default>false</default>
+        <label>Abacus</label>
+    </customValue>
+    <customValue>
+        <fullName>ACT</fullName>
+        <default>false</default>
+        <label>ACT</label>
+    </customValue>
+    <customValue>
+        <fullName>Aderant Total Office</fullName>
+        <default>false</default>
+        <label>Aderant Total Office</label>
+    </customValue>
+    <customValue>
+        <fullName>Amicus</fullName>
+        <default>false</default>
+        <label>Amicus</label>
+    </customValue>
+    <customValue>
+        <fullName>CasePacer</fullName>
+        <default>false</default>
+        <label>CasePacer</label>
+    </customValue>
+    <customValue>
+        <fullName>CASEpeer</fullName>
+        <default>false</default>
+        <label>CASEpeer</label>
+    </customValue>
+    <customValue>
+        <fullName>Client Profiles</fullName>
+        <default>false</default>
+        <label>Client Profiles</label>
+    </customValue>
+    <customValue>
+        <fullName>Clio</fullName>
+        <default>false</default>
+        <label>Clio</label>
+    </customValue>
+    <customValue>
+        <fullName>Cloudlex</fullName>
+        <default>false</default>
+        <label>Cloudlex</label>
+    </customValue>
+    <customValue>
+        <fullName>CoCounselor</fullName>
+        <default>false</default>
+        <label>CoCounselor</label>
+    </customValue>
+    <customValue>
+        <fullName>CosmoLex</fullName>
+        <default>false</default>
+        <label>CosmoLex</label>
+    </customValue>
+    <customValue>
+        <fullName>Excel</fullName>
+        <default>false</default>
+        <label>Excel</label>
+    </customValue>
+    <customValue>
+        <fullName>File Manager</fullName>
+        <default>false</default>
+        <label>File Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Filevine</fullName>
+        <default>false</default>
+        <label>Filevine</label>
+    </customValue>
+    <customValue>
+        <fullName>G-Suite</fullName>
+        <default>false</default>
+        <label>G-Suite</label>
+    </customValue>
+    <customValue>
+        <fullName>Homemade Solution</fullName>
+        <default>false</default>
+        <label>Homemade Solution</label>
+    </customValue>
+    <customValue>
+        <fullName>LawBase</fullName>
+        <default>false</default>
+        <label>LawBase</label>
+    </customValue>
+    <customValue>
+        <fullName>Litify</fullName>
+        <default>false</default>
+        <label>Litify</label>
+    </customValue>
+    <customValue>
+        <fullName>Merus Case</fullName>
+        <default>false</default>
+        <label>Merus Case</label>
+    </customValue>
+    <customValue>
+        <fullName>MyCase</fullName>
+        <default>false</default>
+        <label>MyCase</label>
+    </customValue>
+    <customValue>
+        <fullName>Needles</fullName>
+        <default>false</default>
+        <label>Needles</label>
+    </customValue>
+    <customValue>
+        <fullName>Needles NEOS</fullName>
+        <default>false</default>
+        <label>Needles NEOS</label>
+    </customValue>
+    <customValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <label>None</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Paper</fullName>
+        <default>false</default>
+        <label>Paper</label>
+    </customValue>
+    <customValue>
+        <fullName>PC Law</fullName>
+        <default>false</default>
+        <label>PC Law</label>
+    </customValue>
+    <customValue>
+        <fullName>Practice Master</fullName>
+        <default>false</default>
+        <label>Practice Master</label>
+    </customValue>
+    <customValue>
+        <fullName>Practice Panther</fullName>
+        <default>false</default>
+        <label>Practice Panther</label>
+    </customValue>
+    <customValue>
+        <fullName>Prevail</fullName>
+        <default>false</default>
+        <label>Prevail</label>
+    </customValue>
+    <customValue>
+        <fullName>ProLaw</fullName>
+        <default>false</default>
+        <label>ProLaw</label>
+    </customValue>
+    <customValue>
+        <fullName>Rocket Matter</fullName>
+        <default>false</default>
+        <label>Rocket Matter</label>
+    </customValue>
+    <customValue>
+        <fullName>Salesforce</fullName>
+        <default>false</default>
+        <label>Salesforce</label>
+    </customValue>
+    <customValue>
+        <fullName>Smart Advocate</fullName>
+        <default>false</default>
+        <label>Smart Advocate</label>
+    </customValue>
+    <customValue>
+        <fullName>Smokeball</fullName>
+        <default>false</default>
+        <label>Smokeball</label>
+    </customValue>
+    <customValue>
+        <fullName>Time Matters</fullName>
+        <default>false</default>
+        <label>Time Matters</label>
+    </customValue>
+    <customValue>
+        <fullName>Trial Works</fullName>
+        <default>false</default>
+        <label>Trial Works</label>
+    </customValue>
+    <customValue>
+        <fullName>Tritek</fullName>
+        <default>false</default>
+        <label>Tritek</label>
+    </customValue>
+    <customValue>
+        <fullName>Zola</fullName>
+        <default>false</default>
+        <label>Zola</label>
+    </customValue>
+    <description>Requested by Casepeer</description>
+    <masterLabel>CP Legacy Solution</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Integrations Requested --></label>
+        <name>Integrations_Requested__c</name>
+        <picklistValues>
+            <masterLabel>ACT</masterLabel>
+            <translation><!-- ACT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Abacus</masterLabel>
+            <translation><!-- Abacus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aderant</masterLabel>
+            <translation><!-- Aderant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alert Communications</masterLabel>
+            <translation><!-- Alert Communications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Amicus</masterLabel>
+            <translation><!-- Amicus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ApexChat</masterLabel>
+            <translation><!-- ApexChat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Calendar Rules</masterLabel>
+            <translation><!-- Calendar Rules --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Capterra</masterLabel>
+            <translation><!-- Capterra --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Case Status</masterLabel>
+            <translation><!-- Case Status --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CasePacer</masterLabel>
+            <translation><!-- CasePacer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ChartSquad</masterLabel>
+            <translation><!-- ChartSquad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client Chat Live</masterLabel>
+            <translation><!-- Client Chat Live --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client Profiles</masterLabel>
+            <translation><!-- Client Profiles --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Clio</masterLabel>
+            <translation><!-- Clio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cloudlex</masterLabel>
+            <translation><!-- Cloudlex --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CoCounselor</masterLabel>
+            <translation><!-- CoCounselor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CosmoLex</masterLabel>
+            <translation><!-- CosmoLex --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custom Solution</masterLabel>
+            <translation><!-- Custom Solution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dropbox</masterLabel>
+            <translation><!-- Dropbox --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>File Manager</masterLabel>
+            <translation><!-- File Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Filevine</masterLabel>
+            <translation><!-- Filevine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Growpath</masterLabel>
+            <translation><!-- Growpath --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kenect</masterLabel>
+            <translation><!-- Kenect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LawBase</masterLabel>
+            <translation><!-- LawBase --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LawPay</masterLabel>
+            <translation><!-- LawPay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LeadDocket</masterLabel>
+            <translation><!-- LeadDocket --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Litify</masterLabel>
+            <translation><!-- Litify --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mailchimp</masterLabel>
+            <translation><!-- Mailchimp --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Merus Case</masterLabel>
+            <translation><!-- Merus Case --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Milestones</masterLabel>
+            <translation><!-- Milestones --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Multus Medical</masterLabel>
+            <translation><!-- Multus Medical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MyCase</masterLabel>
+            <translation><!-- MyCase --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Needles</masterLabel>
+            <translation><!-- Needles --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Needles Neos</masterLabel>
+            <translation><!-- Needles Neos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ngage Live Chat</masterLabel>
+            <translation><!-- Ngage Live Chat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OneDrive</masterLabel>
+            <translation><!-- OneDrive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OneDrive for Business</masterLabel>
+            <translation><!-- OneDrive for Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PC Law</masterLabel>
+            <translation><!-- PC Law --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Practice Master</masterLabel>
+            <translation><!-- Practice Master --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Practice Panther</masterLabel>
+            <translation><!-- Practice Panther --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prevail</masterLabel>
+            <translation><!-- Prevail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProLaw</masterLabel>
+            <translation><!-- ProLaw --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quickbooks</masterLabel>
+            <translation><!-- Quickbooks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Records on Time</masterLabel>
+            <translation><!-- Records on Time --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rocket Matter</masterLabel>
+            <translation><!-- Rocket Matter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Salesforce</masterLabel>
+            <translation><!-- Salesforce --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Smart Advocate</masterLabel>
+            <translation><!-- Smart Advocate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Smokeball</masterLabel>
+            <translation><!-- Smokeball --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Soluno</masterLabel>
+            <translation><!-- Soluno --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tabs 3</masterLabel>
+            <translation><!-- Tabs 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Time Matters</masterLabel>
+            <translation><!-- Time Matters --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trial Works</masterLabel>
+            <translation><!-- Trial Works --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tritek</masterLabel>
+            <translation><!-- Tritek --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Zola</masterLabel>
+            <translation><!-- Zola --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

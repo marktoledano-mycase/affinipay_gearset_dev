@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Close_as_Admin_Dupe_MyCase_Websites</fullName>
+    <availability>online</availability>
+    <description>R176835</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Close as Admin/Dupe</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/13.0/connection.js&quot;)} 
+var caseObj = new sforce.SObject(&quot;Case&quot;); 
+caseObj.Id = &#39;{!Case.Id}&#39;; 
+caseObj.Status = &#39;Closed&#39;; 
+caseObj.Type = &#39;Other&#39;; 
+caseObj.Reason = &#39;Admin/Duplicates&#39;; 
+caseObj.Case_Sub_Reason__c = null; 
+caseObj.Case_Resolution__c = &#39;E-Mail&#39;; 
+caseObj.Level_MyCase_Websites__c = &#39;0&#39;; 
+if(&#39;{!Case.RecordType}&#39; != &#39;Risk&#39;){ 
+caseObj.Case_Resolution__c = &#39;Admin/Duplicate&#39;; 
+} 
+var result = sforce.connection.update([caseObj]); 
+if (result[0].success==&#39;false&#39;) { 
+alert(result[0].errors.message); 
+} else { 
+location.reload(true); 
+}</url>
+</WebLink>

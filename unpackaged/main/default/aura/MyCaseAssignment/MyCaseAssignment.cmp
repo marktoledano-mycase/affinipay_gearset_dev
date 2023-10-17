@@ -1,0 +1,29 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" controller="MyCaseAssignmentComponentController">
+        <aura:attribute name = "casedata" type = "Object" />
+        <aura:attribute name = "casecolumns" type = "List" />
+        <aura:attribute name="showCaseTable" type="Boolean" default="false"/>
+        <aura:handler name = "init" value = "{!this}" action = "{!c.init}" />
+
+        <div class = "slds-align_absolute-center">
+            <lightning:buttonGroup>
+                <lightning:button label = "Assign Next" onclick="{!c.assignNextCase}" disabled="{!empty(v.casedata)}" />
+                <lightning:button label = "Refresh" onclick="{!c.refresh}" />
+            </lightning:buttonGroup>
+        </div>
+
+        <aura:if isTrue = "{!v.showCaseTable}">
+            <div class = "slds-m-top_small">
+                <lightning:datatable data = "{!v.casedata}"
+                    columns = "{!v.casecolumns}"
+                    keyField = "Id"
+                    hideCheckboxColumn = "true"
+                    wrapTextMaxLines = "3" />
+
+                <aura:if isTrue = "{!empty(v.casedata)}">
+                    <div class = "slds-m-around_xx-large slds-align_absolute-center slds-text-heading_medium">
+                        There are no cases to assign!
+                    </div>
+                </aura:if>
+            </div>
+        </aura:if>
+</aura:component>

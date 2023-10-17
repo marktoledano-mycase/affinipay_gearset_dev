@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Lead Channel as captured on the Primary Contact record --></help>
+        <label><!-- Lead Channel --></label>
+        <name>Lead_Channel__c</name>
+    </CustomFieldTranslation>

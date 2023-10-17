@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Reflects the value in Total Users field on the related Product Environment --></help>
+        <label><!-- Total Users (PE) --></label>
+        <name>Total_Users_PE__c</name>
+    </CustomFieldTranslation>

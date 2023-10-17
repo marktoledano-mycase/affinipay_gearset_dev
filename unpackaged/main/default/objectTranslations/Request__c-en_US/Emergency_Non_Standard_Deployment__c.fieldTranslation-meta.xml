@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- please include details in BysSys Details section of request --></help>
+        <label><!-- Emergency /Non-Standard Deployment --></label>
+        <name>Emergency_Non_Standard_Deployment__c</name>
+    </CustomFieldTranslation>

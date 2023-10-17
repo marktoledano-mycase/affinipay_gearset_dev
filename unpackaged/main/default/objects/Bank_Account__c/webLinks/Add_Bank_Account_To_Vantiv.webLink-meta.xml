@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Add_Bank_Account_To_Vantiv</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Add Bank Account To Vantiv</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)} 
+
+if(&#39;Ready To Transmit&#39; != &quot;{!Bank_Account__c.Vantiv_Bank_Account_Onboarding_Status__c}&quot;) 
+{ 
+alert(&#39;Vantiv Onboarding status is not &quot;Ready To Transmit&quot;. Please update the record and retry.&#39;); 
+}
+else if(&quot;{!Bank_Account__c.Vantiv_Sub_Merchant_Id__c}&quot; != null &amp;&amp;
+         &quot;{!Bank_Account__c.Vantiv_Sub_Merchant_Id__c}&quot; != &#39;&#39; &amp;&amp;
+           &quot;{!Bank_Account__c.Vantiv_Sub_Merchant_Id__c}&quot; != undefined )
+{
+alert(&#39;Vantiv Sub-Merchant Id is available for this bank account.&#39;);
+}
+else 
+{ 
+var r = confirm(&#39;Bank account will be sent to Vantiv; continue?&#39;) 
+if(r==true) 
+{ 
+var result = sforce.apex.execute(&quot;VantivButtons&quot;, &quot;callSubMerchantCreateReq&quot;, { 
+id: &quot;{!Bank_Account__c.Id}&quot;}); 
+var parsed = JSON.parse(result); 
+if (parsed.didPass == true) 
+{ 
+document.location.reload(true); 
+alert(parsed.result);	
+} 
+else 
+{ 
+document.location.reload(true); 
+alert(parsed.result); 
+} 
+} 
+}</url>
+</WebLink>

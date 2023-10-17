@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Audit_Incorrect_MC_Close_Date__c</fullName>
+    <externalId>false</externalId>
+    <formula>RecordType.Name = &quot;MyCase&quot; &amp;&amp;
+NOT(ISBLANK(Product_Environment__c)) &amp;&amp;
+NOT(ISBLANK(Product_Environment__r.First_Purchase_Date__c)) &amp;&amp;
+CloseDate &lt;&gt; Product_Environment__r.First_Purchase_Date__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Audit - Incorrect MC Close Date</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

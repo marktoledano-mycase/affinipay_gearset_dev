@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Available_Integration__c$Id</field>
+    </columns>
+    <columns>
+        <field>Available_Integration__c$Name</field>
+    </columns>
+    <columns>
+        <field>Available_Integration__c$Name__c</field>
+    </columns>
+    <columns>
+        <field>Available_Integration__c$Partnership__c</field>
+    </columns>
+    <columns>
+        <field>Available_Integration__c$Partner_Account__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Available_Integration__c$Product_Line__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>MyCase</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Available Integrations for MyCase</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Available_Integrations__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Available_Integration__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

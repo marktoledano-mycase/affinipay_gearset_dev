@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <description>Summarizes what was requested by the prospect/customer</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Summarizes what was requested by the prospect/customer</inlineHelpText>
+    <label>Type</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Call In</fullName>
+                <default>false</default>
+                <label>Call In</label>
+            </value>
+            <value>
+                <fullName>Contact Request</fullName>
+                <default>false</default>
+                <label>Contact Request</label>
+            </value>
+            <value>
+                <fullName>CSQL</fullName>
+                <default>false</default>
+                <label>CSQL</label>
+            </value>
+            <value>
+                <fullName>Demo Request</fullName>
+                <default>false</default>
+                <label>Demo Request</label>
+            </value>
+            <value>
+                <fullName>Events</fullName>
+                <default>false</default>
+                <label>Events</label>
+            </value>
+            <value>
+                <fullName>Live Chat</fullName>
+                <default>false</default>
+                <label>Live Chat</label>
+            </value>
+            <value>
+                <fullName>MQA</fullName>
+                <default>false</default>
+                <label>MQA</label>
+            </value>
+            <value>
+                <fullName>Referral</fullName>
+                <default>false</default>
+                <label>Referral</label>
+            </value>
+            <value>
+                <fullName>Score Threshold</fullName>
+                <default>false</default>
+                <label>Score Threshold</label>
+            </value>
+            <value>
+                <fullName>Self-Serve Sign Up</fullName>
+                <default>false</default>
+                <label>Self-Serve Sign Up</label>
+            </value>
+            <value>
+                <fullName>Sign Up</fullName>
+                <default>false</default>
+                <label>Sign Up</label>
+            </value>
+            <value>
+                <fullName>Software Advice</fullName>
+                <default>false</default>
+                <label>Software Advice</label>
+            </value>
+            <value>
+                <fullName>Trial</fullName>
+                <default>false</default>
+                <label>Trial</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

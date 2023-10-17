@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>Trial_Request__c.SQL__c:SUM / RowCount</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Conversion Rate</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>IF(Trial_Request__c.SQL__c:SUM = 0, 0, Trial_Request__c.Won__c:SUM/Trial_Request__c.SQL__c:SUM)</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA2</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>SQL Win Rate</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Trial_Request__c.SQL__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Trial_Request__c.Won__c</field>
+    </columns>
+    <columns>
+        <field>Trial_Request__c.MQL_Date__c</field>
+    </columns>
+    <columns>
+        <field>CDF1</field>
+    </columns>
+    <columns>
+        <field>Trial_Request__c.LeadSource__c</field>
+    </columns>
+    <columns>
+        <field>Trial_Request__c.Lead_Channel__c</field>
+    </columns>
+    <currency>USD</currency>
+    <customDetailFormulas>
+        <calculatedFormula>IF(NOT(ISBLANK(Trial_Request__c.Opportunity__c)), 
+
+&quot;3 - Opportunity&quot;, 
+
+CASE( Trial_Request__c.Person_Owner_Role__c,
+
+&quot;EXECUTIVE&quot;, &quot;0 - Assignment Issue&quot;,
+&quot;System Admins&quot;, &quot;0 - Assignment Issue&quot;,
+&quot;Systems Intergration&quot;, &quot;0 - Assignment Issue&quot;,
+&quot;Queue&quot;, &quot;0 - Assignment Issue&quot;,
+
+CASE(Trial_Request__c.Person_Status__c, 
+&quot;New&quot;, &quot;1 - Not Yet Worked&quot;,
+&quot;Working&quot;, &quot;2 - Working/Engaged&quot;,
+&quot;Engaged&quot;, &quot;2 - Working/Engaged&quot;,
+&quot;Marketing Nurture&quot;, &quot;0 - Marketing Nurture&quot;,
+&quot;Disqualified&quot;, &quot;0 - Disqualified&quot;, 
+&quot;2 - Working/Engaged&quot;)
+))</calculatedFormula>
+        <dataType>Text</dataType>
+        <developerName>CDF1</developerName>
+        <label>Lead Status</label>
+        <scale>2</scale>
+    </customDetailFormulas>
+    <description>Grouped by the type of inbound request</description>
+    <filter>
+        <criteriaItems>
+            <column>Trial_Request__c.MQL_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Existing Customer,Non-MQL Interaction</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Trial_Request__c.Person_Disqualified_Reason__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>UW Junk,UW Fraud,UW Payment Attempt,UW Not Approved Business</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Trial_Request__c.Brand__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Trial_Request__c.Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Self-Serve Sign Up</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Trial_Request__c.Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Score Threshold</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Trial_Request__c.MQL_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>LAST_N_MONTHS:3</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Trial_Request__c.MQL_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>5/4/2023</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Trial_Request__c.Person_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Disqualified</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Trial_Request__c.Brand__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Trial_Request__c.Type__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Trial_Request__c.Person_Disqualified_Reason__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>MQL DQ Summary</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Trial_Request__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Trial_Request__c.MQL_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

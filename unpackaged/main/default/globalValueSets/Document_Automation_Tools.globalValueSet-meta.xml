@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Doxsera</fullName>
+        <default>false</default>
+        <label>Doxsera</label>
+    </customValue>
+    <customValue>
+        <fullName>HotDocs</fullName>
+        <default>false</default>
+        <label>HotDocs</label>
+    </customValue>
+    <customValue>
+        <fullName>Knackly</fullName>
+        <default>false</default>
+        <label>Knackly</label>
+    </customValue>
+    <customValue>
+        <fullName>Lawyaw</fullName>
+        <default>false</default>
+        <label>Lawyaw</label>
+    </customValue>
+    <customValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <label>None</label>
+    </customValue>
+    <customValue>
+        <fullName>Wealth Counsel</fullName>
+        <default>false</default>
+        <label>Wealth Counsel</label>
+    </customValue>
+    <masterLabel>Document Automation Tools</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

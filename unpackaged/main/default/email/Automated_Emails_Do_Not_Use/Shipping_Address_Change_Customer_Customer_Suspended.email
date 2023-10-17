@@ -1,0 +1,11 @@
+{!Account.Name} has had their Shipping Address updated to the following:
+
+{!Account.ShippingStreet} 
+{!Account.ShippingCity}, {!Account.ShippingState} {!Account.ShippingPostalCode}
+
+{!Account.Link}
+
+Please ensure that the Shipping Address is updated in Zoura.
+
+Kind Regards,
+Your Local Salesforce Team

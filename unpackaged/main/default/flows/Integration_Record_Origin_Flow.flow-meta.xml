@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <assignments>
+        <name>End_Flow</name>
+        <label>End Flow</label>
+        <locationX>1208</locationX>
+        <locationY>244</locationY>
+        <assignmentItems>
+            <assignToReference>EndFlow</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>End</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <constants>
+        <name>con_Integration_RecordID</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>01I0R000004E1Ct</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <name>con_ValuePlus_Opp_RecordID</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>0123g000000POjjAAG</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <description>do I really need the Workato User id here??</description>
+        <name>con_Workato_UserID</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>0050R00000A7cZEQAZ</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <name>Integration_Type</name>
+        <label>Integration Type</label>
+        <locationX>837</locationX>
+        <locationY>381</locationY>
+        <defaultConnector>
+            <targetReference>End_Flow</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>LawToolBox</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Integration__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>LawToolBox</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>LawToolBox_Subflow</targetReference>
+            </connector>
+            <label>LawToolBox</label>
+        </rules>
+        <rules>
+            <name>ClientCredit_Requested</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Integration__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>ClientCredit</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ClientCredit_Subflow</targetReference>
+            </connector>
+            <label>ClientCredit_Requested</label>
+        </rules>
+    </decisions>
+    <description>The starting point for all Integration flows.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>for_New_LTB_Opportunity_Name</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Name} &amp; &quot; - LawToolBox&quot;</expression>
+    </formulas>
+    <formulas>
+        <name>for_New_Opp_Close_Date</name>
+        <dataType>Date</dataType>
+        <expression>TODAY() + 7</expression>
+    </formulas>
+    <interviewLabel>Integration Record: Origin Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Integration Record: Origin Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>308</locationX>
+        <locationY>299</locationY>
+        <connector>
+            <targetReference>Integration_Type</targetReference>
+        </connector>
+        <object>Integrations__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+    <subflows>
+        <description>Integration Record (subflow): ClientCredit</description>
+        <name>ClientCredit_Subflow</name>
+        <label>ClientCredit Subflow</label>
+        <locationX>1203</locationX>
+        <locationY>383</locationY>
+        <flowName>Integration_Record_subflow_ClientCredit2</flowName>
+        <inputAssignments>
+            <name>sub_Record_ID</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>This launches the LawToolBox (LTB) subflow.</description>
+        <name>LawToolBox_Subflow</name>
+        <label>LawToolBox Subflow</label>
+        <locationX>1211</locationX>
+        <locationY>543</locationY>
+        <flowName>Integration_Record_subflow_LawToolBox_LTB</flowName>
+        <inputAssignments>
+            <name>sub_Integration_Status</name>
+            <value>
+                <elementReference>$Record.Status__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>sub_OpptyID_Current</name>
+            <value>
+                <elementReference>$Record.Opportunity__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>sub_OpptyID_Prior</name>
+            <value>
+                <elementReference>$Record__Prior.Opportunity__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>sub_Record_ID</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <textTemplates>
+        <description>No contact was matched with the MyCase Contact UUID for ClientCredit</description>
+        <name>NoContactFoundClientCredit</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>No contact was found for the CientCredit hand raiser.
+{!con_LineBreak}
+{!$Record.Id}
+{!$Record.Integration_Id__c}
+{!$Record.Integration__c}
+{!con_LineBreak}
+Locate the correct contact UUID and update the Integrations record so the hand-raiser can be sent to LawPay Support.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>text_Invalid_Owner_Email_Template</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;MyCase Sales,&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;A new MyCase Accounting Trial has been started and a new Opportunity has been auto-created.  During the creation of the opportunity, it was determined that the listed owner on the account is either the Integrations User or an inactive user account.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Please review The Account and opportunity and assign the correct owner.  &lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Account:&lt;/strong&gt; &lt;a href=&quot;https://mycasetrial--integ.lightning.force.com/lightning/r/Account/%7B!$Record.Id%7D/view&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;{!$Record.Name}&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Opportunity: &lt;/strong&gt;&lt;a href=&quot;https://mycasetrial--integ.lightning.force.com/lightning/r/Opportunity/%7B!var_New_Opportunity.Id%7D/view&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;{!var_New_Opportunity.Name}&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Owner Name:&lt;/strong&gt;&lt;span style=&quot;color: rgb(244, 4, 4);&quot;&gt; {!$Record.Account__r.Owner.Name}&lt;/span&gt;&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>text_Notify_LawPay_Support</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;Hello LawPay Support team,&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;This firm would like to be enabled with ClientCredit:&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Firm Name: &lt;/strong&gt;{!$Record.Account__r.Name}&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Contact Name:&lt;/strong&gt; {!var_Contact_Name}&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Contact Email Address:&lt;/strong&gt; {!var_Contact_Email_Address}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Thanks,&lt;/p&gt;&lt;p&gt;MyCase Team&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <description>To Notify LawPay Support team of a ClientCredit enablement request.</description>
+        <name>txt_Notify_LawPay_Support</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;Hello LawPay Support team,&lt;/p&gt;&lt;p&gt;{!con_LineBreak}&lt;/p&gt;&lt;p&gt;This firm would like to be enabled with ClientCredit:&lt;/p&gt;&lt;p&gt;{!con_LineBreak}&lt;/p&gt;&lt;p&gt;Firm Name: {!$Record.Account__r.Name}&lt;/p&gt;&lt;p&gt;Contact Name: {!var_Contact_Name}&lt;/p&gt;&lt;p&gt;Contact Email Address: {!var_Contact_Email_Address}&lt;/p&gt;&lt;p&gt;{!con_LineBreak}&lt;/p&gt;&lt;p&gt;Thanks, &lt;/p&gt;&lt;p&gt;MyCase Team&lt;/p&gt;</text>
+    </textTemplates>
+    <variables>
+        <name>con_LineBreak</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>EndFlow</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>var_Contact_Email_Address</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>var_Contact_Name</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>var_contacts_count</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <name>var_existing_Contacts</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Contact</objectType>
+    </variables>
+    <variables>
+        <name>var_New_Opportunity</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Opportunity</objectType>
+    </variables>
+    <variables>
+        <name>var_Open_Opps</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Opportunity</objectType>
+    </variables>
+    <variables>
+        <name>var_Open_Opps_Count</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+</Flow>

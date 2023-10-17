@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Brand__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Opportunity Brand</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AffiniPay</fullName>
+                <default>false</default>
+                <label>AffiniPay</label>
+            </value>
+            <value>
+                <fullName>CASEpeer</fullName>
+                <default>false</default>
+                <label>CASEpeer</label>
+            </value>
+            <value>
+                <fullName>ClientPay</fullName>
+                <default>false</default>
+                <label>ClientPay</label>
+            </value>
+            <value>
+                <fullName>CPACharge</fullName>
+                <default>false</default>
+                <label>CPACharge</label>
+            </value>
+            <value>
+                <fullName>Docketwise</fullName>
+                <default>false</default>
+                <label>Docketwise</label>
+            </value>
+            <value>
+                <fullName>LawPay Payments</fullName>
+                <default>false</default>
+                <label>LawPay Payments</label>
+            </value>
+            <value>
+                <fullName>MyCase</fullName>
+                <default>false</default>
+                <label>MyCase</label>
+            </value>
+            <value>
+                <fullName>Soluno</fullName>
+                <default>false</default>
+                <label>Soluno</label>
+            </value>
+            <value>
+                <fullName>Websites</fullName>
+                <default>false</default>
+                <label>Websites</label>
+            </value>
+            <value>
+                <fullName>Woodpecker</fullName>
+                <default>false</default>
+                <label>Woodpecker</label>
+            </value>
+            <value>
+                <fullName>LawPay Software</fullName>
+                <default>false</default>
+                <label>LawPay Software</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

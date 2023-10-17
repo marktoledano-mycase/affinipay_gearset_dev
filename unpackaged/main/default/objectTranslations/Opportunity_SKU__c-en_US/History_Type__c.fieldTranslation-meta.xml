@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Displays what is needed for the processing of the Contract SKU Transaction processing --></help>
+        <label><!-- History Type --></label>
+        <name>History_Type__c</name>
+    </CustomFieldTranslation>

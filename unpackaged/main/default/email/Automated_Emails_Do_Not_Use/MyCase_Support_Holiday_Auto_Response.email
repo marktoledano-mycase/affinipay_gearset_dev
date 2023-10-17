@@ -1,0 +1,33 @@
+Hello,
+
+We are currently closed in observance of New Years and will return on Tuesday, January 3.
+
+We are dedicated to excelling in our service to you, so we want you to know we have received your request and it is being routed to the appropriate person for action and follow-up when we return.
+
+In the meantime, please check out the following Help & Training resources that may help:
+
+- Search the Help File: https://help.mycase.com/s/
+
+- View Training Videos: http://www.mycase.com/support/webinars
+
+- View real-time information on system performance: http://status.mycase.com/
+
+Should you need to refer to this case in the future, here are the details:
+
+Case Number: {!Case.CaseNumber} 
+Case Created Date: {!Case.CreatedDate} 
+Case Subject: {!Case.Subject} 
+Case Description: {!Case.Description} 
+
+
+All the best,
+
+MyCase Customer Success Team
+
+MyCase
+9201 Spectrum Center Blvd. Ste. 100 | San Diego, CA | 92123
+Phone: 805.571.8062 
+www.mycase.com
+------------------------------ 
+
+{!Case.Thread_Id}

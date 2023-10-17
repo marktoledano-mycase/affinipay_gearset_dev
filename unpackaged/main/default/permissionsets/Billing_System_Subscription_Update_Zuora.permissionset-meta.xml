@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>Billing_System_Subscription_Update_Zuora</name>
+    </customPermissions>
+    <description>Assign this permission set to users who should have access to adjusting firm subscription tiers and billing cycles in Zuora</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Billing System Subscription Update Zuora</label>
+    <license>Salesforce</license>
+</PermissionSet>

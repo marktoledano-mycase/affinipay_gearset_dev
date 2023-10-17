@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>of_Websites__c</fullName>
+    <description>R152407</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Count of V+ Website records where Stage = Live or Site Delivered</inlineHelpText>
+    <label>Websites Enabled</label>
+    <summaryFilterItems>
+        <field>ValuePlus__c.RecordTypeId</field>
+        <operation>equals</operation>
+        <value>MyCase Websites</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>ValuePlus__c.Stage__c</field>
+        <operation>equals</operation>
+        <value>Live, Site Delivered/Final Changes</value>
+    </summaryFilterItems>
+    <summaryForeignKey>ValuePlus__c.Account__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

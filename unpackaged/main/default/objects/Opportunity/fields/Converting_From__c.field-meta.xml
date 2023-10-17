@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Converting_From__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Identify the software that the firm moved from when selecting Soluno,</inlineHelpText>
+    <label>Converting From</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Software_List</valueSetName>
+    </valueSet>
+</CustomField>

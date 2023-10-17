@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MC_In_Trial_Formula__c</fullName>
+    <description>R178678</description>
+    <externalId>false</externalId>
+    <formula>IF( MyCase_Trial_Expiration__c &lt; TODAY()|| ISNULL(MyCase_Trial_Expiration__c ),False,True)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>MC In Trial Formula</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

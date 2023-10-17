@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Auto-sent when direct purchase is initiated</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MyCase</letterhead>
+    <name>Direct Purchase Email Activation</name>
+    <style>freeForm</style>
+    <subject>MyCase Account Activation - {!Direct_Purchase_User__c.Firm_Name__c}</subject>
+    <textOnly>Hi {!Direct_Purchase_User__c.First_Name__c},
+
+
+
+Thank you for signing up for MyCase! Please use the link below to activate your firm:
+
+
+
+{!Direct_Purchase_User__c.Activation_Link__c}
+
+
+
+Sincerely,
+
+The MyCase Team</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

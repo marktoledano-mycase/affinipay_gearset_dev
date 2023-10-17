@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Auto-sent when firm&#39;s subscription is cancelled</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MyCase_Inc_v3</letterhead>
+    <name>MyCase Subscription Cancellation</name>
+    <style>freeForm</style>
+    <subject>Your Subscription Has Been Cancelled</subject>
+    <textOnly>Hi {!Billing_Account__c.Bill_To_Name__c},
+
+
+
+This email confirms your MyCase account has been cancelled.
+
+
+
+Your account has been placed into a read-only mode for the next 30 days. After these 30 days, you will lose access to the data in your account. If at any time during these 30 days, you’d like to reactivate your subscription, login to your MyCase account and update your payment information.
+
+
+
+If you have any questions, please feel free to contact us at support@mycase.com or call (800) 571-8062.
+
+
+
+Thank you,
+
+The MyCase Team
+
+
+
+------------------------------
+
+
+
+Find Us Online --
+
+www.mycase.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

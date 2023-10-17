@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Person_Funnel_Status__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISBLANK(Opportunity__c)), 
+
+CASE(Opportunity__r.StageName, &quot;Closed Won&quot;, &quot;5 - Won Opportunity&quot;, 
+&quot;Closed Lost&quot;, &quot;4 - Lost Opportunity&quot;,
+
+&quot;3 - Active Opportunity&quot;), 
+
+CASE( Person_Owner_Role__c,
+
+&quot;EXECUTIVE&quot;, &quot;0 - Disqualified&quot;,
+&quot;System Admins&quot;, &quot;0 - Disqualified&quot;,
+&quot;Systems Intergration&quot;, &quot;0 - Disqualified&quot;,
+&quot;Queue&quot;, &quot;0 - Disqualified&quot;,
+
+CASE(Person_Status__c, 
+&quot;New&quot;, &quot;1 - Not Yet Worked&quot;,
+&quot;Working&quot;, &quot;2 - Working/Engaged&quot;,
+&quot;Engaged&quot;, &quot;2 - Working/Engaged&quot;,
+&quot;Marketing Nurture&quot;, &quot;0 - Marketing Nurture&quot;,
+&quot;Disqualified&quot;, &quot;0 - Disqualified&quot;, 
+&quot;2 - Working/Engaged&quot;)
+))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Person Funnel Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

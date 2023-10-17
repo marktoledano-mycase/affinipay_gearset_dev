@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Reflects the Primary Referral Partnership name identified on the related account --></help>
+        <label><!-- Primary Referral Partnership --></label>
+        <name>Primary_Referral_Partnership__c</name>
+    </CustomFieldTranslation>

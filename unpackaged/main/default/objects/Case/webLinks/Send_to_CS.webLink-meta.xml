@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_to_CS</fullName>
+    <availability>online</availability>
+    <description>R164541</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Send to CS</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/31.0/connection.js&quot;)} 
+
+var caseObj = new sforce.SObject(&quot;Case&quot;); 
+caseObj.id = &#39;{!Case.Id}&#39;; /* Need Id field to update Case */ 
+
+//Change Status 
+caseObj.Status = &quot;New&quot;; 
+
+//Change Owner 
+caseObj.OwnerID = &quot;00G80000003YNKM&quot;; 
+
+//Change Record Type 
+caseObj.RecordTypeID = &quot;01280000000QFcn&quot;;
+
+/* update method takes an array of Cases; init to 1 element - &#39;caseObj&#39; */ 
+var result = sforce.connection.update([caseObj]); 
+
+if (result[0].success == &#39;false&#39;) { 
+alert(result[0].errors.message); 
+} 
+else { 
+location.reload(true); /* redisplay the detail page */ 
+}</url>
+</WebLink>

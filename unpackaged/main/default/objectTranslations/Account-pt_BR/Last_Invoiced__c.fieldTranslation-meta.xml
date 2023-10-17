@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Last invoiced Date from the related MyCase or Appfolio Billing Account --></help>
+        <label><!-- Last Invoiced --></label>
+        <name>Last_Invoiced__c</name>
+    </CustomFieldTranslation>

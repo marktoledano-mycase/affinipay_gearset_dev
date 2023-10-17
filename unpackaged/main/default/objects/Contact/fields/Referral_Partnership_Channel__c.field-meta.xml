@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Referral_Partnership_Channel__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+  ISBLANK(Referral_Partnership__c),
+  &quot;Direct&quot;,
+  CASE(
+     Referral_Partnership__r.RecordType.Name,
+    &quot;Affinity&quot;, &quot;Affinity&quot;,
+    &quot;ISV Partner&quot;, &quot;Tech Partner&quot;,
+    &quot;Consultant&quot;, &quot;Tech Partner&quot;,
+    &quot;Other&quot;
+  )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Referral Partnership Channel</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Indicates whether the closed-won contract processing has completed sucessfully --></help>
+        <label><!-- Contract Processing Sucessful --></label>
+        <name>Contract_Processing_Sucessful__c</name>
+    </CustomFieldTranslation>

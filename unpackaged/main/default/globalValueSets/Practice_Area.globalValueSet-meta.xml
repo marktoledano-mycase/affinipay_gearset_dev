@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Adoption</fullName>
+        <default>false</default>
+        <label>Adoption</label>
+    </customValue>
+    <customValue>
+        <fullName>Banking &amp; Finance</fullName>
+        <default>false</default>
+        <label>Banking &amp; Finance</label>
+    </customValue>
+    <customValue>
+        <fullName>Bankruptcy &amp; Debt</fullName>
+        <default>false</default>
+        <label>Bankruptcy &amp; Debt</label>
+    </customValue>
+    <customValue>
+        <fullName>Business</fullName>
+        <default>false</default>
+        <label>Business</label>
+    </customValue>
+    <customValue>
+        <fullName>Child Custody</fullName>
+        <default>false</default>
+        <label>Child Custody</label>
+    </customValue>
+    <customValue>
+        <fullName>Class Action</fullName>
+        <default>false</default>
+        <label>Class Action</label>
+    </customValue>
+    <customValue>
+        <fullName>Commercial</fullName>
+        <default>false</default>
+        <label>Commercial</label>
+    </customValue>
+    <customValue>
+        <fullName>Consumer Protection</fullName>
+        <default>false</default>
+        <label>Consumer Protection</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporate</fullName>
+        <default>false</default>
+        <label>Corporate</label>
+    </customValue>
+    <customValue>
+        <fullName>Criminal Defense</fullName>
+        <default>false</default>
+        <label>Criminal Defense</label>
+    </customValue>
+    <customValue>
+        <fullName>Divorce</fullName>
+        <default>false</default>
+        <label>Divorce</label>
+    </customValue>
+    <customValue>
+        <fullName>Employment</fullName>
+        <default>false</default>
+        <label>Employment</label>
+    </customValue>
+    <customValue>
+        <fullName>Entertainment</fullName>
+        <default>false</default>
+        <label>Entertainment</label>
+    </customValue>
+    <customValue>
+        <fullName>Estate</fullName>
+        <default>false</default>
+        <label>Estate</label>
+    </customValue>
+    <customValue>
+        <fullName>Family</fullName>
+        <default>false</default>
+        <label>Family</label>
+    </customValue>
+    <customValue>
+        <fullName>General</fullName>
+        <default>false</default>
+        <label>General</label>
+    </customValue>
+    <customValue>
+        <fullName>Healthcare</fullName>
+        <default>false</default>
+        <label>Healthcare</label>
+    </customValue>
+    <customValue>
+        <fullName>Immigration</fullName>
+        <default>false</default>
+        <label>Immigration</label>
+    </customValue>
+    <customValue>
+        <fullName>Insurance</fullName>
+        <default>false</default>
+        <label>Insurance</label>
+    </customValue>
+    <customValue>
+        <fullName>Intellectual Property/Patent</fullName>
+        <default>false</default>
+        <label>Intellectual Property/Patent</label>
+    </customValue>
+    <customValue>
+        <fullName>Lemon</fullName>
+        <default>false</default>
+        <label>Lemon</label>
+    </customValue>
+    <customValue>
+        <fullName>Litigation</fullName>
+        <default>false</default>
+        <label>Litigation</label>
+    </customValue>
+    <customValue>
+        <fullName>Mass Torts</fullName>
+        <default>false</default>
+        <label>Mass Torts</label>
+    </customValue>
+    <customValue>
+        <fullName>Mediation</fullName>
+        <default>false</default>
+        <label>Mediation</label>
+    </customValue>
+    <customValue>
+        <fullName>Medical Malpractice</fullName>
+        <default>false</default>
+        <label>Medical Malpractice</label>
+    </customValue>
+    <customValue>
+        <fullName>Personal Injury</fullName>
+        <default>false</default>
+        <label>Personal Injury</label>
+    </customValue>
+    <customValue>
+        <fullName>Probate</fullName>
+        <default>false</default>
+        <label>Probate</label>
+    </customValue>
+    <customValue>
+        <fullName>Real Estate</fullName>
+        <default>false</default>
+        <label>Real Estate</label>
+    </customValue>
+    <customValue>
+        <fullName>Social Security Disability</fullName>
+        <default>false</default>
+        <label>Social Security Disability</label>
+    </customValue>
+    <customValue>
+        <fullName>Tax</fullName>
+        <default>false</default>
+        <label>Tax</label>
+    </customValue>
+    <customValue>
+        <fullName>Traffic Violations</fullName>
+        <default>false</default>
+        <label>Traffic Violations</label>
+    </customValue>
+    <customValue>
+        <fullName>Transactional</fullName>
+        <default>false</default>
+        <label>Transactional</label>
+    </customValue>
+    <customValue>
+        <fullName>Venture Capital</fullName>
+        <default>false</default>
+        <label>Venture Capital</label>
+    </customValue>
+    <customValue>
+        <fullName>Worker Compensation</fullName>
+        <default>false</default>
+        <label>Worker Compensation</label>
+    </customValue>
+    <description>R165465</description>
+    <masterLabel>Practice Area</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

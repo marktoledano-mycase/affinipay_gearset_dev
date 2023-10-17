@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">Hi {{{Recipient.FirstName}}},<br />
+<br />
+Thank you for reaching out!<br />
+<br />
+I understand you have questions about adding Google Analytics to your website.&nbsp;<br />
+<br />
+Please keep in mind that this is an entirely separate service outside of MyCase Websites. &nbsp;MyCase does not have access to our client's Google Analytics accounts nor do we keep any info pertaining to the account on file. &nbsp;Creating and managing a Google Analytics account will need to be controlled internally by your company.&nbsp;<br />
+<br />
+With that said, MyCase Websites are compatible with Google Analytics, and adding the tracking code to the site is a fairly simple process. This tracking code is generated when you create your GA account and will need to be provided to us once it has been created so we can add it to your site.<br />
+<br />
+If you would like to move forward with this process and set up a Google Analytics account, please use the following link:&nbsp;<a href="https://analytics.google.com">https://analytics.google.com</a><br />
+<br />
+Thank you,<br />
+{{{Sender.FirstName}}}</body>
+</html>

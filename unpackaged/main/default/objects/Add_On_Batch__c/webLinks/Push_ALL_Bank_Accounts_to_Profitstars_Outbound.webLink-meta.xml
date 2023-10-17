@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Push_ALL_Bank_Accounts_to_Profitstars_Outbound</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Push ALL Bank Accounts to Profitstars Outbound</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)}
+var c = new sforce.SObject(&quot;Add_On_Batch__c&quot;);
+c.id = &quot;{!Add_On_Batch__c.Id}&quot;;
+
+var result = sforce.connection.query(&quot;SELECT Id, Name, Outbound_Location_Add_Status__c, Outbound_LID__c, Bank_Account_Add_On_Batch__r.Name from Bank_Account__c where Bank_Account_Add_On_Batch__r.id = &#39;{!Add_On_Batch__c.Id}&#39;  and Status__c = &#39;Active&#39;&quot;);
+
+var records = result.getArray(&quot;records&quot;);
+
+var isValidated = true;
+
+alert(&quot;Validating &quot; + records.length + &quot; records.&quot;);
+
+for (var i = 0; i &lt; records.length; i++) { 
+	record = records[i];	
+
+	if((record.Outbound_Location_Add_Status__c) !== &#39;Ready To Transmit&#39;)
+	{
+		alert(record.Name + &quot; Outbound location add status is not \&quot;Ready To Transmit\&quot;. Please update the record and retry.&quot;);
+		isValidated = false;
+	}
+	else if(!!(record.Outbound_LID__c))
+	{
+		alert(record.Name + &#39;Outbound MID is available for this bank account.&#39;);
+		isValidated = false;
+		
+	}
+}
+
+if (isValidated===true) {
+	var r = confirm(&quot;All Bank Accounts will be added in ProfitStars outbound; continue?&quot;);
+	if (r == true) 
+	{
+		var result = sforce.apex.execute(&quot;ps_BankAccountAddonbuttonMethods&quot;, &quot;CallBankAddonBatchOutbound&quot;, {id: &quot;{!Add_On_Batch__c.Id}&quot;});
+		
+		var parsed = JSON.parse(result);
+		if (parsed.didPass == true) 
+		{
+			document.location.reload(true);
+			alert(parsed.result);	
+		} 
+		else 
+		{
+		document.location.reload(true);
+		alert(&quot;Bank Account Add on failed with the following error: \n\n&quot; + parsed.result + &quot; \n\nPlease update the Value+ record with missing information and try again&quot;);
+		}
+	}
+}</url>
+</WebLink>

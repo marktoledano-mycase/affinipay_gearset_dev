@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- REpresents the Commissioned ARR without the Quantity multiplier --></help>
+        <label><!-- Unit Commissioned ARR --></label>
+        <name>Unit_Commissioned_ARR__c</name>
+    </CustomFieldTranslation>

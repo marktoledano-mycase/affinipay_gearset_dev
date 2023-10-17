@@ -1,0 +1,4 @@
+Coaching notes for {!Opportunity.Name}  have been updated. Click here to read more {!Opportunity.Link}
+
+Coaching Notes
+{!Opportunity.Coaching_Notes__c}

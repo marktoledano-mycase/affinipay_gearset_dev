@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Box</fullName>
+        <default>false</default>
+        <label>Box</label>
+    </customValue>
+    <customValue>
+        <fullName>Custom Server</fullName>
+        <default>false</default>
+        <label>Custom Server</label>
+    </customValue>
+    <customValue>
+        <fullName>DropBox</fullName>
+        <default>false</default>
+        <label>DropBox</label>
+    </customValue>
+    <customValue>
+        <fullName>Existing CRM</fullName>
+        <default>false</default>
+        <label>Existing CRM</label>
+    </customValue>
+    <customValue>
+        <fullName>Google Docs</fullName>
+        <default>false</default>
+        <label>Google Docs</label>
+    </customValue>
+    <customValue>
+        <fullName>NetDocs</fullName>
+        <default>false</default>
+        <label>NetDocs</label>
+    </customValue>
+    <customValue>
+        <fullName>OneDrive</fullName>
+        <default>false</default>
+        <label>OneDrive</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Paper</fullName>
+        <default>false</default>
+        <label>Paper</label>
+    </customValue>
+    <customValue>
+        <fullName>Sharepoint</fullName>
+        <default>false</default>
+        <label>Sharepoint</label>
+    </customValue>
+    <customValue>
+        <fullName>Worldox</fullName>
+        <default>false</default>
+        <label>Worldox</label>
+    </customValue>
+    <customValue>
+        <fullName>Custom Server / Network</fullName>
+        <default>false</default>
+        <label>Custom Server / Network</label>
+    </customValue>
+    <customValue>
+        <fullName>Google Drive</fullName>
+        <default>false</default>
+        <label>Google Drive</label>
+    </customValue>
+    <masterLabel>Current File Mgmt System</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

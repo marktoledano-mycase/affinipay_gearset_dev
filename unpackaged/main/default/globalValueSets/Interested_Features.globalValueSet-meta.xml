@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Case Management</fullName>
+        <default>false</default>
+        <label>Case Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Document Management</fullName>
+        <default>false</default>
+        <label>Document Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Billing &amp; Invoicing</fullName>
+        <default>false</default>
+        <label>Billing &amp; Invoicing</label>
+    </customValue>
+    <customValue>
+        <fullName>Intake Management</fullName>
+        <default>false</default>
+        <label>Intake Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Client Communication</fullName>
+        <default>false</default>
+        <label>Client Communication</label>
+    </customValue>
+    <customValue>
+        <fullName>Time Tracking</fullName>
+        <default>false</default>
+        <label>Time Tracking</label>
+    </customValue>
+    <customValue>
+        <fullName>Document Automation</fullName>
+        <default>false</default>
+        <label>Document Automation</label>
+    </customValue>
+    <customValue>
+        <fullName>Task Automation</fullName>
+        <default>false</default>
+        <label>Task Automation</label>
+    </customValue>
+    <customValue>
+        <fullName>Calendaring &amp; Deadlines</fullName>
+        <default>false</default>
+        <label>Calendaring &amp; Deadlines</label>
+    </customValue>
+    <customValue>
+        <fullName>Trust Accounting</fullName>
+        <default>false</default>
+        <label>Trust Accounting</label>
+    </customValue>
+    <customValue>
+        <fullName>LPMS</fullName>
+        <default>false</default>
+        <label>LPMS</label>
+    </customValue>
+    <customValue>
+        <fullName>Features</fullName>
+        <default>false</default>
+        <label>Features</label>
+    </customValue>
+    <customValue>
+        <fullName>Setup</fullName>
+        <default>false</default>
+        <label>Setup</label>
+    </customValue>
+    <description>Features selected when user activates a MyCase trial</description>
+    <masterLabel>Interested Features</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

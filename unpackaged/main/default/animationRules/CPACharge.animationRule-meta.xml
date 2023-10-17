@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <animationFrequency>always</animationFrequency>
+    <developerName>CPACharge</developerName>
+    <isActive>true</isActive>
+    <masterLabel>CPACharge Onboarding</masterLabel>
+    <recordTypeContext>Custom</recordTypeContext>
+    <recordTypeName>CPACharge</recordTypeName>
+    <sobjectType>Onboarding__c</sobjectType>
+    <targetField>Data_Migration_Stage__c</targetField>
+    <targetFieldChangeToValues>Live</targetFieldChangeToValues>
+</AnimationRule>

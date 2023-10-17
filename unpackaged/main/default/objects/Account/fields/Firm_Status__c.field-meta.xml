@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Firm_Status__c</fullName>
+    <description>Status of account for business metrics summary reporting</description>
+    <externalId>false</externalId>
+    <formula>IF( AND(RecordType.Name = &quot;MyCase Account&quot;, Z_Acct_Number__c != &quot;&quot;),
+/*This is a MyCase Account with a linked Zuora Account*/
+
+IF( 
+
+AND( NOT(ISBLANK(First_Purchase_Date__c)), NOT(ISBLANK(Conversion_Date__c)), ISBLANK(End_Of_Service__c), ISBLANK(MC_Cancelled_DateOnly__c), ISBLANK(MC_Suspended_DateOnly__c)),
+/*Considered a customer because it has a first purchase date, conversion date, and no churn, cancelled, or suspended dates*/
+
+&quot;Customer&quot;,
+
+IF(
+
+AND( NOT(ISBLANK(First_Purchase_Date__c)), OR( End_Of_Service__c &gt; TODAY(), MC_Cancelled_DateOnly__c &gt; TODAY() )),
+/*Considered Future Churn if Churn Date or Cancelled Date is in the future*/
+
+&quot;Future Churn&quot;,
+
+IF(
+
+AND( NOT(ISBLANK(First_Purchase_Date__c)), NOT(ISBLANK(Conversion_Date__c)), NOT(ISBLANK(End_Of_Service__c)), End_Of_Service__c &lt;= TODAY()),
+/*Considered Churned if Churn Date is in the past with not blank first purchase and conversion dates*/
+
+&quot;Churned&quot;, 
+
+IF( AND( NOT(ISBLANK(MC_Suspended_DateOnly__c)), MC_Suspended_DateOnly__c &gt; DATE( YEAR(TODAY()), MONTH(TODAY()), 1)),
+
+&quot;Suspended&quot;, 
+
+IF( AND( NOT(ISBLANK(Conversion_Date__c)), ISBLANK(First_Purchase_Date__c), ISBLANK(MC_Cancelled_DateOnly__c) ),
+
+&quot;Converted&quot;,
+
+&quot;Prospect&quot;))))), &quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Firm Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

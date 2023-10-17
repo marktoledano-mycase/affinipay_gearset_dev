@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Add_to_Query__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Determines if we need to add the field to the query while building it in the code</description>
+    <externalId>false</externalId>
+    <label>Add to Query</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

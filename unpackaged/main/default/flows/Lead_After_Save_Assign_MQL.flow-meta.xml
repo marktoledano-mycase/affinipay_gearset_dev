@@ -1,0 +1,1284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <assignments>
+        <name>asg_SlackIDFromAssignmentGroupMember</name>
+        <label>Assign Slack ID From Assignment Group Member</label>
+        <locationX>1370</locationX>
+        <locationY>1511</locationY>
+        <assignmentItems>
+            <assignToReference>var_SlackIDToUse</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>sub_GetAssignmentGroupMember.var_AssignmentGroupMemberUserSlackID</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>sub_SendSlackToUser</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>asg_SlackIDFromOwner</name>
+        <label>Assign Slack ID From Owner</label>
+        <locationX>3218</locationX>
+        <locationY>971</locationY>
+        <assignmentItems>
+            <assignToReference>var_SlackIDToUse</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Owner_Slack_ID__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>sub_SendSlackToUser</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Error_Variables</name>
+        <label>Set Error Variables</label>
+        <locationX>2426</locationX>
+        <locationY>863</locationY>
+        <assignmentItems>
+            <assignToReference>var_StepName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Clear_Assign_MQL </stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_CallingFlow</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Lead - After Save - Assign MQL</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Send_Slack_Error_Message</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Error_Variables04</name>
+        <label>Set Error Variables</label>
+        <locationX>2954</locationX>
+        <locationY>971</locationY>
+        <assignmentItems>
+            <assignToReference>var_StepName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Clear_Assign_MQL_01 </stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_CallingFlow</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Lead - After Save - Assign MQL</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Send_Slack_Error_Message</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Error_Variables06</name>
+        <label>Set Error Variables</label>
+        <locationX>1634</locationX>
+        <locationY>1403</locationY>
+        <assignmentItems>
+            <assignToReference>var_StepName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>up_Lead </stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_CallingFlow</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Lead - After Save - Assign MQL</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Send_Slack_Error_Message</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Error_Variables07</name>
+        <label>Set Error Variables</label>
+        <locationX>578</locationX>
+        <locationY>1187</locationY>
+        <assignmentItems>
+            <assignToReference>var_StepName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Update_Lead_for_User </stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_CallingFlow</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Lead - After Save - Assign MQL</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Send_Slack_Error_Message</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Error_Variables_01</name>
+        <label>Set Error Variables</label>
+        <locationX>4010</locationX>
+        <locationY>647</locationY>
+        <assignmentItems>
+            <assignToReference>var_StepName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Clear_Assign_MQL_03 </stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_CallingFlow</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Lead - After Save - Assign MQL</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Send_Slack_Error_Message</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Error_Variables_02</name>
+        <label>Set Error Variables</label>
+        <locationX>3482</locationX>
+        <locationY>971</locationY>
+        <assignmentItems>
+            <assignToReference>var_StepName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Clear_Assign_MQL_02 </stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_CallingFlow</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Lead - After Save - Assign MQL</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Send_Slack_Error_Message</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>dec_AssignmentGroupMemberSlackIDIsNull</name>
+        <label>Assignment Group Member Slack ID Is Null</label>
+        <locationX>1238</locationX>
+        <locationY>1403</locationY>
+        <defaultConnector>
+            <targetReference>asg_SlackIDFromAssignmentGroupMember</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>out_SlackIDIsNull</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>sub_GetAssignmentGroupMember.var_AssignmentGroupMemberUserSlackID</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>sub_GetAssignmentGroupMember.var_AssignmentGroupMemberUserSlackID</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>sub_SendSlackMissingSlackIDAssignmentGroupMember</targetReference>
+            </connector>
+            <label>True</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Note: No alert is fired for the True path since alerting is handled in the subflow.</description>
+        <name>dec_AssignmentGroupMemberUserIDIsNull</name>
+        <label>Assignment Group Member User ID Is Null</label>
+        <locationX>1040</locationX>
+        <locationY>1187</locationY>
+        <defaultConnector>
+            <targetReference>up_Lead</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>out_AssignmentGroupMemberUserIDIsNull</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>sub_GetAssignmentGroupMember.var_AssignmentGroupMemberUserID</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>sub_GetAssignmentGroupMember.var_AssignmentGroupMemberUserID</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <label>True</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>dec_AssignmentTypeIsQueue</name>
+        <label>Determine Assignment Type</label>
+        <locationX>1106</locationX>
+        <locationY>971</locationY>
+        <defaultConnectorLabel>Unhandled Condition</defaultConnectorLabel>
+        <rules>
+            <name>out_AssignmentTypeIsUser</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>sub_GetAssignmentSetting.var_AssignmentType</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>User</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Lead_for_User</targetReference>
+            </connector>
+            <label>User</label>
+        </rules>
+        <rules>
+            <name>Assignment_Group</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>sub_GetAssignmentSetting.var_AssignmentType</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Group</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>sub_GetAssignmentGroupMember</targetReference>
+            </connector>
+            <label>Assignment Group</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>dec_AssignMQL</name>
+        <label>Assign MQL?</label>
+        <locationX>2343</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>dec_IsOwnerNonUser</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>out_IsMQLTrue</name>
+            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Assign_MQL__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Assign_MQL__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>dec_IsCallInOrLiveChat</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Call In &amp; Live Chat are not reassigned (since they&#39;re typically stamped after the fact).</description>
+        <name>dec_IsCallInOrLiveChat</name>
+        <label>Is Call In or Live Chat</label>
+        <locationX>677</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>dec_Reassign</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>out_IsCallInOrLiveChat</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Last_MQL_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Call In</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Last_MQL_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Live Chat</stringValue>
+                </rightValue>
+            </conditions>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>dec_IsOwnerInactive</name>
+        <label>Is Owner Inactive?</label>
+        <locationX>2558</locationX>
+        <locationY>647</locationY>
+        <defaultConnector>
+            <targetReference>dec_OwnerSlackIDIsNull</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>out_IsOwnerInactiveYes</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.OwnerId</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>00G</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner_Active__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Clear_Assign_MQL</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>dec_IsOwnerNonUser</name>
+        <label>Is Owner Non-User</label>
+        <locationX>4010</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>dec_IsOwnerInactive</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>out_IsOwnerUser</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.OwnerId</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>00G</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner_Profile_Name__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Integration</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Clear_Assign_MQL_03</targetReference>
+            </connector>
+            <label>True</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>dec_MissingAttributes</name>
+        <label>Missing Attributes?</label>
+        <locationX>578</locationX>
+        <locationY>647</locationY>
+        <defaultConnector>
+            <targetReference>Check_the_Business_Hours</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>out_MissingAttributesYes</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Last_MQL_Brand__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Last_MQL_Type__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>sub_SendSlackMissingAttributes</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>dec_OwnerSlackIDIsNull</name>
+        <label>Owner Slack ID Is Null</label>
+        <locationX>2954</locationX>
+        <locationY>755</locationY>
+        <defaultConnector>
+            <targetReference>Clear_Assign_MQL_02</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>out_OwnerSlackIDIsNull</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Owner_Slack_ID__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner_Slack_ID__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Clear_Assign_MQL_01</targetReference>
+            </connector>
+            <label>True</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>dec_Reassign</name>
+        <label>Reassign?</label>
+        <locationX>1568</locationX>
+        <locationY>539</locationY>
+        <defaultConnector>
+            <targetReference>dec_IsOwnerInactive</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>outReassignYes</name>
+            <conditionLogic>1 OR 2 OR 3 OR (4 AND (5 OR 6) AND (7 OR 8))</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.OwnerId</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>00G</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner_Profile_Name__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Integration</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner_Active__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.OwnerId</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>005</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.LastActivityDate</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.LastActivityDate</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <elementReference>fx_Date30DaysAgo</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Last_Assigned_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Last_Assigned_Date__c</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <elementReference>fx_DateTime3DaysAgo</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>dec_MissingAttributes</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>Removed Queue Assignment Processing from Determine Assignment Type decision.
+Explicitly added Assignment Group to the Determine Assignment Type decision.
+This version created in order to allow Copado to select the most recent and applicable version.
+Added error handling</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>fx_BlankSpace</name>
+        <dataType>String</dataType>
+        <expression>&quot; &quot;</expression>
+    </formulas>
+    <formulas>
+        <name>fx_Comments</name>
+        <dataType>String</dataType>
+        <expression>IF(
+    ISBLANK({!$Record.Form_Comments__c}) = TRUE,
+    &quot;&quot;,
+    {!txt_CommentsFormattedForSlack}
+)</expression>
+    </formulas>
+    <formulas>
+        <name>fx_Country</name>
+        <dataType>String</dataType>
+        <expression>IF(
+    ISBLANK({!$Record.Country}),
+    &quot;N/A&quot;,
+    {!$Record.Country}
+)</expression>
+    </formulas>
+    <formulas>
+        <name>fx_Date30DaysAgo</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()-30</expression>
+    </formulas>
+    <formulas>
+        <name>fx_DateTime3DaysAgo</name>
+        <dataType>DateTime</dataType>
+        <expression>NOW()-3</expression>
+    </formulas>
+    <formulas>
+        <name>fx_Email</name>
+        <dataType>String</dataType>
+        <expression>IF(
+    ISBLANK({!$Record.Email}),
+    &quot;N/A&quot;,
+    {!$Record.Email}
+)</expression>
+    </formulas>
+    <formulas>
+        <name>fx_Employees</name>
+        <dataType>String</dataType>
+        <expression>IF(
+    ISBLANK({!$Record.NumberOfEmployees}),
+    &quot;N/A&quot;,
+    TEXT({!$Record.NumberOfEmployees})
+)</expression>
+    </formulas>
+    <formulas>
+        <name>fx_IsMQL</name>
+        <dataType>Boolean</dataType>
+        <expression>IF(
+    (
+        ISCHANGED({!$Record.Last_MQL_Date__c}) ||
+        (
+            ISBLANK({!$Record__Prior.Id}) &amp;&amp;
+            NOT(ISBLANK({!$Record.Last_MQL_Date__c}))
+        )
+    ),
+    TRUE,
+     FALSE
+)</expression>
+    </formulas>
+    <formulas>
+        <name>fx_Name</name>
+        <dataType>String</dataType>
+        <expression>IF(
+  ISBLANK({!$Record.FirstName}),
+ {!$Record.FirstName},
+  {!$Record.FirstName}&amp;&quot; &quot;&amp;{!$Record.LastName}
+)</expression>
+    </formulas>
+    <formulas>
+        <name>fx_OwnerName</name>
+        <dataType>String</dataType>
+        <expression>IF(
+    {!sub_GetAssignmentSetting.var_AssignmentType} = &quot;Queue&quot;,
+    {!sub_GetAssignmentSetting.var_AssignmentName},
+    {!$Record.Owner:User.FirstName}&amp;&quot; &quot;&amp;{!$Record.Owner:User.LastName}
+)</expression>
+    </formulas>
+    <formulas>
+        <name>fx_Phone</name>
+        <dataType>String</dataType>
+        <expression>IF(
+    ISBLANK({!$Record.Phone}),
+    &quot;N/A&quot;,
+    {!$Record.Phone}
+)</expression>
+    </formulas>
+    <formulas>
+        <name>fx_State</name>
+        <dataType>String</dataType>
+        <expression>IF(
+    ISBLANK({!$Record.State}),
+    &quot;N/A&quot;,
+    {!$Record.State}
+)</expression>
+    </formulas>
+    <formulas>
+        <name>fx_Status</name>
+        <dataType>String</dataType>
+        <expression>IF(
+    {!fx_IsMQL} = TRUE,
+    TEXT({!$Record.Last_MQL_Status__c}),
+    &quot;New Activity&quot;
+)</expression>
+    </formulas>
+    <formulas>
+        <name>fxDemoScheduledDate</name>
+        <dataType>String</dataType>
+        <expression>IF (
+ISBLANK ( {!$Record.Demo_Scheduled_Date__c} ),
+ &quot;N/A&quot;, 
+TEXT ( {!$Record.Demo_Scheduled_Date__c} )
+)</expression>
+    </formulas>
+    <formulas>
+        <name>fxDemoTime</name>
+        <dataType>String</dataType>
+        <expression>IF (
+ISBLANK ( {!$Record.Demo_Time__c} ),
+ &quot;N/A&quot;, 
+{!$Record.Demo_Time__c} 
+)</expression>
+    </formulas>
+    <formulas>
+        <name>fxReferralPartnership</name>
+        <dataType>String</dataType>
+        <expression>IF (
+ISBLANK ( {!$Record.Referral_Partnership__c} ), 
+&quot;N/A&quot;, 
+{!$Record.Referral_Partnership__r.Name}
+)</expression>
+    </formulas>
+    <interviewLabel>Lead - Assign MQL {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Lead - After Save - Assign MQL</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Clear_Assign_MQL</name>
+        <label>Clear Assign MQL</label>
+        <locationX>2162</locationX>
+        <locationY>755</locationY>
+        <faultConnector>
+            <targetReference>Set_Error_Variables</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>Assign_MQL__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Clear_Assign_MQL_01</name>
+        <label>Clear Assign MQL</label>
+        <locationX>2690</locationX>
+        <locationY>863</locationY>
+        <connector>
+            <targetReference>sub_SendSlackMissingSlackIDOwner</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Set_Error_Variables04</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>Assign_MQL__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Clear_Assign_MQL_02</name>
+        <label>Clear Assign MQL</label>
+        <locationX>3218</locationX>
+        <locationY>863</locationY>
+        <connector>
+            <targetReference>asg_SlackIDFromOwner</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Set_Error_Variables_02</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>Assign_MQL__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Clear_Assign_MQL_03</name>
+        <label>Clear Assign MQL</label>
+        <locationX>3746</locationX>
+        <locationY>539</locationY>
+        <faultConnector>
+            <targetReference>Set_Error_Variables_01</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>Assign_MQL__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>up_Lead</name>
+        <label>Update Lead</label>
+        <locationX>1238</locationX>
+        <locationY>1295</locationY>
+        <connector>
+            <targetReference>dec_AssignmentGroupMemberSlackIDIsNull</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Set_Error_Variables06</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>Assign_MQL__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Last_Assigned_Date__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>sub_GetAssignmentGroupMember.var_AssignmentGroupMemberUserID</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Lead_for_User</name>
+        <label>Update Lead</label>
+        <locationX>314</locationX>
+        <locationY>1079</locationY>
+        <connector>
+            <targetReference>Send_Slack_to_Queue_For_User</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Set_Error_Variables07</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>Assign_MQL__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Last_Assigned_Date__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>sub_GetAssignmentSetting.var_AssignmentName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>2217</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>dec_AssignMQL</targetReference>
+        </connector>
+        <filterFormula>{!$Record.Bypass_VR_and_Automation__c} = FALSE &amp;&amp; {!$Record.Assign_MQL__c} = TRUE</filterFormula>
+        <object>Lead</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>Check_the_Business_Hours</name>
+        <label>Check the Business Hours</label>
+        <locationX>1106</locationX>
+        <locationY>755</locationY>
+        <connector>
+            <targetReference>sub_GetAssignmentSetting</targetReference>
+        </connector>
+        <flowName>Autolaunched_Evaluate_For_Business_Hours</flowName>
+        <inputAssignments>
+            <name>var_CallingFlow</name>
+            <value>
+                <stringValue>Lead - After Save - Assign MQL</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_StepName</name>
+            <value>
+                <stringValue>Check the Business Hours</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varBusinessHoursName</name>
+            <value>
+                <stringValue>Central Business Hours</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varDateTime</name>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <outputAssignments>
+            <assignToReference>var_WithinBusinessHours</assignToReference>
+            <name>varResults</name>
+        </outputAssignments>
+    </subflows>
+    <subflows>
+        <name>Send_Slack_Error_Message</name>
+        <label>Send Slack Error Message</label>
+        <locationX>2426</locationX>
+        <locationY>971</locationY>
+        <flowName>Autolaunched_Send_Slack_Message</flowName>
+        <inputAssignments>
+            <name>var_SlackConversationID</name>
+            <value>
+                <stringValue>C04UVF7SD5H</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_SlackMessage</name>
+            <value>
+                <elementReference>txt_SlackMessageUnhandledFault</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Send_Slack_to_Channel_About_Queue_For_User</name>
+        <label>Send Slack to Channel About Queue</label>
+        <locationX>314</locationX>
+        <locationY>1295</locationY>
+        <flowName>Autolaunched_Send_Slack_Message</flowName>
+        <inputAssignments>
+            <name>var_SlackConversationID</name>
+            <value>
+                <stringValue>C04UNPZNF2P</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_SlackMessage</name>
+            <value>
+                <elementReference>txt_SlackMessageToChannel</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Send_Slack_to_Queue_For_User</name>
+        <label>Send Slack to Queue</label>
+        <locationX>314</locationX>
+        <locationY>1187</locationY>
+        <connector>
+            <targetReference>Send_Slack_to_Channel_About_Queue_For_User</targetReference>
+        </connector>
+        <flowName>Autolaunched_Send_Slack_Message</flowName>
+        <inputAssignments>
+            <name>var_SlackConversationID</name>
+            <value>
+                <elementReference>sub_GetAssignmentSetting.var_SlackID</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_SlackMessage</name>
+            <value>
+                <elementReference>txt_SlackMessageToUser</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>sub_GetAssignmentGroupMember</name>
+        <label>Get Assignment Group Member</label>
+        <locationX>1040</locationX>
+        <locationY>1079</locationY>
+        <connector>
+            <targetReference>dec_AssignmentGroupMemberUserIDIsNull</targetReference>
+        </connector>
+        <flowName>Autolaunched_Get_Assignment_Group_Member</flowName>
+        <inputAssignments>
+            <name>var_AssignmentGroupName</name>
+            <value>
+                <elementReference>sub_GetAssignmentSetting.var_AssignmentName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_NumberOfEmployees</name>
+            <value>
+                <elementReference>$Record.NumberOfEmployees</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_RecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <subflows>
+        <name>sub_GetAssignmentSetting</name>
+        <label>Get Assignment Setting</label>
+        <locationX>1106</locationX>
+        <locationY>863</locationY>
+        <connector>
+            <targetReference>dec_AssignmentTypeIsQueue</targetReference>
+        </connector>
+        <flowName>Autolaunched_Get_Assignment_Setting_for_MQL</flowName>
+        <inputAssignments>
+            <name>var_DemographicScore</name>
+            <value>
+                <elementReference>$Record.Demographic_Score__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_MQLBrand</name>
+            <value>
+                <elementReference>$Record.Last_MQL_Brand__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_MQLProductTier</name>
+            <value>
+                <elementReference>$Record.Last_MQL_Product_Tier__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_MQLType</name>
+            <value>
+                <elementReference>$Record.Last_MQL_Type__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_RecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varWithinBusinessHours</name>
+            <value>
+                <elementReference>var_WithinBusinessHours</elementReference>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <subflows>
+        <name>sub_SendSlackMissingAttributes</name>
+        <label>Send Slack Missing Attributes</label>
+        <locationX>50</locationX>
+        <locationY>755</locationY>
+        <flowName>Autolaunched_Send_Slack_Message</flowName>
+        <inputAssignments>
+            <name>var_SlackConversationID</name>
+            <value>
+                <stringValue>C04UVF7SD5H</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_SlackMessage</name>
+            <value>
+                <elementReference>txt_SlackMessageMissingAttributes</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>sub_SendSlackMissingSlackIDAssignmentGroupMember</name>
+        <label>Send Slack (Missing Slack ID for Assignment Group Member)</label>
+        <locationX>1106</locationX>
+        <locationY>1511</locationY>
+        <flowName>Autolaunched_Send_Slack_Message</flowName>
+        <inputAssignments>
+            <name>var_SlackConversationID</name>
+            <value>
+                <stringValue>C04UVF7SD5H</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_SlackMessage</name>
+            <value>
+                <elementReference>txt_SlackMessageMissingSlackIDAssignmentGroupMember</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>sub_SendSlackMissingSlackIDOwner</name>
+        <label>Send Slack (Missing Slack ID for Owner)</label>
+        <locationX>2690</locationX>
+        <locationY>971</locationY>
+        <flowName>Autolaunched_Send_Slack_Message</flowName>
+        <inputAssignments>
+            <name>var_SlackConversationID</name>
+            <value>
+                <stringValue>C04UVF7SD5H</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_SlackMessage</name>
+            <value>
+                <elementReference>txt_SlackMessageMissingSlackIDOwner</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>sub_SendSlackToChannel</name>
+        <label>Send Slack to Channel</label>
+        <locationX>1568</locationX>
+        <locationY>2255</locationY>
+        <flowName>Autolaunched_Send_Slack_Message</flowName>
+        <inputAssignments>
+            <name>var_SlackConversationID</name>
+            <value>
+                <stringValue>C04UNPZNF2P</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_SlackMessage</name>
+            <value>
+                <elementReference>txt_SlackMessageToChannel</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>sub_SendSlackToUser</name>
+        <label>Send Slack to User</label>
+        <locationX>1568</locationX>
+        <locationY>2147</locationY>
+        <connector>
+            <targetReference>sub_SendSlackToChannel</targetReference>
+        </connector>
+        <flowName>Autolaunched_Send_Slack_Message</flowName>
+        <inputAssignments>
+            <name>var_SlackConversationID</name>
+            <value>
+                <elementReference>var_SlackIDToUse</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_SlackMessage</name>
+            <value>
+                <elementReference>txt_SlackMessageToUser</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <textTemplates>
+        <name>txt_CommentsFormattedForSlack</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>{!fx_BlankSpace}
+&gt; {!fx_BlankSpace}
+&gt; :speech_balloon: *Comments:* {!$Record.Form_Comments__c}
+&gt; {!fx_BlankSpace}</text>
+    </textTemplates>
+    <textTemplates>
+        <name>txt_SlackMessageMissingAttributes</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>:error-triangle: *MQL Assignment Failure*
+
+&gt; *What* 
+&gt; An MQL assignment for &lt;{!$Setup.Instance_Configuration__c.Instance_URL__c}/{!$Record.Id}|{!fx_Name}&gt; was triggered based on Last MQL Date; however, it&#39;s missing key attributes (Last MQL Brand and/or Last MQL Type) to assign the record.
+&gt; 
+&gt; *Last MQL Brand:* {!$Record.Last_MQL_Brand__c} 
+&gt; *Last MQL Type:* {!$Record.Last_MQL_Type__c} 
+&gt; 
+&gt; :marketo-2: &lt;{!$Setup.Instance_Configuration__c.Instance_URL__c}/apex/mkto_si__Marketo_Lead_Detail?objType=Lead&amp;objId={!$Record.Id} |View in Marketo&gt;
+&gt; :salesforce-2: &lt;{!$Setup.Instance_Configuration__c.Instance_URL__c}/{!$Record.Id} |View in Salesforce&gt;
+&gt; 
+&gt; *Impact*
+&gt; The record was not assigned because these fields are used in the assignment logic (and blank values are not supported).
+&gt; 
+&gt; *Investigation Required*
+&gt; 1. Assign the record to the relevant user.
+&gt; 2. Review the scenario with Marketing Operations to ensure that MQL fields are populated for all MQLs.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>txt_SlackMessageMissingSlackIDAssignmentGroupMember</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>:error-triangle: *Missing Slack ID*
+
+&gt; *What* 
+&gt; A Lead was round robined via an Assignment Group; however, the assignee&#39;s Slack ID was blank.
+&gt; 
+&gt; *User*
+&gt; &lt;{!$Setup.Instance_Configuration__c.Instance_URL__c}/{!sub_GetAssignmentGroupMember.var_AssignmentGroupMemberUserID} |{!sub_GetAssignmentGroupMember.var_AssignmentGroupMemberUserName}&gt; 
+&gt; 
+&gt; *Impact*
+&gt; The record was assigned; however, the Slack notification did not fire.
+&gt; 
+&gt; *Investigation Required*
+&gt; 1. Add the user&#39;s Slack ID in Salesforce.
+&gt; 2. Escalate this to Business Systems and/or Transformation to address the root cause and prevent it from happening again.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>txt_SlackMessageMissingSlackIDOwner</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>:error-triangle: *Missing Slack ID*
+
+&gt; *What* 
+&gt; New non-MQL Inbound Requests normally trigger an alert to the record owner; however, the owner&#39;s Slack ID was blank.
+&gt; 
+&gt; *User*
+&gt; &lt;{!$Setup.Instance_Configuration__c.Instance_URL__c}/{!$Record.OwnerId} |{!fx_OwnerName}&gt; 
+&gt; 
+&gt; *Impact*
+&gt; The Slack notification did not fire.
+&gt; 
+&gt; *Investigation Required*
+&gt; 1. Add the user&#39;s Slack ID in Salesforce.
+&gt; 2. Notify the user of the Inbound Request.
+&gt; 3. Escalate this to Business Systems and/or Transformation to address the root cause and prevent it from happening again.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>txt_SlackMessageNoQueue</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>:error-triangle: *MQL Assignment Failure*
+
+&gt; *What* 
+&gt; No queue was found with the {!sub_GetAssignmentSetting.var_AssignmentName} name.
+&gt; 
+&gt; :salesforce-2: &lt;{!$Setup.Instance_Configuration__c.Instance_URL__c}/{!$Record.Id} |View in Salesforce&gt;
+&gt; 
+&gt; *Impact*
+&gt; The record was not assigned.
+&gt; 
+&gt; *Investigation Required*
+&gt; 1. Assign the record to the relevant user or queue.
+&gt; 2. Review the queues and Assignment Settings to determine what went wrong.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>txt_SlackMessageToChannel</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>:form: *{!fx_Status}: {!$Record.Inbound_Request_Brand__c} {!$Record.Inbound_Request_Type__c}*
+
+&gt; *Lead:* &lt;https://affinipaymain.lightning.force.com/{!$Record.Id} | {!fx_Name}&gt;
+&gt; *Company:* {!$Record.Company}
+&gt; *Email:* {!fx_Email}
+&gt; *Phone:* {!fx_Phone}
+&gt; *Employees:* {!fx_Employees}
+&gt; *Country:* {!fx_Country}
+&gt; *State:* {!fx_State}
+&gt; *Demo Scheduled Date:* {!fxDemoScheduledDate}
+&gt; *Demo Time:* {!fxDemoTime}
+&gt; *Referral Partnership:* {!fxReferralPartnership}
+&gt; {!fx_Comments}
+&gt; :salesforce-2: &lt;{!$Setup.Instance_Configuration__c.Instance_URL__c}/{!$Record.Id} | View in Salesforce&gt;
+&gt; 
+&gt; _Assigned To: {!fx_OwnerName}_</text>
+    </textTemplates>
+    <textTemplates>
+        <name>txt_SlackMessageToUser</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>:form: *{!fx_Status}: {!$Record.Last_MQL_Brand__c} {!$Record.Last_MQL_Type__c}*
+
+&gt; *Lead:* &lt;https://affinipaymain.lightning.force.com/{!$Record.Id} | {!fx_Name}&gt;
+&gt; *Company:* {!$Record.Company}
+&gt; *Email:* {!fx_Email}
+&gt; *Phone:* {!fx_Phone}
+&gt; *Employees:* {!fx_Employees}
+&gt; *Country:* {!fx_Country}
+&gt; *State:* {!fx_State}
+&gt; *Demo Scheduled Date:* {!fxDemoScheduledDate}
+&gt; *Demo Time:* {!fxDemoTime}
+&gt; *Referral Partnership:* {!fxReferralPartnership}
+&gt; {!fx_Comments}
+&gt; :salesforce-2: &lt;{!$Setup.Instance_Configuration__c.Instance_URL__c}/{!$Record.Id} | View in Salesforce&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>txt_SlackMessageUnhandledFault</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;:error-triangle: *MQL Assignment Failure*&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&amp;gt; *What*&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;gt; An unhandled fault occurred.&lt;/p&gt;&lt;p&gt;&amp;gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;gt; :marketo-2: &amp;lt;{!$Setup.Instance_Configuration__c.Instance_URL__c}/apex/mkto_si__Marketo_Lead_Detail?objType=Lead&amp;amp;objId={!$Record.Id} |View in Marketo&amp;gt;&lt;/p&gt;&lt;p&gt;&amp;gt; :salesforce-2: &amp;lt;{!$Setup.Instance_Configuration__c.Instance_URL__c}/{!$Record.Id} |View in Salesforce&amp;gt;&lt;/p&gt;&lt;p&gt;&amp;gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;gt; *Fault Message*&lt;/p&gt;&lt;p&gt;&amp;gt; {!$Flow.FaultMessage}&lt;/p&gt;&lt;p&gt;&amp;gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;gt; &quot;Step&quot;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;gt;&amp;nbsp;{!var_StepName}&lt;/p&gt;&lt;p&gt;&amp;gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;gt; *Investigation Required*&lt;/p&gt;&lt;p&gt;&amp;gt; 1. Assign the record to the relevant user.&lt;/p&gt;&lt;p&gt;&amp;gt; 2. Review the scenario with Marketing Operations to ensure that MQL fields are populated for all MQLs.&lt;/p&gt;</text>
+    </textTemplates>
+    <variables>
+        <name>var_CallingFlow</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var_SlackIDToUse</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var_StepName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var_WithinBusinessHours</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

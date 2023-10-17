@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Comped__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>WILL WANT TO ADD A START AND END DATE FOR COMPED IN FUTURE INSTANCE WHERE NO DATES INDICATES PERPETUAL</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This Checkbox indicates that it&#39;s a 100% free account</inlineHelpText>
+    <label>Comped</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

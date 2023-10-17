@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- If Survey Date is blank this field populates the Created Date. 
+If Survey Date is not blank this field populates the Survey Date. --></help>
+        <label><!-- Completed Date --></label>
+        <name>Completed_Date__c</name>
+    </CustomFieldTranslation>

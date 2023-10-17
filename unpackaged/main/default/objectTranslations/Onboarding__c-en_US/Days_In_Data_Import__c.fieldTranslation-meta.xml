@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Number of days to complete Phase 1 Data, excluding weekends. --></help>
+        <label><!-- Phase 1: Days in data import --></label>
+        <name>Days_In_Data_Import__c</name>
+    </CustomFieldTranslation>

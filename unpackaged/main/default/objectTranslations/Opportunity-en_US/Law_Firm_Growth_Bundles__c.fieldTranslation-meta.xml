@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Select all products the firm will use in the Law Firm Growth Bundle. --></help>
+        <label><!-- Law Firm Growth Bundle --></label>
+        <name>Law_Firm_Growth_Bundles__c</name>
+        <picklistValues>
+            <masterLabel>Accounting</masterLabel>
+            <translation><!-- Accounting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LawPay</masterLabel>
+            <translation><!-- LawPay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Woodpecker</masterLabel>
+            <translation><!-- Woodpecker --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

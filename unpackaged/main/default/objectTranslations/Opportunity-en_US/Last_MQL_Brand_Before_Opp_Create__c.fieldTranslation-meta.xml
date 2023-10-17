@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Last MQL Brand Before Opportunity Create comes from the Lead or Contact --></help>
+        <label><!-- Last MQL Brand Before Opp Create --></label>
+        <name>Last_MQL_Brand_Before_Opp_Create__c</name>
+    </CustomFieldTranslation>

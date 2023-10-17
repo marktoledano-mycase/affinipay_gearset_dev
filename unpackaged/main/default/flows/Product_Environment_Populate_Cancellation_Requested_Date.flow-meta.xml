@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <assignments>
+        <name>Assign_Cancellation_Requested_Date</name>
+        <label>Assign Cancellation Requested Date</label>
+        <locationX>562</locationX>
+        <locationY>342</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Cancellation_Requested_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Clear_Cancellation_Requested_Date</name>
+        <label>Clear Cancellation Requested Date</label>
+        <locationX>340</locationX>
+        <locationY>550</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Cancellation_Requested_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>f_ClearCancellationRequestedDate</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Update_Evaluation</name>
+        <label>Update Evaluation</label>
+        <locationX>333</locationX>
+        <locationY>351</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Populate_Requested_Date</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Churn_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Churn_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Churn_Date__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>$Flow.CurrentDate</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Cancellation_Requested_Date</targetReference>
+            </connector>
+            <label>Populate Requested Date</label>
+        </rules>
+        <rules>
+            <name>Clear_Requested_Date</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Churn_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Churn_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Clear_Cancellation_Requested_Date</targetReference>
+            </connector>
+            <label>Clear Requested Date</label>
+        </rules>
+    </decisions>
+    <description>Before save populates or clears cancellation requested date based on update to the Churn Date field</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>f_CancellationRequestedDate</name>
+        <dataType>Date</dataType>
+        <expression>IF( 
+NOT( ISBLANK( {!$Record.Churn_Date__c} )),
+{!$Flow.CurrentDate},
+{!$Flow.CurrentDate}
+)</expression>
+    </formulas>
+    <formulas>
+        <name>f_ClearCancellationRequestedDate</name>
+        <dataType>Date</dataType>
+        <expression>DATEVALUE(&quot;&quot;)</expression>
+    </formulas>
+    <interviewLabel>Product Environment: Populate Cancellation Requested Date {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Product Environment: Populate Cancellation Requested Date</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>79</locationX>
+        <locationY>44</locationY>
+        <connector>
+            <targetReference>Update_Evaluation</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Churn_Date__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Product_Environment__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

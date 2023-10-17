@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Placeholder_Position__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicate where 0&#39;s should be placed in the number sequence. Leading Eg. 000123. Trailing Eg. 123000. N/A will user number with no placeholders</inlineHelpText>
+    <label>Placeholder Position</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Leading</fullName>
+                <default>false</default>
+                <label>Leading</label>
+            </value>
+            <value>
+                <fullName>Trailing</fullName>
+                <default>false</default>
+                <label>Trailing</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

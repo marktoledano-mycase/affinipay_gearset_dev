@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>ID</fullName>
+        <default>false</default>
+        <label>ID</label>
+    </customValue>
+    <customValue>
+        <fullName>Bar Card</fullName>
+        <default>false</default>
+        <label>Bar Card</label>
+    </customValue>
+    <customValue>
+        <fullName>Voided Check</fullName>
+        <default>false</default>
+        <label>Voided Check</label>
+    </customValue>
+    <customValue>
+        <fullName>Bank Statements</fullName>
+        <default>false</default>
+        <label>Bank Statements</label>
+    </customValue>
+    <customValue>
+        <fullName>Articles of Incorporation</fullName>
+        <default>false</default>
+        <label>Articles of Incorporation</label>
+    </customValue>
+    <description>Payments: Possible Documents. Used by LawPay, ClientPay, CPA Charge Opp &amp; Onboarding RTs</description>
+    <masterLabel>Possible Documents</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

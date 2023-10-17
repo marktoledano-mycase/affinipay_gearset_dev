@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- gAuthenticate Response Code --></label>
+        <name>gAuthenticateResponseCode__c</name>
+        <picklistValues>
+            <masterLabel>CA01</masterLabel>
+            <translation><!-- CA01 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CA11</masterLabel>
+            <translation><!-- CA11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CA21</masterLabel>
+            <translation><!-- CA21 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CA22</masterLabel>
+            <translation><!-- CA22 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CA23</masterLabel>
+            <translation><!-- CA23 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CA24</masterLabel>
+            <translation><!-- CA24 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CA25</masterLabel>
+            <translation><!-- CA25 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CA30</masterLabel>
+            <translation><!-- CA30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CI01</masterLabel>
+            <translation><!-- CI01 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CI02</masterLabel>
+            <translation><!-- CI02 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CI11</masterLabel>
+            <translation><!-- CI11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CI21</masterLabel>
+            <translation><!-- CI21 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CI22</masterLabel>
+            <translation><!-- CI22 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CI23</masterLabel>
+            <translation><!-- CI23 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CI24</masterLabel>
+            <translation><!-- CI24 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CI25</masterLabel>
+            <translation><!-- CI25 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CI30</masterLabel>
+            <translation><!-- CI30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ND02</masterLabel>
+            <translation><!-- ND02 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nill</masterLabel>
+            <translation><!-- Nill --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Docketwise_Products</fullName>
+    <columns>RECORDTYPE</columns>
+    <columns>NAME</columns>
+    <columns>Pricing_Type__c</columns>
+    <columns>Product_Type__c</columns>
+    <columns>Product_Subtype__c</columns>
+    <columns>Product_Family__c</columns>
+    <columns>Product_Sub_Family__c</columns>
+    <columns>Product_Tier__c</columns>
+    <columns>Allocation_Type__c</columns>
+    <columns>Allocation_Unit__c</columns>
+    <columns>Status__c</columns>
+    <columns>Price_Base__c</columns>
+    <columns>Default_Quantity__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>SKU_Product__c.Docketwise</value>
+    </filters>
+    <label>Docketwise Products</label>
+</ListView>

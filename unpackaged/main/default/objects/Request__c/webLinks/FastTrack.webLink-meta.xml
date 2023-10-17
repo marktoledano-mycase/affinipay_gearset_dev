@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FastTrack</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>FastTrack</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/29.0/connection.js&quot;)} 
+
+var request = new sforce.SObject(&#39;Request__c&#39;); 
+var m; 
+var d; 
+var y = &#39;{!YEAR( TODAY() )}&#39; 
+
+if (&#39;{!DAY( TODAY() )}&#39;&lt; 10){ 
+d = &quot;0&quot;+&#39;{!DAY( TODAY() )}&#39;; 
+} 
+else{ 
+d = &#39;{!DAY( TODAY() )}&#39;; 
+} 
+
+if (&#39;{!MONTH( TODAY() )}&#39;&lt; 10){ 
+m = &quot;0&quot;+&#39;{!MONTH( TODAY() )}&#39;; 
+} 
+else{ 
+m = &#39;{!MONTH( TODAY() )}&#39;; 
+} 
+
+request.id = &#39;{!Request__c.Id}&#39;; 
+request.Sprint__c = y+&quot;-&quot;+m+&quot;-&quot;+d; 
+request.Estimated_Completion__c = y+&quot;-&quot;+m+&quot;-&quot;+d; 
+request.Estimated__c = y+&quot;-&quot;+m+&quot;-&quot;+d; 
+request.Prioritized__c = y+&quot;-&quot;+m+&quot;-&quot;+d; 
+request.Groomed__c = y+&quot;-&quot;+m+&quot;-&quot;+d; 
+request.Scheduled__c = y+&quot;-&quot;+m+&quot;-&quot;+d; 
+request.Hours_Estimate__c = 1; 
+request.Stage__c = &quot;Scheduled&quot;; 
+
+result = sforce.connection.update([request]); 
+
+if ( result[0].getBoolean( &quot;success&quot; ) ) { 
+
+location.reload( true ); 
+
+} 
+else{alert(&#39;You officially have 100 problems, because this button seems to be broken. Please create a Production Support Request at https://&#39; + window.location.hostname + &#39;/a1s/o&#39;)}</url>
+</WebLink>

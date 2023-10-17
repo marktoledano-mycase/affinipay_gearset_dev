@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Last Login Date/Time of AppFolio Property Manager, MyCase, or Rentlinx users synced from respective app. --></help>
+        <label><!-- Last Login --></label>
+        <name>Last_Login__c</name>
+    </CustomFieldTranslation>

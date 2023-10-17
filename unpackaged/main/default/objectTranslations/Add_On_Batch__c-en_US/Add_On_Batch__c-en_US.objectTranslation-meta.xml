@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Bank Account Add-On Batch</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Bank Account Add-On Batches</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Bank_Account_Auth_Form --></label>
+        <name>Bank_Account_Auth_Form</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Bank_Account_Auth_Form_Sertifi --></label>
+        <name>Bank_Account_Auth_Form_Sertifi</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Bank_Auth_Spreadsheet --></label>
+        <name>Bank_Auth_Spreadsheet</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Bank_Account_Spreadsheet --></label>
+        <name>Create_Bank_Account_Spreadsheet</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- PushBankAccountstoPayNearMe --></label>
+        <name>PushBankAccountstoPayNearMe</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Push_ALL_Bank_Accounts --></label>
+        <name>Push_ALL_Bank_Accounts</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Push_ALL_Bank_Accounts_to_Profitstars_Outbound --></label>
+        <name>Push_ALL_Bank_Accounts_to_Profitstars_Outbound</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Push_All_Bank_Accounts_to_CyberSource --></label>
+        <name>Push_All_Bank_Accounts_to_CyberSource</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Merchant_App_Add_On_Form --></label>
+        <name>Send_Merchant_App_Add_On_Form</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Test_Link --></label>
+        <name>Test_Link</name>
+    </webLinks>
+</CustomObjectTranslation>

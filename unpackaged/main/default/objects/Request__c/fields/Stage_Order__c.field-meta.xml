@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_Order__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( Stage__c , &#39;Submitted&#39;, 1,
+&#39;Estimated&#39;, 4,
+&#39;Prioritized&#39;, 5,
+&#39;Groomed&#39;, 6,
+&#39;Scheduled&#39;, 7,
+&#39;Developing&#39;, if( RecordType.Name = &#39;Production Support&#39;,2,if( Changed_Record_Type__c = TRUE &amp;&amp; isblank(Scheduled__c),2, 8)),
+&#39;On Hold: Requester&#39;, if( RecordType.Name = &#39;Production Support&#39;,2,if( Changed_Record_Type__c = TRUE &amp;&amp; isblank(Scheduled__c),2, 8)),
+&#39;On Hold: Business Systems&#39;, if( RecordType.Name = &#39;Production Support&#39;,2,if( Changed_Record_Type__c = TRUE &amp;&amp; isblank(Scheduled__c),2, 8)),
+&#39;On Hold: Vendor&#39;, if( RecordType.Name = &#39;Production Support&#39;,2,if( Changed_Record_Type__c = TRUE &amp;&amp; isblank(Scheduled__c),2, 8)),
+&#39;Peer Review&#39;, 8,
+&#39;User Acceptance Testing&#39;, 8,
+&#39;Complete&#39;, if( RecordType.Name = &#39;Production Support&#39;,3,9),
+&#39;Cancelled - Business Unit&#39;, 10,
+&#39;Cancelled - Business Systems Team&#39;, 10, 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Stage Order #</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

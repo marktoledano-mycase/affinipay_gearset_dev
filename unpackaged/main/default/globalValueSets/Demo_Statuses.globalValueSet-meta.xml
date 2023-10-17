@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Scheduling</fullName>
+        <default>false</default>
+        <label>Scheduling</label>
+    </customValue>
+    <customValue>
+        <fullName>Scheduled</fullName>
+        <default>false</default>
+        <label>Scheduled</label>
+    </customValue>
+    <customValue>
+        <fullName>Attended</fullName>
+        <default>false</default>
+        <label>Attended</label>
+    </customValue>
+    <customValue>
+        <fullName>No Show</fullName>
+        <default>false</default>
+        <label>No Show</label>
+    </customValue>
+    <customValue>
+        <fullName>Follow-up</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Follow-up</label>
+    </customValue>
+    <description>May be used at the lead or the opportunity when seeking to track this information</description>
+    <masterLabel>Demo Statuses</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

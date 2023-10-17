@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Status_to_Convert_without_Opp</fullName>
+    <active>true</active>
+    <description>When a Lead is converted to an Opportunity, the Status must be &quot;Qualified.&quot; This ensures that all required fields are populated prior to conversion, which provides critical competitive intelligence.</description>
+    <errorConditionFormula>$Permission.Bypass_Defined_VR_s = FALSE &amp;&amp;
+
+(
+   ISNEW() ||
+   ISCHANGED(IsConverted)
+) &amp;&amp;
+
+IsConverted = TRUE &amp;&amp;
+TEXT(Status) != &quot;Converted without Opportunity&quot; &amp;&amp;
+ISBLANK(ConvertedOpportunityId)</errorConditionFormula>
+    <errorMessage>Status must be &quot;Converted without Opportunity&quot; when converting without an Opportunity.</errorMessage>
+</ValidationRule>

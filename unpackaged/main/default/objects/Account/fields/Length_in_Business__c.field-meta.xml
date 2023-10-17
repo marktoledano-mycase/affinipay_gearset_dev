@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Length_in_Business__c</fullName>
+    <externalId>false</externalId>
+    <formula>TEXT(FLOOR(((YEAR(TODAY()) * 12) + MONTH((TODAY()) - 1) - (VALUE(Year_Established__c))*12) / 12))&amp; &quot; years, &quot; &amp; TEXT(ROUND(MOD(((YEAR(TODAY()) * 12) + MONTH((TODAY()) - 1) - (VALUE(Year_Established__c))*12) / 12,1)*12,0)) &amp; &quot; months&quot;</formula>
+    <label>Length in Business</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

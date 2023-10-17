@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contingency_Billing_Only__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates customer is not a fit for MyCase Payments</description>
+    <externalId>false</externalId>
+    <label>Contingency Billing Only</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

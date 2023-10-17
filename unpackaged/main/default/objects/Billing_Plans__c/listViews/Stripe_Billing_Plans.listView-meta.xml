@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stripe_Billing_Plans</fullName>
+    <columns>Billing_System__c</columns>
+    <columns>NAME</columns>
+    <columns>IsActive__c</columns>
+    <columns>Description__c</columns>
+    <columns>Stripe_Price_ID__c</columns>
+    <columns>Stripe_Product_ID__c</columns>
+    <columns>Stripe_Product_Name__c</columns>
+    <columns>Price__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Billing_System__c</field>
+        <operation>equals</operation>
+        <value>Stripe-CP,Stripe-DW,Stripe-WP</value>
+    </filters>
+    <label>Stripe Billing Plans</label>
+</ListView>

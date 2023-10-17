@@ -1,0 +1,13 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">Hi {{{Recipient.FirstName}}},<br />
+<br />
+This is a courtesy email, as we recently noticed that you may have moved to a new website host. Would you like to cancel your MyCase website subscription? If not, please let us know if this is a technical error – we are happy to assist.<br />
+<br />
+Thank you,<br />
+{{{Sender.FirstName}}}<br />
+MyCase Website Services Team<br />
+Case #{{{Case.CaseNumber}}}</body>
+</html>

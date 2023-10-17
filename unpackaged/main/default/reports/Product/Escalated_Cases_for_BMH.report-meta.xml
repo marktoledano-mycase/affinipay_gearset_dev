@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_99883755</developerName>
+        <masterLabel>Origin</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>ORIGIN</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Phone</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Phone/Voicemail</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Phone (Consumer Relations)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Phone (Support Request)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Phone 3 (CR - Full Report)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Phone 4 (CR - Main)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Answered Call</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Called support line</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Called maintenance line</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Called manager</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Voicemail</sourceValue>
+            </sourceValues>
+            <value>Phone</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Intercom</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Live Agent Chat</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Chat (Soluno)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Chat (LawPay)</sourceValue>
+            </sourceValues>
+            <value>Chat</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Email</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email (Billing)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email (MyCase)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email (MyCase Payments)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email (MyCase Subscription Change)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email (MyCase Websites)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Web - Community KB (MyCase)</sourceValue>
+            </sourceValues>
+            <value>Email</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>HorizontalBar</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>REASON</groupingColumn>
+        <location>CHART_BOTTOM</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Case.Case_Sub_Reason__c</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>Case.Escalation_Description__c</field>
+    </columns>
+    <columns>
+        <field>Case.Escalation_Status__c</field>
+    </columns>
+    <columns>
+        <field>Case.Bug_Status__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>1 AND 2 AND (3 OR (4 AND 5))</booleanFilter>
+        <criteriaItems>
+            <column>Case.Escalation_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>,Not Escalated</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>SUBJECT</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>Special Ops</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>REASON</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>ACH,Billing,Billing (MC),Bug/Outage,CC,CC Disbursement Failure,Customer Complaint,Expectations Product,General,Invoices,Misc.,Misc. Payments,MyCase Billing,Online Payments,Other Payments Reason,Payables,Payables/Payments,Payment,Payments,Performance Metrics,Receivables,Reconciliation,Refund,Reject,Reject - MC,Reporting,Transactions,Trust/Credit Accounting,eCheck Payables</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>REASON</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Integration Issue,Integrations</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.Case_Sub_Reason__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Quickbooks,Quickbooks - Reset,Quickbooks - Sent to QB Support,Quickbooks - Setup,Quickbooks - Sync</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>REASON</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Escalated Cases for BMH</name>
+    <params>
+        <name>units</name>
+        <value>h</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

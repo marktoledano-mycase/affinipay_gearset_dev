@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Probably_Client_of_Active_Firm__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check via Workato Inbound Request flow if firm name matches existing customer name and email address is personal</description>
+    <externalId>false</externalId>
+    <label>Probably Client of Active Firm</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

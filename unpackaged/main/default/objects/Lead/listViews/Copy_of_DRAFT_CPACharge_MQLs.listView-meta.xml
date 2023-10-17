@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copy_of_DRAFT_CPACharge_MQLs</fullName>
+    <booleanFilter>1 AND (2 OR 3 or 5) AND 4</booleanFilter>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>Timezone__c</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>Last_MQL_Date__c</columns>
+    <columns>Last_MQL_Brand__c</columns>
+    <columns>Last_MQL_Type__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Last_MQL_Brand__c</field>
+        <operation>equals</operation>
+        <value>CASEpeer</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>mql</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>CASEpeer MQLs</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Marketing Nurture,Disqualified</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>CASEpeer Sales Requests</value>
+    </filters>
+    <label>CASEpeer MQLs</label>
+    <sharedTo>
+        <roleAndSubordinates>Account_Executive_CASEpeer</roleAndSubordinates>
+        <roleAndSubordinates>Account_Executive_MyCase_Core_C</roleAndSubordinates>
+        <roleAndSubordinates>BDR_CASEpeer</roleAndSubordinates>
+        <roleAndSubordinates>Sales_Manager_CASEpeer_MyCase_Core_C</roleAndSubordinates>
+    </sharedTo>
+</ListView>

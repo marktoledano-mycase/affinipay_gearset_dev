@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Soluno_Product_Type_Mismatch</fullName>
+    <active>true</active>
+    <description>Produces error if Product types do not match</description>
+    <errorConditionFormula>and(
+Opportunity__r.RecordTypeId = &#39;01253000000CkO9&#39;,
+  Text(Product_Type__c) &lt;&gt;  Text(SKU_Product__r.Product_Type__c) 
+
+)</errorConditionFormula>
+    <errorDisplayField>SKU_Product__c</errorDisplayField>
+    <errorMessage>Product Type on Opp SKU must match the Product Type of the SKU Product added</errorMessage>
+</ValidationRule>

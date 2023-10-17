@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Billing Plan</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>BIlling Plans</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Billing Plan Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Stripe Details --></label>
+            <section>Stripe Details</section>
+        </sections>
+        <sections>
+            <label><!-- Zuora Details --></label>
+            <section>Zuora Details</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Update Bill Plan --></label>
+        <name>Update_Bill_Plan</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

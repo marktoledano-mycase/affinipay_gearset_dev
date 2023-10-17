@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- If selected RR processing will ignore the Min Units assigned on the group members records --></help>
+        <label><!-- Ignore Min Units --></label>
+        <name>Ignore_Min_Units__c</name>
+    </CustomFieldTranslation>

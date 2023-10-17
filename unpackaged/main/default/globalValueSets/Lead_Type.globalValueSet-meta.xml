@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Trial</fullName>
+        <default>false</default>
+        <label>Trial</label>
+    </customValue>
+    <customValue>
+        <fullName>Non Trial Inbound</fullName>
+        <default>false</default>
+        <label>Non Trial Inbound</label>
+    </customValue>
+    <customValue>
+        <fullName>Trial Extension</fullName>
+        <default>false</default>
+        <label>Trial Extension</label>
+    </customValue>
+    <customValue>
+        <fullName>BDR</fullName>
+        <default>false</default>
+        <label>BDR</label>
+    </customValue>
+    <customValue>
+        <fullName>Special Ops Outbound</fullName>
+        <default>false</default>
+        <label>Special Ops Outbound</label>
+    </customValue>
+    <customValue>
+        <fullName>AE Outbound</fullName>
+        <default>false</default>
+        <label>AE Outbound</label>
+    </customValue>
+    <masterLabel>zz Lead Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Identifies the condition that the percentage discount extended on the record exceeds the Maximum Sales Discount on the SKU Product. --></help>
+        <label><!-- Maximum Sales Discount Exceeded --></label>
+        <name>Maximum_Sales_Discount_Exceeded__c</name>
+    </CustomFieldTranslation>

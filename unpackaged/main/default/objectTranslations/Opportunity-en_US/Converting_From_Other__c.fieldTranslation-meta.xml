@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- If selecting &quot;Other&quot; from the Converting From picklist, provide the name of the unlisted software. --></help>
+        <label><!-- Converting From (Other) --></label>
+        <name>Converting_From_Other__c</name>
+    </CustomFieldTranslation>

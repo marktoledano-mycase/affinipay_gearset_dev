@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_Risk_Case</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Create Risk Case</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&#39;/soap/ajax/29.0/connection.js&#39;)}
+
+var newRiskCase = new sforce.SObject(&#39;Case&#39;);
+
+var scoreExplanation =&quot;{!JSENCODE( Survey__c.Score_Explanation__c )}&quot;;
+var possibleImprovements = &quot;{!JSENCODE(  Survey__c.Possible_Improvements__c )}&quot;;
+var feedback = &quot;{!JSENCODE(   Survey__c.Feedback__c  )}&quot;;
+
+newRiskCase.RecordTypeID = &#39;01280000000Q9uk&#39;;
+newRiskCase.Status = &quot;New&quot;;
+newRiskCase.Type = &quot;Post Migration&quot;;
+newRiskCase.ContactID = &#39;{!Survey__c.Contact_ID__c}&#39;;
+newRiskCase.AccountID = &#39;{!Survey__c.Account_ID__c}&#39;;
+newRiskCase.Risk_Case_Survey__c = &#39;{!Survey__c.Id}&#39;;
+newRiskCase.Origin = &quot;Internal: Success&quot;;
+newRiskCase.Subject = &quot;Case Created from Survey Results&quot;;
+newRiskCase.Description = 
+&quot;Survey Score: &quot;+&quot;{!Survey__c.Score__c}\n\n&quot;+
+&quot;Score Explanation:  &quot; + scoreExplanation + &quot;\n\n&quot; +
+&quot;Possible Improvements:  &quot; + possibleImprovements + &quot;\n\n&quot; +
+&quot;Feedback:  &quot;+ feedback;
+newRiskCase.ContactPhone = &quot;{!Contact.Phone}&quot;;
+newRiskCase.ContactEmail = &quot;{!Contact.Email}&quot;;
+
+result = sforce.connection.create([newRiskCase]);
+
+var currentSurvey = new sforce.SObject(&#39;Survey__c&#39;);
+
+currentSurvey.id = &#39;{!Survey__c.Id}&#39;;
+currentSurvey.Risk_Case_Created__c = &#39;TRUE&#39;;
+
+result = sforce.connection.update([currentSurvey]);
+
+
+
+if(result[0].success == &#39;true&#39;){
+    location.reload(true);}
+else{alert(&#39;Error!  Check and see if Case was created!&#39;);
+}</url>
+</WebLink>

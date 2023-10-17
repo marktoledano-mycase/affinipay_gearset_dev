@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- This is the ACH type used by ProfitStars.  1 = ACH Credit, 2 = ACH Debit, 3 = ACH Refund.  The only supported value at this time is ACH Credit. --></help>
+        <label><!-- ACH Type --></label>
+        <name>ACH_Type__c</name>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

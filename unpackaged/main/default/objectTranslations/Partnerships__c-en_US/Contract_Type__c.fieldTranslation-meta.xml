@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Contract Type --></label>
+        <name>Contract_Type__c</name>
+        <picklistValues>
+            <masterLabel>Integrated Vol</masterLabel>
+            <translation><!-- Integrated Vol --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payment Hybrid</masterLabel>
+            <translation><!-- Payment Hybrid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Referral Vol</masterLabel>
+            <translation><!-- Referral Vol --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Software Leads</masterLabel>
+            <translation><!-- Software Leads --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Their Form</masterLabel>
+            <translation><!-- Their Form --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

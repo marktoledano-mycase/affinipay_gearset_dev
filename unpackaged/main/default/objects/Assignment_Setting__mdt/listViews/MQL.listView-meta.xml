@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MQL</fullName>
+    <columns>MasterLabel</columns>
+    <columns>MQL_Brand__c</columns>
+    <columns>MQL_Product_Tier__c</columns>
+    <columns>MQL_Type__c</columns>
+    <columns>Min_Demographic_Score__c</columns>
+    <columns>Max_Demographic_Score__c</columns>
+    <columns>Assignment_Type__c</columns>
+    <columns>Assignment_Name__c</columns>
+    <columns>Slack_ID__c</columns>
+    <columns>Business_Hour_Consideration__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Type__c</field>
+        <operation>equals</operation>
+        <value>MQL</value>
+    </filters>
+    <label>MQL</label>
+</ListView>

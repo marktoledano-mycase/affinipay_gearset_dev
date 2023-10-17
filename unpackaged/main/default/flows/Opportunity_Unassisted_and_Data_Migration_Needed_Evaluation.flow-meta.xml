@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>Opportunity - Unassisted and Data Migration Needed Evaluation {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity - Unassisted and Data Migration Needed Evaluation</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Set_the_Data_Migration_Needed_Value</name>
+        <label>Set the Data Migration Needed Value</label>
+        <locationX>176</locationX>
+        <locationY>311</locationY>
+        <inputAssignments>
+            <field>Data_Migration_Needed__c</field>
+            <value>
+                <stringValue>No</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Set_the_Data_Migration_Needed_Value</targetReference>
+        </connector>
+        <filterFormula>AND(
+   TEXT( {!$Record.StageName} ) = &quot;Closed Won&quot;,
+   TEXT( {!$Record.Sale_Interaction__c} ) = &quot;Unassisted&quot;,
+   {!$Record.Bypass_VR_and_Automation__c} &lt;&gt; TRUE,
+   OR(
+         ISNEW(),
+         ISCHANGED( {!$Record.StageName} )
+         )
+    )</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

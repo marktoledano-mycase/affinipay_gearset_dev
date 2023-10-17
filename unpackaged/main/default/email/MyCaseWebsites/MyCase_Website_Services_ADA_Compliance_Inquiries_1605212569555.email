@@ -1,0 +1,17 @@
+<html><head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">Hi {{{Recipient.FirstName}}},&nbsp;<br />
+<br />
+Thank you for your email.&nbsp;<br />
+<br />
+The MyCase Websites team continues to take proactive steps to align with generally-accepted Website Accessibility Standards. Specifically, we look to the WCAG 2.1 (AA) standards as a reference. In the absence of clear guidance from the US Department of Justice, the accessibility criteria outlined in the WCAG have been generally accepted as the de-facto standard.&nbsp;<br />
+<br />
+The steps we take include adding descriptive text for images (to help visually-impaired people understand what is on a given page) and allowing visitors the ability to navigate through websites using the keyboard only. Generally speaking, our goal is to adhere to both the WCAG guidelines as well as to the spirit of Website Accessibility -- making the content and functionality of a given website accessible to all visitors.&nbsp;Further, we are always thinking about improvements and enhancements as accessibility standards evolve.<br />
+<br />
+Please note, however, that while the MyCase Websites team will review your website for accessibility as it is built, we do not actively monitor the content of your website ongoing. &nbsp;<br />
+<br />
+Thank you,&nbsp;<br />
+{{{Sender.FirstName}}}<br />
+MyCase Website Services Team&nbsp;<br />
+Case # {{{Case.CaseNumber}}}</body></html>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Billing_Case</fullName>
+    <availability>online</availability>
+    <description>R178796</description>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New Billing Case</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>/500/e?
+CF00N80000005m3nu={!Case.CaseNumber}&amp;
+CF00N80000005m3nu_lkid={!Case.Id}&amp;
+Account={!Case.Account}&amp;
+cas4_lkid={!Case.AccountId}&amp;
+Contact={!Case.Contact}&amp;
+cas3_lkid={!Case.ContactId}&amp;
+RecordType=01280000000QFHz&amp;
+CF00N80000005m3nv_lkid={!$User.Id}&amp;
+CF00N80000005m3nv={!$User.FirstName}+{!$User.LastName}&amp;
+&amp;newOwn_lkid=00G80000002E5tL
+&amp;newOwn=Billing
+retURL=/{!Case.Id}</url>
+</WebLink>

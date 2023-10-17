@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <assignments>
+        <name>Assign_Has_Lead_Message</name>
+        <label>Assign Has Lead Message</label>
+        <locationX>436</locationX>
+        <locationY>407</locationY>
+        <assignmentItems>
+            <assignToReference>slackMessageHeader</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Firm Converted - Prospect Still a Lead</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Assign_Missing_Lead_and_Account_Message</name>
+        <label>Assign Missing Lead and Account Message</label>
+        <locationX>220</locationX>
+        <locationY>605</locationY>
+        <assignmentItems>
+            <assignToReference>slackMessageHeader</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Firm Converted - No Matching Account or Lead</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <constants>
+        <name>ChannelId</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>C0509UQEVT2</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <name>Lead_Check</name>
+        <label>Lead Check</label>
+        <locationX>205</locationX>
+        <locationY>411</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Missing_Lead_and_Account_Message</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Has_Account</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Has Account</label>
+        </rules>
+        <rules>
+            <name>Has_Lead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Lead__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Has_Lead_Message</targetReference>
+            </connector>
+            <label>Has Lead</label>
+        </rules>
+    </decisions>
+    <description>Calls a slack alert when a billing account is created without a related salesforce account</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>f_LeadMessageHeader</name>
+        <dataType>String</dataType>
+        <expression>&quot;Billing Account Created - No Matching Account&quot;</expression>
+    </formulas>
+    <interviewLabel>Slack Alert: New Billing Account with No Salesforce Account {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Slack Alert: New Billing Account with No Salesforce Account</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>89</locationX>
+        <locationY>47</locationY>
+        <connector>
+            <targetReference>Lead_Check</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Billing_System__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Zuora-MC</stringValue>
+            </value>
+        </filters>
+        <object>Billing_Account__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+    <textTemplates>
+        <name>SlackMessageBody</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>test</text>
+    </textTemplates>
+    <variables>
+        <name>slackMessageHeader</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

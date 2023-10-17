@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hunting_Active_DW_No_LP</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND (4 OR 5) AND 6 AND 7</booleanFilter>
+    <columns>Account_Owner_hyperlink__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>Timezone__c</columns>
+    <columns>ACCOUNT.EMPLOYEES</columns>
+    <columns>Domain__c</columns>
+    <columns>Contract_Effective_Start__c</columns>
+    <columns>ACCOUNT.LAST_ACTIVITY</columns>
+    <columns>CASEpeer_Customer_Status__c</columns>
+    <columns>Docketwise_Customer_Status__c</columns>
+    <columns>MyCase_Customer_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Customer</value>
+    </filters>
+    <filters>
+        <field>Docketwise_Customer_Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </filters>
+    <filters>
+        <field>LawPay_Customer_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Active</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.LAST_ACTIVITY</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>ACCOUNT.LAST_ACTIVITY</field>
+        <operation>lessThan</operation>
+        <value>LAST_N_DAYS:30</value>
+    </filters>
+    <filters>
+        <field>Contract_Effective_Start__c</field>
+        <operation>lessThan</operation>
+        <value>LAST_N_DAYS:30</value>
+    </filters>
+    <filters>
+        <field>Number_of_Open_Opportunities__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>Hunting - Active DW No LP</label>
+</ListView>

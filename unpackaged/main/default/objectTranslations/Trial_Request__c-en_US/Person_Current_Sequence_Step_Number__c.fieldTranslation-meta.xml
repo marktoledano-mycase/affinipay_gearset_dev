@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- If Contact is not null, Contact: Current Sequence Step Number. Otherwise, Lead: Current Sequence Step Number --></help>
+        <label><!-- Person Current Sequence Step Number --></label>
+        <name>Person_Current_Sequence_Step_Number__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,27 @@
+Hello!
+
+We have received your email and are converting it into a Support Request for you. Your request will be automatically routed to the right AppFolian for research and follow up. 
+
+We noticed that you sent us this email directly. Next time, for faster assistance, we recommend trying the Get Help tool in the AppFolio Help Center, where you can find articles related to your question and then connect with a customer care representative if needed.
+
+You can access the Help Center at any time by logging into your database and clicking Get Help under the Help & Training menu at the top of the page. 
+
+For now, here are your case details. We will be in touch with you soon!
+
+Case Number: {!Case.CaseNumber}
+Date Created: {!Case.CreatedDate}
+Case Subject: {!Case.Subject}
+
+Thank you,
+
+AppFolio Customer Care
+
+
+--
+Appfolio Property Manager
+50 Castilian Dr. | Goleta, CA | 93117
+Phone: 866.648.1536
+www.appfolio.com
+------------------------------
+
+{!Case.Thread_Id}

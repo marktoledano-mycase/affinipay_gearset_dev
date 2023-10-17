@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Meeting/Call/Discussion</fullName>
+                <default>false</default>
+                <label>Meeting/Call/Discussion</label>
+            </value>
+            <value>
+                <fullName>New Process</fullName>
+                <default>false</default>
+                <label>New Process</label>
+            </value>
+            <value>
+                <fullName>Problem/Error</fullName>
+                <default>false</default>
+                <label>Problem/Error</label>
+            </value>
+            <value>
+                <fullName>Record Maintenance</fullName>
+                <default>false</default>
+                <label>Record Maintenance</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>Update to Existing Process</fullName>
+                <default>false</default>
+                <label>Update to Existing Process</label>
+            </value>
+            <value>
+                <fullName>User Maintenance/Creation</fullName>
+                <default>false</default>
+                <label>User Maintenance/Creation</label>
+            </value>
+            <value>
+                <fullName>Report/Dashboard</fullName>
+                <default>false</default>
+                <label>Report/Dashboard</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

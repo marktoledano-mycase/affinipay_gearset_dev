@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Filter_Outcome__c</fullName>
+    <description>Global picklist for leads and contacts to populate the filter outcome from automated lead vetting</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Global picklist for leads and contacts to populate the filter outcome from automated lead vetting</inlineHelpText>
+    <label>Lead Filter Outcome</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Lead_Filter_Outcome</valueSetName>
+    </valueSet>
+</CustomField>

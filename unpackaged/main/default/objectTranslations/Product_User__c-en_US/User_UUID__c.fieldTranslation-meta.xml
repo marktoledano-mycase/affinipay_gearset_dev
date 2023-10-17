@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- User UUID of the contact in the associated product environment --></help>
+        <label><!-- User UUID --></label>
+        <name>User_UUID__c</name>
+    </CustomFieldTranslation>

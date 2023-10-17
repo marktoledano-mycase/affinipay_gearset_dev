@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Woodpecker_Doc_Gen</fullName>
+    <active>true</active>
+    <description>Woodpecker: Used Doc Gen Previously= Yes, Current Doc Gen Workaround is required.</description>
+    <errorConditionFormula>AND(
+    ISPICKVAL(Used_Doc_Gen_Previously__c, &quot;Yes&quot;),
+				$Permission.Bypass_Defined_VR_s = FALSE,
+				ISBLANK(Current_Doc_Gen_Workaround__c))</errorConditionFormula>
+    <errorMessage>Woodpecker: Used Doc Gen Previously= Yes, Current Doc Gen Workaround is required.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Carolines</fullName>
+    <columns>NAME</columns>
+    <columns>Last_Touch_Program__c</columns>
+    <columns>LeadSource__c</columns>
+    <columns>Lead_Channel__c</columns>
+    <columns>Brand__c</columns>
+    <columns>MQL_Status__c</columns>
+    <columns>Person_Owner__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>MQL_Date__c</field>
+        <operation>equals</operation>
+        <value>10/12/2023</value>
+    </filters>
+    <filters>
+        <field>MQL_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Existing Customer,Non-MQL Interaction</value>
+    </filters>
+    <filters>
+        <field>Person_Disqualified_Reason__c</field>
+        <operation>notEqual</operation>
+        <value>UW Junk,UW Fraud,UW Payment Attempt,UW Not Approved Business</value>
+    </filters>
+    <filters>
+        <field>LeadSource__c</field>
+        <operation>equals</operation>
+        <value>product</value>
+    </filters>
+    <label>LPC Customer - LPP Leads</label>
+</ListView>

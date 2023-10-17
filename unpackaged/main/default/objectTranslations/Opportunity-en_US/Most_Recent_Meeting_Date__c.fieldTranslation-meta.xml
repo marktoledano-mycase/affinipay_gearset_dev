@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Date of most recent scheduled prospect meeting for the opportunity --></help>
+        <label><!-- Most Recent Meeting Date --></label>
+        <name>Most_Recent_Meeting_Date__c</name>
+    </CustomFieldTranslation>

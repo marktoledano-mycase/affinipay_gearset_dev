@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Magic permissions to fix things, including round robins and Salesforce configuration. 🪄</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Sales Operations</label>
+    <mutingPermissionSets>Mute_Hide_Option_to_Switch_to_Salesforce_Classic</mutingPermissionSets>
+    <permissionSets>Access_Sales_Ops_Tools</permissionSets>
+    <permissionSets>Create_Onboarding_after_Opportunity_Is_Closed</permissionSets>
+    <permissionSets>Create_Report_and_Dashboard_Folders</permissionSets>
+    <permissionSets>Customize_Application</permissionSets>
+    <permissionSets>Edit_Closed_Won_Opportunities</permissionSets>
+    <permissionSets>Edit_MQL_Fields</permissionSets>
+    <permissionSets>Inbound_Requests_Readonly</permissionSets>
+    <permissionSets>Manage_Business_Hours_Holidays</permissionSets>
+    <permissionSets>Manage_Custom_Report_Types</permissionSets>
+    <permissionSets>Manage_Dashboards</permissionSets>
+    <permissionSets>Manage_Flows</permissionSets>
+    <permissionSets>Manage_Public_List_Views</permissionSets>
+    <permissionSets>Manage_Roles</permissionSets>
+    <permissionSets>Modify_All_Accounts</permissionSets>
+    <permissionSets>Modify_All_Assignment_Groups_and_Members</permissionSets>
+    <permissionSets>Modify_All_Campaigns</permissionSets>
+    <permissionSets>Modify_All_Contacts</permissionSets>
+    <permissionSets>Modify_All_Inbound_Requests</permissionSets>
+    <permissionSets>Modify_All_Leads</permissionSets>
+    <permissionSets>Modify_Linked_Records_on_Product_Environment_and_Opportunity</permissionSets>
+    <permissionSets>Process_Opportunity_for_Subscription_Contract</permissionSets>
+    <permissionSets>Product_Picker_Read_Write</permissionSets>
+    <permissionSets>Transfer_Leads</permissionSets>
+    <permissionSets>Transfer_Records</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Triggers contact ownership to match account ownership --></help>
+        <label><!-- Update Contact Ownership --></label>
+        <name>Update_Contact_Ownership__c</name>
+    </CustomFieldTranslation>

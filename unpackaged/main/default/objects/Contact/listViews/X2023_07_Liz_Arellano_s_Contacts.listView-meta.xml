@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2023_07_Liz_Arellano_s_Contacts</fullName>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>FULL_NAME</columns>
+    <columns>Account.Contract_Effective_Start__c</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>Status__c</columns>
+    <columns>CONTACT.LAST_ACTIVITY</columns>
+    <columns>Number_of_Employees__c</columns>
+    <columns>Primary_Practice_Area__c</columns>
+    <columns>Last_MQL_Date__c</columns>
+    <columns>Last_MQL_Type__c</columns>
+    <columns>Outreach_Actively_Being_Sequenced__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>mkto_si__Current_Sales_Campaign__c</field>
+        <operation>equals</operation>
+        <value>2023-07-26 - Reassignment of Liz&#39;s contacts/leads/opps</value>
+    </filters>
+    <label>2023-07 -Liz Arellano&#39;s Contacts</label>
+    <sharedTo>
+        <role>Account_Executive_MyCase_Core_C</role>
+    </sharedTo>
+</ListView>

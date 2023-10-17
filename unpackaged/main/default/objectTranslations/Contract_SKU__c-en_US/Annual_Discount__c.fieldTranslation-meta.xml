@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Reflects the annual unit discount in dollars for the main product --></help>
+        <label><!-- zz Annual Discount --></label>
+        <name>Annual_Discount__c</name>
+    </CustomFieldTranslation>

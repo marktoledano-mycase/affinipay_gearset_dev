@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>Stage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sold/Not Started</fullName>
+                <default>false</default>
+                <label>Sold/Not Started</label>
+            </value>
+            <value>
+                <fullName>KOC Confirmed</fullName>
+                <default>false</default>
+                <label>Questionnaire Received</label>
+            </value>
+            <value>
+                <fullName>Sold/Not Ready</fullName>
+                <default>false</default>
+                <label>Sold/Not Ready</label>
+            </value>
+            <value>
+                <fullName>On-Boarding</fullName>
+                <default>false</default>
+                <label>On-Boarding</label>
+            </value>
+            <value>
+                <fullName>KOC Scheduled</fullName>
+                <default>false</default>
+                <label>KOC Scheduled</label>
+            </value>
+            <value>
+                <fullName>KOC Complete</fullName>
+                <default>false</default>
+                <label>KOC Complete</label>
+            </value>
+            <value>
+                <fullName>Site Presentation</fullName>
+                <default>false</default>
+                <label>Site Presentation</label>
+            </value>
+            <value>
+                <fullName>Site Delivered/Final Changes</fullName>
+                <default>false</default>
+                <label>Site Delivered/Final Changes</label>
+            </value>
+            <value>
+                <fullName>Active</fullName>
+                <default>false</default>
+                <label>Active</label>
+            </value>
+            <value>
+                <fullName>Additional Communication (O)</fullName>
+                <default>false</default>
+                <label>Additional Communication (O)</label>
+            </value>
+            <value>
+                <fullName>Agreement Pending</fullName>
+                <default>false</default>
+                <label>Agreement Pending</label>
+            </value>
+            <value>
+                <fullName>Build In Progress</fullName>
+                <default>false</default>
+                <label>Build In Progress</label>
+            </value>
+            <value>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+                <label>Cancelled</label>
+            </value>
+            <value>
+                <fullName>Complete</fullName>
+                <default>false</default>
+                <label>Complete</label>
+            </value>
+            <value>
+                <fullName>Content Acquisition</fullName>
+                <default>false</default>
+                <label>Content Acquisition</label>
+            </value>
+            <value>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+                <label>Deferred</label>
+            </value>
+            <value>
+                <fullName>Deferred-Built</fullName>
+                <default>false</default>
+                <label>Deferred-Built</label>
+            </value>
+            <value>
+                <fullName>Deferred-Canceled</fullName>
+                <default>false</default>
+                <label>Deferred-Canceled</label>
+            </value>
+            <value>
+                <fullName>Denied</fullName>
+                <default>false</default>
+                <label>Denied</label>
+            </value>
+            <value>
+                <fullName>Final Changes</fullName>
+                <default>false</default>
+                <label>Final Changes</label>
+            </value>
+            <value>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+                <label>Inactive</label>
+            </value>
+            <value>
+                <fullName>Left APM</fullName>
+                <default>false</default>
+                <label>Left APM</label>
+            </value>
+            <value>
+                <fullName>Left IM</fullName>
+                <default>false</default>
+                <label>Left IM</label>
+            </value>
+            <value>
+                <fullName>Ready</fullName>
+                <default>false</default>
+                <label>Ready</label>
+            </value>
+            <value>
+                <fullName>Live</fullName>
+                <default>false</default>
+                <label>Live</label>
+            </value>
+            <value>
+                <fullName>Live-Free Trial</fullName>
+                <default>false</default>
+                <label>Live-Free Trial</label>
+            </value>
+            <value>
+                <fullName>Lost</fullName>
+                <default>false</default>
+                <label>Lost</label>
+            </value>
+            <value>
+                <fullName>Lost During Pilot</fullName>
+                <default>false</default>
+                <label>Lost During Pilot</label>
+            </value>
+            <value>
+                <fullName>Lost In Onboarding</fullName>
+                <default>false</default>
+                <label>Lost In Onboarding</label>
+            </value>
+            <value>
+                <fullName>Multi Site Deffered</fullName>
+                <default>false</default>
+                <label>Multi Site Deffered</label>
+            </value>
+            <value>
+                <fullName>New/No Contact (O)</fullName>
+                <default>false</default>
+                <label>New/No Contact (O)</label>
+            </value>
+            <value>
+                <fullName>Opportunity/Expansion (A)</fullName>
+                <default>false</default>
+                <label>Opportunity/Expansion (A)</label>
+            </value>
+            <value>
+                <fullName>Opportunity/Listing Quality (A)</fullName>
+                <default>false</default>
+                <label>Opportunity/Listing Quality (A)</label>
+            </value>
+            <value>
+                <fullName>Ownership Change</fullName>
+                <default>false</default>
+                <label>Ownership Change</label>
+            </value>
+            <value>
+                <fullName>Pilot</fullName>
+                <default>false</default>
+                <label>Pilot</label>
+            </value>
+            <value>
+                <fullName>Project Delivered/Final Changes</fullName>
+                <default>false</default>
+                <label>Project Delivered/Final Changes</label>
+            </value>
+            <value>
+                <fullName>Successfully Using (A)</fullName>
+                <default>false</default>
+                <label>Successfully Using (A)</label>
+            </value>
+            <value>
+                <fullName>Tax ID Change</fullName>
+                <default>false</default>
+                <label>Tax ID Change</label>
+            </value>
+            <value>
+                <fullName>Temporarily Disabled</fullName>
+                <default>false</default>
+                <label>Temporarily Disabled</label>
+            </value>
+            <value>
+                <fullName>Third Party - Build in Progress</fullName>
+                <default>false</default>
+                <label>Third Party - Build in Progress</label>
+            </value>
+            <value>
+                <fullName>Transferred</fullName>
+                <default>false</default>
+                <label>Transferred</label>
+            </value>
+            <value>
+                <fullName>Unable to provide docs</fullName>
+                <default>false</default>
+                <label>Unable to provide docs</label>
+            </value>
+            <value>
+                <fullName>Unresponsive</fullName>
+                <default>false</default>
+                <label>Unresponsive</label>
+            </value>
+            <value>
+                <fullName>Upgraded</fullName>
+                <default>false</default>
+                <label>Upgraded</label>
+            </value>
+            <value>
+                <fullName>Welcomed</fullName>
+                <default>false</default>
+                <label>Welcomed</label>
+            </value>
+            <value>
+                <fullName>Welcomed (O)</fullName>
+                <default>false</default>
+                <label>Welcomed (O)</label>
+            </value>
+            <value>
+                <fullName>Winback Opportunity (A)</fullName>
+                <default>false</default>
+                <label>Winback Opportunity (A)</label>
+            </value>
+            <value>
+                <fullName>Churn Website Only</fullName>
+                <default>false</default>
+                <label>Churn Website Only</label>
+            </value>
+            <value>
+                <fullName>Churned</fullName>
+                <default>false</default>
+                <label>Churned</label>
+            </value>
+            <value>
+                <fullName>Churned (A)</fullName>
+                <default>false</default>
+                <label>Churned (A)</label>
+            </value>
+            <value>
+                <fullName>Declined</fullName>
+                <default>false</default>
+                <label>Declined</label>
+            </value>
+            <value>
+                <fullName>On Hold/ Non Responsive</fullName>
+                <default>false</default>
+                <label>On Hold/ Non Responsive</label>
+            </value>
+            <value>
+                <fullName>On Hold Non-responsive</fullName>
+                <default>false</default>
+                <label>On Hold Non-responsive</label>
+            </value>
+            <value>
+                <fullName>No Agreement</fullName>
+                <default>false</default>
+                <label>No Agreement</label>
+            </value>
+            <value>
+                <fullName>ReActivate Site</fullName>
+                <default>false</default>
+                <label>ReActivate Site</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

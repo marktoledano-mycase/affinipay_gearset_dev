@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_State_Formula__c</fullName>
+    <description>R1812755</description>
+    <externalId>false</externalId>
+    <formula>CASE( BillingState,
+&quot;AL&quot;,&quot;AL&quot;,
+&quot;AK&quot;,&quot;AK&quot;,
+&quot;AS&quot;,&quot;AS&quot;,
+&quot;AZ&quot;,&quot;AZ&quot;,
+&quot;AR&quot;,&quot;AR&quot;,
+&quot;CA&quot;,&quot;CA&quot;,
+&quot;CO&quot;,&quot;CO&quot;,
+&quot;CT&quot;,&quot;CT&quot;,
+&quot;DE&quot;,&quot;DE&quot;,
+&quot;DC&quot;,&quot;DC&quot;,
+&quot;FL&quot;,&quot;FL&quot;,
+&quot;GA&quot;,&quot;GA&quot;,
+&quot;GU&quot;,&quot;GU&quot;,
+&quot;HI&quot;,&quot;HI&quot;,
+&quot;ID&quot;,&quot;ID&quot;,
+&quot;IL&quot;,&quot;IL&quot;,
+&quot;IN&quot;,&quot;IN&quot;,
+&quot;IA&quot;,&quot;IA&quot;,
+&quot;KS&quot;,&quot;KS&quot;,
+&quot;KY&quot;,&quot;KY&quot;,
+&quot;LA&quot;,&quot;LA&quot;,
+&quot;ME&quot;,&quot;ME&quot;,
+&quot;MD&quot;,&quot;MD&quot;,
+&quot;MH&quot;,&quot;MH&quot;,
+&quot;MA&quot;,&quot;MA&quot;,
+&quot;MI&quot;,&quot;MI&quot;,
+&quot;FM&quot;,&quot;FM&quot;,
+&quot;MN&quot;,&quot;MN&quot;,
+&quot;MS&quot;,&quot;MS&quot;,
+&quot;MO&quot;,&quot;MO&quot;,
+&quot;MT&quot;,&quot;MT&quot;,
+&quot;NE&quot;,&quot;NE&quot;,
+&quot;NV&quot;,&quot;NV&quot;,
+&quot;NH&quot;,&quot;NH&quot;,
+&quot;NJ&quot;,&quot;NJ&quot;,
+&quot;NM&quot;,&quot;NM&quot;,
+&quot;NY&quot;,&quot;NY&quot;,
+&quot;NC&quot;,&quot;NC&quot;,
+&quot;ND&quot;,&quot;ND&quot;,
+&quot;MP&quot;,&quot;MP&quot;,
+&quot;OH&quot;,&quot;OH&quot;,
+&quot;OK&quot;,&quot;OK&quot;,
+&quot;OR&quot;,&quot;OR&quot;,
+&quot;PW&quot;,&quot;PW&quot;,
+&quot;PA&quot;,&quot;PA&quot;,
+&quot;PR&quot;,&quot;PR&quot;,
+&quot;RI&quot;,&quot;RI&quot;,
+&quot;SC&quot;,&quot;SC&quot;,
+&quot;SD&quot;,&quot;SD&quot;,
+&quot;TN&quot;,&quot;TN&quot;,
+&quot;TX&quot;,&quot;TX&quot;,
+&quot;UT&quot;,&quot;UT&quot;,
+&quot;VT&quot;,&quot;VT&quot;,
+&quot;VA&quot;,&quot;VA&quot;,
+&quot;VI&quot;,&quot;VI&quot;,
+&quot;WA&quot;,&quot;WA&quot;,
+&quot;WV&quot;,&quot;WV&quot;,
+&quot;WI&quot;,&quot;WI&quot;,
+&quot;WY&quot;,&quot;WY&quot;,
+&quot;N/A&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Billing State Formula</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

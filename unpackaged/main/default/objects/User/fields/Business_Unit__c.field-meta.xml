@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Unit__c</fullName>
+    <externalId>false</externalId>
+    <label>Business Unit</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>MyCase</fullName>
+                <default>false</default>
+                <label>MyCase</label>
+            </value>
+            <value>
+                <fullName>Soluno</fullName>
+                <default>false</default>
+                <label>Soluno</label>
+            </value>
+            <value>
+                <fullName>CASEpeer</fullName>
+                <default>false</default>
+                <label>CASEpeer</label>
+            </value>
+            <value>
+                <fullName>Woodpecker</fullName>
+                <default>false</default>
+                <label>Woodpecker</label>
+            </value>
+            <value>
+                <fullName>DocketWise</fullName>
+                <default>false</default>
+                <label>DocketWise</label>
+            </value>
+            <value>
+                <fullName>Affinipay</fullName>
+                <default>false</default>
+                <label>Affinipay</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

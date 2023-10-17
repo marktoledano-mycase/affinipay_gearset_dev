@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MyCase_Approvals_Closed_Won</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Permission.Bypass_Defined_VR_s = FALSE &amp;&amp;
+(
+    ISNEW() ||
+    ISCHANGED(StageName)
+) &amp;&amp;
+
+
+    TEXT(StageName) = &quot;Closed Won&quot;
+ &amp;&amp;
+
+(
+
+Record_Type_Name__c = &quot;MyCase&quot; || Record_Type_Name__c = &quot;LawPay Software&quot;
+
+) 
+
+&amp;&amp; ( ISBLANK( Billing_Subscription__c ) ||
+
+ (NOT(Billing_Subscription__r.Status__c =&quot;Active&quot;)
+
+&amp;&amp; Billing_Subscription__r.Subscription_Start_Date__c &gt; TODAY())||
+Billing_Subscription__r.First_Time_Charge__c=FALSE)
+
+&amp;&amp; TEXT(Type) != &quot;Existing Business&quot;</errorConditionFormula>
+    <errorDisplayField>StageName</errorDisplayField>
+    <errorMessage>MyCase Opportunities can only be moved to Closed Won when the customer&#39;s subscription has been charged.</errorMessage>
+</ValidationRule>

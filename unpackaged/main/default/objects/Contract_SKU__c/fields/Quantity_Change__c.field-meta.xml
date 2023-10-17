@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quantity_Change__c</fullName>
+    <description>Pending quantity change for the Contract SKU</description>
+    <externalId>false</externalId>
+    <formula>IF( AND( NOT(ISBLANK(Subscription_Charge__c)), Subscription_Charge__r.Billing_Subscription__r.Status__c = &#39;Active&#39;) ,
+
+CASE(SKU_Product__r.Product_Type__c,
+
+&quot;Main&quot;, Subscription_Charge__r.Quantity__c - User_Count_Rollup__c, 
+Subscription_Charge__r.Quantity__c - Add_On_Users__c ),
+
+0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Pending quantity change for the Contract SKU</inlineHelpText>
+    <label>Quantity Change</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

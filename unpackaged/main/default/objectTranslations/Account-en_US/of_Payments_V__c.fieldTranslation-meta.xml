@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Count of V+ Payments records where Stage = Sold/Not Started, On-boarding, Live, Active --></help>
+        <label><!-- # of Payments V+ --></label>
+        <name>of_Payments_V__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GiactBusinessChangeToAutoApproval</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+GiactValidationFlag__c = FALSE, 
+ISCHANGED(GIACTBusinessValidation__c), 
+TEXT(PRIORVALUE(GIACTBusinessValidation__c)) &lt;&gt; &#39;Automated Approval&#39;, 
+ISPICKVAL(GIACTBusinessValidation__c, &#39;Automated Approval&#39;) 
+)</errorConditionFormula>
+    <errorMessage>You are not authorized to change the &#39;GIACT Business Validation&#39; to &#39;Automated Approval&#39;</errorMessage>
+</ValidationRule>

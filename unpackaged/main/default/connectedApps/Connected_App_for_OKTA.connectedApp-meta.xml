@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>integration.sfdc+okta@affinipay.com</contactEmail>
+    <description>Connected app used for OKTA connectivity</description>
+    <label>Connected App for OKTA</label>
+    <oauthConfig>
+        <callbackUrl>https://system-admin.okta.com/admin/app/generic/oauth20redirect</callbackUrl>
+        <consumerKey>3MVG9vp1McGXQBYEvRrxwmlYjVHjbBfSOg9J6PGHL7ifW_flAq528gibJRX70kwlLbGfJ5J509umHnQumRasC</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <scopes>Api</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+</ConnectedApp>

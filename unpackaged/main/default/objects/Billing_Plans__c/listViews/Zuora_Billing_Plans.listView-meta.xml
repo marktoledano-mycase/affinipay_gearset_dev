@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Zuora_Billing_Plans</fullName>
+    <columns>OBJECT_ID</columns>
+    <columns>Billing_System__c</columns>
+    <columns>NAME</columns>
+    <columns>IsActive__c</columns>
+    <columns>Description__c</columns>
+    <columns>Zuora_Rate_Plan_Id__c</columns>
+    <columns>Zuora_Rate_Plan_Charge_Id__c</columns>
+    <columns>Price__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Billing_System__c</field>
+        <operation>equals</operation>
+        <value>Zuora-MC</value>
+    </filters>
+    <label>Zuora Billing Plans</label>
+</ListView>

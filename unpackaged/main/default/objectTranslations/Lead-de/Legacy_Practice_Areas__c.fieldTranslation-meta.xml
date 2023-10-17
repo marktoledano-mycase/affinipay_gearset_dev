@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Displays the practice area(s) value form the legacy system that created this record --></help>
+        <label><!-- zz Legacy Practice Areas --></label>
+        <name>Legacy_Practice_Areas__c</name>
+        <picklistValues>
+            <masterLabel>Legacy Practice Area(s)</masterLabel>
+            <translation><!-- Legacy Practice Area(s) --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

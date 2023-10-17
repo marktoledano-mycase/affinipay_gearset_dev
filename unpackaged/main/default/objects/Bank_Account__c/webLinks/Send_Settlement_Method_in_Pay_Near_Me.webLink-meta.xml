@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Settlement_Method_in_Pay_Near_Me</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Push Bank Account to PayNearMe</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)} 
+
+//query the records to make sure that there aren&#39;t going to be any issues
+var query = sforce.connection.query(&quot;SELECT Id,RoutingNo__c,AccountNo__c,Bank_Name__c,Account_Label__c,PayNearMeSiteSecret__c,PayNearMeSiteID__c,PayNearMeBankAccountStatus__c,PayNearMeSettlementID__c FROM Bank_Account__c WHERE Id =&#39;{!Bank_Account__c.Id}&#39; LIMIT 1&quot;);
+
+var records = query.getArray(&quot;records&quot;);
+//validate the records
+var isValidated = true;
+
+record = records[0];
+//check to see if the records have all required fields
+if((record.PayNearMeSiteID__c === &#39;&#39; || record.PayNearMeSiteID__c === null) &amp;&amp; isValidated === true){ 
+	alert(&quot; Pay Near me Site Id is missing. &quot;); 
+	isValidated = false; 
+} else if((record.PayNearMeSiteSecret__c === &#39;&#39; || record.PayNearMeSiteSecret__c === null) &amp;&amp; isValidated===true){ 
+	alert(&quot; Pay Near Me Site Secret is missing. &quot;); 
+	isValidated = false; 
+} else if((record.RoutingNo__c === &#39;&#39; || record.RoutingNo__c === null) &amp;&amp; isValidated===true){ 
+	alert(&quot; Routing Number is missing. &quot;); 
+	isValidated = false; 
+} else if((record.AccountNo__c === &#39;&#39; || record.AccountNo__c === null) &amp;&amp; isValidated===true){ 
+	alert(&quot; Account Number is missing. &quot;); 
+	isValidated = false; 
+} else if((record.Account_Label__c === &#39;&#39; || record.Account_Label__c === null) &amp;&amp; isValidated===true){ 
+	alert(&quot; Account Label is missing. &quot;); 
+	isValidated = false; 
+}
+
+//if every record is valid, start the batch 
+if (isValidated===true){ 
+	var lastCheck = confirm(&quot;This Settlement will be Sent to Pay Near Me. Continue?&quot;); 
+	if (lastCheck == true){ 
+		var result = sforce.apex.execute(&quot;PayNearMeButtonMethods&quot;, &quot;callSettlementCreation&quot;, {bank : record}); 
+		alert(&quot;Pay Near Me Settlement Method successfully started. Please check back soon.&quot;); 
+	} 
+}</url>
+</WebLink>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Reflects the maximum Sales Discount from the related SKU Product --></help>
+        <label><!-- Maximum SKU Product Discount --></label>
+        <name>Maximum_SKU_Product_Discount__c</name>
+    </CustomFieldTranslation>

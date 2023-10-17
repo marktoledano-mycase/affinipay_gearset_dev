@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This is a custom screen that guides reps through updating the Opportunity and adding Competitors.</description>
+    <flowDefinition>Opportunity_Closed_Lost_Screen</flowDefinition>
+    <label>Closed Lost</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

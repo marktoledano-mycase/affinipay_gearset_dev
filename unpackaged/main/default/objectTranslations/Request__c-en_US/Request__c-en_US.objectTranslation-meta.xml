@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Request</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Requests</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <recordTypes>
+        <description><!-- Getting a weird error message? Something not working the way it&apos;s supposed to? --></description>
+        <label><!-- Bug/Error --></label>
+        <name>Bug_Error</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Add new or update existing processes in Salesforce - create a new field, modify a workflow, build a new custom object, integrate with another system, etc. --></description>
+        <label><!-- Enhancement/Project --></label>
+        <name>Enhancement</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Have a Question? Or Want to enquire about some feature/functionality or explore options? --></description>
+        <label><!-- Inquiry/Question --></label>
+        <name>Inquiry_Question</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Existing process is broken/record or user maintenance. --></description>
+        <label><!-- Production Support --></label>
+        <name>Production_Support</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Looking to transfer some records to another user, or update them with a new field value? --></description>
+        <label><!-- Record Maintenance/Mass Update --></label>
+        <name>Record_Maintenance_Mass_Update</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Need help with an existing report/dashboard? Want to request a brand spanking new one? --></description>
+        <label><!-- Report/Dashboard --></label>
+        <name>Report_Dashboard</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Tech Debt/Maintenance --></label>
+        <name>Tech_Debt_Maintenance</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Want to change someone&apos;s permissions/role/profile, or request access for a new user? --></description>
+        <label><!-- User Maintenance --></label>
+        <name>User_Maintenance</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Cancel_Request --></label>
+        <name>Cancel_Request</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Cancel_Request_List_View --></label>
+        <name>Cancel_Request_List_View</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- FastTrack --></label>
+        <name>FastTrack</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Give_Feedback --></label>
+        <name>Give_Feedback</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Quick_Close --></label>
+        <name>Quick_Close</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Resolved --></label>
+        <name>Resolved</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Work_This_Request --></label>
+        <name>Work_This_Request</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DSM_Override__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check if need to override case assignment round robin with the Dedicated Success Manager. Created from R164700 enhancement where we do not want the DSM to be assigned in some cases.</description>
+    <externalId>false</externalId>
+    <label>DSM Override</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

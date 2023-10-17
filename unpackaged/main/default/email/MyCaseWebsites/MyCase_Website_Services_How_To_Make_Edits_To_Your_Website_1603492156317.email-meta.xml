@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Explanation on process and information needed to complete website updates</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>MyCase Website Services - How To Make Edits To Your Website</name>
+    <relatedEntityType>Case</relatedEntityType>
+    <style>none</style>
+    <subject>MyCase Website Services | How To Submit Edits For Your Website - Case # {{{Case.CaseNumber}}}</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

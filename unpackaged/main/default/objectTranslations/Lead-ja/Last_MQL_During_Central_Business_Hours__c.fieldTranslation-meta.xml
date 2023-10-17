@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Flow evalutes whether the Contact: Last MQL Date falls within business hours (holidays included) --></help>
+        <label><!-- Last MQL During Central Business Hours --></label>
+        <name>Last_MQL_During_Central_Business_Hours__c</name>
+    </CustomFieldTranslation>

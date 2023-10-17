@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Discounting_Referral_Partnership__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>Used to identify the partnership from which discounts should apply for product picking and promo discount purposes.</inlineHelpText>
+    <label>Discounting Referral Partnership</label>
+    <referenceTo>Partnerships__c</referenceTo>
+    <relationshipLabel>Opportunities (Discounting Referral Partnership)</relationshipLabel>
+    <relationshipName>Opportunities2</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

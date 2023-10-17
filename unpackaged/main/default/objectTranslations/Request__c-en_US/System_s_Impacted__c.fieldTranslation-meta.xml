@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- System(s) Impacted --></label>
+        <name>System_s_Impacted__c</name>
+        <picklistValues>
+            <masterLabel>APM App</masterLabel>
+            <translation><!-- APM App --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Avalara</masterLabel>
+            <translation><!-- Avalara --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Biz App</masterLabel>
+            <translation><!-- Biz App --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bizible</masterLabel>
+            <translation><!-- Bizible --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cirrus Insight</masterLabel>
+            <translation><!-- Cirrus Insight --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Conga</masterLabel>
+            <translation><!-- Conga --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Coupa</masterLabel>
+            <translation><!-- Coupa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Demand Tools</masterLabel>
+            <translation><!-- Demand Tools --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Desk.com</masterLabel>
+            <translation><!-- Desk.com --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DocuSign</masterLabel>
+            <translation><!-- DocuSign --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EchoSign</masterLabel>
+            <translation><!-- EchoSign --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Expensify</masterLabel>
+            <translation><!-- Expensify --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intacct</masterLabel>
+            <translation><!-- Intacct --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketo</masterLabel>
+            <translation><!-- Marketo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MuleSoft</masterLabel>
+            <translation><!-- MuleSoft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MyCase App</masterLabel>
+            <translation><!-- MyCase App --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nexonia</masterLabel>
+            <translation><!-- Nexonia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Okta</masterLabel>
+            <translation><!-- Okta --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pingdom</masterLabel>
+            <translation><!-- Pingdom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SalesVue</masterLabel>
+            <translation><!-- SalesVue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Salesforce</masterLabel>
+            <translation><!-- Salesforce --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ShoreTel</masterLabel>
+            <translation><!-- ShoreTel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SnapEngage</masterLabel>
+            <translation><!-- SnapEngage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spanning/Backup</masterLabel>
+            <translation><!-- Spanning/Backup --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Survey Gizmo</masterLabel>
+            <translation><!-- Survey Gizmo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Workday</masterLabel>
+            <translation><!-- Workday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Zuora</masterLabel>
+            <translation><!-- Zuora --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contract__c$Name</field>
+    </columns>
+    <columns>
+        <field>Contract__c$Account__c</field>
+    </columns>
+    <columns>
+        <field>Contract__c.Contract_SKUs__r$SKU_Product__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Contract__c.Contract_SKUs__r$User_Count_Rollup__c</field>
+    </columns>
+    <currency>USD</currency>
+    <description>Requested by Kevin Britt over Slack</description>
+    <filter>
+        <criteriaItems>
+            <column>Contract__c.Contract_SKUs__r$SKU_Product__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>MyCase Advanced</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contract__c.Contract_SKUs__r$Tier_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Active Tier</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contract__c.Contract_SKUs__r$User_Count_Rollup__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>0</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>MyCase Advanced Accounts</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Subscription_Contracts_with_Contract_SKUs__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contract__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

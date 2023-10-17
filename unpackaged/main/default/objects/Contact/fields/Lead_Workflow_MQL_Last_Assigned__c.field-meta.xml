@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Workflow_MQL_Last_Assigned__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Created for R152223 
+
+DO NOT EDIT OR CHANGE FIELD, PART OF MQL LEAD CONVERSION PROCESS 
+SEE FOLLOWING WORKFLOW RULE 
+Update Lead Created Date Field Step 2 
+https://cs42.salesforce.com/01Q560000004NED
+
+Used in Process 
+Update Contact MQL Info From Lead Convert</description>
+    <externalId>false</externalId>
+    <label>Lead Workflow MQL Last Assigned</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Contacts1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

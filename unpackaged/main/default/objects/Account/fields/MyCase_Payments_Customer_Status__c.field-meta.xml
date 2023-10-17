@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MyCase_Payments_Customer_Status__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Displays legacy MyCase Payments customer status.  No new sales for this product, only grandfathered clients.</inlineHelpText>
+    <label>MyCase Payments Customer Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Customer_Status_Values</valueSetName>
+    </valueSet>
+</CustomField>

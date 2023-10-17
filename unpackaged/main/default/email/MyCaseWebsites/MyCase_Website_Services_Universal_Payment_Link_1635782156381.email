@@ -1,0 +1,24 @@
+<html><head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">Hi {{{Recipient.FirstName}}},<br />
+<br />
+Thanks for reaching out!<br />
+<br />
+If you are looking to add the Universal Payment Link to your website that will automatically link to the MyCase software, please follow the link below to find instructions.&nbsp;<br />
+<br />
+<a href="https://help.mycase.com/s/article/Contact-Us-Form">https://help.mycase.com/s/article/Universal-Payment-Link</a><br />
+<br />
+Once you complete the instructions, please send your unique payment link to <b>websites@mycase.com,&nbsp;</b>or reply to this email, and we will embed it on your website.<br />
+<br />
+<font color="#c0392b"><b>If you need assistance setting this up, please reach out to our Customer Support team and they can assist you.&nbsp;</b></font>
+<p>(800) 571-8062 (Mon. – Fri. / 6AM – 5PM PT)<br />
+<a href="mailto:support@mycase.com">support@mycase.com<br />
+https://www.mycase.com/support</a></p>
+For any new website changes, questions, or concerns, please submit a new case to <b>websites@mycase.com</b> - we will be happy to assist.<br />
+<br />
+Thank you,<br />
+{{{Sender.FirstName}}}<br />
+MyCase Website Services Team<br />
+Case #{{{Case.CaseNumber}}}
+</body></html>

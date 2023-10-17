@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>User Subscription</fullName>
+        <default>false</default>
+        <label>User Subscription</label>
+    </customValue>
+    <customValue>
+        <fullName>User Subscription Add On</fullName>
+        <default>false</default>
+        <label>User Subscription Add On</label>
+    </customValue>
+    <customValue>
+        <fullName>Website Subscription</fullName>
+        <default>false</default>
+        <label>Website Subscription</label>
+    </customValue>
+    <customValue>
+        <fullName>Website Subscription Add on</fullName>
+        <default>false</default>
+        <label>Website Subscription Add on</label>
+    </customValue>
+    <customValue>
+        <fullName>Setup</fullName>
+        <default>false</default>
+        <label>Setup</label>
+    </customValue>
+    <customValue>
+        <fullName>Entitlement Add on</fullName>
+        <default>false</default>
+        <label>Entitlement Add on</label>
+    </customValue>
+    <masterLabel>Product Line Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

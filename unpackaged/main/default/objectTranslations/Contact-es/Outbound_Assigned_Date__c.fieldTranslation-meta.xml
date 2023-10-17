@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Date lead/contact was assigned for outbound --></help>
+        <label><!-- Outbound Assigned Date --></label>
+        <name>Outbound_Assigned_Date__c</name>
+    </CustomFieldTranslation>

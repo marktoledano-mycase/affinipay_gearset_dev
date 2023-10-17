@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Attendee Tracking</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Attendee Tracking</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <recordTypes>
+        <description><!-- R164076 --></description>
+        <label><!-- Training --></label>
+        <name>Training</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- R165035 --></description>
+        <label><!-- Webinar --></label>
+        <name>Webinar</name>
+    </recordTypes>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

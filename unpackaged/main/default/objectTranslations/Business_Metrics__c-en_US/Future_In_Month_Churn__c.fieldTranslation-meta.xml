@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Future Churn for users and customers in the current month --></help>
+        <label><!-- Future In Month Churn --></label>
+        <name>Future_In_Month_Churn__c</name>
+    </CustomFieldTranslation>

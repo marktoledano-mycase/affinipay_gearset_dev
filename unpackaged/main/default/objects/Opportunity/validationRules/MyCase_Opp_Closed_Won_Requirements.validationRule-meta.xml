@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MyCase_Opp_Closed_Won_Requirements</fullName>
+    <active>true</active>
+    <description>MyCase: Opportunity is Closed Won, you must populate the following fields:
+Onboarding POC, List of Top Features, Data Import Source, Doc Migration Plan Discussed</description>
+    <errorConditionFormula>$Permission.Bypass_Defined_VR_s = FALSE &amp;&amp;
+$Permission.Create_Onboarding_after_Opportunity_Is_Closed = FALSE &amp;&amp;
+NOT(ISPICKVAL(Onboarding_Services_Status__c, &quot;Unnecessary&quot;)) &amp;&amp;
+
+(
+    ISNEW() ||
+    ISCHANGED(RecordTypeId)||
+    ISCHANGED(StageName) ||
+    ISCHANGED(Onboarding_POC__c) ||
+    ISCHANGED(List_of_Top_Features__c) ||
+    ISCHANGED(Data_Import_Source__c) ||
+    ISCHANGED(Doc_Migration_Plan_Discussed__c)||
+    ISCHANGED(Onboarding_Services_Status__c)
+) &amp;&amp;
+
+$RecordType.Name = &quot;MyCase&quot; &amp;&amp;
+ISPICKVAL(StageName, &quot;Closed Won&quot;) &amp;&amp;
+(
+    ISBLANK(Onboarding_POC__c) ||
+    ISBLANK(List_of_Top_Features__c) ||
+    ISPICKVAL(Data_Import_Source__c, &quot;&quot;) ||
+    ISPICKVAL(Doc_Migration_Plan_Discussed__c,&quot;&quot;)
+)</errorConditionFormula>
+    <errorMessage>MyCase: Opportunity is Closed Won, you must populate the following fields:
+Onboarding POC, List of Top Features, Data Import Source, Doc Migration Plan Discussed</errorMessage>
+</ValidationRule>

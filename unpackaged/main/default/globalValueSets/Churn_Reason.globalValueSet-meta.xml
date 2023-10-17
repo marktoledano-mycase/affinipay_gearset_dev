@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Adoption Issues</fullName>
+        <default>false</default>
+        <label>Adoption Issues</label>
+    </customValue>
+    <customValue>
+        <fullName>Auto-Canceled After Suspension</fullName>
+        <default>false</default>
+        <label>Auto-Canceled After Suspension</label>
+    </customValue>
+    <customValue>
+        <fullName>Business Change</fullName>
+        <default>false</default>
+        <label>Business Change</label>
+    </customValue>
+    <customValue>
+        <fullName>Business Issue: Health/Audit/Underwriting</fullName>
+        <default>false</default>
+        <label>Business Issue: Health/Audit/Underwriting</label>
+    </customValue>
+    <customValue>
+        <fullName>Business Issue: Out of Business/Downsized/Didn&#39;t Grow/Other Focus</fullName>
+        <default>false</default>
+        <label>Business Issue: Out of Business/Downsized/Didn&#39;t Grow/Other Focus</label>
+    </customValue>
+    <customValue>
+        <fullName>Declined Credit Card</fullName>
+        <default>false</default>
+        <label>Declined Credit Card</label>
+    </customValue>
+    <customValue>
+        <fullName>Development Resources Not Available</fullName>
+        <default>false</default>
+        <label>Development Resources Not Available</label>
+    </customValue>
+    <customValue>
+        <fullName>Doesn&#39;t have certain features that I need</fullName>
+        <default>false</default>
+        <label>Doesn&#39;t have certain features that I need</label>
+    </customValue>
+    <customValue>
+        <fullName>Don’t Know: Went Dark/Non-Payment</fullName>
+        <default>false</default>
+        <label>Don’t Know: Went Dark/Non-Payment</label>
+    </customValue>
+    <customValue>
+        <fullName>Expectations: Business Fit/Product Features/Value</fullName>
+        <default>false</default>
+        <label>Expectations: Business Fit/Product Features/Value</label>
+    </customValue>
+    <customValue>
+        <fullName>Expectations: Implementation/Support/Training</fullName>
+        <default>false</default>
+        <label>Expectations: Implementation/Support/Training</label>
+    </customValue>
+    <customValue>
+        <fullName>Expired Credit Card</fullName>
+        <default>false</default>
+        <label>Expired Credit Card</label>
+    </customValue>
+    <customValue>
+        <fullName>Financial</fullName>
+        <default>false</default>
+        <label>Financial</label>
+    </customValue>
+    <customValue>
+        <fullName>Has more features than I need</fullName>
+        <default>false</default>
+        <label>Has more features than I need</label>
+    </customValue>
+    <customValue>
+        <fullName>I am closing my business</fullName>
+        <default>false</default>
+        <label>I am closing my business</label>
+    </customValue>
+    <customValue>
+        <fullName>I am using a different software</fullName>
+        <default>false</default>
+        <label>I am using a different software</label>
+    </customValue>
+    <customValue>
+        <fullName>I can&#39;t afford it</fullName>
+        <default>false</default>
+        <label>I can&#39;t afford it</label>
+    </customValue>
+    <customValue>
+        <fullName>I don&#39;t use it enough</fullName>
+        <default>false</default>
+        <label>I don&#39;t use it enough</label>
+    </customValue>
+    <customValue>
+        <fullName>It&#39;s too expensive</fullName>
+        <default>false</default>
+        <label>It&#39;s too expensive</label>
+    </customValue>
+    <customValue>
+        <fullName>MyCase doesn&#39;t have the features I need</fullName>
+        <default>false</default>
+        <label>MyCase doesn&#39;t have the features I need</label>
+    </customValue>
+    <customValue>
+        <fullName>My firm is closing</fullName>
+        <default>false</default>
+        <label>My firm is closing</label>
+    </customValue>
+    <customValue>
+        <fullName>Others</fullName>
+        <default>false</default>
+        <label>Others</label>
+    </customValue>
+    <customValue>
+        <fullName>Partner Opted out of Program</fullName>
+        <default>false</default>
+        <label>Partner Opted out of Program</label>
+    </customValue>
+    <customValue>
+        <fullName>Product Fit</fullName>
+        <default>false</default>
+        <label>Product Fit</label>
+    </customValue>
+    <customValue>
+        <fullName>Sales Expectations</fullName>
+        <default>false</default>
+        <label>Sales Expectations</label>
+    </customValue>
+    <customValue>
+        <fullName>Support Expectations</fullName>
+        <default>false</default>
+        <label>Support Expectations</label>
+    </customValue>
+    <customValue>
+        <fullName>We are switching to a different product</fullName>
+        <default>false</default>
+        <label>We are switching to a different product</label>
+    </customValue>
+    <customValue>
+        <fullName>We don&#39;t use it enough</fullName>
+        <default>false</default>
+        <label>We don&#39;t use it enough</label>
+    </customValue>
+    <customValue>
+        <fullName>Went Dark / Past Due</fullName>
+        <default>false</default>
+        <label>Went Dark / Past Due</label>
+    </customValue>
+    <customValue>
+        <fullName>We Opted Out of Partnership</fullName>
+        <default>false</default>
+        <label>We Opted Out of Partnership</label>
+    </customValue>
+    <customValue>
+        <fullName>Expectations: Resources/Key Stakeholder/Transition to APM</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Expectations: Resources/Key Stakeholder/Transition to APM</label>
+    </customValue>
+    <customValue>
+        <fullName>MyCase doesn&#39;t have certain features that I need</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>MyCase doesn&#39;t have certain features that I need</label>
+    </customValue>
+    <customValue>
+        <fullName>Business Issue: Merged w/ APM Customer</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Business Issue: Merged w/ APM Customer</label>
+    </customValue>
+    <masterLabel>Churn Reason</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

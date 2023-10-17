@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <decisions>
+        <name>Start_Date_Check</name>
+        <label>Start Date Check</label>
+        <locationX>216</locationX>
+        <locationY>428</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Valid_Start_Date</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Subscription_Start_Date__c</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Flow.CurrentDate</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Subscription_Type</targetReference>
+            </connector>
+            <label>Valid Start Date</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Subscription_Type</name>
+        <label>Subscription Type</label>
+        <locationX>433</locationX>
+        <locationY>428</locationY>
+        <defaultConnector>
+            <targetReference>Evaluate_and_Update_Opportunity</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>New Business</defaultConnectorLabel>
+        <rules>
+            <name>Reactivation</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Subscription_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Reactivation</stringValue>
+                </rightValue>
+            </conditions>
+            <label>Reactivation</label>
+        </rules>
+    </decisions>
+    <description>On create of Billing Subscription updates Opportunity and Product Environment if applicable</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>f_MinCloseDate</name>
+        <dataType>Date</dataType>
+        <expression>ADDMONTHS( {!$Flow.CurrentDate}, -1)</expression>
+    </formulas>
+    <formulas>
+        <name>f_StageName</name>
+        <dataType>String</dataType>
+        <expression>IF( {!$Record.First_Time_Charge__c}, &quot;Closed Won&quot;, &quot;Approvals&quot;)</expression>
+    </formulas>
+    <interviewLabel>Billing Subscription: On Create Opportunity Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Billing Subscription: On Create Opportunity Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>97</locationX>
+        <locationY>53</locationY>
+        <connector>
+            <targetReference>Start_Date_Check</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Billing_System__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Zuora-MC</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Subscription_End_Date__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Billing_Subscription__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>Evaluate_and_Update_Opportunity</name>
+        <label>Evaluate and Update Opportunity</label>
+        <locationX>702</locationX>
+        <locationY>430</locationY>
+        <flowName>Autolaunched_Billing_Subscription_Opportunity_Update_Evaluation</flowName>
+        <inputAssignments>
+            <name>input_FirmID</name>
+            <value>
+                <elementReference>$Record.Firm_ID__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>input_FirstTimeCharge</name>
+            <value>
+                <elementReference>$Record.First_Time_Charge__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>input_TriggeredOnCreate</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varBillingSubscription</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+</Flow>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZuoraImplementationStatus__c</fullName>
+    <externalId>false</externalId>
+    <label>Zuora Implementation Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>--None--</fullName>
+                <default>true</default>
+                <label>--None--</label>
+            </value>
+            <value>
+                <fullName>Purchased In Zuora</fullName>
+                <default>false</default>
+                <label>Purchased In Zuora</label>
+            </value>
+            <value>
+                <fullName>Cancelled In Zuora</fullName>
+                <default>false</default>
+                <label>Cancelled In Zuora</label>
+            </value>
+            <value>
+                <fullName>ReActivated in Zuora</fullName>
+                <default>false</default>
+                <label>ReActivated in Zuora</label>
+            </value>
+            <value>
+                <fullName>Monthly Fee Added in Zuora</fullName>
+                <default>false</default>
+                <label>Monthly Fee Added in Zuora</label>
+            </value>
+            <value>
+                <fullName>Transaction Declined in Zuora</fullName>
+                <default>false</default>
+                <label>Transaction Declined in Zuora</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

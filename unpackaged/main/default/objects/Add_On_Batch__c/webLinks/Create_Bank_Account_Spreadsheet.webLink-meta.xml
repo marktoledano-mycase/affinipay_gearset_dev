@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_Bank_Account_Spreadsheet</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>false</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>175</height>
+    <isResizable>false</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>DEPRECATED 2/17 - Create Bank Account Spreadsheet</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>https://composer.congamerge.com
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_290}
+&amp;Id={!Add_On_Batch__c.Id}
+&amp;QueryId=[BankAccounts]a1U80000002RG6H?pv0={!Add_On_Batch__c.Id}
+&amp;TemplateId=a1T80000000M6pt
+&amp;fp0=2
+&amp;ds7=3
+&amp;ExcelAutoFitRows=1
+&amp;ExcelAutoFitColumns=1</url>
+    <width>300</width>
+</WebLink>

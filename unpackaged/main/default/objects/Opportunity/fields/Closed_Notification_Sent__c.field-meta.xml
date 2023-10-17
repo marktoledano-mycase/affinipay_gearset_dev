@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closed_Notification_Sent__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates if a closed deal email has been internal sent. Should be controlled only thought process and admins</description>
+    <externalId>false</externalId>
+    <label>Closed Notification Sent</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Status_Flag_Solunus__c</fullName>
+    <description>Used by Soluno for displaying a graphic on account based on Account Type</description>
+    <externalId>false</externalId>
+    <formula>IF ( Text(Type) = &#39;Customer&#39; ,  IMAGE(&quot;/resource/Flag_Green&quot;, &quot;Customer&quot;, 17, 17) &amp; &#39; Active Customer&#39;,
+   IF ( Text(Type) = &#39;Customer Lost&#39;, IMAGE(&quot;/resource/Flag_Red&quot;, &quot;Customer Lost&quot;, 22, 22) &amp; &#39; Customer Lost&#39;,
+       IF ( Text(Type) = &#39;Prospect&#39;, IMAGE(&quot;/resource/Flag_Blue&quot;, &quot;Prospect&quot;, 17, 17) &amp; &#39; Prospect&#39;,
+          IF ( Text(Type) = &#39;Test Account&#39;, IMAGE(&quot;/resource/Flag_Yellow&quot;, &quot;Customer Lost&quot;, 17, 17) &amp; &#39; Test Account&#39;,
+            IF ( Text(Type) = &#39;Other&#39;, IMAGE(&quot;/resource/Flag_Purple&quot;, &quot;Customer Lost&quot;, 17, 17) &amp; &#39; Other&#39;,
+
+ &#39;&#39; )))))</formula>
+    <label>zz Account Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

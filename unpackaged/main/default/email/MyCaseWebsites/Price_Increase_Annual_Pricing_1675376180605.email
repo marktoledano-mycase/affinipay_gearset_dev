@@ -1,0 +1,14 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;">Hi {{{Recipient.FirstName}}},</span></span>
+<p style="line-height:1.2"><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-variant: normal; white-space: pre-wrap;"><span style="color:#000000"><span style="font-weight:400"><span style="font-style:normal"><span style="text-decoration:none">I am sorry to hear that you are considering canceling your subscription. Before you do, I’d like to see if I can help bring the cost down for your firm</span></span></span></span></span></span></span></p>
+
+<p style="line-height:1.2"><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-variant: normal; white-space: pre-wrap;"><span style="color:#0e101a"><span style="font-weight:400"><span style="font-style:normal"><span style="text-decoration:none">We do offer a lower rate on the annual plan. By enrolling in a yearly subscription, you can lock in your </span></span></span></span></span><span style="font-variant: normal; white-space: pre-wrap;"><span style="color:#0e101a"><span style="font-weight:700"><span style="font-style:normal"><span style="text-decoration:none">$69 Pro / $89 Adv</span></span></span></span></span><span style="font-variant: normal; white-space: pre-wrap;"><span style="color:#0e101a"><span style="font-weight:400"><span style="font-style:normal"><span style="text-decoration:none"> rate for the year. You would be billed at $828 per user per year with this subscription change.&nbsp;</span></span></span></span></span><br />
+<br />
+<span style="font-variant: normal; white-space: pre-wrap;"><span style="color:#0e101a"><span style="font-weight:400"><span style="font-style:normal"><span style="text-decoration:none">In addition, if you are a member of a state bar or the ABA you may also qualify for additional discounts if you provide your member number. Simply respond with your member number and the bar association and we will see if we can offer any other discounts</span></span></span></span></span></span></span></p>
+<span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;">Thank you,<br />
+{{{Sender.FirstName}}}<br />
+Case #{{{Case.CaseNumber}}}</span></span></body>
+</html>

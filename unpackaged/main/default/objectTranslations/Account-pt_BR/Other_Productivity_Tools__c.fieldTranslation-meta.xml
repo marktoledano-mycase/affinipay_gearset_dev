@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Other Productivity Tools --></label>
+        <name>Other_Productivity_Tools__c</name>
+        <picklistValues>
+            <masterLabel>Dropbox</masterLabel>
+            <translation><!-- Dropbox --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>G Suite (includes Gmail)</masterLabel>
+            <translation><!-- G Suite (includes Gmail) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS Office (includes Outlook)</masterLabel>
+            <translation><!-- MS Office (includes Outlook) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Office 365</masterLabel>
+            <translation><!-- Office 365 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Paper System</masterLabel>
+            <translation><!-- Paper System --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QB Desktop</masterLabel>
+            <translation><!-- QB Desktop --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QB Online</masterLabel>
+            <translation><!-- QB Online --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sharepoint</masterLabel>
+            <translation><!-- Sharepoint --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WordPerfect</masterLabel>
+            <translation><!-- WordPerfect --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

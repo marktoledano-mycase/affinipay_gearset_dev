@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Channel__c</fullName>
+    <description>A lead channel is simply a channel or source of laeds for our business. It is used in conjunction with Lead Source for attribution reporting.</description>
+    <externalId>false</externalId>
+    <label>Lead Channel</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>LeadSource</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Lead_Channel</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Industry Media</controllingFieldValue>
+            <valueName>Above the Law</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industry Media</controllingFieldValue>
+            <valueName>Accounting Today</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industry Media</controllingFieldValue>
+            <valueName>Attorney at Work</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industry Media</controllingFieldValue>
+            <valueName>CPAdirectory</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industry Media</controllingFieldValue>
+            <valueName>CPA Practice Advisor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industry Media</controllingFieldValue>
+            <valueName>Encoursa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industry Media</controllingFieldValue>
+            <valueName>Family Lawyer Magazine</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industry Media</controllingFieldValue>
+            <valueName>Going Concern</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industry Media</controllingFieldValue>
+            <valueName>LawNext / LawSites</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industry Media</controllingFieldValue>
+            <valueName>Lawyerist</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Industry Media</controllingFieldValue>
+            <controllingFieldValue>List Import</controllingFieldValue>
+            <controllingFieldValue>Organic Search</controllingFieldValue>
+            <controllingFieldValue>Organic Social</controllingFieldValue>
+            <controllingFieldValue>Add On</controllingFieldValue>
+            <controllingFieldValue>Outbound</controllingFieldValue>
+            <controllingFieldValue>Call In</controllingFieldValue>
+            <controllingFieldValue>Paid Search</controllingFieldValue>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Paid Social</controllingFieldValue>
+            <controllingFieldValue>Email</controllingFieldValue>
+            <controllingFieldValue>Webinar</controllingFieldValue>
+            <controllingFieldValue>Legacy Source</controllingFieldValue>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <controllingFieldValue>Pay-Per-Lead</controllingFieldValue>
+            <controllingFieldValue>Events</controllingFieldValue>
+            <controllingFieldValue>Referral</controllingFieldValue>
+            <controllingFieldValue>In-App</controllingFieldValue>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Legacy Channel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>List Import</controllingFieldValue>
+            <controllingFieldValue>Organic Social</controllingFieldValue>
+            <controllingFieldValue>Email</controllingFieldValue>
+            <controllingFieldValue>Webinar</controllingFieldValue>
+            <controllingFieldValue>Events</controllingFieldValue>
+            <controllingFieldValue>Referral</controllingFieldValue>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Affinity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>List Import</controllingFieldValue>
+            <valueName>Partner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>List Import</controllingFieldValue>
+            <valueName>Prospect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>List Import</controllingFieldValue>
+            <controllingFieldValue>Organic Social</controllingFieldValue>
+            <controllingFieldValue>Email</controllingFieldValue>
+            <controllingFieldValue>Webinar</controllingFieldValue>
+            <controllingFieldValue>Events</controllingFieldValue>
+            <controllingFieldValue>Referral</controllingFieldValue>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Technology Partner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Live Chat</controllingFieldValue>
+            <controllingFieldValue>Call In</controllingFieldValue>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>AffiniPay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Live Chat</controllingFieldValue>
+            <controllingFieldValue>Call In</controllingFieldValue>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>CASEpeer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Live Chat</controllingFieldValue>
+            <controllingFieldValue>Call In</controllingFieldValue>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>ClientPay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Live Chat</controllingFieldValue>
+            <controllingFieldValue>Call In</controllingFieldValue>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>CPACharge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Live Chat</controllingFieldValue>
+            <controllingFieldValue>Call In</controllingFieldValue>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Docketwise</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Live Chat</controllingFieldValue>
+            <controllingFieldValue>Call In</controllingFieldValue>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>LawPay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Live Chat</controllingFieldValue>
+            <valueName>Live Chat</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Live Chat</controllingFieldValue>
+            <controllingFieldValue>Call In</controllingFieldValue>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>MyCase</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Live Chat</controllingFieldValue>
+            <controllingFieldValue>Call In</controllingFieldValue>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Soluno</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Live Chat</controllingFieldValue>
+            <controllingFieldValue>Call In</controllingFieldValue>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Websites</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Live Chat</controllingFieldValue>
+            <controllingFieldValue>Call In</controllingFieldValue>
+            <controllingFieldValue>Product</controllingFieldValue>
+            <valueName>Woodpecker</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Organic Search</controllingFieldValue>
+            <controllingFieldValue>Paid Search</controllingFieldValue>
+            <valueName>Bing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Organic Search</controllingFieldValue>
+            <valueName>DuckDuck Go</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Organic Search</controllingFieldValue>
+            <controllingFieldValue>Paid Search</controllingFieldValue>
+            <valueName>Google</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Organic Search</controllingFieldValue>
+            <valueName>Yahoo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Organic Social</controllingFieldValue>
+            <controllingFieldValue>Paid Social</controllingFieldValue>
+            <valueName>Facebook</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Organic Social</controllingFieldValue>
+            <controllingFieldValue>Paid Social</controllingFieldValue>
+            <valueName>Instagram</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Organic Social</controllingFieldValue>
+            <controllingFieldValue>Paid Social</controllingFieldValue>
+            <valueName>Linkedin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Organic Social</controllingFieldValue>
+            <controllingFieldValue>Paid Social</controllingFieldValue>
+            <valueName>Twitter</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Organic Social</controllingFieldValue>
+            <controllingFieldValue>Paid Social</controllingFieldValue>
+            <valueName>YouTube</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Add On</controllingFieldValue>
+            <valueName>Add On</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Outbound</controllingFieldValue>
+            <valueName>AE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Outbound</controllingFieldValue>
+            <valueName>BDR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Outbound</controllingFieldValue>
+            <valueName>SDR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Outbound</controllingFieldValue>
+            <valueName>Special Ops</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call In</controllingFieldValue>
+            <valueName>Event</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call In</controllingFieldValue>
+            <valueName>Online Ad</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call In</controllingFieldValue>
+            <valueName>Social</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Call In</controllingFieldValue>
+            <valueName>Webinar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <controllingFieldValue>Intent</controllingFieldValue>
+            <controllingFieldValue>Pay-Per-Lead</controllingFieldValue>
+            <valueName>6sense</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <valueName>AdRoll</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Display</controllingFieldValue>
+            <valueName>Trade Desk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid Social</controllingFieldValue>
+            <valueName>Quora</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid Social</controllingFieldValue>
+            <valueName>Reddit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Email</controllingFieldValue>
+            <controllingFieldValue>Referral</controllingFieldValue>
+            <valueName>Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Email</controllingFieldValue>
+            <valueName>Email Reply</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Email</controllingFieldValue>
+            <controllingFieldValue>Events</controllingFieldValue>
+            <valueName>Prospect Email</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Email</controllingFieldValue>
+            <valueName>Sponsored Email</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Webinar</controllingFieldValue>
+            <valueName>Live</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Webinar</controllingFieldValue>
+            <valueName>On-Demand</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Success</controllingFieldValue>
+            <valueName>CSQL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pay-Per-Lead</controllingFieldValue>
+            <valueName>Capterra</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pay-Per-Lead</controllingFieldValue>
+            <valueName>Content Syndication</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pay-Per-Lead</controllingFieldValue>
+            <valueName>G2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pay-Per-Lead</controllingFieldValue>
+            <valueName>GetApp</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pay-Per-Lead</controllingFieldValue>
+            <valueName>Software Advice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pay-Per-Lead</controllingFieldValue>
+            <valueName>SourceForge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Events</controllingFieldValue>
+            <valueName>Company Event</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Events</controllingFieldValue>
+            <valueName>Conference</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Events</controllingFieldValue>
+            <valueName>Speaking Engagement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Events</controllingFieldValue>
+            <valueName>Tradeshow</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Referral</controllingFieldValue>
+            <valueName>Consultant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Referral</controllingFieldValue>
+            <valueName>Email</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Referral</controllingFieldValue>
+            <valueName>Employee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Referral</controllingFieldValue>
+            <valueName>In-App</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Referral</controllingFieldValue>
+            <valueName>Marketing Referral</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Referral</controllingFieldValue>
+            <valueName>Web</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>In-App</controllingFieldValue>
+            <valueName>Lead Channel - Intercom</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Banner Ad (Affinity/Tech)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Direct</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Online Application</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Podcast</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Video</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Web</controllingFieldValue>
+            <valueName>Web Content</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

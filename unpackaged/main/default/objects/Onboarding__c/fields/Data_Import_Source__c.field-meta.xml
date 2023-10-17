@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data_Import_Source__c</fullName>
+    <externalId>false</externalId>
+    <label>Data Import Source</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Abacus/Amicus</fullName>
+                <default>false</default>
+                <label>Abacus/Amicus</label>
+            </value>
+            <value>
+                <fullName>Abacus Law</fullName>
+                <default>false</default>
+                <label>Abacus Law</label>
+            </value>
+            <value>
+                <fullName>ACT!</fullName>
+                <default>false</default>
+                <label>ACT!</label>
+            </value>
+            <value>
+                <fullName>ActionStep</fullName>
+                <default>false</default>
+                <label>ActionStep</label>
+            </value>
+            <value>
+                <fullName>Aderant</fullName>
+                <default>false</default>
+                <label>Aderant</label>
+            </value>
+            <value>
+                <fullName>Amicus</fullName>
+                <default>false</default>
+                <label>Amicus</label>
+            </value>
+            <value>
+                <fullName>Best Case</fullName>
+                <default>false</default>
+                <label>Best Case</label>
+            </value>
+            <value>
+                <fullName>Bill4Time</fullName>
+                <default>false</default>
+                <label>Bill4Time</label>
+            </value>
+            <value>
+                <fullName>BillingsPro</fullName>
+                <default>false</default>
+                <label>BillingsPro</label>
+            </value>
+            <value>
+                <fullName>Clio</fullName>
+                <default>false</default>
+                <label>Clio</label>
+            </value>
+            <value>
+                <fullName>Cosmolex</fullName>
+                <default>false</default>
+                <label>Cosmolex</label>
+            </value>
+            <value>
+                <fullName>Daylite</fullName>
+                <default>false</default>
+                <label>Daylite</label>
+            </value>
+            <value>
+                <fullName>E-Bility</fullName>
+                <default>false</default>
+                <label>E-Bility</label>
+            </value>
+            <value>
+                <fullName>File Vine</fullName>
+                <default>false</default>
+                <label>File Vine</label>
+            </value>
+            <value>
+                <fullName>Firm Central</fullName>
+                <default>false</default>
+                <label>Firm Central</label>
+            </value>
+            <value>
+                <fullName>Firm Manager</fullName>
+                <default>false</default>
+                <label>Firm Manager</label>
+            </value>
+            <value>
+                <fullName>GroupReady</fullName>
+                <default>false</default>
+                <label>GroupReady</label>
+            </value>
+            <value>
+                <fullName>Harvest</fullName>
+                <default>false</default>
+                <label>Harvest</label>
+            </value>
+            <value>
+                <fullName>Houdini</fullName>
+                <default>false</default>
+                <label>Houdini</label>
+            </value>
+            <value>
+                <fullName>Interbill</fullName>
+                <default>false</default>
+                <label>Interbill</label>
+            </value>
+            <value>
+                <fullName>Juris</fullName>
+                <default>false</default>
+                <label>Juris</label>
+            </value>
+            <value>
+                <fullName>Lawmatics</fullName>
+                <default>false</default>
+                <label>Lawmatics</label>
+            </value>
+            <value>
+                <fullName>LEAP</fullName>
+                <default>false</default>
+                <label>LEAP</label>
+            </value>
+            <value>
+                <fullName>Legal Files</fullName>
+                <default>false</default>
+                <label>Legal Files</label>
+            </value>
+            <value>
+                <fullName>LexisNexis</fullName>
+                <default>false</default>
+                <label>LexisNexis</label>
+            </value>
+            <value>
+                <fullName>MyCase</fullName>
+                <default>false</default>
+                <label>MyCase</label>
+            </value>
+            <value>
+                <fullName>Needles</fullName>
+                <default>false</default>
+                <label>Needles</label>
+            </value>
+            <value>
+                <fullName>No LPM Software</fullName>
+                <default>false</default>
+                <label>No LPM Software</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Omega Legal</fullName>
+                <default>false</default>
+                <label>Omega Legal</label>
+            </value>
+            <value>
+                <fullName>Orion</fullName>
+                <default>false</default>
+                <label>Orion</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Other LPM Software</fullName>
+                <default>false</default>
+                <label>Other LPM Software</label>
+            </value>
+            <value>
+                <fullName>PC Law</fullName>
+                <default>false</default>
+                <label>PC Law</label>
+            </value>
+            <value>
+                <fullName>PhoneSlips</fullName>
+                <default>false</default>
+                <label>PhoneSlips</label>
+            </value>
+            <value>
+                <fullName>PIKA</fullName>
+                <default>false</default>
+                <label>PIKA</label>
+            </value>
+            <value>
+                <fullName>PracticeMaster</fullName>
+                <default>false</default>
+                <label>PracticeMaster</label>
+            </value>
+            <value>
+                <fullName>Practice Panther</fullName>
+                <default>false</default>
+                <label>Practice Panther</label>
+            </value>
+            <value>
+                <fullName>Prevail</fullName>
+                <default>false</default>
+                <label>Prevail</label>
+            </value>
+            <value>
+                <fullName>ProLaw</fullName>
+                <default>false</default>
+                <label>ProLaw</label>
+            </value>
+            <value>
+                <fullName>Rocket Matter</fullName>
+                <default>false</default>
+                <label>Rocket Matter</label>
+            </value>
+            <value>
+                <fullName>Smokeball</fullName>
+                <default>false</default>
+                <label>Smokeball</label>
+            </value>
+            <value>
+                <fullName>Tabs3</fullName>
+                <default>false</default>
+                <label>Tabs3</label>
+            </value>
+            <value>
+                <fullName>Thomson Reuters</fullName>
+                <default>false</default>
+                <label>Thomson Reuters</label>
+            </value>
+            <value>
+                <fullName>Time59</fullName>
+                <default>false</default>
+                <label>Time59</label>
+            </value>
+            <value>
+                <fullName>Time and Chaos</fullName>
+                <default>false</default>
+                <label>Time and Chaos</label>
+            </value>
+            <value>
+                <fullName>Time Matters</fullName>
+                <default>false</default>
+                <label>Time Matters</label>
+            </value>
+            <value>
+                <fullName>TimeSlips</fullName>
+                <default>false</default>
+                <label>TimeSlips</label>
+            </value>
+            <value>
+                <fullName>TimeSolv</fullName>
+                <default>false</default>
+                <label>TimeSolv</label>
+            </value>
+            <value>
+                <fullName>Total Attorneys</fullName>
+                <default>false</default>
+                <label>Total Attorneys</label>
+            </value>
+            <value>
+                <fullName>TrialWorks</fullName>
+                <default>false</default>
+                <label>TrialWorks</label>
+            </value>
+            <value>
+                <fullName>Zola Suite</fullName>
+                <default>false</default>
+                <label>Zola Suite</label>
+            </value>
+            <value>
+                <fullName>Excel</fullName>
+                <default>false</default>
+                <label>Excel</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

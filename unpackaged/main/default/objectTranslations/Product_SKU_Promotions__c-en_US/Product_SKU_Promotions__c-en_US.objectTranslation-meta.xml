@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Product SKU Promotion</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Product SKU Promotions</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Product SKU Promotion Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Picker SKU Level Override --></label>
+            <section>Picker SKU Level Override</section>
+        </sections>
+        <sections>
+            <label><!-- Promo Details --></label>
+            <section>Promo Details</section>
+        </sections>
+        <sections>
+            <label><!-- Reated SKU --></label>
+            <section>Reated SKU</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

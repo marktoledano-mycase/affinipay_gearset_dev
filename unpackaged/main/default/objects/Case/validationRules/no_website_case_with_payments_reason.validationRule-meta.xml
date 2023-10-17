@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>no_website_case_with_payments_reason</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISPICKVAL(Reason, &#39;Other Payments Reason&#39; ),
+ISPICKVAL( Product__c , &#39;MyCase Websites&#39;))</errorConditionFormula>
+    <errorDisplayField>Product__c</errorDisplayField>
+    <errorMessage>Case Reason cannot be &#39;Other Payments Reason&#39; when Product is &#39;MyCase Websites&#39;.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,32 @@
+<html>
+<head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="Content-Type">
+<title></title>
+</head>
+<body>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+<span style="font-family: Helvetica,Arial,sans-serif;">
+
+Hi, <br><br>
+
+You have a new Data Migration request:<br><br>
+
+<b>Account</b>: {!Account.Name}<br>
+<b>CRM</b>: {!Account.Client_Services_Rep__c} <br>
+<b>Case Created By</b>: {!Case.CreatedBy} <br><br>
+
+<b>Database Name</b>: {!Case.Database_Name__c} <br>
+<b>SCP File Name</b>: {!Case.SCP_File_Name__c} <br><br>
+
+<b>Current Software</b>: {!Case.Current_Software_Product__c} <br>
+<b>Migration Type</b>: {!Case.Migration_Type__c} <br><br>
+
+<b>Primary Task</b>: {!Case.Primary_Task__c} <br>
+<b>Additional Notes</b>: {!Case.Additional_Tasks_Notes__c} <br><br>
+
+<b>Case Link</b>: {!Case.Link}<br><br>
+
+Thank you.</span>
+</body>
+</html>

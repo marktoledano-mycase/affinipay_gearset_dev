@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Days_Since_Most_Recent_Activity__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISNULL(Last_Activity_Date__c) &amp;&amp; ISNULL(Last_Case_Comment_Date__c), Today() - DATEVALUE(LastModifiedDate), 
+IF(ISNULL(Last_Activity_Date__c),MIN(Today() - DATEVALUE(LastModifiedDate), Today() - Last_Case_Comment_Date__c ),
+IF(ISNULL(Last_Case_Comment_Date__c), MIN(Today() - Last_Activity_Date__c,Today() - DATEVALUE(LastModifiedDate)),
+MIN(Today() - Last_Activity_Date__c,Today() - DATEVALUE(LastModifiedDate), Today() - Last_Case_Comment_Date__c ))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Days Since Most Recent Activity</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

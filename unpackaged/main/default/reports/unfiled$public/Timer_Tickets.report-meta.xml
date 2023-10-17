@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Product_Environment__c$Account__c</field>
+    </columns>
+    <columns>
+        <field>Product_Environment__c.Cases__r$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>Product_Environment__c.Cases__r$Subject</field>
+    </columns>
+    <columns>
+        <field>Product_Environment__c$Firm_ID__c</field>
+    </columns>
+    <columns>
+        <field>Product_Environment__c$Firm_UUID__c</field>
+    </columns>
+    <columns>
+        <field>Product_Environment__c.Cases__r$CreatedDate</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Product_Environment__c.Cases__r$Subject</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Case Field in Timer Not Searchable 4/21</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Product_Environment__c.Cases__r$Status</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Closed</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Timer Tickets</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Product_Environment_Case__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Product_Environment__c.Cases__r$Subject</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Product_Environment__c$Activated_At__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

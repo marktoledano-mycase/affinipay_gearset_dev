@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_9158316</developerName>
+        <masterLabel>Status</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>STATUS</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>New</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>New Customer Email</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>In Progress: Waiting on customer</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Pending</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>In Progress</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>In Progress: Waiting on Client</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Scheduled Call</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Awaiting Approval</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Waiting on Client</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>1st Follow-up</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Final Follow-up</sourceValue>
+            </sourceValues>
+            <value>Open Cases</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Escalated</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Escalated - Closed</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Escalated - VAS</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Escalated to CL</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Escalated to Experian</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Escalated to RentBureau</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Escalated - Partners</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Escalated to Billing</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Escalated to CL &amp; Experian</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Escalation Resolved, Update Customer</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Escalated - Management</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Pending Bug Fix</sourceValue>
+            </sourceValues>
+            <value>Escalated Cases</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>VerticalColumnStacked</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>OWNER</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_BOTTOM</location>
+        <secondaryGroupingColumn>PRIORITY</secondaryGroupingColumn>
+        <showAxisLabels>false</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>CASE_NUMBER</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>BucketField_9158316</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Maximum</aggregateTypes>
+        <field>AGE</field>
+    </columns>
+    <columns>
+        <field>TYPE</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>1 AND 2 AND 3 AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <column>OPEN</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Case.MyCase_Accounting</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>SUBJECT</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>Customer Feedback</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notContain</operator>
+            <value>Administrator</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Ryan Lowe,Lisa Myers,Accounting</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>OWNER</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>PRIORITY</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Open Accounting Cases</name>
+    <params>
+        <name>units</name>
+        <value>d</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>AGE</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

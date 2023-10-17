@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Office 365</fullName>
+        <default>false</default>
+        <label>Office 365</label>
+    </customValue>
+    <customValue>
+        <fullName>MS Office (includes Outlook)</fullName>
+        <default>false</default>
+        <label>MS Office (includes Outlook)</label>
+    </customValue>
+    <customValue>
+        <fullName>QB Online</fullName>
+        <default>false</default>
+        <label>QB Online</label>
+    </customValue>
+    <customValue>
+        <fullName>QB Desktop</fullName>
+        <default>false</default>
+        <label>QB Desktop</label>
+    </customValue>
+    <customValue>
+        <fullName>G Suite (includes Gmail)</fullName>
+        <default>false</default>
+        <label>G Suite (includes Gmail)</label>
+    </customValue>
+    <customValue>
+        <fullName>Dropbox</fullName>
+        <default>false</default>
+        <label>Dropbox</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>WordPerfect</fullName>
+        <default>false</default>
+        <label>WordPerfect</label>
+    </customValue>
+    <customValue>
+        <fullName>Sharepoint</fullName>
+        <default>false</default>
+        <label>Sharepoint</label>
+    </customValue>
+    <customValue>
+        <fullName>Paper System</fullName>
+        <default>false</default>
+        <label>Paper System</label>
+    </customValue>
+    <masterLabel>Other Productivity Tools</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

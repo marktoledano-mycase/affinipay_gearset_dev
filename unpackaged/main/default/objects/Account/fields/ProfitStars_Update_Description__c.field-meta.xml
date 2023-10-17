@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ProfitStars_Update_Description__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(ProfitStars_Update_Field__c, &quot;Name&quot;), &#39;UniqueName&#39;,  IF(ISPICKVAL(ProfitStars_Update_Field__c, &quot;Tax ID&quot;), &#39;Account__r.Tax_ID__c&#39;,  IF(ISPICKVAL(ProfitStars_Update_Field__c, &quot;Address&quot;), ShippingStreet+&#39;,&#39;+ shipcitystatezip__c+&#39;,&#39;+ShippingCountry , IF(ISPICKVAL(ProfitStars_Update_Field__c, &quot;Ownership&quot;), &#39;Ownership Update&#39;, null) ) ))</formula>
+    <label>ProfitStars Update Description</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

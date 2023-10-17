@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Indication from the Opportunity SKU whether this SKU resulted form a tier change. --></help>
+        <label><!-- Resulting from Tier Change --></label>
+        <name>Resulting_from_Tier_Change__c</name>
+    </CustomFieldTranslation>

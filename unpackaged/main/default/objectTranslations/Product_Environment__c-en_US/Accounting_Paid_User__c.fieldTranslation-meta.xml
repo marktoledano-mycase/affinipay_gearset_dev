@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Product Users with Accounting Trial Status = Purchased and Accounting User License = Paid User --></help>
+        <label><!-- Accounting Paid User --></label>
+        <name>Accounting_Paid_User__c</name>
+    </CustomFieldTranslation>

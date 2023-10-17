@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Known</fullName>
+        <default>false</default>
+        <label>Known</label>
+    </customValue>
+    <customValue>
+        <fullName>Assigned</fullName>
+        <default>false</default>
+        <label>Assigned</label>
+    </customValue>
+    <customValue>
+        <fullName>New</fullName>
+        <default>false</default>
+        <label>New</label>
+    </customValue>
+    <customValue>
+        <fullName>Working</fullName>
+        <default>false</default>
+        <label>Working</label>
+    </customValue>
+    <customValue>
+        <fullName>Engaged</fullName>
+        <default>false</default>
+        <label>Engaged</label>
+    </customValue>
+    <customValue>
+        <fullName>Qualified</fullName>
+        <default>false</default>
+        <label>Qualified</label>
+    </customValue>
+    <customValue>
+        <fullName>Open Opportunity</fullName>
+        <default>false</default>
+        <label>Open Opportunity</label>
+    </customValue>
+    <customValue>
+        <fullName>Customer</fullName>
+        <default>false</default>
+        <label>Customer</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketing Nurture</fullName>
+        <default>false</default>
+        <label>Marketing Nurture</label>
+    </customValue>
+    <customValue>
+        <fullName>Disqualified</fullName>
+        <default>false</default>
+        <label>Disqualified</label>
+    </customValue>
+    <customValue>
+        <fullName>Converted (Converted)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Converted (Converted)</label>
+    </customValue>
+    <customValue>
+        <fullName>Nurture Marketing</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Nurture Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>Subscriber</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Subscriber</label>
+    </customValue>
+    <customValue>
+        <fullName>Converted without Opportunity</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Converted without Opportunity</label>
+    </customValue>
+    <customValue>
+        <fullName>Qualifying</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Qualifying</label>
+    </customValue>
+    <customValue>
+        <fullName>No Response</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>No Response</label>
+    </customValue>
+    <customValue>
+        <fullName>Sales Exhausted Lead</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Sales Exhausted Lead</label>
+    </customValue>
+    <customValue>
+        <fullName>Converted</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Converted</label>
+    </customValue>
+    <customValue>
+        <fullName>Sales Accepted</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Sales Accepted</label>
+    </customValue>
+    <customValue>
+        <fullName>Sales Rejected</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Sales Rejected</label>
+    </customValue>
+    <customValue>
+        <fullName>invalid</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>invalid</label>
+    </customValue>
+    <customValue>
+        <fullName>Not a Fit Now</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Not a Fit Now</label>
+    </customValue>
+    <customValue>
+        <fullName>Active</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Active</label>
+    </customValue>
+    <customValue>
+        <fullName>Closed (Converted)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Closed (Converted)</label>
+    </customValue>
+    <customValue>
+        <fullName>In Opp</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>In Opp</label>
+    </customValue>
+    <masterLabel>Person Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

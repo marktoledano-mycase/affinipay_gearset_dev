@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Commission_Sales_Process__c</fullName>
+    <defaultValue>0.1</defaultValue>
+    <description>Used on Soluno Contractor records to set commission value when assigned to a customer.</description>
+    <externalId>false</externalId>
+    <label>Commission: Sales Process</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Percent</type>
+</CustomField>

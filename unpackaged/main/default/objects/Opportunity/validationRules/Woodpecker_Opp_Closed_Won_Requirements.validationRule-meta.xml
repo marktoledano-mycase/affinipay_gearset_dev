@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Woodpecker_Opp_Closed_Won_Requirements</fullName>
+    <active>true</active>
+    <description>Woodpecker: Opportunity is Closed Won, the following fields are required: MyCase Subscriber with Templates, Used Doc Gen Previously</description>
+    <errorConditionFormula>AND(
+$Permission.Create_Onboarding_after_Opportunity_Is_Closed = FALSE,
+$RecordType.Name = &quot;Woodpecker&quot;,
+$Permission.Bypass_Defined_VR_s = FALSE,
+ISPICKVAL(StageName, &quot;Closed Won&quot;),
+OR(
+ISPICKVAL(MyCase_Subscriber_with_Templates__c,&quot;&quot;),
+ISPICKVAL(Used_Doc_Gen_Previously__c,&quot;&quot;)))</errorConditionFormula>
+    <errorMessage>Woodpecker: Opportunity is Closed Won, the following fields are required: MyCase Subscriber with Templates, Used Doc Gen Previously</errorMessage>
+</ValidationRule>

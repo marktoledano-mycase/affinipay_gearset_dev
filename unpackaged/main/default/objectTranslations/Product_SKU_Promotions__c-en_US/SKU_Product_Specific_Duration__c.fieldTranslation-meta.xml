@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Used as a placeholder for user overrides in the product picker or for durations that are different from the duration set at the Promotion level. --></help>
+        <label><!-- SKU Product Specific Duration --></label>
+        <name>SKU_Product_Specific_Duration__c</name>
+    </CustomFieldTranslation>

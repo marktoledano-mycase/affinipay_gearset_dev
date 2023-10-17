@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GIACTBusinessValidation__c</fullName>
+    <externalId>false</externalId>
+    <label>GIACT Business Validation</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ready To Transmit To GIACT</fullName>
+                <default>false</default>
+                <label>Ready To Transmit To GIACT</label>
+            </value>
+            <value>
+                <fullName>Automated Approval</fullName>
+                <default>false</default>
+                <label>Automated Approval</label>
+            </value>
+            <value>
+                <fullName>Needs Review</fullName>
+                <default>false</default>
+                <label>Needs Review</label>
+            </value>
+            <value>
+                <fullName>Manual Approval</fullName>
+                <default>false</default>
+                <label>Manual Approval</label>
+            </value>
+            <value>
+                <fullName>Exception</fullName>
+                <default>false</default>
+                <label>Exception</label>
+            </value>
+            <value>
+                <fullName>Declined</fullName>
+                <default>false</default>
+                <label>Declined</label>
+            </value>
+            <value>
+                <fullName>Need Review</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Need Review</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

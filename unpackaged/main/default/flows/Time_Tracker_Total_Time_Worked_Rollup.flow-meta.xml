@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <description>This updates the associated Value+ records with the total hours worked by a rep. This rollup workaround is used since the time tracker is only a lookup to the Value+.</description>
+    <environments>Default</environments>
+    <interviewLabel>Time Tracker: Total Time Worked Rollup {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Time Tracker: Total Time Worked Rollup</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Time_Tracker_Rollup_Subflow</targetReference>
+        </connector>
+        <object>Time_Tracker__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>Time_Tracker_Rollup_Subflow</name>
+        <label>Time Tracker Rollup Subflow</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <flowName>Time_Tracker_Time_Worked_Rollup_Autolaunched</flowName>
+        <inputAssignments>
+            <name>varTimeTracker</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+</Flow>

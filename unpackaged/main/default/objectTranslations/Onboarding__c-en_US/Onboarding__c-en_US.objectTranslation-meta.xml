@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Onboarding</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Onboarding</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Affinipay Onboarding Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Milestones --></label>
+            <section>Milestones</section>
+        </sections>
+        <sections>
+            <label><!-- MyCase Onboarding Details --></label>
+            <section>MyCase Onboarding Details</section>
+        </sections>
+        <sections>
+            <label><!-- MyCase Opp Closed Won Fields --></label>
+            <section>MyCase Opp Closed Won Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Affinipay Onboarding Page Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Milestones --></label>
+            <section>Milestones</section>
+        </sections>
+        <sections>
+            <label><!-- MyCase Onboarding Details --></label>
+            <section>MyCase Onboarding Details</section>
+        </sections>
+        <sections>
+            <label><!-- MyCase Opp Closed Won Fields --></label>
+            <section>MyCase Opp Closed Won Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CASEpeer Onboarding Layout</layout>
+        <sections>
+            <label><!-- CASEpeer Onboarding Details --></label>
+            <section>CASEpeer Onboarding Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Data Migration Information --></label>
+            <section>Data Migration Information</section>
+        </sections>
+        <sections>
+            <label><!-- Implementation Notes --></label>
+            <section>Implementation Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Milestones --></label>
+            <section>Milestones</section>
+        </sections>
+        <sections>
+            <label><!-- New Section --></label>
+            <section>New Section</section>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Information --></label>
+            <section>Opportunity Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CPACharge Onboarding Layout</layout>
+        <sections>
+            <label><!-- CPACharge Onboarding Details --></label>
+            <section>CPACharge Onboarding Details</section>
+        </sections>
+        <sections>
+            <label><!-- CPACharge Opp Closed Won Fields --></label>
+            <section>CPACharge Opp Closed Won Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Milestones --></label>
+            <section>Milestones</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>ClientPay Onboarding Layout</layout>
+        <sections>
+            <label><!-- ClientPay Onboarding Details --></label>
+            <section>ClientPay Onboarding Details</section>
+        </sections>
+        <sections>
+            <label><!-- ClientPay Opp Closed Won Fields --></label>
+            <section>ClientPay Opp Closed Won Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Milestones --></label>
+            <section>Milestones</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Docketwise Onboarding Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Docketwise Onboarding Details --></label>
+            <section>Docketwise Onboarding Details</section>
+        </sections>
+        <sections>
+            <label><!-- Docketwise Opp Closed Won Fields --></label>
+            <section>Docketwise Opp Closed Won Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Milestones --></label>
+            <section>Milestones</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>LawPay Onboarding Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- LawPay Opp Closed Won Fields --></label>
+            <section>LawPay Opp Closed Won Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Milestones --></label>
+            <section>Milestones</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>MyCase Onboarding Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Milestones --></label>
+            <section>Milestones</section>
+        </sections>
+        <sections>
+            <label><!-- MyCase Onboarding Details --></label>
+            <section>MyCase Onboarding Details</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Onboarding From Opp --></label>
+            <section>Onboarding From Opp</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Soluno Onboarding Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Milestones --></label>
+            <section>Milestones</section>
+        </sections>
+        <sections>
+            <label><!-- Soluno Onboarding Details --></label>
+            <section>Soluno Onboarding Details</section>
+        </sections>
+        <sections>
+            <label><!-- Soluno Opp Closed Won Fields --></label>
+            <section>Soluno Opp Closed Won Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Web Hosting Onboarding Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Milestones --></label>
+            <section>Milestones</section>
+        </sections>
+        <sections>
+            <label><!-- Web Hosting Closed Won Fields --></label>
+            <section>Web Hosting Closed Won Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Web Hosting Onboarding Details --></label>
+            <section>Web Hosting Onboarding Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Woodpecker Onboarding layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Milestones --></label>
+            <section>Milestones</section>
+        </sections>
+        <sections>
+            <label><!-- Woodpecker Onboarding Details --></label>
+            <section>Woodpecker Onboarding Details</section>
+        </sections>
+        <sections>
+            <label><!-- Woodpecker Opp Closed Won Fields --></label>
+            <section>Woodpecker Opp Closed Won Fields</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Affinipay Onboarding --></description>
+        <label><!-- AffiniPay --></label>
+        <name>AffiniPay</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- CASEpeer Onboarding --></description>
+        <label><!-- CASEpeer --></label>
+        <name>CASEpeer</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- CPACharge Onboarding --></description>
+        <label><!-- CPACharge --></label>
+        <name>CPACharge</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- ClientPay Onboarding --></description>
+        <label><!-- ClientPay --></label>
+        <name>ClientPay</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Docketwise Onboarding --></description>
+        <label><!-- Docketwise --></label>
+        <name>Docketwise</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- LawPay Payments Onboarding --></description>
+        <label><!-- LawPay Payments --></label>
+        <name>LawPay_Payments</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- LawPay Software Onboarding --></description>
+        <label><!-- LawPay Software --></label>
+        <name>LawPay_Software</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- MyCase Onboarding --></description>
+        <label><!-- MyCase --></label>
+        <name>MyCase</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Soluno Onboarding --></description>
+        <label><!-- Soluno --></label>
+        <name>Soluno</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Woodpecker Onboarding --></description>
+        <label><!-- Woodpecker --></label>
+        <name>Woodpecker</name>
+    </recordTypes>
+    <startsWith>Vowel</startsWith>
+    <validationRules>
+        <errorMessage><!-- Opportunity is required to update Data Migration Stage to &apos;Live&apos; or &apos;Lost&apos; --></errorMessage>
+        <name>MC_RequireOpp</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Firm POC is required to update Data Migration Stage to &apos;Live&apos; --></errorMessage>
+        <name>MC_RequirePOC</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please provide a value for the Metrics field --></errorMessage>
+        <name>Metrics</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Payments Opportunity is required to update Data Migration Stage to &apos;Live&apos; or &apos;Lost&apos; --></errorMessage>
+        <name>Require_Payments_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Onboarding Stages must be selected in the following order: KOC Schedule &gt; KOC Complete or Phase 1/2: Import In Progress &gt; Phase 1/2: Import Sign-off &gt; Phase 1/2: Import Complete. Import Onboarding Stages cannot be selected if Import N/A is checked. --></errorMessage>
+        <name>Required_InOrderOnboarding_StageMovement</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Contivio_Link_To_Call --></label>
+        <name>Contivio_Link_To_Call</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- NewAccountJS --></label>
+        <name>NewAccountJS</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- NewOppJS --></label>
+        <name>NewOppJS</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Close_as_Spam_Duplicate</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Close as Spam/Duplicate</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/xdomain/xdomain.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/support/console/30.0/integration.js&quot;)} 
+
+// Unless the case is owned by a salesforce user in mycase team - we should not allow any operations on the case. Except the Own the case button
+var caseRecordTypeId = &#39;{!Case.RecordTypeId}&#39;;
+var caseOwnerId = &#39;{!Case.OwnerId}&#39;;
+var caseStatus = &#39;{!Case.Status}&#39;;
+var myCaseTeamQueueId = null, myCaseSupportRTId = null; 
+var queryResult= null; 
+queryResult= sforce.connection.query(&quot;SELECT Id, Name FROM Group WHERE Type = &#39;Queue&#39; AND Name = &#39;MyCase Team&#39;&quot;); 
+if(queryResult != null &amp;&amp; queryResult.size &gt;0){ 
+    var records = queryResult.getArray(&quot;records&quot;); 
+    myCaseTeamQueueId = records[0].Id;
+    myCaseTeamQueueId = myCaseTeamQueueId.substring(0,15); 
+} 
+
+queryResult= sforce.connection.query(&quot;SELECT Id, Name FROM RecordType WHERE sObjectType = &#39;Case&#39; AND DeveloperName = &#39;MyCase_Support&#39;&quot;); 
+if(queryResult != null &amp;&amp; queryResult.size &gt;0){ 
+    var records = queryResult.getArray(&quot;records&quot;); 
+    myCaseSupportRTId = records[0].Id; 
+    myCaseSupportRTId = myCaseSupportRTId.substring(0,15); 
+} 
+
+if(myCaseSupportRTId == caseRecordTypeId &amp;&amp; caseStatus == &#39;New&#39; &amp;&amp; caseOwnerId == myCaseTeamQueueId){
+    alert(&#39;Please own this case first!&#39;);
+}else{
+
+var caseObj = new sforce.SObject(&quot;Case&quot;); 
+caseObj.Id = &#39;{!Case.Id}&#39;;  
+caseObj.Status = &#39;Closed&#39;; 
+caseObj.Reason = &#39;Admin/Duplicates&#39;; 
+var result = sforce.connection.update([caseObj]); 
+if (result[0].success==&#39;false&#39;) { 
+alert(result[0].errors.message); 
+} else { 
+location.reload(true); 
+}
+}</url>
+</WebLink>

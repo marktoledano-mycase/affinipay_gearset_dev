@@ -1,0 +1,15 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">Hi {{{Recipient.FirstName}}},<br />
+<br />
+Thank you for speaking with me over the phone this&nbsp;<em><strong>[morning/afternoon]</strong></em>. We understand that you would like to directly update the required DNS records in your account. For detailed instructions on this process, please refer to our help guide <a href="https://www.mycasewebhub.com/how-to-manually-update-your-dns-records">here</a>.<br />
+<br />
+Let us know if you have any questions, comments, or concerns.<br />
+<br />
+Best,<br />
+{{{Sender.FirstName}}}<br />
+MyCase Website Services Team<br />
+Case #{{{Case.CaseNumber}}}</body>
+</html>

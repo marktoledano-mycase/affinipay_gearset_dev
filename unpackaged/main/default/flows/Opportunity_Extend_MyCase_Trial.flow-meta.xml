@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <assignments>
+        <name>Assign_Trial_Expiration_Date</name>
+        <label>Assign Trial Expiration Date</label>
+        <locationX>530</locationX>
+        <locationY>283</locationY>
+        <assignmentItems>
+            <assignToReference>Opportunity.Trial_Extension_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>New_Trial_Expiration_Date</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Opportunity</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Evaluates if opportunity is associated to a product environment so it can be determined which firm to extend trial for</description>
+        <name>Linked_to_Product_Environment</name>
+        <label>Linked to Product Environment</label>
+        <locationX>138</locationX>
+        <locationY>396</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Linked</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Opportunity.Product_Environment__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Extend_Trial</targetReference>
+            </connector>
+            <label>Linked</label>
+        </rules>
+    </decisions>
+    <description>Screen flow that enables sales reps to extend trials for firms they are working to close</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>DefaultExpirationDate</name>
+        <dataType>Date</dataType>
+        <expression>IF( {!Opportunity.Product_Environment__r.Trial_Expiration__c} &gt; TODAY(), {!Opportunity.Product_Environment__r.Trial_Expiration__c}, TODAY() + 1)</expression>
+    </formulas>
+    <interviewLabel>Opportunity - Extend MyCase Trial {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity - Extend MyCase Trial</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordLookups>
+        <description>Gets current opportunity based on recordId variable</description>
+        <name>Opportunity</name>
+        <label>Opportunity</label>
+        <locationX>147</locationX>
+        <locationY>251</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Linked_to_Product_Environment</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Opportunity</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Updates opportunity with new trial expiration date in Trial Extension Date field for processing in Workato</description>
+        <name>Update_Opportunity</name>
+        <label>Update Opportunity</label>
+        <locationX>699</locationX>
+        <locationY>283</locationY>
+        <connector>
+            <targetReference>Extend_MyCase_Trial</targetReference>
+        </connector>
+        <inputReference>Opportunity</inputReference>
+    </recordUpdates>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <screens>
+        <name>Extend_Trial</name>
+        <label>Extend Trial</label>
+        <locationX>382</locationX>
+        <locationY>283</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <backButtonLabel>Cancel</backButtonLabel>
+        <connector>
+            <targetReference>Assign_Trial_Expiration_Date</targetReference>
+        </connector>
+        <fields>
+            <name>Extend_Trial_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Extend_Trial_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>current_trial_expiration_display</name>
+                    <fieldText>&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;Current Trial Expiration: &lt;/strong&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;{!Opportunity.Product_Environment__r.Trial_Expiration__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Extend_Trial_Section1_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>New_Trial_Expiration_Date</name>
+                    <dataType>Date</dataType>
+                    <defaultValue>
+                        <elementReference>DefaultExpirationDate</elementReference>
+                    </defaultValue>
+                    <fieldText>New Trial Expiration Date</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>true</isRequired>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Trial Expiration Date must be greater than today&#39;s date&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>{!New_Trial_Expiration_Date} &gt; {!$Flow.CurrentDate}</formulaExpression>
+                    </validationRule>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <nextOrFinishButtonLabel>Extend Trial</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>94</locationX>
+        <locationY>47</locationY>
+        <connector>
+            <targetReference>Opportunity</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>Extend_MyCase_Trial</name>
+        <label>Extend MyCase Trial</label>
+        <locationX>901</locationX>
+        <locationY>283</locationY>
+        <flowName>Integration_Queue_New_Integration_Queue_Subflow</flowName>
+        <inputAssignments>
+            <name>inputRecordId</name>
+            <value>
+                <elementReference>Opportunity.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>ProcessName</name>
+            <value>
+                <stringValue>MyCase Automation</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>SubProcess</name>
+            <value>
+                <stringValue>MC Extend Trial</stringValue>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

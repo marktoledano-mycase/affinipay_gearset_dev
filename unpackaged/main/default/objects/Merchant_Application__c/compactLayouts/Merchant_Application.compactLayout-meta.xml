@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Merchant_Application</fullName>
+    <fields>Name</fields>
+    <fields>Merchant_Name__c</fields>
+    <fields>Brand__c</fields>
+    <fields>Application_Status__c</fields>
+    <label>Merchant Application</label>
+</CompactLayout>

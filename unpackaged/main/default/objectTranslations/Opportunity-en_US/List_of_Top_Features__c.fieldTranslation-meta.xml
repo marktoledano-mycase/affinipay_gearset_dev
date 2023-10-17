@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- List of Top Features --></label>
+        <name>List_of_Top_Features__c</name>
+        <picklistValues>
+            <masterLabel>Accounting</masterLabel>
+            <translation><!-- Accounting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Analytics</masterLabel>
+            <translation><!-- Analytics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Billing &amp; Invoicing</masterLabel>
+            <translation><!-- Billing &amp; Invoicing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Calendaring</masterLabel>
+            <translation><!-- Calendaring --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client Communications</masterLabel>
+            <translation><!-- Client Communications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client Intake</masterLabel>
+            <translation><!-- Client Intake --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Document Automation</masterLabel>
+            <translation><!-- Document Automation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Expense Tracking</masterLabel>
+            <translation><!-- Expense Tracking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Integrations</masterLabel>
+            <translation><!-- Integrations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Invoice Management</masterLabel>
+            <translation><!-- Invoice Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Invoicing - Payments Plus</masterLabel>
+            <translation><!-- Invoicing - Payments Plus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead Management</masterLabel>
+            <translation><!-- Lead Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payments</masterLabel>
+            <translation><!-- Payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reporting</masterLabel>
+            <translation><!-- Reporting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Text Messaging</masterLabel>
+            <translation><!-- Text Messaging --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Time Tracking</masterLabel>
+            <translation><!-- Time Tracking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User Experience</masterLabel>
+            <translation><!-- User Experience --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Websites</masterLabel>
+            <translation><!-- Websites --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Workflow Automation</masterLabel>
+            <translation><!-- Workflow Automation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>eSignature</masterLabel>
+            <translation><!-- eSignature --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

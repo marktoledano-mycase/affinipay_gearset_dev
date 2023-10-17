@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activity_Update__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checked to trigger flow to capture first sales activity against opportunity</description>
+    <externalId>false</externalId>
+    <label>Activity Update</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

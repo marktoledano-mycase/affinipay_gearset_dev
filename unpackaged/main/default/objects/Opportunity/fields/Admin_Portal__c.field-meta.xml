@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Admin_Portal__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+AND(Product_Environment__r.RecordType.DeveloperName = &#39;MyCase&#39;,
+NOT(ISBLANK(Product_Environment__r.Subdomain__c))),
+HYPERLINK(&quot;https://&quot;&amp; Product_Environment__r.Subdomain__c &amp; &quot;.mycase.com/admin/firm&quot;, &quot;MyCase Admin Portal Link&quot;),
+
+IF(
+AND(Product_Environment__r.RecordType.DeveloperName = &#39;LawPay_Pro&#39;,
+NOT(ISBLANK(Product_Environment__r.Subdomain__c))),
+HYPERLINK(&quot;https://&quot;&amp; Product_Environment__r.Subdomain__c &amp; &quot;.mycase.com/admin/firm&quot;, &quot;LawPay Pro Admin Portal Link&quot;),
+
+&quot;N/A&quot;
+
+)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Admin Portal</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>AMBS Call Center</fullName>
+        <default>false</default>
+        <label>AMBS Call Center</label>
+    </customValue>
+    <customValue>
+        <fullName>American Tenant Screen</fullName>
+        <default>false</default>
+        <label>American Tenant Screen</label>
+    </customValue>
+    <customValue>
+        <fullName>Avid Xchange</fullName>
+        <default>false</default>
+        <label>Avid Xchange</label>
+    </customValue>
+    <customValue>
+        <fullName>Blue Moon</fullName>
+        <default>false</default>
+        <label>Blue Moon</label>
+    </customValue>
+    <customValue>
+        <fullName>CBA Credit</fullName>
+        <default>false</default>
+        <label>CBA Credit</label>
+    </customValue>
+    <customValue>
+        <fullName>Chapp&#39;s Inspector</fullName>
+        <default>false</default>
+        <label>Chapp&#39;s Inspector</label>
+    </customValue>
+    <customValue>
+        <fullName>Click Notices</fullName>
+        <default>false</default>
+        <label>Click Notices</label>
+    </customValue>
+    <customValue>
+        <fullName>Conservice</fullName>
+        <default>false</default>
+        <label>Conservice</label>
+    </customValue>
+    <customValue>
+        <fullName>Cozy.co</fullName>
+        <default>false</default>
+        <label>Cozy.co</label>
+    </customValue>
+    <customValue>
+        <fullName>Credit Bureau Associates</fullName>
+        <default>false</default>
+        <label>Credit Bureau Associates</label>
+    </customValue>
+    <customValue>
+        <fullName>Ecova</fullName>
+        <default>false</default>
+        <label>Ecova</label>
+    </customValue>
+    <customValue>
+        <fullName>EZ Inspections</fullName>
+        <default>false</default>
+        <label>EZ Inspections</label>
+    </customValue>
+    <customValue>
+        <fullName>Happy Inspector</fullName>
+        <default>false</default>
+        <label>Happy Inspector</label>
+    </customValue>
+    <customValue>
+        <fullName>Home Inspector Pro</fullName>
+        <default>false</default>
+        <label>Home Inspector Pro</label>
+    </customValue>
+    <customValue>
+        <fullName>Inspection IO</fullName>
+        <default>false</default>
+        <label>Inspection IO</label>
+    </customValue>
+    <customValue>
+        <fullName>LeaseHawk</fullName>
+        <default>false</default>
+        <label>LeaseHawk</label>
+    </customValue>
+    <customValue>
+        <fullName>Lease Runner</fullName>
+        <default>false</default>
+        <label>Lease Runner</label>
+    </customValue>
+    <customValue>
+        <fullName>Minol USA</fullName>
+        <default>false</default>
+        <label>Minol USA</label>
+    </customValue>
+    <customValue>
+        <fullName>MyRental.com</fullName>
+        <default>false</default>
+        <label>MyRental.com</label>
+    </customValue>
+    <customValue>
+        <fullName>Night Tenders</fullName>
+        <default>false</default>
+        <label>Night Tenders</label>
+    </customValue>
+    <customValue>
+        <fullName>On-Site</fullName>
+        <default>false</default>
+        <label>On-Site</label>
+    </customValue>
+    <customValue>
+        <fullName>Property Inspect</fullName>
+        <default>false</default>
+        <label>Property Inspect</label>
+    </customValue>
+    <customValue>
+        <fullName>Rainmaker LRO</fullName>
+        <default>false</default>
+        <label>Rainmaker LRO</label>
+    </customValue>
+    <customValue>
+        <fullName>RentHub</fullName>
+        <default>false</default>
+        <label>RentHub</label>
+    </customValue>
+    <customValue>
+        <fullName>Rently</fullName>
+        <default>false</default>
+        <label>Rently</label>
+    </customValue>
+    <customValue>
+        <fullName>Rocket Lease</fullName>
+        <default>false</default>
+        <label>Rocket Lease</label>
+    </customValue>
+    <customValue>
+        <fullName>ShowMojo</fullName>
+        <default>false</default>
+        <label>ShowMojo</label>
+    </customValue>
+    <customValue>
+        <fullName>Signius</fullName>
+        <default>false</default>
+        <label>Signius</label>
+    </customValue>
+    <customValue>
+        <fullName>TenantVerification</fullName>
+        <default>false</default>
+        <label>TenantVerification</label>
+    </customValue>
+    <customValue>
+        <fullName>Urjanet</fullName>
+        <default>false</default>
+        <label>Urjanet</label>
+    </customValue>
+    <customValue>
+        <fullName>Water Works</fullName>
+        <default>false</default>
+        <label>Water Works</label>
+    </customValue>
+    <customValue>
+        <fullName>Western Reporting</fullName>
+        <default>false</default>
+        <label>Western Reporting</label>
+    </customValue>
+    <customValue>
+        <fullName>Yes Energy Management</fullName>
+        <default>false</default>
+        <label>Yes Energy Management</label>
+    </customValue>
+    <customValue>
+        <fullName>YieldStar</fullName>
+        <default>false</default>
+        <label>YieldStar</label>
+    </customValue>
+    <customValue>
+        <fullName>HomeWise Docs</fullName>
+        <default>false</default>
+        <label>HomeWise Docs</label>
+    </customValue>
+    <customValue>
+        <fullName>CondoCerts</fullName>
+        <default>false</default>
+        <label>CondoCerts</label>
+    </customValue>
+    <customValue>
+        <fullName>SouthData</fullName>
+        <default>false</default>
+        <label>SouthData</label>
+    </customValue>
+    <customValue>
+        <fullName>Nabr Network</fullName>
+        <default>false</default>
+        <label>Nabr Network</label>
+    </customValue>
+    <customValue>
+        <fullName>Smartwebs</fullName>
+        <default>false</default>
+        <label>Smartwebs</label>
+    </customValue>
+    <customValue>
+        <fullName>Pilera</fullName>
+        <default>false</default>
+        <label>Pilera</label>
+    </customValue>
+    <customValue>
+        <fullName>ComWeb</fullName>
+        <default>false</default>
+        <label>ComWeb</label>
+    </customValue>
+    <customValue>
+        <fullName>BuildingLink</fullName>
+        <default>false</default>
+        <label>BuildingLink</label>
+    </customValue>
+    <customValue>
+        <fullName>RevoPay</fullName>
+        <default>false</default>
+        <label>RevoPay</label>
+    </customValue>
+    <description>R1710136</description>
+    <masterLabel>Current Point Solution</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

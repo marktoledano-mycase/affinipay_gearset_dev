@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Feature Sub Category --></label>
+        <name>Feature_Sub_Category__c</name>
+        <picklistValues>
+            <masterLabel>ACH Pull for Rent/Dues</masterLabel>
+            <translation><!-- ACH Pull for Rent/Dues --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advanced Ability</masterLabel>
+            <translation><!-- Advanced Ability --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advanced approval workflow</masterLabel>
+            <translation><!-- Advanced approval workflow --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Allocate Expenses Across Properties</masterLabel>
+            <translation><!-- Allocate Expenses Across Properties --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Amenities Reservation System</masterLabel>
+            <translation><!-- Amenities Reservation System --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Analytics</masterLabel>
+            <translation><!-- Analytics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AppFolio billing</masterLabel>
+            <translation><!-- AppFolio billing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Association Voting</masterLabel>
+            <translation><!-- Association Voting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Auditing User Actions</masterLabel>
+            <translation><!-- Auditing User Actions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Automated Invoice Processing</masterLabel>
+            <translation><!-- Automated Invoice Processing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Avid Invoice</masterLabel>
+            <translation><!-- Avid Invoice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Avid Pay</masterLabel>
+            <translation><!-- Avid Pay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Avid Strongroom</masterLabel>
+            <translation><!-- Avid Strongroom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Blue Moon</masterLabel>
+            <translation><!-- Blue Moon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Board Approvals – Other</masterLabel>
+            <translation><!-- Board Approvals – Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Board Invoice Approval/Signatures</masterLabel>
+            <translation><!-- Board Invoice Approval/Signatures --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Budgeting</masterLabel>
+            <translation><!-- Budgeting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bulk Post CAM Charges</masterLabel>
+            <translation><!-- Bulk Post CAM Charges --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAM Gross Ups</masterLabel>
+            <translation><!-- CAM Gross Ups --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Check Scanning</masterLabel>
+            <translation><!-- Check Scanning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Community Portal</masterLabel>
+            <translation><!-- Community Portal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Compliance</masterLabel>
+            <translation><!-- Compliance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corporate Accounting</masterLabel>
+            <translation><!-- Corporate Accounting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custom Rental Application</masterLabel>
+            <translation><!-- Custom Rental Application --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customization</masterLabel>
+            <translation><!-- Customization --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Daily Interest Late Fees</masterLabel>
+            <translation><!-- Daily Interest Late Fees --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Access</masterLabel>
+            <translation><!-- Data Access --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Decision Based</masterLabel>
+            <translation><!-- Decision Based --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Different receipt application per association</masterLabel>
+            <translation><!-- Different receipt application per association --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Divisional Accounting</masterLabel>
+            <translation><!-- Divisional Accounting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dues/Assessment Workflows</masterLabel>
+            <translation><!-- Dues/Assessment Workflows --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Excel</masterLabel>
+            <translation><!-- Excel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Financial</masterLabel>
+            <translation><!-- Financial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Folders for Shared Documents</masterLabel>
+            <translation><!-- Folders for Shared Documents --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Foreclosure/Bankruptcy Process</masterLabel>
+            <translation><!-- Foreclosure/Bankruptcy Process --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Forms Management</masterLabel>
+            <translation><!-- Forms Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Generate Formatted (Printable) Invoice</masterLabel>
+            <translation><!-- Generate Formatted (Printable) Invoice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HOA Architectural Review</masterLabel>
+            <translation><!-- HOA Architectural Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HOA Violation Tracking</masterLabel>
+            <translation><!-- HOA Violation Tracking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HOA-Specific Reports</masterLabel>
+            <translation><!-- HOA-Specific Reports --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Homeowner Communication Preferences</masterLabel>
+            <translation><!-- Homeowner Communication Preferences --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Housing Choice Vouchers (Section 8 households)</masterLabel>
+            <translation><!-- Housing Choice Vouchers (Section 8 households) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Import Historical Data</masterLabel>
+            <translation><!-- Import Historical Data --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insights</masterLabel>
+            <translation><!-- Insights --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Integration</masterLabel>
+            <translation><!-- Integration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inventory tracking</masterLabel>
+            <translation><!-- Inventory tracking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Investor/Asset Management</masterLabel>
+            <translation><!-- Investor/Asset Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Invoicing Homeowners for Maintenance</masterLabel>
+            <translation><!-- Invoicing Homeowners for Maintenance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KPI Dashboard</masterLabel>
+            <translation><!-- KPI Dashboard --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leads for New Associations to Manage</masterLabel>
+            <translation><!-- Leads for New Associations to Manage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lease options at renewal</masterLabel>
+            <translation><!-- Lease options at renewal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leasing</masterLabel>
+            <translation><!-- Leasing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lender Information Forms (HomeWise Docs)</masterLabel>
+            <translation><!-- Lender Information Forms (HomeWise Docs) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lien/Collections Issues</masterLabel>
+            <translation><!-- Lien/Collections Issues --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lockbox</masterLabel>
+            <translation><!-- Lockbox --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low Income Housing Tax Credits (LIHTC/Section 42)</masterLabel>
+            <translation><!-- Low Income Housing Tax Credits (LIHTC/Section 42) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mailing Service</masterLabel>
+            <translation><!-- Mailing Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Make Ready Tracking</masterLabel>
+            <translation><!-- Make Ready Tracking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manual Migration</masterLabel>
+            <translation><!-- Manual Migration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mass Move-ins &amp; Move-outs</masterLabel>
+            <translation><!-- Mass Move-ins &amp; Move-outs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missing Column/Field/Filter in Existing Report</masterLabel>
+            <translation><!-- Missing Column/Field/Filter in Existing Report --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missing Report</masterLabel>
+            <translation><!-- Missing Report --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mobile Violation Tracking</masterLabel>
+            <translation><!-- Mobile Violation Tracking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Multiple Buildings per Property</masterLabel>
+            <translation><!-- Multiple Buildings per Property --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Multiple Charts of Accounts / GL Account Trees</masterLabel>
+            <translation><!-- Multiple Charts of Accounts / GL Account Trees --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Multiple Income Accounts</masterLabel>
+            <translation><!-- Multiple Income Accounts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Multiple Mailing Addresses for Communication</masterLabel>
+            <translation><!-- Multiple Mailing Addresses for Communication --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Multiple Operating Bank Accounts</masterLabel>
+            <translation><!-- Multiple Operating Bank Accounts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NY leasing/rent control</masterLabel>
+            <translation><!-- NY leasing/rent control --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Opt In/Out</masterLabel>
+            <translation><!-- Opt In/Out --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Options</masterLabel>
+            <translation><!-- Options --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PDF Letter Upload w/ Mail Merge</masterLabel>
+            <translation><!-- PDF Letter Upload w/ Mail Merge --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Parking/Gate Code Tracking</masterLabel>
+            <translation><!-- Parking/Gate Code Tracking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partnership Accounting</masterLabel>
+            <translation><!-- Partnership Accounting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payroll</masterLabel>
+            <translation><!-- Payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Permissions/Audit</masterLabel>
+            <translation><!-- Permissions/Audit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Positive Pay</masterLabel>
+            <translation><!-- Positive Pay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pre-Leasing</masterLabel>
+            <translation><!-- Pre-Leasing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pricing</masterLabel>
+            <translation><!-- Pricing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Procurement</masterLabel>
+            <translation><!-- Procurement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Project-Based Section 8 (HUD / HAP)</masterLabel>
+            <translation><!-- Project-Based Section 8 (HUD / HAP) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Purchase Orders</masterLabel>
+            <translation><!-- Purchase Orders --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RFP Workflows</masterLabel>
+            <translation><!-- RFP Workflows --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewals &amp; Rent Increases</masterLabel>
+            <translation><!-- Renewals &amp; Rent Increases --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rent Concessions</masterLabel>
+            <translation><!-- Rent Concessions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renter-Occupied Communication &amp; Tracking</masterLabel>
+            <translation><!-- Renter-Occupied Communication &amp; Tracking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Report writer</masterLabel>
+            <translation><!-- Report writer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reporting</masterLabel>
+            <translation><!-- Reporting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reserve Fund Accounting</masterLabel>
+            <translation><!-- Reserve Fund Accounting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Revenue Management</masterLabel>
+            <translation><!-- Revenue Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rollup Reporting Across Properties</masterLabel>
+            <translation><!-- Rollup Reporting Across Properties --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sale Closing Docs (HomeWise)</masterLabel>
+            <translation><!-- Sale Closing Docs (HomeWise) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Separate business</masterLabel>
+            <translation><!-- Separate business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Timberline</masterLabel>
+            <translation><!-- Timberline --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Time Tracking (clock in/out)</masterLabel>
+            <translation><!-- Time Tracking (clock in/out) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Upload Journal Entries</masterLabel>
+            <translation><!-- Upload Journal Entries --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Upload bills</masterLabel>
+            <translation><!-- Upload bills --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User Settings/Permissions</masterLabel>
+            <translation><!-- User Settings/Permissions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utility Management</masterLabel>
+            <translation><!-- Utility Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vendor List</masterLabel>
+            <translation><!-- Vendor List --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vendor Portal</masterLabel>
+            <translation><!-- Vendor Portal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Workflow Management</masterLabel>
+            <translation><!-- Workflow Management --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

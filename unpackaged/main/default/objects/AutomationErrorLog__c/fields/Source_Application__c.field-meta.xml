@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source_Application__c</fullName>
+    <externalId>false</externalId>
+    <label>Source Application</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>GIdentify</fullName>
+                <default>false</default>
+                <label>GIdentify</label>
+            </value>
+            <value>
+                <fullName>GVerify</fullName>
+                <default>false</default>
+                <label>GVerify</label>
+            </value>
+            <value>
+                <fullName>GAuthenticate</fullName>
+                <default>false</default>
+                <label>GAuthenticate</label>
+            </value>
+            <value>
+                <fullName>PayNearMe</fullName>
+                <default>false</default>
+                <label>PayNearMe</label>
+            </value>
+            <value>
+                <fullName>TinCheck</fullName>
+                <default>false</default>
+                <label>TinCheck</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

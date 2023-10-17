@@ -1,0 +1,1185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Merchant Category Code --></label>
+        <name>Merchant_Category_Code__c</name>
+        <picklistValues>
+            <masterLabel>---------------------------------------</masterLabel>
+            <translation><!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1520 General Contractors-Residential and Commercial</masterLabel>
+            <translation><!-- 1520 General Contractors-Residential and Commercial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1711 Air Conditioning Contractors – Sales and Installation, Heating Contractors – Sales, Service, Installation</masterLabel>
+            <translation><!-- 1711 Air Conditioning Contractors – Sales and Installation, Heating Contractors – Sales, Service, Installation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1731 Electrical Contractors</masterLabel>
+            <translation><!-- 1731 Electrical Contractors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1740 Insulation – Contractors, Masonry, Stonework Contractors, Plastering Contractors, Stonework and Masonry Contractors, Tile Settings Contractors</masterLabel>
+            <translation><!-- 1740 Insulation – Contractors, Masonry, Stonework Contractors, Plastering Contractors, Stonework and Masonry Contractors, Tile Settings Contractors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1750 Carpentry Contractors</masterLabel>
+            <translation><!-- 1750 Carpentry Contractors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1761 Roofing – Contractors, Sheet Metal Work – Contractors, Siding – Contractors</masterLabel>
+            <translation><!-- 1761 Roofing – Contractors, Sheet Metal Work – Contractors, Siding – Contractors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1771 Contractors – Concrete Work</masterLabel>
+            <translation><!-- 1771 Contractors – Concrete Work --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1799 Contractors – Special Trade, Not Elsewhere Classified</masterLabel>
+            <translation><!-- 1799 Contractors – Special Trade, Not Elsewhere Classified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2741 Miscellaneous Publishing and Printing</masterLabel>
+            <translation><!-- 2741 Miscellaneous Publishing and Printing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2791 Typesetting, Plate Making, &amp; Related Services</masterLabel>
+            <translation><!-- 2791 Typesetting, Plate Making, &amp; Related Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2842 Specialty Cleaning, Polishing, and Sanitation Preparations</masterLabel>
+            <translation><!-- 2842 Specialty Cleaning, Polishing, and Sanitation Preparations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3000-3299 AIRLINES</masterLabel>
+            <translation><!-- 3000-3299 AIRLINES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3300-3500 Car Rental</masterLabel>
+            <translation><!-- 3300-3500 Car Rental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3500-4000 Hotels/Motels/Inns/Resorts</masterLabel>
+            <translation><!-- 3500-4000 Hotels/Motels/Inns/Resorts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4011 Railroads</masterLabel>
+            <translation><!-- 4011 Railroads --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4111 Local/Suburban Commuter Passenger Transportation – Railroads, Feries, Local Water Transportation.</masterLabel>
+            <translation><!-- 4111 Local/Suburban Commuter Passenger Transportation – Railroads, Feries, Local Water Transportation. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4112 Passenger Railways</masterLabel>
+            <translation><!-- 4112 Passenger Railways --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4119 Ambulance Services</masterLabel>
+            <translation><!-- 4119 Ambulance Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4121 Taxicabs and Limousines</masterLabel>
+            <translation><!-- 4121 Taxicabs and Limousines --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4131 Bus Lines, Including Charters, Tour Buses</masterLabel>
+            <translation><!-- 4131 Bus Lines, Including Charters, Tour Buses --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4214 Motor Freight Carriers, Moving and Storage Companies, Trucking – Local/Long Distance, Delivery Services – Local</masterLabel>
+            <translation><!-- 4214 Motor Freight Carriers, Moving and Storage Companies, Trucking – Local/Long Distance, Delivery Services – Local --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4215 Courier Services – Air or Ground, Freight forwarders</masterLabel>
+            <translation><!-- 4215 Courier Services – Air or Ground, Freight forwarders --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4225 Public warehousing, Storage</masterLabel>
+            <translation><!-- 4225 Public warehousing, Storage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4411 Cruise and Steamship Lines</masterLabel>
+            <translation><!-- 4411 Cruise and Steamship Lines --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4457 Boat Rentals and Leases</masterLabel>
+            <translation><!-- 4457 Boat Rentals and Leases --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4468 Marinas, Marine Service, and Supplies</masterLabel>
+            <translation><!-- 4468 Marinas, Marine Service, and Supplies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4511 Airlines, Air Carriers ( not listed elsewhere)</masterLabel>
+            <translation><!-- 4511 Airlines, Air Carriers ( not listed elsewhere) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4582 Airports, Airport Terminals, Flying Fields</masterLabel>
+            <translation><!-- 4582 Airports, Airport Terminals, Flying Fields --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4722 Travel Agencies and Tour Operations</masterLabel>
+            <translation><!-- 4722 Travel Agencies and Tour Operations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4723 Package Tour Operators (For use in Germany only)</masterLabel>
+            <translation><!-- 4723 Package Tour Operators (For use in Germany only) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4784 Toll and Bridge Fees</masterLabel>
+            <translation><!-- 4784 Toll and Bridge Fees --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4789 Transportation Services, Not elsewhere classified)</masterLabel>
+            <translation><!-- 4789 Transportation Services, Not elsewhere classified) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4812 Telecommunications Equipment including telephone sales</masterLabel>
+            <translation><!-- 4812 Telecommunications Equipment including telephone sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4814 Fax services, Telecommunication Services</masterLabel>
+            <translation><!-- 4814 Fax services, Telecommunication Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4815 VisaPhone</masterLabel>
+            <translation><!-- 4815 VisaPhone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4816 Computer Network Services</masterLabel>
+            <translation><!-- 4816 Computer Network Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4821 Telegraph services</masterLabel>
+            <translation><!-- 4821 Telegraph services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4829 Money Orders – Wire Transfer</masterLabel>
+            <translation><!-- 4829 Money Orders – Wire Transfer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4899 Cable and other pay television (previously Cable Services)</masterLabel>
+            <translation><!-- 4899 Cable and other pay television (previously Cable Services) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4900 Electric, Gas, Sanitary and Water Utilities</masterLabel>
+            <translation><!-- 4900 Electric, Gas, Sanitary and Water Utilities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5013 Motor vehicle supplies and new parts</masterLabel>
+            <translation><!-- 5013 Motor vehicle supplies and new parts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5021 Office and Commercial Furniture</masterLabel>
+            <translation><!-- 5021 Office and Commercial Furniture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5039 Construction Materials, Not Elsewhere Classified</masterLabel>
+            <translation><!-- 5039 Construction Materials, Not Elsewhere Classified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5044 Office, Photographic, Photocopy, and Microfilm Equipment</masterLabel>
+            <translation><!-- 5044 Office, Photographic, Photocopy, and Microfilm Equipment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5045 Computers, Computer Peripheral Equipment, Software</masterLabel>
+            <translation><!-- 5045 Computers, Computer Peripheral Equipment, Software --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5046 Commercial Equipment, Not Elsewhere Classified</masterLabel>
+            <translation><!-- 5046 Commercial Equipment, Not Elsewhere Classified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5047 Medical, Dental Ophthalmic, Hospital Equipment and Supplies</masterLabel>
+            <translation><!-- 5047 Medical, Dental Ophthalmic, Hospital Equipment and Supplies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5051 Metal Service Centers and Offices</masterLabel>
+            <translation><!-- 5051 Metal Service Centers and Offices --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5065 Electrical Parts and Equipment</masterLabel>
+            <translation><!-- 5065 Electrical Parts and Equipment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5072 Hardware Equipment and Supplies</masterLabel>
+            <translation><!-- 5072 Hardware Equipment and Supplies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5074 Plumbing and Heating Equipment and Supplies</masterLabel>
+            <translation><!-- 5074 Plumbing and Heating Equipment and Supplies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5085 Industrial Supplies, Not Elsewhere Classified</masterLabel>
+            <translation><!-- 5085 Industrial Supplies, Not Elsewhere Classified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5094 Precious Stones and Metals, Watches and Jewelry</masterLabel>
+            <translation><!-- 5094 Precious Stones and Metals, Watches and Jewelry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5099 Durable Goods, Not Elsewhere Classified</masterLabel>
+            <translation><!-- 5099 Durable Goods, Not Elsewhere Classified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5111 Stationery, Office Supplies, Printing, and Writing Paper</masterLabel>
+            <translation><!-- 5111 Stationery, Office Supplies, Printing, and Writing Paper --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5122 Drugs, Drug Proprietors, and Druggist’s Sundries</masterLabel>
+            <translation><!-- 5122 Drugs, Drug Proprietors, and Druggist’s Sundries --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5131 Piece Goods, Notions, and Other Dry Goods</masterLabel>
+            <translation><!-- 5131 Piece Goods, Notions, and Other Dry Goods --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5137 Men’s Women’s and Children’s Uniforms and Commercial Clothing</masterLabel>
+            <translation><!-- 5137 Men’s Women’s and Children’s Uniforms and Commercial Clothing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5139 Commercial Footwear</masterLabel>
+            <translation><!-- 5139 Commercial Footwear --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5169 Chemicals and Allied Products, Not Elsewhere Classified</masterLabel>
+            <translation><!-- 5169 Chemicals and Allied Products, Not Elsewhere Classified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5172 Petroleum and Petroleum Products</masterLabel>
+            <translation><!-- 5172 Petroleum and Petroleum Products --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5192 Books, Periodicals, and Newspapers</masterLabel>
+            <translation><!-- 5192 Books, Periodicals, and Newspapers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5193 Florists Supplies, Nursery Stock and Flowers</masterLabel>
+            <translation><!-- 5193 Florists Supplies, Nursery Stock and Flowers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5198 Paints, Varnishes, and Supplies</masterLabel>
+            <translation><!-- 5198 Paints, Varnishes, and Supplies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5199 Non-durable Goods, Not Elsewhere Classified</masterLabel>
+            <translation><!-- 5199 Non-durable Goods, Not Elsewhere Classified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5200 Home Supply Warehouse Stores</masterLabel>
+            <translation><!-- 5200 Home Supply Warehouse Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5211 Lumber and Building Materials Stores</masterLabel>
+            <translation><!-- 5211 Lumber and Building Materials Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5231 Glass, Paint, and Wallpaper Stores</masterLabel>
+            <translation><!-- 5231 Glass, Paint, and Wallpaper Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5251 Hardware Stores</masterLabel>
+            <translation><!-- 5251 Hardware Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5261 Nurseries – Lawn and Garden Supply Store</masterLabel>
+            <translation><!-- 5261 Nurseries – Lawn and Garden Supply Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5271 Mobile Home Dealers</masterLabel>
+            <translation><!-- 5271 Mobile Home Dealers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5300 Wholesale Clubs</masterLabel>
+            <translation><!-- 5300 Wholesale Clubs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5309 Duty Free Store</masterLabel>
+            <translation><!-- 5309 Duty Free Store --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5310 Discount Stores</masterLabel>
+            <translation><!-- 5310 Discount Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5311 Department Stores</masterLabel>
+            <translation><!-- 5311 Department Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5331 Variety Stores</masterLabel>
+            <translation><!-- 5331 Variety Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5399 Misc. General Merchandise</masterLabel>
+            <translation><!-- 5399 Misc. General Merchandise --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5411 Grocery Stores, Supermarkets</masterLabel>
+            <translation><!-- 5411 Grocery Stores, Supermarkets --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5422 Meat Provisioners – Freezer and Locker</masterLabel>
+            <translation><!-- 5422 Meat Provisioners – Freezer and Locker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5441 Candy, Nut, and Confectionery Stores</masterLabel>
+            <translation><!-- 5441 Candy, Nut, and Confectionery Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5451 Dairy Products Stores</masterLabel>
+            <translation><!-- 5451 Dairy Products Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5462 Bakeries</masterLabel>
+            <translation><!-- 5462 Bakeries --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5499 Misc. Food Stores – Convenience Stores and Specialty Markets</masterLabel>
+            <translation><!-- 5499 Misc. Food Stores – Convenience Stores and Specialty Markets --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5511 Car and Truck Dealers (New and Used) Sales, Service, Repairs, Parts, and Leasing</masterLabel>
+            <translation><!-- 5511 Car and Truck Dealers (New and Used) Sales, Service, Repairs, Parts, and Leasing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5521 Automobile and Truck Dealers (Used Only)</masterLabel>
+            <translation><!-- 5521 Automobile and Truck Dealers (Used Only) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5531 Automobile Supply Stores</masterLabel>
+            <translation><!-- 5531 Automobile Supply Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5532 Automotive Tire Stores</masterLabel>
+            <translation><!-- 5532 Automotive Tire Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5533 Automotive Parts, Accessories Stores</masterLabel>
+            <translation><!-- 5533 Automotive Parts, Accessories Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5541 Service Stations ( with or without ancillary services)</masterLabel>
+            <translation><!-- 5541 Service Stations ( with or without ancillary services) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5542 Automated Fuel Dispensers</masterLabel>
+            <translation><!-- 5542 Automated Fuel Dispensers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5551 Boat Dealers</masterLabel>
+            <translation><!-- 5551 Boat Dealers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5561 Recreational and Utility Trailers, Camp Dealers</masterLabel>
+            <translation><!-- 5561 Recreational and Utility Trailers, Camp Dealers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5571 Motorcycle Dealers</masterLabel>
+            <translation><!-- 5571 Motorcycle Dealers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5592 Motor Home Dealers</masterLabel>
+            <translation><!-- 5592 Motor Home Dealers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5598 Snowmobile Dealers</masterLabel>
+            <translation><!-- 5598 Snowmobile Dealers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5599 Miscellaneous Auto Dealers</masterLabel>
+            <translation><!-- 5599 Miscellaneous Auto Dealers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5611 Men’s and Boy’s Clothing and Accessories Stores</masterLabel>
+            <translation><!-- 5611 Men’s and Boy’s Clothing and Accessories Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5621 Women’s Ready-to-Wear Stores</masterLabel>
+            <translation><!-- 5621 Women’s Ready-to-Wear Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5631 Women’s Accessory and Specialty Shops</masterLabel>
+            <translation><!-- 5631 Women’s Accessory and Specialty Shops --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5641 Children’s and Infant’s Wear Stores</masterLabel>
+            <translation><!-- 5641 Children’s and Infant’s Wear Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5651 Family Clothing Stores</masterLabel>
+            <translation><!-- 5651 Family Clothing Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5655 Sports Apparel, Riding Apparel Stores</masterLabel>
+            <translation><!-- 5655 Sports Apparel, Riding Apparel Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5661 Shoe Stores</masterLabel>
+            <translation><!-- 5661 Shoe Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5681 Furriers and Fur Shops</masterLabel>
+            <translation><!-- 5681 Furriers and Fur Shops --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5691 Men’s and Women’s Clothing Stores</masterLabel>
+            <translation><!-- 5691 Men’s and Women’s Clothing Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5697 Tailors, Seamstress, Mending, and Alterations</masterLabel>
+            <translation><!-- 5697 Tailors, Seamstress, Mending, and Alterations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5698 Wig and Toupee Stores</masterLabel>
+            <translation><!-- 5698 Wig and Toupee Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5699 Miscellaneous Apparel and Accessory Shops</masterLabel>
+            <translation><!-- 5699 Miscellaneous Apparel and Accessory Shops --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5712 Furniture, Home Furnishings, and Equipment Stores, ExceptAppliances</masterLabel>
+            <translation><!-- 5712 Furniture, Home Furnishings, and Equipment Stores, ExceptAppliances --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5713 Floor Covering Stores</masterLabel>
+            <translation><!-- 5713 Floor Covering Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5714 Drapery, Window Covering and Upholstery Stores</masterLabel>
+            <translation><!-- 5714 Drapery, Window Covering and Upholstery Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5718 Fireplace, Fireplace Screens, and Accessories Stores</masterLabel>
+            <translation><!-- 5718 Fireplace, Fireplace Screens, and Accessories Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5719 Miscellaneous Home Furnishing Specialty Stores</masterLabel>
+            <translation><!-- 5719 Miscellaneous Home Furnishing Specialty Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5722 Household Appliance Stores</masterLabel>
+            <translation><!-- 5722 Household Appliance Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5732 Electronic Sales</masterLabel>
+            <translation><!-- 5732 Electronic Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5733 Music Stores, Musical Instruments, Piano Sheet Music</masterLabel>
+            <translation><!-- 5733 Music Stores, Musical Instruments, Piano Sheet Music --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5734 Computer Software Stores</masterLabel>
+            <translation><!-- 5734 Computer Software Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5735 Record Shops</masterLabel>
+            <translation><!-- 5735 Record Shops --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5811 Caterers</masterLabel>
+            <translation><!-- 5811 Caterers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5812 Eating places and Restaurants</masterLabel>
+            <translation><!-- 5812 Eating places and Restaurants --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5813 Drinking Places (Alcoholic Beverages), Bars, Taverns, Cocktail lounges, Nightclubs and Discotheques</masterLabel>
+            <translation><!-- 5813 Drinking Places (Alcoholic Beverages), Bars, Taverns, Cocktail lounges, Nightclubs and Discotheques --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5814 Fast Food Restaurants</masterLabel>
+            <translation><!-- 5814 Fast Food Restaurants --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5832 Antique Shops – Sales, Repairs, and Restoration Services</masterLabel>
+            <translation><!-- 5832 Antique Shops – Sales, Repairs, and Restoration Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5912 Drug Stores and Pharmacies</masterLabel>
+            <translation><!-- 5912 Drug Stores and Pharmacies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5921 Package Stores – Beer, Wine, and Liquor</masterLabel>
+            <translation><!-- 5921 Package Stores – Beer, Wine, and Liquor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5931 Used Merchandise and Secondhand Stores</masterLabel>
+            <translation><!-- 5931 Used Merchandise and Secondhand Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5932 Antique Shops</masterLabel>
+            <translation><!-- 5932 Antique Shops --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5933 Pawn Shops and Salvage Yards</masterLabel>
+            <translation><!-- 5933 Pawn Shops and Salvage Yards --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5935 Wrecking and Salvage Yards</masterLabel>
+            <translation><!-- 5935 Wrecking and Salvage Yards --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5937 Antique Reproductions</masterLabel>
+            <translation><!-- 5937 Antique Reproductions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5940 Bicycle Shops – Sales and Service</masterLabel>
+            <translation><!-- 5940 Bicycle Shops – Sales and Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5941 Sporting Goods Stores</masterLabel>
+            <translation><!-- 5941 Sporting Goods Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5942 Book Stores</masterLabel>
+            <translation><!-- 5942 Book Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5943 Stationery Stores, Office and School Supply Stores</masterLabel>
+            <translation><!-- 5943 Stationery Stores, Office and School Supply Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5944 Watch, Clock, Jewelry, and Silverware Stores</masterLabel>
+            <translation><!-- 5944 Watch, Clock, Jewelry, and Silverware Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5945 Hobby, Toy, and Game Shops</masterLabel>
+            <translation><!-- 5945 Hobby, Toy, and Game Shops --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5946 Camera and Photographic Supply Stores</masterLabel>
+            <translation><!-- 5946 Camera and Photographic Supply Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5947 Card Shops, Gift, Novelty, and Souvenir Shops</masterLabel>
+            <translation><!-- 5947 Card Shops, Gift, Novelty, and Souvenir Shops --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5948 Leather Foods Stores</masterLabel>
+            <translation><!-- 5948 Leather Foods Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5949 Sewing, Needle, Fabric, and Price Goods Stores</masterLabel>
+            <translation><!-- 5949 Sewing, Needle, Fabric, and Price Goods Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5950 Glassware/Crystal Stores</masterLabel>
+            <translation><!-- 5950 Glassware/Crystal Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5960 Direct Marketing- Insurance Service</masterLabel>
+            <translation><!-- 5960 Direct Marketing- Insurance Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5961 Mail Order Houses Including Catalog Order Stores, Book/Record Clubs (No longer permitted for U.S. original presentments)</masterLabel>
+            <translation><!-- 5961 Mail Order Houses Including Catalog Order Stores, Book/Record Clubs (No longer permitted for U.S. original presentments) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5962 Direct Marketing – Travel Related Arrangements Services</masterLabel>
+            <translation><!-- 5962 Direct Marketing – Travel Related Arrangements Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5963 Door-to-Door Sales</masterLabel>
+            <translation><!-- 5963 Door-to-Door Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5964 Direct Marketing – Catalog Merchant</masterLabel>
+            <translation><!-- 5964 Direct Marketing – Catalog Merchant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5965 Direct Marketing – Catalog and Catalog and Retail Merchant</masterLabel>
+            <translation><!-- 5965 Direct Marketing – Catalog and Catalog and Retail Merchant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5966 Direct Marketing- Outbound Telemarketing Merchant</masterLabel>
+            <translation><!-- 5966 Direct Marketing- Outbound Telemarketing Merchant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5967 Direct Marketing – Inbound Teleservices Merchant</masterLabel>
+            <translation><!-- 5967 Direct Marketing – Inbound Teleservices Merchant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5968 Direct Marketing – Continuity/Subscription Merchant</masterLabel>
+            <translation><!-- 5968 Direct Marketing – Continuity/Subscription Merchant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5969 Direct Marketing – Not Elsewhere Classified</masterLabel>
+            <translation><!-- 5969 Direct Marketing – Not Elsewhere Classified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5970 Artist’s Supply and Craft Shops</masterLabel>
+            <translation><!-- 5970 Artist’s Supply and Craft Shops --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5971 Art Dealers and Galleries</masterLabel>
+            <translation><!-- 5971 Art Dealers and Galleries --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5972 Stamp and Coin Stores – Philatelic and Numismatic Supplies</masterLabel>
+            <translation><!-- 5972 Stamp and Coin Stores – Philatelic and Numismatic Supplies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5973 Religious Goods Stores</masterLabel>
+            <translation><!-- 5973 Religious Goods Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5975 Hearing Aids – Sales, Service, and Supply Stores</masterLabel>
+            <translation><!-- 5975 Hearing Aids – Sales, Service, and Supply Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5976 Orthopedic Goods Prosthetic Devices</masterLabel>
+            <translation><!-- 5976 Orthopedic Goods Prosthetic Devices --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5977 Cosmetic Stores</masterLabel>
+            <translation><!-- 5977 Cosmetic Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5978 Typewriter Stores – Sales, Rental, Service</masterLabel>
+            <translation><!-- 5978 Typewriter Stores – Sales, Rental, Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5983 Fuel – Fuel Oil, Wood, Coal, Liquefied Petroleum</masterLabel>
+            <translation><!-- 5983 Fuel – Fuel Oil, Wood, Coal, Liquefied Petroleum --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5992 Florists</masterLabel>
+            <translation><!-- 5992 Florists --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5993 Cigar Stores and Stands</masterLabel>
+            <translation><!-- 5993 Cigar Stores and Stands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5994 News Dealers and Newsstands</masterLabel>
+            <translation><!-- 5994 News Dealers and Newsstands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5995 Pet Shops, Pet Foods, and Supplies Stores</masterLabel>
+            <translation><!-- 5995 Pet Shops, Pet Foods, and Supplies Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5996 Swimming Pools – Sales, Service, and Supplies</masterLabel>
+            <translation><!-- 5996 Swimming Pools – Sales, Service, and Supplies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5997 Electric Razor Stores – Sales and Service</masterLabel>
+            <translation><!-- 5997 Electric Razor Stores – Sales and Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5998 Tent and Awning Shops</masterLabel>
+            <translation><!-- 5998 Tent and Awning Shops --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5999 Miscellaneous and Specialty Retail Stores</masterLabel>
+            <translation><!-- 5999 Miscellaneous and Specialty Retail Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6010 Financial Institutions – Manual Cash Disbursements</masterLabel>
+            <translation><!-- 6010 Financial Institutions – Manual Cash Disbursements --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6011 Financial Institutions – Manual Cash Disbursements</masterLabel>
+            <translation><!-- 6011 Financial Institutions – Manual Cash Disbursements --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6012 Financial Institutions – Merchandise and Services</masterLabel>
+            <translation><!-- 6012 Financial Institutions – Merchandise and Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6051 Non-Financial Institutions – Foreign Currency, Money Orders (not wire transfer) and Travelers Cheques</masterLabel>
+            <translation><!-- 6051 Non-Financial Institutions – Foreign Currency, Money Orders (not wire transfer) and Travelers Cheques --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6211 Security Brokers/Dealers</masterLabel>
+            <translation><!-- 6211 Security Brokers/Dealers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6300 Insurance Sales, Underwriting, and Premiums</masterLabel>
+            <translation><!-- 6300 Insurance Sales, Underwriting, and Premiums --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6381 Insurance Premiums, (no longer valid for first presentment work)</masterLabel>
+            <translation><!-- 6381 Insurance Premiums, (no longer valid for first presentment work) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6399 Insurance, Not Elsewhere Classified ( no longer valid forfirst presentment work)</masterLabel>
+            <translation><!-- 6399 Insurance, Not Elsewhere Classified ( no longer valid forfirst presentment work) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6513 Real Estate Agents and Managers - Rentals</masterLabel>
+            <translation><!-- 6513 Real Estate Agents and Managers - Rentals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7011 Lodging – Hotels, Motels, Resorts, Central Reservation Services (not elsewhere classified)</masterLabel>
+            <translation><!-- 7011 Lodging – Hotels, Motels, Resorts, Central Reservation Services (not elsewhere classified) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7012 Timeshares</masterLabel>
+            <translation><!-- 7012 Timeshares --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7032 Sporting and Recreational Camps</masterLabel>
+            <translation><!-- 7032 Sporting and Recreational Camps --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7033 Trailer Parks and Camp Grounds</masterLabel>
+            <translation><!-- 7033 Trailer Parks and Camp Grounds --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7210 Laundry, Cleaning, and Garment Services</masterLabel>
+            <translation><!-- 7210 Laundry, Cleaning, and Garment Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7211 Laundry – Family and Commercial</masterLabel>
+            <translation><!-- 7211 Laundry – Family and Commercial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7216 Dry Cleaners</masterLabel>
+            <translation><!-- 7216 Dry Cleaners --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7217 Carpet and Upholstery Cleaning</masterLabel>
+            <translation><!-- 7217 Carpet and Upholstery Cleaning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7221 Photographic Studios</masterLabel>
+            <translation><!-- 7221 Photographic Studios --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7230 Barber and Beauty Shops</masterLabel>
+            <translation><!-- 7230 Barber and Beauty Shops --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7251 Shop Repair Shops and Shoe Shine Parlors, and Hat Cleaning Shops</masterLabel>
+            <translation><!-- 7251 Shop Repair Shops and Shoe Shine Parlors, and Hat Cleaning Shops --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7261 Funeral Service and Crematories</masterLabel>
+            <translation><!-- 7261 Funeral Service and Crematories --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7273 Dating and Escort Services</masterLabel>
+            <translation><!-- 7273 Dating and Escort Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7276 Tax Preparation Service</masterLabel>
+            <translation><!-- 7276 Tax Preparation Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7277 Counseling Service – Debt, Marriage, Personal</masterLabel>
+            <translation><!-- 7277 Counseling Service – Debt, Marriage, Personal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7278 Buying/Shopping Services, Clubs</masterLabel>
+            <translation><!-- 7278 Buying/Shopping Services, Clubs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7296 Clothing Rental – Costumes, Formal Wear, Uniforms</masterLabel>
+            <translation><!-- 7296 Clothing Rental – Costumes, Formal Wear, Uniforms --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7297 Massage Parlors</masterLabel>
+            <translation><!-- 7297 Massage Parlors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7298 Health and Beauty Shops</masterLabel>
+            <translation><!-- 7298 Health and Beauty Shops --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7299 Miscellaneous Personal Services ( not elsewhere classifies)</masterLabel>
+            <translation><!-- 7299 Miscellaneous Personal Services ( not elsewhere classifies) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7311 Advertising Services</masterLabel>
+            <translation><!-- 7311 Advertising Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7321 Consumer Credit Reporting Agencies</masterLabel>
+            <translation><!-- 7321 Consumer Credit Reporting Agencies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7332 Blueprinting and Photocopying Services</masterLabel>
+            <translation><!-- 7332 Blueprinting and Photocopying Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7333 Commercial Photography, Art and Graphics</masterLabel>
+            <translation><!-- 7333 Commercial Photography, Art and Graphics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7338 Quick Copy, Reproduction and Blueprinting Services</masterLabel>
+            <translation><!-- 7338 Quick Copy, Reproduction and Blueprinting Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7339 Stenographic and Secretarial Support Services</masterLabel>
+            <translation><!-- 7339 Stenographic and Secretarial Support Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7342 Exterminating and Disinfecting Services</masterLabel>
+            <translation><!-- 7342 Exterminating and Disinfecting Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7349 Cleaning and Maintenance, Janitorial Services</masterLabel>
+            <translation><!-- 7349 Cleaning and Maintenance, Janitorial Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7361 Employment Agencies, Temporary Help Services</masterLabel>
+            <translation><!-- 7361 Employment Agencies, Temporary Help Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7372 Computer Programming, Integrated Systems Design and Data Processing Services</masterLabel>
+            <translation><!-- 7372 Computer Programming, Integrated Systems Design and Data Processing Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7375 Information Retrieval Services</masterLabel>
+            <translation><!-- 7375 Information Retrieval Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7379 Computer Maintenance and Repair Services, Not Elsewhere Classified</masterLabel>
+            <translation><!-- 7379 Computer Maintenance and Repair Services, Not Elsewhere Classified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7392 Management, Consulting, and Public Relations Services</masterLabel>
+            <translation><!-- 7392 Management, Consulting, and Public Relations Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7393 Protective and Security Services – Including Armored Carsand Guard Dogs</masterLabel>
+            <translation><!-- 7393 Protective and Security Services – Including Armored Carsand Guard Dogs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7394 Equipment Rental and Leasing Services, Tool Rental, Furniture Rental, and Appliance Rental</masterLabel>
+            <translation><!-- 7394 Equipment Rental and Leasing Services, Tool Rental, Furniture Rental, and Appliance Rental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7395 Photofinishing Laboratories, Photo Developing</masterLabel>
+            <translation><!-- 7395 Photofinishing Laboratories, Photo Developing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7399 Business Services, Not Elsewhere Classified</masterLabel>
+            <translation><!-- 7399 Business Services, Not Elsewhere Classified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>742 Veterinary Services</masterLabel>
+            <translation><!-- 742 Veterinary Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7511 Truck Stop</masterLabel>
+            <translation><!-- 7511 Truck Stop --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7512 Car Rental Companies ( Not Listed Below)</masterLabel>
+            <translation><!-- 7512 Car Rental Companies ( Not Listed Below) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7513 Truck and Utility Trailer Rentals</masterLabel>
+            <translation><!-- 7513 Truck and Utility Trailer Rentals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7519 Motor Home and Recreational Vehicle Rentals</masterLabel>
+            <translation><!-- 7519 Motor Home and Recreational Vehicle Rentals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7523 Automobile Parking Lots and Garages</masterLabel>
+            <translation><!-- 7523 Automobile Parking Lots and Garages --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7531 Automotive Body Repair Shops</masterLabel>
+            <translation><!-- 7531 Automotive Body Repair Shops --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7534 Tire Re-treading and Repair Shops</masterLabel>
+            <translation><!-- 7534 Tire Re-treading and Repair Shops --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7535 Paint Shops – Automotive</masterLabel>
+            <translation><!-- 7535 Paint Shops – Automotive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7538 Automotive Service Shops</masterLabel>
+            <translation><!-- 7538 Automotive Service Shops --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7542 Car Washes</masterLabel>
+            <translation><!-- 7542 Car Washes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7549 Towing Services</masterLabel>
+            <translation><!-- 7549 Towing Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7622 Radio Repair Shops</masterLabel>
+            <translation><!-- 7622 Radio Repair Shops --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7623 Air Conditioning and Refrigeration Repair Shops</masterLabel>
+            <translation><!-- 7623 Air Conditioning and Refrigeration Repair Shops --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7629 Electrical And Small Appliance Repair Shops</masterLabel>
+            <translation><!-- 7629 Electrical And Small Appliance Repair Shops --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>763 Agricultural Co-operatives</masterLabel>
+            <translation><!-- 763 Agricultural Co-operatives --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7631 Watch, Clock, and Jewelry Repair</masterLabel>
+            <translation><!-- 7631 Watch, Clock, and Jewelry Repair --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7641 Furniture, Furniture Repair, and Furniture Refinishing</masterLabel>
+            <translation><!-- 7641 Furniture, Furniture Repair, and Furniture Refinishing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7692 Welding Repair</masterLabel>
+            <translation><!-- 7692 Welding Repair --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7699 Repair Shops and Related Services –Miscellaneous</masterLabel>
+            <translation><!-- 7699 Repair Shops and Related Services –Miscellaneous --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>780 Horticultural Services, Landscaping Services</masterLabel>
+            <translation><!-- 780 Horticultural Services, Landscaping Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7829 Motion Pictures and Video Tape Production and Distribution</masterLabel>
+            <translation><!-- 7829 Motion Pictures and Video Tape Production and Distribution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7832 Motion Picture Theaters</masterLabel>
+            <translation><!-- 7832 Motion Picture Theaters --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7841 Video Tape Rental Stores</masterLabel>
+            <translation><!-- 7841 Video Tape Rental Stores --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7911 Dance Halls, Studios and Schools</masterLabel>
+            <translation><!-- 7911 Dance Halls, Studios and Schools --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7922 Theatrical Producers (Except Motion Pictures), Ticket Agencies</masterLabel>
+            <translation><!-- 7922 Theatrical Producers (Except Motion Pictures), Ticket Agencies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7929 Bands, Orchestras, and Miscellaneous Entertainers (Not Elsewhere Classified)</masterLabel>
+            <translation><!-- 7929 Bands, Orchestras, and Miscellaneous Entertainers (Not Elsewhere Classified) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7932 Billiard and Pool Establishments</masterLabel>
+            <translation><!-- 7932 Billiard and Pool Establishments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7933 Bowling Alleys</masterLabel>
+            <translation><!-- 7933 Bowling Alleys --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7941 Commercial Sports, Athletic Fields, Professional Sport Clubs, and Sport Promoters</masterLabel>
+            <translation><!-- 7941 Commercial Sports, Athletic Fields, Professional Sport Clubs, and Sport Promoters --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7991 Tourist Attractions and Exhibits</masterLabel>
+            <translation><!-- 7991 Tourist Attractions and Exhibits --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7992 Golf Courses – Public</masterLabel>
+            <translation><!-- 7992 Golf Courses – Public --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7993 Video Amusement Game Supplies</masterLabel>
+            <translation><!-- 7993 Video Amusement Game Supplies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7994 Video Game Arcades/Establishments</masterLabel>
+            <translation><!-- 7994 Video Game Arcades/Establishments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7995 Betting (including Lottery Tickets, Casino Gaming Chips, Off-track Betting and Wagers)</masterLabel>
+            <translation><!-- 7995 Betting (including Lottery Tickets, Casino Gaming Chips, Off-track Betting and Wagers) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7996 Amusement Parks, Carnivals, Circuses, Fortune Tellers</masterLabel>
+            <translation><!-- 7996 Amusement Parks, Carnivals, Circuses, Fortune Tellers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7997 Membership Clubs (Sports, Recreation, Athletic), Country Clubs, and Private Golf Courses</masterLabel>
+            <translation><!-- 7997 Membership Clubs (Sports, Recreation, Athletic), Country Clubs, and Private Golf Courses --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7998 Aquariums, Sea-aquariums, Dolphinariums</masterLabel>
+            <translation><!-- 7998 Aquariums, Sea-aquariums, Dolphinariums --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7999 Recreation Services (Not Elsewhere Classified)</masterLabel>
+            <translation><!-- 7999 Recreation Services (Not Elsewhere Classified) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8011 Doctors and Physicians (Not Elsewhere Classified)</masterLabel>
+            <translation><!-- 8011 Doctors and Physicians (Not Elsewhere Classified) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8021 Dentists and Orthodontists</masterLabel>
+            <translation><!-- 8021 Dentists and Orthodontists --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8031 Osteopaths</masterLabel>
+            <translation><!-- 8031 Osteopaths --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8041 Chiropractors</masterLabel>
+            <translation><!-- 8041 Chiropractors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8042 Optometrists and Ophthalmologists</masterLabel>
+            <translation><!-- 8042 Optometrists and Ophthalmologists --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8043 Opticians, Opticians Goods and Eyeglasses</masterLabel>
+            <translation><!-- 8043 Opticians, Opticians Goods and Eyeglasses --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8044 Opticians, Optical Goods, and Eyeglasses (no longer validfor first presentments)</masterLabel>
+            <translation><!-- 8044 Opticians, Optical Goods, and Eyeglasses (no longer validfor first presentments) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8049 Podiatrists and Chiropodists</masterLabel>
+            <translation><!-- 8049 Podiatrists and Chiropodists --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8050 Nursing and Personal Care Facilities</masterLabel>
+            <translation><!-- 8050 Nursing and Personal Care Facilities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8062 Hospitals</masterLabel>
+            <translation><!-- 8062 Hospitals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8071 Medical and Dental Laboratories</masterLabel>
+            <translation><!-- 8071 Medical and Dental Laboratories --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8099 Medical Services and Health Practitioners (Not Elsewhere Classified)</masterLabel>
+            <translation><!-- 8099 Medical Services and Health Practitioners (Not Elsewhere Classified) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8111 Legal Services and Attorneys</masterLabel>
+            <translation><!-- 8111 Legal Services and Attorneys --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8211 Elementary and Secondary Schools</masterLabel>
+            <translation><!-- 8211 Elementary and Secondary Schools --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8220 Colleges, Junior Colleges, Universities, and ProfessionalSchools</masterLabel>
+            <translation><!-- 8220 Colleges, Junior Colleges, Universities, and ProfessionalSchools --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8241 Correspondence Schools</masterLabel>
+            <translation><!-- 8241 Correspondence Schools --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8244 Business and Secretarial Schools</masterLabel>
+            <translation><!-- 8244 Business and Secretarial Schools --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8249 Vocational Schools and Trade Schools</masterLabel>
+            <translation><!-- 8249 Vocational Schools and Trade Schools --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8299 Schools and Educational Services ( Not Elsewhere Classified)</masterLabel>
+            <translation><!-- 8299 Schools and Educational Services ( Not Elsewhere Classified) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8351 Child Care Services</masterLabel>
+            <translation><!-- 8351 Child Care Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8398 Charitable and Social Service Organizations</masterLabel>
+            <translation><!-- 8398 Charitable and Social Service Organizations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8641 Civic, Fraternal, and Social Associations</masterLabel>
+            <translation><!-- 8641 Civic, Fraternal, and Social Associations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8651 Political Organizations</masterLabel>
+            <translation><!-- 8651 Political Organizations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8661 Religious Organizations</masterLabel>
+            <translation><!-- 8661 Religious Organizations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8675 Automobile Associations</masterLabel>
+            <translation><!-- 8675 Automobile Associations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8699 Membership Organizations ( Not Elsewhere Classified)</masterLabel>
+            <translation><!-- 8699 Membership Organizations ( Not Elsewhere Classified) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8734 Testing Laboratories ( non-medical)</masterLabel>
+            <translation><!-- 8734 Testing Laboratories ( non-medical) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8911 Architectural – Engineering and Surveying Services</masterLabel>
+            <translation><!-- 8911 Architectural – Engineering and Surveying Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8931 Accounting, Auditing, and Bookkeeping Services</masterLabel>
+            <translation><!-- 8931 Accounting, Auditing, and Bookkeeping Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8999 Professional Services ( Not Elsewhere Defined)</masterLabel>
+            <translation><!-- 8999 Professional Services ( Not Elsewhere Defined) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9211 Court Costs, including Alimony and Child Support</masterLabel>
+            <translation><!-- 9211 Court Costs, including Alimony and Child Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9222 Fines</masterLabel>
+            <translation><!-- 9222 Fines --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9223 Bail and Bond Payments</masterLabel>
+            <translation><!-- 9223 Bail and Bond Payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9311 Tax Payments</masterLabel>
+            <translation><!-- 9311 Tax Payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9399 Government Services ( Not Elsewhere Classified)</masterLabel>
+            <translation><!-- 9399 Government Services ( Not Elsewhere Classified) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9402 Postal Services – Government Only</masterLabel>
+            <translation><!-- 9402 Postal Services – Government Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9405 Intra – Government Transactions</masterLabel>
+            <translation><!-- 9405 Intra – Government Transactions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9700 Automated Referral Service ( For Visa Only)</masterLabel>
+            <translation><!-- 9700 Automated Referral Service ( For Visa Only) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9701 Visa Credential Service ( For Visa Only)</masterLabel>
+            <translation><!-- 9701 Visa Credential Service ( For Visa Only) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9702 GCAS Emergency Services ( For Visa Only)</masterLabel>
+            <translation><!-- 9702 GCAS Emergency Services ( For Visa Only) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9950 Intra – Company Purchases ( For Visa Only)</masterLabel>
+            <translation><!-- 9950 Intra – Company Purchases ( For Visa Only) --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

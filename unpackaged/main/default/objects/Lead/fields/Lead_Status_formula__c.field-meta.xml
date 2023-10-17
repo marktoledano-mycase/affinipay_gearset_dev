@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Status_formula__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(TEXT(Status) = &quot;Converted without Opportunity&quot;, &quot;Known&quot;, TEXT(Status))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>If Converted without Opportunity, &quot;Known&quot;. Otherwise, Lead Status</inlineHelpText>
+    <label>Lead Status (formula)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

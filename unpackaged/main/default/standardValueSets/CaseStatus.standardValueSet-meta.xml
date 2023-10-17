@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Send Follow Up</fullName>
+        <default>false</default>
+        <label>Send Follow Up</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Send Follow Up - No Response</fullName>
+        <default>false</default>
+        <label>Send Follow Up - No Response</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>New</fullName>
+        <default>true</default>
+        <label>New</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>New Customer Email</fullName>
+        <default>false</default>
+        <label>New Customer Email</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed</fullName>
+        <default>false</default>
+        <label>Closed</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Escalated</fullName>
+        <default>false</default>
+        <label>Escalated</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Escalated - Closed</fullName>
+        <default>false</default>
+        <label>Escalated - Closed</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Escalated - VAS</fullName>
+        <default>false</default>
+        <label>Escalated - VAS</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Prioritized</fullName>
+        <default>false</default>
+        <label>Prioritized</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>In Progress</fullName>
+        <default>false</default>
+        <label>In Progress</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>In Progress: Waiting on Client</fullName>
+        <default>false</default>
+        <label>In Progress: Waiting on Client</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Scheduled Call</fullName>
+        <default>false</default>
+        <label>Scheduled Call</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Progress Updates</fullName>
+        <default>false</default>
+        <label>Progress Updates</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Send Survey</fullName>
+        <default>false</default>
+        <label>Send Survey</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending Consumer Verification</fullName>
+        <default>false</default>
+        <label>Pending Consumer Verification</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending Data Furnisher Update</fullName>
+        <default>false</default>
+        <label>Pending Data Furnisher Update</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Conf Received From Data Furnisher</fullName>
+        <default>false</default>
+        <label>Conf Received From Data Furnisher</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Escalated to CL</fullName>
+        <default>false</default>
+        <label>Escalated to CL</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Escalated to Experian</fullName>
+        <default>false</default>
+        <label>Escalated to Experian</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Escalated to RentBureau</fullName>
+        <default>false</default>
+        <label>Escalated to RentBureau</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Decision Making Process</fullName>
+        <default>false</default>
+        <label>Decision Making Process</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Re-Opened</fullName>
+        <default>false</default>
+        <label>Re-Opened</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Escalated - Partners</fullName>
+        <default>false</default>
+        <label>Escalated - Partners</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Waiting to Close</fullName>
+        <default>false</default>
+        <label>Waiting to Close</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Waiting to Close - No Response</fullName>
+        <default>false</default>
+        <label>Waiting to Close - No Response</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>NDIC</fullName>
+        <default>false</default>
+        <label>NDIC</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed - Retained</fullName>
+        <default>false</default>
+        <label>Closed - Retained</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed - Churned</fullName>
+        <default>false</default>
+        <label>Closed - Churned</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Documents Submitted</fullName>
+        <default>false</default>
+        <label>Documents Submitted</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Internal Planning</fullName>
+        <default>false</default>
+        <label>Internal Planning</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Scheduling Call</fullName>
+        <default>false</default>
+        <label>Scheduling Call</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Call Scheduled</fullName>
+        <default>false</default>
+        <label>Call Scheduled</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Escalated to Billing</fullName>
+        <default>false</default>
+        <label>Escalated to Billing</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed (Resolved)</fullName>
+        <default>false</default>
+        <label>Closed (Resolved)</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed (Unresolved)</fullName>
+        <default>false</default>
+        <label>Closed (Unresolved)</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed (Success)</fullName>
+        <default>false</default>
+        <label>Closed (Success)</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed (Not Interested)</fullName>
+        <default>false</default>
+        <label>Closed (Not Interested)</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed (No Response)</fullName>
+        <default>false</default>
+        <label>Closed (No Response)</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed (Contact Later)</fullName>
+        <default>false</default>
+        <label>Closed (Contact Later)</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Ready for Processing</fullName>
+        <default>false</default>
+        <label>Ready for Processing</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Approval Denied</fullName>
+        <default>false</default>
+        <label>Approval Denied</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Awaiting Approval</fullName>
+        <default>false</default>
+        <label>Awaiting Approval</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Dev. awaiting CSM input</fullName>
+        <default>false</default>
+        <label>Dev. awaiting CSM input</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending</fullName>
+        <default>false</default>
+        <label>Pending</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>1st Follow-up</fullName>
+        <default>false</default>
+        <label>1st Follow-up</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Final Follow-up</fullName>
+        <default>false</default>
+        <label>Final Follow-up</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Client Notified</fullName>
+        <default>false</default>
+        <label>Client Notified</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Response Submitted</fullName>
+        <default>false</default>
+        <label>Response Submitted</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Reversed (Won)</fullName>
+        <default>false</default>
+        <label>Reversed (Won)</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Lost Notification</fullName>
+        <default>false</default>
+        <label>Lost Notification</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed (Lost)</fullName>
+        <default>false</default>
+        <label>Closed (Lost)</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>In Progress: Researching</fullName>
+        <default>false</default>
+        <label>In Progress: Researching</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>In Progress: Waiting on customer</fullName>
+        <default>false</default>
+        <label>In Progress: Waiting on customer</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>In Progress: Other</fullName>
+        <default>false</default>
+        <label>In Progress: Other</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending Bug Fix</fullName>
+        <default>false</default>
+        <label>Pending Bug Fix</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Escalated to CL &amp; Experian</fullName>
+        <default>false</default>
+        <label>Escalated to CL &amp; Experian</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Idle</fullName>
+        <default>false</default>
+        <label>Idle</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Escalation Resolved, Update Customer</fullName>
+        <default>false</default>
+        <label>Escalation Resolved, Update Customer</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed (Went Dark)</fullName>
+        <default>false</default>
+        <label>Closed (Went Dark)</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed - No Response</fullName>
+        <default>false</default>
+        <label>Closed - No Response</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Escalated - Management</fullName>
+        <default>false</default>
+        <label>Escalated - Management</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>ID Verification Pending</fullName>
+        <default>false</default>
+        <label>ID Verification Pending</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Waiting on Client</fullName>
+        <default>false</default>
+        <label>Waiting on Client</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending Consumer Response</fullName>
+        <default>false</default>
+        <label>Pending Consumer Response</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Claim Filed</fullName>
+        <default>false</default>
+        <label>Claim Filed</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Completed</fullName>
+        <default>false</default>
+        <label>Completed</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>On Hold</fullName>
+        <default>false</default>
+        <label>On Hold</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Rejected</fullName>
+        <default>false</default>
+        <label>Rejected</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>In Progress (Extended)</fullName>
+        <default>false</default>
+        <label>In Progress (Extended)</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed (Extended)</fullName>
+        <default>false</default>
+        <label>Closed (Extended)</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Results Received</fullName>
+        <default>false</default>
+        <label>Results Received</label>
+        <closed>false</closed>
+    </standardValue>
+</StandardValueSet>

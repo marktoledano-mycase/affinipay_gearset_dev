@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Use to change the Consultant Commission % at the account level --></help>
+        <label><!-- Commission Override % --></label>
+        <name>Commission_Override__c</name>
+    </CustomFieldTranslation>

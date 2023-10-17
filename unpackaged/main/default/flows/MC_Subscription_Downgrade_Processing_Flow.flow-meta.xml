@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Activates Email Action setup for successful downgrade enrollment before the launch date</description>
+        <name>Before_Launch_Email</name>
+        <label>Before Launch Email</label>
+        <locationX>989</locationX>
+        <locationY>205</locationY>
+        <actionName>Case.MC_Subscription_Downgrade_Master_Account_Before_3_1_2022</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>Update_Case</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>ex_CaseID</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <description>Activates email Action to send the Closed Case email</description>
+        <name>Closed_Case_Email</name>
+        <label>Closed Case Email</label>
+        <locationX>988</locationX>
+        <locationY>389</locationY>
+        <actionName>Case.MC_Subscription_Downgrade_Master_Account_After_3_1_2022</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>Closed_Case_Update</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>ex_CaseID</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <description>Triggers email action setup for the Non-Master Account communication</description>
+        <name>Send_Non_Master_Email</name>
+        <label>Send Non-Master Email</label>
+        <locationX>532</locationX>
+        <locationY>389</locationY>
+        <actionName>Case.MC_Subscription_Downgrade_Not_Master_Account</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>Non_Master_Case_Update</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>ex_CaseID</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>53.0</apiVersion>
+    <assignments>
+        <description>No Contact on case so process is ending</description>
+        <name>End_Process</name>
+        <label>End_Process</label>
+        <locationX>176</locationX>
+        <locationY>396</locationY>
+        <assignmentItems>
+            <assignToReference>int_End_Process</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>No Contact</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <constants>
+        <description>Used this variable to specify the date that Golive happens. Process will have a decision based on if cases are created before or after this date</description>
+        <name>GoLiveDate</name>
+        <dataType>Date</dataType>
+        <value>
+            <dateValue>2022-03-01</dateValue>
+        </value>
+    </constants>
+    <decisions>
+        <description>Evaluates if the case entering this flow has a Contact.</description>
+        <name>Case_Has_Contact</name>
+        <label>Case Has Contact</label>
+        <locationX>168</locationX>
+        <locationY>197</locationY>
+        <defaultConnector>
+            <targetReference>End_Process</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Contact</defaultConnectorLabel>
+        <rules>
+            <name>Has_Contact</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ex_ContactID</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Contact_Record</targetReference>
+            </connector>
+            <label>Has Contact</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Evaluates if the change that was made to enter the case into the flow was because the case was closed.</description>
+        <name>Is_Case_Closed</name>
+        <label>Is Case Closed</label>
+        <locationX>738</locationX>
+        <locationY>390</locationY>
+        <defaultConnector>
+            <targetReference>Update_Open_Record</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Case is Open</defaultConnectorLabel>
+        <rules>
+            <name>Case_is_Closed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ex_Case_Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed Case</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Closed_Case_Email</targetReference>
+            </connector>
+            <label>Case is Closed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Evaluates if contact record is selected as a master record for their MyCase account.</description>
+        <name>Is_Master_Contact_Record</name>
+        <label>Is Master Contact Record</label>
+        <locationX>527</locationX>
+        <locationY>200</locationY>
+        <defaultConnector>
+            <targetReference>Send_Non_Master_Email</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Master Contact</defaultConnectorLabel>
+        <rules>
+            <name>Is_Master_Contact</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Contact_Record.Master_User__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Launch_Date</targetReference>
+            </connector>
+            <label>Is Master Contact</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Evaluates if the case was created before or after the launch date</description>
+        <name>Launch_Date</name>
+        <label>Launch Date</label>
+        <locationX>740</locationX>
+        <locationY>202</locationY>
+        <defaultConnector>
+            <targetReference>Is_Case_Closed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Created After Launch</defaultConnectorLabel>
+        <rules>
+            <name>Created_Before_Launch</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>GoLiveDate</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <elementReference>ex_DateCreated</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Before_Launch_Email</targetReference>
+            </connector>
+            <label>Created Before Launch</label>
+        </rules>
+    </decisions>
+    <description>Main processing flow for the Subscription Downgrade process. This flow will be triggered by other flows.</description>
+    <interviewLabel>MC: Subscription Downgrade - Processing Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>MC: Subscription Downgrade - Processing Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Gets the contact record for the case that has entered the flow</description>
+        <name>Get_Contact_Record</name>
+        <label>Get Contact Record</label>
+        <locationX>360</locationX>
+        <locationY>197</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Is_Master_Contact_Record</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>ex_ContactID</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Contact</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Master_User__c</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Ensures correct resolution was selected</description>
+        <name>Closed_Case_Update</name>
+        <label>Closed Case Update</label>
+        <locationX>1151</locationX>
+        <locationY>389</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>ex_CaseID</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Resolution_mc__c</field>
+            <value>
+                <stringValue>Administrative</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Updates and closes the case based on submitter not being a master account</description>
+        <name>Non_Master_Case_Update</name>
+        <label>Non-Master Case Update</label>
+        <locationX>531</locationX>
+        <locationY>539</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>ex_CaseID</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Case_Sub_Reason__c</field>
+            <value>
+                <stringValue>Downgrade_Canceled</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MyCase_Send_Close_Notification_Survey__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Reason</field>
+            <value>
+                <stringValue>Administrative Support</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Resolution_mc__c</field>
+            <value>
+                <stringValue>Administrative</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Closed</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Updates and closes case</description>
+        <name>Update_Case</name>
+        <label>Update Case</label>
+        <locationX>1158</locationX>
+        <locationY>205</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>ex_CaseID</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Case_Sub_Reason__c</field>
+            <value>
+                <stringValue>Downgrade</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MyCase_Send_Close_Notification_Survey__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Reason</field>
+            <value>
+                <stringValue>Administrative Support</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Resolution_mc__c</field>
+            <value>
+                <stringValue>Administrative</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Closed</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update the open record to have all the correct values for this process</description>
+        <name>Update_Open_Record</name>
+        <label>Update Open Record</label>
+        <locationX>744</locationX>
+        <locationY>560</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>ex_CaseID</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Case_Sub_Reason__c</field>
+            <value>
+                <stringValue>Downgrade</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MyCase_Send_Close_Notification_Survey__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Reason</field>
+            <value>
+                <stringValue>Administrative Support</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+    </recordUpdates>
+    <runInMode>DefaultMode</runInMode>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Case_Has_Contact</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Variable is used to hold the Case Status from from Trigger Flows that call this Flow</description>
+        <name>ex_Case_Status</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <description>Variable is used to hold the Case ID from from Trigger Flows that call this Flow</description>
+        <name>ex_CaseID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <description>Variable is used to hold the Contact ID from from Trigger Flows that call this Flow</description>
+        <name>ex_ContactID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Variable is used to hold the Case Created Date from from Trigger Flows that call this Flow</description>
+        <name>ex_DateCreated</name>
+        <dataType>DateTime</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Variable is used to have action off decision points that need to end the process. Populated with random vale to stop the flow gracefully</description>
+        <name>int_End_Process</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+</Flow>

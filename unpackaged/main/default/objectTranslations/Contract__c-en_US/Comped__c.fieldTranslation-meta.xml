@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- This Checkbox indicates that it&apos;s a 100% free account --></help>
+        <label><!-- Comped --></label>
+        <name>Comped__c</name>
+    </CustomFieldTranslation>

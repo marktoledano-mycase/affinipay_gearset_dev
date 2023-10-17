@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Displays the actual quantity based on the SKU Product Allocation Unit which is used as a multiplier against the Opportunity SKU Qty field. --></help>
+        <label><!-- Actual Quantity --></label>
+        <name>Actual_Quantity__c</name>
+    </CustomFieldTranslation>

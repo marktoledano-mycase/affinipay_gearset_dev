@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email sent upon Sent to Sales button usage: R163762</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>MC Sent to Sales</name>
+    <style>none</style>
+    <subject>MyCase Case Closed: Sent to Sales{!Case.CaseNumber}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

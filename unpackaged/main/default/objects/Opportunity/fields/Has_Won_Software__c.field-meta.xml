@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Has_Won_Software__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is used to calculate if the parent or non-parent Opportunity is &quot;Closed Won&quot; and has a software Opportunity SKU. It is populated through a daily scheduled flow.</description>
+    <externalId>false</externalId>
+    <label>Has Won Software</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

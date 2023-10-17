@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Indicates if this promotion is exclusive to Partnerships. --></help>
+        <label><!-- Partnership Discount Exclusively --></label>
+        <name>Partnership_Discount_Exclusively__c</name>
+    </CustomFieldTranslation>

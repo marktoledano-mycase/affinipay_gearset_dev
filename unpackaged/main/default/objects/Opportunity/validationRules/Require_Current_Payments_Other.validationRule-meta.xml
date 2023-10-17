@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Current_Payments_Other</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Permission.Bypass_Defined_VR_s = FALSE &amp;&amp;
+
+(
+ISNEW() ||
+ISCHANGED(Current_Payments_Solution__c) ||
+ISCHANGED(Current_Payments_Solution_Other__c)
+) &amp;&amp;
+
+ISPICKVAL(Current_Payments_Solution__c, &quot;Other&quot;) &amp;&amp;
+ISBLANK(Current_Payments_Solution_Other__c)</errorConditionFormula>
+    <errorDisplayField>Current_Payments_Solution_Other__c</errorDisplayField>
+    <errorMessage>Current Payments Solution (Other) is required when Current Payments Solution is &quot;Other.&quot;</errorMessage>
+</ValidationRule>

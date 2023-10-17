@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- zz Current Solution (MyCase) --></label>
+        <name>MyCase_Current_Solution__c</name>
+        <picklistValues>
+            <masterLabel>ACT!</masterLabel>
+            <translation><!-- ACT! --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Abacus Law</masterLabel>
+            <translation><!-- Abacus Law --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Abacus/Amicus</masterLabel>
+            <translation><!-- Abacus/Amicus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ActionStep</masterLabel>
+            <translation><!-- ActionStep --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aderant</masterLabel>
+            <translation><!-- Aderant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Amicus</masterLabel>
+            <translation><!-- Amicus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Best Case</masterLabel>
+            <translation><!-- Best Case --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bill4Time</masterLabel>
+            <translation><!-- Bill4Time --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BillingsPro</masterLabel>
+            <translation><!-- BillingsPro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Clio</masterLabel>
+            <translation><!-- Clio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cosmolex</masterLabel>
+            <translation><!-- Cosmolex --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Daylite</masterLabel>
+            <translation><!-- Daylite --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>E-Bility</masterLabel>
+            <translation><!-- E-Bility --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>File Vine</masterLabel>
+            <translation><!-- File Vine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Firm Central</masterLabel>
+            <translation><!-- Firm Central --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Firm Manager</masterLabel>
+            <translation><!-- Firm Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GroupReady</masterLabel>
+            <translation><!-- GroupReady --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Harvest</masterLabel>
+            <translation><!-- Harvest --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Houdini</masterLabel>
+            <translation><!-- Houdini --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Interbill</masterLabel>
+            <translation><!-- Interbill --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Juris</masterLabel>
+            <translation><!-- Juris --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LEAP</masterLabel>
+            <translation><!-- LEAP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lawmatics</masterLabel>
+            <translation><!-- Lawmatics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Legal Files</masterLabel>
+            <translation><!-- Legal Files --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LexisNexis</masterLabel>
+            <translation><!-- LexisNexis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MyCase</masterLabel>
+            <translation><!-- MyCase --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Needles</masterLabel>
+            <translation><!-- Needles --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No LPM Software</masterLabel>
+            <translation><!-- No LPM Software --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Omega Legal</masterLabel>
+            <translation><!-- Omega Legal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Orion</masterLabel>
+            <translation><!-- Orion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other LPM Software</masterLabel>
+            <translation><!-- Other LPM Software --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PC Law</masterLabel>
+            <translation><!-- PC Law --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PIKA</masterLabel>
+            <translation><!-- PIKA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PhoneSlips</masterLabel>
+            <translation><!-- PhoneSlips --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Practice Panther</masterLabel>
+            <translation><!-- Practice Panther --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PracticeMaster</masterLabel>
+            <translation><!-- PracticeMaster --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prevail</masterLabel>
+            <translation><!-- Prevail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProLaw</masterLabel>
+            <translation><!-- ProLaw --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rocket Matter</masterLabel>
+            <translation><!-- Rocket Matter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Smokeball</masterLabel>
+            <translation><!-- Smokeball --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tabs3</masterLabel>
+            <translation><!-- Tabs3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Thomson Reuters</masterLabel>
+            <translation><!-- Thomson Reuters --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Time Matters</masterLabel>
+            <translation><!-- Time Matters --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Time and Chaos</masterLabel>
+            <translation><!-- Time and Chaos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Time59</masterLabel>
+            <translation><!-- Time59 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TimeSlips</masterLabel>
+            <translation><!-- TimeSlips --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TimeSolv</masterLabel>
+            <translation><!-- TimeSolv --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Total Attorneys</masterLabel>
+            <translation><!-- Total Attorneys --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TrialWorks</masterLabel>
+            <translation><!-- TrialWorks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Zola Suite</masterLabel>
+            <translation><!-- Zola Suite --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

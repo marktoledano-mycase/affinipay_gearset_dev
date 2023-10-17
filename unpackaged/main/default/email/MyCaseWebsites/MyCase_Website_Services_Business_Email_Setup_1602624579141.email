@@ -1,0 +1,26 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">Hi {{{Recipient.FirstName}}},&nbsp;<br />
+<br />
+We received your inquiry regarding the setup of a business e-mail.&nbsp;<br />
+<br />
+Although MyCase does not provide email services; we can help update your DNS information once you decide which e-mail service to use. Many of our clients find the email services of Gmail or Microsoft 365 to be a user-friendly and effective solution. Once you have selected your preferred e-mail service, please follow these steps:&nbsp;<br />
+<br />
+1) Start the registration process for the business e-mail service.&nbsp;<br />
+2) Once you have reached the step where you must Verify Your Domain, please contact our team for assistance. The e-mail service will provide a TXT, MX, CName, or Meta-Tag verification that our team will use to validate your ownership of the website.&nbsp;<br />
+3) Once the domain has been verified, proceed to the next step in the registration process.&nbsp;<br />
+<br />
+Please let us know if you have additional questions!<br />
+<br />
+Common Solutions:&nbsp;<br />
+(https://gsuite.google.com/pricing.html)<br />
+(https://products.office.com/en-us/compare-all-microsoft-office-products)<br />
+<br />
+Thank you,<br />
+{{{Sender.FirstName}}}<br />
+MyCase Website Services Team<br />
+Case # {{{Case.CaseNumber}}}<br />
+&nbsp;
+</body></html>

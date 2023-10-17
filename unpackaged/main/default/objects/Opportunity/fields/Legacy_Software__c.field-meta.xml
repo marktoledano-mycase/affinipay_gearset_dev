@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Legacy_Software__c</fullName>
+    <externalId>false</externalId>
+    <label>Legacy Software</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Captorra</fullName>
+                <default>false</default>
+                <label>Captorra</label>
+            </value>
+            <value>
+                <fullName>LeadDocket</fullName>
+                <default>false</default>
+                <label>LeadDocket</label>
+            </value>
+            <value>
+                <fullName>Alert Communications</fullName>
+                <default>false</default>
+                <label>Alert Communications</label>
+            </value>
+            <value>
+                <fullName>ApexChat</fullName>
+                <default>false</default>
+                <label>ApexChat</label>
+            </value>
+            <value>
+                <fullName>Ngage Live Chat</fullName>
+                <default>false</default>
+                <label>Ngage Live Chat</label>
+            </value>
+            <value>
+                <fullName>Client Chat Live</fullName>
+                <default>false</default>
+                <label>Client Chat Live</label>
+            </value>
+            <value>
+                <fullName>Dropbox</fullName>
+                <default>false</default>
+                <label>Dropbox</label>
+            </value>
+            <value>
+                <fullName>OneDrive</fullName>
+                <default>false</default>
+                <label>OneDrive</label>
+            </value>
+            <value>
+                <fullName>OneDrive for Business</fullName>
+                <default>false</default>
+                <label>OneDrive for Business</label>
+            </value>
+            <value>
+                <fullName>Calendar Rules</fullName>
+                <default>false</default>
+                <label>Calendar Rules</label>
+            </value>
+            <value>
+                <fullName>Kenect</fullName>
+                <default>false</default>
+                <label>Kenect</label>
+            </value>
+            <value>
+                <fullName>Records on Time</fullName>
+                <default>false</default>
+                <label>Records on Time</label>
+            </value>
+            <value>
+                <fullName>Case Status</fullName>
+                <default>false</default>
+                <label>Case Status</label>
+            </value>
+            <value>
+                <fullName>Multus Medical</fullName>
+                <default>false</default>
+                <label>Multus Medical</label>
+            </value>
+            <value>
+                <fullName>ChartSquad</fullName>
+                <default>false</default>
+                <label>ChartSquad</label>
+            </value>
+            <value>
+                <fullName>Soluno</fullName>
+                <default>false</default>
+                <label>Soluno</label>
+            </value>
+            <value>
+                <fullName>Mailchimp</fullName>
+                <default>false</default>
+                <label>Mailchimp</label>
+            </value>
+            <value>
+                <fullName>Quickbooks</fullName>
+                <default>false</default>
+                <label>Quickbooks</label>
+            </value>
+            <value>
+                <fullName>LawPay</fullName>
+                <default>false</default>
+                <label>LawPay</label>
+            </value>
+            <value>
+                <fullName>TBD</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>TBD</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

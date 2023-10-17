@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Amicus</fullName>
+        <default>false</default>
+        <label>Amicus</label>
+    </customValue>
+    <customValue>
+        <fullName>BEC Legal Assemble IT</fullName>
+        <default>false</default>
+        <label>BEC Legal Assemble IT</label>
+    </customValue>
+    <customValue>
+        <fullName>BEC Legal Legal Bar</fullName>
+        <default>false</default>
+        <label>BEC Legal Legal Bar</label>
+    </customValue>
+    <customValue>
+        <fullName>BigHand Create</fullName>
+        <default>false</default>
+        <label>BigHand Create</label>
+    </customValue>
+    <customValue>
+        <fullName>Clio</fullName>
+        <default>false</default>
+        <label>Clio</label>
+    </customValue>
+    <customValue>
+        <fullName>Conga</fullName>
+        <default>false</default>
+        <label>Conga</label>
+    </customValue>
+    <customValue>
+        <fullName>Contract Express</fullName>
+        <default>false</default>
+        <label>Contract Express</label>
+    </customValue>
+    <customValue>
+        <fullName>Fortrust</fullName>
+        <default>false</default>
+        <label>Fortrust</label>
+    </customValue>
+    <customValue>
+        <fullName>HotDocs</fullName>
+        <default>false</default>
+        <label>HotDocs</label>
+    </customValue>
+    <customValue>
+        <fullName>iManage</fullName>
+        <default>false</default>
+        <label>iManage</label>
+    </customValue>
+    <customValue>
+        <fullName>JotForm</fullName>
+        <default>false</default>
+        <label>JotForm</label>
+    </customValue>
+    <customValue>
+        <fullName>Lawgic</fullName>
+        <default>false</default>
+        <label>Lawgic</label>
+    </customValue>
+    <customValue>
+        <fullName>Litera Contract Companion</fullName>
+        <default>false</default>
+        <label>Litera Contract Companion</label>
+    </customValue>
+    <customValue>
+        <fullName>Litera Innova</fullName>
+        <default>false</default>
+        <label>Litera Innova</label>
+    </customValue>
+    <customValue>
+        <fullName>MacPack</fullName>
+        <default>false</default>
+        <label>MacPack</label>
+    </customValue>
+    <customValue>
+        <fullName>MyCase</fullName>
+        <default>false</default>
+        <label>MyCase</label>
+    </customValue>
+    <customValue>
+        <fullName>Outlook</fullName>
+        <default>false</default>
+        <label>Outlook</label>
+    </customValue>
+    <customValue>
+        <fullName>Practice Panther</fullName>
+        <default>false</default>
+        <label>Practice Panther</label>
+    </customValue>
+    <customValue>
+        <fullName>Pythagoras</fullName>
+        <default>false</default>
+        <label>Pythagoras</label>
+    </customValue>
+    <customValue>
+        <fullName>SmokeBall</fullName>
+        <default>false</default>
+        <label>SmokeBall</label>
+    </customValue>
+    <customValue>
+        <fullName>TheFormTool</fullName>
+        <default>false</default>
+        <label>TheFormTool</label>
+    </customValue>
+    <customValue>
+        <fullName>Thomson Reuters Practical Law</fullName>
+        <default>false</default>
+        <label>Thomson Reuters Practical Law</label>
+    </customValue>
+    <customValue>
+        <fullName>WealthCounsel</fullName>
+        <default>false</default>
+        <label>WealthCounsel</label>
+    </customValue>
+    <customValue>
+        <fullName>Webmerge</fullName>
+        <default>false</default>
+        <label>Webmerge</label>
+    </customValue>
+    <customValue>
+        <fullName>WordPerfect</fullName>
+        <default>false</default>
+        <label>WordPerfect</label>
+    </customValue>
+    <description>Requested by Woodpecker</description>
+    <masterLabel>WP Technologies Used</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

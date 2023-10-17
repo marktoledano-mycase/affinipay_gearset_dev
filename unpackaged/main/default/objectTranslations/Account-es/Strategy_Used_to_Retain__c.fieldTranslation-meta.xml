@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Strategy Used to Retain --></label>
+        <name>Strategy_Used_to_Retain__c</name>
+        <picklistValues>
+            <masterLabel>Credit Card Fall Back Pricing</masterLabel>
+            <translation><!-- Credit Card Fall Back Pricing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Extended PCI due date</masterLabel>
+            <translation><!-- Extended PCI due date --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Extended promotion</masterLabel>
+            <translation><!-- Extended promotion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Get PCI Compliant</masterLabel>
+            <translation><!-- Get PCI Compliant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Get Trained on product</masterLabel>
+            <translation><!-- Get Trained on product --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Merged/Joined firm using LawPay</masterLabel>
+            <translation><!-- Merged/Joined firm using LawPay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Move to Interchange Plus</masterLabel>
+            <translation><!-- Move to Interchange Plus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other - see explanation</masterLabel>
+            <translation><!-- Other - see explanation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rate Review/Lowered Rates</masterLabel>
+            <translation><!-- Rate Review/Lowered Rates --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reactivated Account</masterLabel>
+            <translation><!-- Reactivated Account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Refund Fees</masterLabel>
+            <translation><!-- Refund Fees --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sent to AM</masterLabel>
+            <translation><!-- Sent to AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waived monthly fee</masterLabel>
+            <translation><!-- Waived monthly fee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>eCheck Fall Back Pricing</masterLabel>
+            <translation><!-- eCheck Fall Back Pricing --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Top features selected by trial requester when trial is activated --></help>
+        <label><!-- Interested Feature 1 --></label>
+        <name>Interested_Feature_1__c</name>
+        <picklistValues>
+            <masterLabel>Billing &amp; Invoicing</masterLabel>
+            <translation><!-- Billing &amp; Invoicing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Calendaring &amp; Deadlines</masterLabel>
+            <translation><!-- Calendaring &amp; Deadlines --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Case Management</masterLabel>
+            <translation><!-- Case Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client Communication</masterLabel>
+            <translation><!-- Client Communication --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Document Automation</masterLabel>
+            <translation><!-- Document Automation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Document Management</masterLabel>
+            <translation><!-- Document Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intake Management</masterLabel>
+            <translation><!-- Intake Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Task Automation</masterLabel>
+            <translation><!-- Task Automation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Time Tracking</masterLabel>
+            <translation><!-- Time Tracking --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

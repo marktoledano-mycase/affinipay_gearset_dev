@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Basic</fullName>
+        <default>false</default>
+        <label>Basic</label>
+    </customValue>
+    <customValue>
+        <fullName>Starter</fullName>
+        <default>false</default>
+        <label>Starter</label>
+    </customValue>
+    <customValue>
+        <fullName>Pro</fullName>
+        <default>false</default>
+        <label>Pro</label>
+    </customValue>
+    <customValue>
+        <fullName>Teams</fullName>
+        <default>false</default>
+        <label>Teams</label>
+    </customValue>
+    <customValue>
+        <fullName>Launch</fullName>
+        <default>false</default>
+        <label>Launch</label>
+    </customValue>
+    <customValue>
+        <fullName>Elevate</fullName>
+        <default>false</default>
+        <label>Elevate</label>
+    </customValue>
+    <customValue>
+        <fullName>Summit</fullName>
+        <default>false</default>
+        <label>Summit</label>
+    </customValue>
+    <customValue>
+        <fullName>Advanced</fullName>
+        <default>false</default>
+        <label>Advanced</label>
+    </customValue>
+    <customValue>
+        <fullName>N/A</fullName>
+        <default>false</default>
+        <label>N/A</label>
+    </customValue>
+    <customValue>
+        <fullName>Standard</fullName>
+        <default>false</default>
+        <label>Standard</label>
+    </customValue>
+    <customValue>
+        <fullName>Suite</fullName>
+        <default>false</default>
+        <label>Suite</label>
+    </customValue>
+    <customValue>
+        <fullName>Enterprise</fullName>
+        <default>false</default>
+        <label>Enterprise</label>
+    </customValue>
+    <customValue>
+        <fullName>Team</fullName>
+        <default>false</default>
+        <label>Team</label>
+    </customValue>
+    <customValue>
+        <fullName>LawPay Classic</fullName>
+        <default>false</default>
+        <label>LawPay Classic</label>
+    </customValue>
+    <customValue>
+        <fullName>LawPay Pro</fullName>
+        <default>false</default>
+        <label>LawPay Pro</label>
+    </customValue>
+    <customValue>
+        <fullName>Pro/Teams</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Pro/Teams</label>
+    </customValue>
+    <customValue>
+        <fullName>No Tier</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>No Tier</label>
+    </customValue>
+    <customValue>
+        <fullName>Starter/Pro/Teams</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Starter/Pro/Teams</label>
+    </customValue>
+    <masterLabel>Product Line Tier</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

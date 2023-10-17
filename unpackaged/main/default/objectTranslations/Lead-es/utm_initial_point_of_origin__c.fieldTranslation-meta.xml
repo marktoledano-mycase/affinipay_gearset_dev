@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- utm_initial_point_of_origin --></label>
+        <name>utm_initial_point_of_origin__c</name>
+    </CustomFieldTranslation>

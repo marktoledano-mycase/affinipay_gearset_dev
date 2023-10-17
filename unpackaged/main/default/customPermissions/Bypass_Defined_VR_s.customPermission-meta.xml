@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPermission xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Where incorporated in the Validation Rule, User&#39;s assigned this CP won&#39;t be required to meet the Validation</description>
+    <isLicensed>false</isLicensed>
+    <label>Bypass Defined VR&#39;s</label>
+</CustomPermission>

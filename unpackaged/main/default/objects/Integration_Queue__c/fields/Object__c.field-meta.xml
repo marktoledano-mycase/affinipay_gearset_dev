@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Object__c</fullName>
+    <description>Corresponding object name from the record that created the Integration Queue (auto-set by system via Flow)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Corresponding object name from the record that created the Integration Queue (auto-set by system via Flow)</inlineHelpText>
+    <label>Object</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account</fullName>
+                <default>false</default>
+                <label>Account</label>
+            </value>
+            <value>
+                <fullName>Opportunity</fullName>
+                <default>false</default>
+                <label>Opportunity</label>
+            </value>
+            <value>
+                <fullName>Contact</fullName>
+                <default>false</default>
+                <label>Contact</label>
+            </value>
+            <value>
+                <fullName>Case</fullName>
+                <default>false</default>
+                <label>Case</label>
+            </value>
+            <value>
+                <fullName>Lead</fullName>
+                <default>false</default>
+                <label>Lead</label>
+            </value>
+            <value>
+                <fullName>Campaign</fullName>
+                <default>false</default>
+                <label>Campaign</label>
+            </value>
+            <value>
+                <fullName>Trial Request</fullName>
+                <default>false</default>
+                <label>Trial Request</label>
+            </value>
+            <value>
+                <fullName>Value+</fullName>
+                <default>false</default>
+                <label>Value+</label>
+            </value>
+            <value>
+                <fullName>Product User</fullName>
+                <default>false</default>
+                <label>Product User</label>
+            </value>
+            <value>
+                <fullName>Product Environment</fullName>
+                <default>false</default>
+                <label>Product Environment</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Strategy_Used_to_Retain__c</fullName>
+    <externalId>false</externalId>
+    <label>Strategy Used to Retain</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Credit Card Fall Back Pricing</fullName>
+                <default>false</default>
+                <label>Credit Card Fall Back Pricing</label>
+            </value>
+            <value>
+                <fullName>eCheck Fall Back Pricing</fullName>
+                <default>false</default>
+                <label>eCheck Fall Back Pricing</label>
+            </value>
+            <value>
+                <fullName>Extended PCI due date</fullName>
+                <default>false</default>
+                <label>Extended PCI due date</label>
+            </value>
+            <value>
+                <fullName>Extended promotion</fullName>
+                <default>false</default>
+                <label>Extended promotion</label>
+            </value>
+            <value>
+                <fullName>Get PCI Compliant</fullName>
+                <default>false</default>
+                <label>Get PCI Compliant</label>
+            </value>
+            <value>
+                <fullName>Get Trained on product</fullName>
+                <default>false</default>
+                <label>Get Trained on product</label>
+            </value>
+            <value>
+                <fullName>Merged/Joined with firm using LawPay</fullName>
+                <default>false</default>
+                <label>Merged/Joined firm using LawPay</label>
+            </value>
+            <value>
+                <fullName>Move to Interchange Plus</fullName>
+                <default>false</default>
+                <label>Move to Interchange Plus</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>Other - see explanation</fullName>
+                <default>false</default>
+                <label>Other - see explanation</label>
+            </value>
+            <value>
+                <fullName>Rate Review/Lowered Rates</fullName>
+                <default>false</default>
+                <label>Rate Review/Lowered Rates</label>
+            </value>
+            <value>
+                <fullName>Reactivated Account</fullName>
+                <default>false</default>
+                <label>Reactivated Account</label>
+            </value>
+            <value>
+                <fullName>Refund Fees</fullName>
+                <default>false</default>
+                <label>Refund Fees</label>
+            </value>
+            <value>
+                <fullName>Waived monthly fee</fullName>
+                <default>false</default>
+                <label>Waived monthly fee</label>
+            </value>
+            <value>
+                <fullName>Sent to AM</fullName>
+                <default>false</default>
+                <label>Sent to AM</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

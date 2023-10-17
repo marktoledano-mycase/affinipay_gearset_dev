@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Website case closed tnps survey</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Website Case Closed tNPS Email</name>
+    <style>none</style>
+    <subject>MyCase Website Customer Experience Survey</subject>
+    <textOnly>Website Customer Experience Survey
+
+Hello {!Case.Contact}!
+
+Would you please take a moment to answer our brief one minute survey?
+
+Your feedback helps us continue to improve your experience with MyCase.
+
+https://www.surveygizmo.com/s3/7196914/NEWCO-MyCase-Website-Service-Experience-Survey?c={!Case.ContactId}&amp;a={!Case.AccountId}&amp;ca={!Case.Id}&amp;e={!Case.OwnerId} 
+
+
+
+Thank you for your time and thoughts, we appreciate your feedback!
+
+Chelsea Lincoln
+Website Operations Manager
+MyCase
+www.mycase.com
+
+© 2022 MyCase | 800.571.8062</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

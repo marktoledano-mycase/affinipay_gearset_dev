@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ValuePlus__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This helps is showing all the GIACT audit Logs in with each value plus records.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This helps is showing all the GIACT audit Logs in with each value plus records.</inlineHelpText>
+    <label>Value+</label>
+    <referenceTo>ValuePlus__c</referenceTo>
+    <relationshipLabel>GIACT Inquiry Responses</relationshipLabel>
+    <relationshipName>GIACT_Inquiry_Responses</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

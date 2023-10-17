@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Letterhead xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <backgroundColor>#CCCCCC</backgroundColor>
+    <bodyColor>#FFFFFF</bodyColor>
+    <bottomLine>
+        <color>#FF9900</color>
+        <height>0</height>
+    </bottomLine>
+    <description>Used for Internal Soluno Email notifications</description>
+    <footer>
+        <backgroundColor>#FFFFFF</backgroundColor>
+        <height>0</height>
+        <horizontalAlignment>Center</horizontalAlignment>
+        <logo>Company_Logos/Soluno_Logo_New_100x23_png.png</logo>
+        <verticalAlignment>Middle</verticalAlignment>
+    </footer>
+    <header>
+        <backgroundColor>#FFFFFF</backgroundColor>
+        <height>0</height>
+        <horizontalAlignment>Center</horizontalAlignment>
+        <logo>Company_Logos/Soluno_Logo_New_260x60_png.png</logo>
+        <verticalAlignment>Middle</verticalAlignment>
+    </header>
+    <middleLine>
+        <color>#FF9900</color>
+        <height>0</height>
+    </middleLine>
+    <name>Soluno - Internal</name>
+    <topLine>
+        <color>#FF9900</color>
+        <height>0</height>
+    </topLine>
+</Letterhead>

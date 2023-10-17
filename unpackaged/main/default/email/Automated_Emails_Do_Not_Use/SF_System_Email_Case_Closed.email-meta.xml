@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email sent by salesforce when a case is closed</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>SF System Email: Case Closed</name>
+    <style>none</style>
+    <subject>Your Recent AppFolio Support Experience</subject>
+    <textOnly>Hello {!Contact.FirstName}, 
+
+We are committed to making your AppFolio support experience the best possible! 
+
+To help us do that we would like to invite you to please take a moment to complete this brief questionnaire about your recent support experience with {!Case.OwnerFullName}: 
+
+ - http://sgiz.mobi/s3/52ce063c0ec0?c={!Case.ContactId}&amp;caseid={!Case.Id}&amp;r={!Case.OwnerId}&amp;a={!Case.AccountId}&amp;repname={!Case.OwnerFirstName}&amp;closedate={!Case.ClosedDate}&amp;rt=01280000000QA3N&amp;cnum={!Case.CaseNumber}
+
+If you have any feedback on how we can improve the product, the Product Suggestion Board is the best channel for submitting ideas directly to our Product team. To access this:
+   - Login to your AppFolio database.
+   - Click the &quot;Help &amp; Training&quot; link at the top.
+   - Select the &quot;Make a Suggestion&quot; option.
+
+If your support case was closed in error, or if you require additional assistance, simply reply to this email or contact us at support@appfolio.com. We are always happy to help! 
+
+Please note you can view the detail and status of all cases submitted through the Help Center on your Profile page. To access your Profile and case list, log on to the Help Center and click your name in the upper right and select My Profile.
+
+
+AppFolio Customer Success Team 
+AppFolio, Inc. 
+support@appfolio.com 
+www.appfolio.com</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

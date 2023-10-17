@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <description>Automate Demo Status to &quot;Attended&quot; when Opportunity Stage moves from &quot;Meeting Scheduled&quot; to &quot;Needs Analysis&quot; or beyond.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>Today</name>
+        <dataType>Date</dataType>
+        <expression>Today()</expression>
+    </formulas>
+    <interviewLabel>Opportunity: Automate Demo Status to Attended {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity: Automate Demo Status to Attended</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Status_Attended</name>
+        <label>Update: Status = Attended</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <inputAssignments>
+            <field>Demo_Status__c</field>
+            <value>
+                <stringValue>Attended</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Status_Attended</targetReference>
+        </connector>
+        <filterFormula>AND(
+{!$Record.Bypass_VR_and_Automation__c} = FALSE,
+ISCHANGED( {!$Record.StageName}), 
+NOT (ISPICKVAL ( {!$Record.StageName}, &quot;Open&quot; )), 
+NOT (ISPICKVAL ( {!$Record.StageName}, &quot;Closed Lost&quot; )),
+NOT( ISBLANK ( {!$Record.BDR_Demo_Scheduled_Date__c} )),
+{!$Record.BDR_Demo_Scheduled_Date__c} &lt;= TODAY(),
+NOT ( ISPICKVAL ( {!$Record.Demo_Status__c}, &quot;Attended&quot; ))
+)</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

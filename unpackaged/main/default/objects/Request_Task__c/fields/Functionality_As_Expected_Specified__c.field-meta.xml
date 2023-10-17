@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Functionality_As_Expected_Specified__c</fullName>
+    <description>R178187</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Is the functionality being utilized as expected/specified in Request? (customer feedback, reporting, related errors)</inlineHelpText>
+    <label>Functionality As Expected/Specified ?</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

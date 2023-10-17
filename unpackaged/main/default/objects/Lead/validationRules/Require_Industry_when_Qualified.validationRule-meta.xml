@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Industry_when_Qualified</fullName>
+    <active>true</active>
+    <description>Before converting a Lead to an Opportunity, we expect Sales update that Lead to “Qualified.” They will be prompted with required fields that help with reporting and that help us better tailor the sales experience.</description>
+    <errorConditionFormula>$Permission.Bypass_Defined_VR_s = FALSE &amp;&amp;
+Bypass_VR_and_Automation__c = FALSE &amp;&amp;
+
+(
+   ISNEW() ||
+   ISCHANGED(Status) ||
+   ISCHANGED(Industry)
+) &amp;&amp;
+
+TEXT(Status) = &quot;Qualified&quot; &amp;&amp;
+ISBLANK(TEXT(Industry))</errorConditionFormula>
+    <errorDisplayField>Industry</errorDisplayField>
+    <errorMessage>Industry is required when Status is &quot;Qualified.&quot;</errorMessage>
+</ValidationRule>

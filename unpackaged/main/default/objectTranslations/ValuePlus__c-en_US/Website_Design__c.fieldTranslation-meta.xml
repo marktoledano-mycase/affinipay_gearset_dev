@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Website Design --></label>
+        <name>Website_Design__c</name>
+        <picklistValues>
+            <masterLabel>APM – Alta Vista</masterLabel>
+            <translation><!-- APM – Alta Vista --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>APM – Broadway</masterLabel>
+            <translation><!-- APM – Broadway --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>APM – Main St</masterLabel>
+            <translation><!-- APM – Main St --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>APM – State St</masterLabel>
+            <translation><!-- APM – State St --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MyCase - Bayview</masterLabel>
+            <translation><!-- MyCase - Bayview --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MyCase - Broadway</masterLabel>
+            <translation><!-- MyCase - Broadway --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MyCase - Devonport</masterLabel>
+            <translation><!-- MyCase - Devonport --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MyCase - Milford</masterLabel>
+            <translation><!-- MyCase - Milford --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MyCase - Modern</masterLabel>
+            <translation><!-- MyCase - Modern --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MyCase - Northcote</masterLabel>
+            <translation><!-- MyCase - Northcote --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MyCase - Pinehill</masterLabel>
+            <translation><!-- MyCase - Pinehill --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MyCase - Rosedale</masterLabel>
+            <translation><!-- MyCase - Rosedale --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MyCase - Traditional</masterLabel>
+            <translation><!-- MyCase - Traditional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MyCase - Westlake</masterLabel>
+            <translation><!-- MyCase - Westlake --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WP - Alta Vista</masterLabel>
+            <translation><!-- WP - Alta Vista --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WP - Anacapa</masterLabel>
+            <translation><!-- WP - Anacapa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WP - Broadway</masterLabel>
+            <translation><!-- WP - Broadway --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WP - Hollister</masterLabel>
+            <translation><!-- WP - Hollister --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WP - Main St</masterLabel>
+            <translation><!-- WP - Main St --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WP - Mission</masterLabel>
+            <translation><!-- WP - Mission --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WP - Riviera</masterLabel>
+            <translation><!-- WP - Riviera --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WP - State St</masterLabel>
+            <translation><!-- WP - State St --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

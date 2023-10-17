@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- The percentage discount extended on this Opportunity SKU record per unit --></help>
+        <label><!-- DNU Sales Approved Discount --></label>
+        <name>Sales_Approved_Discount__c</name>
+    </CustomFieldTranslation>

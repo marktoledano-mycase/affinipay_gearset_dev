@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Person_Number_of_Active_Sequences__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+				NOT(ISBLANK(Contact__c)), 
+				VALUE(Contact__r.Outreach_Number_of_Active_Sequences__c), 
+				VALUE(Lead__r.Outreach_Number_of_Active_Sequences__c))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>If Contact is not null, Contact: Number of Active Sequences. Otherwise, Lead: Number of Active Sequences</inlineHelpText>
+    <label>Person Number of Active Sequences</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

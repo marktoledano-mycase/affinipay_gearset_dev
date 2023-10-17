@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Push_All_Bank_Accounts_to_CyberSource</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Push Bank Accounts to CyberSource</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)}
+var c = new sforce.SObject(&quot;Add_On_Batch__c&quot;);
+c.id = &quot;{!Add_On_Batch__c.Id}&quot;;
+
+var result = sforce.connection.query(&quot;SELECT Id, Name, CybersourceUpdateStatus__c, Bank_Account_Add_On_Batch__r.Name from Bank_Account__c where Bank_Account_Add_On_Batch__r.id = &#39;{!Add_On_Batch__c.Id}&#39; and Status__c = &#39;Active&#39;&quot;);
+
+var records = result.getArray(&quot;records&quot;);
+var r = confirm (&#39;All the valid Bank Account records will be pushed to CyberSource; Continue?&#39;);
+
+if (r==true) {
+var result = sforce.apex.execute(&quot;ps_BankAccountAddonbuttonMethods&quot;, &quot;CallCyberSourceSubscriptionBatch&quot;, {id: &quot;{!Add_On_Batch__c.Id}&quot;});
+
+
+var parsed = JSON.parse(result);
+if (parsed.didPass == true) {
+document.location.reload(true);
+alert(parsed.result);
+
+}else {
+document.location.reload(true);
+alert(&quot;Bank Account Add on failed with the following error: \n\n&quot; + parsed.result + &quot; \n\nPlease update the Value+ record with missing information and try again&quot;);
+}
+}</url>
+</WebLink>

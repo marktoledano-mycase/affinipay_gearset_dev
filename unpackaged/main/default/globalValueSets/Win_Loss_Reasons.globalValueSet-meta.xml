@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Accounting</fullName>
+        <default>false</default>
+        <label>Accounting</label>
+    </customValue>
+    <customValue>
+        <fullName>Analytics</fullName>
+        <default>false</default>
+        <label>Analytics</label>
+    </customValue>
+    <customValue>
+        <fullName>Billing &amp; Invoicing</fullName>
+        <default>false</default>
+        <label>Billing &amp; Invoicing</label>
+    </customValue>
+    <customValue>
+        <fullName>Calendaring</fullName>
+        <default>false</default>
+        <label>Calendaring</label>
+    </customValue>
+    <customValue>
+        <fullName>Calendar Rules</fullName>
+        <default>false</default>
+        <label>Calendar Rules</label>
+    </customValue>
+    <customValue>
+        <fullName>Client Communications</fullName>
+        <default>false</default>
+        <label>Client Communications</label>
+    </customValue>
+    <customValue>
+        <fullName>Client Intake</fullName>
+        <default>false</default>
+        <label>Client Intake</label>
+    </customValue>
+    <customValue>
+        <fullName>Cloud-Based Solution</fullName>
+        <default>false</default>
+        <label>Cloud-Based Solution</label>
+    </customValue>
+    <customValue>
+        <fullName>Document Automation</fullName>
+        <default>false</default>
+        <label>Document Automation</label>
+    </customValue>
+    <customValue>
+        <fullName>eSignature</fullName>
+        <default>false</default>
+        <label>eSignature</label>
+    </customValue>
+    <customValue>
+        <fullName>Expense Tracking</fullName>
+        <default>false</default>
+        <label>Expense Tracking</label>
+    </customValue>
+    <customValue>
+        <fullName>Integrations</fullName>
+        <default>false</default>
+        <label>Integrations</label>
+    </customValue>
+    <customValue>
+        <fullName>Invoice Management</fullName>
+        <default>false</default>
+        <label>Invoice Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Lead Management</fullName>
+        <default>false</default>
+        <label>Lead Management</label>
+    </customValue>
+    <customValue>
+        <fullName>Payments</fullName>
+        <default>false</default>
+        <label>Payments</label>
+    </customValue>
+    <customValue>
+        <fullName>Price</fullName>
+        <default>false</default>
+        <label>Price</label>
+    </customValue>
+    <customValue>
+        <fullName>Reporting</fullName>
+        <default>false</default>
+        <label>Reporting</label>
+    </customValue>
+    <customValue>
+        <fullName>Reputation</fullName>
+        <default>false</default>
+        <label>Reputation</label>
+    </customValue>
+    <customValue>
+        <fullName>Text Messaging</fullName>
+        <default>false</default>
+        <label>Text Messaging</label>
+    </customValue>
+    <customValue>
+        <fullName>Time Tracking</fullName>
+        <default>false</default>
+        <label>Time Tracking</label>
+    </customValue>
+    <customValue>
+        <fullName>User Experience</fullName>
+        <default>false</default>
+        <label>User Experience</label>
+    </customValue>
+    <customValue>
+        <fullName>Websites</fullName>
+        <default>false</default>
+        <label>Websites</label>
+    </customValue>
+    <customValue>
+        <fullName>Workflow Automation</fullName>
+        <default>false</default>
+        <label>Workflow Automation</label>
+    </customValue>
+    <description>This is used to track why we&#39;ll win or lose against competitors on the Competitor object (which is associated with Leads, Contacts, and Opportunities).</description>
+    <masterLabel>Win/Loss Reasons</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

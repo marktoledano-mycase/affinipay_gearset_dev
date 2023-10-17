@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Case_Owner_Assignment</fullName>
+        <ccEmails>shawn.moore@mycase.com</ccEmails>
+        <description>Case Owner Assignment</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>donotreply@mycase.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Automated_Emails_Do_Not_Use/Case_Owner_Notification</template>
+    </alerts>
+    <alerts>
+        <fullName>MC_Subscription_Downgrade_Master_Account_After_3_1_2022</fullName>
+        <description>MC: Subscription Downgrade - Master Account After 3-1-2022</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>donotreply@mycase.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Automated_Emails_Do_Not_Use/X2022_Price_Increase_Downgrade_after_March_1</template>
+    </alerts>
+    <alerts>
+        <fullName>MC_Subscription_Downgrade_Master_Account_Before_3_1_2022</fullName>
+        <description>MC: Subscription Downgrade - Master Account Before 3-1-2022</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>donotreply@mycase.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Automated_Emails_Do_Not_Use/X2022_Price_Increase_Downgrade_before_March_1</template>
+    </alerts>
+    <alerts>
+        <fullName>MC_Subscription_Downgrade_Not_Master_Account</fullName>
+        <description>MC: Subscription Downgrade - Not Master Account</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>donotreply@mycase.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Automated_Emails_Do_Not_Use/X2022_Price_Increase_Non_Admin_User</template>
+    </alerts>
+    <alerts>
+        <fullName>MyCase_Bug_Fixed</fullName>
+        <description>MyCase Bug Fixed</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Automated_Emails_Do_Not_Use/MyCase_Bug_Fixed</template>
+    </alerts>
+    <alerts>
+        <fullName>MyCase_Case_Close_Survey</fullName>
+        <description>MyCase Website Case Close Survey</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactId</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>donotreply@mycase.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Automated_Emails_Do_Not_Use/Website_Case_Closed_tNPS_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>MyCase_Payments_Case_Close_Survey</fullName>
+        <description>MyCase Payments Case Close Survey</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactId</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Automated_Emails_Do_Not_Use/Case_Closed_MC_Payments_tNPS_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>MyCase_Support_Close_Case_Survey</fullName>
+        <description>MyCase Support Close Case Survey</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactId</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>donotreply@mycase.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Automated_Emails_Do_Not_Use/MyCase_Support_Closed_tNPS_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>MyCase_Waiting_on_CSM</fullName>
+        <description>MyCase Waiting on CSM</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Automated_Emails_Do_Not_Use/MyCase_Waiting_on_CSM</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>ChangePriorityToHigh</fullName>
+        <field>Priority</field>
+        <literalValue>High</literalValue>
+        <name>Changes the case priority to high.</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_to_In_Progress</fullName>
+        <field>Status</field>
+        <literalValue>In Progress</literalValue>
+        <name>Status to In Progress</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Owner_Mycase_Billing_Queue</fullName>
+        <field>OwnerId</field>
+        <lookupValue>MyCase_Billing</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Update Owner Mycase Billing Queue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_Approval_Denied</fullName>
+        <field>Status</field>
+        <literalValue>Approval Denied</literalValue>
+        <name>Update Status &#39;Approval Denied&#39;</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_Awaiting_Approval</fullName>
+        <field>Status</field>
+        <literalValue>Awaiting Approval</literalValue>
+        <name>Update Status Awaiting Approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Status_Ready_for_Processing</fullName>
+        <field>Status</field>
+        <literalValue>Ready for Processing</literalValue>
+        <name>Update Status &#39;Ready for Processing&#39;</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

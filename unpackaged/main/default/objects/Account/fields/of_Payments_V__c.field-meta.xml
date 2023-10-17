@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>of_Payments_V__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Count of V+ Payments records where Stage = Sold/Not Started, On-boarding, Live, Active</inlineHelpText>
+    <label># of Payments V+</label>
+    <summaryFilterItems>
+        <field>ValuePlus__c.RecordTypeId</field>
+        <operation>equals</operation>
+        <value>MyCase Payments</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>ValuePlus__c.Stage__c</field>
+        <operation>equals</operation>
+        <value>Sold/Not Ready, Live, On-Boarding, Active</value>
+    </summaryFilterItems>
+    <summaryForeignKey>ValuePlus__c.Account__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

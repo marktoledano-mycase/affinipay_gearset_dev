@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Displays the total age in Disqualified in days taking into account the time that it has spent in its current status since the Status Change Datetime --></help>
+        <label><!-- Age - Disqualified --></label>
+        <name>Age_Disqualified__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Registrar Domain Company --></label>
+        <name>Registrar_Company__c</name>
+        <picklistValues>
+            <masterLabel>1&amp;1</masterLabel>
+            <translation><!-- 1&amp;1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bluehost</masterLabel>
+            <translation><!-- Bluehost --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dreamhost</masterLabel>
+            <translation><!-- Dreamhost --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FatCow</masterLabel>
+            <translation><!-- FatCow --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GoDaddy</masterLabel>
+            <translation><!-- GoDaddy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Host Gator</masterLabel>
+            <translation><!-- Host Gator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hover</masterLabel>
+            <translation><!-- Hover --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NameHub</masterLabel>
+            <translation><!-- NameHub --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Network Solutions</masterLabel>
+            <translation><!-- Network Solutions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Register.com</masterLabel>
+            <translation><!-- Register.com --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web.com</masterLabel>
+            <translation><!-- Web.com --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yahoo</masterLabel>
+            <translation><!-- Yahoo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>iPage</masterLabel>
+            <translation><!-- iPage --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

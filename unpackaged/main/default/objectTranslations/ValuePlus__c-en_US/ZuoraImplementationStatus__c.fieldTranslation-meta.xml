@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Zuora Implementation Status --></label>
+        <name>ZuoraImplementationStatus__c</name>
+        <picklistValues>
+            <masterLabel>--None--</masterLabel>
+            <translation><!-- - - None- -  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancelled In Zuora</masterLabel>
+            <translation><!-- Cancelled In Zuora --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly Fee Added in Zuora</masterLabel>
+            <translation><!-- Monthly Fee Added in Zuora --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Purchased In Zuora</masterLabel>
+            <translation><!-- Purchased In Zuora --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ReActivated in Zuora</masterLabel>
+            <translation><!-- ReActivated in Zuora --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transaction Declined in Zuora</masterLabel>
+            <translation><!-- Transaction Declined in Zuora --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

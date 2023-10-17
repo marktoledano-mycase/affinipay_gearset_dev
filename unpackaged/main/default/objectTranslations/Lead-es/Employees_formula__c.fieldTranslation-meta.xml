@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Number of Employees. Used to map to Opportunity upon conversion to understand company size at time of conversion. --></help>
+        <label><!-- Employees (formula) --></label>
+        <name>Employees_formula__c</name>
+    </CustomFieldTranslation>

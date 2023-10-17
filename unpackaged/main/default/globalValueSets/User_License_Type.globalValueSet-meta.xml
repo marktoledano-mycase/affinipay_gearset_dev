@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Paid User</fullName>
+        <default>false</default>
+        <label>Paid User</label>
+    </customValue>
+    <customValue>
+        <fullName>Free User</fullName>
+        <default>false</default>
+        <label>Free User</label>
+    </customValue>
+    <customValue>
+        <fullName>Trial User</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Trial User</label>
+    </customValue>
+    <masterLabel>User License Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

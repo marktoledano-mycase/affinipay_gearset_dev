@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Demo Request</fullName>
+        <default>false</default>
+        <label>Demo Request</label>
+    </customValue>
+    <customValue>
+        <fullName>Software Advice</fullName>
+        <default>false</default>
+        <label>Software Advice</label>
+    </customValue>
+    <customValue>
+        <fullName>Trial</fullName>
+        <default>false</default>
+        <label>Trial</label>
+    </customValue>
+    <customValue>
+        <fullName>BDR</fullName>
+        <default>false</default>
+        <label>BDR</label>
+    </customValue>
+    <customValue>
+        <fullName>LawPay</fullName>
+        <default>false</default>
+        <label>LawPay</label>
+    </customValue>
+    <customValue>
+        <fullName>LP Rep</fullName>
+        <default>false</default>
+        <label>LP Rep</label>
+    </customValue>
+    <customValue>
+        <fullName>LP Trial</fullName>
+        <default>false</default>
+        <label>LP Trial</label>
+    </customValue>
+    <customValue>
+        <fullName>LP Demo</fullName>
+        <default>false</default>
+        <label>LP Demo</label>
+    </customValue>
+    <customValue>
+        <fullName>Chat</fullName>
+        <default>false</default>
+        <label>Chat</label>
+    </customValue>
+    <customValue>
+        <fullName>Sales Line</fullName>
+        <default>false</default>
+        <label>Sales Line</label>
+    </customValue>
+    <customValue>
+        <fullName>Soluno</fullName>
+        <default>false</default>
+        <label>Soluno</label>
+    </customValue>
+    <customValue>
+        <fullName>Woodpecker</fullName>
+        <default>false</default>
+        <label>Woodpecker</label>
+    </customValue>
+    <customValue>
+        <fullName>MyCase</fullName>
+        <default>false</default>
+        <label>MyCase</label>
+    </customValue>
+    <customValue>
+        <fullName>Docketwise</fullName>
+        <default>false</default>
+        <label>Docketwise</label>
+    </customValue>
+    <customValue>
+        <fullName>Casepeer</fullName>
+        <default>false</default>
+        <label>Casepeer</label>
+    </customValue>
+    <description>Master picklist set for MyCase inbound lead types</description>
+    <masterLabel>Inbound Lead Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

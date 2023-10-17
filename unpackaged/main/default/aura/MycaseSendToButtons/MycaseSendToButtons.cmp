@@ -1,0 +1,41 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" controller="MyCaseSendToButtonsController">
+	<aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="routingQueue" type="String"/>
+    <aura:attribute name="userDetail" type="Object" />
+    <aura:attribute name="record" type="Asset" />
+
+	<force:recordData layoutType="FULL"
+                  recordId="{!v.recordId}"
+                  targetFields="{!v.record}"/>
+    
+    <force:recordData recordId="{!$SObjectType.CurrentUser.Id}"
+                      layoutType="FULL" 
+                      targetFields="{!v.userDetail}"
+                      fields="ProfileId, Profile.Name"/>
+    
+    <div class="slds-card slds-m-around_x-small">
+        <Center>
+            <br/>
+            <!-- This is the button part -->
+            <div class="slds-p-bottom_small">
+                <lightning:button variant="brand" label="Own this Case" onclick="{!c.ownThisCase}" />
+                <lightning:button variant="brand" label="Close as Admin/Dupe" onclick="{!c.adminDupe}" />
+                <lightning:button variant="brand" label="Close as Spam/Duplicate" onclick="{!c.closeAsSpam}" />
+                <aura:if isTrue="{!v.userDetail.Profile.Name != 'Value+ Website Services'}">
+                    <lightning:button variant="brand" label="Escalate Case" onclick="{!c.escalate}" />
+            		<lightning:button variant="brand" label="Own the Escalation" onclick="{!c.ownEscalation}" />
+                </aura:if>            	
+                <lightning:button variant="brand" label="Send to CS" onclick="{!c.sendToCS}" />
+            </div>
+            <div class="slds-p-bottom_small">
+                <lightning:button variant="brand" label="Billing Case" onclick="{!c.billingCase}" />
+                <lightning:button variant="brand" label="Send to Billing" onclick="{!c.sendToBilling}" />
+            	<lightning:button variant="brand" label="Send to Websites" onclick="{!c.sendToWebsites}" />
+            	<lightning:button variant="brand" label="Send to Sales MyCase" onclick="{!c.sendToSalesMycase}" />
+            	<!-- <lightning:button variant="brand" label="Send to Payments" onclick="{!c.sendToPayments}" /> -->
+            	<lightning:button variant="brand" label="Send to MyCase Accounting" onclick="{!c.sendToMyCaseAccounting}" />
+            </div>
+            <br/>
+        </Center>
+    </div>
+</aura:component>

@@ -1,0 +1,10 @@
+<apex:page standardController="GIdentifyEntityInformation__c" standardStylesheets="false">
+    <apex:stylesheet value="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+    <apex:stylesheet value="{!URLFOR($Resource.AlertStyles)}"/>
+    <apex:outputPanel rendered="{!GIdentifyEntityInformation__c.Fraud_Activity_Found__c}">
+        <div class="box danger" style="height:14px;">
+            <span class="icon icon-danger"></span>
+            <span style="font-size: 12px;font-weight: bold">This response has been marked for fraud activity. Please contact paymentsonboarding@appfolio.com for more information.</span>
+        </div>
+    </apex:outputPanel>
+</apex:page>

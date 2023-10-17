@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contract__c$RecordType</field>
+    </columns>
+    <columns>
+        <field>Contract__c$Name</field>
+    </columns>
+    <columns>
+        <field>Contract__c.Contract_SKUs__r$Name</field>
+    </columns>
+    <columns>
+        <field>Contract__c.Contract_SKUs__r.Contract_SKU_History__r$Name</field>
+    </columns>
+    <columns>
+        <field>Contract__c$Subscription_Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>Contract__c$Effective_Date__c</field>
+    </columns>
+    <columns>
+        <field>Contract__c.Contract_SKUs__r$Effective_Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>Contract__c.Contract_SKUs__r.Contract_SKU_History__r$Effective_Date__c</field>
+    </columns>
+    <currency>USD</currency>
+    <format>Tabular</format>
+    <name>Subscr. Contract Effective Date Comp</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Subscription_Contracts_Contract_SKU_Transactions__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contract__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

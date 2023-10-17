@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_Card_Declined__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Auto-checked to TRUE when sales first purchases customer and credit card declines</description>
+    <externalId>false</externalId>
+    <label>Credit Card Declined</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

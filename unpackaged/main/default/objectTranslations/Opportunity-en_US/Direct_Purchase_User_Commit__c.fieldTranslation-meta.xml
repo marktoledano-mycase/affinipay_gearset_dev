@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Number of users committed for the direct purchase process --></help>
+        <label><!-- Direct Purchase User Commit --></label>
+        <name>Direct_Purchase_User_Commit__c</name>
+    </CustomFieldTranslation>

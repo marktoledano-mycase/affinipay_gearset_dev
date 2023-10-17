@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Services_Requested__c</fullName>
+    <description>Captures the service being requested from customer online forms.</description>
+    <externalId>false</externalId>
+    <label>Services Requested</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Document Automation/Template Building</fullName>
+                <default>false</default>
+                <label>Document Automation/Template Building</label>
+            </value>
+            <value>
+                <fullName>MyCase</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>MyCase</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

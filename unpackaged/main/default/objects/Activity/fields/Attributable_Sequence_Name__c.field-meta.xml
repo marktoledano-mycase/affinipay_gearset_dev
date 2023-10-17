@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Attributable_Sequence_Name__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Outreach will attribute a task to the most recently finished sequence if the task is not associated with an active Sequence.</inlineHelpText>
+    <label>Attributable Sequence Name</label>
+    <length>255</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

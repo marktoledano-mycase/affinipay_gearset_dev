@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Opportunity SKU</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Opportunity SKU</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>MyCase Website Opportunity SKU</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Pricing --></label>
+            <section>Pricing</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Opportunity SKU Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Pricing --></label>
+            <section>Pricing</section>
+        </sections>
+        <sections>
+            <label><!-- Soluno Pricing --></label>
+            <section>Soluno Pricing</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Soluno - Opp SKU Service</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Soluno - Opp SKU Subscription</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Use to add a service (Non-Subscription) SKU the Opportunity --></description>
+        <label><!-- Soluno - Service --></label>
+        <name>Soluno_Service</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Use to add a Subscription SKU the Opportunity --></description>
+        <label><!-- Soluno - Subscription --></label>
+        <name>Soluno_Subscription</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Standard SKU --></label>
+        <name>Standard_SKU</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- The total discount % exceeds the maximum threshold for the product. --></errorMessage>
+        <name>Discount_Limit_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only 1 SUBSCRIPTION Opportunity SKU is permitted for this Opportunity Type. --></errorMessage>
+        <name>Soluno_1_Opp_SKU_allowed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Record is Locked from changes due related opportunity stage --></errorMessage>
+        <name>Soluno_Closed_Opp</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Currency must match currency used on Opportunity. --></errorMessage>
+        <name>Soluno_Currency_Match</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Product Type on Opp SKU must match the Product Type of the SKU Product added --></errorMessage>
+        <name>Soluno_Product_Type_Mismatch</name>
+    </validationRules>
+</CustomObjectTranslation>

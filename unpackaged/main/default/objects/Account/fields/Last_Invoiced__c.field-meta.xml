@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Invoiced__c</fullName>
+    <description>R1814702 - remove FLS; R1915778</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Last invoiced Date from the related MyCase or Appfolio Billing Account</inlineHelpText>
+    <label>Last Invoiced</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

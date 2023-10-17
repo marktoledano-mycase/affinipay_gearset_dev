@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Signup_Reason__c</fullName>
+    <description>MC; R165289; Edited: users</description>
+    <externalId>false</externalId>
+    <label>Signup Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Better communication with clients/client portal</fullName>
+                <default>false</default>
+                <label>Better communication with clients/client portal</label>
+            </value>
+            <value>
+                <fullName>Just taking a look</fullName>
+                <default>false</default>
+                <label>Just taking a look</label>
+            </value>
+            <value>
+                <fullName>Looking for a cheaper solution</fullName>
+                <default>false</default>
+                <label>Looking for a cheaper solution</label>
+            </value>
+            <value>
+                <fullName>Losing valuable time</fullName>
+                <default>false</default>
+                <label>Losing valuable time</label>
+            </value>
+            <value>
+                <fullName>Need an integrated calendar</fullName>
+                <default>false</default>
+                <label>Need an integrated calendar</label>
+            </value>
+            <value>
+                <fullName>Need better mobile access</fullName>
+                <default>false</default>
+                <label>Need better mobile access</label>
+            </value>
+            <value>
+                <fullName>Sick of current solution</fullName>
+                <default>false</default>
+                <label>Sick of current solution</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,1462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>1099s/EOY</fullName>
+        <default>false</default>
+        <label>1099s/EOY</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>3-Day Hold - Inbound</fullName>
+        <default>false</default>
+        <label>3-Day Hold - Inbound</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>3-Day Hold - Outbound</fullName>
+        <default>false</default>
+        <label>3-Day Hold - Outbound</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Account Changes</fullName>
+        <default>false</default>
+        <label>Account Changes</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Accounting</fullName>
+        <default>false</default>
+        <label>Accounting</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Accounting Setup</fullName>
+        <default>false</default>
+        <label>Accounting Setup</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>ACH</fullName>
+        <default>false</default>
+        <label>ACH</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Add/Remove Agents</fullName>
+        <default>false</default>
+        <label>Add/Remove Agents</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Add-on</fullName>
+        <default>false</default>
+        <label>Add-on</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Add-on / Remigration</fullName>
+        <default>false</default>
+        <label>Add-on / Remigration</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Address Change</fullName>
+        <default>false</default>
+        <label>Address Change</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Admin</fullName>
+        <default>false</default>
+        <label>Admin</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Admin/Duplicates</fullName>
+        <default>false</default>
+        <label>Admin/Duplicates</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Admin/Settings</fullName>
+        <default>false</default>
+        <label>Admin/Settings</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Administrative Support</fullName>
+        <default>false</default>
+        <label>Administrative Support</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Administrative Support - Success</fullName>
+        <default>false</default>
+        <label>Administrative Support - Success</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Admin Required</fullName>
+        <default>false</default>
+        <label>Admin Required</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Advanced Document Automation</fullName>
+        <default>false</default>
+        <label>Advanced Document Automation</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Agent Error</fullName>
+        <default>false</default>
+        <label>Agent Error</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Analytics</fullName>
+        <default>false</default>
+        <label>Analytics</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Annual NPS</fullName>
+        <default>false</default>
+        <label>Annual NPS</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Applications</fullName>
+        <default>false</default>
+        <label>Applications</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Assets</fullName>
+        <default>false</default>
+        <label>Assets</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Bank Account Switch</fullName>
+        <default>false</default>
+        <label>Bank Account Switch</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Bank Add-On</fullName>
+        <default>false</default>
+        <label>Bank Add-On</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Bank Change</fullName>
+        <default>false</default>
+        <label>Bank Change</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Bank Deposit</fullName>
+        <default>false</default>
+        <label>Bank Deposit</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Banking</fullName>
+        <default>false</default>
+        <label>Banking</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Bank Reconciliation</fullName>
+        <default>false</default>
+        <label>Bank Reconciliation</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Billing</fullName>
+        <default>false</default>
+        <label>Billing</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Billing (MC)</fullName>
+        <default>false</default>
+        <label>Billing (MC)</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Bill Pay</fullName>
+        <default>false</default>
+        <label>Bill Pay</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Bug/Outage</fullName>
+        <default>false</default>
+        <label>Bug/Outage</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Business Issue</fullName>
+        <default>false</default>
+        <label>Business Issue</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Calendar</fullName>
+        <default>false</default>
+        <label>Calendar</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Cancel Website</fullName>
+        <default>false</default>
+        <label>Cancel Website</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Cases</fullName>
+        <default>false</default>
+        <label>Cases</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>CC</fullName>
+        <default>false</default>
+        <label>CC</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>CC Disbursement Failure</fullName>
+        <default>false</default>
+        <label>CC Disbursement Failure</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Changes</fullName>
+        <default>false</default>
+        <label>Changes</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Chargeback</fullName>
+        <default>false</default>
+        <label>Chargeback</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Chargeback - Accepted</fullName>
+        <default>false</default>
+        <label>Chargeback - Accepted</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Chargeback - App fee</fullName>
+        <default>false</default>
+        <label>Chargeback - App fee</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Chargeback - OC</fullName>
+        <default>false</default>
+        <label>Chargeback - OC</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Chargebacks</fullName>
+        <default>false</default>
+        <label>Chargebacks</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Chart of Accounts</fullName>
+        <default>false</default>
+        <label>Chart of Accounts</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Check Scanning</fullName>
+        <default>false</default>
+        <label>Check Scanning</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Churning</fullName>
+        <default>false</default>
+        <label>Churning</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Client Portal</fullName>
+        <default>false</default>
+        <label>Client Portal</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Collections</fullName>
+        <default>false</default>
+        <label>Collections</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Commercial</fullName>
+        <default>false</default>
+        <label>Commercial</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Communication</fullName>
+        <default>false</default>
+        <label>Communication</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Communications</fullName>
+        <default>false</default>
+        <label>Communications</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Community Associations</fullName>
+        <default>false</default>
+        <label>Community Associations</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Company Settings</fullName>
+        <default>false</default>
+        <label>Company Settings</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Compliance</fullName>
+        <default>false</default>
+        <label>Compliance</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Connectivity/Performance/Browser</fullName>
+        <default>false</default>
+        <label>Connectivity/Performance/Browser</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Consulting</fullName>
+        <default>false</default>
+        <label>Consulting</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Contacts</fullName>
+        <default>false</default>
+        <label>Contacts</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Content Changes</fullName>
+        <default>false</default>
+        <label>Content Changes</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Contract</fullName>
+        <default>false</default>
+        <label>Contract</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Convenience Fee</fullName>
+        <default>false</default>
+        <label>Convenience Fee</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Copy of Report</fullName>
+        <default>false</default>
+        <label>Copy of Report</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Corporate Accounting</fullName>
+        <default>false</default>
+        <label>Corporate Accounting</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Creative Brief</fullName>
+        <default>false</default>
+        <label>Creative Brief</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Customer Complaint</fullName>
+        <default>false</default>
+        <label>Customer Complaint</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Customer Service</fullName>
+        <default>false</default>
+        <label>Customer Service</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Custom Fields</fullName>
+        <default>false</default>
+        <label>Custom Fields</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Database/Listings</fullName>
+        <default>false</default>
+        <label>Database/Listings</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Data Migration</fullName>
+        <default>false</default>
+        <label>Data Migration</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>DBA</fullName>
+        <default>false</default>
+        <label>DBA</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>DBA/Address Change</fullName>
+        <default>false</default>
+        <label>DBA/Address Change</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Deauthorization</fullName>
+        <default>false</default>
+        <label>Deauthorization</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Delayed Onboarding Start</fullName>
+        <default>false</default>
+        <label>Delayed Onboarding Start</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Disable Account</fullName>
+        <default>false</default>
+        <label>Disable Account</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Dispute</fullName>
+        <default>false</default>
+        <label>Dispute</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Documents</fullName>
+        <default>false</default>
+        <label>Documents</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Don&#39;t Know/Went Dark</fullName>
+        <default>false</default>
+        <label>Don&#39;t Know/Went Dark</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Drain</fullName>
+        <default>false</default>
+        <label>Drain</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Drive</fullName>
+        <default>false</default>
+        <label>Drive</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>eCheck Payables</fullName>
+        <default>false</default>
+        <label>eCheck Payables</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Electricity</fullName>
+        <default>false</default>
+        <label>Electricity</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Electronic Cash Payment</fullName>
+        <default>false</default>
+        <label>Electronic Cash Payment</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Email Integration</fullName>
+        <default>false</default>
+        <label>Email Integration</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Email Issues</fullName>
+        <default>false</default>
+        <label>Email Issues</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Engagement</fullName>
+        <default>false</default>
+        <label>Engagement</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Escalation</fullName>
+        <default>false</default>
+        <label>Escalation</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Events</fullName>
+        <default>false</default>
+        <label>Events</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Expectations Implementation</fullName>
+        <default>false</default>
+        <label>Expectations Implementation</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Expectations Product</fullName>
+        <default>false</default>
+        <label>Expectations Product</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Expectations Support</fullName>
+        <default>false</default>
+        <label>Expectations Support</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Expectations Transition</fullName>
+        <default>false</default>
+        <label>Expectations Transition</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Expungement</fullName>
+        <default>false</default>
+        <label>Expungement</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Feature Request</fullName>
+        <default>false</default>
+        <label>Feature Request</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Feature Suggestion</fullName>
+        <default>false</default>
+        <label>Feature Suggestion</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>File Disclosure</fullName>
+        <default>false</default>
+        <label>File Disclosure</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Financial Diagnostics</fullName>
+        <default>false</default>
+        <label>Financial Diagnostics</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Financials</fullName>
+        <default>false</default>
+        <label>Financials</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Firm Admin/Setting</fullName>
+        <default>false</default>
+        <label>Firm Admin/Setting</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Fundraising</fullName>
+        <default>false</default>
+        <label>Fundraising</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Garage Door</fullName>
+        <default>false</default>
+        <label>Garage Door</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>General</fullName>
+        <default>false</default>
+        <label>General</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>General Support</fullName>
+        <default>false</default>
+        <label>General Support</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>General Troubleshooting</fullName>
+        <default>false</default>
+        <label>General Troubleshooting</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Hardship Request</fullName>
+        <default>false</default>
+        <label>Hardship Request</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Implementation</fullName>
+        <default>false</default>
+        <label>Implementation</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Inbound Velocity Exception</fullName>
+        <default>false</default>
+        <label>Inbound Velocity Exception</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Income Verification</fullName>
+        <default>false</default>
+        <label>Income Verification</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Incomplete Usage</fullName>
+        <default>false</default>
+        <label>Incomplete Usage</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>In Migration</fullName>
+        <default>false</default>
+        <label>In Migration</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Inquiry</fullName>
+        <default>false</default>
+        <label>Inquiry</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Inspections</fullName>
+        <default>false</default>
+        <label>Inspections</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Integration Issue</fullName>
+        <default>false</default>
+        <label>Integration Issue</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Integrations</fullName>
+        <default>false</default>
+        <label>Integrations</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Invalid Payment Data</fullName>
+        <default>false</default>
+        <label>Invalid Payment Data</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Investing Entities</fullName>
+        <default>false</default>
+        <label>Investing Entities</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Investments</fullName>
+        <default>false</default>
+        <label>Investments</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Invoices</fullName>
+        <default>false</default>
+        <label>Invoices</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Journal Entries</fullName>
+        <default>false</default>
+        <label>Journal Entries</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Leads</fullName>
+        <default>false</default>
+        <label>Leads</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Legal Name/Tax ID Change</fullName>
+        <default>false</default>
+        <label>Legal Name/Tax ID Change</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Lights</fullName>
+        <default>false</default>
+        <label>Lights</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Low/No Usage</fullName>
+        <default>false</default>
+        <label>Low/No Usage</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Maintenance</fullName>
+        <default>false</default>
+        <label>Maintenance</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Management Fees</fullName>
+        <default>false</default>
+        <label>Management Fees</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Management Review</fullName>
+        <default>false</default>
+        <label>Management Review</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Marketing</fullName>
+        <default>false</default>
+        <label>Marketing</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Messages, Comments, and Notes</fullName>
+        <default>false</default>
+        <label>Messages, Comments, and Notes</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Migration</fullName>
+        <default>false</default>
+        <label>Migration</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Migration Cleanup</fullName>
+        <default>false</default>
+        <label>Migration Cleanup</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Misc.</fullName>
+        <default>false</default>
+        <label>Misc.</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Misc. Payments</fullName>
+        <default>false</default>
+        <label>Misc. Payments</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Move Ins</fullName>
+        <default>false</default>
+        <label>Move Ins</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Move Outs</fullName>
+        <default>false</default>
+        <label>Move Outs</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>MyCase Billing</fullName>
+        <default>false</default>
+        <label>MyCase Billing</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>NA Pre-arb - App Fee</fullName>
+        <default>false</default>
+        <label>NA Pre-arb - App Fee</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>NA Pre-arb - Rent</fullName>
+        <default>false</default>
+        <label>NA Pre-arb - Rent</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>New Content</fullName>
+        <default>false</default>
+        <label>New Content</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>No Login</fullName>
+        <default>false</default>
+        <label>No Login</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Non-LCC</fullName>
+        <default>false</default>
+        <label>Non-LCC question</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Non-MCC question</fullName>
+        <default>false</default>
+        <label>Non-MCC question</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>No Response</fullName>
+        <default>false</default>
+        <label>No Response</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>NPS</fullName>
+        <default>false</default>
+        <label>NPS</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Onboarding</fullName>
+        <default>false</default>
+        <label>Onboarding</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Onboarding Special Ops</fullName>
+        <default>false</default>
+        <label>Onboarding Special Ops</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Online Payments</fullName>
+        <default>false</default>
+        <label>Online Payments</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Online Portal</fullName>
+        <default>false</default>
+        <label>Online Portal</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Online Posts</fullName>
+        <default>false</default>
+        <label>Online Posts</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Operator Error</fullName>
+        <default>false</default>
+        <label>Operator Error</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Opps</fullName>
+        <default>false</default>
+        <label>Opps</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Other Payments Reason</fullName>
+        <default>false</default>
+        <label>Other Payments Reason</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Outbound Guest Card Issue</fullName>
+        <default>false</default>
+        <label>Outbound Guest Card Issue</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Outbound Velocity Exception</fullName>
+        <default>false</default>
+        <label>Outbound Velocity Exception</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>OVE - Enablement</fullName>
+        <default>false</default>
+        <label>OVE - Enablement</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>OVE - Payments</fullName>
+        <default>false</default>
+        <label>OVE - Payments</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>OVE Void Payment</fullName>
+        <default>false</default>
+        <label>OVE Void Payment</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Owner Accounting/Setup</fullName>
+        <default>false</default>
+        <label>Owner Accounting/Setup</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Owner Contributions</fullName>
+        <default>false</default>
+        <label>Owner Contributions</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Ownership changes</fullName>
+        <default>false</default>
+        <label>Ownership changes</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Partners</fullName>
+        <default>false</default>
+        <label>Partners</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Partners Issue</fullName>
+        <default>false</default>
+        <label>Partners Issue</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Payables</fullName>
+        <default>false</default>
+        <label>Payables</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Payables/Payments</fullName>
+        <default>false</default>
+        <label>Payables/Payments</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Payment</fullName>
+        <default>false</default>
+        <label>Payment</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Payments</fullName>
+        <default>false</default>
+        <label>Payments</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Payments/Screening Sign Up</fullName>
+        <default>false</default>
+        <label>Payments/Screening Sign Up</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Payments Sign Up</fullName>
+        <default>false</default>
+        <label>Payments Sign Up</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Performance Metrics</fullName>
+        <default>false</default>
+        <label>Performance Metrics</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Phone Inquiry</fullName>
+        <default>false</default>
+        <label>Phone Inquiry</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Phone Issue</fullName>
+        <default>false</default>
+        <label>Phone Issue</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pipe</fullName>
+        <default>false</default>
+        <label>Pipe</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Plaid</fullName>
+        <default>false</default>
+        <label>Plaid</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Plaid (PM)</fullName>
+        <default>false</default>
+        <label>Plaid (PM)</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Plaid (Tenant)</fullName>
+        <default>false</default>
+        <label>Plaid (Tenant)</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Platform Maintenance</fullName>
+        <default>false</default>
+        <label>Platform Maintenance</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>PLUS Features</fullName>
+        <default>false</default>
+        <label>PLUS Features</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Plus Upgrade</fullName>
+        <default>false</default>
+        <label>Plus Upgrade</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Portal Issue</fullName>
+        <default>false</default>
+        <label>Portal Issue</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Positions</fullName>
+        <default>false</default>
+        <label>Positions</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Post Migration Data Issue</fullName>
+        <default>false</default>
+        <label>Post Migration Data Issue</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pre-arb - app fee</fullName>
+        <default>false</default>
+        <label>Pre-arb - app fee</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pre-arb OC</fullName>
+        <default>false</default>
+        <label>Pre-arb OC</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pre-arb - rent</fullName>
+        <default>false</default>
+        <label>Pre-arb - rent</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Predictive Churn</fullName>
+        <default>false</default>
+        <label>Predictive Churn</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Premium Leads</fullName>
+        <default>false</default>
+        <label>Premium Leads</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Price Change</fullName>
+        <default>false</default>
+        <label>Price Change</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Pricing</fullName>
+        <default>false</default>
+        <label>Pricing</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Product Feedback - Product Management</fullName>
+        <default>false</default>
+        <label>Product Feedback - Product Management</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Product Fit</fullName>
+        <default>false</default>
+        <label>Product Fit</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Professional Services</fullName>
+        <default>false</default>
+        <label>Professional Services</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Property Accounting</fullName>
+        <default>false</default>
+        <label>Property Accounting</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>R-Code</fullName>
+        <default>false</default>
+        <label>R-Code</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Rebuild</fullName>
+        <default>false</default>
+        <label>Rebuild</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Receivables</fullName>
+        <default>false</default>
+        <label>Receivables</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Reconciliation</fullName>
+        <default>false</default>
+        <label>Reconciliation</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Reference Customer</fullName>
+        <default>false</default>
+        <label>Reference Customer</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Refund</fullName>
+        <default>false</default>
+        <label>Refund</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Reject</fullName>
+        <default>false</default>
+        <label>Reject</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Reject - MC</fullName>
+        <default>false</default>
+        <label>Reject - MC</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Reporting</fullName>
+        <default>false</default>
+        <label>Reporting</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Request to Cancel</fullName>
+        <default>false</default>
+        <label>Request to Cancel</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Resident Charges</fullName>
+        <default>false</default>
+        <label>Resident Charges</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Retrieval</fullName>
+        <default>false</default>
+        <label>Retrieval</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Rev Rec Accounting Failure</fullName>
+        <default>false</default>
+        <label>Rev Rec Accounting Failure</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Rev Rec Tech Failure</fullName>
+        <default>false</default>
+        <label>Rev Rec Tech Failure</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Risk/Compliance</fullName>
+        <default>false</default>
+        <label>Risk/Compliance</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Scheduling Issue</fullName>
+        <default>false</default>
+        <label>Scheduling Issue</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Search</fullName>
+        <default>false</default>
+        <label>Search</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Security</fullName>
+        <default>false</default>
+        <label>Security</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent to Sales</fullName>
+        <default>false</default>
+        <label>Sent to Sales</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>SEO</fullName>
+        <default>false</default>
+        <label>SEO</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Service Experience</fullName>
+        <default>false</default>
+        <label>Service Experience</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Setup/Service</fullName>
+        <default>false</default>
+        <label>Setup/Service</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Setup / Service</fullName>
+        <default>false</default>
+        <label>Setup / Service</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Spam</fullName>
+        <default>false</default>
+        <label>Spam</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Special Ops</fullName>
+        <default>false</default>
+        <label>Special Ops</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Subscription Billing / Inquiry</fullName>
+        <default>false</default>
+        <label>Subscription Billing / Inquiry</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>System Performance / Bug Report</fullName>
+        <default>false</default>
+        <label>System Performance / Bug Report</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Tasks</fullName>
+        <default>false</default>
+        <label>Tasks</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Template</fullName>
+        <default>false</default>
+        <label>Template</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Third Party Call-In</fullName>
+        <default>false</default>
+        <label>Third Party Call-In</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Tracking</fullName>
+        <default>false</default>
+        <label>Tracking</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Training</fullName>
+        <default>false</default>
+        <label>Training</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Training/Education</fullName>
+        <default>false</default>
+        <label>Training/Education</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Training - Success/Training &amp; Onboarding</fullName>
+        <default>false</default>
+        <label>Training - Success/Training &amp; Onboarding</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Transaction Fee</fullName>
+        <default>false</default>
+        <label>Transaction Fee</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Transactions</fullName>
+        <default>false</default>
+        <label>Transactions</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Trash</fullName>
+        <default>false</default>
+        <label>Trash</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Troubleshooting</fullName>
+        <default>false</default>
+        <label>Troubleshooting</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Troubleshooting/Cleanup</fullName>
+        <default>false</default>
+        <label>Troubleshooting/Cleanup</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Trust/Credit Accounting</fullName>
+        <default>false</default>
+        <label>Trust/Credit Accounting</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Update Settings</fullName>
+        <default>false</default>
+        <label>Update Settings</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>User Roles/Permissions</fullName>
+        <default>false</default>
+        <label>User Roles/Permissions</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>V+ Services: Denied for Service</fullName>
+        <default>false</default>
+        <label>V+ Services: Denied for Service</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Water</fullName>
+        <default>false</default>
+        <label>Water</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Waterfall</fullName>
+        <default>false</default>
+        <label>Waterfall</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Webmaster</fullName>
+        <default>false</default>
+        <label>Webmaster</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Websites - APM</fullName>
+        <default>false</default>
+        <label>Websites - APM</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>WegoWise</fullName>
+        <default>false</default>
+        <label>WegoWise</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Workflows</fullName>
+        <default>false</default>
+        <label>Workflows</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Work Orders</fullName>
+        <default>false</default>
+        <label>Work Orders</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Zero EUM/No BoB</fullName>
+        <default>false</default>
+        <label>Zero EUM/No BoB</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+</StandardValueSet>

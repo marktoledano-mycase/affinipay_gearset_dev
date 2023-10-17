@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>Read</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>Software Customer Success Specialist, CASEpeer</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Software Customer Success Specialist, CASEpeer</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>Software_Customer_Success_Manager_CASEpeer</parentRole>
+</Role>

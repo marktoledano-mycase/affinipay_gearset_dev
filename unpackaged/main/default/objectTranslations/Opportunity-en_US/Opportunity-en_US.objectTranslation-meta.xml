@@ -1,0 +1,1048 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>CASEpeer Opp Layout</layout>
+        <sections>
+            <label><!-- Account Status Prior to Create --></label>
+            <section>Account Status Prior to Create</section>
+        </sections>
+        <sections>
+            <label><!-- CASEpeer Onboarding &amp; Migration Criteria --></label>
+            <section>CASEpeer Onboarding &amp; Migration Criteria</section>
+        </sections>
+        <sections>
+            <label><!-- CASEpeer Sales Process --></label>
+            <section>CASEpeer Sales Process</section>
+        </sections>
+        <sections>
+            <label><!-- Closed Lost Information --></label>
+            <section>Closed Lost Information</section>
+        </sections>
+        <sections>
+            <label><!-- Discovery --></label>
+            <section>Discovery</section>
+        </sections>
+        <sections>
+            <label><!-- Forecast --></label>
+            <section>Forecast</section>
+        </sections>
+        <sections>
+            <label><!-- Implementation Notes --></label>
+            <section>Implementation Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing --></label>
+            <section>Marketing</section>
+        </sections>
+        <sections>
+            <label><!-- Outreach Details --></label>
+            <section>Outreach Details</section>
+        </sections>
+        <sections>
+            <label><!-- Qualification --></label>
+            <section>Qualification</section>
+        </sections>
+        <sections>
+            <label><!-- Qualification Notes --></label>
+            <section>Qualification Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Qualification: Current Software --></label>
+            <section>Qualification: Current Software</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Docketwise Opp Layout</layout>
+        <sections>
+            <label><!-- Account Status Prior to Create --></label>
+            <section>Account Status Prior to Create</section>
+        </sections>
+        <sections>
+            <label><!-- Additional Software --></label>
+            <section>Additional Software</section>
+        </sections>
+        <sections>
+            <label><!-- Closed Lost Information --></label>
+            <section>Closed Lost Information</section>
+        </sections>
+        <sections>
+            <label><!-- Docketwise Migration Information --></label>
+            <section>Docketwise Migration Information</section>
+        </sections>
+        <sections>
+            <label><!-- Forecast --></label>
+            <section>Forecast</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing --></label>
+            <section>Marketing</section>
+        </sections>
+        <sections>
+            <label><!-- Outreach Details --></label>
+            <section>Outreach Details</section>
+        </sections>
+        <sections>
+            <label><!-- Qualification --></label>
+            <section>Qualification</section>
+        </sections>
+        <sections>
+            <label><!-- Qualification Notes --></label>
+            <section>Qualification Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Qualification: Current Software --></label>
+            <section>Qualification: Current Software</section>
+        </sections>
+        <sections>
+            <label><!-- Sales Process --></label>
+            <section>Sales Process</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Integrations Layout</layout>
+        <sections>
+            <label><!-- Account Status Prior to Create --></label>
+            <section>Account Status Prior to Create</section>
+        </sections>
+        <sections>
+            <label><!-- Additional Software --></label>
+            <section>Additional Software</section>
+        </sections>
+        <sections>
+            <label><!-- Closed Lost Information --></label>
+            <section>Closed Lost Information</section>
+        </sections>
+        <sections>
+            <label><!-- Discovery --></label>
+            <section>Discovery</section>
+        </sections>
+        <sections>
+            <label><!-- Forecast --></label>
+            <section>Forecast</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing --></label>
+            <section>Marketing</section>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Information --></label>
+            <section>Opportunity Information</section>
+        </sections>
+        <sections>
+            <label><!-- Outreach Details --></label>
+            <section>Outreach Details</section>
+        </sections>
+        <sections>
+            <label><!-- Qualification --></label>
+            <section>Qualification</section>
+        </sections>
+        <sections>
+            <label><!-- Qualification Notes --></label>
+            <section>Qualification Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Qualification: Current Software --></label>
+            <section>Qualification: Current Software</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>MyCase Opp Layout</layout>
+        <sections>
+            <label><!-- Account Status Prior to Create --></label>
+            <section>Account Status Prior to Create</section>
+        </sections>
+        <sections>
+            <label><!-- Additional Software --></label>
+            <section>Additional Software</section>
+        </sections>
+        <sections>
+            <label><!-- Closed Lost Information --></label>
+            <section>Closed Lost Information</section>
+        </sections>
+        <sections>
+            <label><!-- Discovery --></label>
+            <section>Discovery</section>
+        </sections>
+        <sections>
+            <label><!-- Forecast --></label>
+            <section>Forecast</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing --></label>
+            <section>Marketing</section>
+        </sections>
+        <sections>
+            <label><!-- MyCase Onboarding Information --></label>
+            <section>MyCase Onboarding Information</section>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Information --></label>
+            <section>Opportunity Information</section>
+        </sections>
+        <sections>
+            <label><!-- Outreach Details --></label>
+            <section>Outreach Details</section>
+        </sections>
+        <sections>
+            <label><!-- Professional Services --></label>
+            <section>Professional Services</section>
+        </sections>
+        <sections>
+            <label><!-- Qualification --></label>
+            <section>Qualification</section>
+        </sections>
+        <sections>
+            <label><!-- Qualification Notes --></label>
+            <section>Qualification Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Qualification: Current Software --></label>
+            <section>Qualification: Current Software</section>
+        </sections>
+        <sections>
+            <label><!-- Sales Engineering --></label>
+            <section>Sales Engineering</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Parent Opp Layout</layout>
+        <sections>
+            <label><!-- Closed Lost Information --></label>
+            <section>Closed Lost Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Payments Opp Layout</layout>
+        <sections>
+            <label><!-- Account Status Prior to Create --></label>
+            <section>Account Status Prior to Create</section>
+        </sections>
+        <sections>
+            <label><!-- Additional Software --></label>
+            <section>Additional Software</section>
+        </sections>
+        <sections>
+            <label><!-- Closed Lost Information --></label>
+            <section>Closed Lost Information</section>
+        </sections>
+        <sections>
+            <label><!-- Discovery --></label>
+            <section>Discovery</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing --></label>
+            <section>Marketing</section>
+        </sections>
+        <sections>
+            <label><!-- Outreach Details --></label>
+            <section>Outreach Details</section>
+        </sections>
+        <sections>
+            <label><!-- Payments Sales Process --></label>
+            <section>Payments Sales Process</section>
+        </sections>
+        <sections>
+            <label><!-- Qualification --></label>
+            <section>Qualification</section>
+        </sections>
+        <sections>
+            <label><!-- Qualification Notes --></label>
+            <section>Qualification Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Qualification: Current Software --></label>
+            <section>Qualification: Current Software</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Soluno Opp Layout</layout>
+        <sections>
+            <label><!-- Additional Software --></label>
+            <section>Additional Software</section>
+        </sections>
+        <sections>
+            <label><!-- Closed Lost Information --></label>
+            <section>Closed Lost Information</section>
+        </sections>
+        <sections>
+            <label><!-- Discovery --></label>
+            <section>Discovery</section>
+        </sections>
+        <sections>
+            <label><!-- Forecast --></label>
+            <section>Forecast</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing --></label>
+            <section>Marketing</section>
+        </sections>
+        <sections>
+            <label><!-- Outreach Details --></label>
+            <section>Outreach Details</section>
+        </sections>
+        <sections>
+            <label><!-- Qualification --></label>
+            <section>Qualification</section>
+        </sections>
+        <sections>
+            <label><!-- Qualification Notes --></label>
+            <section>Qualification Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Qualification: Current Software --></label>
+            <section>Qualification: Current Software</section>
+        </sections>
+        <sections>
+            <label><!-- Soluno Closed:Won Criteria --></label>
+            <section>Soluno Closed:Won Criteria</section>
+        </sections>
+        <sections>
+            <label><!-- Soluno Onboarding --></label>
+            <section>Soluno Onboarding</section>
+        </sections>
+        <sections>
+            <label><!-- Soluno Subscription --></label>
+            <section>Soluno Subscription</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Websites</layout>
+        <sections>
+            <label><!-- Account Status Prior to Create --></label>
+            <section>Account Status Prior to Create</section>
+        </sections>
+        <sections>
+            <label><!-- Additional Software --></label>
+            <section>Additional Software</section>
+        </sections>
+        <sections>
+            <label><!-- Closed Lost Information --></label>
+            <section>Closed Lost Information</section>
+        </sections>
+        <sections>
+            <label><!-- Forecast --></label>
+            <section>Forecast</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing --></label>
+            <section>Marketing</section>
+        </sections>
+        <sections>
+            <label><!-- Outreach Details --></label>
+            <section>Outreach Details</section>
+        </sections>
+        <sections>
+            <label><!-- Qualification --></label>
+            <section>Qualification</section>
+        </sections>
+        <sections>
+            <label><!-- Qualification Notes --></label>
+            <section>Qualification Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Qualification: Current Software --></label>
+            <section>Qualification: Current Software</section>
+        </sections>
+        <sections>
+            <label><!-- Sales Process --></label>
+            <section>Sales Process</section>
+        </sections>
+        <sections>
+            <label><!-- Web Hosting Closed:Won Criteria --></label>
+            <section>Web Hosting Closed:Won Criteria</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Woodpecker Opp Layout</layout>
+        <sections>
+            <label><!-- Additional Software --></label>
+            <section>Additional Software</section>
+        </sections>
+        <sections>
+            <label><!-- Closed Lost Information --></label>
+            <section>Closed Lost Information</section>
+        </sections>
+        <sections>
+            <label><!-- Current Software --></label>
+            <section>Current Software</section>
+        </sections>
+        <sections>
+            <label><!-- Forecast --></label>
+            <section>Forecast</section>
+        </sections>
+        <sections>
+            <label><!-- Legacy Notes --></label>
+            <section>Legacy Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing --></label>
+            <section>Marketing</section>
+        </sections>
+        <sections>
+            <label><!-- Outreach Details --></label>
+            <section>Outreach Details</section>
+        </sections>
+        <sections>
+            <label><!-- Qualification --></label>
+            <section>Qualification</section>
+        </sections>
+        <sections>
+            <label><!-- Qualification Notes --></label>
+            <section>Qualification Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Qualification: Current Software --></label>
+            <section>Qualification: Current Software</section>
+        </sections>
+        <sections>
+            <label><!-- Sales Process --></label>
+            <section>Sales Process</section>
+        </sections>
+        <sections>
+            <label><!-- Woodpecker Closed:Won Criteria --></label>
+            <section>Woodpecker Closed:Won Criteria</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Assign --></label>
+        <name>Assign</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Closed Lost --></label>
+        <name>Closed_Lost</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Firm ID Finder --></label>
+        <name>Firm_ID_Finder</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Initiate Onboarding --></label>
+        <name>Initiate_Onboarding</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Link Merchant Application --></label>
+        <name>Link_Merchant_Application</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Linked Application --></label>
+        <name>Linked_Application</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Linked Firm --></label>
+        <name>Linked_Firm</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Onboarding Opportunity --></label>
+        <name>Onboarding_Opportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Onboarding Opportunity CASEpeer --></label>
+        <name>Onboarding_Opportunity_CASEpeer</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Process for Contract --></label>
+        <name>Process_for_Contract</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SE Request --></label>
+        <name>SE_Request</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Update Opportunity --></label>
+        <name>Update_Opportunity</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- AffiniPay Opps --></description>
+        <label><!-- AffiniPay --></label>
+        <name>AffiniPay</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- CASEpeer Opps --></description>
+        <label><!-- CASEpeer --></label>
+        <name>CASEpeer</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- CPACharge --></description>
+        <label><!-- CPACharge --></label>
+        <name>CPACharge</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- ClientPay Opps --></description>
+        <label><!-- ClientPay --></label>
+        <name>ClientPay</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Docketwise Opps --></description>
+        <label><!-- Docketwise --></label>
+        <name>Docketwise</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Use this record type for integrations that don&apos;t fall under a specific brand. --></description>
+        <label><!-- Integrations --></label>
+        <name>Integrations</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- LawPay Payments Opps --></description>
+        <label><!-- LawPay Payments --></label>
+        <name>LawPay_Payments</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- LawPay Software Opps --></description>
+        <label><!-- LawPay Software --></label>
+        <name>LawPay_Software</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- MyCase Opps --></description>
+        <label><!-- MyCase --></label>
+        <name>MyCase</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Parent Opps - to be used when multiple brands are involved in a potential deal --></description>
+        <label><!-- Parent --></label>
+        <name>Parent</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Soluno Opps --></description>
+        <label><!-- Soluno --></label>
+        <name>Soluno</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Website Hosting Opps --></description>
+        <label><!-- Websites --></label>
+        <name>Websites</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Woodpecker Opps --></description>
+        <label><!-- Woodpecker --></label>
+        <name>Woodpecker</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- CASEpeer: Opportunity is Closed Won, the following fields are required: Data Migration?, Implementation Note, Number of Users, Onboarding Contact --></errorMessage>
+        <name>CASEpeer_Opp_Closed_Won_Requirements</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- CPACharge Opportunities must have List of Top Features filled out if the opportunity is in Needs Analysis or Decision Making. --></errorMessage>
+        <name>CPACharge_require_List_of_Top_Features</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Closed Won Opportunities cannot be edited. --></errorMessage>
+        <name>Cannot_Edit_Closed_Won_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Lost Due to Feature is required when Stage is &quot;Closed Lost&quot; and Lost Reason is &quot;Feature.&quot; Click the Closed Lost button to fill out this information. --></errorMessage>
+        <name>Closed_Lost_Feature</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Lost To, Lost Reason, and Lost Notes are required when Stage is &quot;Closed Lost.&quot; Click the Closed Lost button to fill out this information. --></errorMessage>
+        <name>Closed_Lost_Reason</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- MyCase Opportunities can only be moved to Closed Won when the customer&apos;s subscription has been charged. --></errorMessage>
+        <name>MyCase_Approvals_Closed_Won</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- MyCase: When Doc Migration Plan Discussed = Yes, Doc Migration Plan Details are required. --></errorMessage>
+        <name>MyCase_Doc_Migration_Plan_Details</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- MyCase and LawPay Software Opportunities can only be moved to Approvals through automation or Firm ID Finder --></errorMessage>
+        <name>MyCase_LawPay_Software_Approvals</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- MyCase: Opportunity is Closed Won, you must populate the following fields:
+Onboarding POC, List of Top Features, Data Import Source, Doc Migration Plan Discussed --></errorMessage>
+        <name>MyCase_Opp_Closed_Won_Requirements</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This opportunity is not qualified for post-sale Onboarding Services.  Please change the Onboarding Services Status to Unnecessary. --></errorMessage>
+        <name>Onboarding_Svcs_Status_Unnecessary</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- At least one SKU is required when Opportunity Stage is &quot;Closed Won.&quot; --></errorMessage>
+        <name>Opp_SKU_Required_for_Closed_Won</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Payments Opportunities need an associated Provisioned Merchant Application to move to Closed Won. --></errorMessage>
+        <name>Payments_Closed_Won_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Primary Contact is required for new/existing Opportunities. --></errorMessage>
+        <name>Primary_Contact</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Accepts Online Payments is required when Stage is &quot;Decision Making,&quot; &quot;Approvals,&quot; or &quot;Closed Won.&quot; --></errorMessage>
+        <name>Require_Accepts_Pmts</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Current Accounting Solution (Other) is required when Current Accounting Solution is &quot;Other.&quot; --></errorMessage>
+        <name>Require_Current_Acct_Other</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Current LPM is required when Stage is &quot;Decision Making,&quot; &quot;Approvals,&quot; or &quot;Closed Won.&quot; --></errorMessage>
+        <name>Require_Current_LPM</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Current LPM (Other) is required when Current LPM includes &quot;Other.&quot; --></errorMessage>
+        <name>Require_Current_LPM_Other</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Current Payments Solution (Other) is required when Current Payments Solution is &quot;Other.&quot; --></errorMessage>
+        <name>Require_Current_Payments_Other</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Current Payments Solution is required when Stage is &quot;Decision Making,&quot; &quot;Approvals,&quot; or &quot;Closed Won.&quot; --></errorMessage>
+        <name>Require_Current_Payments_Solution</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Number of Employees is required when Stage is &quot;Decision Making,&quot; &quot;Approvals,&quot; or &quot;Closed Won.&quot; --></errorMessage>
+        <name>Require_Employees</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Woodpecker: Used Doc Gen Previously= Yes, Current Doc Gen Workaround is required. --></errorMessage>
+        <name>Woodpecker_Doc_Gen</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Woodpecker: Opportunity is Closed Won, the following fields are required: MyCase Subscriber with Templates, Used Doc Gen Previously --></errorMessage>
+        <name>Woodpecker_Opp_Closed_Won_Requirements</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Deca0t8W00000OTdkvQAD --></label>
+        <name>Deca0t8W00000OTdkvQAD</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Action_Plan --></label>
+        <name>LabsActionPlans__Create_Action_Plan</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Action_Plans --></label>
+        <name>LabsActionPlans__Create_Action_Plans</name>
+    </webLinks>
+</CustomObjectTranslation>

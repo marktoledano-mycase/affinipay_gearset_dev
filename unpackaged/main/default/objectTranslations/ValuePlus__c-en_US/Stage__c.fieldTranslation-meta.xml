@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Stage --></label>
+        <name>Stage__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Additional Communication (O)</masterLabel>
+            <translation><!-- Additional Communication (O) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agreement Pending</masterLabel>
+            <translation><!-- Agreement Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Build In Progress</masterLabel>
+            <translation><!-- Build In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Churn Website Only</masterLabel>
+            <translation><!-- Churn Website Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Churned</masterLabel>
+            <translation><!-- Churned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Churned (A)</masterLabel>
+            <translation><!-- Churned (A) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Complete</masterLabel>
+            <translation><!-- Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Content Acquisition</masterLabel>
+            <translation><!-- Content Acquisition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Declined</masterLabel>
+            <translation><!-- Declined --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deferred</masterLabel>
+            <translation><!-- Deferred --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deferred-Built</masterLabel>
+            <translation><!-- Deferred-Built --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deferred-Canceled</masterLabel>
+            <translation><!-- Deferred-Canceled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Denied</masterLabel>
+            <translation><!-- Denied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Final Changes</masterLabel>
+            <translation><!-- Final Changes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactive</masterLabel>
+            <translation><!-- Inactive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KOC Complete</masterLabel>
+            <translation><!-- KOC Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KOC Scheduled</masterLabel>
+            <translation><!-- KOC Scheduled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Left APM</masterLabel>
+            <translation><!-- Left APM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Left IM</masterLabel>
+            <translation><!-- Left IM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Live</masterLabel>
+            <translation><!-- Live --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Live-Free Trial</masterLabel>
+            <translation><!-- Live-Free Trial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lost</masterLabel>
+            <translation><!-- Lost --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lost During Pilot</masterLabel>
+            <translation><!-- Lost During Pilot --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lost In Onboarding</masterLabel>
+            <translation><!-- Lost In Onboarding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Multi Site Deffered</masterLabel>
+            <translation><!-- Multi Site Deffered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New/No Contact (O)</masterLabel>
+            <translation><!-- New/No Contact (O) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Agreement</masterLabel>
+            <translation><!-- No Agreement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Hold Non-responsive</masterLabel>
+            <translation><!-- On Hold Non-responsive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Hold/ Non Responsive</masterLabel>
+            <translation><!-- On Hold/ Non Responsive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On-Boarding</masterLabel>
+            <translation><!-- On-Boarding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Opportunity/Expansion (A)</masterLabel>
+            <translation><!-- Opportunity/Expansion (A) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Opportunity/Listing Quality (A)</masterLabel>
+            <translation><!-- Opportunity/Listing Quality (A) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ownership Change</masterLabel>
+            <translation><!-- Ownership Change --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pilot</masterLabel>
+            <translation><!-- Pilot --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Project Delivered/Final Changes</masterLabel>
+            <translation><!-- Project Delivered/Final Changes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Questionnaire Received</masterLabel>
+            <translation><!-- Questionnaire Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ReActivate Site</masterLabel>
+            <translation><!-- ReActivate Site --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready</masterLabel>
+            <translation><!-- Ready --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Site Delivered/Final Changes</masterLabel>
+            <translation><!-- Site Delivered/Final Changes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Site Presentation</masterLabel>
+            <translation><!-- Site Presentation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sold/Not Ready</masterLabel>
+            <translation><!-- Sold/Not Ready --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sold/Not Started</masterLabel>
+            <translation><!-- Sold/Not Started --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Successfully Using (A)</masterLabel>
+            <translation><!-- Successfully Using (A) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tax ID Change</masterLabel>
+            <translation><!-- Tax ID Change --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Temporarily Disabled</masterLabel>
+            <translation><!-- Temporarily Disabled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Third Party - Build in Progress</masterLabel>
+            <translation><!-- Third Party - Build in Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transferred</masterLabel>
+            <translation><!-- Transferred --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unable to provide docs</masterLabel>
+            <translation><!-- Unable to provide docs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unresponsive</masterLabel>
+            <translation><!-- Unresponsive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Upgraded</masterLabel>
+            <translation><!-- Upgraded --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Welcomed</masterLabel>
+            <translation><!-- Welcomed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Welcomed (O)</masterLabel>
+            <translation><!-- Welcomed (O) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Winback Opportunity (A)</masterLabel>
+            <translation><!-- Winback Opportunity (A) --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

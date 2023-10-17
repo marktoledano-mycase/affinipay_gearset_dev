@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Level__c</fullName>
+    <externalId>false</externalId>
+    <label>Level</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Brand__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Self-Service</fullName>
+                <default>false</default>
+                <label>Self-Service</label>
+            </value>
+            <value>
+                <fullName>Partner</fullName>
+                <default>false</default>
+                <label>Partner</label>
+            </value>
+            <value>
+                <fullName>Preferred</fullName>
+                <default>false</default>
+                <label>Preferred</label>
+            </value>
+            <value>
+                <fullName>Referral</fullName>
+                <default>false</default>
+                <label>Referral</label>
+            </value>
+            <value>
+                <fullName>Sales Process</fullName>
+                <default>false</default>
+                <label>Sales Process</label>
+            </value>
+            <value>
+                <fullName>Full Service</fullName>
+                <default>false</default>
+                <label>Full Service</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>All Payment</controllingFieldValue>
+            <controllingFieldValue>All Software</controllingFieldValue>
+            <controllingFieldValue>Website Hosting</controllingFieldValue>
+            <controllingFieldValue>AffiniPay</controllingFieldValue>
+            <controllingFieldValue>LawPay</controllingFieldValue>
+            <controllingFieldValue>CPACharge</controllingFieldValue>
+            <controllingFieldValue>ClientPay</controllingFieldValue>
+            <controllingFieldValue>MyCase</controllingFieldValue>
+            <controllingFieldValue>DocketWise</controllingFieldValue>
+            <controllingFieldValue>CasePeer</controllingFieldValue>
+            <controllingFieldValue>Woodpecker</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <valueName>Self-Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>All Payment</controllingFieldValue>
+            <controllingFieldValue>All Software</controllingFieldValue>
+            <controllingFieldValue>Website Hosting</controllingFieldValue>
+            <controllingFieldValue>AffiniPay</controllingFieldValue>
+            <controllingFieldValue>LawPay</controllingFieldValue>
+            <controllingFieldValue>CPACharge</controllingFieldValue>
+            <controllingFieldValue>ClientPay</controllingFieldValue>
+            <controllingFieldValue>MyCase</controllingFieldValue>
+            <controllingFieldValue>DocketWise</controllingFieldValue>
+            <controllingFieldValue>CasePeer</controllingFieldValue>
+            <controllingFieldValue>Woodpecker</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <valueName>Partner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>All Payment</controllingFieldValue>
+            <controllingFieldValue>All Software</controllingFieldValue>
+            <controllingFieldValue>Website Hosting</controllingFieldValue>
+            <controllingFieldValue>AffiniPay</controllingFieldValue>
+            <controllingFieldValue>LawPay</controllingFieldValue>
+            <controllingFieldValue>CPACharge</controllingFieldValue>
+            <controllingFieldValue>ClientPay</controllingFieldValue>
+            <controllingFieldValue>MyCase</controllingFieldValue>
+            <controllingFieldValue>DocketWise</controllingFieldValue>
+            <controllingFieldValue>CasePeer</controllingFieldValue>
+            <controllingFieldValue>Woodpecker</controllingFieldValue>
+            <controllingFieldValue>All</controllingFieldValue>
+            <valueName>Preferred</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Soluno</controllingFieldValue>
+            <valueName>Referral</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Soluno</controllingFieldValue>
+            <valueName>Sales Process</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Soluno</controllingFieldValue>
+            <valueName>Full Service</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

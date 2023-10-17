@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Block_Status_of_Known</fullName>
+    <active>true</active>
+    <description>Contacts with a current status cannot be changed to a status of &#39;known&#39;.</description>
+    <errorConditionFormula>$Permission.Bypass_Defined_VR_s = FALSE &amp;&amp;
+ISCHANGED( Status__c ) &amp;&amp;
+ISPICKVAL( Status__c , &#39;Known&#39;) &amp;&amp;
+NOT(ISPICKVAL( PRIORVALUE( Status__c ) , &#39;&#39; ))</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>The status of this contact can&#39;t be changed to &#39;Known&#39;</errorMessage>
+</ValidationRule>

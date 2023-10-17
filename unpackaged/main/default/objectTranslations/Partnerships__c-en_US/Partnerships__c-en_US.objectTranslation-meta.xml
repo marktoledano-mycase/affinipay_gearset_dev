@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Partnership</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Partnerships</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Non-Consulting Partnership Layout</layout>
+        <sections>
+            <label><!-- Admin Section --></label>
+            <section>Admin Section</section>
+        </sections>
+        <sections>
+            <label><!-- Consultant Details --></label>
+            <section>Consultant Details</section>
+        </sections>
+        <sections>
+            <label><!-- Contract Details --></label>
+            <section>Contract Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Rev Sharing Details --></label>
+            <section>Rev Sharing Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Partnership Layout</layout>
+        <sections>
+            <label><!-- Admin Section --></label>
+            <section>Admin Section</section>
+        </sections>
+        <sections>
+            <label><!-- Consultant Details --></label>
+            <section>Consultant Details</section>
+        </sections>
+        <sections>
+            <label><!-- Contract Details --></label>
+            <section>Contract Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Rev Sharing Details --></label>
+            <section>Rev Sharing Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Partnerstack Layout</layout>
+        <sections>
+            <label><!-- Consultant Details --></label>
+            <section>Consultant Details</section>
+        </sections>
+        <sections>
+            <label><!-- Contract Details --></label>
+            <section>Contract Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Rev Sharing Details --></label>
+            <section>Rev Sharing Details</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Trade organization/professional society organization --></description>
+        <label><!-- Affinity --></label>
+        <name>Affinity</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Other business operating in our verticals- non-consultant referral partnership --></description>
+        <label><!-- Alliance (Industry/Referral-only) --></label>
+        <name>Alliance_Insustry_Referral_only</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Technology professionals with clients in our verticals --></description>
+        <label><!-- Consultant --></label>
+        <name>Consultant</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Software company with products/customers in our verticals (Tech Partners) --></description>
+        <label><!-- ISV Partner --></label>
+        <name>ISV_Partner</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Used only for tracking Partners from Partnerstack --></description>
+        <label><!-- Partner Stack --></label>
+        <name>Partner_Stack</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Value-Added Reseller --></description>
+        <label><!-- VAR --></label>
+        <name>VAR</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

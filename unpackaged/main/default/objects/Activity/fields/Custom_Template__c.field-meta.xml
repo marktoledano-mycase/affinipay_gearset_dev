@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Custom_Template__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Users can access advanced settings and add custom values such as variables to sync to the CRM.</inlineHelpText>
+    <label>Custom Template</label>
+    <length>255</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,27 @@
+Hi,
+
+You have a new Escalated Support request:
+
+Account: {!Account.Name}
+Subject: {!Case.Subject}
+Type: {!Case.Type}
+Reason: {!Case.Reason}
+Module: {!Case.Application_Module__c}
+AppFolio URL: {!Account.00N80000003tIXw}
+
+
+Case Last Modified By: {!Case.LastModifiedBy}
+Department: {!Case.Owner_Role__c}
+Case Created Date: {!Case.CreatedDate}
+Case ID: {!Case.Id}
+
+
+Case Description: {!Case.Description}
+
+
+Steps to Reproduce: {!Case.Steps_to_Reproduce__c}
+
+
+Case Link: {!Case.Link}
+
+Thank you.

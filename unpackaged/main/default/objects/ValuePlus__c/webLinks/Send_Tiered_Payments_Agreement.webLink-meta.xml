@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Tiered_Payments_Agreement</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Send Tiered Payments Agreement</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>/apex/Sertifi2_0__CreateSignatureRequest?ObjectId={!ValuePlus__c.Id}
+&amp;filename={!ValuePlus__c.Name}
+&amp;ResourceGroup=MyCase
+&amp;Customsettings=ValuePlus
+&amp;ExpireFolderOn={!TODAY()+15}
+&amp;AttachmentId=a383g000001QPix
+&amp;1stsigner={!ValuePlus__c.On_Boarding_Contact_PrimaryId__c}</url>
+</WebLink>

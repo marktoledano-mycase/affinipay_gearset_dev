@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Summarizes what was requested by the prospect/customer --></help>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>CSQL</masterLabel>
+            <translation><!-- CSQL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Call In</masterLabel>
+            <translation><!-- Call In --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contact Request</masterLabel>
+            <translation><!-- Contact Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Demo Request</masterLabel>
+            <translation><!-- Demo Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Events</masterLabel>
+            <translation><!-- Events --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Live Chat</masterLabel>
+            <translation><!-- Live Chat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MQA</masterLabel>
+            <translation><!-- MQA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Referral</masterLabel>
+            <translation><!-- Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Score Threshold</masterLabel>
+            <translation><!-- Score Threshold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Self-Serve Sign Up</masterLabel>
+            <translation><!-- Self-Serve Sign Up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sign Up</masterLabel>
+            <translation><!-- Sign Up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Software Advice</masterLabel>
+            <translation><!-- Software Advice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trial</masterLabel>
+            <translation><!-- Trial --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

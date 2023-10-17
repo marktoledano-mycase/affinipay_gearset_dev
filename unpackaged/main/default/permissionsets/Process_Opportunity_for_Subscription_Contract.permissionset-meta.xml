@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>Process_Opp_for_Subscription_Contract</name>
+    </customPermissions>
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>View_Admin_Section_in_Page_Layouts</name>
+    </customPermissions>
+    <description>This includes the custom permission to access the &quot;Process for Contract&quot; button on Opportunities.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Process Opportunity for Subscription Contract</label>
+</PermissionSet>

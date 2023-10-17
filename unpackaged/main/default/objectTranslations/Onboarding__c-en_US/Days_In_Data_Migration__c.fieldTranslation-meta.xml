@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Migration_Completed_Date__c - Data_Received_Date__c --></help>
+        <label><!-- Days In Data Migration --></label>
+        <name>Days_In_Data_Migration__c</name>
+    </CustomFieldTranslation>

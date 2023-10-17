@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permissions to manage data for commissions. 💰</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Sales Commissions</label>
+    <permissionSets>Process_Opportunity_for_Subscription_Contract</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Discount_Limit_Validation</fullName>
+    <active>false</active>
+    <description>Prevents user from inputting a discount that exceeds the maximum threshold set on the SKU Product record.</description>
+    <errorConditionFormula>AND(
+    Promotion_and_Extended_Discount__c &gt; 
+       SKU_Product__r.Maximum_Sales_Discount__c, 
+    Not(Override_Discount_Limit__c)
+    )</errorConditionFormula>
+    <errorMessage>The total discount % exceeds the maximum threshold for the product.</errorMessage>
+</ValidationRule>

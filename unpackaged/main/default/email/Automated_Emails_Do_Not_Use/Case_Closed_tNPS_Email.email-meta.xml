@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Created for request R151468 | This survey has been sending to customers with a closed case as of 12/2016</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Case Closed tNPS Email</name>
+    <style>none</style>
+    <subject>MyCase Website Customer Experience Survey</subject>
+    <textOnly>MyCase Website Customer Experience Survey
+
+Hello!
+
+Would you please take a moment to answer our brief one minute survey?
+
+Your feedback helps us continue to improve your experience with MyCase.
+
+https://survey.alchemer.com/s3/6350898/MyCase-Website-Customer-Experience-Survey?c={!Case.ContactId}&amp;a={!Case.AccountId}&amp;ca={!Case.Id}&amp;e={!Case.OwnerId}
+
+Thank you for your time and thoughts, we appreciate your feedback!
+
+Chelsea Lincoln
+Website Operations Manager
+MyCase
+www.mycase.com
+
+© 2016 MyCase, Inc. | 9201 Spectrum Center Blvd STE 100, San Diego, CA 92123</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

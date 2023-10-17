@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Owner_Role__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    ISBLANK(Original_Opportunity_SKU__c),
+    Opportunity_SKU__r.Opportunity__r.Owner_Role__c,
+    Original_Opportunity_SKU__r.Opportunity__r.Owner_Role__c
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Reflects the owner role field on the Opportunity related to the Opportunity SKU on this record.</inlineHelpText>
+    <label>Opportunity Owner Role</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

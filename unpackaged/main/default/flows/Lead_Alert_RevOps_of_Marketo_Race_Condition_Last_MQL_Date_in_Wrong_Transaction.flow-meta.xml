@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <environments>Default</environments>
+    <formulas>
+        <name>fx_FullName</name>
+        <dataType>String</dataType>
+        <expression>IF(
+    ISBLANK({!$Record.FirstName}),
+    {!$Record.LastName},
+    {!$Record.FirstName}&amp;&quot; &quot;&amp;{!$Record.LastName}
+)</expression>
+    </formulas>
+    <interviewLabel>Lead - Alert RevOps of Marketo Race Condition (Last MQL Date in Wrong Transaction) {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Lead - Alert RevOps of Marketo Race Condition (Last MQL Date in Wrong Transaction)</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>sub_SendSlack</targetReference>
+        </connector>
+        <filterFormula>{!$Record.Bypass_VR_and_Automation__c} = FALSE &amp;&amp;
+
+(
+    ISNEW() ||
+    ISCHANGED({!$Record.Last_MQL_Date__c})
+) &amp;&amp;
+NOT(ISBLANK({!$Record.Last_MQL_Date__c})) &amp;&amp;
+NOT(ISCHANGED({!$Record.Inbound_Request_Date__c}))</filterFormula>
+        <object>Lead</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+    <subflows>
+        <name>sub_SendSlack</name>
+        <label>Send Slack to #alert-revops</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <flowName>Autolaunched_Send_Slack_Message</flowName>
+        <inputAssignments>
+            <name>var_SlackConversationID</name>
+            <value>
+                <stringValue>C04UVF7SD5H</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_SlackMessage</name>
+            <value>
+                <elementReference>txt_SlackMessage</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <textTemplates>
+        <name>txt_SlackMessage</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>:error-triangle: *Marketo Race Condition*
+
+&gt; *What*
+&gt; Last MQL Date was updated, but Inbound Request Date did not change.
+&gt; 
+&gt; :marketo-2: &lt;{!$Setup.Instance_Configuration__c.Instance_URL__c}/apex/mkto_si__Marketo_Lead_Detail?objType=Lead&amp;objId={!$Record.Id} |View in Marketo&gt;
+&gt; :salesforce-2: &lt;{!$Setup.Instance_Configuration__c.Instance_URL__c}/{!$Record.Id} |View in Salesforce&gt;
+&gt; 
+&gt; *Impact*
+&gt; This impacts MQL reporting. If the Inbound Request Date was updated in a separate transaction, then duplicate Inbound Request records were created (one of which has inaccurate data). If the Inbound Request Date was never updated, then no Inbound Request records were created.
+&gt; 
+&gt; *Investigation Required*
+&gt; 1. Create, update, or delete any Inbound Requests as needed.
+&gt; 2. Review the order of execution with Marketing Operations to ensure that Marketo syncs changes to MQL and Inbound Request fields in the same transaction.</text>
+    </textTemplates>
+</Flow>

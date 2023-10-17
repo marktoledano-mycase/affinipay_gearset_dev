@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Count of V+ Website records where Stage = Live or Site Delivered --></help>
+        <label><!-- Websites Enabled --></label>
+        <name>of_Websites__c</name>
+    </CustomFieldTranslation>

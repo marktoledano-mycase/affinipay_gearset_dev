@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Department(s) Impacted --></label>
+        <name>Department_s_Impacted__c</name>
+        <picklistValues>
+            <masterLabel>APM Client Services</masterLabel>
+            <translation><!-- APM Client Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>APM Marketing</masterLabel>
+            <translation><!-- APM Marketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>APM Operations</masterLabel>
+            <translation><!-- APM Operations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>APM Sales</masterLabel>
+            <translation><!-- APM Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>APM+</masterLabel>
+            <translation><!-- APM+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Accounting</masterLabel>
+            <translation><!-- Accounting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Systems</masterLabel>
+            <translation><!-- Business Systems --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CA Segment</masterLabel>
+            <translation><!-- CA Segment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corporate Segment</masterLabel>
+            <translation><!-- Corporate Segment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Executive</masterLabel>
+            <translation><!-- Executive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Human Resources</masterLabel>
+            <translation><!-- Human Resources --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IM Client Services</masterLabel>
+            <translation><!-- IM Client Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IM Sales</masterLabel>
+            <translation><!-- IM Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mid Market Segment</masterLabel>
+            <translation><!-- Mid Market Segment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MyCase</masterLabel>
+            <translation><!-- MyCase --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Order to Cash</masterLabel>
+            <translation><!-- Order to Cash --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payments</masterLabel>
+            <translation><!-- Payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product/Engineering</masterLabel>
+            <translation><!-- Product/Engineering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SMB Segment</masterLabel>
+            <translation><!-- SMB Segment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Value+</masterLabel>
+            <translation><!-- Value+ --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

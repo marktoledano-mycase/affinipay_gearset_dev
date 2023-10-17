@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Forecasted_ARR__c</fullName>
+    <description>Forecasted ARR for MyCase Deals based on forecasted users and pricing tiers</description>
+    <externalId>false</externalId>
+    <formula>(
+
+CASE( Pricing_Tier__c,
+
+&quot;Basic&quot;,
+
+IF( TEXT(MyCase_Subscription_Type__c) = &quot;Annual&quot;, 39, 49),
+
+&quot;Advanced&quot;, 
+
+IF( TEXT(MyCase_Subscription_Type__c) = &quot;Annual&quot;, 79, 89), 
+
+
+IF( TEXT(MyCase_Subscription_Type__c) = &quot;Annual&quot;, 59, 69) 
+
+) * Forecasted_Users__c) * 12</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>zz Forecasted ARR</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

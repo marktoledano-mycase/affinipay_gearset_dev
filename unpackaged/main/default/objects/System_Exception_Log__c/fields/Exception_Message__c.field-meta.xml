@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exception_Message__c</fullName>
+    <description>This field describes the message of the exception. This field will most likely be populated with the Exception.getMessage() method for APEX exceptions. For non-APEX calls, the cause of error should be described.</description>
+    <externalId>false</externalId>
+    <label>Exception Message</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>2</visibleLines>
+</CustomField>

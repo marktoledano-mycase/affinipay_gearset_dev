@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>true</sorted>
+    <standardValue>
+        <fullName>Added Discount to the Opp</fullName>
+        <default>false</default>
+        <label>Added Discount to the Opp</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Attended</fullName>
+        <default>false</default>
+        <label>Attended</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Attended On-demand</fullName>
+        <default>false</default>
+        <label>Attended On-demand</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Clicked</fullName>
+        <default>false</default>
+        <label>Clicked</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Clickedthrough</fullName>
+        <default>false</default>
+        <label>Clickedthrough</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CPE-CLE Attended</fullName>
+        <default>false</default>
+        <label>CPE-CLE Attended</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Credited</fullName>
+        <default>false</default>
+        <label>Credited</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Customers</fullName>
+        <default>false</default>
+        <label>Customers</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Engaged</fullName>
+        <default>false</default>
+        <label>Engaged</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Filled-out Form</fullName>
+        <default>false</default>
+        <label>Filled-out Form</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Form Submit</fullName>
+        <default>false</default>
+        <label>Form Submit</label>
+    </standardValue>
+    <standardValue>
+        <fullName>In Campaign</fullName>
+        <default>false</default>
+        <label>In Campaign</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Influenced</fullName>
+        <default>false</default>
+        <label>Influenced</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Invited</fullName>
+        <default>false</default>
+        <label>Invited</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MCLs</fullName>
+        <default>false</default>
+        <label>MCLs</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Member</fullName>
+        <default>false</default>
+        <label>Member</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MQLs</fullName>
+        <default>false</default>
+        <label>MQLs</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NonMarketable</fullName>
+        <default>false</default>
+        <label>NonMarketable</label>
+    </standardValue>
+    <standardValue>
+        <fullName>No Show</fullName>
+        <default>false</default>
+        <label>No Show</label>
+    </standardValue>
+    <standardValue>
+        <fullName>On List</fullName>
+        <default>false</default>
+        <label>On List</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Opened</fullName>
+        <default>false</default>
+        <label>Opened</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Redeemed</fullName>
+        <default>false</default>
+        <label>Redeemed</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Registered</fullName>
+        <default>false</default>
+        <label>Registered</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Registration Error</fullName>
+        <default>false</default>
+        <label>Registration Error</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Requested Meeting</fullName>
+        <default>false</default>
+        <label>Requested Meeting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Responded</fullName>
+        <default>false</default>
+        <label>Responded</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent</fullName>
+        <default>false</default>
+        <label>Sent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SQLs</fullName>
+        <default>false</default>
+        <label>SQLs</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Visited</fullName>
+        <default>false</default>
+        <label>Visited</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Visited Booth</fullName>
+        <default>false</default>
+        <label>Visited Booth</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Waitlisted</fullName>
+        <default>false</default>
+        <label>Waitlisted</label>
+    </standardValue>
+</StandardValueSet>

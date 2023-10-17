@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Feature_Notes</fullName>
+    <active>true</active>
+    <description>R164874</description>
+    <errorConditionFormula>ISBLANK( Feature_Notes__c ) &amp;&amp;  ISPICKVAL(Feature_Sub_Category__c, &#39;Other&#39;)</errorConditionFormula>
+    <errorMessage>Feature Notes are require when selecting Sub Category of &quot;Other&quot;</errorMessage>
+</ValidationRule>

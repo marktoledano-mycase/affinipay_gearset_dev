@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Affinipay</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Affinipay</label>
+        <sharedTo>
+            <group>AffiniPay_Org</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Soluno</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Affinipay_Sales</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Affinipay Sales</label>
+        <sharedTo>
+            <roleAndSubordinates>Chief_Sales_Officer</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Soluno</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Affinipay_org_access</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Affinipay Org Access</label>
+        <sharedTo>
+            <roleAndSubordinates>EXECUTIVE</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Soluno</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Marketo_Integration</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Shares records to Marketo</description>
+        <label>Marketo Integration</label>
+        <sharedTo>
+            <group>Marketo_Intergration</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Parent</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Soluno</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Soluno</label>
+        <sharedTo>
+            <group>Soluno_Org</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Soluno</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Affinipay_Owner</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Affinipay Owner</label>
+        <sharedTo>
+            <roleAndSubordinates>EXECUTIVE</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>EXECUTIVE</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Soluno_All</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Soluno All</label>
+        <sharedTo>
+            <group>Soluno_Org</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Soluno_Org</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Soluno_Roles_and_Sub</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Soluno Roles and Sub</label>
+        <sharedTo>
+            <roleAndSubordinates>Soluno_Executive</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>Soluno_Executive</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

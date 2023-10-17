@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Customer Client</fullName>
+        <default>false</default>
+        <label>Customer Client</label>
+    </customValue>
+    <customValue>
+        <fullName>Do Not Contact</fullName>
+        <default>false</default>
+        <label>Do Not Contact</label>
+    </customValue>
+    <customValue>
+        <fullName>Is Competitor</fullName>
+        <default>false</default>
+        <label>Is Competitor</label>
+    </customValue>
+    <customValue>
+        <fullName>Junk Data</fullName>
+        <default>false</default>
+        <label>Junk Data</label>
+    </customValue>
+    <customValue>
+        <fullName>Prospective Employee</fullName>
+        <default>false</default>
+        <label>Prospective Employee</label>
+    </customValue>
+    <customValue>
+        <fullName>Student</fullName>
+        <default>false</default>
+        <label>Student</label>
+    </customValue>
+    <customValue>
+        <fullName>Not in ICP</fullName>
+        <default>false</default>
+        <label>Not in ICP</label>
+    </customValue>
+    <customValue>
+        <fullName>UW Junk</fullName>
+        <default>false</default>
+        <label>UW Junk</label>
+    </customValue>
+    <customValue>
+        <fullName>UW Fraud</fullName>
+        <default>false</default>
+        <label>UW Fraud</label>
+    </customValue>
+    <customValue>
+        <fullName>UW Payment Attempt</fullName>
+        <default>false</default>
+        <label>UW Payment Attempt</label>
+    </customValue>
+    <customValue>
+        <fullName>UW Not Approved Business</fullName>
+        <default>false</default>
+        <label>UW Not Approved Business</label>
+    </customValue>
+    <customValue>
+        <fullName>Client of Active Firm</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Client of Active Firm</label>
+    </customValue>
+    <customValue>
+        <fullName>Test</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Test</label>
+    </customValue>
+    <customValue>
+        <fullName>MyCase.Gov</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>MyCase.Gov</label>
+    </customValue>
+    <customValue>
+        <fullName>Not an Attorney</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Not an Attorney</label>
+    </customValue>
+    <customValue>
+        <fullName>Out of Country</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Out of Country</label>
+    </customValue>
+    <customValue>
+        <fullName>Active Firm</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Active Firm</label>
+    </customValue>
+    <customValue>
+        <fullName>Large Firm</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Large Firm</label>
+    </customValue>
+    <customValue>
+        <fullName>Existing Customer</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Existing Customer</label>
+    </customValue>
+    <customValue>
+        <fullName>Duplicate</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Duplicate</label>
+    </customValue>
+    <customValue>
+        <fullName>Non-Sales</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Non-Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>Bad Contact Info</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Bad Contact Info</label>
+    </customValue>
+    <masterLabel>Disqualified Reasons</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Accountant</fullName>
+        <default>false</default>
+        <label>Accountant</label>
+    </customValue>
+    <customValue>
+        <fullName>Admin</fullName>
+        <default>false</default>
+        <label>Admin</label>
+    </customValue>
+    <customValue>
+        <fullName>Bar Association</fullName>
+        <default>false</default>
+        <label>Bar Association</label>
+    </customValue>
+    <customValue>
+        <fullName>Bookkeeper</fullName>
+        <default>false</default>
+        <label>Bookkeeper</label>
+    </customValue>
+    <customValue>
+        <fullName>Certified Consultant</fullName>
+        <default>false</default>
+        <label>Certified Consultant</label>
+    </customValue>
+    <customValue>
+        <fullName>CLOSED ACCOUNT</fullName>
+        <default>false</default>
+        <label>CLOSED ACCOUNT</label>
+    </customValue>
+    <customValue>
+        <fullName>Cloud</fullName>
+        <default>false</default>
+        <label>Cloud</label>
+    </customValue>
+    <customValue>
+        <fullName>Consultant</fullName>
+        <default>false</default>
+        <label>Consultant</label>
+    </customValue>
+    <customValue>
+        <fullName>Customer</fullName>
+        <default>false</default>
+        <label>Customer</label>
+    </customValue>
+    <customValue>
+        <fullName>Devlos</fullName>
+        <default>false</default>
+        <label>Devlos</label>
+    </customValue>
+    <customValue>
+        <fullName>DO NOT CONTACT</fullName>
+        <default>false</default>
+        <label>DO NOT CONTACT</label>
+    </customValue>
+    <customValue>
+        <fullName>Education</fullName>
+        <default>false</default>
+        <label>Education</label>
+    </customValue>
+    <customValue>
+        <fullName>External IT</fullName>
+        <default>false</default>
+        <label>External IT</label>
+    </customValue>
+    <customValue>
+        <fullName>helpdesk</fullName>
+        <default>false</default>
+        <label>helpdesk</label>
+    </customValue>
+    <customValue>
+        <fullName>Integration Partner</fullName>
+        <default>false</default>
+        <label>Integration Partner</label>
+    </customValue>
+    <customValue>
+        <fullName>IT Consultant</fullName>
+        <default>false</default>
+        <label>IT Consultant</label>
+    </customValue>
+    <customValue>
+        <fullName>Law Society</fullName>
+        <default>false</default>
+        <label>Law Society</label>
+    </customValue>
+    <customValue>
+        <fullName>Live</fullName>
+        <default>false</default>
+        <label>Live</label>
+    </customValue>
+    <customValue>
+        <fullName>livechat</fullName>
+        <default>false</default>
+        <label>livechat</label>
+    </customValue>
+    <customValue>
+        <fullName>No longer with firm</fullName>
+        <default>false</default>
+        <label>No longer with firm</label>
+    </customValue>
+    <customValue>
+        <fullName>Self Hosted</fullName>
+        <default>false</default>
+        <label>Self Hosted</label>
+    </customValue>
+    <customValue>
+        <fullName>self-hosted</fullName>
+        <default>false</default>
+        <label>self-hosted</label>
+    </customValue>
+    <customValue>
+        <fullName>STEP</fullName>
+        <default>false</default>
+        <label>STEP</label>
+    </customValue>
+    <customValue>
+        <fullName>Tag Name</fullName>
+        <default>false</default>
+        <label>Tag Name</label>
+    </customValue>
+    <customValue>
+        <fullName>Website Demo Request</fullName>
+        <default>false</default>
+        <label>Website Demo Request</label>
+    </customValue>
+    <customValue>
+        <fullName>Wind Down</fullName>
+        <default>false</default>
+        <label>Wind Down</label>
+    </customValue>
+    <description>Tags used by Soluno in Zoho</description>
+    <masterLabel>Soluno Tags</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

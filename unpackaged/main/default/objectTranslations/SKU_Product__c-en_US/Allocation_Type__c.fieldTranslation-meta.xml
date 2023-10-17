@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Used in reporting and product definition --></help>
+        <label><!-- Allocation Type --></label>
+        <name>Allocation_Type__c</name>
+        <picklistValues>
+            <masterLabel>Entitlement</masterLabel>
+            <translation><!-- Entitlement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Named User</masterLabel>
+            <translation><!-- Named User --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seat</masterLabel>
+            <translation><!-- Seat --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Change Catagory --></label>
+        <name>Change_Type__c</name>
+        <picklistValues>
+            <masterLabel>Contract Inactive</masterLabel>
+            <translation><!-- Contract Inactive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Item Added</masterLabel>
+            <translation><!-- Item Added --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Item Removed</masterLabel>
+            <translation><!-- Item Removed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Qty Change</masterLabel>
+            <translation><!-- Qty Change --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

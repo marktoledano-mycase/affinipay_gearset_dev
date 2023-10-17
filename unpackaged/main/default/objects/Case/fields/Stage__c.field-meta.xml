@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage__c</fullName>
+    <description>R151393</description>
+    <externalId>false</externalId>
+    <label>Stage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>open </fullName>
+                <default>false</default>
+                <label>open </label>
+            </value>
+            <value>
+                <fullName>reversed </fullName>
+                <default>false</default>
+                <label>reversed </label>
+            </value>
+            <value>
+                <fullName>closed </fullName>
+                <default>false</default>
+                <label>closed </label>
+            </value>
+            <value>
+                <fullName>pre-arb 1 </fullName>
+                <default>false</default>
+                <label>pre-arb 1 </label>
+            </value>
+            <value>
+                <fullName>pre-arb 2 </fullName>
+                <default>false</default>
+                <label>pre-arb 2 </label>
+            </value>
+            <value>
+                <fullName>second chargeback</fullName>
+                <default>false</default>
+                <label>second chargeback</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

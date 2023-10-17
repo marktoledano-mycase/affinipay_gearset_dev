@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GiactBusinessOwner3ChangeToAutoApproval</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+GiactValidationFlag__c = FALSE, 
+ISCHANGED(GIACTBusinessOwner_3_Validation__c), 
+TEXT(PRIORVALUE(GIACTBusinessOwner_3_Validation__c)) &lt;&gt; &#39;Automated Approval&#39;, 
+ISPICKVAL(GIACTBusinessOwner_3_Validation__c, &#39;Automated Approval&#39;) 
+)</errorConditionFormula>
+    <errorDisplayField>of_Monthly_Contributions__c</errorDisplayField>
+    <errorMessage>You are not authorized to change the &#39;Giact Business Owner 3 Validation&#39; to &#39;Automated Approval&#39;</errorMessage>
+</ValidationRule>

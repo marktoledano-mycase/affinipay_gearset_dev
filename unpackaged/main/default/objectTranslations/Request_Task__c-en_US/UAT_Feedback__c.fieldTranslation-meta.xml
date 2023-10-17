@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Feedback on UAT process? (Were there gaps in info provided, pieces of functionality missed?) --></help>
+        <label><!-- UAT Feedback --></label>
+        <name>UAT_Feedback__c</name>
+    </CustomFieldTranslation>

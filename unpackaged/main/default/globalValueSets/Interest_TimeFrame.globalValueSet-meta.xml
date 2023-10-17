@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>At Go Live</fullName>
+        <default>false</default>
+        <label>At Go Live</label>
+    </customValue>
+    <customValue>
+        <fullName>Interested</fullName>
+        <default>false</default>
+        <label>Interested</label>
+    </customValue>
+    <customValue>
+        <fullName>Not Interested or N/A</fullName>
+        <default>false</default>
+        <label>Not Interested or N/A</label>
+    </customValue>
+    <description>R164904</description>
+    <masterLabel>Interest TimeFrame</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

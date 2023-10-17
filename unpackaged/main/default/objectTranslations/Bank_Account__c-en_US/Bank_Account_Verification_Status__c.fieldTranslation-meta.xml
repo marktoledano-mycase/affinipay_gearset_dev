@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Bank Account Verification Status --></label>
+        <name>Bank_Account_Verification_Status__c</name>
+        <picklistValues>
+            <masterLabel>Failed-AcceptWithRisk</masterLabel>
+            <translation><!-- Failed-AcceptWithRisk --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Failed-Declined</masterLabel>
+            <translation><!-- Failed-Declined --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Failed-Error</masterLabel>
+            <translation><!-- Failed-Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Failed-NegativeData</masterLabel>
+            <translation><!-- Failed-NegativeData --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Failed-NoData</masterLabel>
+            <translation><!-- Failed-NoData --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Failed-PrivateBadChecksList</masterLabel>
+            <translation><!-- Failed-PrivateBadChecksList --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Failed-RejectItem</masterLabel>
+            <translation><!-- Failed-RejectItem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Failed-RiskAlert</masterLabel>
+            <translation><!-- Failed-RiskAlert --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Success</masterLabel>
+            <translation><!-- Success --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Success-No Demand Deposit Account</masterLabel>
+            <translation><!-- Success-No Demand Deposit Account --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

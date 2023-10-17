@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Used for legacy migration purposes only --></help>
+        <label><!-- AffiniPay VT ID --></label>
+        <name>AffiniPay_VT_ID__c</name>
+    </CustomFieldTranslation>

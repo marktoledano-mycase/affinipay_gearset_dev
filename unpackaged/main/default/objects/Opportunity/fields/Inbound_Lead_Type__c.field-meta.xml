@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inbound_Lead_Type__c</fullName>
+    <description>Summarizes the type of inbound lead for NTIs</description>
+    <externalId>false</externalId>
+    <label>Inbound Lead Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Inbound_Lead_Type</valueSetName>
+    </valueSet>
+</CustomField>

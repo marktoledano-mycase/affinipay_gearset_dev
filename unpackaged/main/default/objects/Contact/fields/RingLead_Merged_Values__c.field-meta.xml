@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RingLead_Merged_Values__c</fullName>
+    <description>Stores values from merged record from ringlead when values are overwritten</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Stores values from merged record from ringlead when values are overwritten</inlineHelpText>
+    <label>RingLead Merged Values</label>
+    <length>50000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

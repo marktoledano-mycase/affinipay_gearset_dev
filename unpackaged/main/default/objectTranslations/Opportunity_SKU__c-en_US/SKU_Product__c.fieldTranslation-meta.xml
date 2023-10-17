@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- SKU Product --></label>
+        <lookupFilter>
+            <errorMessage><!-- Product Currency and Product must match Opportunity SKU --></errorMessage>
+        </lookupFilter>
+        <name>SKU_Product__c</name>
+        <relationshipLabel><!-- Opportunity SKU --></relationshipLabel>
+    </CustomFieldTranslation>

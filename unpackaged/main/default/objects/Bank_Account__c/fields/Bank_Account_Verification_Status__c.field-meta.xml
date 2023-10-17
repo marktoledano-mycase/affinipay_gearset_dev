@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bank_Account_Verification_Status__c</fullName>
+    <description>This status specifies the GIACT Bank Account Verification Status.</description>
+    <externalId>false</externalId>
+    <label>Bank Account Verification Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Failed-Error</fullName>
+                <default>false</default>
+                <label>Failed-Error</label>
+            </value>
+            <value>
+                <fullName>Failed-PrivateBadChecksList</fullName>
+                <default>false</default>
+                <label>Failed-PrivateBadChecksList</label>
+            </value>
+            <value>
+                <fullName>Failed-Declined</fullName>
+                <default>false</default>
+                <label>Failed-Declined</label>
+            </value>
+            <value>
+                <fullName>Failed-RejectItem</fullName>
+                <default>false</default>
+                <label>Failed-RejectItem</label>
+            </value>
+            <value>
+                <fullName>Failed-AcceptWithRisk</fullName>
+                <default>false</default>
+                <label>Failed-AcceptWithRisk</label>
+            </value>
+            <value>
+                <fullName>Failed-RiskAlert</fullName>
+                <default>false</default>
+                <label>Failed-RiskAlert</label>
+            </value>
+            <value>
+                <fullName>Success</fullName>
+                <default>false</default>
+                <label>Success</label>
+            </value>
+            <value>
+                <fullName>Success-No Demand Deposit Account</fullName>
+                <default>false</default>
+                <label>Success-No Demand Deposit Account</label>
+            </value>
+            <value>
+                <fullName>Failed-NegativeData</fullName>
+                <default>false</default>
+                <label>Failed-NegativeData</label>
+            </value>
+            <value>
+                <fullName>Failed-NoData</fullName>
+                <default>false</default>
+                <label>Failed-NoData</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Churned_MRR__c</fullName>
+    <description>Churned MyCase MRR from fully churned customers over the 6-month sales selling window</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Churned MyCase MRR from fully churned customers over the 6-month sales selling window</inlineHelpText>
+    <label>Churned MRR</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NewAccountJS</fullName>
+    <availability>online</availability>
+    <description>R1812905</description>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>New</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/31.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/support/console/25.0/integration.js&quot;)} 
+var onb = new sforce.SObject(&quot;Onboarding__c&quot;);
+var acc = new sforce.SObject(&quot;Account&quot;); 
+acc.id = &#39;{!Account.Id}&#39;; 
+//Change Record Type 
+var contactCheck = sforce.connection.query(&quot;SELECT Id, Name FROM RecordType WHERE SobjectType = &#39;Onboarding__c&#39; and DeveloperName = &#39;MyCase_Onboarding&#39;&quot;); 
+records = contactCheck.getArray(&quot;records&quot;); 
+for (var i=0; i&lt; records.length; i++) { 
+var record = records[i]; 
+onb.RecordTypeId = record.Id;}
+
+onb.Onboarding_Manager__c = &quot;{!User.Id}&quot;;
+onb.Account__c = &#39;{!Account.Id}&#39;; 
+
+//trying to associate related metrics record
+var metrics = sforce.connection.query(&quot;SELECT Id from Metrics__c WHERE Account__c = &#39;{!Account.Id}&#39;  LIMIT 1&quot;);
+var met = metrics.getArray(&quot;records&quot;); 
+for (var i=0; i&lt; met.length; i++) { 
+var ppl = met[i];
+onb.Metrics__c = ppl.Id;
+}
+
+var result = sforce.connection.create([onb]); 
+if(result[0].getBoolean(&quot;success&quot;)){
+window.open(&quot;/&quot; + result[0].id + &quot;/e?retURL=%2F&quot;+result[0].id +&quot;&quot;);
+}else{
+alert(&#39;Could not create record &#39;+result);
+}</url>
+</WebLink>

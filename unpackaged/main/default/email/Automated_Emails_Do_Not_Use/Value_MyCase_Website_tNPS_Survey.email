@@ -1,0 +1,92 @@
+<title></title>
+<meta content="width=device-width; initial-scale=1.0;" name="viewport" />
+<table border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
+	<tbody>
+		<tr>
+			<td align="center" style="border: 0; background-color: #ffffff; padding: 20px;" width="100%">
+			<table bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" style="width: 672px;">
+				<tbody>
+					<tr>
+						<td style="border: 0; background-color: #ffffff;" width="100%">
+						<table align="center" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" style="background-color: #ffffff ! important; border: 0px none; width: 672px;">
+							<tbody>
+								<tr>
+									<td colspan="3"><img height="56" src="https://www.mycase.com/wp-content/uploads/2022/03/MyCase_Lockup_RGB_Med_Colour.png" width="270" /></td>
+								</tr>
+								<tr>
+									<td bgcolor="#FFFFFF" style="border-top: 1px solid #ffffff;" width="46"><img alt="" height="1"  width="46" /></td>
+									<td bgcolor="#FFFFFF" width="580">
+									<div class="mktEditable" id="editable1">
+									<h1 style="line-height: 46px; letter-spacing: -2.2px; font-weight: bold; font-family: Helvetica, Arial, sans-serif; text-align: left; color: #3E5073; font-size: 28px; margin-bottom: 5px; margin-left: 0; margin-right: 0; margin-top: 24px; padding: 0;">MyCase Website Customer Experience Survey</h1>
+
+									<hr /></div>
+									<img alt="" height="30" width="1" /></td>
+									<td bgcolor="#FFFFFF" style="border-top: 1px solid #ffffff;" width="46"><img alt="" height="1"  /></td>
+								</tr>
+							</tbody>
+						</table>
+
+						<table align="center" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" style="background-color: #ffffff ! important; border: 0px none; width: 672px;">
+							<tbody>
+								<tr>
+									<td bgcolor="#FFFFFF" style="width: 46px;" width="46"><img alt="" height="1"  width="46" /></td>
+									<td class="mktEditable" id="editable2" valign="top">
+									<div>
+									<p style="line-height: 1.1em; letter-spacing: 0em; font-family: Helvetica, Arial, sans-serif; text-align: left; color: #404040; font-size: 15px; padding: 0; margin: 0 0 18px 0;"><font color="#333333" face="sans-serif, Arial, Verdana, Trebuchet MS" size="2"><span style="line-height: 20.799999237060547px;">Hello!<br />
+									<br />
+									Would you please take a moment to answer our brief one minute survey?<br />
+									<br />
+									Your feedback helps us continue to improve your experience with MyCase. </span></font></p>
+
+									<ul>
+										<li><a href="https://www.surveygizmo.com/s3/7196911/NEWCO-MyCase-Website-Customer-Experience-Survey?c={!ValuePlus__c.On_Boarding_Contact_PrimaryId__c}&a={!ValuePlus__c.AccountId__c}&v={!ValuePlus__c.Id}&e={!ValuePlus__c.OwnerId}">"Click Here to Take the Survey"</font></a></li>
+									</ul>
+
+									<p style="line-height: 1.8em; letter-spacing: 0em; font-family: Helvetica, Arial, sans-serif; text-align: left; color: #404040; font-size: 15px; padding: 0 0 18px 0; margin: 0;"><font color="#333333" face="sans-serif, Arial, Verdana, Trebuchet MS" size="2"><span style="line-height: 20.799999237060547px;">Thank you for your time and thoughts, we appreciate your feedback!</span></font></p>
+									</div>
+									</td>
+									<td bgcolor="#FFFFFF" style="width: 46px; background-color: #ffffff;" width="46"> </td>
+								</tr>
+							</tbody>
+						</table>
+
+						<table align="center" bgcolor="#FFFFFF" border="0" cellpadding="0" cellspacing="0" style="background-color: #ffffff ! important; border: 0px none; width: 672px;">
+							<tbody>
+								<tr>
+									<td bgcolor="#FFFFFF" width="46"><img alt="" height="1" width="26" /></td>
+									<td align="left" class="mktEditable" id="editable5">
+									<p style="line-height: 1.8em; letter-spacing: 0em; font-family: Helvetica, Arial, sans-serif; text-align: left; color: #404040; font-size: 15px; padding: 0 0 18px 0; margin: 0;"><span style="font-family: sans-serif, Arial, Verdana, 'Trebuchet MS'; font-size: small; line-height: 20.7999992370605px; background-color: rgb(255, 255, 255);">Chelsea Lincoln</span><br style="box-sizing: border-box; font-family: sans-serif, Arial, Verdana, 'Trebuchet MS'; font-size: small; line-height: 20.7999992370605px; background-color: rgb(255, 255, 255);" />
+									<span style="font-family: sans-serif, Arial, Verdana, 'Trebuchet MS'; font-size: small; line-height: 20.7999992370605px; background-color: rgb(255, 255, 255);">Website Operations Manager</span><br />
+									<font color="#333333" face="sans-serif, Arial, Verdana, Trebuchet MS" size="2"><span style="line-height: 20.799999237060547px;">MyCase<br />
+									<a href="http://www.mycase.com">www.mycase.com</a></span></font></p>
+									<img alt="" height="50" width="1" /></td>
+									<td bgcolor="#FFFFFF" width="46"><img alt="" height="1"  width="26" /></td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+					<tr>
+				
+					</tr>
+				</tbody>
+			</table>
+
+			<table align="center" bgcolor="#6e73ff" border="0" cellpadding="0" cellspacing="0" style="background-color: #6e73ff; border: 0px none; width: 672px;">
+				<tbody>
+					<tr>
+						<td bgcolor="#6e73ff" style="width: 672px; background-color: #6e73ff;" valign="bottom">
+						<div class="mktEditable" id="editable4">
+						<p style="text-align: center; line-height: 1.6em; letter-spacing: -0.01em; font-weight: lighter; font-family: Helvetica, Arial, sans-serif; color: #ffffff; font-size: 12px; margin-bottom: 20px; margin-left: 0; margin-right: 0; margin-top: 8px; padding: 0;"><strong>© 2022 MyCase | 800.571.8062</strong></p>
+						 
+
+						<p> </p>
+						</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>

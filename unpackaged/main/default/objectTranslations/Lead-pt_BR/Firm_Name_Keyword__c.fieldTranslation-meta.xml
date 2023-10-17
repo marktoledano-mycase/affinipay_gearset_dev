@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- TRUE if lead company name has a keyword in it --></help>
+        <label><!-- Firm Name Keyword --></label>
+        <name>Firm_Name_Keyword__c</name>
+    </CustomFieldTranslation>

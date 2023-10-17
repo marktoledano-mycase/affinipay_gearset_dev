@@ -1,0 +1,60 @@
+<apex:page standardController="ValuePlus__c" extensions="CustomerAlerts" standardStylesheets="false" >
+    <apex:stylesheet value="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+    <apex:stylesheet value="{!URLFOR($Resource.AlertStyles)}"/>
+    <apex:outputPanel rendered="{!fraudMsg != '' && NOT(ISNULL(fraudMsg))}">
+        <div class="box danger" style="height: 14px;">
+        <span class="icon icon-danger"></span>
+        <span><apex:outputText style="font-size: 12px;font-weight: bold;" value="{!fraudMsg}" styleClass="text" escape="false"></apex:outputText></span>
+        </div>
+    </apex:outputPanel>
+    <apex:outputPanel rendered="{!ValuePlus__c.Account__r.Fraud_Abuse__c=='Fraudulent Account'}">
+        <div class="box info" style="height:45px; background-color: black">
+            <span class="icon icon-info title"></span>
+            <span style="font-size: 14px;font-weight: bold; color: red; background-color: black">KNOWN FRAUDULENT/ABUSIVE ACCOUNT. DO NOT CONTACT.</span>
+        </div>
+    </apex:outputPanel>
+    <apex:outputPanel rendered="{!ValuePlus__c.Account__r.Fraud_Abuse__c=='Legal/Compliance'}">
+        <div class="box info" style="height:45px; background-color: black">
+            <span class="icon icon-info title"></span>
+            <span style="font-size: 14px;font-weight: bold; color: red; background-color: black">This is a Legal/Compliance issue. Please DO NOT contact this customer until the hold is lifted. For more information, please contact MyCase Legal/Compliance.</span>
+        </div>
+    </apex:outputPanel>
+    <apex:outputPanel rendered="{!ValuePlus__c.Account__r.Fraud_Abuse__c=='Payments Disabled'}">
+        <div class="box info" style="height:45px; background-color: black">
+            <span class="icon icon-info title"></span>
+            <span style="font-size: 14px;font-weight: bold; color: red; background-color: black">Payments Disabled. Please contact a Payments Specialist for more information.</span>
+        </div>
+    </apex:outputPanel>
+     <apex:outputPanel rendered="{!ValuePlus__c.Account__r.Fraud_Abuse__c=='Account Ownership Dispute'}">
+        <div class="box info" style="height:45px; background-color: black">
+            <span class="icon icon-info title"></span>
+            <span style="font-size: 14px;font-weight: bold; color: red; background-color: black">The Ownership of this Account is in dispute. Please DO NOT make any changes to Account settings or Account access. For more information, please contact your Manager.</span>
+        </div>
+    </apex:outputPanel>
+     <apex:outputPanel rendered="{!ValuePlus__c.Account__r.Fraud_Abuse__c=='Pending Account Owner Identification'}">
+        <div class="box info" style="height:45px; background-color: black">
+            <span class="icon icon-info title"></span>
+            <span style="font-size: 14px;font-weight: bold; color: red; background-color: black">This Account has potentially been compromised. Please DO NOT make any changes to Account settings or Account access. For more information please contact your Manager.</span>
+        </div>
+    </apex:outputPanel>
+    <apex:outputPanel rendered="{!ValuePlus__c.Account__r.Fraud_Abuse__c=='Customer Initiated Lockdown'}">
+        <div class="box info" style="height:45px; background-color: black">
+            <span class="icon icon-info title"></span>
+            <span style="font-size: 14px;font-weight: bold; color: red; background-color: black">This Account has been temporarily frozen due to the firms internal security concerns. Please do not make any changes without authorization from your Manager. </span>
+        </div>
+    </apex:outputPanel>
+    <apex:outputPanel rendered="{!ValuePlus__c.Account__r.Account_Balance__c != null && ValuePlus__c.Account__r.Account_Balance__c > 0 &&
+                                ValuePlus__c.Account__r.Days_Past_Due__c != null && ValuePlus__c.Account__r.Days_Past_Due__c >= 30 && !isMyCaseRecord}">
+        <div class="box danger" style="height:14px;">
+        <span class="icon icon-danger"></span>
+        <span style="font-size: 12px;">This account is past due ${!ValuePlus__c.Account__r.Account_Balance__c} and {!ValuePlus__c.Account__r.Days_Past_Due__c } 
+            days past due.  Please have customer contact billing to avoid suspension.</span>
+        </div> 
+    </apex:outputPanel>
+    <apex:repeat rendered="{!!isMyCaseRecord}" value="{!warningMessages}" var="message">
+        <div class="box warning" style="height:14px;">
+            <span class="icon icon-warn"></span>
+            <span><apex:outputText style="font-size: 12px;" value="{!message}" styleClass="text" escape="false"></apex:outputText></span>
+        </div> <!-- end of div box -->
+    </apex:repeat>  
+</apex:page>

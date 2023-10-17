@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opp_SKU_Required_for_Closed_Won</fullName>
+    <active>true</active>
+    <description>In order to mark an Opportunity as Closed Won, it must have at least one (1) related Product SKU record.</description>
+    <errorConditionFormula>$Permission.Bypass_Defined_VR_s = FALSE &amp;&amp;
+
+(
+    ISNEW() ||
+    ISCHANGED(StageName)
+) &amp;&amp;
+
+ISPICKVAL(StageName, &quot;Closed Won&quot;) &amp;&amp;
+All_SKU_Count__c = 0</errorConditionFormula>
+    <errorMessage>At least one SKU is required when Opportunity Stage is &quot;Closed Won.&quot;</errorMessage>
+</ValidationRule>

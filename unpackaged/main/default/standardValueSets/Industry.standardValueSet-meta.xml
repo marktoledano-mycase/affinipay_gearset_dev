@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Law</fullName>
+        <default>false</default>
+        <label>Law</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Architecture/Design</fullName>
+        <default>false</default>
+        <label>Architecture/Design</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Finance</fullName>
+        <default>false</default>
+        <label>Finance</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Funeral</fullName>
+        <default>false</default>
+        <label>Funeral</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Medical</fullName>
+        <default>false</default>
+        <label>Medical</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Non Profit</fullName>
+        <default>false</default>
+        <label>Non Profit</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Psychologists</fullName>
+        <default>false</default>
+        <label>Psychologists</label>
+    </standardValue>
+</StandardValueSet>

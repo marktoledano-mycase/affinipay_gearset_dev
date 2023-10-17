@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Lead Page Layout</layout>
+        <sections>
+            <label><!-- Current Solutions --></label>
+            <section>Current Solutions</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Status --></label>
+            <section>Customer Status</section>
+        </sections>
+        <sections>
+            <label><!-- Discovery --></label>
+            <section>Discovery</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing Qualified Lead (MQL) --></label>
+            <section>Marketing Qualified Lead (MQL)</section>
+        </sections>
+        <sections>
+            <label><!-- Marketo Sales Insight --></label>
+            <section>Marketo Sales Insight</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Qualification --></label>
+            <section>Qualification</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Assign to Sales --></label>
+        <name>Assign_to_Sales</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Converted Lead Links --></label>
+        <name>Converted_Lead_Links</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Marketing MQL Fields --></label>
+        <name>Marketing_MQL_Fields</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Merchant Application View --></label>
+        <name>Merchant_Application_View</name>
+    </quickActions>
+    <validationRules>
+        <errorMessage><!-- The status of this lead can&apos;t be changed to &apos;Known&apos; --></errorMessage>
+        <name>Block_Status_of_Known</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Lead Source and Lead Channel cannot be changed. --></errorMessage>
+        <name>Block_Updates_to_Lead_Source_and_Channel</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Contact information (Email, Phone, and/or Mobile) is required. --></errorMessage>
+        <name>Require_Contact_Info</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Current Accounting Solution (Other) is required when Current Accounting Solution is &quot;Other.&quot; --></errorMessage>
+        <name>Require_Current_Acct_Other</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Current LPM (Other) is required when Current LPM includes &quot;Other.&quot; --></errorMessage>
+        <name>Require_Current_LPM_Other</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Current LPM is required when Status is &quot;Qualified.&quot; --></errorMessage>
+        <name>Require_Current_LPM_when_Qualified</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Current Payments Solution (Other) is required when Current Payments Solution is &quot;Other.&quot; --></errorMessage>
+        <name>Require_Current_Payments_Other</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Current Payments Solution is required when Status is &quot;Qualified.&quot; --></errorMessage>
+        <name>Require_Current_Pmts_when_Qualified</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- At least one Customer Status field is required to create a new Lead. --></errorMessage>
+        <name>Require_Customer_Status</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Disqualified Reason is required when Lead Status is &quot;Disqualified.&quot; --></errorMessage>
+        <name>Require_Disqualified_Reason</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Number of Employees is required when Lead Status is &quot;Qualified.&quot; --></errorMessage>
+        <name>Require_Employees_when_Qualified</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Industry is required when Status is &quot;Qualified.&quot; --></errorMessage>
+        <name>Require_Industry_when_Qualified</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Lead Source and Lead Channel are required. --></errorMessage>
+        <name>Require_Lead_Source_and_Channel</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Marketing Nurture Reason is required when Lead Status is &quot;Marketing Nurture.&quot; --></errorMessage>
+        <name>Require_Marketing_Nurture_Reason</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must select an Outbound Reason if the Sales Lead Type is the value of Outbound. --></errorMessage>
+        <name>Require_Outbound_Reason</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Accepts Online Payments is required when Status is &quot;Qualified.&quot; --></errorMessage>
+        <name>Require_Payments_when_Qualified</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Primary Practice Area is required when Industry is &quot;Law&quot; and Status is &quot;Qualified.&quot; --></errorMessage>
+        <name>Require_Practice_Area_when_Qualified</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Sales Product Tier is required when Sales Brand is &quot;LawPay.&quot; --></errorMessage>
+        <name>Require_Product_Tier_for_LawPay</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Sales Brand is required when Lead Status is &quot;Qualified.&quot; --></errorMessage>
+        <name>Require_Sales_Brand_when_Qualified</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Status must be &quot;Qualified&quot; when converting to an Opportunity. --></errorMessage>
+        <name>Require_Status_to_Convert_with_Opp</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Status must be &quot;Converted without Opportunity&quot; when converting without an Opportunity. --></errorMessage>
+        <name>Require_Status_to_Convert_without_Opp</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Action_Plan --></label>
+        <name>LabsActionPlans__Create_Action_Plan</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Action_Plans --></label>
+        <name>LabsActionPlans__Create_Action_Plans</name>
+    </webLinks>
+</CustomObjectTranslation>

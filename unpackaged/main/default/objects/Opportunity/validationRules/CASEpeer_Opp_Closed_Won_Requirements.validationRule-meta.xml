@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CASEpeer_Opp_Closed_Won_Requirements</fullName>
+    <active>true</active>
+    <description>CASEpeer: Opportunity is Closed Won, the following fields are required: Data Migration?, Implementation Note, Number of Users, Onboarding Contact</description>
+    <errorConditionFormula>AND(
+$Permission.Create_Onboarding_after_Opportunity_Is_Closed  = FALSE,
+$RecordType.Name = &quot;CASEpeer&quot;,
+$Permission.Bypass_Defined_VR_s = FALSE, 
+ISPICKVAL(StageName, &quot;Closed Won&quot;),
+OR(
+				ISPICKVAL(Data_Migration__c,&quot;&quot;),
+				ISBLANK(Implementation_Note__c),
+				ISBLANK(Number_of_Users__c),
+				ISNULL(zzOnboarding_Contact__c)))</errorConditionFormula>
+    <errorMessage>CASEpeer: Opportunity is Closed Won, the following fields are required: Data Migration?, Implementation Note, Number of Users, Onboarding Contact</errorMessage>
+</ValidationRule>

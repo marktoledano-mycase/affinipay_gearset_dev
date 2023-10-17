@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Adjust to forecast timing for your deal (defaults to close date of opportunity when created) --></help>
+        <label><!-- Forecasted Close Date --></label>
+        <name>Forecasted_Close_Date__c</name>
+    </CustomFieldTranslation>

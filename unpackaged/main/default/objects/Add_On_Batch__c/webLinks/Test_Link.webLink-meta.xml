@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Test_Link</fullName>
+    <availability>online</availability>
+    <description>R165495</description>
+    <displayType>link</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>true</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>600</height>
+    <isResizable>true</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>Test Link</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>https://composer.congamerge.com
+?SessionId={!API.Session_ID}
+&amp;ServerUrl={!API.Partner_Server_URL_210}
+&amp;Id={!Add_On_Batch__c.Id}
+&amp;QueryId=[AddOnBatchInfo]a1U80000002REOY?pv0={!Add_On_Batch__c.Id},
+[BankAcct1]a1U80000002RFBq?pv0={!Add_On_Batch__c.Id},
+[BankAcct2]a1U80000002RFBr?pv0={!Add_On_Batch__c.Id},
+[BankAcct3]a1U80000002RFBs?pv0={!Add_On_Batch__c.Id},
+[BankAcct4]a1U80000002RFBt?pv0={!Add_On_Batch__c.Id},
+[BankAcct5]a1U80000002RFBu?pv0={!Add_On_Batch__c.Id},
+[BankAcct6]a1U80000002RFBv?pv0={!Add_On_Batch__c.Id},
+[BankAcct7]a1U80000002RFBw?pv0={!Add_On_Batch__c.Id},
+[BankAcct8]a1U80000002RFBx?pv0={!Add_On_Batch__c.Id},
+[BankAcct9]a1U80000002RFBy?pv0={!Add_On_Batch__c.Id},
+[BankAcct10]a1U80000002RFBz?pv0={!Add_On_Batch__c.Id},
+[BankAcct11]a1U80000002RFC0?pv0={!Add_On_Batch__c.Id},
+[BankAcct12]a1U80000002RFC1?pv0={!Add_On_Batch__c.Id},
+[BankAcct13]a1U80000002RFC2?pv0={!Add_On_Batch__c.Id},
+[BankAcct14]a1U80000002RFC3?pv0={!Add_On_Batch__c.Id},
+[BankAccounts]a1U80000002RG6H?pv0={!Add_On_Batch__c.Id}
+&amp;TemplateId={!Add_On_Batch__c.Conga_Template_Send_Bank_Auth__c}
+&amp;DefaultPDF=1
+&amp;DS7=0
+&amp;DS7Preview=0
+&amp;ExcelAutoFitRows=1
+&amp;ExcelAutoFitColumns=1
+&amp;bml=The+following+Bank+Account+Authorization+form+for+{!Add_On_Batch__c.Account_Name__c}+has+been+brought+to+you+by+{!User.FirstName}.
+&amp;SertifiVisible=1
+&amp;SertifiExpirationDate={!TODAY()+31}
+&amp;SertifiFileName={!Add_On_Batch__c.Name}
+&amp;SertifiCustomSettings=Bank Account Add On Batch
+&amp;SertifiSigner1Id={!Add_On_Batch__c.Customer_Contact_ID__c}
+&amp;SertifiResourceGroup=PaymentsScreening</url>
+</WebLink>

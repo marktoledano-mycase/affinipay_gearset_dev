@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Stamped from Account when Opportunity is Created --></help>
+        <label><!-- MyCase Product Tier --></label>
+        <name>MyCase_Product_Tier__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_Feature__c</fullName>
+    <externalId>false</externalId>
+    <label>Payment Feature</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Hosted Fields</fullName>
+                <default>false</default>
+                <label>Hosted Fields</label>
+            </value>
+            <value>
+                <fullName>JS Tokenization</fullName>
+                <default>false</default>
+                <label>JS Tokenization</label>
+            </value>
+            <value>
+                <fullName>Quick Bill</fullName>
+                <default>false</default>
+                <label>Quick Bill</label>
+            </value>
+            <value>
+                <fullName>Titan</fullName>
+                <default>false</default>
+                <label>Titan</label>
+            </value>
+            <value>
+                <fullName>Titan Quick Bill</fullName>
+                <default>false</default>
+                <label>Titan Quick Bill</label>
+            </value>
+            <value>
+                <fullName>Payment Page</fullName>
+                <default>false</default>
+                <label>Payment Page</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

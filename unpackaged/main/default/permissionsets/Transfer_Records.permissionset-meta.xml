@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>Assign_to_Sales</name>
+    </customPermissions>
+    <description>Gives the user the ability to transfer records that they only have read access to</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Transfer Records</label>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>TransferAnyEntity</name>
+    </userPermissions>
+</PermissionSet>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Created for request R164986</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Case Closed MC Payments tNPS Email</name>
+    <style>none</style>
+    <subject>MyCase Payments Customer Experience Survey</subject>
+    <textOnly>MyCase Payments Customer Experience Survey
+
+Hello!
+
+Would you please take a moment to answer our brief one minute survey?
+
+Your feedback helps us continue to improve your experience with MyCase.
+
+https://survey.alchemer.com/s3/6320388/MyCase-Payments-Case-Experience-Survey?c={!Case.ContactId}&amp;a={!Case.AccountId}&amp;ca={!Case.Id}&amp;e={!Case.OwnerId}
+
+Thank you for your time and thoughts, we appreciate your feedback!
+
+Lance Klopp
+Sr. Manager, Payments
+MyCase
+www.mycase.com
+
+© 2022 MyCase | 800.571.8062</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

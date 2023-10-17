@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TEMP_Payments_Applications__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(Type__c, &quot;Self-Serve Sign Up&quot;) &amp;&amp;
+  NOT(CONTAINS(Person_Owner_Role__c, &quot;Account Executive&quot;)) &amp;&amp;
+  NOT(CONTAINS(Person_Owner_Role__c, &quot;Account Manager&quot;)) &amp;&amp;
+  NOT(CONTAINS(Person_Owner_Role__c, &quot;BDR&quot;)) &amp;&amp;
+  NOT(CONTAINS(Person_Owner_Role__c, &quot;SDR&quot;)),
+  &quot;Exclude&quot;,&quot;Include&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>TEMP - Payments Applications</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

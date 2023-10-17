@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Merchant Application</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Merchant Applications</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Payment Application Layout</layout>
+        <sections>
+            <label><!-- Application --></label>
+            <section>Application</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Linked Records --></label>
+            <section>Linked Records</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing --></label>
+            <section>Marketing</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Deca0t8W00000T2lPhQAJ --></label>
+        <name>Deca0t8W00000T2lPhQAJ</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Deca0t8W00000T2lPiQAJ --></label>
+        <name>Deca0t8W00000T2lPiQAJ</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Deca0t8W00000T2lROQAZ --></label>
+        <name>Deca0t8W00000T2lROQAZ</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Deca0t8W00000T2lRnQAJ --></label>
+        <name>Deca0t8W00000T2lRnQAJ</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Deca0t8W00000T2lSgQAJ --></label>
+        <name>Deca0t8W00000T2lSgQAJ</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Deca0t8W00000T2lTFQAZ --></label>
+        <name>Deca0t8W00000T2lTFQAZ</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Deca0t8W00000T2qwfQAB --></label>
+        <name>Deca0t8W00000T2qwfQAB</name>
+    </webLinks>
+</CustomObjectTranslation>

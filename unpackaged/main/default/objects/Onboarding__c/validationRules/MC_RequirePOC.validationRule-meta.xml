@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MC_RequirePOC</fullName>
+    <active>true</active>
+    <description>R1812905</description>
+    <errorConditionFormula>ISCHANGED(Data_Migration_Stage__c)&amp;&amp;
+ISPICKVAL(Data_Migration_Stage__c,&#39;Live&#39;)&amp;&amp;
+ISBLANK(Firm_POC__c)</errorConditionFormula>
+    <errorMessage>Firm POC is required to update Data Migration Stage to &#39;Live&#39;</errorMessage>
+</ValidationRule>

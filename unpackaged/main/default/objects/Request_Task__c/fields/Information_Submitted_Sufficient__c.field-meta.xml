@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Information_Submitted_Sufficient__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>R178187</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Was this request submitted with enough information to execute?</inlineHelpText>
+    <label>Information Submitted Sufficient ?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

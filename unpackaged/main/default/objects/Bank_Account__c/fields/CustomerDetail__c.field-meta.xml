@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CustomerDetail__c</fullName>
+    <externalId>false</externalId>
+    <label>Customer Detail</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Business</fullName>
+                <default>false</default>
+                <label>Business</label>
+            </value>
+            <value>
+                <fullName>First Owner</fullName>
+                <default>false</default>
+                <label>First Owner</label>
+            </value>
+            <value>
+                <fullName>Second Owner</fullName>
+                <default>false</default>
+                <label>Second Owner</label>
+            </value>
+            <value>
+                <fullName>Third Owner</fullName>
+                <default>false</default>
+                <label>Third Owner</label>
+            </value>
+            <value>
+                <fullName>Fourth Owner</fullName>
+                <default>false</default>
+                <label>Fourth Owner</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Missing_Slack_IDs</fullName>
+    <columns>Assignment_Group__c</columns>
+    <columns>NAME</columns>
+    <columns>User__c</columns>
+    <columns>User_Slack_ID__c</columns>
+    <columns>Min_Number_of_Employees__c</columns>
+    <columns>Last_Assignment__c</columns>
+    <columns>Is_Active__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>User_Slack_ID__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Missing Slack IDs</label>
+</ListView>

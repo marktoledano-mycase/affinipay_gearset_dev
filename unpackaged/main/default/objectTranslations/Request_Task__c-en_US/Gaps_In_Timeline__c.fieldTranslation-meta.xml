@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Any gaps in timeline? If so, why? --></help>
+        <label><!-- Gaps In Timeline ? --></label>
+        <name>Gaps_In_Timeline__c</name>
+    </CustomFieldTranslation>

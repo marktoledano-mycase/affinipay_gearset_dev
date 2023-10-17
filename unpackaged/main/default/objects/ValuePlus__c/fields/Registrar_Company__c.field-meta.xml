@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Registrar_Company__c</fullName>
+    <description>Name of Law Firm</description>
+    <externalId>false</externalId>
+    <label>Registrar Domain Company</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1&amp;1</fullName>
+                <default>false</default>
+                <label>1&amp;1</label>
+            </value>
+            <value>
+                <fullName>Bluehost</fullName>
+                <default>false</default>
+                <label>Bluehost</label>
+            </value>
+            <value>
+                <fullName>Dreamhost</fullName>
+                <default>false</default>
+                <label>Dreamhost</label>
+            </value>
+            <value>
+                <fullName>FatCow</fullName>
+                <default>false</default>
+                <label>FatCow</label>
+            </value>
+            <value>
+                <fullName>GoDaddy</fullName>
+                <default>false</default>
+                <label>GoDaddy</label>
+            </value>
+            <value>
+                <fullName>Host Gator</fullName>
+                <default>false</default>
+                <label>Host Gator</label>
+            </value>
+            <value>
+                <fullName>Hover</fullName>
+                <default>false</default>
+                <label>Hover</label>
+            </value>
+            <value>
+                <fullName>iPage</fullName>
+                <default>false</default>
+                <label>iPage</label>
+            </value>
+            <value>
+                <fullName>NameHub</fullName>
+                <default>false</default>
+                <label>NameHub</label>
+            </value>
+            <value>
+                <fullName>Network Solutions</fullName>
+                <default>false</default>
+                <label>Network Solutions</label>
+            </value>
+            <value>
+                <fullName>Register.com</fullName>
+                <default>false</default>
+                <label>Register.com</label>
+            </value>
+            <value>
+                <fullName>Web.com</fullName>
+                <default>false</default>
+                <label>Web.com</label>
+            </value>
+            <value>
+                <fullName>Yahoo</fullName>
+                <default>false</default>
+                <label>Yahoo</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

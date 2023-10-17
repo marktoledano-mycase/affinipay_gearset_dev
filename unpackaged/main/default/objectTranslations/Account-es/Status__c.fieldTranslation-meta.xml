@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- zz Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Cancel</masterLabel>
+            <translation><!-- Cancel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lost Trial</masterLabel>
+            <translation><!-- Lost Trial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pre-Migration</masterLabel>
+            <translation><!-- Pre-Migration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Purchased</masterLabel>
+            <translation><!-- Purchased --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Purchased - Lost</masterLabel>
+            <translation><!-- Purchased - Lost --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trial</masterLabel>
+            <translation><!-- Trial --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

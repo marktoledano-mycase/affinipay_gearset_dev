@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>x2023_07_nip_and_pat</fullName>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.LAST_ACTIVITY</columns>
+    <columns>Last_MQL_Date__c</columns>
+    <columns>Last_MQL_Type__c</columns>
+    <columns>LEAD.EMPLOYEES</columns>
+    <columns>Primary_Practice_Area__c</columns>
+    <columns>Outreach_Actively_being_sequenced__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>mkto_si__Current_Sales_Campaign__c</field>
+        <operation>equals</operation>
+        <value>2023-07-13: Reassignment of Nipiran and Patrick&#39;s contacts/leads/opps</value>
+    </filters>
+    <label>2023-07 - Nipiran and Patrick&#39;s Leads</label>
+    <sharedTo>
+        <role>Account_Executive_MyCase_Core_C</role>
+    </sharedTo>
+</ListView>

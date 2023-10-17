@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Renew_Months_Annual__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF (Year (Effective_Date__c) &lt; Year(TODAY())
+
+   /*PAST YEAR - PAST MONTH */
+   , IF(Month (Effective_Date__c) &lt; Month(TODAY())
+       , ((Year(TODAY())- Year(Effective_Date__c))*12)+12
+   
+       /*PAST YEAR - LATER MONTH */    
+       , IF (Month (Effective_Date__c) &gt; Month(TODAY())
+       , (Year(TODAY())- Year(Effective_Date__c))*12
+   
+           /*PAST YEAR - SAME MONTH / CHECK THE DAY OF THE MONTH */
+           , IF (Day(Effective_Date__c) &lt; Day(TODAY())
+   
+             , ((Year(TODAY())- Year(Effective_Date__c))*12)+12
+             , (Year(TODAY())- Year(Effective_Date__c))*12
+             
+            )
+            )
+            )
+             
+   /*SAME YEAR - PAST MONTH */
+   , IF(Month (Effective_Date__c) &lt; Month(TODAY())
+       , ((Year(TODAY())- Year(Effective_Date__c))*12)+12
+   
+       /*SAME YEAR - LATER MONTH*/    
+       , IF (Month (Effective_Date__c) &gt; Month(TODAY())
+       , (Year(TODAY())- Year(Effective_Date__c))*12
+   
+           /*SAME YEAR - SAME MONTH / CHECK THE DAY OF THE MONTH*/
+           , IF (Day(Effective_Date__c) &lt;= Day(TODAY())
+   
+             , ((Year(TODAY())- Year(Effective_Date__c))*12)+12
+             , (Year(TODAY())- Year(Effective_Date__c))*12
+
+)
+)
+)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Renew Months (Annual)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

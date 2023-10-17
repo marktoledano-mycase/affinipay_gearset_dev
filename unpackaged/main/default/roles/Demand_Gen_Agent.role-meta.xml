@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>Read</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>Demand Gen Agent</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Demand Gen Agent</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>Demand_Gen_Manager</parentRole>
+</Role>

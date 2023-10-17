@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inbound_Request_Marketing_Ops</fullName>
+    <columns>NAME</columns>
+    <columns>Customer_Success_Qualifying_Rep2__c</columns>
+    <columns>Person_Score__c</columns>
+    <columns>First_Name__c</columns>
+    <columns>Lead__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Last_Touch_Program__c</field>
+        <operation>equals</operation>
+        <value>MC-D-WB-2023-09: 5 Law Office Mishaps</value>
+    </filters>
+    <label>Inbound Request Marketing Ops</label>
+</ListView>

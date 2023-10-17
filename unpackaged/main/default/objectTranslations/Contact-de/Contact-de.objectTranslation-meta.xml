@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Contact Layout</layout>
+        <sections>
+            <label><!-- Brand ID --></label>
+            <section>Brand ID</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Statuses --></label>
+            <section>Customer Statuses</section>
+        </sections>
+        <sections>
+            <label><!-- Email Opt Out --></label>
+            <section>Email Opt Out</section>
+        </sections>
+        <sections>
+            <label><!-- MQL Tracking --></label>
+            <section>MQL Tracking</section>
+        </sections>
+        <sections>
+            <label><!-- Marketo Sales Insight --></label>
+            <section>Marketo Sales Insight</section>
+        </sections>
+        <sections>
+            <label><!-- New Section --></label>
+            <section>New Section</section>
+        </sections>
+        <sections>
+            <label><!-- Opt Out Info --></label>
+            <section>Opt Out Info</section>
+        </sections>
+        <sections>
+            <label><!-- Outreach Details --></label>
+            <section>Outreach Details</section>
+        </sections>
+        <sections>
+            <label><!-- Product &amp; Marketing Details --></label>
+            <section>Product &amp; Marketing Details</section>
+        </sections>
+        <sections>
+            <label><!-- Social Media --></label>
+            <section>Social Media</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Assign to Sales --></label>
+        <name>Assign_to_Sales</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Contact Details --></label>
+        <name>Contact_Details</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Contact Information --></label>
+        <name>Contact_Information</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Convert --></label>
+        <name>Convert</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Create New Opportunity --></label>
+        <name>Create_New_Opportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Update Brand to Prospect --></label>
+        <name>Update_Brand_to_Prospect</name>
+    </quickActions>
+    <validationRules>
+        <errorMessage><!-- The status of this contact can&apos;t be changed to &apos;Known&apos; --></errorMessage>
+        <name>Block_Status_of_Known</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Lead Source and Lead Channel cannot be changed. --></errorMessage>
+        <name>Block_Updates_to_Lead_Source_and_Channel</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Contact information (Email, Phone, and/or Mobile) is required. --></errorMessage>
+        <name>Require_Contact_Info</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Disqualified Reason is required when Status is &quot;Disqualified.&quot; --></errorMessage>
+        <name>Require_Disqualified_Reason</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Lead Channel is required. --></errorMessage>
+        <name>Require_Lead_Channel</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Lead Source is required. --></errorMessage>
+        <name>Require_Lead_Source</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Lead Source and Lead Channel are required. --></errorMessage>
+        <name>Require_Lead_Source_and_Channel</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Marketing Nurture Reason is required when Status is &quot;Marketing Nurture.&quot; --></errorMessage>
+        <name>Require_Marketing_Nurture_Reason</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must select an Outbound Reason if the Sales Lead Type is the value Outbound. --></errorMessage>
+        <name>Require_Outbound_Reason</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Action_Plan --></label>
+        <name>LabsActionPlans__Create_Action_Plan</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Action_Plans --></label>
+        <name>LabsActionPlans__Create_Action_Plans</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_MyCase_V --></label>
+        <name>New_MyCase_V</name>
+    </webLinks>
+</CustomObjectTranslation>

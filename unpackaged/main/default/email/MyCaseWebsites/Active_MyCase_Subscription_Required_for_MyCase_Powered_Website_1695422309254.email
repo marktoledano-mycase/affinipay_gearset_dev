@@ -1,0 +1,15 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">Hi {{{Recipient.FirstName}}},<br />
+<br />
+During a recent audit of our customer accounts, we discovered that you have a live MyCase-powered website, but canceled your MyCase subscription. Per our policy, you must have an active subscription for us to continue hosting your website.<br />
+<br />
+Please reactivate your subscription within your account settings. If we do not see any changes to your account status within 30 days, your site will be taken down.&nbsp;<br />
+<br />
+If you have any questions, please contact us at websites@mycase.com or (800) 571-8062.<br />
+<br />
+Thank you,<br />
+The MyCase Team</body>
+</html>

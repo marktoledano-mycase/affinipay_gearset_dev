@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Use this when clients are upset about price increase and need to know why we have raised it</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Price Increase - Churn Risk</name>
+    <style>none</style>
+    <subject>MyCase Upcoming Renewal and Pricing Update</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

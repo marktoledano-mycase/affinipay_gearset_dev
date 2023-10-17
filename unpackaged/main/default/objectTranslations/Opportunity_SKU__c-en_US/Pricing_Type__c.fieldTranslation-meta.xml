@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Reflects the pricing type based on the SKU Product selected. --></help>
+        <label><!-- Pricing Type --></label>
+        <name>Pricing_Type__c</name>
+    </CustomFieldTranslation>

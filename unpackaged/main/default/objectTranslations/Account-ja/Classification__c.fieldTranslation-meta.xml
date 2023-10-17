@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Formula field - displays the Account Record Type Name --></help>
+        <label><!-- Classification --></label>
+        <name>Classification__c</name>
+    </CustomFieldTranslation>

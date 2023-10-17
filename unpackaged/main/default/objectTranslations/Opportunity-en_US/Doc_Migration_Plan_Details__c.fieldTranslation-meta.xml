@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Required when Doc Migration Plan Discussed? = Yes --></help>
+        <label><!-- Doc Migration Plan Details --></label>
+        <name>Doc_Migration_Plan_Details__c</name>
+    </CustomFieldTranslation>

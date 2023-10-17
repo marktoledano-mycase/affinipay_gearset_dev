@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Send to clients once you have created their website and need to send them preview link</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Onboarding | Preview Site is Ready</name>
+    <style>none</style>
+    <subject>MyCase Websites | Your Preview Site is Here!</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

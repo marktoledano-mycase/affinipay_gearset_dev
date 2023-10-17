@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Lead</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Lead</masterLabel>
+    <pathAssistantSteps>
+        <picklistValueName>Converted without Opportunity</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Status</fieldNames>
+        <fieldNames>Disqualified_Reason__c</fieldNames>
+        <info>&lt;p&gt;This person is not in our ideal customer profile (ICP) and will &lt;strong&gt;never &lt;/strong&gt;be a fit.&lt;/p&gt;</info>
+        <picklistValueName>Disqualified</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Lead_next_steps__c</fieldNames>
+        <fieldNames>Role__c</fieldNames>
+        <fieldNames>NumberOfEmployees</fieldNames>
+        <fieldNames>Primary_Practice_Area__c</fieldNames>
+        <info>&lt;p&gt;We are attempting to &lt;strong&gt;qualify&lt;/strong&gt; and are in two-way dialogue.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Next steps:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Update Role.&lt;/li&gt;&lt;li&gt;Update Number of Employees&lt;/li&gt;&lt;li&gt;Update Primary Practice Area.&lt;/li&gt;&lt;li&gt;Update Current Software.&lt;/li&gt;&lt;li&gt;Update Qualification Notes.&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Engaged</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>LeadSource</fieldNames>
+        <fieldNames>Lead_Channel__c</fieldNames>
+        <info>&lt;p&gt;The person exists in our database, but &lt;strong&gt;isn&amp;#39;t ready&lt;/strong&gt; for a sales rep yet.&lt;/p&gt;</info>
+        <picklistValueName>Known</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Status</fieldNames>
+        <fieldNames>Nurture_Marketing_Reasons__c</fieldNames>
+        <info>&lt;p&gt;This person is in our ideal customer profile (ICP) and could be ready to buy sometime but &lt;strong&gt;not now&lt;/strong&gt;.&lt;/p&gt;</info>
+        <picklistValueName>Marketing Nurture</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Days_Since_Last_Activity__c</fieldNames>
+        <fieldNames>Last_MQL_Date__c</fieldNames>
+        <fieldNames>Last_MQL_Brand__c</fieldNames>
+        <fieldNames>Last_MQL_Type__c</fieldNames>
+        <info>&lt;p&gt;&lt;span style=&quot;font-family: Arial; font-size: 10pt;&quot;&gt;This is a &lt;/span&gt;&lt;strong style=&quot;font-family: Arial; font-size: 10pt;&quot;&gt;Marketing Qualified Lead&lt;/strong&gt;&lt;span style=&quot;font-family: Arial; font-size: 10pt;&quot;&gt; (MQL)&lt;/span&gt;&lt;strong style=&quot;font-family: Arial; font-size: 10pt;&quot;&gt;.&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong style=&quot;font-family: Arial; font-size: 10pt;&quot;&gt;Next steps:&lt;/strong&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;Check for duplicates.&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;Respond within 5 min (30 min max).&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 13.3333px;&quot;&gt;For Score Threshold MQLs, respond within 24 hours. &lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;font-size: 10pt;&quot;&gt;Update to Working, Marketing Nurture, or Disqualified.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>New</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 10pt; font-family: Arial;&quot;&gt;Hooray! You have a new deal to bring across the finish line.&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Qualified</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Days_Since_Last_Activity__c</fieldNames>
+        <info>&lt;p&gt;&lt;span style=&quot;font-family: Arial; font-size: 10pt;&quot;&gt;We are &lt;/span&gt;&lt;strong style=&quot;font-family: Arial; font-size: 10pt;&quot;&gt;trying to contact &lt;/strong&gt;&lt;span style=&quot;font-family: Arial; font-size: 10pt;&quot;&gt;this person&lt;/span&gt;&lt;strong style=&quot;font-family: Arial; font-size: 10pt;&quot;&gt;. Next steps: &lt;/strong&gt;&lt;span style=&quot;font-size: 13.3333px;&quot;&gt;Once they respond, update to Engaged.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;We are attempting to &lt;strong style=&quot;font-size: 13px;&quot;&gt;qualify&lt;/strong&gt; and are in two-way dialogue.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Fields required for Lead Conversion:&lt;/p&gt;&lt;p&gt;-Number of Employees  -Industry Sales Brand  -Accepts Online Payments  &lt;/p&gt;&lt;p&gt;-Current Accounting Solution -Current LPM  -Current Payments Solution&lt;/p&gt;</info>
+        <picklistValueName>Working</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

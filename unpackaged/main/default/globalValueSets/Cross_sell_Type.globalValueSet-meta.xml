@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Archetype 1</fullName>
+        <default>false</default>
+        <label>Archetype 1</label>
+    </customValue>
+    <customValue>
+        <fullName>Archetype 2</fullName>
+        <default>false</default>
+        <label>Archetype 2</label>
+    </customValue>
+    <masterLabel>Cross-sell Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

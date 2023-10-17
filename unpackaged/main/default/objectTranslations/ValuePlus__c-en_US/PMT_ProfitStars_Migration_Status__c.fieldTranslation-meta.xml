@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- ProfitStars Migration Status --></label>
+        <name>PMT_ProfitStars_Migration_Status__c</name>
+        <picklistValues>
+            <masterLabel>Failed to Sent to ProfitStars</masterLabel>
+            <translation><!-- Failed to Sent to ProfitStars --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Live</masterLabel>
+            <translation><!-- Live --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Started</masterLabel>
+            <translation><!-- Not Started --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On-Boarded</masterLabel>
+            <translation><!-- On-Boarded --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Queued for ProfitStars</masterLabel>
+            <translation><!-- Queued for ProfitStars --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready for APM</masterLabel>
+            <translation><!-- Ready for APM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready to Activate</masterLabel>
+            <translation><!-- Ready to Activate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready to Transmit</masterLabel>
+            <translation><!-- Ready to Transmit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sage Data Updated</masterLabel>
+            <translation><!-- Sage Data Updated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Successfully Sent to ProfitStars</masterLabel>
+            <translation><!-- Successfully Sent to ProfitStars --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transmitted</masterLabel>
+            <translation><!-- Transmitted --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">
+<p>Hi {{{Recipient.FirstName}}},<br />
+<br />
+During a scheduled audit of our client records, we discovered that your firm is no longer a MyCase customer (as of _). Per our policy, you must have an active MyCase subscription for us to host your website.<br />
+<br />
+While we recognize this error is due to an oversight on our part, we would like to remedy this situation as soon as possible. Therefore, we will be removing your site from public view on July 1, 2022, unless you reactivate your MyCase subscription.<br />
+<br />
+I have included contact information below for our Customer Success team if you wish to reactivate.</p>
+
+<p><b>Email:</b>&nbsp;<a href="mailto:support@mycase.com">support@mycase.com</a><br />
+<b>Phone:</b>&nbsp;<a href="tel:8005718062">(800) 571-8062</a>Thank you for your understanding.</p>
+
+<p><br />
+Best,</p>
+
+<p>{{{Sender.FirstName}}}<br />
+MyCase Website Services Team<br />
+Case #{{{Case.CaseNumber}}}</p>
+
+</body></html>

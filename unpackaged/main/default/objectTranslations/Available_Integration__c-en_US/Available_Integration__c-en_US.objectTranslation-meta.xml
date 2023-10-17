@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Available Integration</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Available Integrations</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Available Integration Layout</layout>
+        <sections>
+            <label><!-- API Usages --></label>
+            <section>API Usages</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Features --></label>
+            <section>Features</section>
+        </sections>
+        <sections>
+            <label><!-- Legacy Notes --></label>
+            <section>Legacy Notes</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Software Integration Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Enablement Details --></label>
+            <section>Enablement Details</section>
+        </sections>
+        <sections>
+            <label><!-- Legacy Notes --></label>
+            <section>Legacy Notes</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Payment --></label>
+        <name>Payment</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Software --></label>
+        <name>Software</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

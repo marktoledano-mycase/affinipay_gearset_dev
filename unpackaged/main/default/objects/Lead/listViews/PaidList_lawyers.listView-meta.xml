@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PaidList_lawyers</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.LAST_ACTIVITY</columns>
+    <columns>LEAD.EMPLOYEES</columns>
+    <columns>Primary_Practice_Area__c</columns>
+    <filterScope>Mine</filterScope>
+    <label>2023-06: Paid List: Lawyers</label>
+    <sharedTo>
+        <group>Payments_BDR</group>
+        <roleAndSubordinates>Sales_Manager_Payments_BDR</roleAndSubordinates>
+    </sharedTo>
+</ListView>

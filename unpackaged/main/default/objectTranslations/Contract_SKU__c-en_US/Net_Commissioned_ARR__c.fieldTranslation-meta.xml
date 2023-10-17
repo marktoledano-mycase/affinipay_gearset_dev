@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Reflects the Unit Commissioned ARR field value from the related opportunity SKU record multiplied by the User Count on this record. --></help>
+        <label><!-- Net Commissioned ARR --></label>
+        <name>Net_Commissioned_ARR__c</name>
+    </CustomFieldTranslation>

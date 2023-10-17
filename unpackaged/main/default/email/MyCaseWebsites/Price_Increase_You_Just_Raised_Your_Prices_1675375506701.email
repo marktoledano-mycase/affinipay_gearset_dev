@@ -1,0 +1,14 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">Hi {{{Recipient.FirstName}}},
+<p style="line-height:1.2"><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-variant: normal; white-space: pre-wrap;"><span style="color:#000000"><span style="font-weight:400"><span style="font-style:normal"><span style="text-decoration:none">I definitely understand why you would have concerns about this. These increases are not taken lightly or without need, as we recognize the impact it has on our customers.</span></span></span></span></span></span></span></p>
+
+<p style="line-height:1.2"><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-variant: normal; white-space: pre-wrap;"><span style="color:#000000"><span style="font-weight:400"><span style="font-style:normal"><span style="text-decoration:none">Like many other industries, our operating costs have risen substantially over the past year, driven by inflation and other economic factors. We want to sustain our ability to offer you the highest quality products and customer support possible, which means we have to change our prices sooner than we normally might have. </span></span></span></span></span><br />
+<br />
+<span style="font-variant: normal; white-space: pre-wrap;"><span style="color:#000000"><span style="font-weight:400"><span style="font-style:normal"><span style="text-decoration:none">We evaluate our pricing periodically to determine the best possible pricing structure as we continue to add new features and functionality and the cost of business changes. We only increase our pricing when it is needed to maintain our product and the high level of service we provide, and fair for the value our customers are receiving.</span></span></span></span></span></span></span></p>
+Thank you,<br />
+{{{Sender.FirstName}}}<br />
+Case #{{{Case.CaseNumber}}}</body>
+</html>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Has_Referral_Partner__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+   ISBLANK( Referral_Partnership__c ),
+   FALSE,
+   TRUE
+   )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Displays TRUE when there is a Referral Partner referenced on the opportunity.</inlineHelpText>
+    <label>Has Referral Partner</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

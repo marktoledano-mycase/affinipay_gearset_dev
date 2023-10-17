@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Links to the SKU product record that this addon user supplements --></help>
+        <label><!-- Associated Main Product --></label>
+        <name>Associated_Main_Product__c</name>
+        <relationshipLabel><!-- SKU Products (Associated Main Product) --></relationshipLabel>
+    </CustomFieldTranslation>

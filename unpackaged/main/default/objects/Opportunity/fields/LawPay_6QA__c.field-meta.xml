@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LawPay_6QA__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Will be populated at opportunity creation if Account has LawPay 6QA selected.  This is for 6sense tracking.</description>
+    <externalId>false</externalId>
+    <label>LawPay 6QA</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Onboarding_POC__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Person driving onboarding at the firm for MyCase Onboarding/CS Team</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Person driving onboarding at the firm for MyCase Onboarding/CS Team</inlineHelpText>
+    <label>Onboarding POC</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Opportunities (Onboarding POC)</relationshipLabel>
+    <relationshipName>OpportunitiesJYKx</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Lookup</type>
+</CustomField>

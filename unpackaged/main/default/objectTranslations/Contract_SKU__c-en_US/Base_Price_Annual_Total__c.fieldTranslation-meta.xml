@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Displays the annual total by calculating base unit price * user count rollup --></help>
+        <label><!-- zz Base Price Annual Total --></label>
+        <name>Base_Price_Annual_Total__c</name>
+    </CustomFieldTranslation>

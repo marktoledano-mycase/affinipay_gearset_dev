@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Explains to a client their website&#39;s standing regarding ADA Compliance  (Audit customer website for compliance before using email.)</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>MyCase Website Services - ADA Compliance Inquiries</name>
+    <relatedEntityType>Case</relatedEntityType>
+    <style>none</style>
+    <subject>MyCase Website Services | Americans with Disabilities Act Compliance - Case # {{{Case.CaseNumber}}}</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">Hi {{{Recipient.FirstName}}},<br />
+<br />
+I have created an account for you to edit your website on our newly upgraded platform. A link was sent to you to create your login credentials, but you can also use this link, <b>ADD LINK</b><br />
+<br />
+You may use the following link to find articles to help guide you in making edits to your website:&nbsp;<b>https://help.mycase.com/s/article/Websites-Resources-for-our-New-MyCase-Website-Platform#WebsiteHelpCenter</b><br />
+<br />
+If you need assistance with making your edits, please don't hesitate to reach out to us at <b>websites@mycase.com</b>.<br />
+<br />
+Thank you,<br />
+{{{Sender.FirstName}}}<br />
+MyCase Website Services Team<br />
+Case #{{{Case.CaseNumber}}}
+</body></html>

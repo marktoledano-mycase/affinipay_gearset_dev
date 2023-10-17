@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- zz Practice Area --></label>
+        <name>Practice_Area_Soluno__c</name>
+        <picklistValues>
+            <masterLabel>Bankruptcy &amp; Debt</masterLabel>
+            <translation><!-- Bankruptcy &amp; Debt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business</masterLabel>
+            <translation><!-- Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consumer Protection</masterLabel>
+            <translation><!-- Consumer Protection --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Criminal Defense</masterLabel>
+            <translation><!-- Criminal Defense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employment</masterLabel>
+            <translation><!-- Employment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Entertainment</masterLabel>
+            <translation><!-- Entertainment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Estate &amp; Trust</masterLabel>
+            <translation><!-- Estate &amp; Trust --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Family Law</masterLabel>
+            <translation><!-- Family Law --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General Practice</masterLabel>
+            <translation><!-- General Practice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Immigration</masterLabel>
+            <translation><!-- Immigration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Litigation</masterLabel>
+            <translation><!-- Litigation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal Injury</masterLabel>
+            <translation><!-- Personal Injury --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Real Estate</masterLabel>
+            <translation><!-- Real Estate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tax</masterLabel>
+            <translation><!-- Tax --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transactional</masterLabel>
+            <translation><!-- Transactional --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

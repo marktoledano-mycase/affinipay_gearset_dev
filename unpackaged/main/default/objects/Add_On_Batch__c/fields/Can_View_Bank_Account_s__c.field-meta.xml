@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Can_View_Bank_Account_s__c</fullName>
+    <description>Will determine which Conga Template to Use on Bank Auth</description>
+    <externalId>false</externalId>
+    <formula>OR( $Profile.Name = &#39;Value+ Management&#39;, $Profile.Name = &#39;Value+ Payment Services&#39;, $Profile.Name = &#39;Value+ Website Services&#39;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Can View Bank Account #s</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

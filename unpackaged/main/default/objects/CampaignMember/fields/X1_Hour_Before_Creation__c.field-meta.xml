@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X1_Hour_Before_Creation__c</fullName>
+    <description>Created by R163669</description>
+    <externalId>false</externalId>
+    <formula>CreatedDate - 0.04097222222222</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>1 Hour Before Creation</label>
+    <required>false</required>
+    <type>DateTime</type>
+</CustomField>

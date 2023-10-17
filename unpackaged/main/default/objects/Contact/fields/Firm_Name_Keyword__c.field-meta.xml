@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Firm_Name_Keyword__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( 
+OR(
+CONTAINS( Account.Name, &quot;Law&quot;),
+CONTAINS( Account.Name, &quot;Firm&quot;),
+CONTAINS( Account.Name, &quot;Attorney&quot;),
+CONTAINS( Account.Name, &quot;Legal&quot;),
+CONTAINS( Account.Name, &quot;Office&quot;),
+CONTAINS( Account.Name, &quot;Mediation&quot;),
+CONTAINS( Account.Name, &quot;Lawyer&quot;),
+CONTAINS( Account.Name, &quot;law&quot;),
+CONTAINS( Account.Name, &quot;firm&quot;),
+CONTAINS( Account.Name, &quot;attorney&quot;),
+CONTAINS( Account.Name, &quot;legal&quot;),
+CONTAINS( Account.Name, &quot;office&quot;),
+CONTAINS( Account.Name, &quot;lawyer&quot;)
+),
+
+TRUE, FALSE)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Firm Name Keyword</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

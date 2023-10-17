@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_MyCase_Payments_Agreement_OLD_Sertifi</fullName>
+    <availability>online</availability>
+    <description>R178745; R1923229</description>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>Send Designated Signer Agreement</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>/apex/Sertifi2_0__CreateSignatureRequest?ObjectId={!ValuePlus__c.Id}
+&amp;filename={!ValuePlus__c.Name}
+&amp;Customsettings=ValuePlus
+&amp;ResourceGroup=MyCase
+&amp;AttachmentId=a383g0000006PnD
+&amp;ExpireFolderOn={!TODAY()+6}
+&amp;1stsigner={!ValuePlus__c.On_Boarding_Contact_PrimaryId__c}</url>
+</WebLink>

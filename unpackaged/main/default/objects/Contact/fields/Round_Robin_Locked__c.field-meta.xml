@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Round_Robin_Locked__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used a flag field to exclude record from passing into the round robin assignment</description>
+    <externalId>false</externalId>
+    <inlineHelpText>When checked, record will be excluded round robin assignment via automated processes</inlineHelpText>
+    <label>Round Robin Locked</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

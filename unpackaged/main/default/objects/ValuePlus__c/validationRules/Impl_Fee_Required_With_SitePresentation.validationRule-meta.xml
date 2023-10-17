@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Impl_Fee_Required_With_SitePresentation</fullName>
+    <active>true</active>
+    <description>Stage can&#39;t be set to Site Presentation with Implementation Fee</description>
+    <errorConditionFormula>ISPICKVAL(Stage__c,&#39;Site Presentation&#39; )  &amp;&amp;  
+ No_Website_2_0_Processing__c = TRUE &amp;&amp;
+( (ISPICKVAL(MyCaseWebsiteImplFee__c,&#39;995&#39;) = FALSE)  &amp;&amp;   (ISPICKVAL(MyCaseWebsiteImplFee__c,&#39;500&#39;) = FALSE) &amp;&amp;   (ISPICKVAL(MyCaseWebsiteImplFee__c,&#39;1500&#39;) = FALSE) &amp;&amp;   (ISPICKVAL(MyCaseWebsiteImplFee__c,&#39;750&#39;) = FALSE)&amp;&amp;   (ISPICKVAL(MyCaseWebsiteImplFee__c,&#39;0&#39;) = FALSE))</errorConditionFormula>
+    <errorDisplayField>Stage__c</errorDisplayField>
+    <errorMessage>Select the MyCase Website Implementation fee to set Stage as Site Presentation</errorMessage>
+</ValidationRule>

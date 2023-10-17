@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Soluno_Opp_Product_Compact</fullName>
+    <fields>Name</fields>
+    <fields>SKU_Product__c</fields>
+    <fields>Opportunity__c</fields>
+    <fields>CurrencyIsoCode</fields>
+    <fields>Price_Base__c</fields>
+    <label>Soluno - Opp Product Compact</label>
+</CompactLayout>

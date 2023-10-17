@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MQL_LawPay_AM</fullName>
+    <columns>Assignment_Group__c</columns>
+    <columns>NAME</columns>
+    <columns>User__c</columns>
+    <columns>Status__c</columns>
+    <columns>Min_Number_of_Employees__c</columns>
+    <columns>Last_Assignment__c</columns>
+    <columns>Is_Active__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Assignment_Group__c</field>
+        <operation>equals</operation>
+        <value>MQL - LawPay AM</value>
+    </filters>
+    <filters>
+        <field>Min_Number_of_Employees__c</field>
+        <operation>lessOrEqual</operation>
+        <value>5</value>
+    </filters>
+    <filters>
+        <field>Is_Active__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>MQL - LawPay AM</label>
+</ListView>

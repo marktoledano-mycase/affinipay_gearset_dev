@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Giact_St_Change_to_Automated_Approval</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    GiactValidationFlag__c = FALSE,
+    ISCHANGED(GiactStatus__c),
+    TEXT(PRIORVALUE(GiactStatus__c)) &lt;&gt; &#39;Automated Approval&#39;,
+    ISPICKVAL(GiactStatus__c, &#39;Automated Approval&#39;)
+)</errorConditionFormula>
+    <errorMessage>You are not authorized to change the &#39;Giact Status&#39; to &#39;Automated Approval&#39;</errorMessage>
+</ValidationRule>

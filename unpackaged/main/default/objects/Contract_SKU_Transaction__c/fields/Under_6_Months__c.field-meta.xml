@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Under_6_Months__c</fullName>
+    <description>This is used to calculate commissions. Other date math formulas were not used since they cannot handle partial months.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+    TEXT(Contract_SKU__r.SKU_Product__r.Product_Type__c) = &quot;Add-On&quot;,
+    ADDMONTHS(Contract_Effective_Date__c, 6) &gt;= Effective_Date__c,
+    IF(
+        ADDMONTHS(Opportunity_Close_Date__c, 6) &gt;= Effective_Date__c,
+        TRUE,
+        FALSE
+    )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Compared with the Subscription Contract&#39;s Effective Date.</inlineHelpText>
+    <label>Under 6 Months?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

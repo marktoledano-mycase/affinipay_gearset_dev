@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- For Sales Engineering product feedback on deals --></help>
+        <label><!-- Product Feedback Category --></label>
+        <name>Product_Feedback_Category__c</name>
+        <picklistValues>
+            <masterLabel>AI &amp; Automation</masterLabel>
+            <translation><!-- AI &amp; Automation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Accounting</masterLabel>
+            <translation><!-- Accounting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Court Forms</masterLabel>
+            <translation><!-- Court Forms --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email Automation</masterLabel>
+            <translation><!-- Email Automation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Evergreen Retainers</masterLabel>
+            <translation><!-- Evergreen Retainers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group Permissions</masterLabel>
+            <translation><!-- Group Permissions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payable Statements</masterLabel>
+            <translation><!-- Payable Statements --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rate Schedules</masterLabel>
+            <translation><!-- Rate Schedules --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reporting</masterLabel>
+            <translation><!-- Reporting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Security &amp; Compliance</masterLabel>
+            <translation><!-- Security &amp; Compliance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Split Billing</masterLabel>
+            <translation><!-- Split Billing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Updating Case Rates</masterLabel>
+            <translation><!-- Updating Case Rates --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,28 @@
+Hello!
+
+We successfully received your support request and are currently routing it to the appropriate person for research and follow-up.
+
+In the meantime, please feel free to use the help resources available in your AppFolio database under the "Help & Training" drop down at the top of any page.
+
+Here are your case details if you need to reference them in the future:
+
+Case Number: {!Case.CaseNumber}
+Case Created Date: {!Case.CreatedDate}
+Case Subject: {!Case.Subject}
+
+
+We are dedicated to providing excellent customer service and look forward to assisting you!
+
+Thank you,
+
+AppFolio Customer Success
+
+
+--
+AppFolio, Inc.
+50 Castilian Dr. | Goleta, CA | 93117
+Phone: 866.648.1536
+www.appfolio.com
+------------------------------
+
+{!Case.Thread_Id}

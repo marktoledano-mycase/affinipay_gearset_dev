@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Primary reason for the churn of this client --></help>
+        <label><!-- Churn Reason --></label>
+        <name>Churn_Reason__c</name>
+    </CustomFieldTranslation>

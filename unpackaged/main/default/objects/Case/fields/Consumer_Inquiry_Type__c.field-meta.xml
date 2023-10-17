@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Consumer_Inquiry_Type__c</fullName>
+    <description>Updated R166234</description>
+    <externalId>false</externalId>
+    <label>Inquiry Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Copy of Report</fullName>
+                <default>false</default>
+                <label>Copy of Report</label>
+            </value>
+            <value>
+                <fullName>Credit</fullName>
+                <default>false</default>
+                <label>Credit</label>
+            </value>
+            <value>
+                <fullName>Credit Dispute</fullName>
+                <default>false</default>
+                <label>Credit Dispute</label>
+            </value>
+            <value>
+                <fullName>Credit Inquiry</fullName>
+                <default>false</default>
+                <label>Credit Inquiry</label>
+            </value>
+            <value>
+                <fullName>Criminal</fullName>
+                <default>false</default>
+                <label>Criminal</label>
+            </value>
+            <value>
+                <fullName>Criminal Dispute</fullName>
+                <default>false</default>
+                <label>Criminal Dispute</label>
+            </value>
+            <value>
+                <fullName>Criminal Inquiry</fullName>
+                <default>false</default>
+                <label>Criminal Inquiry</label>
+            </value>
+            <value>
+                <fullName>Eviction</fullName>
+                <default>false</default>
+                <label>Eviction</label>
+            </value>
+            <value>
+                <fullName>Eviction Dispute</fullName>
+                <default>false</default>
+                <label>Eviction Dispute</label>
+            </value>
+            <value>
+                <fullName>Expungement Order Request</fullName>
+                <default>false</default>
+                <label>Expungement Order Request</label>
+            </value>
+            <value>
+                <fullName>File Disclosure</fullName>
+                <default>false</default>
+                <label>File Disclosure</label>
+            </value>
+            <value>
+                <fullName>General Question</fullName>
+                <default>false</default>
+                <label>General Question</label>
+            </value>
+            <value>
+                <fullName>ID Theft</fullName>
+                <default>false</default>
+                <label>ID Theft</label>
+            </value>
+            <value>
+                <fullName>Missed Criminal</fullName>
+                <default>false</default>
+                <label>Missed Criminal</label>
+            </value>
+            <value>
+                <fullName>Missed Eviction</fullName>
+                <default>false</default>
+                <label>Missed Eviction</label>
+            </value>
+            <value>
+                <fullName>Permissible Purpose</fullName>
+                <default>false</default>
+                <label>Permissible Purpose</label>
+            </value>
+            <value>
+                <fullName>RentBureau</fullName>
+                <default>false</default>
+                <label>RentBureau</label>
+            </value>
+            <value>
+                <fullName>Subpoena Debt Collection Request</fullName>
+                <default>false</default>
+                <label>Subpoena Debt Collection Request</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

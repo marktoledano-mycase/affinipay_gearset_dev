@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Jira_Sync__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checked through Salesforce Flow when case should sync to JIRA through workato</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Checked through Salesforce Flow when case should sync to JIRA through workato</inlineHelpText>
+    <label>Jira Sync</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

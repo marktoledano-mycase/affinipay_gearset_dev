@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Property Management</fullName>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Closed</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Closed - No Response</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Conf Received From Data Furnisher</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Documents Submitted</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Escalated</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Escalated - Partners</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Escalated - VAS</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>In Progress</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>In Progress%3A Waiting on Client</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>NDIC</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>New</fullName>
+        <default>true</default>
+    </values>
+    <values>
+        <fullName>New Customer Email</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Pending Data Furnisher Update</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Re-Opened</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Scheduled Call</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Send Follow Up</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Send Follow Up - No Response</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Waiting to Close</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Waiting to Close - No Response</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

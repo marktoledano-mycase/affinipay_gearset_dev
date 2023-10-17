@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Disqualified Reason --></label>
+        <name>Disqualified_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Customer Client</masterLabel>
+            <translation><!-- Customer Client --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Do Not Contact</masterLabel>
+            <translation><!-- Do Not Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Is Competitor</masterLabel>
+            <translation><!-- Is Competitor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Is Employee</masterLabel>
+            <translation><!-- Is Employee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Junk Data</masterLabel>
+            <translation><!-- Junk Data --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not in ICP</masterLabel>
+            <translation><!-- Not in ICP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student</masterLabel>
+            <translation><!-- Student --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UW Fraud</masterLabel>
+            <translation><!-- UW Fraud --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UW Junk</masterLabel>
+            <translation><!-- UW Junk --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UW Not Approved Business</masterLabel>
+            <translation><!-- UW Not Approved Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UW Payment Attempt</masterLabel>
+            <translation><!-- UW Payment Attempt --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

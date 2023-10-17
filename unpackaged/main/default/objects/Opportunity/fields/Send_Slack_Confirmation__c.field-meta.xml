@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Slack_Confirmation__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>When checked Workato will send a slack confirmation to opportunity owners for processes integrating through Workato</description>
+    <externalId>false</externalId>
+    <label>Send Slack Confirmation</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

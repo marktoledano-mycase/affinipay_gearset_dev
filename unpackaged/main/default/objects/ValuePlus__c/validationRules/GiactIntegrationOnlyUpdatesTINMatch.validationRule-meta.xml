@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GiactIntegrationOnlyUpdatesTINMatch</fullName>
+    <active>true</active>
+    <description>R1811240</description>
+    <errorConditionFormula>$Profile.Name != &#39;System Administrator&#39; &amp;&amp; 
+NOT(CONTAINS($Profile.Name, &#39;Integration&#39;))&amp;&amp;
+ISPICKVAL(TIN_Match__c,&quot;Automated Approval&quot;) &amp;&amp;
+ISCHANGED(TIN_Match__c) &amp;&amp;
+GiactValidationFlag__c = FALSE</errorConditionFormula>
+    <errorDisplayField>of_Monthly_Contributions__c</errorDisplayField>
+    <errorMessage>Only the GIACT Integration can update the TIN Match to &quot;Automated Approval&quot;</errorMessage>
+</ValidationRule>

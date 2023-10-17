@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Professional Services Specialist --></label>
+        <name>Professional_Services_Specialist__c</name>
+        <relationshipLabel><!-- ValuePlus (Professional Services Specialist) --></relationshipLabel>
+    </CustomFieldTranslation>

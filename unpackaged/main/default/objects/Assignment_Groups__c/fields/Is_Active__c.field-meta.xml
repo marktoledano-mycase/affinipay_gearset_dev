@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Active__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    (
+        User_Is_Active__c = FALSE ||
+        Is_Paused__c = TRUE ||
+        Start_At__c &gt; NOW() ||
+        End_At__c &lt; NOW()
+    ),
+    FALSE,
+    TRUE
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Is Active</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

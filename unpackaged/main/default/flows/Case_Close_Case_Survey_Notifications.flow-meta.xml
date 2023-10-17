@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Sends Email Alert: MyCase Support Close Case Survey</description>
+        <name>Send_MyCase_Support_Close_Case_Survey</name>
+        <label>Send MyCase Support Close Case Survey</label>
+        <locationX>600</locationX>
+        <locationY>957</locationY>
+        <actionName>Case.MyCase_Support_Close_Case_Survey</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>Update_Case</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <description>Triggers email alert: Website Case Close Survey</description>
+        <name>Send_Website_Case_Close</name>
+        <label>Send Website Case Close</label>
+        <locationX>386</locationX>
+        <locationY>953</locationY>
+        <actionName>Case.MyCase_Case_Close_Survey</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>Update_Case</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>56.0</apiVersion>
+    <assignments>
+        <description>Updates Contact record variable for update later in process</description>
+        <name>Contact_Last_Survey_Sent_Update</name>
+        <label>Contact Last Survey Sent Update</label>
+        <locationX>306</locationX>
+        <locationY>749</locationY>
+        <assignmentItems>
+            <assignToReference>rv_Case_Contact.Last_Survey_Sent__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>for_Today</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Record_Type</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>End_Flow</name>
+        <label>End Flow</label>
+        <locationX>450</locationX>
+        <locationY>456</locationY>
+        <assignmentItems>
+            <assignToReference>EndFlow</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>end flow</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Not_Supported_Case_Record_Type</name>
+        <label>Not Supported Case Record Type</label>
+        <locationX>703</locationX>
+        <locationY>754</locationY>
+        <assignmentItems>
+            <assignToReference>EndFlow</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>END</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <constants>
+        <description>MyCase Support Case Record Type ID</description>
+        <name>MC_Support_Record_Type</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>0128W000001DllNQAS</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <name>Websites_Support_Record_Type</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>0128W000001DllOQAS</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <name>Contact_Check</name>
+        <label>Contact Check</label>
+        <locationX>163</locationX>
+        <locationY>588</locationY>
+        <defaultConnector>
+            <targetReference>Get_Contact_Record</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Contact Check Passed</defaultConnectorLabel>
+        <rules>
+            <name>No_Contact</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.ContactId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>End_Flow</targetReference>
+            </connector>
+            <label>No Contact</label>
+        </rules>
+        <rules>
+            <name>No_Email_Address</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Contact.Email</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>End_Flow</targetReference>
+            </connector>
+            <label>No Email Address</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Record_Type</name>
+        <label>Record Type</label>
+        <locationX>484</locationX>
+        <locationY>751</locationY>
+        <defaultConnector>
+            <targetReference>Not_Supported_Case_Record_Type</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>MyCase_Support</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>MC_Support_Record_Type</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Owner:Group.Name</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>MyCase Customer Feedback</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_MyCase_Support_Close_Case_Survey</targetReference>
+            </connector>
+            <label>MyCase Support</label>
+        </rules>
+        <rules>
+            <name>Website_Support</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Websites_Support_Record_Type</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Website_Case_Close</targetReference>
+            </connector>
+            <label>Website Support</label>
+        </rules>
+    </decisions>
+    <description>Manages Emails notifications On closed actions.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>for_Today</name>
+        <dataType>Date</dataType>
+        <expression>today()</expression>
+    </formulas>
+    <interviewLabel>Case - Close Case Survey Notifications {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Case - Close Case Survey Notifications</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Gets the Contact record for Update later in flow</description>
+        <name>Get_Contact_Record</name>
+        <label>Get Contact Record</label>
+        <locationX>169</locationX>
+        <locationY>748</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Contact_Last_Survey_Sent_Update</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.ContactId</elementReference>
+            </value>
+        </filters>
+        <object>Contact</object>
+        <outputAssignments>
+            <assignToReference>rv_Case_Contact.Id</assignToReference>
+            <field>Id</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>rv_Case_Contact.Last_Survey_Sent__c</assignToReference>
+            <field>Last_Survey_Sent__c</field>
+        </outputAssignments>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Case</name>
+        <label>Update Case</label>
+        <locationX>488</locationX>
+        <locationY>1123</locationY>
+        <connector>
+            <targetReference>Update_Contact</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Case_Closed_Notification_Sent__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Contact</name>
+        <label>Update Contact</label>
+        <locationX>488</locationX>
+        <locationY>1259</locationY>
+        <inputReference>rv_Case_Contact</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>43</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Contact_Check</targetReference>
+        </connector>
+        <filterFormula>{!$Record.IsClosed} = TRUE &amp;&amp; 
+NOT(ISPICKVAL({!$Record.Origin}, &quot;Email (Woodpecker Support)&quot;)) &amp;&amp;
+{!$Record.Send_Case_Close_Notification_Survey__c} = TRUE &amp;&amp;
+{!$Record.Case_Closed_Notification_Sent__c} = FALSE &amp;&amp;
+Text({!$Record.Reason} )!= &quot;Admin/Duplicates&quot; &amp;&amp;
+NOT(ISNULL({!$Record.ContactId}))  &amp;&amp;
+(isnull({!$Record.Contact.Last_Survey_Sent__c}) ||
+{!$Record.Contact.Last_Survey_Sent__c} &lt; Today () )</filterFormula>
+        <object>Case</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>EndFlow</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>rv_Case_Contact</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Contact</objectType>
+    </variables>
+</Flow>

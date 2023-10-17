@@ -1,0 +1,21 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">Hi {{{Recipient.FirstName}}},<br />
+<br />
+Thank you for reaching out!<br />
+<br />
+I understand you are interested in changing your domain name. Our team is happy to assist in this process, but first, we would like to alert you about some aspects of changing your domain name:&nbsp;
+<ol>
+	<li>Changing domain names commonly negatively impact SEO&nbsp;</li>
+	<li>To help mitigate the negative effects, domain forwarding can be used</li>
+	<li>3rd party features such as email services will be affected</li>
+</ol>
+If you would like to proceed, please let us know if you have already purchased a new domain name you would like to use. Our team will then reach out to you with the next steps.<br />
+<br />
+Thank you,<br />
+{{{Sender.FirstName}}}&nbsp;<br />
+MyCase Website Services Team<br />
+Case #&nbsp;{{{Case.CaseNumber}}}</body>
+</html>

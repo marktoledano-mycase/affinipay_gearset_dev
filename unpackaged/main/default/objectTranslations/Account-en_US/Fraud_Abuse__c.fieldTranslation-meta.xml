@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Fraud/Abuse/Legal --></label>
+        <name>Fraud_Abuse__c</name>
+        <picklistValues>
+            <masterLabel>Account Ownership Dispute</masterLabel>
+            <translation><!-- Account Ownership Dispute --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Initiated Lockdown</masterLabel>
+            <translation><!-- Customer Initiated Lockdown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fraudulent Account</masterLabel>
+            <translation><!-- Fraudulent Account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Legal/Compliance</masterLabel>
+            <translation><!-- Legal/Compliance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payments Disabled</masterLabel>
+            <translation><!-- Payments Disabled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Account Owner Identification</masterLabel>
+            <translation><!-- Pending Account Owner Identification --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Suspicious Account</masterLabel>
+            <translation><!-- Suspicious Account --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GVF_MyCase_Principal_4</fullName>
+    <columns>NAME</columns>
+    <columns>SETUP_TYPE</columns>
+    <columns>FieldPath__c</columns>
+    <columns>Field_Path__c</columns>
+    <columns>GIACTName__c</columns>
+    <columns>HardcodedValue__c</columns>
+    <columns>Required__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>GVF MyCase Principal 4</label>
+</ListView>

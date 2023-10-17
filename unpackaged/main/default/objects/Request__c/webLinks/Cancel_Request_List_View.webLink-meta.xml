@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancel_Request_List_View</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Cancel Request</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/29.0/connection.js&quot;)} 
+
+var request = new sforce.SObject(&#39;Request__c&#39;); 
+
+if(&#39;{!Request__c.Stage__c}&#39; == &#39;Developing&#39;){ 
+alert(&#39;You can\&#39;t cancel a Request in development, please contact the Business Systems team.&#39;); 
+} 
+
+else if(&#39;{!Request__c.Stage__c}&#39; == &#39;User Acceptance Testing&#39;){ 
+alert(&#39;You can\&#39;t cancel a Request in User Acceptance Testing, please contact the Business Systems team.&#39;); 
+} 
+
+else if(&#39;{!Request__c.Stage__c}&#39; == &#39;Complete&#39; || &#39;{!Request__c.Stage__c}&#39; == &#39;Cancelled - Business Unit&#39; || &#39;{!Request__c.Stage__c}&#39; == &#39;Cancelled - Business Systems Team&#39; ){ 
+alert(&#39;You can\&#39;t cancel a completed or cancelled Request.&#39;);} 
+
+else if(&#39;{!User.Id}&#39; != &#39;{!Request__c.RequesterId__c}&#39; &amp;&amp; &#39;{!Request__c.Business_Unit__c}&#39; != &#39;{!User.Business_Unit__c}&#39; &amp;&amp; (&#39;{!User.FirstName}&#39; + &#39; &#39; + &#39;{!User.LastName}&#39; != &#39;{!Request__c.Business_Unit_Leader__c}&#39;) &amp;&amp; &#39;{!User.Id}&#39; != &quot;00580000005FZZQ&quot; &amp;&amp; &#39;{!User.Id}&#39; != &quot;00580000003ZveU&quot; ){ 
+alert(&#39;This request is for &#39; + &#39;{!Request__c.Business_Unit__c}&#39; + &#39; not for &#39; + &#39;{!User.Business_Unit__c}&#39; + &#39;. Please ask that this be cancelled by &#39; + &#39;{!Request__c.Business_Unit_Leader__c}&#39; + &#39;, &#39; + &#39;{!Request__c.Requester__c}&#39; + &#39;, or the Business System Team.&#39;); 
+} 
+
+else if(&#39;{!User.Id}&#39; != &#39;{!Request__c.RequesterId__c}&#39; &amp;&amp; &#39;{!User.Id}&#39; != &#39;{!Request__c.CreatedById}&#39; &amp;&amp; (&#39;{!User.FirstName}&#39; + &#39; &#39; + &#39;{!User.LastName}&#39; != &#39;{!Request__c.Business_Unit_Leader__c}&#39;) &amp;&amp; &#39;{!User.Id}&#39; != &quot;00580000005FZZQ&quot; &amp;&amp; &#39;{!User.Id}&#39; != &quot;00580000003ZveU&quot;){ 
+alert(&#39;You did not create this, you did not request it, and you\&#39;re not the Business Unit Leader, were you just feeling lucky\? Please ask that this be cancelled by &#39; + &#39;{!Request__c.Business_Unit_Leader__c}&#39; + &#39;, &#39; + &#39;{!Request__c.Requester__c}&#39; + &#39;, &#39; + &#39;{!Request__c.CreatedBy}&#39; + &#39;, or the Business System Team.&#39;);} 
+
+else { 
+request.id = &#39;{!Request__c.Id}&#39;; 
+request.Hours_Worked__c = 0; 
+if((&#39;{!User.Id}&#39; == &quot;00580000005FZZQ&quot; || &#39;{!User.Id}&#39; == &quot;00580000003ZveU&quot;) &amp;&amp; &#39;{!Request__c.Business_Unit__c}&#39; != &quot;Business Systems&quot;){ 
+request.stage__c = &quot;Cancelled - Business Systems Team&quot;;} 
+else { 
+request.stage__c = &quot;Cancelled - Business Unit&quot;;} 
+
+
+result = sforce.connection.update([request]); 
+
+if ( result[0].getBoolean( &quot;success&quot; ) ) { 
+
+location.reload( true ); 
+
+} 
+else{alert(&#39;You officially have 100 problems, because this button seems to be broken. Please create a Production Support Request at https://&#39; + window.location.hostname + &#39;/a1s/o&#39;)} 
+}</url>
+</WebLink>

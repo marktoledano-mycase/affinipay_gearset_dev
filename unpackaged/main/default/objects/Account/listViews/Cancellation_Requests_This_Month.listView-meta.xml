@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancellation_Requests_This_Month</fullName>
+    <columns>Customer_Contacted_Cancellation_Date__c</columns>
+    <columns>AffiniPay_VT__c</columns>
+    <columns>List_ZD_Ticket__c</columns>
+    <columns>Customer_Retention_Owner__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Customer_Retained__c</columns>
+    <columns>Strategy_Used_to_Retain__c</columns>
+    <columns>Closed_Reason__c</columns>
+    <columns>Cancellation_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Customer_Contacted_Cancellation_Date__c</field>
+        <operation>equals</operation>
+        <value>THIS_MONTH</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Customer</value>
+    </filters>
+    <label>Cancellation Requests This Month</label>
+    <sharedTo>
+        <group>Customer_Retention_Team</group>
+    </sharedTo>
+</ListView>

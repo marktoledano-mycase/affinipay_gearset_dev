@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conga_Template_Send_Bank_Auth__c</fullName>
+    <description>Field to determine which template is sent depending on the Number of Bank Accounts and the related Value+ Record Type.</description>
+    <externalId>false</externalId>
+    <formula>IF(More_Than_14_Bank_Accounts_in_Batch__c = TRUE &amp;&amp;  ValuePlus__r.RecordType.DeveloperName = &#39;APM_Payments&#39;, &#39;a1T80000000MZwt,a1T80000000MZpt&#39;, 
+IF(More_Than_14_Bank_Accounts_in_Batch__c = TRUE &amp;&amp;  ValuePlus__r.RecordType.DeveloperName = &#39;IM_Payments&#39;, &#39;a1T2E000009HK06,a1T80000000MZpt&#39;, 
+IF(More_Than_14_Bank_Accounts_in_Batch__c = FALSE &amp;&amp;  ValuePlus__r.RecordType.DeveloperName = &#39;APM_Payments&#39;, &#39;a1T80000005Idot&#39;, 
+&#39;a1T2E000009HK01&#39;)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Conga Template Send Bank Auth</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

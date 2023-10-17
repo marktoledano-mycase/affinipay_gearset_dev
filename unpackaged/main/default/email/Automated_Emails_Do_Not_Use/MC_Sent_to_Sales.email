@@ -1,0 +1,9 @@
+The following case has been closed and Sent to Sales:
+{!Case.Link}
+
+Contact Name: {!Contact.Name}
+Account Name: {!Account.Name}
+Contact Phone: {!Contact.Phone}
+Contact Email: {!Contact.Email}
+Case Subject: {!Case.Subject}
+Case Description: {!Case.Description}

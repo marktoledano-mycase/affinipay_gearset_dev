@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Enter user id, or comma separated user ids, that will be used as default for apex processes --></help>
+        <label><!-- User Id --></label>
+        <name>User_Id__c</name>
+    </CustomFieldTranslation>

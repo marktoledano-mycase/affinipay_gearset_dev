@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Productivity_Tools__c</fullName>
+    <description>MC; R1813150; 
+This field needs to be updated accordingly with its counterpart on account</description>
+    <externalId>false</externalId>
+    <formula>IF(INCLUDES( Account.Other_Productivity_Tools__c  , &quot;Office 365&quot;), &quot;Office 365&quot; +  BR() , NULL)+
+IF(INCLUDES( Account.Other_Productivity_Tools__c  , &quot;MS Office (includes Outlook)&quot;), &quot;MS Office (includes Outlook)&quot; +  BR() , NULL) + 
+IF(INCLUDES( Account.Other_Productivity_Tools__c  , &quot;QB Online&quot;), &quot;QB Online&quot; +  BR() ,Null) + 
+IF(INCLUDES( Account.Other_Productivity_Tools__c  , &quot;QB Desktop&quot;), &quot;QB Desktop&quot; +  BR() , NULL) + 
+IF(INCLUDES( Account.Other_Productivity_Tools__c  , &quot;G Suite (includes Gmail)&quot;), &quot;G Suite (includes Gmail)&quot; +  BR() , NULL) + 
+IF(INCLUDES( Account.Other_Productivity_Tools__c  , &quot;Dropbox&quot;), &quot;Dropbox&quot; +  BR() , NULL) + 
+IF(INCLUDES( Account.Other_Productivity_Tools__c  , &quot;Other&quot;), &quot;Other&quot; +  BR() , NULL) + 
+IF(INCLUDES( Account.Other_Productivity_Tools__c  , &quot;WordPerfect&quot;), &quot;WordPerfect&quot; +  BR() , NULL) + 
+IF(INCLUDES( Account.Other_Productivity_Tools__c  , &quot;Sharepoint&quot;), &quot;Sharepoint&quot; +  BR() , NULL) + 
+IF(INCLUDES( Account.Other_Productivity_Tools__c  , &quot;Paper System&quot;), &quot;Paper System&quot; +  BR() , NULL)</formula>
+    <label>Other Productivity Tools</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MyCase_Status_NEW__c</fullName>
+    <description>R166315 &amp; R176745, edited R176971, edited R179259, R1812783; updated R1914897, R2026405
+Please coordinate with Marketing.ops@appfolio.com, cat.allday@mycase.com, felicia.tripa@mycase.com, and Marketing@mycase.com prior to updating this field in production.</description>
+    <externalId>false</externalId>
+    <formula>IF(MC_Deleted__c = true, &quot;Deleted&quot;,
+
+IF(MC_Fake_Firm__c = true, &quot;Internal&quot;,
+IF(MC_Free_Account__c = true, &quot;Customer&quot;,
+IF( AND( ISBLANK(Conversion_Date__c), MC_In_Trial_Formula__c = false, OR((CreatedById = &quot;0053g000001K3XA&quot;), ( Legacy_CreatedByIdText__c = &quot;00580000003a8arAAA&quot;), ( Legacy_CreatedByIdText__c = &quot;00580000005HBNnAAO&quot;), ( Legacy_CreatedByIdText__c = &quot;00580000005EP3JAAW&quot;))), &quot;Expired Trial&quot;,
+IF( AND( NOT(ISBLANK(MC_Cancelled_DateOnly__c)), NOT(ISBLANK(Conversion_Date__c)) ), &quot;Churned&quot;,
+IF( AND( NOT(ISBLANK(Conversion_Date__c)), MC_In_Trial_Formula__c = true ), &quot;In Trial - Converted&quot;,
+IF(MC_In_Trial_Formula__c = true, &quot;In Trial&quot;,
+IF( AND( NOT(ISBLANK(Conversion_Date__c)), MC_In_Trial_Formula__c = false, MyCase_Customer_New_Formula__c = false, ISBLANK(MC_Suspended_DateOnly__c)), &quot;In Trial - Converted&quot;,
+IF( AND( NOT(ISBLANK(MC_Suspended_DateOnly__c)), NOT(ISBLANK(Conversion_Date__c )) ), &quot;Suspended&quot;,
+IF(MyCase_Customer_New_Formula__c = true, &quot;Customer&quot;,
+&quot;&quot;
+))))))))))</formula>
+    <label>MyCase Status NEW</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

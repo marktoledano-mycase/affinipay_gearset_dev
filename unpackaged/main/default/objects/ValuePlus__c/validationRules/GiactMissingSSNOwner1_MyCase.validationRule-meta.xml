@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GiactMissingSSNOwner1_MyCase</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND ( 
+$RecordType.Name=&#39;MyCase Payments&#39;, 
+ISPICKVAL(GIACTBusinessOwner_1_Validation__c, &#39;Ready To Transmit To GIACT&#39;),
+LEN(MC_Principal_1_SSN__c)=0
+)</errorConditionFormula>
+    <errorMessage>Principal 1 SSN details are missing on Value+ Record. Please provide these details to process the GIACT Call.</errorMessage>
+</ValidationRule>

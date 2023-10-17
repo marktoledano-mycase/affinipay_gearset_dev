@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- totals all hours worked on Request Tasks where status = Completed --></help>
+        <label><!-- Total Hours Worked (Request Tasks) --></label>
+        <name>Total_Hours_Worked__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Reconciliation Feature --></label>
+        <name>Reconciliation_Feature__c</name>
+        <picklistValues>
+            <masterLabel>All</masterLabel>
+            <translation><!-- All --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Origin Only</masterLabel>
+            <translation><!-- Origin Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Titan</masterLabel>
+            <translation><!-- Titan --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

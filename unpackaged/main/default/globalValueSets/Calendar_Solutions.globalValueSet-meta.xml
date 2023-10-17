@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Calendly</fullName>
+        <default>false</default>
+        <label>Calendly</label>
+    </customValue>
+    <customValue>
+        <fullName>Existing CRM</fullName>
+        <default>false</default>
+        <label>Existing CRM</label>
+    </customValue>
+    <customValue>
+        <fullName>Google</fullName>
+        <default>false</default>
+        <label>Google</label>
+    </customValue>
+    <customValue>
+        <fullName>Mac Calendar</fullName>
+        <default>false</default>
+        <label>Mac Calendar</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Outlook</fullName>
+        <default>false</default>
+        <label>Outlook</label>
+    </customValue>
+    <masterLabel>Calendar Solutions</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

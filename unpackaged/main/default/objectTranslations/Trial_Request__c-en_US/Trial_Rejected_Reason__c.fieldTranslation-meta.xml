@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Trial Rejected Reason --></label>
+        <name>Trial_Rejected_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Active Customer</masterLabel>
+            <translation><!-- Active Customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Duplicate</masterLabel>
+            <translation><!-- Duplicate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Existing Trial</masterLabel>
+            <translation><!-- Existing Trial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fake</masterLabel>
+            <translation><!-- Fake --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Junk Info</masterLabel>
+            <translation><!-- Junk Info --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

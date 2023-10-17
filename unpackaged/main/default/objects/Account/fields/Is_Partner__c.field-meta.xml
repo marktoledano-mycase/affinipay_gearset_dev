@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Partner__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+   RecordType.Name = &quot;Competitor&quot; &amp;&amp; Parent.RecordType.Name = &quot;Partner&quot;,
+   TRUE,
+   FALSE
+   )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Displays if the competitor is also a partner.</inlineHelpText>
+    <label>Is Partner</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Trial_Request__c.Person_Owner__c</field>
+    </columns>
+    <columns>
+        <field>Trial_Request__c.Person_Owner_Role__c</field>
+    </columns>
+    <columns>
+        <field>Trial_Request__c.Type__c</field>
+    </columns>
+    <columns>
+        <field>Trial_Request__c.LeadSource__c</field>
+    </columns>
+    <columns>
+        <field>Trial_Request__c.Lead_Channel__c</field>
+    </columns>
+    <columns>
+        <field>Trial_Request__c.Lead_Contact__c</field>
+    </columns>
+    <columns>
+        <field>Trial_Request__c.MQL_Date__c</field>
+    </columns>
+    <columns>
+        <field>Trial_Request__c.Person_Status__c</field>
+    </columns>
+    <columns>
+        <field>Trial_Request__c.Person_Type__c</field>
+    </columns>
+    <currency>USD</currency>
+    <description>Grouped by the type of inbound request and person status</description>
+    <filter>
+        <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6 AND 7</booleanFilter>
+        <criteriaItems>
+            <column>Trial_Request__c.MQL_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Existing Customer,Non-MQL Interaction</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Trial_Request__c.Person_Disqualified_Reason__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>UW Junk,UW Fraud,UW Payment Attempt,UW Not Approved Business</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Trial_Request__c.Brand__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Docketwise</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Trial_Request__c.Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Self-Serve Sign Up</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Trial_Request__c.MQL_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>5/1/2023</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Trial_Request__c.Person_Funnel_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1 - Not Yet Worked</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Trial_Request__c.Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Score Threshold</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>DW MQLs - Unworked - No Scorethresholds</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Trial_Request__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Trial_Request__c.MQL_Date__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Trial_Request__c.MQL_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

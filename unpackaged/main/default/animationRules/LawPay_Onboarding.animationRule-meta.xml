@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnimationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <animationFrequency>always</animationFrequency>
+    <developerName>LawPay_Onboarding</developerName>
+    <isActive>true</isActive>
+    <masterLabel>LawPay Onboarding</masterLabel>
+    <recordTypeContext>Custom</recordTypeContext>
+    <recordTypeName>LawPay_Payments</recordTypeName>
+    <sobjectType>Onboarding__c</sobjectType>
+    <targetField>Data_Migration_Stage__c</targetField>
+    <targetFieldChangeToValues>Live</targetFieldChangeToValues>
+</AnimationRule>

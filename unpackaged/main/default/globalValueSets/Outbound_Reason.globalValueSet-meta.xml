@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Churned</fullName>
+        <default>false</default>
+        <label>Churned</label>
+    </customValue>
+    <customValue>
+        <fullName>Cross-Sell</fullName>
+        <default>false</default>
+        <label>Cross-Sell</label>
+    </customValue>
+    <customValue>
+        <fullName>Not in Database</fullName>
+        <default>false</default>
+        <label>Not in Database</label>
+    </customValue>
+    <customValue>
+        <fullName>Re-engage Closed-Lost (DOG OPP)</fullName>
+        <default>false</default>
+        <label>Closed Lost Opportunity</label>
+    </customValue>
+    <customValue>
+        <fullName>Referral</fullName>
+        <default>false</default>
+        <label>Referral</label>
+    </customValue>
+    <customValue>
+        <fullName>Unconverted Lead</fullName>
+        <default>false</default>
+        <label>Cold MQL</label>
+    </customValue>
+    <customValue>
+        <fullName>Not Applicable</fullName>
+        <default>false</default>
+        <label>Not Applicable</label>
+    </customValue>
+    <customValue>
+        <fullName>Upgrade Product Tier</fullName>
+        <default>false</default>
+        <label>Upsell</label>
+    </customValue>
+    <masterLabel>Outbound Reason</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

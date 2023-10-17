@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Displays the lifetime unit price where the lifetime discount is subtracted from the base unit price at the time of the initial sale --></help>
+        <label><!-- zz Lifetime Unit Price --></label>
+        <name>Lifetime_Unit_Price__c</name>
+    </CustomFieldTranslation>

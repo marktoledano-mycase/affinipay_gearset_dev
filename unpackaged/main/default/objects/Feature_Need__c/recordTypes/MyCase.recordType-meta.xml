@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MyCase</fullName>
+    <active>true</active>
+    <description>R1812595</description>
+    <label>MyCase</label>
+    <picklistValues>
+        <picklist>FeatureReleased__c</picklist>
+        <values>
+            <fullName>In Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Research</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Released</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Feature_Category__c</picklist>
+        <values>
+            <fullName>Accounting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Calendar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cases</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Portal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contacts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom Fields</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Migration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Documents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Draft%2FTemplate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email Integration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Messages %26 Comments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Notes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Notifications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Online Payments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tasks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Time-Entry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trust%2FCredit Accounting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Workflows</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Feature_Sub_Category__c</picklist>
+        <values>
+            <fullName>ACH Pull for Rent%2FDues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advanced Ability</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advanced approval workflow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allocate Expenses Across Properties</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Analytics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Association Voting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Automated Invoice Processing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Avid Exchange</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Avid Pay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Avid Strongroom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Blue Moon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Board Document Approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Board Invoice Approval%2FSignatures</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Budgeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bulk Post CAM Charges</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CAM Gross Ups</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Check Scanning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Compliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corporate Accounting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom Letter Forms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customization</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Daily Interest Late Fees</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Access</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Decision Based</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Different receipt application per association</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dues%2FAssessment Workflows</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Folders for Shared Documents</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foreclosure%2FBankruptcy Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Forms Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOA Architectural Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOA Violation Tracking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HOA-Specific Reports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Homeowner Communication Preferences</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Housing Choice Vouchers %28Section 8 households%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inventory tracking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Investor%2FAsset Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KPI Dashboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leads for New Associations to Manage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lease options at renewal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leasing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lender Information Forms %28HomeWise Docs%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lien%2FCollections Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lockbox</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low Income Housing Tax Credits %28LIHTC%2FSection 42%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mailing Service</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mass Move-ins %26 Move-outs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missing Column%2FField%2FFilter in Existing Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missing Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile Violation Tracking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiple Buildings per Property</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiple Charts of Accounts %2F GL Account Trees</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiple Income Accounts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiple Mailing Addresses for Communication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiple Operating Bank Accounts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NY leasing%2Frent control</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opt In%2FOut</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Options</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Parking%2FGate Code Tracking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partnership Accounting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payroll</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Permissions%2FAudit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Positive Pay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-Leasing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pricing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Procurement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project-Based Section 8 %28HUD %2F HAP%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchase Orders</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RFP Workflows</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rent Concessions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renter-Occupied Communication %26 Tracking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Report writer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reporting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reserve Fund Accounting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Revenue Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rollup Reporting Across Properties</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sale Closing Docs %28HomeWise%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Separate business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Timberline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Time Tracking %28clock in%2Fout%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upload Journal Entries</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upload bills</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Utility Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vendor Portal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Workflow Management</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

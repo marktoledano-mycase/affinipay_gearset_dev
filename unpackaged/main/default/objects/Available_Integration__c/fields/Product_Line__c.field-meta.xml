@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Line__c</fullName>
+    <externalId>false</externalId>
+    <label>Product Line</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>MyCase</fullName>
+                <default>false</default>
+                <label>MyCase</label>
+            </value>
+            <value>
+                <fullName>Woodpecker</fullName>
+                <default>false</default>
+                <label>Woodpecker</label>
+            </value>
+            <value>
+                <fullName>Soluno</fullName>
+                <default>false</default>
+                <label>Soluno</label>
+            </value>
+            <value>
+                <fullName>LawPay</fullName>
+                <default>false</default>
+                <label>LawPay</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

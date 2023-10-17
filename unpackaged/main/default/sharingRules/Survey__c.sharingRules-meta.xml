@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>MyCase_Survey_Manager_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Allows members of the public group to edit MyCase NPS surveys</description>
+        <label>MyCase Survey Manager Edit</label>
+        <sharedTo>
+            <group>Software_NPS_Survey_Manager</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>MyCase: NPS</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Managers_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Managers Edit</label>
+        <sharedTo>
+            <group>CS_Manager_Group</group>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>EXECUTIVE</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Read_Surveys</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Read Surveys</label>
+        <sharedTo>
+            <roleAndSubordinates>EXECUTIVE</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>EXECUTIVE</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

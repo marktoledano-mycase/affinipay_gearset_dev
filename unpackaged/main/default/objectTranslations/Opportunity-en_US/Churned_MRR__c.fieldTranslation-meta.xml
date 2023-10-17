@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Churned MyCase MRR from fully churned customers over the 6-month sales selling window --></help>
+        <label><!-- Churned MRR --></label>
+        <name>Churned_MRR__c</name>
+    </CustomFieldTranslation>

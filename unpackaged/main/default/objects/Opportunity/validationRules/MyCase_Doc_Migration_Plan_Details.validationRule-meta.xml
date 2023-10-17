@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MyCase_Doc_Migration_Plan_Details</fullName>
+    <active>true</active>
+    <description>MyCase: When Doc Migration Plan Discussed = Yes, Doc Migration Plan Details are required.</description>
+    <errorConditionFormula>AND(
+$RecordType.Name = &quot;MyCase&quot;, 
+$Permission.Bypass_Defined_VR_s = FALSE, 
+ISPICKVAL(Doc_Migration_Plan_Discussed__c, &quot;Yes&quot;), 
+LEN(Doc_Migration_Plan_Details__c) = 0)</errorConditionFormula>
+    <errorMessage>MyCase: When Doc Migration Plan Discussed = Yes, Doc Migration Plan Details are required.</errorMessage>
+</ValidationRule>

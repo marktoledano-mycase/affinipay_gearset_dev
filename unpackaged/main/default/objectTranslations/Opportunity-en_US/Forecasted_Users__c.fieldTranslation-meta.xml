@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Forecasted number of users for the firm for sales to enter during the sales process --></help>
+        <label><!-- Forecasted Users --></label>
+        <name>Forecasted_Users__c</name>
+    </CustomFieldTranslation>

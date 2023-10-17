@@ -1,0 +1,22 @@
+Hello, 
+
+We are currently experiencing a service outage affecting MyCase customers. Our engineering team has identified the issue and is actively working to restore the service as soon as possible. You can find the latest status information at status.mycase.com.
+
+Should you need to refer to this case in the future, here are the details:
+
+Case Number: {!Case.CaseNumber} 
+Case Created Date: {!Case.CreatedDate} 
+Case Subject: {!Case.Subject} 
+Case Description: {!Case.Description} 
+
+
+Thank you for your patience,
+MyCase Customer Success Team
+
+MyCase
+9201 Spectrum Center Blvd. Ste. 100 | San Diego, CA | 92123
+Phone: 800.571.8062 
+www.mycase.com
+------------------------------ 
+
+{!Case.Thread_Id}

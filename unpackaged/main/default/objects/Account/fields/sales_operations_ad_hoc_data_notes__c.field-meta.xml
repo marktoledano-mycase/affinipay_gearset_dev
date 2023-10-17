@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sales_operations_ad_hoc_data_notes__c</fullName>
+    <description>Field used by the Operations Team when performing bulk changes</description>
+    <externalId>false</externalId>
+    <label>Operations Ad Hoc Data Notes</label>
+    <length>200</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

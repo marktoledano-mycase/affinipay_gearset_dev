@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Sales Rejected Reason --></label>
+        <name>Sales_Rejected_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Active Firm</masterLabel>
+            <translation><!-- Active Firm --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bad Contact Info</masterLabel>
+            <translation><!-- Bad Contact Info --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client of Active Firm</masterLabel>
+            <translation><!-- Client of Active Firm --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Duplicate</masterLabel>
+            <translation><!-- Duplicate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MyCase.Gov</masterLabel>
+            <translation><!-- MyCase.Gov --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not an Attorney</masterLabel>
+            <translation><!-- Not an Attorney --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Out of Country</masterLabel>
+            <translation><!-- Out of Country --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RC Not Evaluating</masterLabel>
+            <translation><!-- RC Not Evaluating --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Student</masterLabel>
+            <translation><!-- Student --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Test</masterLabel>
+            <translation><!-- Test --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

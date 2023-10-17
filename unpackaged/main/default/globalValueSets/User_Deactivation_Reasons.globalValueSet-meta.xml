@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>This person is no longer with my law firm.</fullName>
+        <default>false</default>
+        <label>This person is no longer with my law firm.</label>
+    </customValue>
+    <customValue>
+        <fullName>This person used MyCase less than expected.</fullName>
+        <default>false</default>
+        <label>This person used MyCase less than expected.</label>
+    </customValue>
+    <customValue>
+        <fullName>I can&#39;t justify monthly cost for this person.</fullName>
+        <default>false</default>
+        <label>I can&#39;t justify monthly cost for this person.</label>
+    </customValue>
+    <customValue>
+        <fullName>This person was just testing MyCase.</fullName>
+        <default>false</default>
+        <label>This person was just testing MyCase.</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <masterLabel>User Deactivation Reasons</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

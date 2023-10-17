@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Required_InOrderOnboarding_StageMovement</fullName>
+    <active>true</active>
+    <description>Requires certain Onboarding Stages to move in order</description>
+    <errorConditionFormula>AND(
+    $Profile.Name = &#39;MyCase Payment Services&#39;,
+    RecordType.DeveloperName = &#39;MyCase_Onboarding&#39;,
+    ISCHANGED(Data_Migration_Stage__c),
+    OR(
+       AND(
+           ISPICKVAL(Data_Migration_Stage__c, &#39;KOC Completed&#39;),
+           ISBLANK(KOC_Scheduled__c)
+           ),
+       AND(
+           ISPICKVAL(Data_Migration_Stage__c, &#39;Phase 1: Import Sign-off&#39;),
+           ISBLANK(In_Progress__c),
+           Import_N_A_checkbox__c = false
+           ),
+       AND(
+           ISPICKVAL(Data_Migration_Stage__c, &#39;Phase 1: Import Complete&#39;),
+           ISBLANK(Sign_off__c),
+           Import_N_A_checkbox__c = false
+           ),
+       AND(
+           ISPICKVAL(Data_Migration_Stage__c, &#39;Phase 2: Import Sign-Off&#39;),
+           ISBLANK(Phase_2_Import_In_Progress__c)
+           ),
+       AND(
+           ISPICKVAL(Data_Migration_Stage__c, &#39;Phase 2: Import Complete&#39;),
+           ISBLANK(Phase_2_Import_Sign_off__c)
+           ),
+       AND(
+           Import_N_A_checkbox__c = true,
+           OR(
+              ISPICKVAL(Data_Migration_Stage__c, &#39;Phase 1: Import In Progress&#39;),
+              ISPICKVAL(Data_Migration_Stage__c, &#39;Phase 1: Import Sign-off&#39;),
+              ISPICKVAL(Data_Migration_Stage__c, &#39;Phase 1: Import Complete&#39;),
+              ISPICKVAL(Data_Migration_Stage__c, &#39;Phase 2: Import In Progress&#39;),
+              ISPICKVAL(Data_Migration_Stage__c, &#39;Phase 2: Import Sign-Off&#39;),
+              ISPICKVAL(Data_Migration_Stage__c, &#39;Phase 2: Import Complete&#39;)
+              )
+           )
+       )
+    )</errorConditionFormula>
+    <errorMessage>Onboarding Stages must be selected in the following order: KOC Schedule &gt; KOC Complete or Phase 1/2: Import In Progress &gt; Phase 1/2: Import Sign-off &gt; Phase 1/2: Import Complete. Import Onboarding Stages cannot be selected if Import N/A is checked.</errorMessage>
+</ValidationRule>

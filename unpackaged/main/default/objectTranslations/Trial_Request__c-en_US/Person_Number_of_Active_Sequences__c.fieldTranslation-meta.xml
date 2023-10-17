@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- If Contact is not null, Contact: Number of Active Sequences. Otherwise, Lead: Number of Active Sequences --></help>
+        <label><!-- Person Number of Active Sequences --></label>
+        <name>Person_Number_of_Active_Sequences__c</name>
+    </CustomFieldTranslation>

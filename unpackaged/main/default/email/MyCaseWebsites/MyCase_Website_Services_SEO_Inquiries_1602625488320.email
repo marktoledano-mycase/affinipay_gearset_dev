@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;"><meta />Hi {{{Recipient.FirstName}}},&nbsp;<br />
+<br />
+Thank you for reaching out!<br />
+<br />
+I understand you are inquiring about your MyCase-powered website's visibility in online searches. As a reminder, MyCase is a completely separate company from all search engines (Google, Yahoo, Bing, etc.).&nbsp;It's important to note that there is no single fix or one-step solution for enhancing your search results, but there are a variety of methods you can use to improve your SEO.<br />
+<br />
+Steps you can take:
+<ul>
+	<li><b>Consider Google Ads</b> to generate business and site traffic.&nbsp;This paid service offered by Google allows for customizable marketing campaigns that work to drive traffic to your website.</li>
+	<li>Utilize <b>Google Search Console</b> to track your website's performance and traffic.&nbsp;You can submit your site's XML sitemap as well as individual pages for crawling. Learn how your site is seen by Google and how to optimize your position on Google Search.</li>
+	<li>Monitor your site's traffic.&nbsp;Site sources, page views, bounce rates, and engagement stemming from desktop, tablet, and mobile devices via your Analytics Dashboard.</li>
+	<li>Revise and expand your <b>website content on a frequent basis </b>to purposefully include industry language, areas of business, and unique content for a keyword-rich website.</li>
+	<li>Consider <b>utilizing a blog</b> on your website to provide active and relevant content.</li>
+	<li>Make sure the <b>meta titles and descriptions</b> on your site are accurate and unique.&nbsp;</li>
+	<li>Make sure that you have <b>registered your company</b> with online search engines and social sites such as Google, Google Places, Yahoo, Yelp, and Bing.</li>
+	<li><b>Advertise/register</b> your website on reputable local companies and community websites. Make sure to include industry-related tags and categories. Find satisfied clients to submit good feedback about your company online in all of these areas.</li>
+	<li>Create as many <b>links </b>to your website from other websites as possible, this is called inbound links and will assist your rankings/traffic.</li>
+	<li><b>Social Networking</b> - Create and continually update your company accounts on Facebook, Twitter, Instagram, etc.</li>
+	<li><b>Hire an SEO consultant</b>, but be cautious! No one can promise a #1 ranking and beware of companies that promise this. Aim for a limited contract until you can see the progress they are making on your search rankings. Or, hire a part-time marketing intern. Even a few hours a week you can make a huge impact.</li>
+</ul>
+<span style="color: rgb(29, 28, 29); font-family: &quot;Times New Roman&quot;; font-size: 12pt; white-space: pre;">Our team is happy to assist you in making changes to your website. If you have changes to request now, please respond to this email. Or, feel free to reach out to our team at <b>websites@mycase.com</b> with your requests or questions.</span>
+
+<p>Thank you,<br />
+{{{Sender.FirstName}}}&nbsp;<br />
+MyCase Website Services Team<br />
+Case #&nbsp;{{{Case.CaseNumber}}}</p>
+
+</body></html>

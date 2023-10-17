@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FP_Date_Change__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Set to TRUE through flow if sales is changing the converted customer&#39;s FP date</description>
+    <externalId>false</externalId>
+    <label>FP Date Change</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

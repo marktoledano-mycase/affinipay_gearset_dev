@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vantiv_Onboarding_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Vantiv Onboarding Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ready To Transmit</fullName>
+                <default>false</default>
+                <label>Ready To Transmit</label>
+            </value>
+            <value>
+                <fullName>Approved</fullName>
+                <default>false</default>
+                <label>Approved</label>
+            </value>
+            <value>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+                <label>Duplicate</label>
+            </value>
+            <value>
+                <fullName>Declined</fullName>
+                <default>false</default>
+                <label>Declined</label>
+            </value>
+            <value>
+                <fullName>Retry</fullName>
+                <default>false</default>
+                <label>Retry</label>
+            </value>
+            <value>
+                <fullName>Manual Review</fullName>
+                <default>false</default>
+                <label>Manual Review</label>
+            </value>
+            <value>
+                <fullName>Manual Review - Duplicate</fullName>
+                <default>false</default>
+                <label>Manual Review - Duplicate</label>
+            </value>
+            <value>
+                <fullName>Manual Review - Background Check Error</fullName>
+                <default>false</default>
+                <label>Manual Review - Background Check Error</label>
+            </value>
+            <value>
+                <fullName>Failed</fullName>
+                <default>false</default>
+                <label>Failed</label>
+            </value>
+            <value>
+                <fullName>Pending Approval</fullName>
+                <default>false</default>
+                <label>Pending Approval</label>
+            </value>
+            <value>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <label>Rejected</label>
+            </value>
+            <value>
+                <fullName>Collecting Documents</fullName>
+                <default>false</default>
+                <label>Collecting Documents</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

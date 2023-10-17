@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>of_Website_V__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Count of V+ Website records where Stage = Sold/Not Started, Questionnaire Received, Content Acquisition, Build in Progress, Site Presentation, Site Delivered/Final Changes, Live</inlineHelpText>
+    <label># of Website V+</label>
+    <summaryFilterItems>
+        <field>ValuePlus__c.RecordTypeId</field>
+        <operation>equals</operation>
+        <value>MyCase Websites</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>ValuePlus__c.Stage__c</field>
+        <operation>equals</operation>
+        <value>Sold/Not Started, Questionnaire Received, Content Acquisition, Build In Progress, Site Presentation, Site Delivered/Final Changes, Ready, Live</value>
+    </summaryFilterItems>
+    <summaryForeignKey>ValuePlus__c.Account__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

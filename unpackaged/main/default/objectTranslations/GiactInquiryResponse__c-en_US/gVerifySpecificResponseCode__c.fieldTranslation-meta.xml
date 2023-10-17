@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- gVerify Specific Response Code --></label>
+        <name>gVerifySpecificResponseCode__c</name>
+        <picklistValues>
+            <masterLabel>GN01</masterLabel>
+            <translation><!-- GN01 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GN05</masterLabel>
+            <translation><!-- GN05 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GP01</masterLabel>
+            <translation><!-- GP01 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GS01</masterLabel>
+            <translation><!-- GS01 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GS02</masterLabel>
+            <translation><!-- GS02 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GS03</masterLabel>
+            <translation><!-- GS03 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GS04</masterLabel>
+            <translation><!-- GS04 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ND00</masterLabel>
+            <translation><!-- ND00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ND01</masterLabel>
+            <translation><!-- ND01 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nill</masterLabel>
+            <translation><!-- Nill --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RT00</masterLabel>
+            <translation><!-- RT00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RT01</masterLabel>
+            <translation><!-- RT01 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RT02</masterLabel>
+            <translation><!-- RT02 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RT03</masterLabel>
+            <translation><!-- RT03 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RT04</masterLabel>
+            <translation><!-- RT04 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RT05</masterLabel>
+            <translation><!-- RT05 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>_1111</masterLabel>
+            <translation><!-- _1111 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>_2222</masterLabel>
+            <translation><!-- _2222 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>_3333</masterLabel>
+            <translation><!-- _3333 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>_5555</masterLabel>
+            <translation><!-- _5555 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>_7777</masterLabel>
+            <translation><!-- _7777 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>_8888</masterLabel>
+            <translation><!-- _8888 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>_9999</masterLabel>
+            <translation><!-- _9999 --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

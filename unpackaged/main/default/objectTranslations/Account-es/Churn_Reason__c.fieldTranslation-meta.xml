@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- zz Churn Reason --></label>
+        <name>Churn_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Adoption Issues</masterLabel>
+            <translation><!-- Adoption Issues --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Auto-Canceled After Suspension</masterLabel>
+            <translation><!-- Auto-Canceled After Suspension --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Change</masterLabel>
+            <translation><!-- Business Change --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Issue: Health/Audit/Underwriting</masterLabel>
+            <translation><!-- Business Issue: Health/Audit/Underwriting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Issue: Merged w/ APM Customer</masterLabel>
+            <translation><!-- Business Issue: Merged w/ APM Customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Issue: Out of Business/Downsized/Didn&#39;t Grow/Other Focus</masterLabel>
+            <translation><!-- Business Issue: Out of Business/Downsized/Didn&apos;t Grow/Other Focus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Declined Credit Card</masterLabel>
+            <translation><!-- Declined Credit Card --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Development Resources Not Available</masterLabel>
+            <translation><!-- Development Resources Not Available --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Don’t Know: Went Dark/Non-Payment</masterLabel>
+            <translation><!-- Don’t Know: Went Dark/Non-Payment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Expectations: Business Fit/Product Features/Value</masterLabel>
+            <translation><!-- Expectations: Business Fit/Product Features/Value --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Expectations: Implementation/Support/Training</masterLabel>
+            <translation><!-- Expectations: Implementation/Support/Training --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Expectations: Resources/Key Stakeholder/Transition to APM</masterLabel>
+            <translation><!-- Expectations: Resources/Key Stakeholder/Transition to APM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Expired Credit Card</masterLabel>
+            <translation><!-- Expired Credit Card --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Financial</masterLabel>
+            <translation><!-- Financial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I am closing my business</masterLabel>
+            <translation><!-- I am closing my business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I am using a different software</masterLabel>
+            <translation><!-- I am using a different software --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I can&#39;t afford it</masterLabel>
+            <translation><!-- I can&apos;t afford it --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I don&#39;t use it enough</masterLabel>
+            <translation><!-- I don&apos;t use it enough --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>It&#39;s too expensive</masterLabel>
+            <translation><!-- It&apos;s too expensive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>My firm is closing</masterLabel>
+            <translation><!-- My firm is closing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MyCase doesn&#39;t have certain features that I need</masterLabel>
+            <translation><!-- MyCase doesn&apos;t have certain features that I need --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MyCase doesn&#39;t have the features I need</masterLabel>
+            <translation><!-- MyCase doesn&apos;t have the features I need --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Others</masterLabel>
+            <translation><!-- Others --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner Opted out of Program</masterLabel>
+            <translation><!-- Partner Opted out of Program --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product Fit</masterLabel>
+            <translation><!-- Product Fit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Expectations</masterLabel>
+            <translation><!-- Sales Expectations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Support Expectations</masterLabel>
+            <translation><!-- Support Expectations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>We Opted Out of Partnership</masterLabel>
+            <translation><!-- We Opted Out of Partnership --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>We are switching to a different product</masterLabel>
+            <translation><!-- We are switching to a different product --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>We don&#39;t use it enough</masterLabel>
+            <translation><!-- We don&apos;t use it enough --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Went Dark / Past Due</masterLabel>
+            <translation><!-- Went Dark / Past Due --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

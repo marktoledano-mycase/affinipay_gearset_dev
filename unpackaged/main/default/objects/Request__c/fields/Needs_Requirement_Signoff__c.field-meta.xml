@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Needs_Requirement_Signoff__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>R1811423</description>
+    <externalId>false</externalId>
+    <inlineHelpText>User Stories/Requirements must be populated in order to submit for approval</inlineHelpText>
+    <label>Needs Requirement Signoff</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

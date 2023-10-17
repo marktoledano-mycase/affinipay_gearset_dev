@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Current_Acct_Other</fullName>
+    <active>false</active>
+    <errorConditionFormula>$Permission.Bypass_Defined_VR_s = FALSE &amp;&amp;
+
+(
+ISNEW() ||
+ISCHANGED(Current_Accounting_Solution__c) ||
+ISCHANGED(Current_Accounting_Solution_Other__c)
+) &amp;&amp;
+
+ISPICKVAL(Current_Accounting_Solution__c, &quot;Other&quot;) &amp;&amp;
+ISBLANK(Current_Accounting_Solution_Other__c)</errorConditionFormula>
+    <errorDisplayField>Current_Accounting_Solution_Other__c</errorDisplayField>
+    <errorMessage>Current Accounting Solution (Other) is required when Current Accounting Solution is &quot;Other.&quot;</errorMessage>
+</ValidationRule>

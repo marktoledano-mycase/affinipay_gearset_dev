@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Missing_Product_Environment__c</fullName>
+    <description>If PE is empty, this field will be checked, if it is populated it will be unchecked.</description>
+    <externalId>false</externalId>
+    <formula>IF(ISNULL(Product_Environment__c), True, False)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Missing Product Environment</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

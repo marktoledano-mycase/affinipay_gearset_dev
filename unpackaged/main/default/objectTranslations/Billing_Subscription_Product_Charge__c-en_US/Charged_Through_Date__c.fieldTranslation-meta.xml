@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Date charge has been billed through --></help>
+        <label><!-- Charged Through Date --></label>
+        <name>Charged_Through_Date__c</name>
+    </CustomFieldTranslation>

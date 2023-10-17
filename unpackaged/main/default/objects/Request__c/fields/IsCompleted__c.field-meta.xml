@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsCompleted__c</fullName>
+    <externalId>false</externalId>
+    <formula>if(OR(ispickval(Stage__c,&#39;Complete&#39;),ispickval(Stage__c,&#39;Cancelled - Business Unit&#39;),ispickval(Stage__c,&#39;Cancelled - Business Systems Team&#39;)),TRUE,FALSE)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>IsCompleted</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

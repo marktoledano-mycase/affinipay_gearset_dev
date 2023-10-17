@@ -1,0 +1,7 @@
+Peer Review on Request {!Request__c.Name} has been rejected for the following reasons. 
+
+{!ApprovalRequest.Comments} 
+
+Please contact {!ApprovalRequest.Process_Assignee} to review.
+
+{!Request__c.Link}

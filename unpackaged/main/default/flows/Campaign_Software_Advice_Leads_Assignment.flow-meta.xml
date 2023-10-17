@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <description>Record triggered flow for new software advice lead assignment to sales team when lead is added to the Software Advice campaign as a campaign member</description>
+    <environments>Default</environments>
+    <interviewLabel>Campaign: Software Advice Leads Assignment {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Campaign: Software Advice Leads Assignment</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>123</locationX>
+        <locationY>56</locationY>
+        <connector>
+            <targetReference>MyCase_Software_Advice_Lead</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>CampaignId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>7013g000000cTjzAAE</stringValue>
+            </value>
+        </filters>
+        <object>CampaignMember</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>MyCase_Software_Advice_Lead</name>
+        <label>MyCase Software Advice Lead</label>
+        <locationX>437</locationX>
+        <locationY>399</locationY>
+        <flowName>Subflow_New_Integration_Queue</flowName>
+        <inputAssignments>
+            <name>varObject</name>
+            <value>
+                <stringValue>Opportunity</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varProcessName</name>
+            <value>
+                <stringValue>MyCase Software Advice Lead</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varRecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+</Flow>

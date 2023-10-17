@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Principal_2_Identity_Verified__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>R1917591</description>
+    <externalId>false</externalId>
+    <label>Principal 2 Identity Verified</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

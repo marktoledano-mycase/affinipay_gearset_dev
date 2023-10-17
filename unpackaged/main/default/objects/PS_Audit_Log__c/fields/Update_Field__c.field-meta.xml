@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Update_Field__c</fullName>
+    <description>R166298</description>
+    <externalId>false</externalId>
+    <label>Update Field</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Call_Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Address</fullName>
+                <default>false</default>
+                <label>Address</label>
+            </value>
+            <value>
+                <fullName>Name</fullName>
+                <default>false</default>
+                <label>Name</label>
+            </value>
+            <value>
+                <fullName>Tax ID</fullName>
+                <default>false</default>
+                <label>Tax ID</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Field Update</controllingFieldValue>
+            <valueName>Address</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Field Update</controllingFieldValue>
+            <valueName>Name</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Field Update</controllingFieldValue>
+            <valueName>Tax ID</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

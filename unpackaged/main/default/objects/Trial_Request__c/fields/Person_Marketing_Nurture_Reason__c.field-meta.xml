@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Person_Marketing_Nurture_Reason__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+					NOT(ISBLANK(Contact__c)), 
+					TEXT(Contact__r.Nurture_Marketing_Reasons__c),
+					TEXT(Lead__r.Nurture_Marketing_Reasons__c))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>If Contact is not null, Contact Marketing Nurture Reason. Otherwise, Lead: Marketing Nurture Reason</inlineHelpText>
+    <label>Person Marketing Nurture Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

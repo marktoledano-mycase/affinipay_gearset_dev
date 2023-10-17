@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Churned</fullName>
+        <default>false</default>
+        <label>Churned</label>
+    </customValue>
+    <customValue>
+        <fullName>Closed Lost Opportunity</fullName>
+        <default>false</default>
+        <label>Closed Lost Opportunity</label>
+    </customValue>
+    <customValue>
+        <fullName>No Authority</fullName>
+        <default>false</default>
+        <label>No Authority</label>
+    </customValue>
+    <customValue>
+        <fullName>No Budget</fullName>
+        <default>false</default>
+        <label>No Budget</label>
+    </customValue>
+    <customValue>
+        <fullName>No Interest</fullName>
+        <default>false</default>
+        <label>No Interest</label>
+    </customValue>
+    <customValue>
+        <fullName>No Product Fit</fullName>
+        <default>false</default>
+        <label>No Product Fit</label>
+    </customValue>
+    <customValue>
+        <fullName>No Response</fullName>
+        <default>false</default>
+        <label>No Response</label>
+    </customValue>
+    <customValue>
+        <fullName>Outside North America</fullName>
+        <default>false</default>
+        <label>Outside North America</label>
+    </customValue>
+    <customValue>
+        <fullName>Selected Competitor</fullName>
+        <default>false</default>
+        <label>Selected Competitor</label>
+    </customValue>
+    <customValue>
+        <fullName>Timeline &gt;12 months</fullName>
+        <default>false</default>
+        <label>Timeline &gt;12 months</label>
+    </customValue>
+    <customValue>
+        <fullName>Closed Lost</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Closed Lost</label>
+    </customValue>
+    <customValue>
+        <fullName>Legacy Closed Lost</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Legacy Closed Lost</label>
+    </customValue>
+    <customValue>
+        <fullName>Competitor</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Competitor</label>
+    </customValue>
+    <customValue>
+        <fullName>Not Interested</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Not Interested</label>
+    </customValue>
+    <customValue>
+        <fullName>Price</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Price</label>
+    </customValue>
+    <customValue>
+        <fullName>Timeline + 12months</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Timeline + 12months</label>
+    </customValue>
+    <customValue>
+        <fullName>Product Fit</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Product Fit</label>
+    </customValue>
+    <customValue>
+        <fullName>No Engagement</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>No Engagement</label>
+    </customValue>
+    <masterLabel>Nurture Marketing Reasons</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

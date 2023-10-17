@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Product Line --></label>
+        <name>Product_Line__c</name>
+        <picklistValues>
+            <masterLabel>LawPay</masterLabel>
+            <translation><!-- LawPay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MyCase</masterLabel>
+            <translation><!-- MyCase --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Soluno</masterLabel>
+            <translation><!-- Soluno --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Woodpecker</masterLabel>
+            <translation><!-- Woodpecker --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

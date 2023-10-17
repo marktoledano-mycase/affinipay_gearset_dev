@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Severity__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>1: Systems are not accessible for 2+ users.
+2: Systems not accessible for one user.
+3: Systems are working, not fully operational, no workaround.
+4: Systems working, not fully operational, have workaround.
+5: Low to no impact.</inlineHelpText>
+    <label>Severity</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 - Systems are not accessible for 2+ users.</fullName>
+                <default>false</default>
+                <label>1 - Systems are not accessible for 2+ users.</label>
+            </value>
+            <value>
+                <fullName>2 - Systems not accessible for one user.</fullName>
+                <default>false</default>
+                <label>2 - Systems not accessible for one user.</label>
+            </value>
+            <value>
+                <fullName>3 - Systems are working, not fully operational, no workaround.</fullName>
+                <default>false</default>
+                <label>3 - Systems are working, not fully operational, no workaround.</label>
+            </value>
+            <value>
+                <fullName>4 - Systems working, not fully operational, have workaround.</fullName>
+                <default>false</default>
+                <label>4 - Systems working, not fully operational, have workaround.</label>
+            </value>
+            <value>
+                <fullName>5 - Low to no impact.</fullName>
+                <default>false</default>
+                <label>5 - Low to no impact.</label>
+            </value>
+            <value>
+                <fullName>High (many users affected)</fullName>
+                <default>false</default>
+                <label>High (many users affected)</label>
+            </value>
+            <value>
+                <fullName>Medium (5 or less users affected)</fullName>
+                <default>false</default>
+                <label>Medium (5 or less users affected)</label>
+            </value>
+            <value>
+                <fullName>Low (one user affected)</fullName>
+                <default>false</default>
+                <label>Low (one user affected)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

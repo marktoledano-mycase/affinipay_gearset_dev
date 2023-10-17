@@ -1,0 +1,5 @@
+Peer Review on Request {!Request__c.Name} has been completed. Please prepare to push changes to UAT Sandbox. 
+
+{!ApprovalRequest.Comments} 
+
+{!Request__c.Link}

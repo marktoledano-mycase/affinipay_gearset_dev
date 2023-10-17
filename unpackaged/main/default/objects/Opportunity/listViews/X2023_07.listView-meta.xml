@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2023_07</fullName>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.PROBABILITY</columns>
+    <columns>OPPORTUNITY.TYPE</columns>
+    <columns>OPPORTUNITY.LEAD_SOURCE</columns>
+    <columns>OPPORTUNITY.RECORDTYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>mkto_si__Current_Sales_Campaign__c</field>
+        <operation>equals</operation>
+        <value>Reassigned Bobby Bookout&#39;s Opportunities</value>
+    </filters>
+    <label>2023-07 - Bobby&#39;s Opportunities</label>
+    <sharedTo>
+        <roleAndSubordinates>Sales_Manager_LawPay</roleAndSubordinates>
+    </sharedTo>
+</ListView>

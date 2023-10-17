@@ -1,0 +1,1075 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Feature_Sub_Category__c</fullName>
+    <description>R164874</description>
+    <externalId>false</externalId>
+    <label>Feature Sub Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Feature_Category__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ACH Pull for Rent/Dues</fullName>
+                <default>false</default>
+                <label>ACH Pull for Rent/Dues</label>
+            </value>
+            <value>
+                <fullName>Advanced Ability</fullName>
+                <default>false</default>
+                <label>Advanced Ability</label>
+            </value>
+            <value>
+                <fullName>Advanced approval workflow</fullName>
+                <default>false</default>
+                <label>Advanced approval workflow</label>
+            </value>
+            <value>
+                <fullName>Allocate Expenses Across Properties</fullName>
+                <default>false</default>
+                <label>Allocate Expenses Across Properties</label>
+            </value>
+            <value>
+                <fullName>Amenities Reservation System</fullName>
+                <default>false</default>
+                <label>Amenities Reservation System</label>
+            </value>
+            <value>
+                <fullName>Analytics</fullName>
+                <default>false</default>
+                <label>Analytics</label>
+            </value>
+            <value>
+                <fullName>AppFolio billing</fullName>
+                <default>false</default>
+                <label>AppFolio billing</label>
+            </value>
+            <value>
+                <fullName>Association Voting</fullName>
+                <default>false</default>
+                <label>Association Voting</label>
+            </value>
+            <value>
+                <fullName>Auditing User Actions</fullName>
+                <default>false</default>
+                <label>Auditing User Actions</label>
+            </value>
+            <value>
+                <fullName>Automated Invoice Processing</fullName>
+                <default>false</default>
+                <label>Automated Invoice Processing</label>
+            </value>
+            <value>
+                <fullName>Avid Exchange</fullName>
+                <default>false</default>
+                <label>Avid Invoice</label>
+            </value>
+            <value>
+                <fullName>Avid Pay</fullName>
+                <default>false</default>
+                <label>Avid Pay</label>
+            </value>
+            <value>
+                <fullName>Avid Strongroom</fullName>
+                <default>false</default>
+                <label>Avid Strongroom</label>
+            </value>
+            <value>
+                <fullName>Blue Moon</fullName>
+                <default>false</default>
+                <label>Blue Moon</label>
+            </value>
+            <value>
+                <fullName>Board Document Approval</fullName>
+                <default>false</default>
+                <label>Board Approvals – Other</label>
+            </value>
+            <value>
+                <fullName>Board Invoice Approval/Signatures</fullName>
+                <default>false</default>
+                <label>Board Invoice Approval/Signatures</label>
+            </value>
+            <value>
+                <fullName>Budgeting</fullName>
+                <default>false</default>
+                <label>Budgeting</label>
+            </value>
+            <value>
+                <fullName>Bulk Post CAM Charges</fullName>
+                <default>false</default>
+                <label>Bulk Post CAM Charges</label>
+            </value>
+            <value>
+                <fullName>CAM Gross Ups</fullName>
+                <default>false</default>
+                <label>CAM Gross Ups</label>
+            </value>
+            <value>
+                <fullName>Check Scanning</fullName>
+                <default>false</default>
+                <label>Check Scanning</label>
+            </value>
+            <value>
+                <fullName>Community Portal</fullName>
+                <default>false</default>
+                <label>Community Portal</label>
+            </value>
+            <value>
+                <fullName>Compliance</fullName>
+                <default>false</default>
+                <label>Compliance</label>
+            </value>
+            <value>
+                <fullName>Corporate Accounting</fullName>
+                <default>false</default>
+                <label>Corporate Accounting</label>
+            </value>
+            <value>
+                <fullName>Customization</fullName>
+                <default>false</default>
+                <label>Customization</label>
+            </value>
+            <value>
+                <fullName>Custom Rental Application</fullName>
+                <default>false</default>
+                <label>Custom Rental Application</label>
+            </value>
+            <value>
+                <fullName>Daily Interest Late Fees</fullName>
+                <default>false</default>
+                <label>Daily Interest Late Fees</label>
+            </value>
+            <value>
+                <fullName>Data Access</fullName>
+                <default>false</default>
+                <label>Data Access</label>
+            </value>
+            <value>
+                <fullName>Decision Based</fullName>
+                <default>false</default>
+                <label>Decision Based</label>
+            </value>
+            <value>
+                <fullName>Different receipt application per association</fullName>
+                <default>false</default>
+                <label>Different receipt application per association</label>
+            </value>
+            <value>
+                <fullName>Divisional Accounting</fullName>
+                <default>false</default>
+                <label>Divisional Accounting</label>
+            </value>
+            <value>
+                <fullName>Dues/Assessment Workflows</fullName>
+                <default>false</default>
+                <label>Dues/Assessment Workflows</label>
+            </value>
+            <value>
+                <fullName>Excel</fullName>
+                <default>false</default>
+                <label>Excel</label>
+            </value>
+            <value>
+                <fullName>Financial</fullName>
+                <default>false</default>
+                <label>Financial</label>
+            </value>
+            <value>
+                <fullName>Folders for Shared Documents</fullName>
+                <default>false</default>
+                <label>Folders for Shared Documents</label>
+            </value>
+            <value>
+                <fullName>Foreclosure/Bankruptcy Process</fullName>
+                <default>false</default>
+                <label>Foreclosure/Bankruptcy Process</label>
+            </value>
+            <value>
+                <fullName>Forms Management</fullName>
+                <default>false</default>
+                <label>Forms Management</label>
+            </value>
+            <value>
+                <fullName>Generate Formatted (Printable) Invoice</fullName>
+                <default>false</default>
+                <label>Generate Formatted (Printable) Invoice</label>
+            </value>
+            <value>
+                <fullName>HOA Architectural Review</fullName>
+                <default>false</default>
+                <label>HOA Architectural Review</label>
+            </value>
+            <value>
+                <fullName>HOA-Specific Reports</fullName>
+                <default>false</default>
+                <label>HOA-Specific Reports</label>
+            </value>
+            <value>
+                <fullName>HOA Violation Tracking</fullName>
+                <default>false</default>
+                <label>HOA Violation Tracking</label>
+            </value>
+            <value>
+                <fullName>Homeowner Communication Preferences</fullName>
+                <default>false</default>
+                <label>Homeowner Communication Preferences</label>
+            </value>
+            <value>
+                <fullName>Housing Choice Vouchers (Section 8 households)</fullName>
+                <default>false</default>
+                <label>Housing Choice Vouchers (Section 8 households)</label>
+            </value>
+            <value>
+                <fullName>Import Historical Data</fullName>
+                <default>false</default>
+                <label>Import Historical Data</label>
+            </value>
+            <value>
+                <fullName>Insights</fullName>
+                <default>false</default>
+                <label>Insights</label>
+            </value>
+            <value>
+                <fullName>Integration</fullName>
+                <default>false</default>
+                <label>Integration</label>
+            </value>
+            <value>
+                <fullName>Inventory tracking</fullName>
+                <default>false</default>
+                <label>Inventory tracking</label>
+            </value>
+            <value>
+                <fullName>Investor/Asset Management</fullName>
+                <default>false</default>
+                <label>Investor/Asset Management</label>
+            </value>
+            <value>
+                <fullName>Invoicing Homeowners for Maintenance</fullName>
+                <default>false</default>
+                <label>Invoicing Homeowners for Maintenance</label>
+            </value>
+            <value>
+                <fullName>KPI Dashboard</fullName>
+                <default>false</default>
+                <label>KPI Dashboard</label>
+            </value>
+            <value>
+                <fullName>Leads for New Associations to Manage</fullName>
+                <default>false</default>
+                <label>Leads for New Associations to Manage</label>
+            </value>
+            <value>
+                <fullName>Lease options at renewal</fullName>
+                <default>false</default>
+                <label>Lease options at renewal</label>
+            </value>
+            <value>
+                <fullName>Leasing</fullName>
+                <default>false</default>
+                <label>Leasing</label>
+            </value>
+            <value>
+                <fullName>Lender Information Forms (HomeWise Docs)</fullName>
+                <default>false</default>
+                <label>Lender Information Forms (HomeWise Docs)</label>
+            </value>
+            <value>
+                <fullName>Lien/Collections Issues</fullName>
+                <default>false</default>
+                <label>Lien/Collections Issues</label>
+            </value>
+            <value>
+                <fullName>Lockbox</fullName>
+                <default>false</default>
+                <label>Lockbox</label>
+            </value>
+            <value>
+                <fullName>Low Income Housing Tax Credits (LIHTC/Section 42)</fullName>
+                <default>false</default>
+                <label>Low Income Housing Tax Credits (LIHTC/Section 42)</label>
+            </value>
+            <value>
+                <fullName>Mailing Service</fullName>
+                <default>false</default>
+                <label>Mailing Service</label>
+            </value>
+            <value>
+                <fullName>Make Ready Tracking</fullName>
+                <default>false</default>
+                <label>Make Ready Tracking</label>
+            </value>
+            <value>
+                <fullName>Manual Migration</fullName>
+                <default>false</default>
+                <label>Manual Migration</label>
+            </value>
+            <value>
+                <fullName>Mass Move-ins &amp; Move-outs</fullName>
+                <default>false</default>
+                <label>Mass Move-ins &amp; Move-outs</label>
+            </value>
+            <value>
+                <fullName>Missing Column/Field/Filter in Existing Report</fullName>
+                <default>false</default>
+                <label>Missing Column/Field/Filter in Existing Report</label>
+            </value>
+            <value>
+                <fullName>Missing Report</fullName>
+                <default>false</default>
+                <label>Missing Report</label>
+            </value>
+            <value>
+                <fullName>Mobile Violation Tracking</fullName>
+                <default>false</default>
+                <label>Mobile Violation Tracking</label>
+            </value>
+            <value>
+                <fullName>Multiple Buildings per Property</fullName>
+                <default>false</default>
+                <label>Multiple Buildings per Property</label>
+            </value>
+            <value>
+                <fullName>Multiple Charts of Accounts / GL Account Trees</fullName>
+                <default>false</default>
+                <label>Multiple Charts of Accounts / GL Account Trees</label>
+            </value>
+            <value>
+                <fullName>Multiple Income Accounts</fullName>
+                <default>false</default>
+                <label>Multiple Income Accounts</label>
+            </value>
+            <value>
+                <fullName>Multiple Mailing Addresses for Communication</fullName>
+                <default>false</default>
+                <label>Multiple Mailing Addresses for Communication</label>
+            </value>
+            <value>
+                <fullName>Multiple Operating Bank Accounts</fullName>
+                <default>false</default>
+                <label>Multiple Operating Bank Accounts</label>
+            </value>
+            <value>
+                <fullName>NY leasing/rent control</fullName>
+                <default>false</default>
+                <label>NY leasing/rent control</label>
+            </value>
+            <value>
+                <fullName>Opt In/Out</fullName>
+                <default>false</default>
+                <label>Opt In/Out</label>
+            </value>
+            <value>
+                <fullName>Options</fullName>
+                <default>false</default>
+                <label>Options</label>
+            </value>
+            <value>
+                <fullName>Parking/Gate Code Tracking</fullName>
+                <default>false</default>
+                <label>Parking/Gate Code Tracking</label>
+            </value>
+            <value>
+                <fullName>Partnership Accounting</fullName>
+                <default>false</default>
+                <label>Partnership Accounting</label>
+            </value>
+            <value>
+                <fullName>Payroll</fullName>
+                <default>false</default>
+                <label>Payroll</label>
+            </value>
+            <value>
+                <fullName>Custom Letter Forms</fullName>
+                <default>false</default>
+                <label>PDF Letter Upload w/ Mail Merge</label>
+            </value>
+            <value>
+                <fullName>Permissions/Audit</fullName>
+                <default>false</default>
+                <label>Permissions/Audit</label>
+            </value>
+            <value>
+                <fullName>Positive Pay</fullName>
+                <default>false</default>
+                <label>Positive Pay</label>
+            </value>
+            <value>
+                <fullName>Pre-Leasing</fullName>
+                <default>false</default>
+                <label>Pre-Leasing</label>
+            </value>
+            <value>
+                <fullName>Pricing</fullName>
+                <default>false</default>
+                <label>Pricing</label>
+            </value>
+            <value>
+                <fullName>Procurement</fullName>
+                <default>false</default>
+                <label>Procurement</label>
+            </value>
+            <value>
+                <fullName>Project-Based Section 8 (HUD / HAP)</fullName>
+                <default>false</default>
+                <label>Project-Based Section 8 (HUD / HAP)</label>
+            </value>
+            <value>
+                <fullName>Purchase Orders</fullName>
+                <default>false</default>
+                <label>Purchase Orders</label>
+            </value>
+            <value>
+                <fullName>Renewals &amp; Rent Increases</fullName>
+                <default>false</default>
+                <label>Renewals &amp; Rent Increases</label>
+            </value>
+            <value>
+                <fullName>Rent Concessions</fullName>
+                <default>false</default>
+                <label>Rent Concessions</label>
+            </value>
+            <value>
+                <fullName>Renter-Occupied Communication &amp; Tracking</fullName>
+                <default>false</default>
+                <label>Renter-Occupied Communication &amp; Tracking</label>
+            </value>
+            <value>
+                <fullName>Reporting</fullName>
+                <default>false</default>
+                <label>Reporting</label>
+            </value>
+            <value>
+                <fullName>Report writer</fullName>
+                <default>false</default>
+                <label>Report writer</label>
+            </value>
+            <value>
+                <fullName>Reserve Fund Accounting</fullName>
+                <default>false</default>
+                <label>Reserve Fund Accounting</label>
+            </value>
+            <value>
+                <fullName>Revenue Management</fullName>
+                <default>false</default>
+                <label>Revenue Management</label>
+            </value>
+            <value>
+                <fullName>RFP Workflows</fullName>
+                <default>false</default>
+                <label>RFP Workflows</label>
+            </value>
+            <value>
+                <fullName>Rollup Reporting Across Properties</fullName>
+                <default>false</default>
+                <label>Rollup Reporting Across Properties</label>
+            </value>
+            <value>
+                <fullName>Sale Closing Docs (HomeWise)</fullName>
+                <default>false</default>
+                <label>Sale Closing Docs (HomeWise)</label>
+            </value>
+            <value>
+                <fullName>Separate business</fullName>
+                <default>false</default>
+                <label>Separate business</label>
+            </value>
+            <value>
+                <fullName>Timberline</fullName>
+                <default>false</default>
+                <label>Timberline</label>
+            </value>
+            <value>
+                <fullName>Time Tracking (clock in/out)</fullName>
+                <default>false</default>
+                <label>Time Tracking (clock in/out)</label>
+            </value>
+            <value>
+                <fullName>Upload bills</fullName>
+                <default>false</default>
+                <label>Upload bills</label>
+            </value>
+            <value>
+                <fullName>Upload Journal Entries</fullName>
+                <default>false</default>
+                <label>Upload Journal Entries</label>
+            </value>
+            <value>
+                <fullName>User Settings/Permissions</fullName>
+                <default>false</default>
+                <label>User Settings/Permissions</label>
+            </value>
+            <value>
+                <fullName>Utility Management</fullName>
+                <default>false</default>
+                <label>Utility Management</label>
+            </value>
+            <value>
+                <fullName>Vendor List</fullName>
+                <default>false</default>
+                <label>Vendor List</label>
+            </value>
+            <value>
+                <fullName>Vendor Portal</fullName>
+                <default>false</default>
+                <label>Vendor Portal</label>
+            </value>
+            <value>
+                <fullName>Workflow Management</fullName>
+                <default>false</default>
+                <label>Workflow Management</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Accrual basis type for journal entries</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Accrual basis type for journal entries</label>
+            </value>
+            <value>
+                <fullName>AppFolio Mailing Service</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>AppFolio Mailing Service</label>
+            </value>
+            <value>
+                <fullName>Avid Exchange Integration</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Avid Exchange Integration</label>
+            </value>
+            <value>
+                <fullName>Compliance/Violation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Compliance/Violation</label>
+            </value>
+            <value>
+                <fullName>Concessions/discount offerings/tracking</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Concessions/discount offerings/tracking</label>
+            </value>
+            <value>
+                <fullName>Different GL Accounts per Association</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Different GL Accounts per Association</label>
+            </value>
+            <value>
+                <fullName>Future opportunity</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Future opportunity</label>
+            </value>
+            <value>
+                <fullName>General Ledger</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>General Ledger</label>
+            </value>
+            <value>
+                <fullName>Integration with other product</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Integration with other product</label>
+            </value>
+            <value>
+                <fullName>Leasing/Operations</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Leasing/Operations</label>
+            </value>
+            <value>
+                <fullName>Mailing Service Export</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Mailing Service Export</label>
+            </value>
+            <value>
+                <fullName>Multiple Charts of Accounts</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Multiple Charts of Accounts</label>
+            </value>
+            <value>
+                <fullName>Other Software</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Other Software</label>
+            </value>
+            <value>
+                <fullName>Performance tracking</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Performance tracking</label>
+            </value>
+            <value>
+                <fullName>Scanning automation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Scanning automation</label>
+            </value>
+            <value>
+                <fullName>Section 8/Section 42</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Section 8/Section 42</label>
+            </value>
+            <value>
+                <fullName>Uploading Journal entries</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Uploading Journal entries</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Leasing/Marketing</controllingFieldValue>
+            <valueName>Blue Moon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leasing/Marketing</controllingFieldValue>
+            <valueName>Custom Rental Application</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leasing/Marketing</controllingFieldValue>
+            <controllingFieldValue>Maintenance</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>Reporting</controllingFieldValue>
+            <controllingFieldValue>Community Associations</controllingFieldValue>
+            <controllingFieldValue>Screening</controllingFieldValue>
+            <controllingFieldValue>Construction</controllingFieldValue>
+            <controllingFieldValue>Student Housing</controllingFieldValue>
+            <controllingFieldValue>Accounting</controllingFieldValue>
+            <controllingFieldValue>Accounts Payable</controllingFieldValue>
+            <controllingFieldValue>Affordable Housing</controllingFieldValue>
+            <controllingFieldValue>Commercial</controllingFieldValue>
+            <controllingFieldValue>Communication</controllingFieldValue>
+            <valueName>Integration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leasing/Marketing</controllingFieldValue>
+            <valueName>Lease options at renewal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leasing/Marketing</controllingFieldValue>
+            <valueName>NY leasing/rent control</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leasing/Marketing</controllingFieldValue>
+            <valueName>Rent Concessions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leasing/Marketing</controllingFieldValue>
+            <valueName>Revenue Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leasing/Marketing</controllingFieldValue>
+            <controllingFieldValue>Maintenance</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>Reporting</controllingFieldValue>
+            <controllingFieldValue>Community Associations</controllingFieldValue>
+            <controllingFieldValue>Screening</controllingFieldValue>
+            <controllingFieldValue>Construction</controllingFieldValue>
+            <controllingFieldValue>Student Housing</controllingFieldValue>
+            <controllingFieldValue>Corporate Oversight</controllingFieldValue>
+            <controllingFieldValue>Implementation</controllingFieldValue>
+            <controllingFieldValue>Accounting</controllingFieldValue>
+            <controllingFieldValue>Accounts Payable</controllingFieldValue>
+            <controllingFieldValue>Affordable Housing</controllingFieldValue>
+            <controllingFieldValue>CAM</controllingFieldValue>
+            <controllingFieldValue>Commercial</controllingFieldValue>
+            <controllingFieldValue>Communication</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maintenance</controllingFieldValue>
+            <valueName>Inventory tracking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maintenance</controllingFieldValue>
+            <valueName>Make Ready Tracking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maintenance</controllingFieldValue>
+            <valueName>Separate business</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maintenance</controllingFieldValue>
+            <valueName>Time Tracking (clock in/out)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Maintenance</controllingFieldValue>
+            <controllingFieldValue>Accounts Payable</controllingFieldValue>
+            <valueName>Vendor Portal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Investor/Asset Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporting</controllingFieldValue>
+            <valueName>Analytics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporting</controllingFieldValue>
+            <valueName>Customization</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporting</controllingFieldValue>
+            <valueName>Data Access</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporting</controllingFieldValue>
+            <valueName>Excel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporting</controllingFieldValue>
+            <valueName>Financial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporting</controllingFieldValue>
+            <valueName>Forms Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporting</controllingFieldValue>
+            <valueName>Insights</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporting</controllingFieldValue>
+            <valueName>KPI Dashboard</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporting</controllingFieldValue>
+            <valueName>Missing Column/Field/Filter in Existing Report</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporting</controllingFieldValue>
+            <valueName>Missing Report</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporting</controllingFieldValue>
+            <valueName>Report writer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reporting</controllingFieldValue>
+            <valueName>Rollup Reporting Across Properties</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Community Associations</controllingFieldValue>
+            <valueName>Amenities Reservation System</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Community Associations</controllingFieldValue>
+            <valueName>Association Voting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Community Associations</controllingFieldValue>
+            <valueName>Board Document Approval</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Community Associations</controllingFieldValue>
+            <valueName>Board Invoice Approval/Signatures</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Community Associations</controllingFieldValue>
+            <valueName>Community Portal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Community Associations</controllingFieldValue>
+            <valueName>Daily Interest Late Fees</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Community Associations</controllingFieldValue>
+            <valueName>Different receipt application per association</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Community Associations</controllingFieldValue>
+            <valueName>Dues/Assessment Workflows</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Community Associations</controllingFieldValue>
+            <valueName>Folders for Shared Documents</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Community Associations</controllingFieldValue>
+            <valueName>Foreclosure/Bankruptcy Process</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Community Associations</controllingFieldValue>
+            <valueName>HOA Architectural Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Community Associations</controllingFieldValue>
+            <valueName>HOA-Specific Reports</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Community Associations</controllingFieldValue>
+            <valueName>HOA Violation Tracking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Community Associations</controllingFieldValue>
+            <valueName>Homeowner Communication Preferences</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Community Associations</controllingFieldValue>
+            <valueName>Invoicing Homeowners for Maintenance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Community Associations</controllingFieldValue>
+            <valueName>Leads for New Associations to Manage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Community Associations</controllingFieldValue>
+            <valueName>Lender Information Forms (HomeWise Docs)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Community Associations</controllingFieldValue>
+            <valueName>Lien/Collections Issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Community Associations</controllingFieldValue>
+            <valueName>Lockbox</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Community Associations</controllingFieldValue>
+            <valueName>Mailing Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Community Associations</controllingFieldValue>
+            <valueName>Mobile Violation Tracking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Community Associations</controllingFieldValue>
+            <valueName>Multiple Income Accounts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Community Associations</controllingFieldValue>
+            <valueName>Multiple Mailing Addresses for Communication</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Community Associations</controllingFieldValue>
+            <valueName>Parking/Gate Code Tracking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Community Associations</controllingFieldValue>
+            <valueName>Pricing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Community Associations</controllingFieldValue>
+            <valueName>Renter-Occupied Communication &amp; Tracking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Community Associations</controllingFieldValue>
+            <valueName>Reserve Fund Accounting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Community Associations</controllingFieldValue>
+            <valueName>RFP Workflows</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Community Associations</controllingFieldValue>
+            <valueName>Sale Closing Docs (HomeWise)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Community Associations</controllingFieldValue>
+            <valueName>Vendor List</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Screening</controllingFieldValue>
+            <valueName>Decision Based</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Construction</controllingFieldValue>
+            <valueName>Timberline</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Housing</controllingFieldValue>
+            <valueName>Mass Move-ins &amp; Move-outs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Student Housing</controllingFieldValue>
+            <valueName>Pre-Leasing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Corporate Oversight</controllingFieldValue>
+            <valueName>AppFolio billing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Corporate Oversight</controllingFieldValue>
+            <valueName>Auditing User Actions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Corporate Oversight</controllingFieldValue>
+            <valueName>User Settings/Permissions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Corporate Oversight</controllingFieldValue>
+            <valueName>Workflow Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Implementation</controllingFieldValue>
+            <valueName>Import Historical Data</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Implementation</controllingFieldValue>
+            <valueName>Manual Migration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounting</controllingFieldValue>
+            <valueName>ACH Pull for Rent/Dues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounting</controllingFieldValue>
+            <valueName>Advanced Ability</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounting</controllingFieldValue>
+            <valueName>Budgeting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounting</controllingFieldValue>
+            <valueName>Check Scanning</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounting</controllingFieldValue>
+            <valueName>Corporate Accounting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounting</controllingFieldValue>
+            <valueName>Divisional Accounting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounting</controllingFieldValue>
+            <valueName>Multiple Buildings per Property</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounting</controllingFieldValue>
+            <valueName>Multiple Charts of Accounts / GL Account Trees</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounting</controllingFieldValue>
+            <valueName>Multiple Operating Bank Accounts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounting</controllingFieldValue>
+            <valueName>Partnership Accounting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounting</controllingFieldValue>
+            <valueName>Payroll</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounting</controllingFieldValue>
+            <valueName>Permissions/Audit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounting</controllingFieldValue>
+            <valueName>Positive Pay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounting</controllingFieldValue>
+            <valueName>Upload Journal Entries</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounts Payable</controllingFieldValue>
+            <valueName>Advanced approval workflow</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounts Payable</controllingFieldValue>
+            <valueName>Allocate Expenses Across Properties</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounts Payable</controllingFieldValue>
+            <valueName>Automated Invoice Processing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounts Payable</controllingFieldValue>
+            <valueName>Avid Exchange</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounts Payable</controllingFieldValue>
+            <valueName>Avid Pay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounts Payable</controllingFieldValue>
+            <valueName>Avid Strongroom</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounts Payable</controllingFieldValue>
+            <valueName>Compliance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounts Payable</controllingFieldValue>
+            <valueName>Generate Formatted (Printable) Invoice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounts Payable</controllingFieldValue>
+            <valueName>Procurement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounts Payable</controllingFieldValue>
+            <valueName>Purchase Orders</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounts Payable</controllingFieldValue>
+            <valueName>Upload bills</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accounts Payable</controllingFieldValue>
+            <valueName>Utility Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Affordable Housing</controllingFieldValue>
+            <valueName>Housing Choice Vouchers (Section 8 households)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Affordable Housing</controllingFieldValue>
+            <valueName>Low Income Housing Tax Credits (LIHTC/Section 42)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Affordable Housing</controllingFieldValue>
+            <valueName>Project-Based Section 8 (HUD / HAP)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CAM</controllingFieldValue>
+            <valueName>Bulk Post CAM Charges</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CAM</controllingFieldValue>
+            <valueName>CAM Gross Ups</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial</controllingFieldValue>
+            <valueName>Leasing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial</controllingFieldValue>
+            <valueName>Options</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Commercial</controllingFieldValue>
+            <valueName>Reporting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Communication</controllingFieldValue>
+            <valueName>Opt In/Out</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Communication</controllingFieldValue>
+            <valueName>Custom Letter Forms</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Communication</controllingFieldValue>
+            <valueName>Renewals &amp; Rent Increases</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

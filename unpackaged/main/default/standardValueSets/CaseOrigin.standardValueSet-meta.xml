@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Agent Escalation</fullName>
+        <default>false</default>
+        <label>Agent Escalation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Answered Call</fullName>
+        <default>false</default>
+        <label>Answered Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Automation (Payment Adoption)</fullName>
+        <default>false</default>
+        <label>Automation (Payment Adoption)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Automation (Revenue Recognition)</fullName>
+        <default>false</default>
+        <label>Automation (Revenue Recognition)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Called maintenance line</fullName>
+        <default>false</default>
+        <label>Called maintenance line</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Called manager</fullName>
+        <default>false</default>
+        <label>Called manager</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Called support line</fullName>
+        <default>false</default>
+        <label>Called support line</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Chat (Soluno)</fullName>
+        <default>false</default>
+        <label>Chat (Soluno)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CRM: Escalated Support</fullName>
+        <default>false</default>
+        <label>CRM: Escalated Support</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CS case transfer</fullName>
+        <default>false</default>
+        <label>CS case transfer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CS Support Line</fullName>
+        <default>false</default>
+        <label>CS Support Line</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Customer Care/KA</fullName>
+        <default>false</default>
+        <label>Customer Care/KA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Dispute Manager</fullName>
+        <default>false</default>
+        <label>Dispute Manager</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Document Upload Form</fullName>
+        <default>false</default>
+        <label>Document Upload Form</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email</fullName>
+        <default>false</default>
+        <label>Email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email (Billing)</fullName>
+        <default>false</default>
+        <label>Email (Billing)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email (Consumer Relations)</fullName>
+        <default>false</default>
+        <label>Email (Consumer Relations)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email (Contact Center)</fullName>
+        <default>false</default>
+        <label>Email (Contact Center)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email (MyCase)</fullName>
+        <default>false</default>
+        <label>Email (MyCase)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email (MyCase Payments)</fullName>
+        <default>false</default>
+        <label>Email (MyCase Payments)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email (MyCase Subscription Change)</fullName>
+        <default>false</default>
+        <label>Email (MyCase Subscription Change)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email (MyCase Websites)</fullName>
+        <default>false</default>
+        <label>Email (MyCase Websites)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email (Payment Election)</fullName>
+        <default>false</default>
+        <label>Email (Payment Election)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email (Payments Support)</fullName>
+        <default>false</default>
+        <label>Email (Payments Support)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email (Rentlinx Events)</fullName>
+        <default>false</default>
+        <label>Email (Rentlinx Events)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email (Rentlinx Partners)</fullName>
+        <default>false</default>
+        <label>Email (Rentlinx Partners)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email (Rentlinx Support)</fullName>
+        <default>false</default>
+        <label>Email (Rentlinx Support)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email (Solutions)</fullName>
+        <default>false</default>
+        <label>Email (Solutions)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email (Support Request)</fullName>
+        <default>false</default>
+        <label>Email (Support Request)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email (Tenant Portal)</fullName>
+        <default>false</default>
+        <label>Email (Tenant Portal)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email (VAS Cases)</fullName>
+        <default>false</default>
+        <label>Email (VAS Cases)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email (Website Changes)</fullName>
+        <default>false</default>
+        <label>Email (Website Changes)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Emailed IM support</fullName>
+        <default>false</default>
+        <label>Emailed IM support</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Emailed LCC</fullName>
+        <default>false</default>
+        <label>Emailed LCC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Emailed manager</fullName>
+        <default>false</default>
+        <label>Emailed manager</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Emailed MCC</fullName>
+        <default>false</default>
+        <label>Emailed MCC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Emailed V+ support</fullName>
+        <default>false</default>
+        <label>Emailed V+ support</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Events</fullName>
+        <default>false</default>
+        <label>Events</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Fax</fullName>
+        <default>false</default>
+        <label>Fax</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Forums</fullName>
+        <default>false</default>
+        <label>Forums</label>
+    </standardValue>
+    <standardValue>
+        <fullName>In-App</fullName>
+        <default>false</default>
+        <label>In-App</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Initiative</fullName>
+        <default>false</default>
+        <label>Initiative</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Internal</fullName>
+        <default>false</default>
+        <label>Internal</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Internal: Implementation</fullName>
+        <default>false</default>
+        <label>Internal: Implementation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Internal: Sales</fullName>
+        <default>false</default>
+        <label>Internal: Sales</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Internal: Success</fullName>
+        <default>false</default>
+        <label>Internal: Success</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Internal: V+</fullName>
+        <default>false</default>
+        <label>Internal: V+</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Key Account Team</fullName>
+        <default>false</default>
+        <label>Key Account Team</label>
+    </standardValue>
+    <standardValue>
+        <fullName>LCC Discovered Issue</fullName>
+        <default>false</default>
+        <label>LCC Discovered Issue</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Live Agent Chat</fullName>
+        <default>false</default>
+        <label>Live Agent Chat</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Live Training</fullName>
+        <default>false</default>
+        <label>Live Training</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Mail (USPS/FedEx/UPS)</fullName>
+        <default>false</default>
+        <label>Mail (USPS/FedEx/UPS)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MCC discovered issue</fullName>
+        <default>false</default>
+        <label>MCC discovered issue</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MCC In App</fullName>
+        <default>false</default>
+        <label>MCC In App</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meetup</fullName>
+        <default>false</default>
+        <label>Meetup</label>
+    </standardValue>
+    <standardValue>
+        <fullName>NPS Survey</fullName>
+        <default>false</default>
+        <label>NPS Survey</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Nurture</fullName>
+        <default>false</default>
+        <label>Nurture</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Onboarding</fullName>
+        <default>false</default>
+        <label>Onboarding</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OTHER</fullName>
+        <default>false</default>
+        <label>OTHER</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Payment Adoption</fullName>
+        <default>false</default>
+        <label>Payment Adoption</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Phone</fullName>
+        <default>false</default>
+        <label>Phone</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Phone/Voicemail</fullName>
+        <default>false</default>
+        <label>Phone/Voicemail</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Phone (Consumer Relations)</fullName>
+        <default>false</default>
+        <label>Phone (Consumer Relations)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Phone (Support Request)</fullName>
+        <default>false</default>
+        <label>Phone (Support Request)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Phone 3 (CR - Full Report)</fullName>
+        <default>false</default>
+        <label>Phone 3 (CR - Full Report)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Phone 4 (CR - Main)</fullName>
+        <default>false</default>
+        <label>Phone 4 (CR - Main)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Proactive Outreach</fullName>
+        <default>false</default>
+        <label>Proactive Outreach</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Support Request</fullName>
+        <default>false</default>
+        <label>Support Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>System Auto Generated</fullName>
+        <default>false</default>
+        <label>System Auto Generated</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Trainings/Webinars</fullName>
+        <default>false</default>
+        <label>Trainings/Webinars</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Voicemail</fullName>
+        <default>false</default>
+        <label>Voicemail</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web: Live Agent Triage</fullName>
+        <default>false</default>
+        <label>Web: Live Agent Triage</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web: Product Request</fullName>
+        <default>false</default>
+        <label>Web: Product Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web - Community KB (MyCase)</fullName>
+        <default>false</default>
+        <label>Web - Community KB (MyCase)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email (Soluno)</fullName>
+        <default>false</default>
+        <label>Email (Soluno)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Phone (Soluno)</fullName>
+        <default>false</default>
+        <label>Phone (Soluno)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Phone VM (Soluno)</fullName>
+        <default>false</default>
+        <label>Phone VM (Soluno)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Intercom</fullName>
+        <default>false</default>
+        <label>Intercom</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email (LawPay)</fullName>
+        <default>false</default>
+        <label>Email (LawPay)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Chat (LawPay)</fullName>
+        <default>false</default>
+        <label>Chat (LawPay)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>In-App (LawPay)</fullName>
+        <default>false</default>
+        <label>In-App (LawPay)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web (LawPay)</fullName>
+        <default>false</default>
+        <label>Web (LawPay)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Phone (LawPay)</fullName>
+        <default>false</default>
+        <label>Phone (LawPay)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email (Woodpecker Support)</fullName>
+        <default>false</default>
+        <label>Email (Woodpecker Support)</label>
+    </standardValue>
+</StandardValueSet>

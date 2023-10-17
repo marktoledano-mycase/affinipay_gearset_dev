@@ -1,0 +1,22 @@
+<html><head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">Hi {{{Recipient.FirstName}}},<br />
+<br />
+If you are looking to create a contact form on your website that will automatically generate a lead in the MyCase software, please follow the link below to find instructions.&nbsp;<br />
+<br />
+<a href="https://help.mycase.com/s/article/Contact-Us-Form">https://help.mycase.com/s/article/Contact-Us-Form</a><br />
+<br />
+Once you complete the instructions, send the HTML code to <b>websites@mycase.com</b> and we will embed it on your website.<br />
+<br />
+<u><span style="color:#c0392b;"><b>Important</b></span></u><br />
+<b>Note:&nbsp;</b>Be sure to enter the full, end path version of your home page URL (Ex. 1), and do not use a subpage URL (Ex. 2).&nbsp;<br />
+<span style="color:#000000;">Ex 1:&nbsp;</span><a href="https://www.example.com/" rel="noopener" target="_blank"><span style="color:#000000;">https://www.example.com</span></a><span style="color:#000000;">&nbsp;<b>NOT&nbsp;</b></span><a href="http://example.com/" rel="noopener" target="_blank"><span style="color:#000000;">http://example.com</span></a><br />
+<span style="color:#000000;">Ex 2:&nbsp;</span><a href="https://www.example.com/" rel="noopener" target="_blank"><span style="color:#000000;">https://www.example.com</span></a><span style="color:#000000;">&nbsp;<b>NOT&nbsp;</b></span><a href="https://www.example.com/contact" rel="noopener" target="_blank"><span style="color:#000000;">https://www.example.com/contact</span></a><span style="color:#000000;">&nbsp;</span><br />
+<br />
+For any new website changes, questions, or concerns, please submit a new case to <b>websites@mycase.com</b> - we will be happy to assist.<br />
+<br />
+Thank you,<br />
+{{{Sender.FirstName}}}<br />
+MyCase Website Services Team<br />
+Case #{{{Case.CaseNumber}}}</body></html>

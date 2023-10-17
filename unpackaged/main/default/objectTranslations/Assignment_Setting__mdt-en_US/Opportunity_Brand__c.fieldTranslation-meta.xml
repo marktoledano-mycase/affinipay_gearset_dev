@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Opportunity Brand --></label>
+        <name>Opportunity_Brand__c</name>
+        <picklistValues>
+            <masterLabel>AffiniPay</masterLabel>
+            <translation><!-- AffiniPay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CASEpeer</masterLabel>
+            <translation><!-- CASEpeer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CPACharge</masterLabel>
+            <translation><!-- CPACharge --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ClientPay</masterLabel>
+            <translation><!-- ClientPay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Docketwise</masterLabel>
+            <translation><!-- Docketwise --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LawPay Payments</masterLabel>
+            <translation><!-- LawPay Payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LawPay Software</masterLabel>
+            <translation><!-- LawPay Software --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MyCase</masterLabel>
+            <translation><!-- MyCase --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Soluno</masterLabel>
+            <translation><!-- Soluno --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Websites</masterLabel>
+            <translation><!-- Websites --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Woodpecker</masterLabel>
+            <translation><!-- Woodpecker --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

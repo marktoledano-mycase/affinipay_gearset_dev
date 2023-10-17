@@ -1,0 +1,15 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">Hi {{{Recipient.FirstName}}},<br />
+<br />
+Thank you for speaking with me over the phone this&nbsp;<em><strong>[morning/afternoon]</strong></em>. We recognize that it can be difficult to know where to begin to locate your domain registrar's details. With hopes to make this process a little easier, we've put together a list of ways to narrow down your search — which can be viewed&nbsp;<a href="https://www.mycasewebhub.com/ways-to-find-where-your-domain-is-located">here</a>. Once you have regained access to the account which holds your domain, please reach out to us to complete the upgrade of your site to our new platform.<br />
+<br />
+We look forward to assisting you. Let us know if you have any questions, comments, or concerns.<br />
+<br />
+Thank you,<br />
+{{{Sender.FirstName}}}<br />
+MyCase Website Services Team<br />
+Case #{{{Case.CaseNumber}}}</body>
+</html>

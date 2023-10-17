@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FK_$Account.Account_ID_18_digit__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>Product_Environment__c.VTID__c</field>
+    </columns>
+    <columns>
+        <field>FK_$Account.mkto_si__Current_Sales_Campaign__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Product_Environment__c.VTID__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>104835,104805,83798,62507,87427,79413,72028,77184,63790,85531,64773,71460,85150,74620,74162,87260,64891,72820,79012,78095,88304,66798,72654,103129,80973</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Add Accounts to Campaign</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Product_Environment__c@Product_Environment__c.Account__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Product_Environment__c.Accounting_Disabled_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

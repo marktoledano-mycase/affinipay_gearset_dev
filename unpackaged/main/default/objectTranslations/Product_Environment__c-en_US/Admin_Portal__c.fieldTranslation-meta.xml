@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Renders a link to the MyCase Admin Portal or LawPay Pro Admin Portal based on the subdomain derived identified on the product environment record --></help>
+        <label><!-- Admin Portal --></label>
+        <name>Admin_Portal__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nurture_Marketing_Reasons__c</fullName>
+    <externalId>false</externalId>
+    <label>Marketing Nurture Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Nurture_Marketing_Reasons</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Marketing Nurture</controllingFieldValue>
+            <valueName>Churned</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing Nurture</controllingFieldValue>
+            <valueName>Closed Lost Opportunity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing Nurture</controllingFieldValue>
+            <valueName>No Authority</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing Nurture</controllingFieldValue>
+            <valueName>No Budget</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing Nurture</controllingFieldValue>
+            <valueName>No Interest</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing Nurture</controllingFieldValue>
+            <valueName>No Product Fit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing Nurture</controllingFieldValue>
+            <valueName>No Response</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing Nurture</controllingFieldValue>
+            <valueName>Selected Competitor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Marketing Nurture</controllingFieldValue>
+            <valueName>Timeline &gt;12 months</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

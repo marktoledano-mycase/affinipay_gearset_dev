@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <choices>
+        <name>CompanyPromotion</name>
+        <choiceText>Company Promotion</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Company Promotion</stringValue>
+        </value>
+    </choices>
+    <choices>
+        <name>SalesDiscount</name>
+        <choiceText>Sales Approved Discount</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Sales Approved Discount</stringValue>
+        </value>
+    </choices>
+    <description>will be deleted but for visual purposes</description>
+    <environments>Default</environments>
+    <interviewLabel>EXAMPLE FLOW - ADDING DISCOUNTS {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>EXAMPLE FLOW - ADDING DISCOUNTS</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>Association_Discounts</name>
+        <label>Association Discounts</label>
+        <locationX>176</locationX>
+        <locationY>278</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>add</name>
+            <fieldText>&lt;p&gt;add association if applicable&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Short_Term_Discounts</name>
+        <label>Short Term Discounts</label>
+        <locationX>176</locationX>
+        <locationY>158</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Association_Discounts</targetReference>
+        </connector>
+        <fields>
+            <name>SalesDiscountsPromoDiscounts</name>
+            <fieldText>&lt;p&gt;Click to add Sales Discounts or Company Promotion Discounts -- next you&#39;ll be able to add association discounts if applicable&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Add_Discounts</name>
+            <choiceReferences>SalesDiscount</choiceReferences>
+            <choiceReferences>CompanyPromotion</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Add Discounts</fieldText>
+            <fieldType>RadioButtons</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Short_Term_Discounts</targetReference>
+        </connector>
+    </start>
+    <status>Draft</status>
+</Flow>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SKU_Product_Specific_Discount__c</fullName>
+    <description>Used as a placeholder for overrides in product picker or as a means to deviate from discount set at the Promotion level.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Used as a placeholder for overrides in product picker or as a means to deviate from discount set at the Promotion level.</inlineHelpText>
+    <label>SKU Product Specific Discount</label>
+    <precision>5</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

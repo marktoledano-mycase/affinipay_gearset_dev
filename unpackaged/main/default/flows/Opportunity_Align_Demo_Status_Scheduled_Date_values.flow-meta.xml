@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <description>When Demo Status or Demo Scheduled Date is changed on one Opportunity, update all related (parent, child, and/or sister) Opportunities with the new values.
+We rely on Qualifying Rep, Demo Scheduled Date, and  Demo Status in order to calculate commissions. These fields need to be populated on all parent, child, and sister Opportunities in order for commissions to be calculated properly.</description>
+    <environments>Default</environments>
+    <interviewLabel>Opportunity - Align Demo Status, Scheduled Date values {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity - Align Demo Status, Scheduled Date values</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Child_Opps</name>
+        <label>Update Child Opps</label>
+        <locationX>176</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>BDR_Demo_Scheduled_Date__c</field>
+            <value>
+                <elementReference>$Record.BDR_Demo_Scheduled_Date__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Demo_Status__c</field>
+            <value>
+                <elementReference>$Record.Demo_Status__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record.Opportunities__r</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Update Stage, Demo Scheduled Date</description>
+        <name>Update_Parent_Opp</name>
+        <label>Update Parent Opp</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <connector>
+            <targetReference>Update_Child_Opps</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Related_Opportunity__r.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>BDR_Demo_Scheduled_Date__c</field>
+            <value>
+                <elementReference>$Record.BDR_Demo_Scheduled_Date__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Demo_Status__c</field>
+            <value>
+                <elementReference>$Record.Demo_Status__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Parent_Opp</targetReference>
+        </connector>
+        <filterFormula>AND(
+{!$Record.Bypass_VR_and_Automation__c} = FALSE,
+OR(
+ISCHANGED( {!$Record.Demo_Status__c} ), 
+ISCHANGED( {!$Record.BDR_Demo_Scheduled_Date__c} ) ) )</filterFormula>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

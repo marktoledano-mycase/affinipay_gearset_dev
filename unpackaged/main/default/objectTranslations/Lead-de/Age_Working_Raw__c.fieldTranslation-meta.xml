@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Displays the stored time in days that the lead has been in the status of Working --></help>
+        <label><!-- Age - Working (Raw) --></label>
+        <name>Age_Working_Raw__c</name>
+    </CustomFieldTranslation>

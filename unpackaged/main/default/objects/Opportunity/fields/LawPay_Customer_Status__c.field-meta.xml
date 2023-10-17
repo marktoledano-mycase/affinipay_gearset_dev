@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LawPay_Customer_Status__c</fullName>
+    <description>Customer Status on Account when Opportunity was created</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Customer Status on Account when Opportunity was created</inlineHelpText>
+    <label>LawPay Customer Status</label>
+    <length>25</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contract__c$Name</field>
+    </columns>
+    <columns>
+        <field>Contract__c$Account__c</field>
+    </columns>
+    <columns>
+        <field>Contract__c$Effective_Date__c</field>
+    </columns>
+    <columns>
+        <field>Contract__c$Opportunity__c</field>
+    </columns>
+    <columns>
+        <field>Contract__c.Contract_SKUs__r$Name</field>
+    </columns>
+    <columns>
+        <field>Contract__c.Contract_SKUs__r$Opportunity_SKU__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Contract__c.Contract_SKUs__r.Contract_SKU_History__r$Change_in_ARR__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>CDF1</field>
+    </columns>
+    <currency>USD</currency>
+    <customDetailFormulas>
+        <calculatedFormula>1</calculatedFormula>
+        <dataType>Double</dataType>
+        <developerName>CDF1</developerName>
+        <label>Count</label>
+        <scale>0</scale>
+    </customDetailFormulas>
+    <description>Shows Subscription Contract, Contract SKU and Contract SKU Transactions where the Transaction &quot;Change in ARR&quot; is $0 for Contract SKU Transaction Effective Date in current Month</description>
+    <filter>
+        <criteriaItems>
+            <column>Contract__c.Contract_SKUs__r.Contract_SKU_History__r$Change_in_ARR__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>USD 0</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contract__c.Contract_SKUs__r.Contract_SKU_History__r$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Audit - CST w/$0 ARR Chg for Current Mo</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Sub_Contracts_w_SKUs_w_Transactions__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contract__c.Contract_SKUs__r.Contract_SKU_History__r$Effective_Date__c</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

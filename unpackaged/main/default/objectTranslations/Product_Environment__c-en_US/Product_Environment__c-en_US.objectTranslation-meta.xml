@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Product Environment</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Product Environments</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>AffiniPay Product Environment Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Status --></label>
+            <section>Customer Status</section>
+        </sections>
+        <sections>
+            <label><!-- Merchant Application --></label>
+            <section>Merchant Application</section>
+        </sections>
+        <sections>
+            <label><!-- Overview --></label>
+            <section>Overview</section>
+        </sections>
+        <sections>
+            <label><!-- Owner/Business Information --></label>
+            <section>Owner/Business Information</section>
+        </sections>
+        <sections>
+            <label><!-- Payments Information --></label>
+            <section>Payments Information</section>
+        </sections>
+        <sections>
+            <label><!-- Referral / Partner --></label>
+            <section>Referral / Partner</section>
+        </sections>
+        <sections>
+            <label><!-- Relationships --></label>
+            <section>Relationships</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>LawPay Pro</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Journey --></label>
+            <section>Customer Journey</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Status --></label>
+            <section>Customer Status</section>
+        </sections>
+        <sections>
+            <label><!-- Relationships --></label>
+            <section>Relationships</section>
+        </sections>
+        <sections>
+            <label><!-- User Counts --></label>
+            <section>User Counts</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>MyCase Product Environment Layout</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Journey --></label>
+            <section>Customer Journey</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Status --></label>
+            <section>Customer Status</section>
+        </sections>
+        <sections>
+            <label><!-- Relationships --></label>
+            <section>Relationships</section>
+        </sections>
+        <sections>
+            <label><!-- User Counts --></label>
+            <section>User Counts</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Payments</layout>
+        <sections>
+            <label><!-- Affinipay Details --></label>
+            <section>Affinipay Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Statistics --></label>
+            <section>Statistics</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Soluno Product Environment Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Case Page Layout for Product Environment --></label>
+        <name>Case_Page_Layout_for_Product_Environment</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- MC Case Product Enviornment --></label>
+        <name>MC_Case_Product_Enviornment</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- Covers all Payment brands --></description>
+        <label><!-- Affinipay --></label>
+        <name>Affinipay</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- LawPay Pro --></label>
+        <name>LawPay_Pro</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- MyCase --></label>
+        <name>MyCase</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Soluno --></label>
+        <name>Soluno</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

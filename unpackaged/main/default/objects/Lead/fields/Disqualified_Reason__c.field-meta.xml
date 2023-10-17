@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disqualified_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Disqualified Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Customer Client</fullName>
+                <default>false</default>
+                <label>Customer Client</label>
+            </value>
+            <value>
+                <fullName>Do Not Contact</fullName>
+                <default>false</default>
+                <label>Do Not Contact</label>
+            </value>
+            <value>
+                <fullName>Is Competitor</fullName>
+                <default>false</default>
+                <label>Is Competitor</label>
+            </value>
+            <value>
+                <fullName>Is Employee</fullName>
+                <default>false</default>
+                <label>Is Employee</label>
+            </value>
+            <value>
+                <fullName>Junk Data</fullName>
+                <default>false</default>
+                <label>Junk Data</label>
+            </value>
+            <value>
+                <fullName>Not in ICP</fullName>
+                <default>false</default>
+                <label>Not in ICP</label>
+            </value>
+            <value>
+                <fullName>Student</fullName>
+                <default>false</default>
+                <label>Student</label>
+            </value>
+            <value>
+                <fullName>UW Junk</fullName>
+                <default>false</default>
+                <label>UW Junk</label>
+            </value>
+            <value>
+                <fullName>UW Fraud</fullName>
+                <default>false</default>
+                <label>UW Fraud</label>
+            </value>
+            <value>
+                <fullName>UW Payment Attempt</fullName>
+                <default>false</default>
+                <label>UW Payment Attempt</label>
+            </value>
+            <value>
+                <fullName>UW Not Approved Business</fullName>
+                <default>false</default>
+                <label>UW Not Approved Business</label>
+            </value>
+            <value>
+                <fullName>Active Firm</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Active Firm</label>
+            </value>
+            <value>
+                <fullName>Bad Contact Info</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Bad Contact Info</label>
+            </value>
+            <value>
+                <fullName>Client of Active Firm</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Client of Active Firm</label>
+            </value>
+            <value>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Duplicate</label>
+            </value>
+            <value>
+                <fullName>Existing Customer</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Existing Customer</label>
+            </value>
+            <value>
+                <fullName>Large Firm</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Large Firm</label>
+            </value>
+            <value>
+                <fullName>MyCase.Gov</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>MyCase.Gov</label>
+            </value>
+            <value>
+                <fullName>Non-Sales</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Non-Sales</label>
+            </value>
+            <value>
+                <fullName>Not an Attorney</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Not an Attorney</label>
+            </value>
+            <value>
+                <fullName>Out of Country</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Out of Country</label>
+            </value>
+            <value>
+                <fullName>Test</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Test</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Customer Client</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Do Not Contact</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Is Competitor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Is Employee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Junk Data</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Not in ICP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Student</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>UW Junk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>UW Fraud</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>UW Payment Attempt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>UW Not Approved Business</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Message produced in Automation. --></help>
+        <label><!-- Automation Error Message --></label>
+        <name>Automation_Error_Message__c</name>
+    </CustomFieldTranslation>

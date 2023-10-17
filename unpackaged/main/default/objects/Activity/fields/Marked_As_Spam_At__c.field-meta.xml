@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marked_As_Spam_At__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>If your Internet Service Provider (ISP) detects the mailing as spam, Outreach pushes the time stamp that is provided by the ISP.</inlineHelpText>
+    <label>Marked As Spam At</label>
+    <required>false</required>
+    <type>DateTime</type>
+</CustomField>

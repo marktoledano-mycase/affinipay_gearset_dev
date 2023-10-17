@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>1st 60 Days Request</fullName>
+        <default>false</default>
+        <label>1st 60 Days Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Accounting / Product</fullName>
+        <default>false</default>
+        <label>Accounting / Product</label>
+    </standardValue>
+    <standardValue>
+        <fullName>C Code Reject</fullName>
+        <default>false</default>
+        <label>C Code Reject</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Consumer Relations</fullName>
+        <default>false</default>
+        <label>Consumer Relations</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Screening Support</fullName>
+        <default>false</default>
+        <label>Screening Support</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Data Migration Request</fullName>
+        <default>false</default>
+        <label>Data Migration Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Existing Customer</fullName>
+        <default>false</default>
+        <label>Existing Customer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Feature Request</fullName>
+        <default>false</default>
+        <label>Feature Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>First Month Success Call</fullName>
+        <default>false</default>
+        <label>First Month Success Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Implementation 2.0</fullName>
+        <default>false</default>
+        <label>Implementation 2.0</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Implementation Escalation</fullName>
+        <default>false</default>
+        <label>Implementation Escalation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>In Migration</fullName>
+        <default>false</default>
+        <label>In Migration</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Insurance (Escalation)</fullName>
+        <default>false</default>
+        <label>Insurance (Escalation)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Internally Identified Issue</fullName>
+        <default>false</default>
+        <label>Internally Identified Issue</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Migration</fullName>
+        <default>false</default>
+        <label>Migration</label>
+    </standardValue>
+    <standardValue>
+        <fullName>New Customer</fullName>
+        <default>false</default>
+        <label>New Customer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>External Content Need</fullName>
+        <default>false</default>
+        <label>External Content Need</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Internal Content Need</fullName>
+        <default>false</default>
+        <label>Internal Content Need</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Highspot Update</fullName>
+        <default>false</default>
+        <label>Highspot Update</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Data/Report Request</fullName>
+        <default>false</default>
+        <label>Data/Report Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>New Sales Program</fullName>
+        <default>false</default>
+        <label>New Sales Program</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Existing Systems Access</fullName>
+        <default>false</default>
+        <label>Existing Systems Access</label>
+    </standardValue>
+    <standardValue>
+        <fullName>New Technology Request</fullName>
+        <default>false</default>
+        <label>New Technology Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>New/Update to Process</fullName>
+        <default>false</default>
+        <label>New/Update to Process</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Account Assignment</fullName>
+        <default>false</default>
+        <label>Account Assignment</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Expense Approval</fullName>
+        <default>false</default>
+        <label>Expense Approval</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Dashboard Request</fullName>
+        <default>false</default>
+        <label>Dashboard Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>New Hire</fullName>
+        <default>false</default>
+        <label>New Hire</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Employee Role Change</fullName>
+        <default>false</default>
+        <label>Employee Role Change</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ROE Escalation</fullName>
+        <default>false</default>
+        <label>ROE Escalation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Policy/Guide Request</fullName>
+        <default>false</default>
+        <label>Policy/Guide Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Payments Support (Escalation)</fullName>
+        <default>false</default>
+        <label>Payments Support (Escalation)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Public Records</fullName>
+        <default>false</default>
+        <label>Public Records</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sales Inquiry</fullName>
+        <default>false</default>
+        <label>Sales Inquiry</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sales Support</fullName>
+        <default>false</default>
+        <label>Sales Support</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Success Call</fullName>
+        <default>false</default>
+        <label>Success Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Support</fullName>
+        <default>false</default>
+        <label>Support</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Tech Support Escalation</fullName>
+        <default>false</default>
+        <label>Tech Support Escalation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Tenant Screening (Escalation)</fullName>
+        <default>false</default>
+        <label>Tenant Screening (Escalation)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Training</fullName>
+        <default>false</default>
+        <label>Training</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Problem</fullName>
+        <default>false</default>
+        <label>Problem</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Question</fullName>
+        <default>false</default>
+        <label>Question</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Post Migration</fullName>
+        <default>false</default>
+        <label>Post Migration</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Billing</fullName>
+        <default>false</default>
+        <label>Billing</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Existing Customer - Bank Add-On</fullName>
+        <default>false</default>
+        <label>Existing Customer - Bank Add-On</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Document Upload</fullName>
+        <default>false</default>
+        <label>Document Upload</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Chargeback</fullName>
+        <default>false</default>
+        <label>Chargeback</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Training/Education</fullName>
+        <default>false</default>
+        <label>Training/Education</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Troubleshooting/Cleanup</fullName>
+        <default>false</default>
+        <label>Troubleshooting/Cleanup</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Admin Required</fullName>
+        <default>false</default>
+        <label>Admin Required</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Feature Suggestion</fullName>
+        <default>false</default>
+        <label>Feature Suggestion</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bug/Outage</fullName>
+        <default>false</default>
+        <label>Bug/Outage</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Migration Cleanup</fullName>
+        <default>false</default>
+        <label>Migration Cleanup</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Value+ Support Escalation</fullName>
+        <default>false</default>
+        <label>Value+ Support Escalation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Product</fullName>
+        <default>false</default>
+        <label>Product</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Risk</fullName>
+        <default>false</default>
+        <label>Risk</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Expectations Product</fullName>
+        <default>false</default>
+        <label>Expectations Product</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Compliance Escalation</fullName>
+        <default>false</default>
+        <label>Compliance Escalation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Velocity Escalation</fullName>
+        <default>false</default>
+        <label>Velocity Escalation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Quick Answer</fullName>
+        <default>false</default>
+        <label>Quick Answer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Troubleshooting</fullName>
+        <default>false</default>
+        <label>Troubleshooting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Deep Accounting</fullName>
+        <default>false</default>
+        <label>Deep Accounting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Support Documentation</fullName>
+        <default>false</default>
+        <label>Support Documentation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Risk Escalation</fullName>
+        <default>false</default>
+        <label>Risk Escalation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>1st Month Request</fullName>
+        <default>false</default>
+        <label>1st Month Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Feature</fullName>
+        <default>false</default>
+        <label>Feature</label>
+    </standardValue>
+</StandardValueSet>

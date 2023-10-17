@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Indicates if we are blocked from selling MyCase Accounting to the firm --></help>
+        <label><!-- Do Not Sell MC Accounting --></label>
+        <name>Do_Not_Sell_MC_Accounting__c</name>
+    </CustomFieldTranslation>

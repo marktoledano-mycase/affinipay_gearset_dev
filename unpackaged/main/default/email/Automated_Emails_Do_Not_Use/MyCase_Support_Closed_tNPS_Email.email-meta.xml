@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Created for request R163610</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>MyCase Support Closed tNPS Email</name>
+    <style>none</style>
+    <subject>MyCase Support Customer Experience Survey</subject>
+    <textOnly>Hello {!Contact.FirstName},
+
+We wanted to follow up with you in regards to your recent experience with MyCase support.
+
+We are committed to making your MyCase support experience the best possible! To help us do that we would like to invite you to please take a moment to complete this brief survey:
+
+https://www.surveygizmo.com/s3/7196916/NEWCO-MyCase-Support-Experience-Survey?c={!Case.ContactId}&amp;a={!Case.AccountId}&amp;ca={!Case.Id}&amp;e={!Case.OwnerId}
+
+Thank you for sharing your feedback!
+
+Adam Wilson
+Vice President, Client Services
+MyCase
+www.mycase.com</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_67966244</developerName>
+        <masterLabel>Case Owner</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>OWNER</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>MyCase Accounting</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Lisa Myers</sourceValue>
+            </sourceValues>
+            <value>Lisa Myers</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_88117611</developerName>
+        <masterLabel>Lisa and Accounting Owners</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>OWNER</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Lisa Myers</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>MyCase Accounting</sourceValue>
+            </sourceValues>
+            <value>Lisa Myers and MyCase Accounting</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_99883755</developerName>
+        <masterLabel>Origin</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>ORIGIN</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Phone</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Phone/Voicemail</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Phone (Consumer Relations)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Phone (Support Request)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Phone 3 (CR - Full Report)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Phone 4 (CR - Main)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Answered Call</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Called support line</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Called maintenance line</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Called manager</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Voicemail</sourceValue>
+            </sourceValues>
+            <value>Phone</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Intercom</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Live Agent Chat</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Chat (Soluno)</sourceValue>
+            </sourceValues>
+            <value>Chat</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Email</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email (Billing)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email (MyCase)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email (MyCase Payments)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email (MyCase Subscription Change)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Email (MyCase Websites)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Web - Community KB (MyCase)</sourceValue>
+            </sourceValues>
+            <value>Email</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>((1 AND 2) OR 4) AND 3</booleanFilter>
+        <criteriaItems>
+            <column>OWNER</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Ryan Lowe</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Case.MyCase_Accounting</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STATUS</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Lisa Myers,MyCase Accounting</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Accounting Cases to Parse and Separate</name>
+    <params>
+        <name>units</name>
+        <value>h</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>LAST_ACTIVITY</dateColumn>
+        <endDate>2023-07-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2023-06-01</startDate>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Lead_Source_and_Channel</fullName>
+    <active>true</active>
+    <description>Lead Source and Lead Channel are important attributes used for revenue and funnel reporting. They are required fields, except for historic data where we do not expect them to be populated.</description>
+    <errorConditionFormula>$Permission.Bypass_Defined_VR_s = FALSE &amp;&amp;
+Bypass_VR_and_Automation__c = FALSE &amp;&amp;
+
+ISNEW() &amp;&amp;
+Converted_from_Lead__c = FALSE &amp;&amp;
+
+(
+ISBLANK( TEXT( LeadSource )) ||
+ISBLANK( TEXT( Lead_Channel__c ))
+)
+
+/* We do not need to include any ISCHANGED logic
+since we never expect Lead Source or Lead Channel to change.
+There is a separate VR that blocks updates to those fields. */</errorConditionFormula>
+    <errorMessage>Lead Source and Lead Channel are required.</errorMessage>
+</ValidationRule>

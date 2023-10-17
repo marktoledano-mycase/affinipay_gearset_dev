@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- ProfitStars On-Boarding Status --></label>
+        <name>PMT_ProfitStars_On_Boarding_Status__c</name>
+        <picklistValues>
+            <masterLabel>APM Data Pull Failure</masterLabel>
+            <translation><!-- APM Data Pull Failure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Collecting Documents</masterLabel>
+            <translation><!-- Collecting Documents --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Complete</masterLabel>
+            <translation><!-- Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Declined</masterLabel>
+            <translation><!-- Declined --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Documents Received</masterLabel>
+            <translation><!-- Documents Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Initial Review</masterLabel>
+            <translation><!-- Initial Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Hold</masterLabel>
+            <translation><!-- On Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Peer Review Approved</masterLabel>
+            <translation><!-- Peer Review Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Peer Review Rejected</masterLabel>
+            <translation><!-- Peer Review Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Peer Review</masterLabel>
+            <translation><!-- Pending Peer Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProfitStars Approved</masterLabel>
+            <translation><!-- ProfitStars Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready for APM</masterLabel>
+            <translation><!-- Ready for APM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready to Go Live</masterLabel>
+            <translation><!-- Ready to Go Live --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready to Transmit</masterLabel>
+            <translation><!-- Ready to Transmit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sent to ProfitStars</masterLabel>
+            <translation><!-- Sent to ProfitStars --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transmitted</masterLabel>
+            <translation><!-- Transmitted --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

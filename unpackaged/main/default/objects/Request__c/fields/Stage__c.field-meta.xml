@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>Stage</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Submitted</fullName>
+                <default>true</default>
+                <label>Submitted</label>
+            </value>
+            <value>
+                <fullName>Needs Grooming</fullName>
+                <default>false</default>
+                <label>Needs Grooming</label>
+            </value>
+            <value>
+                <fullName>Grooming</fullName>
+                <default>false</default>
+                <label>Grooming</label>
+            </value>
+            <value>
+                <fullName>Groomed</fullName>
+                <default>false</default>
+                <label>Groomed</label>
+            </value>
+            <value>
+                <fullName>Awaiting Requirements Sign-off</fullName>
+                <default>false</default>
+                <label>Awaiting Requirements Sign-off</label>
+            </value>
+            <value>
+                <fullName>Requirements Signed Off</fullName>
+                <default>false</default>
+                <label>Requirements Signed Off</label>
+            </value>
+            <value>
+                <fullName>Estimated</fullName>
+                <default>false</default>
+                <label>Estimated</label>
+            </value>
+            <value>
+                <fullName>Prioritized</fullName>
+                <default>false</default>
+                <label>Prioritized</label>
+            </value>
+            <value>
+                <fullName>Developing</fullName>
+                <default>false</default>
+                <label>Developing</label>
+            </value>
+            <value>
+                <fullName>Finance Approval Requested</fullName>
+                <default>false</default>
+                <label>Finance Approval Requested</label>
+            </value>
+            <value>
+                <fullName>Peer Review</fullName>
+                <default>false</default>
+                <label>Peer Review</label>
+            </value>
+            <value>
+                <fullName>User Acceptance Testing</fullName>
+                <default>false</default>
+                <label>User Acceptance Testing</label>
+            </value>
+            <value>
+                <fullName>UAT Complete</fullName>
+                <default>false</default>
+                <label>UAT Complete</label>
+            </value>
+            <value>
+                <fullName>Complete</fullName>
+                <default>false</default>
+                <label>Complete</label>
+            </value>
+            <value>
+                <fullName>On Hold: Requester</fullName>
+                <default>false</default>
+                <label>On Hold: Requester</label>
+            </value>
+            <value>
+                <fullName>On Hold: Business Systems</fullName>
+                <default>false</default>
+                <label>On Hold: Business Systems</label>
+            </value>
+            <value>
+                <fullName>On Hold: Vendor</fullName>
+                <default>false</default>
+                <label>On Hold: Vendor</label>
+            </value>
+            <value>
+                <fullName>Cancelled - Business Unit</fullName>
+                <default>false</default>
+                <label>Cancelled - Business Unit</label>
+            </value>
+            <value>
+                <fullName>Cancelled - Business Systems Team</fullName>
+                <default>false</default>
+                <label>Cancelled - Business Systems Team</label>
+            </value>
+            <value>
+                <fullName>Scheduled</fullName>
+                <default>false</default>
+                <label>Scheduled</label>
+            </value>
+            <value>
+                <fullName>Finance Approved</fullName>
+                <default>false</default>
+                <label>Finance Approved</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

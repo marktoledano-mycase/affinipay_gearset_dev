@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>History_Type__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+   Qty__c &gt; 0,
+   &quot;Add&quot;,
+   &quot;Remove&quot;
+   )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Displays what is needed for the processing of the Contract SKU Transaction processing</inlineHelpText>
+    <label>History Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

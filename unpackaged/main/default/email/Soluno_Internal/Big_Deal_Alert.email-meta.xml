@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Template is used for communicating Opportunity Details on Closed Won</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Soluno_Internal</letterhead>
+    <name>Big Deal Alert</name>
+    <style>freeForm</style>
+    <subject>Soluno: Big Deal Alert</subject>
+    <textOnly>A big deal has been created
+Good News For Us! We got a Major Deal recently
+
+
+
+Deal Name: {!Opportunity.Name}
+Account: {!Opportunity.Account}
+Contact: {!Opportunity.Primary_Contact__c}
+ARR:  {!Opportunity.Amount}
+User Count: {!Opportunity.Azure_Count__c}
+Live Date: {!Opportunity.Live_Date__c}
+Booked Date: {!Opportunity.CloseDate}
+Deal Owner: {!Opportunity.OwnerFullName}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

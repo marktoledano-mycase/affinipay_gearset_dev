@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>IsWithinBusinessHours</name>
+        <label>IsWithinBusinessHours?</label>
+        <locationX>176</locationX>
+        <locationY>431</locationY>
+        <actionName>BusinessHoursIsWithinAction</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Update_Contact</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>targetDate</name>
+            <value>
+                <elementReference>$Record.Last_MQL_Date__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>businessHoursId</name>
+            <value>
+                <elementReference>Get_Business_Hours.Id</elementReference>
+            </value>
+        </inputParameters>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <apiVersion>57.0</apiVersion>
+    <description>Evalutes whether the Contact&#39;s Last MQL was received within or outside of business hours</description>
+    <environments>Default</environments>
+    <interviewLabel>Contact - Received During Business Hours {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Contact - Received During Business Hours?</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Business_Hours</name>
+        <label>Get Business Hours</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>IsWithinBusinessHours</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Central Business Hours</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>BusinessHours</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Update Lead: Received During Business Hours? = True</description>
+        <name>Update_Contact</name>
+        <label>Update Contact</label>
+        <locationX>176</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>Last_MQL_During_Central_Business_Hours__c</field>
+            <value>
+                <elementReference>IsWithinBusinessHours</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Business_Hours</targetReference>
+        </connector>
+        <filterFormula>NOT(ISNULL({!$Record.Last_MQL_Date__c}))</filterFormula>
+        <object>Contact</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

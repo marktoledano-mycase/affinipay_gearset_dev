@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Push_ALL_Bank_Accounts</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Push ALL Bank Accounts</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)}
+var c = new sforce.SObject(&quot;Add_On_Batch__c&quot;);
+c.id = &quot;{!Add_On_Batch__c.Id}&quot;;
+
+var result = sforce.connection.query(&quot;SELECT Id, Name, Ready_for_push_to_ProfitStars__c, ps_LocationUpdateRequired__c, LID__c, Location_Add_Status__c, Bank_Account_Add_On_Batch__r.Name from Bank_Account__c where Bank_Account_Add_On_Batch__r.id = &#39;{!Add_On_Batch__c.Id}&#39; and Status__c = &#39;Active&#39;&quot;);
+
+var records = result.getArray(&quot;records&quot;);
+
+var isValidated = true;
+
+alert(&quot;Records : &quot; + records.length);
+for (var i = 0; i &lt; records.length; i++) {
+	record = records[i];	
+	//alert(&quot;Records : &quot; + record.Name + &quot; LID Id &quot; + record.LID__c + &quot; AddonBatch Name&quot; + record.Bank_Account_Add_On_Batch__r.Name);
+	if(record.getBoolean(&quot;Ready_for_push_to_ProfitStars__c&quot;) !== true &amp;&amp; isValidated===true)
+	{
+		alert(record.Name + &quot; Ready for push to ProfitStars is not selected. Please review &quot; + record.Name + &quot;.&quot;);
+		isValidated = false;
+	} else if(record.getBoolean(&quot;ps_LocationUpdateRequired__c&quot;) !== true &amp;&amp; isValidated===true)
+	{
+		alert(record.Name + &quot; Location Update Required is not selected. Please review &quot; + record.Name + &quot;.&quot;);
+		isValidated = false;
+		
+	} else if(!!(record.LID__c) &amp;&amp; isValidated===true)
+	{
+		alert(record.Name + &quot; Bank Account already has an LID. Please review &quot; + record.Name + &quot;.&quot;);
+		isValidated = false;
+		
+	} else if(record.Location_Add_Status__c == &quot;Submitted&quot; &amp;&amp; isValidated===true)
+	{
+		alert(record.Name + &quot; Bank Account was already submitted to Profit Stars. Please review &quot; + record.Name + &quot;.&quot;);
+		isValidated = false;
+		
+	} 
+}
+
+
+if (isValidated===true) {
+	var r = confirm(&quot;All Bank Accounts will be added in ProfitStars; continue?&quot;);
+	if (r == true) 
+	{
+		var result = sforce.apex.execute(&quot;ps_BankAccountAddonbuttonMethods&quot;, &quot;CallBankAddonBatch&quot;, {id: &quot;{!Add_On_Batch__c.Id}&quot;});
+		
+		var parsed = JSON.parse(result);
+		if (parsed.didPass == true) 
+		{
+			document.location.reload(true);
+			alert(parsed.result);	
+		} 
+		else 
+		{
+		document.location.reload(true);
+		alert(&quot;Bank Account Add on failed with the following error: \n\n&quot; + parsed.result + &quot; \n\nPlease update the Value+ record with missing information and try again&quot;);
+		}
+	}
+}</url>
+</WebLink>

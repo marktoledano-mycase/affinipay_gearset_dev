@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payments_Enabled__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Removed the reference to Mycase in the label and name on 12/26/22</description>
+    <externalId>false</externalId>
+    <label>Payments Enabled</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

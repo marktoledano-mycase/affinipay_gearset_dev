@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>53.0</apiVersion>
+    <assignments>
+        <name>Assign_Integration_Queue_Values</name>
+        <label>Assign Integration Queue Values</label>
+        <locationX>177</locationX>
+        <locationY>224</locationY>
+        <assignmentItems>
+            <assignToReference>varIntegrationQueue.Integration_Record_Id__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>varRecordId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varIntegrationQueue.Process_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>varProcessName</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varIntegrationQueue.Object__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>varObject</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varIntegrationQueue.Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>In Process</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>New_Integration_Queue</targetReference>
+        </connector>
+    </assignments>
+    <description>Autolaunched subflow that is called from all flows creating new integration queue records to simplify and standardize integration queue process</description>
+    <interviewLabel>Subflow - New Integration Queue {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Subflow - New Integration Queue</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>New_Integration_Queue</name>
+        <label>New Integration Queue</label>
+        <locationX>392</locationX>
+        <locationY>279</locationY>
+        <inputReference>varIntegrationQueue</inputReference>
+    </recordCreates>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Assign_Integration_Queue_Values</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Record variable that receives Integration Queue values from a parent flow for create</description>
+        <name>varIntegrationQueue</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Integration_Queue__c</objectType>
+    </variables>
+    <variables>
+        <description>Object integration queue record is associated with</description>
+        <name>varObject</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Name/purpose of the record being passed to the integration queue</description>
+        <name>varProcessName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Id of the record triggering an integration queue</description>
+        <name>varRecordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

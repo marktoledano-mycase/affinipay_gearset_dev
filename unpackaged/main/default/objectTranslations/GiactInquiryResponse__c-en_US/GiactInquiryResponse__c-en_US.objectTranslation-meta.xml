@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>GIACT Inquiry Response</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>GIACT Inquiry Responses</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>GACT Audit Log Layout-Admin</layout>
+        <sections>
+            <label><!-- Bank Account Verification Information --></label>
+            <section>Bank Account Verification Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Authentication Information --></label>
+            <section>Customer Authentication Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>GIACT Audit Log Layout</layout>
+        <sections>
+            <label><!-- Bank Account Verification Information --></label>
+            <section>Bank Account Verification Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Authentication Information --></label>
+            <section>Customer Authentication Information</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CPACharge_require_List_of_Top_Features</fullName>
+    <active>true</active>
+    <description>Require the list of top features if the record type is CPACharge and the stage is Needs Analysis or Decision Making</description>
+    <errorConditionFormula>$Permission.Bypass_Defined_VR_s = FALSE &amp;&amp;
+
+Record_Type_Name__c=&quot;CPACharge&quot; &amp;&amp; 
+ISBLANK(List_of_Top_Features__c) &amp;&amp;
+( ISCHANGED(StageName) &amp;&amp;
+  ( ISPICKVAL(StageName, &quot;Needs Analysis&quot;) || 
+    ISPICKVAL(StageName, &quot;Decision Making&quot;)
+  )
+)</errorConditionFormula>
+    <errorMessage>CPACharge Opportunities must have List of Top Features filled out if the opportunity is in Needs Analysis or Decision Making.</errorMessage>
+</ValidationRule>

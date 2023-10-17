@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">
+<p style="line-height:1.38"><span style="display: none;">&nbsp;</span>Hi {{{Recipient.FirstName}}},<br />
+<br />
+Thanks for reaching out to us!&nbsp;<br />
+<br />
+It looks like your current domain (xxx) [is/is not] in our GoDaddy account. We will need access to the account that owns the domain in order to make the requested changes. I've attached some instructions below that you can use to delegate access to your GoDaddy account.<br />
+<br />
+<b>Delegating GoDaddy Access:<br />
+Step 1:</b> https://www.godaddy.com/help/invite-a-delegate-to-access-my-godaddy-account-12376<br />
+<b>Step 2: </b>https://www.godaddy.com/help/assign-delegate-folder-permissions-32180<br />
+<br />
+<b>Our GoDaddy Info:</b><br />
+<b>Name:&nbsp;</b>MyCase Websites<br />
+<b>Email:</b> websites@mycase.com<br />
+<br />
+Thanks, and please feel free to reach out if you have any questions!<br />
+<br />
+Thank you,<br />
+{{{Sender.FirstName}}}<br />
+MyCase Website Services Team<br />
+Case #{{{Case.CaseNumber}}}</p>
+<span style="display: none;">&nbsp;</span><br />
+&nbsp;
+</body></html>

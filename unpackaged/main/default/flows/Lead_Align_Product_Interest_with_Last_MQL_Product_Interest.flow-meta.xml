@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <assignments>
+        <name>Update_the_Product_Interest_Assign</name>
+        <label>Update the Product Interest</label>
+        <locationX>50</locationX>
+        <locationY>395</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Sales_Brand__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Last_MQL_Brand__c</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Check_Match_to_Last_MQL_Brand</name>
+        <label>Check Match to Last MQL Brand</label>
+        <locationX>182</locationX>
+        <locationY>287</locationY>
+        <defaultConnectorLabel>Match</defaultConnectorLabel>
+        <rules>
+            <name>No_Match</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Sales_Brand__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Last_MQL_Brand__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_the_Product_Interest_Assign</targetReference>
+            </connector>
+            <label>No Match</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Lead - Align Product Interest with Last MQL Product Interest {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Lead - Align Product Interest with Last MQL Brand</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_Match_to_Last_MQL_Brand</targetReference>
+        </connector>
+        <filterFormula>AND(
+{!$Record.IsConverted} &lt;&gt; TRUE,
+{!$Record.Bypass_VR_and_Automation__c} &lt;&gt; TRUE,
+ISCHANGED({!$Record.Last_MQL_Brand__c})
+)</filterFormula>
+        <object>Lead</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

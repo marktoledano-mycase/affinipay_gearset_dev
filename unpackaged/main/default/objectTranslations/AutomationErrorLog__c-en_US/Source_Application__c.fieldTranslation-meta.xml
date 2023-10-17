@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Source Application --></label>
+        <name>Source_Application__c</name>
+        <picklistValues>
+            <masterLabel>GAuthenticate</masterLabel>
+            <translation><!-- GAuthenticate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GIdentify</masterLabel>
+            <translation><!-- GIdentify --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GVerify</masterLabel>
+            <translation><!-- GVerify --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PayNearMe</masterLabel>
+            <translation><!-- PayNearMe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TinCheck</masterLabel>
+            <translation><!-- TinCheck --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

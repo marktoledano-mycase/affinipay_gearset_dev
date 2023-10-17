@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marketing_Test__c</fullName>
+    <description>This is used by Marketing to report on results of experiments and form tests on the website. It is used on an ad hoc basis to support the campaign or experiment on hand at the time.</description>
+    <externalId>false</externalId>
+    <label>Marketing Test</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

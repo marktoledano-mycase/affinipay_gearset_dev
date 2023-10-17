@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Date merchant application linked to Opportunity is provisioned --></help>
+        <label><!-- Application Provisioned Date --></label>
+        <name>Application_Provisioned_Date__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- No Website 2.0 Processing --></label>
+        <name>No_Website_2_0_Processing__c</name>
+    </CustomFieldTranslation>

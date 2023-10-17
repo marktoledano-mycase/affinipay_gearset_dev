@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>English</fullName>
+        <default>true</default>
+        <label>English</label>
+    </customValue>
+    <customValue>
+        <fullName>Spanish</fullName>
+        <default>false</default>
+        <label>Spanish</label>
+    </customValue>
+    <customValue>
+        <fullName>Arabic (Algerian Spoken)</fullName>
+        <default>false</default>
+        <label>Arabic (Algerian Spoken)</label>
+    </customValue>
+    <customValue>
+        <fullName>Arabic (Egyptian Spoken)</fullName>
+        <default>false</default>
+        <label>Arabic (Egyptian Spoken)</label>
+    </customValue>
+    <customValue>
+        <fullName>Arabic (Modern Standard)</fullName>
+        <default>false</default>
+        <label>Arabic (Modern Standard)</label>
+    </customValue>
+    <customValue>
+        <fullName>Arabic (Sudanese Spoken)</fullName>
+        <default>false</default>
+        <label>Arabic (Sudanese Spoken)</label>
+    </customValue>
+    <customValue>
+        <fullName>Chinese (Hakka)</fullName>
+        <default>false</default>
+        <label>Chinese (Hakka)</label>
+    </customValue>
+    <customValue>
+        <fullName>Chinese (Jin)</fullName>
+        <default>false</default>
+        <label>Chinese (Jin)</label>
+    </customValue>
+    <customValue>
+        <fullName>Chinese (Mandarin)</fullName>
+        <default>false</default>
+        <label>Chinese (Mandarin)</label>
+    </customValue>
+    <customValue>
+        <fullName>Chinese (Min Nan)</fullName>
+        <default>false</default>
+        <label>Chinese (Min Nan)</label>
+    </customValue>
+    <customValue>
+        <fullName>Chinese (Wu)</fullName>
+        <default>false</default>
+        <label>Chinese (Wu)</label>
+    </customValue>
+    <customValue>
+        <fullName>Chinese (Yue)</fullName>
+        <default>false</default>
+        <label>Chinese (Yue)</label>
+    </customValue>
+    <customValue>
+        <fullName>French</fullName>
+        <default>false</default>
+        <label>French</label>
+    </customValue>
+    <customValue>
+        <fullName>Hindi</fullName>
+        <default>false</default>
+        <label>Hindi</label>
+    </customValue>
+    <customValue>
+        <fullName>Italian</fullName>
+        <default>false</default>
+        <label>Italian</label>
+    </customValue>
+    <customValue>
+        <fullName>Japanese</fullName>
+        <default>false</default>
+        <label>Japanese</label>
+    </customValue>
+    <customValue>
+        <fullName>Korean</fullName>
+        <default>false</default>
+        <label>Korean</label>
+    </customValue>
+    <customValue>
+        <fullName>Polish</fullName>
+        <default>false</default>
+        <label>Polish</label>
+    </customValue>
+    <customValue>
+        <fullName>Portuguese</fullName>
+        <default>false</default>
+        <label>Portuguese</label>
+    </customValue>
+    <customValue>
+        <fullName>Punjabi (Eastern)</fullName>
+        <default>false</default>
+        <label>Punjabi (Eastern)</label>
+    </customValue>
+    <customValue>
+        <fullName>Punjabi (Western)</fullName>
+        <default>false</default>
+        <label>Punjabi (Western)</label>
+    </customValue>
+    <customValue>
+        <fullName>Russian</fullName>
+        <default>false</default>
+        <label>Russian</label>
+    </customValue>
+    <customValue>
+        <fullName>German</fullName>
+        <default>false</default>
+        <label>German</label>
+    </customValue>
+    <customValue>
+        <fullName>Thai</fullName>
+        <default>false</default>
+        <label>Thai</label>
+    </customValue>
+    <customValue>
+        <fullName>Turkish</fullName>
+        <default>false</default>
+        <label>Turkish</label>
+    </customValue>
+    <customValue>
+        <fullName>Vietnamese</fullName>
+        <default>false</default>
+        <label>Vietnamese</label>
+    </customValue>
+    <masterLabel>Languages</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Year_YTD_Created_Date__c</fullName>
+    <description>R164026</description>
+    <externalId>false</externalId>
+    <formula>IF(DATE(YEAR(DATEVALUE(CreatedDate))+1, MONTH(DATEVALUE(CreatedDate)), DAY(DATEVALUE(CreatedDate)))&lt;= TODAY()&amp;&amp; 
+YEAR(TODAY())-YEAR(DATEVALUE(CreatedDate))= 1, 
+True,False)</formula>
+    <label>Last Year YTD Created Date</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

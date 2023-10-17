@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Touch_Program__c</fullName>
+    <description>This is the last program that the Lead or Contact interacted with prior to the MQL event.</description>
+    <externalId>false</externalId>
+    <label>Last Touch Program</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

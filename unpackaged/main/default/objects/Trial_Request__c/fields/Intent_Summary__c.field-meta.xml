@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Intent_Summary__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( Intent__c,
+
+&quot;LPMS&quot;, &quot;Learn what practice management software is and how it can help me&quot;,
+&quot;Features&quot;, &quot;Understand MyCase features and see if it is the best fit for me&quot;,
+&quot;Setup&quot;, &quot;I&#39;m ready to use MyCase and want to get up and running&quot;,
+
+IF( TEXT(Trial_Status__c) = &quot;Activated&quot;, &quot;No intent provided&quot;, &quot;&quot;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Intent Summary</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

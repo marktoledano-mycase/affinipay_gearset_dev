@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Effective_Start__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Roll-up Summary field based on MIN: Subscription Contract - Effective Date</inlineHelpText>
+    <label>Contract Effective Start</label>
+    <summarizedField>Contract__c.Effective_Date__c</summarizedField>
+    <summaryForeignKey>Contract__c.Account__c</summaryForeignKey>
+    <summaryOperation>min</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

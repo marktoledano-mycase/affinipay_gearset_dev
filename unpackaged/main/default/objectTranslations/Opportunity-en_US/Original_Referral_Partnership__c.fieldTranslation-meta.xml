@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Represents the referral partnership that first came in on the lead through a landing page or other automated method.  Brought over from the lead conversion only and not used otherwise. --></help>
+        <label><!-- Original Referral Partnership --></label>
+        <name>Original_Referral_Partnership__c</name>
+        <relationshipLabel><!-- Opportunities (Original Referral Partnership) --></relationshipLabel>
+    </CustomFieldTranslation>

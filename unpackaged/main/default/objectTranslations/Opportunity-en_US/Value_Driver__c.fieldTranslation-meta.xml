@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Primary value driver for prospect/customer firm --></help>
+        <label><!-- Value Driver --></label>
+        <name>Value_Driver__c</name>
+    </CustomFieldTranslation>

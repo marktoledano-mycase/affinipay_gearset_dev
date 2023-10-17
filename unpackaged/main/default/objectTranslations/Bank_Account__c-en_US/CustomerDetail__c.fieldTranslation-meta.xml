@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Customer Detail --></label>
+        <name>CustomerDetail__c</name>
+        <picklistValues>
+            <masterLabel>Business</masterLabel>
+            <translation><!-- Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>First Owner</masterLabel>
+            <translation><!-- First Owner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fourth Owner</masterLabel>
+            <translation><!-- Fourth Owner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Second Owner</masterLabel>
+            <translation><!-- Second Owner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Third Owner</masterLabel>
+            <translation><!-- Third Owner --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

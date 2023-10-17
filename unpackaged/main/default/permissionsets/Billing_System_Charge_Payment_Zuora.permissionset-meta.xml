@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>Billing_System_Charge_Payment_Zuora</name>
+    </customPermissions>
+    <description>Assign this permission set to users who should have access to charging payments methods outside of scheduled bill runs in Zuora for customers who have outstanding balances</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Billing System Charge Payment Zuora</label>
+    <license>Salesforce</license>
+</PermissionSet>

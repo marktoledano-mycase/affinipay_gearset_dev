@@ -1,0 +1,11 @@
+<html><head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">Hello,&nbsp;<br />
+<br />
+Thank you for reaching out! We don't have your contact information saved in our system. In order to move forward with your request, we need you to CC our mutual client in this email thread. Once we have this we will move forward with your request.&nbsp;<br />
+<br />
+Thank you,&nbsp;<br />
+{{{Sender.FirstName}}}<br />
+MyCase Website Services Team&nbsp;<br />
+Case # {{{Case.CaseNumber}}}</body></html>

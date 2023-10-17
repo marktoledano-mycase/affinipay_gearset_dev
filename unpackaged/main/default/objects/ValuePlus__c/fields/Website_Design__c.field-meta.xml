@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Website_Design__c</fullName>
+    <description>MC, PM; R2024774, R2028878; Edited: users</description>
+    <externalId>false</externalId>
+    <label>Website Design</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>MyCase - Broadway</fullName>
+                <default>false</default>
+                <label>MyCase - Broadway</label>
+            </value>
+            <value>
+                <fullName>MyCase - Modern</fullName>
+                <default>false</default>
+                <label>MyCase - Modern</label>
+            </value>
+            <value>
+                <fullName>MyCase - Traditional</fullName>
+                <default>false</default>
+                <label>MyCase - Traditional</label>
+            </value>
+            <value>
+                <fullName>APM – State St</fullName>
+                <default>false</default>
+                <label>APM – State St</label>
+            </value>
+            <value>
+                <fullName>APM – Alta Vista</fullName>
+                <default>false</default>
+                <label>APM – Alta Vista</label>
+            </value>
+            <value>
+                <fullName>APM – Main St</fullName>
+                <default>false</default>
+                <label>APM – Main St</label>
+            </value>
+            <value>
+                <fullName>APM – Broadway</fullName>
+                <default>false</default>
+                <label>APM – Broadway</label>
+            </value>
+            <value>
+                <fullName>WP - Anacapa</fullName>
+                <default>false</default>
+                <label>WP - Anacapa</label>
+            </value>
+            <value>
+                <fullName>WP - Alta Vista</fullName>
+                <default>false</default>
+                <label>WP - Alta Vista</label>
+            </value>
+            <value>
+                <fullName>WP - Broadway</fullName>
+                <default>false</default>
+                <label>WP - Broadway</label>
+            </value>
+            <value>
+                <fullName>WP - Hollister</fullName>
+                <default>false</default>
+                <label>WP - Hollister</label>
+            </value>
+            <value>
+                <fullName>WP - Main St</fullName>
+                <default>false</default>
+                <label>WP - Main St</label>
+            </value>
+            <value>
+                <fullName>WP - Mission</fullName>
+                <default>false</default>
+                <label>WP - Mission</label>
+            </value>
+            <value>
+                <fullName>WP - Riviera</fullName>
+                <default>false</default>
+                <label>WP - Riviera</label>
+            </value>
+            <value>
+                <fullName>WP - State St</fullName>
+                <default>false</default>
+                <label>WP - State St</label>
+            </value>
+            <value>
+                <fullName>MyCase - Bayview</fullName>
+                <default>false</default>
+                <label>MyCase - Bayview</label>
+            </value>
+            <value>
+                <fullName>MyCase - Devonport</fullName>
+                <default>false</default>
+                <label>MyCase - Devonport</label>
+            </value>
+            <value>
+                <fullName>MyCase - Milford</fullName>
+                <default>false</default>
+                <label>MyCase - Milford</label>
+            </value>
+            <value>
+                <fullName>MyCase - Northcote</fullName>
+                <default>false</default>
+                <label>MyCase - Northcote</label>
+            </value>
+            <value>
+                <fullName>MyCase - Pinehill</fullName>
+                <default>false</default>
+                <label>MyCase - Pinehill</label>
+            </value>
+            <value>
+                <fullName>MyCase - Rosedale</fullName>
+                <default>false</default>
+                <label>MyCase - Rosedale</label>
+            </value>
+            <value>
+                <fullName>MyCase - Westlake</fullName>
+                <default>false</default>
+                <label>MyCase - Westlake</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Promo__c</fullName>
+    <description>#4902</description>
+    <externalId>false</externalId>
+    <formula>IF(RecordType.DeveloperName =&#39;MyCase_Websites&#39;
+&amp;&amp;Opportunity__r.CloseDate&gt;DATE(2022,03,10)
+&amp;&amp;Opportunity__r.CloseDate&lt;DATE(2022,04,01)
+,&#39;March Mania&#39;,
+IF(RecordType.DeveloperName=&#39;MyCase_Websites&#39;
+&amp;&amp;Opportunity__r.CloseDate&gt;=DATE(2022,04,01)
+&amp;&amp;Opportunity__r.CloseDate&lt;=DATE(2022,04,30)
+,&#39;April Promo&#39;,
+IF(RecordType.DeveloperName =&#39;MyCase_Websites&#39;
+&amp;&amp;Opportunity__r.CloseDate&gt;=DATE(2022,05,01)
+&amp;&amp;Opportunity__r.CloseDate&lt;=DATE(2022,05,31)
+,&#39;May Promo&#39;,&#39;No Promo&#39;)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Promo</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

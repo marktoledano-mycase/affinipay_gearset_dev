@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Value+</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>ValuePlus</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>MyCase Payments</layout>
+        <sections>
+            <label><!-- Adoption --></label>
+            <section>Adoption</section>
+        </sections>
+        <sections>
+            <label><!-- Alerts --></label>
+            <section>Alerts</section>
+        </sections>
+        <sections>
+            <label><!-- Business Owners --></label>
+            <section>Business Owners</section>
+        </sections>
+        <sections>
+            <label><!-- CC Rate Details --></label>
+            <section>CC Rate Details</section>
+        </sections>
+        <sections>
+            <label><!-- Company Detail --></label>
+            <section>Company Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- GIACT Underwriting --></label>
+            <section>GIACT Underwriting</section>
+        </sections>
+        <sections>
+            <label><!-- Milestones --></label>
+            <section>Milestones</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+        <sections>
+            <label><!-- On-Boarding --></label>
+            <section>On-Boarding</section>
+        </sections>
+        <sections>
+            <label><!-- On-Boarding Notes --></label>
+            <section>On-Boarding Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Profit Stars Information --></label>
+            <section>Profit Stars Information</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+        <sections>
+            <label><!-- Underwriting Notes --></label>
+            <section>Underwriting Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Vantiv Information --></label>
+            <section>Vantiv Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>MyCase Payments w/ Related Lists</layout>
+        <sections>
+            <label><!-- Adoption --></label>
+            <section>Adoption</section>
+        </sections>
+        <sections>
+            <label><!-- Alerts --></label>
+            <section>Alerts</section>
+        </sections>
+        <sections>
+            <label><!-- Business Owners --></label>
+            <section>Business Owners</section>
+        </sections>
+        <sections>
+            <label><!-- CC Rate Details --></label>
+            <section>CC Rate Details</section>
+        </sections>
+        <sections>
+            <label><!-- Company Detail --></label>
+            <section>Company Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- GIACT Underwriting --></label>
+            <section>GIACT Underwriting</section>
+        </sections>
+        <sections>
+            <label><!-- Milestones --></label>
+            <section>Milestones</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+        <sections>
+            <label><!-- On-Boarding --></label>
+            <section>On-Boarding</section>
+        </sections>
+        <sections>
+            <label><!-- On-Boarding Notes --></label>
+            <section>On-Boarding Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Profit Stars Information --></label>
+            <section>Profit Stars Information</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+        <sections>
+            <label><!-- Underwriting Notes --></label>
+            <section>Underwriting Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Vantiv Information --></label>
+            <section>Vantiv Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>MyCase Website</layout>
+        <sections>
+            <label><!-- Alerts --></label>
+            <section>Alerts</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Details --></label>
+            <section>Details</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Google Analytics --></label>
+            <section>Google Analytics</section>
+        </sections>
+        <sections>
+            <label><!-- Milestones --></label>
+            <section>Milestones</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Registrar Information --></label>
+            <section>Registrar Information</section>
+        </sections>
+        <sections>
+            <label><!-- System Infomation --></label>
+            <section>System Infomation</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Professional Services</layout>
+        <sections>
+            <label><!-- Alerts --></label>
+            <section>Alerts</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Milestones --></label>
+            <section>Milestones</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+        <sections>
+            <label><!-- System Infomation --></label>
+            <section>System Infomation</section>
+        </sections>
+        <sections>
+            <label><!-- Time Tracker --></label>
+            <section>Time Tracker</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Value+ Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Milestones --></label>
+            <section>Milestones</section>
+        </sections>
+        <sections>
+            <label><!-- Vantiv --></label>
+            <section>Vantiv</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- MyCase V+ Payments --></label>
+        <name>MyCase_V_Payments</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Case --></label>
+        <name>New_MyCase_Case</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- APM Payments --></label>
+        <name>APM_Payments</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Document Automation --></label>
+        <name>Document_Automation</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- IM Payments --></label>
+        <name>IM_Payments</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Created by request R151733 --></description>
+        <label><!-- MyCase Payments --></label>
+        <name>MyCase_Payments</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- MyCase Websites --></label>
+        <name>MyCase_Websites</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You are not authorized to change the &apos;GIACT Business Validation&apos; from &apos;Automated Approval&apos; --></errorMessage>
+        <name>GiactBusinessChangeFromAutoApproval</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You are not authorized to change the &apos;GIACT Business Validation&apos; to &apos;Automated Approval&apos; --></errorMessage>
+        <name>GiactBusinessChangeToAutoApproval</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You are not authorized to change the &apos;Giact Business Owner 1 Validation&apos; to &apos;Automated Approval&apos; --></errorMessage>
+        <name>GiactBusinessOwner1ChangeToAutoApproval</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You are not authorized to change the &apos;Giact Business Owner 2 Validation&apos; to &apos;Automated Approval&apos; --></errorMessage>
+        <name>GiactBusinessOwner2ChangeToAutoApproval</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You are not authorized to change the &apos;Giact Business Owner 3 Validation&apos; to &apos;Automated Approval&apos; --></errorMessage>
+        <name>GiactBusinessOwner3ChangeToAutoApproval</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You are not authorized to change the &apos;Giact Business Owner 4 Validation&apos; to &apos;Automated Approval&apos; --></errorMessage>
+        <name>GiactBusinessOwner4ChangeToAutoApproval</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only the GIACT Integration can update the TIN Match to &quot;Automated Approval&quot; --></errorMessage>
+        <name>GiactIntegrationOnlyUpdatesTINMatch</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Principal 1 SSN details are missing on Value+ Record. Please provide these details to process the GIACT Call. --></errorMessage>
+        <name>GiactMissingSSNOwner1_MyCase</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Principal 2SSN details are missing on Value+ Record. Please provide these details to process the GIACT Call. --></errorMessage>
+        <name>GiactMissingSSNOwner2_MyCase</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Principal 3 SSN details are missing on Value+ Record. Please provide these details to process the GIACT Call. --></errorMessage>
+        <name>GiactMissingSSNOwner3_MyCase</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Principal 4 SSN details are missing on Value+ Record. Please provide these details to process the GIACT Call. --></errorMessage>
+        <name>GiactMissingSSNOwner4_MyCase</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Business Tax Id details are missing on Value Plus. Please provide these details to process the GIACT Call --></errorMessage>
+        <name>GiactMissingTaxIdBusiness_MyCase</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You are not authorized to change the &apos;Giact Status&apos; to &apos;Automated Approval&apos; --></errorMessage>
+        <name>Giact_St_Change_to_Automated_Approval</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Select the MyCase Website Implementation fee to set Stage as Site Presentation --></errorMessage>
+        <name>Impl_Fee_Required_With_SitePresentation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- &apos;Site Delivered/Final Changes&apos; must be completed before setting to &quot;Live&apos; --></errorMessage>
+        <name>Live_req_Site_Delivered_Final_Changes</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot change the date this record was enrolled in profit stars once set. --></errorMessage>
+        <name>Prevent_Enrollment_Date_Editing</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You may not manually choose that ProfitStars Onboarding Status. --></errorMessage>
+        <name>Prevent_Manual_PS_Onboarding_Status_Chg</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ProfitStars On-Boarding Status cannot be set to &apos;Complete&apos; until Data Migration Stage is &apos;Migration Complete&apos;.  Please contact Data Migration Specialist for an update on status of data migration. --></errorMessage>
+        <name>ProfitStars_Onboarding_Needs_Data_Mig</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Date can&apos;t be changed. Merchant was already onboarded in Vantiv. --></errorMessage>
+        <name>Restrit_vantiv_onboarding_date_edit</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Admin_Test --></label>
+        <name>Admin_Test</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CEA --></label>
+        <name>CEA</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CEA_Agreement --></label>
+        <name>CEA_Agreement</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Deca0t8W00000OTdlAQAT --></label>
+        <name>Deca0t8W00000OTdlAQAT</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Deca0t8W00000OTdlZQAT --></label>
+        <name>Deca0t8W00000OTdlZQAT</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Deca0t8W00000SHH92QAH --></label>
+        <name>Deca0t8W00000SHH92QAH</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Dummy_Test_Link --></label>
+        <name>Dummy_Test_Link</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Enroll --></label>
+        <name>Enroll</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Enroll_in_ProfitStars_Outbound --></label>
+        <name>Enroll_in_ProfitStars_Outbound</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Enroll_in_Vantiv --></label>
+        <name>Enroll_in_Vantiv</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Push_Velocity_Update --></label>
+        <name>Push_Velocity_Update</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_MyCase_Bank_Auth_Form_Sertifi --></label>
+        <name>Send_MyCase_Bank_Auth_Form_Sertifi</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_MyCase_Payments_Agreement_NEW_Sertifi --></label>
+        <name>Send_MyCase_Payments_Agreement_NEW_Sertifi</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_MyCase_Payments_Agreement_OLD_Sertifi --></label>
+        <name>Send_MyCase_Payments_Agreement_OLD_Sertifi</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Tiered_Payments_Agreement --></label>
+        <name>Send_Tiered_Payments_Agreement</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Tiered_Payments_Agreement_Designated_Signer --></label>
+        <name>Send_Tiered_Payments_Agreement_Designated_Signer</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SpaningValuePlusRestore --></label>
+        <name>SpaningValuePlusRestore</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Update_Legal_Entity_in_Vantiv --></label>
+        <name>Update_Legal_Entity_in_Vantiv</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Call In</fullName>
+        <default>false</default>
+        <label>Call In</label>
+    </customValue>
+    <customValue>
+        <fullName>Contact Request</fullName>
+        <default>false</default>
+        <label>Contact Request</label>
+    </customValue>
+    <customValue>
+        <fullName>CSQL</fullName>
+        <default>false</default>
+        <label>CSQL</label>
+    </customValue>
+    <customValue>
+        <fullName>Demo Request</fullName>
+        <default>false</default>
+        <label>Demo Request</label>
+    </customValue>
+    <customValue>
+        <fullName>Events</fullName>
+        <default>false</default>
+        <label>Events</label>
+    </customValue>
+    <customValue>
+        <fullName>Live Chat</fullName>
+        <default>false</default>
+        <label>Live Chat</label>
+    </customValue>
+    <customValue>
+        <fullName>Referral</fullName>
+        <default>false</default>
+        <label>Referral</label>
+    </customValue>
+    <customValue>
+        <fullName>Score Threshold</fullName>
+        <default>false</default>
+        <label>Score Threshold</label>
+    </customValue>
+    <customValue>
+        <fullName>Self-Serve Sign Up</fullName>
+        <default>false</default>
+        <label>Self-Serve Sign Up</label>
+    </customValue>
+    <customValue>
+        <fullName>Self-Serve Signup: Incomplete Application</fullName>
+        <default>false</default>
+        <label>Self-Serve Signup: Incomplete Application</label>
+    </customValue>
+    <customValue>
+        <fullName>Self-Serve Signup: Missing Documents</fullName>
+        <default>false</default>
+        <label>Self-Serve Signup: Missing Documents</label>
+    </customValue>
+    <customValue>
+        <fullName>Self-Serve Signup: Upsell</fullName>
+        <default>false</default>
+        <label>Self-Serve Signup: Upsell</label>
+    </customValue>
+    <customValue>
+        <fullName>Sign Up</fullName>
+        <default>false</default>
+        <label>Sign Up</label>
+    </customValue>
+    <customValue>
+        <fullName>Software Advice</fullName>
+        <default>false</default>
+        <label>Software Advice</label>
+    </customValue>
+    <customValue>
+        <fullName>Trial</fullName>
+        <default>false</default>
+        <label>Trial</label>
+    </customValue>
+    <description>This is the type of activity that resulted in the Lead or Contact becoming an MQL. Most of these correspond to marketing forms, except for “Score Threshold” which corresponds to a person meeting a specific behavioral and demographic score.</description>
+    <masterLabel>MQL Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Bank Account</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Bank Accounts</value>
+    </caseValues>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Bank Account Layout</layout>
+        <sections>
+            <label><!-- Bank Information --></label>
+            <section>Bank Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- PayNearMe Information --></label>
+            <section>PayNearMe Information</section>
+        </sections>
+        <sections>
+            <label><!-- Profit Stars Outbound Information --></label>
+            <section>Profit Stars Outbound Information</section>
+        </sections>
+        <sections>
+            <label><!-- Vantiv Information --></label>
+            <section>Vantiv Information</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please input a MyCase Account Type --></errorMessage>
+        <name>MyCase_Account_Type_Required_for_MyCase</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- An Account Label is required on all Bank Accounts. --></errorMessage>
+        <name>Require_Account_Label</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a valid account number. --></errorMessage>
+        <name>Valid_Account_Number</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a valid Return Account number. --></errorMessage>
+        <name>Valid_Return_Account_Number</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a valid Return Routing number. --></errorMessage>
+        <name>Valid_Return_Routing_Number</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a valid routing number. --></errorMessage>
+        <name>Valid_Routing_Number</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Add_Bank_Account_To_Vantiv --></label>
+        <name>Add_Bank_Account_To_Vantiv</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Push_Bank_Account_To_CyberSource --></label>
+        <name>Push_Bank_Account_To_CyberSource</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Push_Bank_Account_to_Outbound --></label>
+        <name>Push_Bank_Account_to_Outbound</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Push_Bank_Accounts --></label>
+        <name>Push_Bank_Accounts</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Push_Return_Only_Bank_Account_to_Profitstars --></label>
+        <name>Push_Return_Only_Bank_Account_to_Profitstars</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Settlement_Method_in_Pay_Near_Me --></label>
+        <name>Send_Settlement_Method_in_Pay_Near_Me</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Update_Bank_Account_in_Profitstars_Outbound --></label>
+        <name>Update_Bank_Account_in_Profitstars_Outbound</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Update_Bank_Account_in_Vantiv --></label>
+        <name>Update_Bank_Account_in_Vantiv</name>
+    </webLinks>
+</CustomObjectTranslation>

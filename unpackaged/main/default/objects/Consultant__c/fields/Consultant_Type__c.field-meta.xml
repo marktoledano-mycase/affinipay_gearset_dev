@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Consultant_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Consultant Type</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Consultant</fullName>
+                <default>false</default>
+                <label>Consultant</label>
+            </value>
+            <value>
+                <fullName>Certified Consultant</fullName>
+                <default>false</default>
+                <label>Certified Consultant</label>
+            </value>
+            <value>
+                <fullName>IT Consultant</fullName>
+                <default>false</default>
+                <label>IT Consultant</label>
+            </value>
+            <value>
+                <fullName>Integration Partner</fullName>
+                <default>false</default>
+                <label>Integration Partner</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

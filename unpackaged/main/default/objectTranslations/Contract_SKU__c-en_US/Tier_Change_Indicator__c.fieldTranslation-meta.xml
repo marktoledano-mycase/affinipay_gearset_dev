@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Represents whether this product represented a tier change from previously contracted product as indicated from the related opportunity SKU record. --></help>
+        <label><!-- Tier Change Indicator --></label>
+        <name>Tier_Change_Indicator__c</name>
+    </CustomFieldTranslation>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Captorra</fullName>
+        <default>false</default>
+        <label>Captorra</label>
+    </customValue>
+    <customValue>
+        <fullName>Excel</fullName>
+        <default>false</default>
+        <label>Excel</label>
+    </customValue>
+    <customValue>
+        <fullName>Existing CMS</fullName>
+        <default>false</default>
+        <label>Existing CMS</label>
+    </customValue>
+    <customValue>
+        <fullName>Lead Docket</fullName>
+        <default>false</default>
+        <label>Lead Docket</label>
+    </customValue>
+    <customValue>
+        <fullName>None</fullName>
+        <default>false</default>
+        <label>None</label>
+    </customValue>
+    <description>Specifically for Casepeer but could be expanded for use by other brands</description>
+    <masterLabel>Intake Solution</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

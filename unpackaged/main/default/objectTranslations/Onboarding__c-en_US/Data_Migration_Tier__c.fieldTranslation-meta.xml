@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Data Migration Tier --></label>
+        <name>Data_Migration_Tier__c</name>
+        <picklistValues>
+            <masterLabel>CASEpeer to CASEpeer Basic</masterLabel>
+            <translation><!-- CASEpeer to CASEpeer Basic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CASEpeer to CASEpeer Pro</masterLabel>
+            <translation><!-- CASEpeer to CASEpeer Pro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custom Excel</masterLabel>
+            <translation><!-- Custom Excel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custom Premium</masterLabel>
+            <translation><!-- Custom Premium --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Custom Pro</masterLabel>
+            <translation><!-- Custom Pro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General Excel</masterLabel>
+            <translation><!-- General Excel --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

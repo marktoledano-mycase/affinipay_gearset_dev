@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Temp3_Include_in_Normalization__c</fullName>
+    <externalId>false</externalId>
+    <formula>if(
+    (TEMP_Company_Word_Count__c = &quot;Include&quot; &amp;&amp;
+     TEMP_Is_Score_Threshold__c = &quot;Include&quot; &amp;&amp;
+     TEMP_Payments_Applications__c = &quot;Include&quot; &amp;&amp;
+     Temp_Personal_Domain_Check__c = &quot;Include&quot; &amp;&amp;
+     TEMP_Trial_Demo_Company_Keywords__c = &quot;Include&quot;
+    ), TRUE, FALSE
+   )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Temp3 - Include in Normalization</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

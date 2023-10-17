@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closed_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Closed Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Closing Business / No Longer in Business</fullName>
+                <default>false</default>
+                <label>Closing Business / No Longer in Business</label>
+            </value>
+            <value>
+                <fullName>Not Processing / No Activity</fullName>
+                <default>false</default>
+                <label>Not Processing / No Activity</label>
+            </value>
+            <value>
+                <fullName>Switched Processors</fullName>
+                <default>false</default>
+                <label>Switched Processors</label>
+            </value>
+            <value>
+                <fullName>Software Change</fullName>
+                <default>false</default>
+                <label>Software Change</label>
+            </value>
+            <value>
+                <fullName>Unsatisfied with Rates &amp; Fees</fullName>
+                <default>false</default>
+                <label>Unsatisfied with Rates &amp; Fees</label>
+            </value>
+            <value>
+                <fullName>Pass-Through Fees</fullName>
+                <default>false</default>
+                <label>Pass-Through Fees</label>
+            </value>
+            <value>
+                <fullName>2022 Price Change</fullName>
+                <default>false</default>
+                <label>2022 Price Change</label>
+            </value>
+            <value>
+                <fullName>Unsatisfied with Service</fullName>
+                <default>false</default>
+                <label>Unsatisfied with Service</label>
+            </value>
+            <value>
+                <fullName>Unsatisfied with product features</fullName>
+                <default>false</default>
+                <label>Unsatisfied with product features</label>
+            </value>
+            <value>
+                <fullName>Equipment Issues/Malfunctioning</fullName>
+                <default>false</default>
+                <label>Equipment Issues/Malfunctioning</label>
+            </value>
+            <value>
+                <fullName>Credit cards no longer accepted</fullName>
+                <default>false</default>
+                <label>Credit cards no longer accepted</label>
+            </value>
+            <value>
+                <fullName>Merged/Joined firm already using our service</fullName>
+                <default>false</default>
+                <label>Merged/Joined firm already using our service</label>
+            </value>
+            <value>
+                <fullName>Change of Ownership</fullName>
+                <default>false</default>
+                <label>Change of Ownership</label>
+            </value>
+            <value>
+                <fullName>PCI Fee</fullName>
+                <default>false</default>
+                <label>PCI Fee</label>
+            </value>
+            <value>
+                <fullName>WorldPay Cancellation</fullName>
+                <default>false</default>
+                <label>WorldPay Cancellation</label>
+            </value>
+            <value>
+                <fullName>Deposit (Day) Delay</fullName>
+                <default>false</default>
+                <label>Deposit (Day) Delay</label>
+            </value>
+            <value>
+                <fullName>*Other (see closed other explained)</fullName>
+                <default>false</default>
+                <label>*Other (see closed other explained)</label>
+            </value>
+            <value>
+                <fullName>ACH Rejects</fullName>
+                <default>false</default>
+                <label>ACH Rejects</label>
+            </value>
+            <value>
+                <fullName>Excessive Chargebacks</fullName>
+                <default>false</default>
+                <label>Excessive Chargebacks</label>
+            </value>
+            <value>
+                <fullName>Fraud</fullName>
+                <default>false</default>
+                <label>Fraud</label>
+            </value>
+            <value>
+                <fullName>Reason Unknown</fullName>
+                <default>false</default>
+                <label>Reason Unknown</label>
+            </value>
+            <value>
+                <fullName>Switched to Local Bank</fullName>
+                <default>false</default>
+                <label>Switched to Local Bank</label>
+            </value>
+            <value>
+                <fullName>TAX ID EIN Change</fullName>
+                <default>false</default>
+                <label>TAX ID EIN Change</label>
+            </value>
+            <value>
+                <fullName>Backbill Issue</fullName>
+                <default>false</default>
+                <label>Backbill Issue</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

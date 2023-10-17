@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Time_Zone__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(LEN( BillingState)=0, &quot;None&quot;,
+IF(CONTAINS(&quot;CT:DC:DE:FL:GA:IN:ME:MD:MA:MI:NH:NJ:NY:NC:OH:PA:RI:SC:VT:VA:WV:ON:QC:NB:NS:NL:PE&quot;, BillingState), &quot;GMT-5 Eastern&quot;,
+IF(CONTAINS(&quot;AL:AR:IL:IA:KS:KY:LA:MN:MS:MO:NE:ND:OK:SD:TN:TX:WI:SK:MB:NU&quot;, BillingState), &quot;GMT-6 Central&quot;,
+IF(CONTAINS(&quot;AZ:CO:ID:MT:NM:UT:WY:AB:NT&quot;, BillingState), &quot;GMT-7 Mountain&quot;,
+IF(CONTAINS(&quot;AK&quot;, BillingState), &quot;GMT-9 Alaska&quot;,
+IF(CONTAINS(&quot;HI&quot;, BillingState), &quot;GMT-10 Hawaii&quot;,
+IF(CONTAINS(&quot;CA:NV:OR:WA:BC:YT&quot;, BillingState), &quot;GMT-8 Pacific&quot;, &quot;Other&quot;)))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Time Zone (Formula)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

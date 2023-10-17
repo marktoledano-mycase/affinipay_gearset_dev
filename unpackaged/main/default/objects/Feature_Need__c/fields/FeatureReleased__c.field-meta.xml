@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FeatureReleased__c</fullName>
+    <description>Created for R1814137</description>
+    <externalId>false</externalId>
+    <label>Feature Released</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Not Right Now</fullName>
+                <default>false</default>
+                <label>Not Right Now</label>
+            </value>
+            <value>
+                <fullName>In Research</fullName>
+                <default>false</default>
+                <label>In Research</label>
+            </value>
+            <value>
+                <fullName>In Development</fullName>
+                <default>false</default>
+                <label>In Development</label>
+            </value>
+            <value>
+                <fullName>Released</fullName>
+                <default>false</default>
+                <label>Released</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Points__c</fullName>
+    <description>R1917739</description>
+    <externalId>false</externalId>
+    <formula>IF( OR(RecordTypeId = &#39;01280000000QEf1&#39;,RecordTypeId = &#39;01280000000QEer&#39;,RecordTypeId = &#39;01280000000QEew&#39;),1,
+IF(RecordTypeId = &#39;01280000000QEf6&#39; &amp;&amp; Needs_Dev_Estimate__c = TRUE,5,
+IF(RecordTypeId = &#39;01280000000QEf6&#39; &amp;&amp; Needs_Dev_Estimate__c = FALSE,2,
+
+IF(ISPICKVAL(Hours_Estimate_Picklist__c,&#39;0-1&#39;), 1, 
+IF(ISPICKVAL(Hours_Estimate_Picklist__c,&#39;1-5&#39;), 5,
+IF(ISPICKVAL(Hours_Estimate_Picklist__c,&#39;5-10&#39;), 10,
+IF(ISPICKVAL(Hours_Estimate_Picklist__c,&#39;10-20&#39;), 20,
+IF(ISPICKVAL(Hours_Estimate_Picklist__c,&#39;20-40&#39;), 40,
+IF(ISPICKVAL(Hours_Estimate_Picklist__c,&#39;40-80&#39;), 80,
+IF(ISPICKVAL(Hours_Estimate_Picklist__c,&#39;80+&#39;), 100,
+0
+) 
+)
+)
+)
+)
+)
+)
+)
+)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Points</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

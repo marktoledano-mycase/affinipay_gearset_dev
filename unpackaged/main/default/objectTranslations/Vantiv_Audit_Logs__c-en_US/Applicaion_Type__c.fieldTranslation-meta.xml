@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Applicaion Type --></label>
+        <name>Applicaion_Type__c</name>
+        <picklistValues>
+            <masterLabel>APM Payments</masterLabel>
+            <translation><!-- APM Payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MyCase Payments</masterLabel>
+            <translation><!-- MyCase Payments --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

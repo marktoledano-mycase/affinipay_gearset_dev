@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Own_This_Case</fullName>
+    <availability>online</availability>
+    <description>Clicking makes current user owner of case.</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Own This Case</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/13.0/connection.js&quot;)} 
+var caseObj = new sforce.SObject(&quot;Case&quot;); 
+caseObj.Id = &#39;{!Case.Id}&#39;; 
+caseObj.OwnerId = &#39;{!$User.Id}&#39;;
+var result = sforce.connection.update([caseObj]); 
+if (result[0].success==&#39;false&#39;) { 
+alert(result[0].errors.message); 
+} else { 
+location.reload(true); 
+}</url>
+</WebLink>

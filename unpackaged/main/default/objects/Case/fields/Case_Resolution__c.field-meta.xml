@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Resolution__c</fullName>
+    <description>What form of communication primarily used to resolve the case?</description>
+    <externalId>false</externalId>
+    <label>Case Communication</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Admin/Duplicate</fullName>
+                <default>false</default>
+                <label>Admin/Duplicate</label>
+            </value>
+            <value>
+                <fullName>Call</fullName>
+                <default>false</default>
+                <label>Call</label>
+            </value>
+            <value>
+                <fullName>Copy of Report</fullName>
+                <default>false</default>
+                <label>Copy of Report</label>
+            </value>
+            <value>
+                <fullName>Data Migration Request Complete</fullName>
+                <default>false</default>
+                <label>Data Migration Request Complete</label>
+            </value>
+            <value>
+                <fullName>Documents Received</fullName>
+                <default>false</default>
+                <label>Documents Received</label>
+            </value>
+            <value>
+                <fullName>E-Mail</fullName>
+                <default>false</default>
+                <label>E-Mail</label>
+            </value>
+            <value>
+                <fullName>Email: Elaborate explanation</fullName>
+                <default>false</default>
+                <label>Email: Elaborate explanation</label>
+            </value>
+            <value>
+                <fullName>Email: Quick confirmation</fullName>
+                <default>false</default>
+                <label>Email: Quick confirmation</label>
+            </value>
+            <value>
+                <fullName>Hang up / No Vmail</fullName>
+                <default>false</default>
+                <label>Hang up / No Vmail</label>
+            </value>
+            <value>
+                <fullName>Help Article</fullName>
+                <default>false</default>
+                <label>Help Article</label>
+            </value>
+            <value>
+                <fullName>Investigated with CIC</fullName>
+                <default>false</default>
+                <label>Investigated with CIC</label>
+            </value>
+            <value>
+                <fullName>Investigated with CIC &amp; Experian</fullName>
+                <default>false</default>
+                <label>Investigated with CIC &amp; Experian</label>
+            </value>
+            <value>
+                <fullName>Investigated with CL</fullName>
+                <default>false</default>
+                <label>Investigated with CL</label>
+            </value>
+            <value>
+                <fullName>Investigated with CL and Experian</fullName>
+                <default>false</default>
+                <label>Investigated with CL and Experian</label>
+            </value>
+            <value>
+                <fullName>Investigated with Experian</fullName>
+                <default>false</default>
+                <label>Investigated with Experian</label>
+            </value>
+            <value>
+                <fullName>Investigated with RentBureau</fullName>
+                <default>false</default>
+                <label>Investigated with RentBureau</label>
+            </value>
+            <value>
+                <fullName>Issue Entered as Bug</fullName>
+                <default>false</default>
+                <label>Issue Entered as Bug</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>No Response</fullName>
+                <default>false</default>
+                <label>No Response</label>
+            </value>
+            <value>
+                <fullName>Notified CR</fullName>
+                <default>false</default>
+                <label>Notified CR</label>
+            </value>
+            <value>
+                <fullName>Notified V+ Support</fullName>
+                <default>false</default>
+                <label>Notified V+ Support</label>
+            </value>
+            <value>
+                <fullName>Phone</fullName>
+                <default>false</default>
+                <label>Phone</label>
+            </value>
+            <value>
+                <fullName>Phone: Elaborate explanation</fullName>
+                <default>false</default>
+                <label>Phone: Elaborate explanation</label>
+            </value>
+            <value>
+                <fullName>Phone: Left voicemail or message for contact&#39;</fullName>
+                <default>false</default>
+                <label>Phone: Left voicemail or message for contact&#39;</label>
+            </value>
+            <value>
+                <fullName>Phone: Quick confirmation</fullName>
+                <default>false</default>
+                <label>Phone: Quick confirmation</label>
+            </value>
+            <value>
+                <fullName>Post/Mail</fullName>
+                <default>false</default>
+                <label>Post/Mail</label>
+            </value>
+            <value>
+                <fullName>Provided Solution from Self-Knowledge</fullName>
+                <default>false</default>
+                <label>Provided Solution from Self-Knowledge</label>
+            </value>
+            <value>
+                <fullName>Provided Solution from Tech / Dev</fullName>
+                <default>false</default>
+                <label>Provided Solution from Tech / Dev</label>
+            </value>
+            <value>
+                <fullName>Provided Solution in Solution Database</fullName>
+                <default>false</default>
+                <label>Provided Solution in Solution Database</label>
+            </value>
+            <value>
+                <fullName>Quick Response Email</fullName>
+                <default>false</default>
+                <label>Quick Response Email</label>
+            </value>
+            <value>
+                <fullName>Responded</fullName>
+                <default>false</default>
+                <label>Responded</label>
+            </value>
+            <value>
+                <fullName>Was RE: or FW:</fullName>
+                <default>false</default>
+                <label>Was RE: or FW:</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

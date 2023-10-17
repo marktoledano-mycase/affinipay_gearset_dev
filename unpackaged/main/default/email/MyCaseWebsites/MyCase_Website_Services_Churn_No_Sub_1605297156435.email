@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">Hi {{{Recipient.FirstName}}},<br />
+<br />
+We noticed your subscription with MyCase has recently been canceled/suspended. This is likely due to an overdue payment. Per our policy, you must be a MyCase customer in order for us to host your website.&nbsp;<br />
+<br />
+If you have plans to reactivate your subscription, <b>please reach out to websites@mycase.com</b> so I can maintain your website on our server.&nbsp;If I do not receive a response or see changes to your account by __ENTER DATE__, your site will be deactivated.&nbsp;<br />
+<br />
+I have included our customer service contact info below if you have any questions regarding updating payment information.&nbsp;<br />
+<br />
+<b>Email:</b> support@mycase.com<br />
+<b>Phone:</b>&nbsp;(800) 571-8062<br />
+<br />
+Thank you,<br />
+{{{Sender.FirstName}}}<br />
+MyCase Website Services Team<br />
+Case #{{{Case.CaseNumber}}}</body>
+</html>

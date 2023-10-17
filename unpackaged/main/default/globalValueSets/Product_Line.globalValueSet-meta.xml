@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Soluno - Subscription</fullName>
+        <default>false</default>
+        <label>Soluno - Subscription</label>
+    </customValue>
+    <customValue>
+        <fullName>Soluno - Service</fullName>
+        <default>false</default>
+        <label>Soluno - Service</label>
+    </customValue>
+    <customValue>
+        <fullName>Website</fullName>
+        <default>false</default>
+        <label>Website</label>
+    </customValue>
+    <customValue>
+        <fullName>Woodpecker</fullName>
+        <default>false</default>
+        <label>Woodpecker</label>
+    </customValue>
+    <customValue>
+        <fullName>Website - Implementation</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Website - Implementation</label>
+    </customValue>
+    <customValue>
+        <fullName>Website - Subscription</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Website - Subscription</label>
+    </customValue>
+    <description>Used in SKU Product setup for classifying the type of product</description>
+    <masterLabel>Product Line</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

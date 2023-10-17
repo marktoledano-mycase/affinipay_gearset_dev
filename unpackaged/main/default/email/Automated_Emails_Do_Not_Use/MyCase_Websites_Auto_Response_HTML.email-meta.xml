@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>R165751</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MyCase_Inc_v1</letterhead>
+    <name>MyCase Websites Auto-Response HTML</name>
+    <style>freeForm</style>
+    <subject>Your MyCase Website Request: {!Case.Subject}, Case # {!Case.CaseNumber} (Thread ID {!Case.Thread_Id})</subject>
+    <textOnly>Hello {!Contact.FirstName},
+
+
+
+Thank you for reaching out to the Websites Team! We are dedicated to providing exceptional service to you, so please know that we have received your email and it is being routed to the appropriate person for follow-up.
+
+
+In the meantime, please check out the following Help &amp; Training resources that may be of interest:
+
+
+Search the Help File:  https://help.mycase.com/s/
+
+Browse our FAQs: https://www.mycasewebhub.com/faqs
+
+Learn about the automatic lead generation Contact Us form: https://help.mycase.com/s/article/Contact-Us-Form
+
+How to submit edit requests to the Websites team: https://help.mycase.com/s/article/How-to-Submit-MyCase-Website-Changes
+
+
+
+We sincerely appreciate your understanding and patience – Happy Holidays from the MyCase Websites Team!
+
+
+
+----------------------
+
+
+Should you need to refer to this case in the future, here are the details:
+
+
+Case Number: {!Case.CaseNumber}
+
+Case Created Date: {!Case.CreatedDate}
+
+Case Subject: {!Case.Subject}
+
+
+Case Description: {!Case.Description}
+
+
+----------------------
+
+Additional Information
+
+
+Firm: {!Case.Account}
+
+Name: {!Case.Contact}
+
+Email: {!Case.SuppliedEmail}
+
+Browser: {!Case.Browser__c}
+
+
+
+All the best,
+
+MyCase Websites Team
+
+
+MyCase
+
+9201 Spectrum Center Blvd Ste. 100 | San Diego, CA | 92123
+
+Phone: 800.571.8062
+
+www.mycase.com
+
+------------------------------
+
+
+
+
+Follow us on Social!
+
+
+https://www.facebook.com/MyCase
+
+https://www.instagram.com/mycaselegal
+
+https://twitter.com/mycaseinc
+
+https://www.linkedin.com/company/mycase
+
+
+------------------------------
+
+
+
+{!Case.Thread_Id}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User_Expansion__c</fullName>
+    <description>User expansion or contraction for the opportunity post Closed Won within the month it is Closed Won</description>
+    <externalId>false</externalId>
+    <inlineHelpText>User expansion or contraction for the opportunity post Closed Won within the month it is Closed Won</inlineHelpText>
+    <label>User Expansion</label>
+    <precision>10</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

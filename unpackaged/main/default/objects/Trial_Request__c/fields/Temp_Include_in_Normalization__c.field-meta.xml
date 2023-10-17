@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Temp_Include_in_Normalization__c</fullName>
+    <externalId>false</externalId>
+    <formula>/* MyCase Score Thresholds */
+
+IF(
+    (
+        ISPICKVAL(Brand__c, &quot;MyCase&quot;) &amp;&amp;
+        ISPICKVAL(Type__c, &quot;Score Threshold&quot;)
+    ),
+    FALSE,
+
+    /* Payments Online Applications */
+
+    IF(
+        (
+            ISPICKVAL(Type__c, &quot;Self-Serve Sign Up&quot;) &amp;&amp;
+            NOT(CONTAINS(Person_Owner_Role__c, &quot;Account Executive&quot;)) &amp;&amp;
+            NOT(CONTAINS(Person_Owner_Role__c, &quot;Account Manager&quot;)) &amp;&amp;
+            NOT(CONTAINS(Person_Owner_Role__c, &quot;BDR&quot;)) &amp;&amp;
+            NOT(CONTAINS(Person_Owner_Role__c, &quot;SDR&quot;))
+        ),
+        FALSE,
+
+        /* Low-Value MyCase Trials */
+        
+        IF(
+            (
+                ISPICKVAL(Brand__c, &quot;MyCase&quot;) &amp;&amp;
+                ISPICKVAL(Type__c, &quot;Trial&quot;) &amp;&amp;
+                ISBLANK(Opportunity__c) &amp;&amp; 
+                (
+                    CONTAINS(LOWER(Person_Company__c), &quot;Test&quot;) ||
+                    CONTAINS(LOWER(Person_Company__c), &quot;heating&quot;) ||
+                    CONTAINS(LOWER(Person_Company__c), &quot;roofing&quot;) ||
+                    CONTAINS(LOWER(Person_Company__c), &quot;cooling&quot;) ||
+                    CONTAINS(LOWER(Person_Company__c), &quot;flooring&quot;) ||
+                    LOWER(Person_Company__c) = &quot;none&quot; ||
+                    LOWER(Person_Company__c) = &quot;na&quot; ||
+                    LOWER(Person_Company__c) = &quot;n/a&quot; ||
+                    (LEN(Person_Company__c)-LEN(SUBSTITUTE(Person_Company__c,&quot; &quot;,&quot;&quot;))) &lt;=2 ||
+                    RIGHT(Person_Email__c, 9) = &quot;ymail.com&quot; ||
+                    RIGHT(Person_Email__c, 14) = &quot;protonmail.com&quot; ||
+                    RIGHT(Person_Email__c, 8) = &quot;live.com&quot; ||
+                    RIGHT(Person_Email__c, 11) = &quot;outlook.com&quot; ||
+                    RIGHT(Person_Email__c, 7) = &quot;att.net&quot; ||
+                    RIGHT(Person_Email__c, 10) = &quot;icloud.com&quot; ||
+                    RIGHT(Person_Email__c, 11) = &quot;hotmail.com&quot; ||
+                    RIGHT(Person_Email__c, 11) = &quot;comcast.net&quot; ||
+                    RIGHT(Person_Email__c, 7) = &quot;msn.com&quot; ||
+                    RIGHT(Person_Email__c, 7) = &quot;aol.com&quot; ||
+                    RIGHT(Person_Email__c, 9) = &quot;yahoo.com&quot; ||
+                    RIGHT(Person_Email__c, 7) = &quot;msn.com&quot; ||
+                    RIGHT(Person_Email__c, 9) = &quot;gmail.com&quot;
+                )
+            ),
+            FALSE,
+            TRUE
+        )
+    )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Temp - Include in Normalization</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

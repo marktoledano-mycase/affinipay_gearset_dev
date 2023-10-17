@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Call</fullName>
+        <default>false</default>
+        <label>Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>RBE</fullName>
+        <default>false</default>
+        <label>RBE</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Send Letter</fullName>
+        <default>false</default>
+        <label>Send Letter</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Send Quote</fullName>
+        <default>false</default>
+        <label>Send Quote</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Data Migration</fullName>
+        <default>false</default>
+        <label>Data Migration</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Demo</fullName>
+        <default>false</default>
+        <label>Demo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Discovery</fullName>
+        <default>false</default>
+        <label>Discovery</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Addl Demo</fullName>
+        <default>false</default>
+        <label>Addl Demo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>POC</fullName>
+        <default>false</default>
+        <label>POC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Closing Call</fullName>
+        <default>false</default>
+        <label>Closing Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Implementation</fullName>
+        <default>false</default>
+        <label>Implementation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Audible</fullName>
+        <default>false</default>
+        <label>Audible</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Strategize with Rep</fullName>
+        <default>false</default>
+        <label>Strategize with Rep</label>
+    </standardValue>
+    <standardValue>
+        <fullName>KA Champion Call</fullName>
+        <default>false</default>
+        <label>KA Champion Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>KA Kick-Off Call</fullName>
+        <default>false</default>
+        <label>KA Kick-Off Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>KA Hand-Off Call</fullName>
+        <default>false</default>
+        <label>KA Hand-Off Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>KA Discovery Call</fullName>
+        <default>false</default>
+        <label>KA Discovery Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>KA Risk Management</fullName>
+        <default>false</default>
+        <label>KA Risk Management</label>
+    </standardValue>
+    <standardValue>
+        <fullName>KA Feature Training</fullName>
+        <default>false</default>
+        <label>KA Feature Training</label>
+    </standardValue>
+    <standardValue>
+        <fullName>KA Internal Initiative</fullName>
+        <default>false</default>
+        <label>KA Internal Initiative</label>
+    </standardValue>
+    <standardValue>
+        <fullName>KA EBR Targeting</fullName>
+        <default>false</default>
+        <label>KA EBR Targeting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>KA Transition Notice</fullName>
+        <default>false</default>
+        <label>KA Transition Notice</label>
+    </standardValue>
+    <standardValue>
+        <fullName>KA Product Call</fullName>
+        <default>false</default>
+        <label>KA Product Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>KA V+ Upsell Opp</fullName>
+        <default>false</default>
+        <label>KA V+ Upsell Opp</label>
+    </standardValue>
+    <standardValue>
+        <fullName>KA Outside Unit Outreach</fullName>
+        <default>false</default>
+        <label>KA Outside Unit Outreach</label>
+    </standardValue>
+</StandardValueSet>

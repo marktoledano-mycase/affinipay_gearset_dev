@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Leads_Assigned</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>mkto_si__Current_Sales_Campaign__c</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>Timezone__c</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>Last_MQL_Date__c</columns>
+    <columns>Last_MQL_Brand__c</columns>
+    <columns>Last_MQL_Type__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <columns>LEAD.LAST_ACTIVITY</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>Assigned</value>
+    </filters>
+    <label>My Leads - Assigned</label>
+</ListView>

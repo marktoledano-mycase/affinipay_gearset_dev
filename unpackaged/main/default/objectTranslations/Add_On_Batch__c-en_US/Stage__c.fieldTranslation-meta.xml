@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Stage --></label>
+        <name>Stage__c</name>
+        <picklistValues>
+            <masterLabel>Bank Auth Form Sent</masterLabel>
+            <translation><!-- Bank Auth Form Sent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client Requested</masterLabel>
+            <translation><!-- Client Requested --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Live</masterLabel>
+            <translation><!-- Live --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Response</masterLabel>
+            <translation><!-- No Response --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready for Cybersource</masterLabel>
+            <translation><!-- Ready for Cybersource --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Request Canceled</masterLabel>
+            <translation><!-- Request Canceled --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

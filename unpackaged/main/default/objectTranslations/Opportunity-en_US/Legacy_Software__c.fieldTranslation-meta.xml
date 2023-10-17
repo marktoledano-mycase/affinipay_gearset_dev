@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Legacy Software --></label>
+        <name>Legacy_Software__c</name>
+        <picklistValues>
+            <masterLabel>Alert Communications</masterLabel>
+            <translation><!-- Alert Communications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ApexChat</masterLabel>
+            <translation><!-- ApexChat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Calendar Rules</masterLabel>
+            <translation><!-- Calendar Rules --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Captorra</masterLabel>
+            <translation><!-- Captorra --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Case Status</masterLabel>
+            <translation><!-- Case Status --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ChartSquad</masterLabel>
+            <translation><!-- ChartSquad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client Chat Live</masterLabel>
+            <translation><!-- Client Chat Live --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dropbox</masterLabel>
+            <translation><!-- Dropbox --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kenect</masterLabel>
+            <translation><!-- Kenect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LawPay</masterLabel>
+            <translation><!-- LawPay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LeadDocket</masterLabel>
+            <translation><!-- LeadDocket --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mailchimp</masterLabel>
+            <translation><!-- Mailchimp --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Multus Medical</masterLabel>
+            <translation><!-- Multus Medical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ngage Live Chat</masterLabel>
+            <translation><!-- Ngage Live Chat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OneDrive</masterLabel>
+            <translation><!-- OneDrive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OneDrive for Business</masterLabel>
+            <translation><!-- OneDrive for Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quickbooks</masterLabel>
+            <translation><!-- Quickbooks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Records on Time</masterLabel>
+            <translation><!-- Records on Time --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Soluno</masterLabel>
+            <translation><!-- Soluno --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

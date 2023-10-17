@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <label><!-- Payment Feature --></label>
+        <name>Payment_Feature__c</name>
+        <picklistValues>
+            <masterLabel>Hosted Fields</masterLabel>
+            <translation><!-- Hosted Fields --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JS Tokenization</masterLabel>
+            <translation><!-- JS Tokenization --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payment Page</masterLabel>
+            <translation><!-- Payment Page --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quick Bill</masterLabel>
+            <translation><!-- Quick Bill --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Titan</masterLabel>
+            <translation><!-- Titan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Titan Quick Bill</masterLabel>
+            <translation><!-- Titan Quick Bill --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

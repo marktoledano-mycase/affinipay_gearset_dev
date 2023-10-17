@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>For cases with the Case Origin: Email (Support Request)</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>SF System Email: Convert to Support Request</name>
+    <style>none</style>
+    <subject>Your AppFolio Support Request: Case # {!Case.CaseNumber}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

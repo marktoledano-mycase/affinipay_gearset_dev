@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>V_Sales_Rep__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>R165569 - used in process builder to populate VAS Sales Rep field on account by marketo for MyCase Process</description>
+    <externalId>false</externalId>
+    <label>VAS Sales Rep Contact</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Contacts2</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

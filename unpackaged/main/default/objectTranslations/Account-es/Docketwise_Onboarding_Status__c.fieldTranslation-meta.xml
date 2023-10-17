@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Identifies the current status of the latest onboarding effort for Docketwise. --></help>
+        <label><!-- Docketwise Onboarding Status --></label>
+        <name>Docketwise_Onboarding_Status__c</name>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Onboarded</masterLabel>
+            <translation><!-- Onboarded --></translation>
+        </picklistValues>
+    </CustomFieldTranslation>

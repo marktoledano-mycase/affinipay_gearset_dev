@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Enrollment_Date_Editing</fullName>
+    <active>true</active>
+    <description>This rule prevents editing of the Enrollment success date/time field
+Edited by R164996 and R165194; Modified for R1916992</description>
+    <errorConditionFormula>IF(AND(NOT(ISBLANK(PRIORVALUE(Successfully_Enrolled_in_Profit_Stars_at__c))),
+ISCHANGED(Successfully_Enrolled_in_Profit_Stars_at__c),
+$Profile.Id != &quot;00e3g000000EbAD&quot;),
+true, false)</errorConditionFormula>
+    <errorMessage>You cannot change the date this record was enrolled in profit stars once set.</errorMessage>
+</ValidationRule>

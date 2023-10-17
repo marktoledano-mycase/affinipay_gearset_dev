@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Rejected_Reason__c</fullName>
+    <description>MC; R165465; Edited: users</description>
+    <externalId>false</externalId>
+    <label>Sales Rejected Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bad Contact Info</fullName>
+                <default>false</default>
+                <label>Bad Contact Info</label>
+            </value>
+            <value>
+                <fullName>Client of Active Firm</fullName>
+                <default>false</default>
+                <label>Client of Active Firm</label>
+            </value>
+            <value>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+                <label>Duplicate</label>
+            </value>
+            <value>
+                <fullName>Student</fullName>
+                <default>false</default>
+                <label>Student</label>
+            </value>
+            <value>
+                <fullName>Out of Country</fullName>
+                <default>false</default>
+                <label>Out of Country</label>
+            </value>
+            <value>
+                <fullName>Active Firm</fullName>
+                <default>false</default>
+                <label>Active Firm</label>
+            </value>
+            <value>
+                <fullName>MyCase.Gov</fullName>
+                <default>false</default>
+                <label>MyCase.Gov</label>
+            </value>
+            <value>
+                <fullName>Not an Attorney</fullName>
+                <default>false</default>
+                <label>Not an Attorney</label>
+            </value>
+            <value>
+                <fullName>RC Not Evaluating</fullName>
+                <default>false</default>
+                <label>RC Not Evaluating</label>
+            </value>
+            <value>
+                <fullName>Test</fullName>
+                <default>false</default>
+                <label>Test</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

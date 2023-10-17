@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Displays the short-term unit price for the item where the short term discount is deducted from the base unit price at the time of the initial sale --></help>
+        <label><!-- zz Short-Term Unit Price --></label>
+        <name>Short_Term_Unit_Price__c</name>
+    </CustomFieldTranslation>

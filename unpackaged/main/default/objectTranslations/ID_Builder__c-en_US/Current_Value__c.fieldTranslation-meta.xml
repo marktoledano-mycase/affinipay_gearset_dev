@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+        <help><!-- Last Used Number in Sequence --></help>
+        <label><!-- Current Value --></label>
+        <name>Current_Value__c</name>
+    </CustomFieldTranslation>

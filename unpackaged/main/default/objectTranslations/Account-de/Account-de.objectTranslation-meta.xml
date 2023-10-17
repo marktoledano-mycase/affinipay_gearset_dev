@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <layouts>
+        <layout>Competitor Layout</layout>
+        <sections>
+            <label><!-- Address Information --></label>
+            <section>Address Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Details --></label>
+            <section>Details</section>
+        </sections>
+        <sections>
+            <label><!-- System Info --></label>
+            <section>System Info</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Customer Layout</layout>
+        <sections>
+            <label><!-- Account Notes --></label>
+            <section>Account Notes</section>
+        </sections>
+        <sections>
+            <label><!-- AffiniPay Operations Data --></label>
+            <section>AffiniPay Operations Data</section>
+        </sections>
+        <sections>
+            <label><!-- Current Solutions --></label>
+            <section>Current Solutions</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Statuses --></label>
+            <section>Customer Statuses</section>
+        </sections>
+        <sections>
+            <label><!-- Industry information --></label>
+            <section>Industry information</section>
+        </sections>
+        <sections>
+            <label><!-- New Section --></label>
+            <section>New Section</section>
+        </sections>
+        <sections>
+            <label><!-- Social Media Info --></label>
+            <section>Social Media Info</section>
+        </sections>
+        <sections>
+            <label><!-- Strategic Accounts --></label>
+            <section>Strategic Accounts</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Other Layout</layout>
+        <sections>
+            <label><!-- Address Information --></label>
+            <section>Address Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Details --></label>
+            <section>Details</section>
+        </sections>
+        <sections>
+            <label><!-- System Info --></label>
+            <section>System Info</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Partner Layout</layout>
+        <sections>
+            <label><!-- Address Information --></label>
+            <section>Address Information</section>
+        </sections>
+        <sections>
+            <label><!-- Current Solutions --></label>
+            <section>Current Solutions</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Customer Status Details --></label>
+            <section>Customer Status Details</section>
+        </sections>
+        <sections>
+            <label><!-- Details --></label>
+            <section>Details</section>
+        </sections>
+        <sections>
+            <label><!-- Industry Information --></label>
+            <section>Industry Information</section>
+        </sections>
+        <sections>
+            <label><!-- Social Media Info --></label>
+            <section>Social Media Info</section>
+        </sections>
+        <sections>
+            <label><!-- System Info --></label>
+            <section>System Info</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Account Info - Opportunity --></label>
+        <name>Account_Info_Opportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Account Info - Strategic Accounts --></label>
+        <name>Account_Info_Strategic_Accounts</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Account Information --></label>
+        <name>Account_Information</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Account Information - Websites --></label>
+        <name>Account_Information_Websites</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Case Layout Component --></label>
+        <name>Case_Layout_Component</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Child Account --></label>
+        <name>Child_Account</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Contract Account View --></label>
+        <name>Contract_Account_View</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Firm Details --></label>
+        <name>Firm_Details</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- MyCase Payments Account details --></label>
+        <name>MyCase_Payments_Account_details</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Payment Services Account info --></label>
+        <name>Payment_Services_Account_info</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- Used to capture and track competitors for association to leads and opportunities. --></description>
+        <label><!-- Competitor --></label>
+        <name>Competitor</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Used to capture and track customer accounts; if customer is a partner as well, use the Partner record type --></description>
+        <label><!-- Customer --></label>
+        <name>Customer</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Internal or Fake Accounts --></description>
+        <label><!-- Internal --></label>
+        <name>Internal</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- For capturing and tracking accounts that aren&apos;t a customer, partner or competitor --></description>
+        <label><!-- Other --></label>
+        <name>Other</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Used to capture and track partners; may be used for the partners that are purchasing services or software as well --></description>
+        <label><!-- Partner --></label>
+        <name>Partner</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Strategy Used to Retain value includes Other.  Please provide the other approach. --></errorMessage>
+        <name>Other_N_A_Explained</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Action_Plan --></label>
+        <name>LabsActionPlans__Create_Action_Plan</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Action_Plans --></label>
+        <name>LabsActionPlans__Create_Action_Plans</name>
+    </webLinks>
+</CustomObjectTranslation>

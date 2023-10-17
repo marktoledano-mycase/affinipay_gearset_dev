@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MyCase_Support_Fields_Reqd</fullName>
+    <active>true</active>
+    <description>R177374, updated per R1812443</description>
+    <errorConditionFormula>RecordType.DeveloperName = &#39;MyCase_Support&#39; &amp;&amp;
+ISCHANGED(Status) &amp;&amp;
+ISPICKVAL(Status, &#39;Escalated&#39;) &amp;&amp;
+OR(
+ISBLANK(AccountId),
+ISBLANK(ContactId),
+LEN(Escalation_Description__c)&lt;1)</errorConditionFormula>
+    <errorMessage>Contact, Account, and Escalation Description are required to escalate a case.</errorMessage>
+</ValidationRule>
