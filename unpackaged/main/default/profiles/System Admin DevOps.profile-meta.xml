@@ -1777,6 +1777,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Account.Gearset_Test__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Account.Google_My_Business_Profile__c</field>
         <readable>true</readable>
     </fieldPermissions>
