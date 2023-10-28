@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
     
     
@@ -1036,13 +1036,5 @@ Onboarding POC, List of Top Features, Data Import Source, Doc Migration Plan Dis
     <webLinks>
         <label><!-- Deca0t8W00000OTdkvQAD --></label>
         <name>Deca0t8W00000OTdkvQAD</name>
-    </webLinks>
-    <webLinks>
-        <label><!-- Create_Action_Plan --></label>
-        <name>LabsActionPlans__Create_Action_Plan</name>
-    </webLinks>
-    <webLinks>
-        <label><!-- Create_Action_Plans --></label>
-        <name>LabsActionPlans__Create_Action_Plans</name>
     </webLinks>
 </CustomObjectTranslation>
