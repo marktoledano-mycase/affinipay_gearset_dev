@@ -36,10 +36,6 @@
                 <behavior>Edit</behavior>
                 <field>AccountSource</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Gearset_Test__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
