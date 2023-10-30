@@ -360,6 +360,10 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Referral</controllingFieldValue>
+            <valueName>PartnerStack</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Referral</controllingFieldValue>
             <valueName>Web</valueName>
         </valueSettings>
         <valueSettings>
