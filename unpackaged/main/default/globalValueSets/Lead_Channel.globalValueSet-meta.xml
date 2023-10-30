@@ -281,6 +281,11 @@
         <label>Partner</label>
     </customValue>
     <customValue>
+        <fullName>PartnerStack</fullName>
+        <default>false</default>
+        <label>PartnerStack</label>
+    </customValue>
+    <customValue>
         <fullName>Podcast</fullName>
         <default>false</default>
         <label>Podcast</label>
