@@ -7864,6 +7864,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Partnerships__c.Partnership_ID_Case_Safe__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Partnerships__c.Partnership_Id__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -8745,6 +8750,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Referral__c.Referral_End_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Referral__c.Referral_ID_Case_Safe__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
