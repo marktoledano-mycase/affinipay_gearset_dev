@@ -4284,6 +4284,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Opportunity.Won_in_Month__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>OpportunityContactRole.Opportunity_Close_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>

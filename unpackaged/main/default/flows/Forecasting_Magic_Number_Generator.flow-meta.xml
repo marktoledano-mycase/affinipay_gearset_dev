@@ -1,30 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
-        <name>Average_Won_Users</name>
-        <label>Average Won Users</label>
-        <locationX>912</locationX>
-        <locationY>684</locationY>
+        <name>Average_Forecasted_Users_Software</name>
+        <label>Average Forecasted Users Software</label>
+        <locationX>1898</locationX>
+        <locationY>998</locationY>
         <actionName>CollectionCalculate</actionName>
         <actionType>apex</actionType>
         <connector>
-            <targetReference>Assign_Win_Projections</targetReference>
+            <targetReference>Opportunities_in_Month_1_logos</targetReference>
         </connector>
         <dataTypeMappings>
             <typeName>T__inputCollection</typeName>
             <typeValue>Opportunity</typeValue>
         </dataTypeMappings>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Error_Screen</targetReference>
+        </faultConnector>
         <flowTransactionModel>Automatic</flowTransactionModel>
         <inputParameters>
             <name>fieldName</name>
             <value>
-                <elementReference>f_AverageUsersField</elementReference>
+                <stringValue>Forecasted_Users__c</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
             <name>inputCollection</name>
             <value>
-                <elementReference>In_Month_Wins</elementReference>
+                <elementReference>Get_Users_Commit_Pipeline</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -41,212 +45,822 @@
         </inputParameters>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </actionCalls>
+    <actionCalls>
+        <name>Sum_ForecastedUsers_Software_Opps</name>
+        <label>Sum ForecastedUsers_Software Opps</label>
+        <locationX>1898</locationX>
+        <locationY>782</locationY>
+        <actionName>CollectionCalculate</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Sum_of_ARR_Commit_Pipeline</targetReference>
+        </connector>
+        <dataTypeMappings>
+            <typeName>T__inputCollection</typeName>
+            <typeValue>Opportunity</typeValue>
+        </dataTypeMappings>
+        <faultConnector>
+            <targetReference>Error_Screen</targetReference>
+        </faultConnector>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <inputParameters>
+            <name>fieldName</name>
+            <value>
+                <stringValue>forecasted_Users__c</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>inputCollection</name>
+            <value>
+                <elementReference>Get_Users_Commit_Pipeline</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>operation</name>
+            <value>
+                <stringValue>add</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>policyForNullAndEmptyFields</name>
+            <value>
+                <stringValue>use0</stringValue>
+            </value>
+        </inputParameters>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <actionCalls>
+        <name>Sum_of_ARR_Commit_Pipeline</name>
+        <label>Sum of ARR Commit Pipeline</label>
+        <locationX>1898</locationX>
+        <locationY>890</locationY>
+        <actionName>CollectionCalculate</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Average_Forecasted_Users_Software</targetReference>
+        </connector>
+        <dataTypeMappings>
+            <typeName>T__inputCollection</typeName>
+            <typeValue>Opportunity</typeValue>
+        </dataTypeMappings>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Error_Screen</targetReference>
+        </faultConnector>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <inputParameters>
+            <name>fieldName</name>
+            <value>
+                <stringValue>Amount</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>inputCollection</name>
+            <value>
+                <elementReference>Get_Users_Commit_Pipeline</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>operation</name>
+            <value>
+                <stringValue>Add</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>policyForNullAndEmptyFields</name>
+            <value>
+                <stringValue>use0</stringValue>
+            </value>
+        </inputParameters>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
     <apiVersion>58.0</apiVersion>
     <assignments>
-        <name>Assign_Payments_Created</name>
-        <label>Assign Payments Created</label>
-        <locationX>588</locationX>
-        <locationY>588</locationY>
+        <name>Assign_Best_Case_Logos_Month_1</name>
+        <label>Assign Best Case Logos Month 1</label>
+        <locationX>1634</locationX>
+        <locationY>1862</locationY>
         <assignmentItems>
-            <assignToReference>ProjectedOppsPaymentsCount</assignToReference>
-            <operator>AssignCount</operator>
-            <value>
-                <elementReference>LawPay_Opportunities</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Opportunities_Check</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>Assign_Payments_Won_Count</name>
-        <label>Assign Payments Won Count</label>
-        <locationX>592</locationX>
-        <locationY>854</locationY>
-        <assignmentItems>
-            <assignToReference>ProjectedDealsWonPayments</assignToReference>
-            <operator>AssignCount</operator>
-            <value>
-                <elementReference>In_Month_Payments_Wins</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Assign_Payments_Created</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>Assign_Projections</name>
-        <label>Assign Projections</label>
-        <locationX>953</locationX>
-        <locationY>374</locationY>
-        <assignmentItems>
-            <assignToReference>ProjectedOppCount</assignToReference>
-            <operator>AssignCount</operator>
-            <value>
-                <elementReference>MyCase_Opportunities</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Projection</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>Assign_Win_Count</name>
-        <label>Assign Win Count</label>
-        <locationX>753</locationX>
-        <locationY>707</locationY>
-        <assignmentItems>
-            <assignToReference>ProjectedDealsWonCount</assignToReference>
-            <operator>AssignCount</operator>
-            <value>
-                <elementReference>In_Month_Wins</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Wins_Check</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>Assign_Win_Projections</name>
-        <label>Assign Win Projections</label>
-        <locationX>1176</locationX>
-        <locationY>343</locationY>
-        <assignmentItems>
-            <assignToReference>ProjectedDealsWonCount</assignToReference>
-            <operator>AssignCount</operator>
-            <value>
-                <elementReference>In_Month_Wins</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>AvgUsersWonPerDeal</assignToReference>
+            <assignToReference>var_BestCase_Logos</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Average_Won_Users.outputDecimalResult</elementReference>
+                <elementReference>var_SumofLogosMonth1</elementReference>
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Assign_Projections</targetReference>
+            <targetReference>Opportunities_in_Month_1_Forecaseted_Users</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Best_Case_Logos_Month_2</name>
+        <label>Assign Best Case Logos Month 2</label>
+        <locationX>1898</locationX>
+        <locationY>1862</locationY>
+        <assignmentItems>
+            <assignToReference>var_BestCase_Logos</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_SumofLogosMonth2</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Opportunities_in_Month_1_Forecaseted_Users</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Best_Case_Logos_Month_3</name>
+        <label>Assign Best Case Logos Month 3</label>
+        <locationX>2162</locationX>
+        <locationY>1862</locationY>
+        <assignmentItems>
+            <assignToReference>var_BestCase_Logos</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_SumofLogosMonth3</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Opportunities_in_Month_1_Forecaseted_Users</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Month_1_to_var_BestCaseARR</name>
+        <label>Assign Month 1 to var_BestCaseARR</label>
+        <locationX>1634</locationX>
+        <locationY>3758</locationY>
+        <assignmentItems>
+            <assignToReference>var_BestCase_ARR</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>currentItem_Copy_1_of_Opportunities_in_Month_1_Forecasted_Users_0.Amount</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Get_ForecastingType_Payments_Logos</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Month_1_Users_to_var_BestCaseUsers</name>
+        <label>Assign Month 1 Users to var_BestCaseUsers</label>
+        <locationX>1634</locationX>
+        <locationY>2810</locationY>
+        <assignmentItems>
+            <assignToReference>var_BestCase_ForecastedUsers</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>currentItem_Copy_1_of_Opportunities_in_Month_1_Forecasted_Users_0.Forecasted_Users__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Opportunities_in_Month_1_ARR</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Month_2_Users_to_var_BestCaseUsers</name>
+        <label>Assign Month 2 Users to var_BestCaseUsers</label>
+        <locationX>1898</locationX>
+        <locationY>2810</locationY>
+        <assignmentItems>
+            <assignToReference>var_BestCase_ForecastedUsers</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>currentItem_Copy_1_of_Opportunities_in_Month_2_Forecasted_Users.Forecasted_Users__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Opportunities_in_Month_1_ARR</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Month_2_var_BestCaseARR</name>
+        <label>Assign Month 2 var_BestCaseARR</label>
+        <locationX>1898</locationX>
+        <locationY>3758</locationY>
+        <assignmentItems>
+            <assignToReference>var_BestCase_ARR</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>currentItem_Copy_1_of_Opportunities_in_Month_2_Forecasted_Users.Amount</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Get_ForecastingType_Payments_Logos</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Month_3_Users_to_var_BestCaseUsers</name>
+        <label>Assign Month 3 Users to var_BestCaseUsers</label>
+        <locationX>2162</locationX>
+        <locationY>2810</locationY>
+        <assignmentItems>
+            <assignToReference>var_BestCase_ForecastedUsers</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>currentItem_Copy_1_of_Opportunities_in_Month_3_Forecasted_Users.Forecasted_Users__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Opportunities_in_Month_1_ARR</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Month_3_var_BestCaseARR</name>
+        <label>Assign Month 3 var_BestCaseARR</label>
+        <locationX>2162</locationX>
+        <locationY>3758</locationY>
+        <assignmentItems>
+            <assignToReference>var_BestCase_ARR</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>currentItem_Copy_1_of_Opportunities_in_Month_3_Forecasted_Users.Amount</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Get_ForecastingType_Payments_Logos</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Sum_of_Logos_Commit_Pipeline</name>
+        <label>Sum of Logos Commit Pipeline</label>
+        <locationX>1898</locationX>
+        <locationY>674</locationY>
+        <assignmentItems>
+            <assignToReference>var_Logo_Commit_Pipeline</assignToReference>
+            <operator>AssignCount</operator>
+            <value>
+                <elementReference>Get_Users_Commit_Pipeline</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Sum_ForecastedUsers_Software_Opps</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Sum_of_Logos_Month_1</name>
+        <label>Sum of Logos Month 1</label>
+        <locationX>1898</locationX>
+        <locationY>1214</locationY>
+        <assignmentItems>
+            <assignToReference>var_SumofLogosMonth1</assignToReference>
+            <operator>AssignCount</operator>
+            <value>
+                <elementReference>Opportunities_in_Month_1_logos</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Opportunities_in_Month_2_Logos</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Sum_of_Logos_Month_2</name>
+        <label>Sum of Logos Month 2</label>
+        <locationX>1898</locationX>
+        <locationY>1430</locationY>
+        <assignmentItems>
+            <assignToReference>var_SumofLogosMonth2</assignToReference>
+            <operator>AssignCount</operator>
+            <value>
+                <elementReference>Opportunities_in_Month_2_Logos</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Opportunities_in_Month_3_Logos</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Sum_of_Logos_Month_3</name>
+        <label>Sum of Logos Month 3</label>
+        <locationX>1898</locationX>
+        <locationY>1646</locationY>
+        <assignmentItems>
+            <assignToReference>var_SumofLogosMonth3</assignToReference>
+            <operator>AssignCount</operator>
+            <value>
+                <elementReference>Opportunities_in_Month_3_Logos</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Logos_Decision</targetReference>
         </connector>
     </assignments>
     <collectionProcessors>
-        <name>In_Month_Payments_Wins</name>
-        <elementSubtype>FilterCollectionProcessor</elementSubtype>
-        <label>In Month Payments Wins</label>
-        <locationX>390</locationX>
-        <locationY>837</locationY>
-        <assignNextValueToReference>currentItem_In_Month_Payments_Wins</assignNextValueToReference>
-        <collectionProcessorType>FilterCollectionProcessor</collectionProcessorType>
-        <collectionReference>LawPay_Opportunities</collectionReference>
-        <conditionLogic>formula_evaluates_to_true</conditionLogic>
+        <name>Max_ARR_Month_1</name>
+        <elementSubtype>SortCollectionProcessor</elementSubtype>
+        <label>Max ARR Month 1</label>
+        <locationX>1898</locationX>
+        <locationY>3110</locationY>
+        <collectionProcessorType>SortCollectionProcessor</collectionProcessorType>
+        <collectionReference>Opportunities_in_Month_1_ARR</collectionReference>
         <connector>
-            <targetReference>Assign_Payments_Won_Count</targetReference>
+            <targetReference>Opportunities_in_Month_2_ARR</targetReference>
         </connector>
-        <formula>AND( 
-MONTH( {!currentItem_In_Month_Payments_Wins.Created_Date_fx__c} ) =  MONTH( {!currentItem_In_Month_Payments_Wins.CloseDate} ),
-YEAR( {!currentItem_In_Month_Payments_Wins.Created_Date_fx__c} ) =  YEAR( {!currentItem_In_Month_Payments_Wins.CloseDate} ),
-ISPICKVAL( {!currentItem_In_Month_Payments_Wins.StageName}, &quot;Closed Won&quot;)
-)</formula>
+        <limit>1</limit>
+        <sortOptions>
+            <doesPutEmptyStringAndNullFirst>false</doesPutEmptyStringAndNullFirst>
+            <sortField>Amount</sortField>
+            <sortOrder>Desc</sortOrder>
+        </sortOptions>
     </collectionProcessors>
     <collectionProcessors>
-        <name>In_Month_Wins</name>
-        <elementSubtype>FilterCollectionProcessor</elementSubtype>
-        <label>In Month Wins</label>
-        <locationX>722</locationX>
-        <locationY>567</locationY>
-        <assignNextValueToReference>currentItem_In_Month_Wins_0</assignNextValueToReference>
-        <collectionProcessorType>FilterCollectionProcessor</collectionProcessorType>
-        <collectionReference>MyCase_Opportunities</collectionReference>
-        <conditionLogic>formula_evaluates_to_true</conditionLogic>
+        <name>Max_ARR_Month_2</name>
+        <elementSubtype>SortCollectionProcessor</elementSubtype>
+        <label>Max ARR Month 2</label>
+        <locationX>1898</locationX>
+        <locationY>3326</locationY>
+        <collectionProcessorType>SortCollectionProcessor</collectionProcessorType>
+        <collectionReference>Opportunities_in_Month_2_ARR</collectionReference>
         <connector>
-            <targetReference>Assign_Win_Count</targetReference>
+            <targetReference>Opportunities_in_Month_3_ARR</targetReference>
         </connector>
-        <formula>IF( {!varTestMode},
-AND
-( 
-MONTH( {!currentItem_In_Month_Wins_0.CloseDate} ) = MONTH( {!currentItem_In_Month_Wins_0.Created_Date_fx__c} ),
-YEAR( {!currentItem_In_Month_Wins_0.CloseDate} ) = YEAR( {!currentItem_In_Month_Wins_0.Created_Date_fx__c} )
-),
-AND
-(
-ISPICKVAL( {!currentItem_In_Month_Wins_0.StageName}, &quot;Closed Won&quot;),
-MONTH( {!currentItem_In_Month_Wins_0.CloseDate} ) = MONTH( {!currentItem_In_Month_Wins_0.Created_Date_fx__c} ),
-YEAR( {!currentItem_In_Month_Wins_0.CloseDate} ) = YEAR( {!currentItem_In_Month_Wins_0.Created_Date_fx__c} )
-))</formula>
+        <limit>1</limit>
+        <sortOptions>
+            <doesPutEmptyStringAndNullFirst>false</doesPutEmptyStringAndNullFirst>
+            <sortField>Amount</sortField>
+            <sortOrder>Desc</sortOrder>
+        </sortOptions>
+    </collectionProcessors>
+    <collectionProcessors>
+        <name>Max_ARR_Month_3</name>
+        <elementSubtype>SortCollectionProcessor</elementSubtype>
+        <label>Max ARR Month 3</label>
+        <locationX>1898</locationX>
+        <locationY>3542</locationY>
+        <collectionProcessorType>SortCollectionProcessor</collectionProcessorType>
+        <collectionReference>Opportunities_in_Month_3_ARR</collectionReference>
+        <connector>
+            <targetReference>ARR_Decision</targetReference>
+        </connector>
+        <limit>1</limit>
+        <sortOptions>
+            <doesPutEmptyStringAndNullFirst>false</doesPutEmptyStringAndNullFirst>
+            <sortField>Amount</sortField>
+            <sortOrder>Desc</sortOrder>
+        </sortOptions>
+    </collectionProcessors>
+    <collectionProcessors>
+        <name>Max_Forecasted_Users_Month2</name>
+        <elementSubtype>SortCollectionProcessor</elementSubtype>
+        <label>Max Forecasted Users Month2</label>
+        <locationX>1898</locationX>
+        <locationY>2378</locationY>
+        <collectionProcessorType>SortCollectionProcessor</collectionProcessorType>
+        <collectionReference>Opportunities_in_Month_2_Forecasted_Users</collectionReference>
+        <connector>
+            <targetReference>Opportunities_in_Month_3_Forecasted_Users</targetReference>
+        </connector>
+        <limit>1</limit>
+        <sortOptions>
+            <doesPutEmptyStringAndNullFirst>false</doesPutEmptyStringAndNullFirst>
+            <sortField>Forecasted_Users__c</sortField>
+            <sortOrder>Desc</sortOrder>
+        </sortOptions>
+    </collectionProcessors>
+    <collectionProcessors>
+        <name>Max_Forecasted_Users_Month_1</name>
+        <elementSubtype>SortCollectionProcessor</elementSubtype>
+        <label>Max Forecasted Users Month 1</label>
+        <locationX>1898</locationX>
+        <locationY>2162</locationY>
+        <collectionProcessorType>SortCollectionProcessor</collectionProcessorType>
+        <collectionReference>Opportunities_in_Month_1_Forecaseted_Users</collectionReference>
+        <connector>
+            <targetReference>Opportunities_in_Month_2_Forecasted_Users</targetReference>
+        </connector>
+        <limit>1</limit>
+        <sortOptions>
+            <doesPutEmptyStringAndNullFirst>false</doesPutEmptyStringAndNullFirst>
+            <sortField>Forecasted_Users__c</sortField>
+            <sortOrder>Desc</sortOrder>
+        </sortOptions>
+    </collectionProcessors>
+    <collectionProcessors>
+        <name>Max_Forecasted_Users_Month_3</name>
+        <elementSubtype>SortCollectionProcessor</elementSubtype>
+        <label>Max Forecasted Users Month 3</label>
+        <locationX>1898</locationX>
+        <locationY>2594</locationY>
+        <collectionProcessorType>SortCollectionProcessor</collectionProcessorType>
+        <collectionReference>Opportunities_in_Month_3_Forecasted_Users</collectionReference>
+        <connector>
+            <targetReference>Users_Decision</targetReference>
+        </connector>
+        <limit>1</limit>
+        <sortOptions>
+            <doesPutEmptyStringAndNullFirst>false</doesPutEmptyStringAndNullFirst>
+            <sortField>Forecasted_Users__c</sortField>
+            <sortOrder>Desc</sortOrder>
+        </sortOptions>
+    </collectionProcessors>
+    <collectionProcessors>
+        <name>Opportunities_in_Month_1_ARR</name>
+        <elementSubtype>FilterCollectionProcessor</elementSubtype>
+        <label>Opportunities in Month 1 _ARR</label>
+        <locationX>1898</locationX>
+        <locationY>3002</locationY>
+        <assignNextValueToReference>currentItem_Copy_1_of_Opportunities_in_Month_1_Forecasted_Users_0</assignNextValueToReference>
+        <collectionProcessorType>FilterCollectionProcessor</collectionProcessorType>
+        <collectionReference>Get_Best_Case_Pipeline</collectionReference>
+        <conditionLogic>and</conditionLogic>
+        <conditions>
+            <leftValueReference>currentItem_Copy_1_of_Opportunities_in_Month_1_Forecasted_Users_0.CreatedDate</leftValueReference>
+            <operator>GreaterThanOrEqualTo</operator>
+            <rightValue>
+                <elementReference>f_threeMonthsAgo</elementReference>
+            </rightValue>
+        </conditions>
+        <connector>
+            <targetReference>Max_ARR_Month_1</targetReference>
+        </connector>
+    </collectionProcessors>
+    <collectionProcessors>
+        <name>Opportunities_in_Month_1_Forecaseted_Users</name>
+        <elementSubtype>FilterCollectionProcessor</elementSubtype>
+        <label>Opportunities in Month 1 _Forecasted Users</label>
+        <locationX>1898</locationX>
+        <locationY>2054</locationY>
+        <assignNextValueToReference>currentItem_Copy_1_of_Opportunities_in_Month_1_Forecasted_Users_0</assignNextValueToReference>
+        <collectionProcessorType>FilterCollectionProcessor</collectionProcessorType>
+        <collectionReference>Get_Best_Case_Pipeline</collectionReference>
+        <conditionLogic>and</conditionLogic>
+        <conditions>
+            <leftValueReference>currentItem_Copy_1_of_Opportunities_in_Month_1_Forecasted_Users_0.CreatedDate</leftValueReference>
+            <operator>GreaterThanOrEqualTo</operator>
+            <rightValue>
+                <elementReference>f_threeMonthsAgo</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Copy_1_of_Opportunities_in_Month_1_Forecasted_Users_0.CreatedDate</leftValueReference>
+            <operator>LessThan</operator>
+            <rightValue>
+                <elementReference>fmla_2_Months_Ago</elementReference>
+            </rightValue>
+        </conditions>
+        <connector>
+            <targetReference>Max_Forecasted_Users_Month_1</targetReference>
+        </connector>
+    </collectionProcessors>
+    <collectionProcessors>
+        <name>Opportunities_in_Month_1_logos</name>
+        <elementSubtype>FilterCollectionProcessor</elementSubtype>
+        <label>Opportunities in Month 1 _Logos</label>
+        <locationX>1898</locationX>
+        <locationY>1106</locationY>
+        <assignNextValueToReference>currentItem_Copy_1_of_Opportunities_in_Month_1_Forecasted_Users_0</assignNextValueToReference>
+        <collectionProcessorType>FilterCollectionProcessor</collectionProcessorType>
+        <collectionReference>Get_Best_Case_Pipeline</collectionReference>
+        <conditionLogic>and</conditionLogic>
+        <conditions>
+            <leftValueReference>currentItem_Copy_1_of_Opportunities_in_Month_1_Forecasted_Users_0.CreatedDate</leftValueReference>
+            <operator>GreaterThanOrEqualTo</operator>
+            <rightValue>
+                <elementReference>f_threeMonthsAgo</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Copy_1_of_Opportunities_in_Month_1_Forecasted_Users_0.CreatedDate</leftValueReference>
+            <operator>LessThan</operator>
+            <rightValue>
+                <elementReference>fmla_2_Months_Ago</elementReference>
+            </rightValue>
+        </conditions>
+        <connector>
+            <targetReference>Sum_of_Logos_Month_1</targetReference>
+        </connector>
+    </collectionProcessors>
+    <collectionProcessors>
+        <name>Opportunities_in_Month_2_ARR</name>
+        <elementSubtype>FilterCollectionProcessor</elementSubtype>
+        <label>Opportunities in Month 2_ARR</label>
+        <locationX>1898</locationX>
+        <locationY>3218</locationY>
+        <assignNextValueToReference>currentItem_Copy_1_of_Opportunities_in_Month_2_Forecasted_Users</assignNextValueToReference>
+        <collectionProcessorType>FilterCollectionProcessor</collectionProcessorType>
+        <collectionReference>Get_Best_Case_Pipeline</collectionReference>
+        <conditionLogic>and</conditionLogic>
+        <conditions>
+            <leftValueReference>currentItem_Copy_1_of_Opportunities_in_Month_2_Forecasted_Users.CreatedDate</leftValueReference>
+            <operator>GreaterThanOrEqualTo</operator>
+            <rightValue>
+                <elementReference>fmla_2_Months_Ago</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Copy_1_of_Opportunities_in_Month_2_Forecasted_Users.CreatedDate</leftValueReference>
+            <operator>LessThan</operator>
+            <rightValue>
+                <elementReference>f_threeMonthsAgo</elementReference>
+            </rightValue>
+        </conditions>
+        <connector>
+            <targetReference>Max_ARR_Month_2</targetReference>
+        </connector>
+    </collectionProcessors>
+    <collectionProcessors>
+        <name>Opportunities_in_Month_2_Forecasted_Users</name>
+        <elementSubtype>FilterCollectionProcessor</elementSubtype>
+        <label>Opportunities in Month 2_Forecasted Users</label>
+        <locationX>1898</locationX>
+        <locationY>2270</locationY>
+        <assignNextValueToReference>currentItem_Copy_1_of_Opportunities_in_Month_2_Forecasted_Users</assignNextValueToReference>
+        <collectionProcessorType>FilterCollectionProcessor</collectionProcessorType>
+        <collectionReference>Get_Best_Case_Pipeline</collectionReference>
+        <conditionLogic>and</conditionLogic>
+        <conditions>
+            <leftValueReference>currentItem_Copy_1_of_Opportunities_in_Month_2_Forecasted_Users.CreatedDate</leftValueReference>
+            <operator>GreaterThanOrEqualTo</operator>
+            <rightValue>
+                <elementReference>fmla_2_Months_Ago</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Copy_1_of_Opportunities_in_Month_2_Forecasted_Users.CreatedDate</leftValueReference>
+            <operator>LessThan</operator>
+            <rightValue>
+                <elementReference>fmla_Last_Month</elementReference>
+            </rightValue>
+        </conditions>
+        <connector>
+            <targetReference>Max_Forecasted_Users_Month2</targetReference>
+        </connector>
+    </collectionProcessors>
+    <collectionProcessors>
+        <name>Opportunities_in_Month_2_Logos</name>
+        <elementSubtype>FilterCollectionProcessor</elementSubtype>
+        <label>Opportunities in Month 2_Logos</label>
+        <locationX>1898</locationX>
+        <locationY>1322</locationY>
+        <assignNextValueToReference>currentItem_Copy_1_of_Opportunities_in_Month_2_Forecasted_Users</assignNextValueToReference>
+        <collectionProcessorType>FilterCollectionProcessor</collectionProcessorType>
+        <collectionReference>Get_Best_Case_Pipeline</collectionReference>
+        <conditionLogic>and</conditionLogic>
+        <conditions>
+            <leftValueReference>currentItem_Copy_1_of_Opportunities_in_Month_2_Forecasted_Users.CreatedDate</leftValueReference>
+            <operator>GreaterThanOrEqualTo</operator>
+            <rightValue>
+                <elementReference>fmla_2_Months_Ago</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Copy_1_of_Opportunities_in_Month_2_Forecasted_Users.CreatedDate</leftValueReference>
+            <operator>LessThan</operator>
+            <rightValue>
+                <elementReference>fmla_Last_Month</elementReference>
+            </rightValue>
+        </conditions>
+        <connector>
+            <targetReference>Sum_of_Logos_Month_2</targetReference>
+        </connector>
+    </collectionProcessors>
+    <collectionProcessors>
+        <name>Opportunities_in_Month_3_ARR</name>
+        <elementSubtype>FilterCollectionProcessor</elementSubtype>
+        <label>Opportunities in Month 3_ARR</label>
+        <locationX>1898</locationX>
+        <locationY>3434</locationY>
+        <assignNextValueToReference>currentItem_Copy_1_of_Opportunities_in_Month_3_Forecasted_Users</assignNextValueToReference>
+        <collectionProcessorType>FilterCollectionProcessor</collectionProcessorType>
+        <collectionReference>Get_Best_Case_Pipeline</collectionReference>
+        <conditionLogic>and</conditionLogic>
+        <conditions>
+            <leftValueReference>currentItem_Copy_1_of_Opportunities_in_Month_3_Forecasted_Users.CreatedDate</leftValueReference>
+            <operator>GreaterThanOrEqualTo</operator>
+            <rightValue>
+                <elementReference>fmla_Last_Month</elementReference>
+            </rightValue>
+        </conditions>
+        <conditions>
+            <leftValueReference>currentItem_Copy_1_of_Opportunities_in_Month_3_Forecasted_Users.CreatedDate</leftValueReference>
+            <operator>LessThan</operator>
+            <rightValue>
+                <elementReference>fmla_2_Months_Ago</elementReference>
+            </rightValue>
+        </conditions>
+        <connector>
+            <targetReference>Max_ARR_Month_3</targetReference>
+        </connector>
+    </collectionProcessors>
+    <collectionProcessors>
+        <name>Opportunities_in_Month_3_Forecasted_Users</name>
+        <elementSubtype>FilterCollectionProcessor</elementSubtype>
+        <label>Opportunities in Month 3_Forecasted Users</label>
+        <locationX>1898</locationX>
+        <locationY>2486</locationY>
+        <assignNextValueToReference>currentItem_Copy_1_of_Opportunities_in_Month_3_Forecasted_Users</assignNextValueToReference>
+        <collectionProcessorType>FilterCollectionProcessor</collectionProcessorType>
+        <collectionReference>Get_Best_Case_Pipeline</collectionReference>
+        <conditionLogic>and</conditionLogic>
+        <conditions>
+            <leftValueReference>currentItem_Copy_1_of_Opportunities_in_Month_3_Forecasted_Users.CreatedDate</leftValueReference>
+            <operator>GreaterThanOrEqualTo</operator>
+            <rightValue>
+                <elementReference>fmla_Last_Month</elementReference>
+            </rightValue>
+        </conditions>
+        <connector>
+            <targetReference>Max_Forecasted_Users_Month_3</targetReference>
+        </connector>
+    </collectionProcessors>
+    <collectionProcessors>
+        <name>Opportunities_in_Month_3_Logos</name>
+        <elementSubtype>FilterCollectionProcessor</elementSubtype>
+        <label>Opportunities in Month 3_Logos</label>
+        <locationX>1898</locationX>
+        <locationY>1538</locationY>
+        <assignNextValueToReference>currentItem_Copy_1_of_Opportunities_in_Month_3_Forecasted_Users</assignNextValueToReference>
+        <collectionProcessorType>FilterCollectionProcessor</collectionProcessorType>
+        <collectionReference>Get_Best_Case_Pipeline</collectionReference>
+        <conditionLogic>and</conditionLogic>
+        <conditions>
+            <leftValueReference>currentItem_Copy_1_of_Opportunities_in_Month_3_Forecasted_Users.CreatedDate</leftValueReference>
+            <operator>GreaterThanOrEqualTo</operator>
+            <rightValue>
+                <elementReference>fmla_Last_Month</elementReference>
+            </rightValue>
+        </conditions>
+        <connector>
+            <targetReference>Sum_of_Logos_Month_3</targetReference>
+        </connector>
     </collectionProcessors>
     <decisions>
-        <name>LawPay_Opportunities_Check</name>
-        <label>LawPay Opportunities Check</label>
-        <locationX>465</locationX>
-        <locationY>426</locationY>
+        <name>ARR_Decision</name>
+        <label>ARR Decision</label>
+        <locationX>1898</locationX>
+        <locationY>3650</locationY>
         <defaultConnector>
-            <targetReference>Opportunities_Check</targetReference>
+            <targetReference>Assign_Month_3_var_BestCaseARR</targetReference>
         </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <defaultConnectorLabel>Month 3 ARR Greatest</defaultConnectorLabel>
         <rules>
-            <name>Has_LawPay_Opps</name>
+            <name>Month_1_ARR_Greatest</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>LawPay_Opportunities</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>In_Month_Payments_Wins</targetReference>
-            </connector>
-            <label>Has LawPay Opps</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>Opportunities_Check</name>
-        <label>Opportunities Check</label>
-        <locationX>686</locationX>
-        <locationY>370</locationY>
-        <defaultConnector>
-            <targetReference>Projection</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>Has_Opportunities</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>MyCase_Opportunities</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>In_Month_Wins</targetReference>
-            </connector>
-            <label>Has Opportunities</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>Wins_Check</name>
-        <label>Wins Check</label>
-        <locationX>820</locationX>
-        <locationY>483</locationY>
-        <defaultConnector>
-            <targetReference>Assign_Projections</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>Has_Wins</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>ProjectedDealsWonCount</leftValueReference>
+                <leftValueReference>currentItem_Copy_1_of_Opportunities_in_Month_1_Forecasted_Users_0.Amount</leftValueReference>
                 <operator>GreaterThan</operator>
                 <rightValue>
-                    <numberValue>0.0</numberValue>
+                    <elementReference>currentItem_Copy_1_of_Opportunities_in_Month_2_Forecasted_Users.Amount</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>currentItem_Copy_1_of_Opportunities_in_Month_1_Forecasted_Users_0.Amount</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>currentItem_Copy_1_of_Opportunities_in_Month_3_Forecasted_Users.Amount</elementReference>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Average_Won_Users</targetReference>
+                <targetReference>Assign_Month_1_to_var_BestCaseARR</targetReference>
             </connector>
-            <label>Has Wins</label>
+            <label>Month 1 ARR Greatest</label>
+        </rules>
+        <rules>
+            <name>Month_2_ARR_Greatest</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>currentItem_Copy_1_of_Opportunities_in_Month_2_Forecasted_Users.Amount</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>currentItem_Copy_1_of_Opportunities_in_Month_3_Forecasted_Users.Amount</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Month_2_var_BestCaseARR</targetReference>
+            </connector>
+            <label>Month 2 ARR Greatest</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>LearnMore_Button_Navigation</name>
+        <label>LearnMore Button Navigation</label>
+        <locationX>1898</locationX>
+        <locationY>4382</locationY>
+        <defaultConnector>
+            <targetReference>Create_Software_Users_Forecasting_Adjustment_Commit</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>New Month Forecast</defaultConnectorLabel>
+        <rules>
+            <name>Learn_More_Dec</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Flow_Buttons.value</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Learn More</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Learn_More</targetReference>
+            </connector>
+            <label>Learn More</label>
+        </rules>
+        <rules>
+            <name>Update_This_Month</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Flow_Buttons.value</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Update This Month</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_ARR_Commit</targetReference>
+            </connector>
+            <label>Update This Month</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Logos_Decision</name>
+        <label>Logos Decision</label>
+        <locationX>1898</locationX>
+        <locationY>1754</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Best_Case_Logos_Month_3</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Month 3 Logos Greatest</defaultConnectorLabel>
+        <rules>
+            <name>Month_1_Logos_Greatest</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>var_SumofLogosMonth1</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>var_SumofLogosMonth2</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>var_SumofLogosMonth1</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>var_SumofLogosMonth3</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Best_Case_Logos_Month_1</targetReference>
+            </connector>
+            <label>Month 1 Logos Greatest</label>
+        </rules>
+        <rules>
+            <name>Month_2_Logos_Greatest</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>var_SumofLogosMonth2</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>var_SumofLogosMonth3</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Best_Case_Logos_Month_2</targetReference>
+            </connector>
+            <label>Month 2 Logos Greatest</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Users_Decision</name>
+        <label>Users Decision</label>
+        <locationX>1898</locationX>
+        <locationY>2702</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Month_3_Users_to_var_BestCaseUsers</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Month 3 is Greatest</defaultConnectorLabel>
+        <rules>
+            <name>of_Month_1_is_Greatest</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>currentItem_Copy_1_of_Opportunities_in_Month_1_Forecasted_Users_0.Forecasted_Users__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>currentItem_Copy_1_of_Opportunities_in_Month_2_Forecasted_Users.Forecasted_Users__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>currentItem_Copy_1_of_Opportunities_in_Month_1_Forecasted_Users_0.Forecasted_Users__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>currentItem_Copy_1_of_Opportunities_in_Month_3_Forecasted_Users.Forecasted_Users__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Month_1_Users_to_var_BestCaseUsers</targetReference>
+            </connector>
+            <label>Month 1 is Greatest</label>
+        </rules>
+        <rules>
+            <name>Month_2_is_Greatest</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>currentItem_Copy_1_of_Opportunities_in_Month_2_Forecasted_Users.Forecasted_Users__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>currentItem_Copy_1_of_Opportunities_in_Month_3_Forecasted_Users.Forecasted_Users__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Month_2_Users_to_var_BestCaseUsers</targetReference>
+            </connector>
+            <label>Month 2 is Greatest</label>
         </rules>
     </decisions>
     <description>Generates prediction for opps created in remaining days of the month based on prior 3 months to calculate deals and users won</description>
@@ -317,6 +931,88 @@ MONTH( ADDMONTHS( {!$Flow.CurrentDate}, -3)),
 )</expression>
     </formulas>
     <formulas>
+        <name>fmla_2_Months_Ago</name>
+        <dataType>Date</dataType>
+        <expression>DATE(
+YEAR( ADDMONTHS( {!$Flow.CurrentDate}, -2)),
+MONTH( ADDMONTHS( {!$Flow.CurrentDate}, -2)),
+1
+)</expression>
+    </formulas>
+    <formulas>
+        <name>fmla_ARR_Best_Case</name>
+        <dataType>Number</dataType>
+        <expression>{!Sum_of_ARR_Commit_Pipeline.outputDecimalResult} +{!var_BestCase_ARR}</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>fmla_ARRCommit</name>
+        <dataType>Number</dataType>
+        <expression>{!Sum_of_ARR_Commit_Pipeline.outputDecimalResult}+{!fmla_ARRCommitMagicNumber}</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>fmla_ARRCommitMagicNumber</name>
+        <dataType>Number</dataType>
+        <expression>{!Sum_of_ARR_Commit_Pipeline.outputDecimalResult}/3</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>fmla_Best_Case_Forecasted_Users</name>
+        <dataType>Number</dataType>
+        <expression>{!Sum_ForecastedUsers_Software_Opps.outputDecimalResult}+{!var_BestCase_ForecastedUsers}</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>fmla_Last_Month</name>
+        <dataType>Date</dataType>
+        <expression>DATE(
+YEAR( ADDMONTHS( {!$Flow.CurrentDate}, -1)),
+MONTH( ADDMONTHS( {!$Flow.CurrentDate}, -1)),
+1
+)</expression>
+    </formulas>
+    <formulas>
+        <name>fmla_Logo_Best_Case</name>
+        <dataType>Number</dataType>
+        <expression>{!var_BestCase_Logos}+{!var_Logo_Commit_Pipeline}</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>fmla_Logo_Commit</name>
+        <dataType>Number</dataType>
+        <expression>{!fmla_Logo_Commit_Magic_Number}+{!var_Logo_Commit_Pipeline}</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>fmla_Logo_Commit_Magic_Number</name>
+        <dataType>Number</dataType>
+        <expression>{!var_Logo_Commit_Pipeline}/3</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>fmla_SoftwareCommitPipeline</name>
+        <dataType>Number</dataType>
+        <expression>{!Sum_ForecastedUsers_Software_Opps.outputDecimalResult}+{!fmla_UsersCommitMagicNumber}</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>fmla_StartofThisMonth</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()-DAY(TODAY())+1</expression>
+    </formulas>
+    <formulas>
+        <name>fmla_UsersCommitMagicNumber</name>
+        <dataType>Number</dataType>
+        <expression>{!Average_Forecasted_Users_Software.outputDecimalResult}/3</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>fmlaToday</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
+    <formulas>
         <name>min_LastActivityDate</name>
         <dataType>Date</dataType>
         <expression>{!$Flow.CurrentDate} - 14</expression>
@@ -332,7 +1028,7 @@ MONTH( ADDMONTHS( {!$Flow.CurrentDate}, -3)),
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>FREE_FORM_CANVAS</stringValue>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -342,16 +1038,786 @@ MONTH( ADDMONTHS( {!$Flow.CurrentDate}, -3)),
         </value>
     </processMetadataValues>
     <processType>Flow</processType>
+    <recordCreates>
+        <name>Create_ARR_Forecasting_Adjustment_Best_Case</name>
+        <label>Create ARR Forecasting Adjustment Best Case</label>
+        <locationX>3746</locationX>
+        <locationY>4922</locationY>
+        <connector>
+            <targetReference>Create_Logos_Forecasting_Adjustment_Best_Case</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Error_Screen</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>ForecastOwnerId</field>
+            <value>
+                <elementReference>$User.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ForecastingItemCategory</field>
+            <value>
+                <stringValue>BestCaseForecast</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ForecastingTypeId</field>
+            <value>
+                <elementReference>Get_ForecastingType_ARR.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerAdjustedAmount</field>
+            <value>
+                <elementReference>ARR_Best_Case7</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StartDate</field>
+            <value>
+                <elementReference>fmlaToday</elementReference>
+            </value>
+        </inputAssignments>
+        <object>ForecastingOwnerAdjustment</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>Create_ARR_Forecasting_Adjustment_Commit</name>
+        <label>Create ARR Forecasting Adjustment Commit</label>
+        <locationX>3746</locationX>
+        <locationY>4598</locationY>
+        <connector>
+            <targetReference>Create_Logos_Forecasting_Adjustment_Commit</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Error_Screen</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>ForecastOwnerId</field>
+            <value>
+                <elementReference>$User.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ForecastingItemCategory</field>
+            <value>
+                <stringValue>CommitForecast</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ForecastingTypeId</field>
+            <value>
+                <elementReference>Get_ForecastingType_ARR.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerAdjustedAmount</field>
+            <value>
+                <elementReference>ARR_Commit6</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StartDate</field>
+            <value>
+                <elementReference>fmlaToday</elementReference>
+            </value>
+        </inputAssignments>
+        <object>ForecastingOwnerAdjustment</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>Create_Logos_Forecasting_Adjustment_Best_Case</name>
+        <label>Create Logos Forecasting Adjustment Best Case</label>
+        <locationX>3746</locationX>
+        <locationY>5030</locationY>
+        <connector>
+            <targetReference>Thank_You</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Error_Screen</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>ForecastOwnerId</field>
+            <value>
+                <elementReference>$User.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ForecastingItemCategory</field>
+            <value>
+                <stringValue>BestCaseForecast</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ForecastingTypeId</field>
+            <value>
+                <elementReference>Get_ForecastingType_Payments_Logos.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerAdjustedQuantity</field>
+            <value>
+                <elementReference>Logo_Best_Case7</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StartDate</field>
+            <value>
+                <elementReference>fmlaToday</elementReference>
+            </value>
+        </inputAssignments>
+        <object>ForecastingOwnerAdjustment</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>Create_Logos_Forecasting_Adjustment_Commit</name>
+        <label>Create Logos Forecasting Adjustment Commit</label>
+        <locationX>3746</locationX>
+        <locationY>4706</locationY>
+        <connector>
+            <targetReference>Create_Software_Users_Forecasting_Adjustment_Best_Case</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Error_Screen</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>ForecastOwnerId</field>
+            <value>
+                <elementReference>$User.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ForecastingItemCategory</field>
+            <value>
+                <stringValue>CommitForecast</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ForecastingTypeId</field>
+            <value>
+                <elementReference>Get_ForecastingType_Payments_Logos.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerAdjustedQuantity</field>
+            <value>
+                <elementReference>Logo_Commit6</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StartDate</field>
+            <value>
+                <elementReference>fmlaToday</elementReference>
+            </value>
+        </inputAssignments>
+        <object>ForecastingOwnerAdjustment</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>Create_Software_Users_Forecasting_Adjustment_Best_Case</name>
+        <label>Create Software Users Forecasting Adjustment Best Case</label>
+        <locationX>3746</locationX>
+        <locationY>4814</locationY>
+        <connector>
+            <targetReference>Create_ARR_Forecasting_Adjustment_Best_Case</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Error_Screen</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>ForecastOwnerId</field>
+            <value>
+                <elementReference>$User.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ForecastingItemCategory</field>
+            <value>
+                <stringValue>BestCaseForecast</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ForecastingTypeId</field>
+            <value>
+                <elementReference>Get_ForecastingType_Software_Users.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerAdjustedQuantity</field>
+            <value>
+                <elementReference>Users_Best_Case7</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StartDate</field>
+            <value>
+                <elementReference>fmlaToday</elementReference>
+            </value>
+        </inputAssignments>
+        <object>ForecastingOwnerAdjustment</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>Create_Software_Users_Forecasting_Adjustment_Commit</name>
+        <label>Create Software Users Forecasting Adjustment Commit</label>
+        <locationX>3746</locationX>
+        <locationY>4490</locationY>
+        <connector>
+            <targetReference>Create_ARR_Forecasting_Adjustment_Commit</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Error_Screen</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>ForecastOwnerId</field>
+            <value>
+                <elementReference>$User.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ForecastingItemCategory</field>
+            <value>
+                <stringValue>CommitForecast</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ForecastingTypeId</field>
+            <value>
+                <elementReference>Get_ForecastingType_Software_Users.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerAdjustedQuantity</field>
+            <value>
+                <elementReference>USers_Commit6</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StartDate</field>
+            <value>
+                <elementReference>fmlaToday</elementReference>
+            </value>
+        </inputAssignments>
+        <object>ForecastingOwnerAdjustment</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
     <recordLookups>
-        <name>LawPay_Opportunities</name>
-        <label>LawPay Opportunities</label>
-        <locationX>343</locationX>
-        <locationY>326</locationY>
+        <name>Get_ARR_Best_Case</name>
+        <label>Get ARR Best Case</label>
+        <locationX>314</locationX>
+        <locationY>5138</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>MyCase_Opportunities</targetReference>
+            <targetReference>Update_ARR_Best_Case</targetReference>
         </connector>
-        <filterLogic>1 AND 2 AND 3 AND 4 AND (5 OR 6)</filterLogic>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Error_Screen</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ForecastOwnerId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_User.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>StartDate</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>fmla_StartofThisMonth</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>ForecastingTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_ForecastingType_ARR.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>ForecastingItemCategory</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>BestCaseForecast</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>ForecastingOwnerAdjustment</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_ARR_Commit</name>
+        <label>Get ARR Commit</label>
+        <locationX>314</locationX>
+        <locationY>4490</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_ARR_Commit</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Error_Screen</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ForecastOwnerId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_User.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>StartDate</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>fmla_StartofThisMonth</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>ForecastingTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_ForecastingType_ARR.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>ForecastingItemCategory</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>CommitForecast</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>ForecastingOwnerAdjustment</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Best_Case_Pipeline</name>
+        <label>Get Best Case Pipeline</label>
+        <locationX>1898</locationX>
+        <locationY>458</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_User</targetReference>
+        </connector>
+        <filterLogic>(1 OR 2 OR 3 OR 4) AND 5 AND 6 AND 7 AND 8</filterLogic>
+        <filters>
+            <field>Record_Type_Name__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>CASEpeer</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Record_Type_Name__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Docketwise</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Record_Type_Name__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>LawPay Software</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Record_Type_Name__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>MyCase</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>OwnerId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$User.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>ForecastCategoryName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Best Case</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>CreatedDate</field>
+            <operator>LessThanOrEqualTo</operator>
+            <value>
+                <elementReference>f_threeMonthsAgo</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>CreatedDate</field>
+            <operator>LessThanOrEqualTo</operator>
+            <value>
+                <elementReference>fmlaToday</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Opportunity</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_ForecastingType_ARR</name>
+        <label>Get ForecastingType ARR</label>
+        <locationX>1898</locationX>
+        <locationY>4166</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Projection</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>ARR</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>ForecastingType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_ForecastingType_Payments_Logos</name>
+        <label>Get_ForecastingType_Payments_Logos</label>
+        <locationX>1898</locationX>
+        <locationY>3950</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_ForecastingType_Software_Users</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Payments_Logos</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>ForecastingType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_ForecastingType_Software_Users</name>
+        <label>Get_ForecastingType_Software_Users</label>
+        <locationX>1898</locationX>
+        <locationY>4058</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_ForecastingType_ARR</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Software_Users</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>ForecastingType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Logos_Best_Case</name>
+        <label>Get Logos Best Case</label>
+        <locationX>314</locationX>
+        <locationY>5570</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Logos_Best_Case</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Error_Screen</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ForecastOwnerId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_User.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>StartDate</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>fmla_StartofThisMonth</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>ForecastingTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_ForecastingType_Payments_Logos.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>ForecastingItemCategory</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>BestCaseForecast</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>ForecastingOwnerAdjustment</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Logos_Commit</name>
+        <label>Get Logos Commit</label>
+        <locationX>314</locationX>
+        <locationY>4922</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Logos_Commit</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Error_Screen</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ForecastOwnerId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_User.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>StartDate</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>fmla_StartofThisMonth</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>ForecastingTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_ForecastingType_Payments_Logos.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>ForecastingItemCategory</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>CommitForecast</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>ForecastingOwnerAdjustment</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Software_Users_Best_Case</name>
+        <label>Get Software Users Best Case</label>
+        <locationX>314</locationX>
+        <locationY>5354</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Software_Users_Best_Case</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Error_Screen</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ForecastOwnerId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_User.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>StartDate</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>fmla_StartofThisMonth</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>ForecastingTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_ForecastingType_Software_Users.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>ForecastingItemCategory</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>BestCaseForecast</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>ForecastingOwnerAdjustment</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Software_Users_Commit</name>
+        <label>Get Software Users Commit</label>
+        <locationX>314</locationX>
+        <locationY>4706</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Software_Users_Commit</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Error_Screen</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ForecastOwnerId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_User.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>StartDate</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>fmla_StartofThisMonth</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>ForecastingTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_ForecastingType_Software_Users.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>ForecastingItemCategory</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>CommitForecast</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>ForecastingOwnerAdjustment</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_User</name>
+        <label>Get User</label>
+        <locationX>1898</locationX>
+        <locationY>566</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Sum_of_Logos_Commit_Pipeline</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$User.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Users_Commit_Pipeline</name>
+        <label>Get Users Commit Pipeline</label>
+        <locationX>1898</locationX>
+        <locationY>350</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Best_Case_Pipeline</targetReference>
+        </connector>
+        <filterLogic>(1 OR 2 OR 3 OR 4) AND 5 AND 6 AND 7 AND 8</filterLogic>
+        <filters>
+            <field>Record_Type_Name__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>CASEpeer</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Record_Type_Name__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Docketwise</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Record_Type_Name__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>LawPay Software</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Record_Type_Name__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>MyCase</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>CreatedDate</field>
+            <operator>LessThan</operator>
+            <value>
+                <elementReference>fmlaToday</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>CreatedDate</field>
+            <operator>GreaterThanOrEqualTo</operator>
+            <value>
+                <elementReference>f_threeMonthsAgo</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>OwnerId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$User.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Won_in_Month__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Opportunity</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Payment_Opportunities</name>
+        <label>Payment Opportunities</label>
+        <locationX>1898</locationX>
+        <locationY>134</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Software_Opportunities</targetReference>
+        </connector>
+        <filterLogic>1 AND 2 AND 3 AND (4 OR 7 OR 8 OR 9) AND (5 OR 6)</filterLogic>
         <filters>
             <field>OwnerId</field>
             <operator>EqualTo</operator>
@@ -394,20 +1860,41 @@ MONTH( ADDMONTHS( {!$Flow.CurrentDate}, -3)),
                 <stringValue>Cross-Sell</stringValue>
             </value>
         </filters>
+        <filters>
+            <field>Record_Type_Name__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Affinipay</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Record_Type_Name__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Clientpay</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Record_Type_Name__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>CPAcharge</stringValue>
+            </value>
+        </filters>
         <getFirstRecordOnly>false</getFirstRecordOnly>
         <object>Opportunity</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
-        <name>MyCase_Opportunities</name>
-        <label>MyCase Opportunities</label>
-        <locationX>332</locationX>
-        <locationY>510</locationY>
+        <name>Software_Opportunities</name>
+        <label>Software Opportunities</label>
+        <locationX>1898</locationX>
+        <locationY>242</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>LawPay_Opportunities_Check</targetReference>
+            <targetReference>Get_Users_Commit_Pipeline</targetReference>
         </connector>
-        <filterLogic>1 AND 2 AND 3 AND 4 AND (5 OR 6)</filterLogic>
+        <filterLogic>1 AND 2 AND 3 AND (4 OR 7 OR 8 OR 9) AND (5 OR 6) AND 10</filterLogic>
         <filters>
             <field>OwnerId</field>
             <operator>EqualTo</operator>
@@ -450,18 +1937,543 @@ MONTH( ADDMONTHS( {!$Flow.CurrentDate}, -3)),
                 <stringValue>Cross-Sell</stringValue>
             </value>
         </filters>
+        <filters>
+            <field>Record_Type_Name__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Docketwise</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Record_Type_Name__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>CASEpeer</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Record_Type_Name__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>LawPay Software</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>ForecastCategoryName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Commit</stringValue>
+            </value>
+        </filters>
         <getFirstRecordOnly>false</getFirstRecordOnly>
         <object>Opportunity</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordUpdates>
+        <name>Update_ARR_Best_Case</name>
+        <label>Update ARR Best Case</label>
+        <locationX>314</locationX>
+        <locationY>5246</locationY>
+        <connector>
+            <targetReference>Get_Software_Users_Best_Case</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Error_Screen</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_ARR_Best_Case.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>OwnerAdjustedAmount</field>
+            <value>
+                <elementReference>ARR_Best_Case7</elementReference>
+            </value>
+        </inputAssignments>
+        <object>ForecastingOwnerAdjustment</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_ARR_Commit</name>
+        <label>Update ARR Commit</label>
+        <locationX>314</locationX>
+        <locationY>4598</locationY>
+        <connector>
+            <targetReference>Get_Software_Users_Commit</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Error_Screen</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_ARR_Commit.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>OwnerAdjustedAmount</field>
+            <value>
+                <elementReference>ARR_Commit6</elementReference>
+            </value>
+        </inputAssignments>
+        <object>ForecastingOwnerAdjustment</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Logos_Best_Case</name>
+        <label>Update Logos Best Case</label>
+        <locationX>314</locationX>
+        <locationY>5678</locationY>
+        <connector>
+            <targetReference>Thank_You</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Error_Screen</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Logos_Best_Case.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>OwnerAdjustedQuantity</field>
+            <value>
+                <elementReference>Logo_Best_Case7</elementReference>
+            </value>
+        </inputAssignments>
+        <object>ForecastingOwnerAdjustment</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Logos_Commit</name>
+        <label>Update Logos Commit</label>
+        <locationX>314</locationX>
+        <locationY>5030</locationY>
+        <connector>
+            <targetReference>Get_ARR_Best_Case</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Error_Screen</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Logos_Commit.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>OwnerAdjustedQuantity</field>
+            <value>
+                <elementReference>Logo_Commit6</elementReference>
+            </value>
+        </inputAssignments>
+        <object>ForecastingOwnerAdjustment</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Software_Users_Best_Case</name>
+        <label>Update Software Users Best Case</label>
+        <locationX>314</locationX>
+        <locationY>5462</locationY>
+        <connector>
+            <targetReference>Get_Logos_Best_Case</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Error_Screen</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Software_Users_Best_Case.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>OwnerAdjustedQuantity</field>
+            <value>
+                <elementReference>Users_Best_Case7</elementReference>
+            </value>
+        </inputAssignments>
+        <object>ForecastingOwnerAdjustment</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Software_Users_Commit</name>
+        <label>Update Software Users Commit</label>
+        <locationX>314</locationX>
+        <locationY>4814</locationY>
+        <connector>
+            <targetReference>Get_Logos_Commit</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Error_Screen</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Software_Users_Commit.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>OwnerAdjustedQuantity</field>
+            <value>
+                <elementReference>USers_Commit6</elementReference>
+            </value>
+        </inputAssignments>
+        <object>ForecastingOwnerAdjustment</object>
+    </recordUpdates>
     <screens>
-        <name>Projection</name>
-        <label>Projection</label>
-        <locationX>875</locationX>
-        <locationY>244</locationY>
+        <name>Error_Screen</name>
+        <label>Error Screen</label>
+        <locationX>6122</locationX>
+        <locationY>890</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
+        <fields>
+            <name>Error_Text</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 16px;&quot;&gt;Uh Oh&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Something went wrong. Reach out in &lt;/span&gt;&lt;a href=&quot;https://affinipay.slack.com/archives/C04TN10T493&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-size: 14px;&quot;&gt;#help-sales-ops &lt;/a&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;and reference this error message:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;{!$Flow.FaultMessage}&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Learn_More</name>
+        <label>Learn More</label>
+        <locationX>50</locationX>
+        <locationY>4490</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <backButtonLabel>Back</backButtonLabel>
+        <fields>
+            <name>Why_Forecast</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Why Forecast?&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Forecasting is a critical part of our business. It enables us to plan and make informed decisions around future operations. Every level of our sales organization (including the rep, manager, VP, and CSO) submits forecast each week. Learn more in Highspot.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Whats_a_Magic_Number</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;What&#39;s a Magic Number?&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;We work in a high-velocity sales cycle, which means we are often forecasting based on deals that have not entered our pipeline yet.  To help you forecast, the system automatically calculates a &quot;magic number&quot; that you can add to your current Commit and Best Case Pipeline.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;The &quot;magic number&quot; is the average (for your Commit forecast) and max (for your Best Case forecast) number of deals created and closed in-month between calendar day 24 and the end of the month, based on your performance from the last 3 months.  This means your magic numbers shrink as the month progresses. If you started or changed roles in the last 3 months, these numbers may not be accurate.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;See below for your average and max performance based on the last 3 months.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Learn_More_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Learn_More_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Logos3</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Logos&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>Logos_Created_and_Won</name>
+                    <extensionName>c:ReadOnlyScreenComponent</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Logos Created &amp; Won (Average)</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>value</name>
+                        <value>
+                            <stringValue>1</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>dataType</name>
+                        <value>
+                            <stringValue>string</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <fields>
+                    <name>Logos_Created_and_Won_Max</name>
+                    <extensionName>c:ReadOnlyScreenComponent</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Logos Created &amp; Won (Max)</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>value</name>
+                        <value>
+                            <stringValue>2</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>dataType</name>
+                        <value>
+                            <stringValue>string</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>4</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Learn_More_Section1_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Software_Users_3</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Software Users&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>Users_Created_and_Won_Average</name>
+                    <extensionName>c:ReadOnlyScreenComponent</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Users Created &amp; Won (Average)</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>value</name>
+                        <value>
+                            <stringValue>5</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>dataType</name>
+                        <value>
+                            <stringValue>string</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <fields>
+                    <name>Users_Created_and_Won_Max</name>
+                    <extensionName>c:ReadOnlyScreenComponent</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Users Created &amp; Won (Max)</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>value</name>
+                        <value>
+                            <stringValue>6</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>dataType</name>
+                        <value>
+                            <stringValue>string</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <fields>
+                    <name>Users_per_Deal_Average</name>
+                    <extensionName>c:ReadOnlyScreenComponent</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Users per Deal (Average)</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>value</name>
+                        <value>
+                            <stringValue>2.3</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>dataType</name>
+                        <value>
+                            <stringValue>string</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>4</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Learn_More_Section1_Column3</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>ARR3</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;ARR&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>ARR_Created_and_Won_Average</name>
+                    <extensionName>c:ReadOnlyScreenComponent</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>ARR Created &amp; Won (Average)</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>value</name>
+                        <value>
+                            <stringValue>4740</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>dataType</name>
+                        <value>
+                            <stringValue>string</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <fields>
+                    <name>ARR_Created_and_Won_Max</name>
+                    <extensionName>c:ReadOnlyScreenComponent</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>ARR Created &amp; Won (Max)</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>value</name>
+                        <value>
+                            <stringValue>6636</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>dataType</name>
+                        <value>
+                            <stringValue>string</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <fields>
+                    <name>ARPA</name>
+                    <extensionName>c:ReadOnlyScreenComponent</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>ARPA</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>value</name>
+                        <value>
+                            <stringValue>1002</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>dataType</name>
+                        <value>
+                            <stringValue>string</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <fields>
+                    <name>ARPU</name>
+                    <extensionName>c:ReadOnlyScreenComponent</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>ARPU</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>value</name>
+                        <value>
+                            <stringValue>74.2</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>dataType</name>
+                        <value>
+                            <stringValue>string</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>4</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Projection</name>
+        <label>Projection</label>
+        <locationX>1898</locationX>
+        <locationY>4274</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>LearnMore_Button_Navigation</targetReference>
+        </connector>
         <fields>
             <name>Projection_Section1</name>
             <fieldType>RegionContainer</fieldType>
@@ -470,7 +2482,7 @@ MONTH( ADDMONTHS( {!$Flow.CurrentDate}, -3)),
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>magicGeneratorDisplay</name>
-                    <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 20px;&quot;&gt;My Magic Number&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 20px;&quot;&gt;Submit Your Forecast&lt;/strong&gt;&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <inputParameters>
@@ -492,7 +2504,7 @@ MONTH( ADDMONTHS( {!$Flow.CurrentDate}, -3)),
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>projection_summary</name>
-                    <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;This &quot;Magic Number&quot; is to give you an idea of future pipeline -- either from leads you are currently working or leads yet to be assigned -- for the current month that has yet to be created that will also close in the current month.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;Add the below Magic Numbers to your Commit forecast.&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;Your forecast is based on where you expect to finish at the end of the month. Below is prepopulated data, which adds a system-generated &quot;magic number&quot; to your current Commit and Best Case pipelines. This magic number estimates the number of deals that have yet to be created that will close in-month.&lt;/span&gt;&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <inputParameters>
@@ -507,12 +2519,17 @@ MONTH( ADDMONTHS( {!$Flow.CurrentDate}, -3)),
             <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
-            <name>Magic_Numbers</name>
-            <fieldText>Magic Numbers</fieldText>
+            <name>Commit</name>
+            <fieldText>Commit</fieldText>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>Magic_Numbers_Column1</name>
+                <name>Commit_Column1</name>
                 <fieldType>Region</fieldType>
+                <fields>
+                    <name>Logos</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Logos&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
                 <fields>
                     <name>ProjectedUsers</name>
                     <extensionName>c:ReadOnlyScreenComponent</extensionName>
@@ -526,49 +2543,49 @@ MONTH( ADDMONTHS( {!$Flow.CurrentDate}, -3)),
                     <inputParameters>
                         <name>label</name>
                         <value>
-                            <stringValue>Magic Software Users Won</stringValue>
+                            <stringValue>Logos Commit Pipeline</stringValue>
                         </value>
                     </inputParameters>
                     <inputParameters>
                         <name>value</name>
                         <value>
-                            <elementReference>f_ProjectedUsersWonRemaining</elementReference>
+                            <elementReference>var_Logo_Commit_Pipeline</elementReference>
                         </value>
                     </inputParameters>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                     <storeOutputAutomatically>true</storeOutputAutomatically>
                 </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>4</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <fields>
-                <name>Magic_Numbers_Column2</name>
-                <fieldType>Region</fieldType>
                 <fields>
-                    <name>ProjectedARR</name>
+                    <name>Logo_Commit_Magic_Number</name>
                     <extensionName>c:ReadOnlyScreenComponent</extensionName>
                     <fieldType>ComponentInstance</fieldType>
                     <inputParameters>
-                        <name>value</name>
+                        <name>label</name>
                         <value>
-                            <elementReference>f_ProjectedARR_won</elementReference>
+                            <stringValue>Logo Commit Magic Number</stringValue>
                         </value>
                     </inputParameters>
                     <inputParameters>
-                        <name>label</name>
+                        <name>value</name>
                         <value>
-                            <stringValue>Magic Software ARR Won</stringValue>
+                            <elementReference>fmla_Logo_Commit_Magic_Number</elementReference>
                         </value>
                     </inputParameters>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                     <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <fields>
+                    <name>Logo_Commit6</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>fmla_Logo_Commit</elementReference>
+                    </defaultValue>
+                    <fieldText>Logo Commit</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
                 </fields>
                 <inputParameters>
                     <name>width</name>
@@ -579,8 +2596,80 @@ MONTH( ADDMONTHS( {!$Flow.CurrentDate}, -3)),
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>Magic_Numbers_Column3</name>
+                <name>Commit_Column2</name>
                 <fieldType>Region</fieldType>
+                <fields>
+                    <name>Software_Users</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Software Users&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>UsersCommitPipeline</name>
+                    <extensionName>c:ReadOnlyScreenComponent</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Users Commit Pipeline</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>value</name>
+                        <value>
+                            <elementReference>Sum_ForecastedUsers_Software_Opps.outputDecimalResult</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <fields>
+                    <name>Users_Commit_Magic_Number</name>
+                    <extensionName>c:ReadOnlyScreenComponent</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Users Commit Magic Number</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>value</name>
+                        <value>
+                            <elementReference>fmla_UsersCommitMagicNumber</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <fields>
+                    <name>USers_Commit6</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>fmla_SoftwareCommitPipeline</elementReference>
+                    </defaultValue>
+                    <fieldText>Users Commit</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>4</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Commit_Column3</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>ARR</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;ARR&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
                 <fields>
                     <name>paymentsWinsProejcted</name>
                     <extensionName>c:ReadOnlyScreenComponent</extensionName>
@@ -594,18 +2683,49 @@ MONTH( ADDMONTHS( {!$Flow.CurrentDate}, -3)),
                     <inputParameters>
                         <name>label</name>
                         <value>
-                            <stringValue>Magic Payments Logos Won</stringValue>
+                            <stringValue>ARR Commit Pipeline</stringValue>
                         </value>
                     </inputParameters>
                     <inputParameters>
                         <name>value</name>
                         <value>
-                            <elementReference>f_ProjectedLogosWonPayments</elementReference>
+                            <elementReference>Sum_of_ARR_Commit_Pipeline.outputDecimalResult</elementReference>
                         </value>
                     </inputParameters>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                     <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <fields>
+                    <name>ARR_Commit_Magic_Number</name>
+                    <extensionName>c:ReadOnlyScreenComponent</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>ARR Commit Magic Number</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>value</name>
+                        <value>
+                            <elementReference>fmla_ARRCommitMagicNumber</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <fields>
+                    <name>ARR_Commit6</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>fmla_ARRCommit</elementReference>
+                    </defaultValue>
+                    <fieldText>ARR Commit</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
                 </fields>
                 <inputParameters>
                     <name>width</name>
@@ -619,48 +2739,31 @@ MONTH( ADDMONTHS( {!$Flow.CurrentDate}, -3)),
             <regionContainerType>SectionWithHeader</regionContainerType>
         </fields>
         <fields>
-            <name>How_We_Got_There</name>
-            <fieldText>How We Got There</fieldText>
+            <name>Best_Case</name>
+            <fieldText>Best Case</fieldText>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>How_We_Got_There_Column1</name>
+                <name>Best_Case_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>howWeGotThereDisplay</name>
-                    <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 16px; background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;This summary is based on the 3 month average of opportunities created from &lt;/span&gt;&lt;strong style=&quot;font-size: 16px; background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;calendar day {!f_DayToday}&lt;/strong&gt;&lt;span style=&quot;font-size: 16px; background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt; through the last day of the month.&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>Logos2</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Logos&lt;/strong&gt;&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
-                <inputParameters>
-                    <name>width</name>
-                    <value>
-                        <stringValue>4</stringValue>
-                    </value>
-                </inputParameters>
-                <isRequired>false</isRequired>
-            </fields>
-            <fields>
-                <name>How_We_Got_There_Column2</name>
-                <fieldType>Region</fieldType>
                 <fields>
-                    <name>OppsCreated</name>
+                    <name>Logo_Best_Case_Pipeline</name>
                     <extensionName>c:ReadOnlyScreenComponent</extensionName>
                     <fieldType>ComponentInstance</fieldType>
                     <inputParameters>
-                        <name>dataType</name>
-                        <value>
-                            <stringValue>integer</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
                         <name>label</name>
                         <value>
-                            <stringValue>Projected Software Deals Created</stringValue>
+                            <stringValue>Logo Best Case Pipeline</stringValue>
                         </value>
                     </inputParameters>
                     <inputParameters>
                         <name>value</name>
                         <value>
-                            <elementReference>f_ProjectedOppsCreatedSoftware</elementReference>
+                            <elementReference>var_Logo_Commit_Pipeline</elementReference>
                         </value>
                     </inputParameters>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
@@ -668,25 +2771,19 @@ MONTH( ADDMONTHS( {!$Flow.CurrentDate}, -3)),
                     <storeOutputAutomatically>true</storeOutputAutomatically>
                 </fields>
                 <fields>
-                    <name>OppsWon</name>
+                    <name>Logo_Best_Case_Magic_Number</name>
                     <extensionName>c:ReadOnlyScreenComponent</extensionName>
                     <fieldType>ComponentInstance</fieldType>
                     <inputParameters>
-                        <name>dataType</name>
-                        <value>
-                            <stringValue>integer</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
                         <name>label</name>
                         <value>
-                            <stringValue>Projected Software Deals Won</stringValue>
+                            <stringValue>Logo Best Case Magic Number</stringValue>
                         </value>
                     </inputParameters>
                     <inputParameters>
                         <name>value</name>
                         <value>
-                            <elementReference>f_ProjectedDealsWonSoftware</elementReference>
+                            <elementReference>var_BestCase_Logos</elementReference>
                         </value>
                     </inputParameters>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
@@ -694,30 +2791,15 @@ MONTH( ADDMONTHS( {!$Flow.CurrentDate}, -3)),
                     <storeOutputAutomatically>true</storeOutputAutomatically>
                 </fields>
                 <fields>
-                    <name>AvgUsers</name>
-                    <extensionName>c:ReadOnlyScreenComponent</extensionName>
-                    <fieldType>ComponentInstance</fieldType>
-                    <inputParameters>
-                        <name>label</name>
-                        <value>
-                            <stringValue>Average Software Users Won per Deal</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>value</name>
-                        <value>
-                            <elementReference>AvgUsersWonPerDeal</elementReference>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>dataType</name>
-                        <value>
-                            <stringValue>integer</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <name>Logo_Best_Case7</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>fmla_Logo_Best_Case</elementReference>
+                    </defaultValue>
+                    <fieldText>Logo Best Case</fieldText>
+                    <fieldType>InputField</fieldType>
                     <isRequired>true</isRequired>
-                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                    <scale>0</scale>
                 </fields>
                 <inputParameters>
                     <name>width</name>
@@ -728,10 +2810,15 @@ MONTH( ADDMONTHS( {!$Flow.CurrentDate}, -3)),
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>How_We_Got_There_Column3</name>
+                <name>Best_Case_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>paymentsOppsCreated</name>
+                    <name>Software_Users2</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Software Users&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>Users_Best_Case_Pipeline</name>
                     <extensionName>c:ReadOnlyScreenComponent</extensionName>
                     <fieldType>ComponentInstance</fieldType>
                     <inputParameters>
@@ -743,18 +2830,128 @@ MONTH( ADDMONTHS( {!$Flow.CurrentDate}, -3)),
                     <inputParameters>
                         <name>label</name>
                         <value>
-                            <stringValue>Projected Payments Deals Created</stringValue>
+                            <stringValue>Users Best Case Pipeline</stringValue>
                         </value>
                     </inputParameters>
                     <inputParameters>
                         <name>value</name>
                         <value>
-                            <elementReference>f_ProjectedOppsCreatedPayments</elementReference>
+                            <elementReference>Sum_ForecastedUsers_Software_Opps.outputDecimalResult</elementReference>
                         </value>
                     </inputParameters>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                     <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <fields>
+                    <name>Users_Best_Case_Magic_Number</name>
+                    <extensionName>c:ReadOnlyScreenComponent</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>dataType</name>
+                        <value>
+                            <stringValue>integer</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Users Best Case Magic Number</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>value</name>
+                        <value>
+                            <elementReference>var_BestCase_ForecastedUsers</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <fields>
+                    <name>Users_Best_Case7</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>var_BestCase_ForecastedUsers</elementReference>
+                    </defaultValue>
+                    <fieldText>Users Best Case</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>4</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Best_Case_Column3</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>ARR2</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;ARR&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>ARR_Best_Case_Pipeline</name>
+                    <extensionName>c:ReadOnlyScreenComponent</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>dataType</name>
+                        <value>
+                            <stringValue>integer</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>ARR Best Case Pipeline</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>value</name>
+                        <value>
+                            <elementReference>Sum_of_ARR_Commit_Pipeline.outputDecimalResult</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <fields>
+                    <name>ARR_BEst_Case_Magic_Number</name>
+                    <extensionName>c:ReadOnlyScreenComponent</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>ARR Best Case Magic Number</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>value</name>
+                        <value>
+                            <elementReference>var_BestCase_ARR</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <fields>
+                    <name>ARR_Best_Case7</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>fmla_ARR_Best_Case</elementReference>
+                    </defaultValue>
+                    <fieldText>ARR Best Case</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
                 </fields>
                 <inputParameters>
                     <name>width</name>
@@ -767,17 +2964,85 @@ MONTH( ADDMONTHS( {!$Flow.CurrentDate}, -3)),
             <isRequired>false</isRequired>
             <regionContainerType>SectionWithHeader</regionContainerType>
         </fields>
+        <fields>
+            <name>Flow_Buttons</name>
+            <extensionName>c:fsc_flowButtonBar</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>alignment</name>
+                <value>
+                    <stringValue>right</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>orientation</name>
+                <value>
+                    <stringValue>horizontal</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>showLines</name>
+                <value>
+                    <stringValue>neither</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>actionMode</name>
+                <value>
+                    <stringValue>navigation</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>buttons</name>
+                <value>
+                    <stringValue>[{&quot;label&quot;:&quot;Learn More&quot;,&quot;value&quot;:&quot;Learn More&quot;,&quot;iconPosition&quot;:&quot;left&quot;,&quot;variant&quot;:&quot;neutral&quot;,&quot;index&quot;:0},{&quot;label&quot;:&quot;New Month Forecast&quot;,&quot;value&quot;:&quot;New Month Forecast&quot;,&quot;iconPosition&quot;:&quot;left&quot;,&quot;variant&quot;:&quot;neutral&quot;,&quot;index&quot;:1},{&quot;label&quot;:&quot;Update This Month&quot;,&quot;value&quot;:&quot;Update This Month&quot;,&quot;iconPosition&quot;:&quot;left&quot;,&quot;variant&quot;:&quot;neutral&quot;,&quot;index&quot;:2}]</stringValue>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
         <showFooter>false</showFooter>
         <showHeader>false</showHeader>
     </screens>
+    <screens>
+        <name>Thank_You</name>
+        <label>Thank  You</label>
+        <locationX>1898</locationX>
+        <locationY>5918</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>Thank_You_Text</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 18px;&quot;&gt;Thank you!&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Your manager will sing your praises for getting your forecast in.&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
     <start>
-        <locationX>88</locationX>
-        <locationY>61</locationY>
+        <locationX>1772</locationX>
+        <locationY>0</locationY>
         <connector>
-            <targetReference>LawPay_Opportunities</targetReference>
+            <targetReference>Payment_Opportunities</targetReference>
         </connector>
     </start>
     <status>Active</status>
+    <variables>
+        <name>ARR_Best_Case</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>ARR_Commit</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
     <variables>
         <name>AvgUsersWonPerDeal</name>
         <dataType>Number</dataType>
@@ -790,6 +3055,30 @@ MONTH( ADDMONTHS( {!$Flow.CurrentDate}, -3)),
         </value>
     </variables>
     <variables>
+        <name>currentItem_Copy_1_of_Opportunities_in_Month_1_Forecasted_Users_0</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Opportunity</objectType>
+    </variables>
+    <variables>
+        <name>currentItem_Copy_1_of_Opportunities_in_Month_2_Forecasted_Users</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Opportunity</objectType>
+    </variables>
+    <variables>
+        <name>currentItem_Copy_1_of_Opportunities_in_Month_3_Forecasted_Users</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Opportunity</objectType>
+    </variables>
+    <variables>
         <name>currentItem_In_Month_Payments_Wins</name>
         <dataType>SObject</dataType>
         <isCollection>false</isCollection>
@@ -798,12 +3087,34 @@ MONTH( ADDMONTHS( {!$Flow.CurrentDate}, -3)),
         <objectType>Opportunity</objectType>
     </variables>
     <variables>
-        <name>currentItem_In_Month_Wins_0</name>
+        <name>currentItem_In_Month_Wins</name>
         <dataType>SObject</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
         <isOutput>false</isOutput>
         <objectType>Opportunity</objectType>
+    </variables>
+    <variables>
+        <name>currentItemFromSourceCollection</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Opportunity</objectType>
+    </variables>
+    <variables>
+        <name>Logo_Best_Case</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Logo_Commit</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
     </variables>
     <variables>
         <name>ProjectedDealsWonCount</name>
@@ -861,6 +3172,106 @@ MONTH( ADDMONTHS( {!$Flow.CurrentDate}, -3)),
         </value>
     </variables>
     <variables>
+        <name>Users_Best_Case</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>Users_Commit</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var_BestCase_ARR</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <name>var_BestCase_ForecastedUsers</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <name>var_BestCase_Logos</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <name>var_Logo_Commit_Pipeline</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <name>var_Month1Users</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <name>var_Month2Users</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <name>var_Month3Users</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <name>var_SumofLogosMonth1</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <name>var_SumofLogosMonth2</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <name>var_SumofLogosMonth3</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
         <name>varTestMode</name>
         <dataType>Boolean</dataType>
         <isCollection>false</isCollection>
@@ -869,5 +3280,13 @@ MONTH( ADDMONTHS( {!$Flow.CurrentDate}, -3)),
         <value>
             <booleanValue>false</booleanValue>
         </value>
+    </variables>
+    <variables>
+        <name>varUser</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>User</objectType>
     </variables>
 </Flow>
