@@ -955,6 +955,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Account.Gearset_Test__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Account.Google_My_Business_Profile__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -10525,6 +10530,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Onboarding__c.Total_Days_In_Data_Import__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Onboarding__c.Total_Users_PE__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -12626,6 +12636,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Opportunity.Won_Users__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.Won_in_Month__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
