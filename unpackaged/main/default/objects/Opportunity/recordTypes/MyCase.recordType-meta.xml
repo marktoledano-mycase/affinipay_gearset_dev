@@ -3226,6 +3226,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Drive</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Email Automation</fullName>
             <default>false</default>
         </values>
@@ -3247,6 +3251,10 @@
         </values>
         <values>
             <fullName>Reporting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SSO</fullName>
             <default>false</default>
         </values>
         <values>
