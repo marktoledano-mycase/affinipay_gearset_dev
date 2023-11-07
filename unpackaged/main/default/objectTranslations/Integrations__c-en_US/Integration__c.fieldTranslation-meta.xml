@@ -99,6 +99,10 @@
             <translation><!-- Smith AI --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>Time Miner</masterLabel>
+            <translation><!-- Time Miner --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Truve</masterLabel>
             <translation><!-- Truve --></translation>
         </picklistValues>
