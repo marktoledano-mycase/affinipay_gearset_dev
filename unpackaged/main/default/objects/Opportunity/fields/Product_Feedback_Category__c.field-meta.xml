@@ -29,6 +29,11 @@
                 <label>Court Forms</label>
             </value>
             <value>
+                <fullName>Drive</fullName>
+                <default>false</default>
+                <label>Drive</label>
+            </value>
+            <value>
                 <fullName>Email Automation</fullName>
                 <default>false</default>
                 <label>Email Automation</label>
@@ -67,6 +72,11 @@
                 <fullName>Split Billing</fullName>
                 <default>false</default>
                 <label>Split Billing</label>
+            </value>
+            <value>
+                <fullName>SSO</fullName>
+                <default>false</default>
+                <label>SSO</label>
             </value>
             <value>
                 <fullName>Updating Case Rates</fullName>
