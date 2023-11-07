@@ -133,6 +133,11 @@
                 <label>Smith AI</label>
             </value>
             <value>
+                <fullName>Time Miner</fullName>
+                <default>false</default>
+                <label>Time Miner</label>
+            </value>
+            <value>
                 <fullName>truve</fullName>
                 <default>false</default>
                 <label>Truve</label>
