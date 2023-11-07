@@ -7,7 +7,7 @@
     <relationshipLabel>Partnership Discounts</relationshipLabel>
     <relationshipName>Partnership_Discounts</relationshipName>
     <relationshipOrder>0</relationshipOrder>
-    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <reparentableMasterDetail>true</reparentableMasterDetail>
     <trackHistory>true</trackHistory>
     <trackTrending>false</trackTrending>
     <type>MasterDetail</type>
