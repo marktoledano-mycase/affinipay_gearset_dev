@@ -12195,6 +12195,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Opportunity.Cntcts_Last_Act_Date_Before_Opty_Create__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Opportunity.Coaching_Notes__c</field>
         <readable>true</readable>
     </fieldPermissions>
