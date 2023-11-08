@@ -25,7 +25,8 @@ Record_Type_Name__c = &quot;MyCase&quot; || Record_Type_Name__c = &quot;LawPay S
 &amp;&amp; Billing_Subscription__r.Subscription_Start_Date__c &gt; TODAY())||
 Billing_Subscription__r.First_Time_Charge__c=FALSE)
 
-&amp;&amp; TEXT(Type) != &quot;Existing Business&quot;</errorConditionFormula>
+&amp;&amp; TEXT(Type) != &quot;Existing Business&quot;
+&amp;&amp; TEXT(Type) != &quot;Upsell&quot;</errorConditionFormula>
     <errorDisplayField>StageName</errorDisplayField>
     <errorMessage>MyCase Opportunities can only be moved to Closed Won when the customer&#39;s subscription has been charged.</errorMessage>
 </ValidationRule>
