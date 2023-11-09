@@ -106,7 +106,7 @@
     <assignments>
         <name>Assign_Opportunity_Values</name>
         <label>Assign Opportunity Values</label>
-        <locationX>1172</locationX>
+        <locationX>1173</locationX>
         <locationY>358</locationY>
         <assignmentItems>
             <assignToReference>varOpportunity.RecordTypeId</assignToReference>
@@ -281,6 +281,13 @@
             <operator>Assign</operator>
             <value>
                 <elementReference>Contact.Last_MQL_Brand__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varOpportunity.Cntcts_Last_Act_Date_Before_Opty_Create__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Contact.LastActivityDate</elementReference>
             </value>
         </assignmentItems>
         <connector>
