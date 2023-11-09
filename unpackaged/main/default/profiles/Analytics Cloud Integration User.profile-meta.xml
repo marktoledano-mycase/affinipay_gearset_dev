@@ -5912,6 +5912,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.Cntcts_Last_Act_Date_Before_Opty_Create__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Opportunity.Commissioned_ARR__c</field>
         <readable>true</readable>

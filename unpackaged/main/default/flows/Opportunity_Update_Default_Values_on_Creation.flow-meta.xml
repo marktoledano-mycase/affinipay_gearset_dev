@@ -30,7 +30,7 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Get_Account</targetReference>
+            <targetReference>Is_Sales_Lead_Type_Null</targetReference>
         </connector>
     </assignments>
     <decisions>
@@ -62,7 +62,7 @@
         <name>Is_LawPay_or_MyCase_Opportunity</name>
         <label>Is LawPay or MyCase Opportunity</label>
         <locationX>314</locationX>
-        <locationY>995</locationY>
+        <locationY>1295</locationY>
         <defaultConnector>
             <targetReference>Update_All_Customer_Status</targetReference>
         </defaultConnector>
@@ -99,6 +99,38 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Is_Sales_Lead_Type_Null</name>
+        <label>Is Sales Lead Type Null</label>
+        <locationX>314</locationX>
+        <locationY>887</locationY>
+        <defaultConnector>
+            <targetReference>Get_Account</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Outbound</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Cntcts_Last_Act_Date_Before_Opty_Create__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Sales_Lead_Type__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Sales_Lead_Type_to_Outbound</targetReference>
+            </connector>
+            <label>Outbound</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Is_Type_Populated</name>
         <label>Is Type Populated?</label>
         <locationX>314</locationX>
@@ -118,13 +150,14 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Get_Account</targetReference>
+                <targetReference>Is_Sales_Lead_Type_Null</targetReference>
             </connector>
             <label>Yes Type Is Populated</label>
         </rules>
     </decisions>
     <description>8/8/2023 Added MyCase 6QA and LawPay 6QA assignment
-10/13/2023 Added Customer Status&#39; fields for all Opps generated</description>
+10/13/2023 Added Customer Status&#39; fields for all Opps generated
+11/8/2023 Added logic to update Sales Lead Type to Outbound when appropriate</description>
     <environments>Default</environments>
     <formulas>
         <name>fxCloseDate</name>
@@ -156,7 +189,7 @@
         <name>Get_Account</name>
         <label>Get Account</label>
         <locationX>314</locationX>
-        <locationY>887</locationY>
+        <locationY>1187</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Is_LawPay_or_MyCase_Opportunity</targetReference>
@@ -177,7 +210,7 @@
         <name>Assign_LawPay_6QA_Value</name>
         <label>Assign LawPay 6QA Value</label>
         <locationX>50</locationX>
-        <locationY>1103</locationY>
+        <locationY>1403</locationY>
         <inputAssignments>
             <field>AffiniPay_Customer_Status__c</field>
             <value>
@@ -250,7 +283,7 @@
         <name>MyCase_6QA_Value</name>
         <label>MyCase 6QA Value</label>
         <locationX>314</locationX>
-        <locationY>1103</locationY>
+        <locationY>1403</locationY>
         <inputAssignments>
             <field>AffiniPay_Customer_Status__c</field>
             <value>
@@ -323,7 +356,7 @@
         <name>Update_All_Customer_Status</name>
         <label>Update All Customer Status</label>
         <locationX>578</locationX>
-        <locationY>1103</locationY>
+        <locationY>1403</locationY>
         <inputAssignments>
             <field>AffiniPay_Customer_Status__c</field>
             <value>
@@ -382,6 +415,22 @@
             <field>Websites_Customer_Status__c</field>
             <value>
                 <elementReference>Get_Account.Websites_Customer_Status__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Sales_Lead_Type_to_Outbound</name>
+        <label>Update Sales Lead Type to Outbound</label>
+        <locationX>182</locationX>
+        <locationY>995</locationY>
+        <connector>
+            <targetReference>Get_Account</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Sales_Lead_Type__c</field>
+            <value>
+                <stringValue>Outbound</stringValue>
             </value>
         </inputAssignments>
         <inputReference>$Record</inputReference>
