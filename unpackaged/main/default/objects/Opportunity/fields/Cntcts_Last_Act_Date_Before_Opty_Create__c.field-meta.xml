@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cntcts_Last_Act_Date_Before_Opty_Create__c</fullName>
+    <description>Contacts Last Activity Date Before Opportunity Creation - is populated by contact field &quot;Last Activity by Sales&quot;</description>
+    <externalId>false</externalId>
+    <label>Cntcts Last Act Date Before Opty Create</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>
