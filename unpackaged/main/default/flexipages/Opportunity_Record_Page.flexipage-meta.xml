@@ -630,6 +630,10 @@
                     <value>Facet-2d0ce6b8-92a8-4c6c-8452-0bdcfd3b4f29</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>label</name>
                     <value>Section</value>
                 </componentInstanceProperties>
@@ -1179,6 +1183,16 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <componentName>forceChatter:recordFeedContainer</componentName>
+                <identifier>forceChatter_recordFeedContainer2</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>Facet-1baca6c3-eb12-4408-8c08-249f4aba03b0</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
                 <componentInstanceProperties>
                     <name>parentFieldApiName</name>
                     <value>Opportunity.AccountId</value>
@@ -1235,14 +1249,18 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <componentName>forceChatter:recordFeedContainer</componentName>
-                <identifier>forceChatter_recordFeedContainer2</identifier>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-1baca6c3-eb12-4408-8c08-249f4aba03b0</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>Standard.Tab.collaborate</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:tab</componentName>
+                <identifier>flexipage_tab7</identifier>
             </componentInstance>
         </itemInstances>
-        <name>Facet-1baca6c3-eb12-4408-8c08-249f4aba03b0</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
@@ -1255,20 +1273,6 @@
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
                 <identifier>flexipage_tab6</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>body</name>
-                    <value>Facet-1baca6c3-eb12-4408-8c08-249f4aba03b0</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>title</name>
-                    <value>Standard.Tab.collaborate</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:tab</componentName>
-                <identifier>flexipage_tab7</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-60dfe661-dfac-4d9d-9362-96e7aeecfd6e</name>
@@ -1534,6 +1538,10 @@
                     <value>Facet-66484c1a-3ef8-4c0e-926b-1006db589bef</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>label</name>
                     <value>Commissions Fields</value>
                 </componentInstanceProperties>
@@ -1546,6 +1554,10 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-f896f7d2-f3b4-490c-9c06-4e80c306cdf8</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
