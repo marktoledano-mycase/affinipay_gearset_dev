@@ -4105,11 +4105,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Lead.Event_Lead_Ranking__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Lead.FBCLID__c</field>
         <readable>true</readable>
     </fieldPermissions>
