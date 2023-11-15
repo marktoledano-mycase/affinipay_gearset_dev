@@ -5,8 +5,8 @@
         <description>Detect change in Stage</description>
         <name>Stage_Updated</name>
         <label>Stage Updated</label>
-        <locationX>200</locationX>
-        <locationY>199</locationY>
+        <locationX>292</locationX>
+        <locationY>153</locationY>
         <defaultConnectorLabel>No</defaultConnectorLabel>
         <rules>
             <name>Yes</name>
@@ -27,8 +27,8 @@
     <decisions>
         <name>Update_Stage_Date_Field</name>
         <label>Update Stage Date Field</label>
-        <locationX>383</locationX>
-        <locationY>387</locationY>
+        <locationX>294</locationX>
+        <locationY>296</locationY>
         <defaultConnectorLabel>No Stage Date Field</defaultConnectorLabel>
         <rules>
             <name>Sold_Not_Started</name>
@@ -61,21 +61,6 @@
             <label>Questionnaire Received</label>
         </rules>
         <rules>
-            <name>Content_Acquisition</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Stage__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Content Acquisition</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Content_Acquisition_Date</targetReference>
-            </connector>
-            <label>Content Acquisition</label>
-        </rules>
-        <rules>
             <name>Site_Presentation</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
@@ -104,21 +89,6 @@
                 <targetReference>Site_Delivered_Final_Changes_Date</targetReference>
             </connector>
             <label>Site Delivered/Final Changeds</label>
-        </rules>
-        <rules>
-            <name>Ready</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Stage__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Ready</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Ready_Date</targetReference>
-            </connector>
-            <label>Ready</label>
         </rules>
         <rules>
             <name>Live</name>
@@ -150,6 +120,36 @@
             </connector>
             <label>Lost</label>
         </rules>
+        <rules>
+            <name>Build_In_Progress</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Stage__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Build In Progress</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Build_In_Progress_Date</targetReference>
+            </connector>
+            <label>Build In Progress</label>
+        </rules>
+        <rules>
+            <name>On_Hold_Non_Responsive</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Stage__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>On Hold/ Non Responsive</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>On_Hold_Non_Responsive_Date</targetReference>
+            </connector>
+            <label>On Hold/ Non Responsive</label>
+        </rules>
     </decisions>
     <description>When a V+ stage is entered, populates the corresponding date field</description>
     <environments>Default</environments>
@@ -175,12 +175,12 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordUpdates>
-        <name>Content_Acquisition_Date</name>
-        <label>Content Acquisition Date</label>
-        <locationX>344</locationX>
-        <locationY>660</locationY>
+        <name>Build_In_Progress_Date</name>
+        <label>Build In Progress Date</label>
+        <locationX>591</locationX>
+        <locationY>699</locationY>
         <inputAssignments>
-            <field>Content_Acquisition__c</field>
+            <field>Build_In_Progress__c</field>
             <value>
                 <elementReference>$Flow.CurrentDate</elementReference>
             </value>
@@ -190,8 +190,8 @@
     <recordUpdates>
         <name>Live_Date</name>
         <label>Live Date</label>
-        <locationX>1021</locationX>
-        <locationY>692</locationY>
+        <locationX>509</locationX>
+        <locationY>593</locationY>
         <inputAssignments>
             <field>Go_Live__c</field>
             <value>
@@ -203,8 +203,8 @@
     <recordUpdates>
         <name>Lost_Date</name>
         <label>Lost Date</label>
-        <locationX>849</locationX>
-        <locationY>794</locationY>
+        <locationX>196</locationX>
+        <locationY>713</locationY>
         <inputAssignments>
             <field>Lost__c</field>
             <value>
@@ -214,10 +214,23 @@
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <recordUpdates>
+        <name>On_Hold_Non_Responsive_Date</name>
+        <label>On Hold/ Non Responsive Date</label>
+        <locationX>33</locationX>
+        <locationY>439</locationY>
+        <inputAssignments>
+            <field>On_Hold_Non_Responsive__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
         <name>Questionnaire_Received_Date</name>
         <label>Questionnaire Received Date</label>
-        <locationX>125</locationX>
-        <locationY>660</locationY>
+        <locationX>49</locationX>
+        <locationY>295</locationY>
         <inputAssignments>
             <field>KOC_Confirmed__c</field>
             <value>
@@ -227,23 +240,10 @@
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <recordUpdates>
-        <name>Ready_Date</name>
-        <label>Ready Date</label>
-        <locationX>1041</locationX>
-        <locationY>453</locationY>
-        <inputAssignments>
-            <field>Ready__c</field>
-            <value>
-                <elementReference>$Flow.CurrentDate</elementReference>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record</inputReference>
-    </recordUpdates>
-    <recordUpdates>
         <name>Site_Delivered_Final_Changes_Date</name>
         <label>Site Delivered Final Changes Date</label>
-        <locationX>849</locationX>
-        <locationY>541</locationY>
+        <locationX>435</locationX>
+        <locationY>680</locationY>
         <inputAssignments>
             <field>Site_Delivered_Final_Changes__c</field>
             <value>
@@ -255,8 +255,8 @@
     <recordUpdates>
         <name>Site_Presentation_Date</name>
         <label>Site Presentation Date</label>
-        <locationX>624</locationX>
-        <locationY>649</locationY>
+        <locationX>297</locationX>
+        <locationY>731</locationY>
         <inputAssignments>
             <field>Site_Presentation__c</field>
             <value>
@@ -268,8 +268,8 @@
     <recordUpdates>
         <name>Sold_Not_Started_Date</name>
         <label>Sold/Not Started Date</label>
-        <locationX>492</locationX>
-        <locationY>516</locationY>
+        <locationX>108</locationX>
+        <locationY>617</locationY>
         <inputAssignments>
             <field>Sold_Not_Started__c</field>
             <value>
