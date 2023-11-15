@@ -2013,10 +2013,16 @@
                 <componentName>flexipage:tabset</componentName>
                 <identifier>flexipage_tabset5</identifier>
                 <visibilityRule>
+                    <booleanFilter>1 OR 2</booleanFilter>
                     <criteria>
                         <leftValue>{!Record.Record_Type_Name__c}</leftValue>
                         <operator>EQUAL</operator>
                         <rightValue>Websites</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Type}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>Upsell</rightValue>
                     </criteria>
                 </visibilityRule>
             </componentInstance>
