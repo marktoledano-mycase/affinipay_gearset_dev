@@ -3,8 +3,8 @@
     <actionCalls>
         <name>Active_Website_Customer_Lost</name>
         <label>Active Website Customer Lost</label>
-        <locationX>176</locationX>
-        <locationY>431</locationY>
+        <locationX>50</locationX>
+        <locationY>647</locationY>
         <actionName>Product_Environment__c.Active_Website_Customer_Lost_Product_Environment</actionName>
         <actionType>emailAlert</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -16,6 +16,35 @@
         </inputParameters>
     </actionCalls>
     <apiVersion>58.0</apiVersion>
+    <decisions>
+        <name>Value_is_Active</name>
+        <label>Value + is Active</label>
+        <locationX>182</locationX>
+        <locationY>539</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Active_Value_Record</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Value_Records.Stage__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Live</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Value_Records.Stage__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>ReActivate Site</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Active_Website_Customer_Lost</targetReference>
+            </connector>
+            <label>Active Value + Record</label>
+        </rules>
+    </decisions>
     <description>Alerts websites@mycase.com that customer has an active website when they are churn status as a MyCase customer.</description>
     <environments>Default</environments>
     <interviewLabel>MyCase Customer Lost Active Website {!$Flow.CurrentDateTime}</interviewLabel>
@@ -42,11 +71,11 @@
     <recordLookups>
         <name>Get_MyCase_Product_Environment</name>
         <label>Get MyCase Product Environment</label>
-        <locationX>176</locationX>
-        <locationY>323</locationY>
+        <locationX>182</locationX>
+        <locationY>431</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Active_Website_Customer_Lost</targetReference>
+            <targetReference>Value_is_Active</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -67,14 +96,42 @@
         <object>Product_Environment__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
-    <start>
-        <locationX>50</locationX>
-        <locationY>0</locationY>
+    <recordLookups>
+        <name>Get_Value_Records</name>
+        <label>Get Value + Records</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Get_MyCase_Product_Environment</targetReference>
         </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Account__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Record_Type_Name__c</field>
+            <operator>Contains</operator>
+            <value>
+                <stringValue>Websites</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>ValuePlus__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Value_Records</targetReference>
+        </connector>
         <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
-        <filterLogic>1 AND (2 OR 3)</filterLogic>
+        <filterLogic>and</filterLogic>
         <filters>
             <field>MyCase_Customer_Status__c</field>
             <operator>EqualTo</operator>
@@ -82,23 +139,9 @@
                 <stringValue>Churned</stringValue>
             </value>
         </filters>
-        <filters>
-            <field>Websites_Customer_Status__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>Active</stringValue>
-            </value>
-        </filters>
-        <filters>
-            <field>Websites_Customer_Status__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>Prospect</stringValue>
-            </value>
-        </filters>
         <object>Account</object>
         <recordTriggerType>Update</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Obsolete</status>
+    <status>Active</status>
 </Flow>
