@@ -55,6 +55,7 @@
         <valueSettings>
             <controllingFieldValue>Industry Media</controllingFieldValue>
             <controllingFieldValue>List Import</controllingFieldValue>
+            <controllingFieldValue>Live Chat</controllingFieldValue>
             <controllingFieldValue>Organic Search</controllingFieldValue>
             <controllingFieldValue>Organic Social</controllingFieldValue>
             <controllingFieldValue>Add On</controllingFieldValue>
@@ -296,6 +297,10 @@
         <valueSettings>
             <controllingFieldValue>Customer Success</controllingFieldValue>
             <valueName>CSQL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pay-Per-Lead</controllingFieldValue>
+            <valueName>Activate</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Pay-Per-Lead</controllingFieldValue>
