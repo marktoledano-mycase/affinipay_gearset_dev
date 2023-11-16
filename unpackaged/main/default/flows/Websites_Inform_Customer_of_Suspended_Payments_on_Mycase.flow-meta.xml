@@ -85,6 +85,7 @@
             <label>Website Churn Email Sent less than 15 days ago</label>
         </rules>
     </decisions>
+    <description>11/14/2023 - Fine tuned when the logic would fire</description>
     <environments>Default</environments>
     <formulas>
         <name>fmlaOneMonthAgo</name>
@@ -135,7 +136,7 @@
         <connector>
             <targetReference>Loop_Through_Websites_Value_Records</targetReference>
         </connector>
-        <filterLogic>and</filterLogic>
+        <filterLogic>1 AND 2 AND (3 OR 4)</filterLogic>
         <filters>
             <field>Account__c</field>
             <operator>EqualTo</operator>
@@ -148,6 +149,20 @@
             <operator>Contains</operator>
             <value>
                 <stringValue>Website</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Stage__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Live</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Stage__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>ReActivate Site</stringValue>
             </value>
         </filters>
         <getFirstRecordOnly>false</getFirstRecordOnly>
@@ -184,13 +199,6 @@
         <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
         <filterLogic>or</filterLogic>
         <filters>
-            <field>Firm_Overdue_on_Payments__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </filters>
-        <filters>
             <field>Firm_Suspended__c</field>
             <operator>EqualTo</operator>
             <value>
@@ -201,7 +209,7 @@
         <recordTriggerType>Update</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Obsolete</status>
+    <status>Active</status>
     <subflows>
         <name>Send_Less_than_15_Day_Warning</name>
         <label>Send Less than 15 Day Warning</label>
