@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
     <classAccesses>
         <apexClass>AddOrInsertRecord</apexClass>
@@ -13888,6 +13888,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>ValuePlus__c.Primary_Brand__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>ValuePlus__c.Professional_Service__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -13899,6 +13904,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>ValuePlus__c.Project_Delivered_Final_Changes__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ValuePlus__c.Secondary_Brand__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
