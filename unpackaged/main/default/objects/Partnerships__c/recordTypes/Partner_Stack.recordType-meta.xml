@@ -174,21 +174,56 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Stage__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dormant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Negotiating</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On hold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reviewing</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Status__c</picklist>
         <values>
             <fullName>Active</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Defunct_Low_Activity</fullName>
+            <fullName>At Risk</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Informal</fullName>
-            <default>true</default>
+            <fullName>Building</fullName>
+            <default>false</default>
         </values>
         <values>
-            <fullName>Prelaunch</fullName>
+            <fullName>Defunct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Launching</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low-Activity</fullName>
             <default>false</default>
         </values>
         <values>
