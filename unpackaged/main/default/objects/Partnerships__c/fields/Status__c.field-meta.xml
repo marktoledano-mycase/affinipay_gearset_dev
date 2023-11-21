@@ -13,9 +13,14 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Informal</fullName>
-                <default>true</default>
-                <label>Informal</label>
+                <fullName>Building</fullName>
+                <default>false</default>
+                <label>Building</label>
+            </value>
+            <value>
+                <fullName>Launching</fullName>
+                <default>false</default>
+                <label>Launching</label>
             </value>
             <value>
                 <fullName>Active</fullName>
@@ -23,14 +28,19 @@
                 <label>Active</label>
             </value>
             <value>
-                <fullName>Prelaunch</fullName>
+                <fullName>Low-Activity</fullName>
                 <default>false</default>
-                <label>Prelaunch</label>
+                <label>Low-Activity</label>
             </value>
             <value>
-                <fullName>Defunct_Low_Activity</fullName>
+                <fullName>At Risk</fullName>
                 <default>false</default>
-                <label>Defunct_Low_Activity</label>
+                <label>At Risk</label>
+            </value>
+            <value>
+                <fullName>Defunct</fullName>
+                <default>false</default>
+                <label>Defunct</label>
             </value>
             <value>
                 <fullName>Terminated</fullName>
@@ -42,6 +52,24 @@
                 <default>false</default>
                 <isActive>false</isActive>
                 <label>COMPETITOR</label>
+            </value>
+            <value>
+                <fullName>Defunct_Low_Activity</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Defunct_Low_Activity</label>
+            </value>
+            <value>
+                <fullName>Informal</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Informal</label>
+            </value>
+            <value>
+                <fullName>Prelaunch</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Prelaunch</label>
             </value>
         </valueSetDefinition>
     </valueSet>
