@@ -4034,6 +4034,11 @@
                 <label>Suppressed Fees</label>
             </value>
             <value>
+                <fullName>Survey Follow Up</fullName>
+                <default>false</default>
+                <label>Survey Follow Up</label>
+            </value>
+            <value>
                 <fullName>Surveys</fullName>
                 <default>false</default>
                 <label>Surveys</label>
