@@ -2156,6 +2156,21 @@
             <default>false</default>
         </values>
     </picklistValues>
+        <picklistValues>
+            <picklist>Partner_Request_Form__c</picklist>
+            <values>
+                <fullName>Alliance Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consultant Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Integration Partner</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
     <picklistValues>
         <picklist>Partner_Status_Overall__c</picklist>
         <values>

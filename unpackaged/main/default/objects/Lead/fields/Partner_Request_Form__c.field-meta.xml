@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Request_Form__c</fullName>
+    <description>Used to track what partner inquiry form the prospective partner submitted</description>
+    <externalId>false</externalId>
+    <label>Partner Request Form</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Partner_Types</valueSetName>
+    </valueSet>
+</CustomField>
