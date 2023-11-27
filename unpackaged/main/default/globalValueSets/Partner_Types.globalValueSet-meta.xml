@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Alliance Partner</fullName>
+        <default>false</default>
+        <label>Alliance Partner</label>
+    </customValue>
+    <customValue>
+        <fullName>Consultant Partner</fullName>
+        <default>false</default>
+        <label>Consultant Partner</label>
+    </customValue>
+    <customValue>
+        <fullName>Integration Partner</fullName>
+        <default>false</default>
+        <label>Integration Partner</label>
+    </customValue>
+    <masterLabel>Partner Types</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

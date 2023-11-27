@@ -618,6 +618,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Partner_Request_Form__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Account.Partner_Status_Overall__c</field>
         <readable>true</readable>
@@ -4916,6 +4921,11 @@
         <editable>false</editable>
         <readable>false</readable>
         <field>Lead.PartnerStack_Partner_Key__c</field>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.Partner_Request_Form__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
