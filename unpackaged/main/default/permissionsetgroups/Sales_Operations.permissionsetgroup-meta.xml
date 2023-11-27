@@ -27,6 +27,7 @@
     <permissionSets>Modify_Linked_Records_on_Product_Environment_and_Opportunity</permissionSets>
     <permissionSets>Process_Opportunity_for_Subscription_Contract</permissionSets>
     <permissionSets>Product_Picker_Read_Write</permissionSets>
+    <permissionSets>Product_User_Edit_Contact_and_Account_Field</permissionSets>
     <permissionSets>Transfer_Leads</permissionSets>
     <permissionSets>Transfer_Records</permissionSets>
     <status>Updated</status>
