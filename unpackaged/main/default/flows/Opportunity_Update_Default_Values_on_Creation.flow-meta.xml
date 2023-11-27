@@ -124,6 +124,13 @@
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>$Record.Cntcts_Last_Act_Date_Before_Opty_Create__c</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <elementReference>fmlaLast30Days</elementReference>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>Update_Sales_Lead_Type_to_Outbound</targetReference>
             </connector>
@@ -157,8 +164,15 @@
     </decisions>
     <description>8/8/2023 Added MyCase 6QA and LawPay 6QA assignment
 10/13/2023 Added Customer Status&#39; fields for all Opps generated
-11/8/2023 Added logic to update Sales Lead Type to Outbound when appropriate</description>
+11/8/2023 Added logic to update Sales Lead Type to Outbound when appropriate
+11/27/2023 Added logic to update Sales Lead Type to Outbound when activity is less than 30 days ago</description>
     <environments>Default</environments>
+    <formulas>
+        <description>Today -   30 days</description>
+        <name>fmlaLast30Days</name>
+        <dataType>Date</dataType>
+        <expression>Today()-30</expression>
+    </formulas>
     <formulas>
         <name>fxCloseDate</name>
         <dataType>Date</dataType>
