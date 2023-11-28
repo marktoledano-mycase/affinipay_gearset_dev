@@ -2589,6 +2589,13 @@
                 <elementReference>Selected_Promos_Loop.Promotion__r.Discount_Value_Type__c</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varOpportunityPromo.Discount_Qty__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Selected_Promos_Loop.Promotion__r.Discount_Qty_Default__c</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Copy_1_of_Assign_Variables_to_Collections</targetReference>
         </connector>
@@ -2680,6 +2687,13 @@
             <operator>Assign</operator>
             <value>
                 <elementReference>Selected_Promos_Loop.Promotion__r.Discount_Value_Type__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varOpportunityPromo.Discount_Qty__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Selected_Promos_Loop.Promotion__r.Discount_Qty_Default__c</elementReference>
             </value>
         </assignmentItems>
         <connector>
