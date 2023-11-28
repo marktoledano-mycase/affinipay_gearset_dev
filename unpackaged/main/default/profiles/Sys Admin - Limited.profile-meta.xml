@@ -14145,6 +14145,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Product_SKU_Promotions__c.Discount_Fix_or_Percent__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Product_SKU_Promotions__c.Discount_Percentage__c</field>
         <readable>true</readable>
     </fieldPermissions>
