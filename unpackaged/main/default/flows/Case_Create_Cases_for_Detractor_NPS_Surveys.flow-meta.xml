@@ -58,6 +58,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>MyCase_Product_Environment__c</field>
+            <value>
+                <elementReference>$Record.Product_Environment__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>MyCase_Send_Close_Notification_Survey__c</field>
             <value>
                 <booleanValue>false</booleanValue>
