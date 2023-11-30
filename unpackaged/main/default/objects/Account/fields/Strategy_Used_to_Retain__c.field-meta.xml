@@ -56,6 +56,11 @@
                 <label>N/A</label>
             </value>
             <value>
+                <fullName>NDF</fullName>
+                <default>false</default>
+                <label>NDF</label>
+            </value>
+            <value>
                 <fullName>Other - see explanation</fullName>
                 <default>false</default>
                 <label>Other - see explanation</label>
@@ -76,14 +81,14 @@
                 <label>Refund Fees</label>
             </value>
             <value>
-                <fullName>Waived monthly fee</fullName>
-                <default>false</default>
-                <label>Waived monthly fee</label>
-            </value>
-            <value>
                 <fullName>Sent to AM</fullName>
                 <default>false</default>
                 <label>Sent to AM</label>
+            </value>
+            <value>
+                <fullName>Waived monthly fee</fullName>
+                <default>false</default>
+                <label>Waived monthly fee</label>
             </value>
         </valueSetDefinition>
     </valueSet>
