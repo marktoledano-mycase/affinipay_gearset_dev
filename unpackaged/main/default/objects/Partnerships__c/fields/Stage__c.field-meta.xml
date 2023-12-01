@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage__c</fullName>
+    <description>This field represents the partnership stage.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The stage of the partnership.</inlineHelpText>
+    <label>Stage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Reviewing</fullName>
+                <default>false</default>
+                <label>Reviewing</label>
+            </value>
+            <value>
+                <fullName>Negotiating</fullName>
+                <default>false</default>
+                <label>Negotiating</label>
+            </value>
+            <value>
+                <fullName>Approved</fullName>
+                <default>false</default>
+                <label>Approved</label>
+            </value>
+            <value>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <label>Rejected</label>
+            </value>
+            <value>
+                <fullName>On hold</fullName>
+                <default>false</default>
+                <label>On hold</label>
+            </value>
+            <value>
+                <fullName>Dormant</fullName>
+                <default>false</default>
+                <label>Dormant</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

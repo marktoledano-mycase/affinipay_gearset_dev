@@ -30,15 +30,12 @@
   (Qty__c *  Price_Base__c) 
   -
   IF(  
-  AND ( Short_Term_Discount__c &gt; 0, 
-  ISPICKVAL( Short_Term_Promotion__r.Discount_Type__c, &quot;Short-Term&quot;),
+  AND ( Short_Term_Discount__c &gt; 0, ISPICKVAL( Short_Term_Promotion__r.Discount_Type__c, &quot;Short-Term&quot;),
   OR(
   AND( ISPICKVAL ( SKU_Product__r.Pricing_Type__c ,&quot;Monthly&quot;),Promotional_Discount_Duration__c &gt;= 12),
   AND( ISPICKVAL ( SKU_Product__r.Pricing_Type__c ,&quot;Annual&quot;), Promotional_Discount_Duration__c &gt;= 1  ))),
-  (Qty__c *  Price_Base__c  *   Short_Term_Discount__c),
-  IF(Lifetime_Discount__c &gt; 0,(Qty__c *  Price_Base__c  *  Lifetime_Discount__c),0))
-  )
-)</formula>
+ IF(ISPICKVAL(Discount_Value_Type__c,&quot;Fixed&quot;), (Total_Discount__c),(Qty__c *  Price_Base__c  *   Short_Term_Discount__c)),
+  IF(ISPICKVAL(Discount_Value_Type__c,&quot;Fixed&quot;), (Total_Discount__c), IF(Lifetime_Discount__c &gt; 0,(Qty__c *  Price_Base__c  *  Lifetime_Discount__c),0)))))</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>ARR</label>
     <precision>18</precision>
