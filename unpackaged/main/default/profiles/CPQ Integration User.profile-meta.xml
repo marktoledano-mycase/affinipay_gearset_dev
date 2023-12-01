@@ -7229,6 +7229,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Product_User__c.User_Phone__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Promotions__c.Discount_Lock__c</field>
         <readable>true</readable>
     </fieldPermissions>
