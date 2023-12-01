@@ -28,11 +28,6 @@
                 <label>Is Competitor</label>
             </value>
             <value>
-                <fullName>Is Employee</fullName>
-                <default>false</default>
-                <label>Is Employee</label>
-            </value>
-            <value>
                 <fullName>Junk Data</fullName>
                 <default>false</default>
                 <label>Junk Data</label>
@@ -43,14 +38,14 @@
                 <label>Not in ICP</label>
             </value>
             <value>
+                <fullName>Prospective Employee</fullName>
+                <default>false</default>
+                <label>Prospective Employee</label>
+            </value>
+            <value>
                 <fullName>Student</fullName>
                 <default>false</default>
                 <label>Student</label>
-            </value>
-            <value>
-                <fullName>UW Junk</fullName>
-                <default>false</default>
-                <label>UW Junk</label>
             </value>
             <value>
                 <fullName>UW Fraud</fullName>
@@ -58,14 +53,19 @@
                 <label>UW Fraud</label>
             </value>
             <value>
-                <fullName>UW Payment Attempt</fullName>
+                <fullName>UW Junk</fullName>
                 <default>false</default>
-                <label>UW Payment Attempt</label>
+                <label>UW Junk</label>
             </value>
             <value>
                 <fullName>UW Not Approved Business</fullName>
                 <default>false</default>
                 <label>UW Not Approved Business</label>
+            </value>
+            <value>
+                <fullName>UW Payment Attempt</fullName>
+                <default>false</default>
+                <label>UW Payment Attempt</label>
             </value>
             <value>
                 <fullName>Active Firm</fullName>
@@ -148,10 +148,6 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Disqualified</controllingFieldValue>
-            <valueName>Is Employee</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Disqualified</controllingFieldValue>
             <valueName>Junk Data</valueName>
         </valueSettings>
         <valueSettings>
@@ -160,11 +156,11 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Disqualified</controllingFieldValue>
-            <valueName>Student</valueName>
+            <valueName>Prospective Employee</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Disqualified</controllingFieldValue>
-            <valueName>UW Junk</valueName>
+            <valueName>Student</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Disqualified</controllingFieldValue>
@@ -172,11 +168,15 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Disqualified</controllingFieldValue>
-            <valueName>UW Payment Attempt</valueName>
+            <valueName>UW Junk</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Disqualified</controllingFieldValue>
             <valueName>UW Not Approved Business</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>UW Payment Attempt</valueName>
         </valueSettings>
     </valueSet>
 </CustomField>

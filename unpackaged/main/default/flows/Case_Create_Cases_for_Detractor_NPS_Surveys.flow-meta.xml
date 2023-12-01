@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <description>This will create a case anytime a customer&#39;s survey response score is equal to or less than 6.</description>
+    <environments>Default</environments>
+    <interviewLabel>Case: {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Case: Create Cases for Detractor NPS Surveys</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <description>Creates Case after NPS Detractor Survey is created</description>
+        <name>Create_Case</name>
+        <label>Create Case</label>
+        <locationX>176</locationX>
+        <locationY>431</locationY>
+        <connector>
+            <targetReference>Update_Survey</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>AccountId</field>
+            <value>
+                <elementReference>$Record.Account__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Case_Sub_Reason__c</field>
+            <value>
+                <stringValue>Survey Follow Up</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ContactId</field>
+            <value>
+                <elementReference>$Record.Contact__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <elementReference>txtSurveyDetails</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MyCase_Product_Environment__c</field>
+            <value>
+                <elementReference>$Record.Product_Environment__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MyCase_Send_Close_Notification_Survey__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>varQueueId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Reason</field>
+            <value>
+                <stringValue>Administrative Support</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>NPS Follow Up</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordUpdates>
+        <description>Updates Survey record with the newly created Case ID</description>
+        <name>Update_Survey</name>
+        <label>Update Survey</label>
+        <locationX>176</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>Case__c</field>
+            <value>
+                <elementReference>Create_Case</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Queue_Id</targetReference>
+        </connector>
+        <filterFormula>{!$Record.Score__c}&lt;=6
+&amp;&amp; 
+{!$Record.RecordType.DeveloperName} = &quot;MyCase_NPS&quot;</filterFormula>
+        <object>Survey__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <description>This subflow allows the flow to use the Queue ID of the NPS Detractor Case queue</description>
+        <name>Get_Queue_Id</name>
+        <label>Get Queue Id</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <connector>
+            <targetReference>Create_Case</targetReference>
+        </connector>
+        <flowName>Function_Get_Queue_Id</flowName>
+        <inputAssignments>
+            <name>varQueueName</name>
+            <value>
+                <stringValue>NPS_Detractor_Survey_Follow_Up</stringValue>
+            </value>
+        </inputAssignments>
+        <outputAssignments>
+            <assignToReference>varQueueId</assignToReference>
+            <name>QueueId</name>
+        </outputAssignments>
+    </subflows>
+    <textTemplates>
+        <description>Results from the survey</description>
+        <name>txtSurveyDetails</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Survey Date: {!$Record.Survey_Date__c} | Score: {!$Record.Score__c} | Score Explanation Question: {!$Record.Score_Explanation_Question__c} | Score Explanation: {!$Record.Score_Explanation__c} | Possible Improvements: {!$Record.Possible_Improvements__c}</text>
+    </textTemplates>
+    <variables>
+        <name>varQueueId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

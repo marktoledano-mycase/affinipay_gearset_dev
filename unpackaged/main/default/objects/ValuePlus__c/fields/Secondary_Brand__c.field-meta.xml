@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Secondary_Brand__c</fullName>
+    <externalId>false</externalId>
+    <label>Secondary Brand</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CASEpeer</fullName>
+                <default>false</default>
+                <label>CASEpeer</label>
+            </value>
+            <value>
+                <fullName>Docketwise</fullName>
+                <default>false</default>
+                <label>Docketwise</label>
+            </value>
+            <value>
+                <fullName>LawPay</fullName>
+                <default>false</default>
+                <label>LawPay</label>
+            </value>
+            <value>
+                <fullName>MyCase</fullName>
+                <default>false</default>
+                <label>MyCase</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
