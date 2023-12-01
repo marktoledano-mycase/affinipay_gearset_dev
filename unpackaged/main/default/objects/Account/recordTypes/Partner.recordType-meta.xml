@@ -2156,6 +2156,21 @@
             <default>false</default>
         </values>
     </picklistValues>
+        <picklistValues>
+            <picklist>Partner_Request_Form__c</picklist>
+            <values>
+                <fullName>Alliance Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consultant Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Integration Partner</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
     <picklistValues>
         <picklist>Partner_Status_Overall__c</picklist>
         <values>
@@ -3944,6 +3959,10 @@
             <fullName>N%2FA</fullName>
             <default>false</default>
         </values>
+            <values>
+                <fullName>NDF</fullName>
+                <default>false</default>
+            </values>
         <values>
             <fullName>Other - see explanation</fullName>
             <default>false</default>

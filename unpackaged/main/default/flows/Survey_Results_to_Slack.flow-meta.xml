@@ -75,7 +75,7 @@
         </value>
     </constants>
     <constants>
-        <description>Slack Channel #mycase-NPS</description>
+        <description>Slack Channel #customer-nps</description>
         <name>Channel_MyCase_NPS</name>
         <dataType>String</dataType>
         <value>
@@ -152,7 +152,7 @@
             <targetReference>Template</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <textTemplates>
         <name>tex_MC_NPS_Results</name>
         <isViewedAsPlainText>true</isViewedAsPlainText>
@@ -171,7 +171,8 @@
 *Subscription Tier:* {!inrv_Survey_Record.Product_Environment__r.Subscription_Tier__c}
 *Total Users:* {!inrv_Survey_Record.Product_Environment__r.Total_Users__c}  
 *First Purchase Date:* {!inrv_Survey_Record.Product_Environment__r.First_Purchase_Date__c}
-*Users Role:* {!inrv_Survey_Record.Product_User__r.User_Role__c}</text>
+*Users Role:* {!inrv_Survey_Record.Product_User__r.User_Role__c}
+*Follow Up Case: &lt;https://affinipaymain.lightning.force.com/{!inrv_Survey_Record.Case__r.Id} | {!inrv_Survey_Record.Case__r.CaseNumber}&gt;*</text>
     </textTemplates>
     <variables>
         <name>inrv_Survey_Record</name>
