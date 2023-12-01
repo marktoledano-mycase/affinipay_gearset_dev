@@ -3,7 +3,7 @@
     <actionCalls>
         <name>Open_Parent_Opportunity</name>
         <label>Open Parent Opportunity</label>
-        <locationX>7715</locationX>
+        <locationX>7221</locationX>
         <locationY>23870</locationY>
         <actionName>c:fsc_openUrl</actionName>
         <actionType>component</actionType>
@@ -36,8 +36,8 @@
     <assignments>
         <name>Add_Edited_Addon_Id_to_Collection</name>
         <label>Add Edited Addon Id to Collection</label>
-        <locationX>5594</locationX>
-        <locationY>9668</locationY>
+        <locationX>4714</locationX>
+        <locationY>9260</locationY>
         <assignmentItems>
             <assignToReference>collSelectedProductIds</assignToReference>
             <operator>Add</operator>
@@ -45,18 +45,20 @@
                 <elementReference>Edited_Addons_Loop.Id</elementReference>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>Edited_Addons_Loop</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Add_Edited_Addon_to_Collection</name>
+        <label>Add Edited Addon to Collection</label>
+        <locationX>4626</locationX>
+        <locationY>9044</locationY>
         <assignmentItems>
             <assignToReference>collSelectedProducts</assignToReference>
             <operator>Add</operator>
             <value>
-                <elementReference>Edited_Addons_Loop</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>var_Edited_Record_Added</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <booleanValue>true</booleanValue>
+                <elementReference>dtAddOnsAndServices.outputEditedRows</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -64,10 +66,33 @@
         </connector>
     </assignments>
     <assignments>
+        <name>Add_Edited_Main_Product_to_Selected_Products_Collection</name>
+        <label>Add Edited Main Product to Selected Products Collection</label>
+        <locationX>7134</locationX>
+        <locationY>10034</locationY>
+        <assignmentItems>
+            <assignToReference>collSelectedProducts</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>dtMainProducts.outputEditedRows</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>collAggregateSelectedProducts</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>dtMainProducts.outputEditedRows</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Edited_Main_Products_Loop</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>Add_Grandfathered_Add_Ons_to_Display_Collection</name>
         <label>Add Grandfathered Add Ons to Display Collection</label>
-        <locationX>5905</locationX>
-        <locationY>7460</locationY>
+        <locationX>5411</locationX>
+        <locationY>7568</locationY>
         <assignmentItems>
             <assignToReference>collDisplayProducts</assignToReference>
             <operator>Add</operator>
@@ -83,7 +108,7 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Update_Add_On_Quantity_Loop</targetReference>
+            <targetReference>Sort_Display_Products_Collection</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -105,8 +130,8 @@
     <assignments>
         <name>Add_Main_Product_to_Selected_Products_Collection2</name>
         <label>Add Main Product to Selected Products Collection</label>
-        <locationX>8186</locationX>
-        <locationY>9884</locationY>
+        <locationX>7134</locationX>
+        <locationY>10634</locationY>
         <assignmentItems>
             <assignToReference>collSelectedProducts</assignToReference>
             <operator>Add</operator>
@@ -156,7 +181,7 @@
     <assignments>
         <name>Add_Open_Open_Opportunity_Id_to_Collection</name>
         <label>Add Open Open Opportunity Id to Collection</label>
-        <locationX>7827</locationX>
+        <locationX>7333</locationX>
         <locationY>1172</locationY>
         <assignmentItems>
             <assignToReference>collOpenOpportunityIds</assignToReference>
@@ -172,7 +197,7 @@
     <assignments>
         <name>Add_Opportunity_SKU_Id_to_Collection</name>
         <label>Add Opportunity SKU Id to Collection</label>
-        <locationX>11329</locationX>
+        <locationX>10341</locationX>
         <locationY>5504</locationY>
         <assignmentItems>
             <assignToReference>collAllSkuProductIds</assignToReference>
@@ -218,7 +243,7 @@
     <assignments>
         <name>Add_Partnership_Discount_Promotion_to_Collection</name>
         <label>Add Partnership Discount Promotion to Collection</label>
-        <locationX>10753</locationX>
+        <locationX>9765</locationX>
         <locationY>8684</locationY>
         <assignmentItems>
             <assignToReference>collPromotionsOnPartnershipDiscount</assignToReference>
@@ -234,7 +259,7 @@
     <assignments>
         <name>Add_Product_Sku_Promotion_Id_to_Collection</name>
         <label>Add Product Sku Promotion Id to Collection</label>
-        <locationX>13308</locationX>
+        <locationX>12320</locationX>
         <locationY>6344</locationY>
         <assignmentItems>
             <assignToReference>collExcludeProductSkuPromotionIds</assignToReference>
@@ -250,7 +275,7 @@
     <assignments>
         <name>Add_Promotion_Id_to_Collection</name>
         <label>Add Promotion Id to Collection</label>
-        <locationX>11222</locationX>
+        <locationX>10234</locationX>
         <locationY>7052</locationY>
         <assignmentItems>
             <assignToReference>collShortTermPromotionIds</assignToReference>
@@ -266,8 +291,8 @@
     <assignments>
         <name>Add_Required_Products_to_Selected_Product_Collection</name>
         <label>Add Required Products to Selected Product Collection</label>
-        <locationX>8122</locationX>
-        <locationY>12158</locationY>
+        <locationX>7334</locationX>
+        <locationY>11774</locationY>
         <assignmentItems>
             <assignToReference>collSelectedProducts</assignToReference>
             <operator>Add</operator>
@@ -310,8 +335,8 @@
     <assignments>
         <name>Add_Selected_Add_Ons_and_Services_to_Selected_Products_Collection</name>
         <label>Add Selected Add Ons and Services to Selected Products Collection</label>
-        <locationX>5282</locationX>
-        <locationY>8960</locationY>
+        <locationX>4626</locationX>
+        <locationY>9644</locationY>
         <assignmentItems>
             <assignToReference>collSelectedProducts</assignToReference>
             <operator>Add</operator>
@@ -326,7 +351,7 @@
     <assignments>
         <name>Add_Selected_Lifetime_Promotion_to_Collection</name>
         <label>Add Selected Lifetime Promotion to Collection</label>
-        <locationX>12718</locationX>
+        <locationX>11730</locationX>
         <locationY>11660</locationY>
         <assignmentItems>
             <assignToReference>collSelectedPromotionSkus</assignToReference>
@@ -340,63 +365,10 @@
         </connector>
     </assignments>
     <assignments>
-        <name>Add_Selected_Main_Product_to_Collection</name>
-        <label>Add Selected Main Product to Collection</label>
-        <locationX>7922</locationX>
-        <locationY>10934</locationY>
-        <assignmentItems>
-            <assignToReference>collSelectedProductIds</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <elementReference>Selected_Main_Product_Loop.Id</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>collSelectedProducts</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <elementReference>Selected_Main_Product_Loop</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>collAggregateSelectedProducts</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <elementReference>Selected_Main_Product_Loop</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Get_Required_SKU_Product_Records</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>Add_Selected_Product_to_Collection</name>
-        <label>Add Selected Product to Collection</label>
-        <locationX>5638</locationX>
-        <locationY>10052</locationY>
-        <assignmentItems>
-            <assignToReference>collSelectedProducts</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <elementReference>Selected_Add_On_Loop</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>collSelectedProductIds</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <elementReference>Selected_Add_On_Loop.Id</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Selected_Add_On_Loop</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
         <name>Add_Selected_Products_to_Aggregate_Collections</name>
         <label>Add Selected Products to Aggregate Collections</label>
-        <locationX>5240</locationX>
-        <locationY>10970</locationY>
+        <locationX>4758</locationX>
+        <locationY>10694</locationY>
         <assignmentItems>
             <assignToReference>collAggregateSelectedProductIds</assignToReference>
             <operator>Add</operator>
@@ -418,7 +390,7 @@
     <assignments>
         <name>Add_Selected_Promotion_SKUs_to_Collection</name>
         <label>Add Selected Promotion SKUs to Collection</label>
-        <locationX>12916</locationX>
+        <locationX>11928</locationX>
         <locationY>11960</locationY>
         <assignmentItems>
             <assignToReference>collSelectedPromotionSkus</assignToReference>
@@ -441,7 +413,7 @@
     <assignments>
         <name>Add_Selected_Promotion_SKUs_to_Collection3</name>
         <label>Add Selected Promotion SKUs to Collection</label>
-        <locationX>12388</locationX>
+        <locationX>11400</locationX>
         <locationY>12176</locationY>
         <assignmentItems>
             <assignToReference>collSelectedPromotionSkus</assignToReference>
@@ -457,7 +429,7 @@
     <assignments>
         <name>Add_SKU</name>
         <label>Add SKU</label>
-        <locationX>7935</locationX>
+        <locationX>7441</locationX>
         <locationY>2996</locationY>
         <assignmentItems>
             <assignToReference>coll_Picked_Sku_Product_Ids</assignToReference>
@@ -473,8 +445,8 @@
     <assignments>
         <name>Add_SKU_Product_Id_to_Collection</name>
         <label>Add SKU Product Id to Collection</label>
-        <locationX>8142</locationX>
-        <locationY>11426</locationY>
+        <locationX>7354</locationX>
+        <locationY>11042</locationY>
         <assignmentItems>
             <assignToReference>collRequiredProductIds</assignToReference>
             <operator>Add</operator>
@@ -489,7 +461,7 @@
     <assignments>
         <name>Add_This_Opportunity_ID_to_Filter_Collection</name>
         <label>Add This Opportunity ID to Filter Collection</label>
-        <locationX>8111</locationX>
+        <locationX>7617</locationX>
         <locationY>458</locationY>
         <assignmentItems>
             <assignToReference>collOpenOpportunityIds</assignToReference>
@@ -505,7 +477,7 @@
     <assignments>
         <name>Assign_Brand_Override_to_Brand_Collection</name>
         <label>Assign Brand Override to Brand Collection</label>
-        <locationX>7935</locationX>
+        <locationX>7441</locationX>
         <locationY>15668</locationY>
         <assignmentItems>
             <assignToReference>varSelectedBrands</assignToReference>
@@ -549,7 +521,7 @@
     <assignments>
         <name>Assign_Brand_to_Brand_Collection</name>
         <label>Assign Brand to Brand Collection</label>
-        <locationX>8199</locationX>
+        <locationX>7705</locationX>
         <locationY>15668</locationY>
         <assignmentItems>
             <assignToReference>varSelectedBrands</assignToReference>
@@ -593,7 +565,7 @@
     <assignments>
         <name>Assign_Brand_to_Brand_Collection_2</name>
         <label>Assign Brand to Brand Collection 2</label>
-        <locationX>7935</locationX>
+        <locationX>7441</locationX>
         <locationY>16160</locationY>
         <assignmentItems>
             <assignToReference>varAggregateBrands</assignToReference>
@@ -623,7 +595,7 @@
     <assignments>
         <name>Assign_Bundle_Id_to_Collection</name>
         <label>Assign Bundle Id to Collection</label>
-        <locationX>7803</locationX>
+        <locationX>7309</locationX>
         <locationY>1988</locationY>
         <assignmentItems>
             <assignToReference>varHasBundles</assignToReference>
@@ -660,7 +632,7 @@
     <assignments>
         <name>Assign_Contract_Id_to_Collection_0</name>
         <label>Assign Contract Id to Collection</label>
-        <locationX>7803</locationX>
+        <locationX>7309</locationX>
         <locationY>3812</locationY>
         <assignmentItems>
             <assignToReference>collSubscriptionContractIds</assignToReference>
@@ -676,7 +648,7 @@
     <assignments>
         <name>Assign_Contract_SKU_to_Collection_0</name>
         <label>Assign Contract SKU to Collection</label>
-        <locationX>7739</locationX>
+        <locationX>7245</locationX>
         <locationY>4436</locationY>
         <assignmentItems>
             <assignToReference>collMainProductIds</assignToReference>
@@ -692,7 +664,7 @@
     <assignments>
         <name>Assign_Create_Brand_Opportunity_to_faultObject</name>
         <label>Assign Create Brand Opportunity to faultObject</label>
-        <locationX>8265</locationX>
+        <locationX>7771</locationX>
         <locationY>18830</locationY>
         <assignmentItems>
             <assignToReference>faultObject</assignToReference>
@@ -709,7 +681,7 @@
     <assignments>
         <name>Assign_Create_Opportunity_Promos_to_faultObject</name>
         <label>Assign Create Opportunity Promos to faultObject</label>
-        <locationX>7847</locationX>
+        <locationX>7353</locationX>
         <locationY>23480</locationY>
         <assignmentItems>
             <assignToReference>faultObject</assignToReference>
@@ -726,7 +698,7 @@
     <assignments>
         <name>Assign_Create_Opportunity_Promos_to_faultObject2</name>
         <label>Assign Create Opportunity Promos to faultObject</label>
-        <locationX>13356</locationX>
+        <locationX>12368</locationX>
         <locationY>14576</locationY>
         <assignmentItems>
             <assignToReference>faultObject</assignToReference>
@@ -742,7 +714,7 @@
     <assignments>
         <name>Assign_Create_Opportunity_SKU_Records_to_faultObject</name>
         <label>Assign Create Opportunity SKU Records to faultObject</label>
-        <locationX>15908</locationX>
+        <locationX>14920</locationX>
         <locationY>21656</locationY>
         <assignmentItems>
             <assignToReference>faultObject</assignToReference>
@@ -759,7 +731,7 @@
     <assignments>
         <name>Assign_Create_Parent_Opportunity_to_faultObject</name>
         <label>Assign Create Parent Opportunity to faultObject</label>
-        <locationX>7583</locationX>
+        <locationX>7089</locationX>
         <locationY>17000</locationY>
         <assignmentItems>
             <assignToReference>faultObject</assignToReference>
@@ -843,8 +815,8 @@
     <assignments>
         <name>Assign_Edited_Product_Ids_to_Collections</name>
         <label>Assign Edited Product Ids to Collections</label>
-        <locationX>8054</locationX>
-        <locationY>10550</locationY>
+        <locationX>7222</locationX>
+        <locationY>10250</locationY>
         <assignmentItems>
             <assignToReference>collSelectedProductIds</assignToReference>
             <operator>Add</operator>
@@ -873,27 +845,6 @@
                 <elementReference>Edited_Main_Products_Loop.Pricing_Type__c</elementReference>
             </value>
         </assignmentItems>
-        <assignmentItems>
-            <assignToReference>collSelectedProducts</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <elementReference>Edited_Main_Products_Loop</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>collAggregateSelectedProducts</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <elementReference>Edited_Main_Products_Loop</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>var_Edited_Main_Product_Added</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </assignmentItems>
         <connector>
             <targetReference>Edited_Main_Products_Loop</targetReference>
         </connector>
@@ -901,8 +852,8 @@
     <assignments>
         <name>Assign_Filtered_Add_Ons_and_Services_to_Collection</name>
         <label>Assign Filtered Add Ons and Services to Collection</label>
-        <locationX>7922</locationX>
-        <locationY>12734</locationY>
+        <locationX>7134</locationX>
+        <locationY>12350</locationY>
         <assignmentItems>
             <assignToReference>collDisplayProducts</assignToReference>
             <operator>Assign</operator>
@@ -933,14 +884,14 @@
         </assignmentItems>
         <connector>
             <isGoTo>true</isGoTo>
-            <targetReference>Update_Add_On_Quantity_Loop</targetReference>
+            <targetReference>Sort_Display_Products_Collection</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>Assign_Filtered_Main_Products_to_Filtered_Collection</name>
         <label>Assign Filtered Main Products to Filtered Collection</label>
-        <locationX>7042</locationX>
-        <locationY>9668</locationY>
+        <locationX>6386</locationX>
+        <locationY>9368</locationY>
         <assignmentItems>
             <assignToReference>collFilteredMainProducts</assignToReference>
             <operator>Assign</operator>
@@ -976,7 +927,7 @@
     <assignments>
         <name>Assign_Get_Bundled_Opportunity_SKUs_to_faultObject</name>
         <label>Assign Get Bundled Opportunity SKUs to faultObject</label>
-        <locationX>16436</locationX>
+        <locationX>15448</locationX>
         <locationY>1664</locationY>
         <assignmentItems>
             <assignToReference>faultObject</assignToReference>
@@ -993,7 +944,7 @@
     <assignments>
         <name>Assign_Get_Open_Child_Opportunities_to_faultObject</name>
         <label>Assign Get Open Child Opportunities to faultObject</label>
-        <locationX>7847</locationX>
+        <locationX>7353</locationX>
         <locationY>674</locationY>
         <assignmentItems>
             <assignToReference>faultObject</assignToReference>
@@ -1010,7 +961,7 @@
     <assignments>
         <name>Assign_Get_Opportunity_Promos_to_faultObject</name>
         <label>Assign Get Opportunity Promos to faultObject</label>
-        <locationX>16172</locationX>
+        <locationX>15184</locationX>
         <locationY>1772</locationY>
         <assignmentItems>
             <assignToReference>faultObject</assignToReference>
@@ -1027,7 +978,7 @@
     <assignments>
         <name>Assign_Get_Opportunity_SKUs_to_faultObject</name>
         <label>Assign Get Opportunity SKUs to faultObject</label>
-        <locationX>16700</locationX>
+        <locationX>15712</locationX>
         <locationY>1556</locationY>
         <assignmentItems>
             <assignToReference>faultObject</assignToReference>
@@ -1044,7 +995,7 @@
     <assignments>
         <name>Assign_Get_This_Opportunity_to_faultOjbect</name>
         <label>Assign Get This Opportunity to faultOjbect</label>
-        <locationX>16964</locationX>
+        <locationX>15976</locationX>
         <locationY>242</locationY>
         <assignmentItems>
             <assignToReference>faultObject</assignToReference>
@@ -1061,7 +1012,7 @@
     <assignments>
         <name>Assign_Grandfathered_Attributes_to_Collections</name>
         <label>Assign Grandfathered Attributes to Collections</label>
-        <locationX>7739</locationX>
+        <locationX>7245</locationX>
         <locationY>4736</locationY>
         <assignmentItems>
             <assignToReference>collGrandfatheredBrands</assignToReference>
@@ -1084,8 +1035,8 @@
     <assignments>
         <name>Assign_Grandfathered_Main_Products_to_Collection</name>
         <label>Assign Grandfathered Main Products to Collection</label>
-        <locationX>6756</locationX>
-        <locationY>10100</locationY>
+        <locationX>6100</locationX>
+        <locationY>9800</locationY>
         <assignmentItems>
             <assignToReference>collFilteredMainProducts</assignToReference>
             <operator>Add</operator>
@@ -1100,7 +1051,7 @@
     <assignments>
         <name>Assign_Lifetime_Promotion_Id_to_Collection</name>
         <label>Assign Lifetime Promotion Id to Collection</label>
-        <locationX>10753</locationX>
+        <locationX>9765</locationX>
         <locationY>9092</locationY>
         <assignmentItems>
             <assignToReference>collLifetimePromotionIds</assignToReference>
@@ -1116,8 +1067,8 @@
     <assignments>
         <name>Assign_Main_Product_Count_to_Variable</name>
         <label>Assign Main Product Count to Variable</label>
-        <locationX>7042</locationX>
-        <locationY>10784</locationY>
+        <locationX>6386</locationX>
+        <locationY>10484</locationY>
         <assignmentItems>
             <assignToReference>varMainProductCount</assignToReference>
             <operator>AssignCount</operator>
@@ -1132,7 +1083,7 @@
     <assignments>
         <name>Assign_Main_Product_Id_to_Collection</name>
         <label>Assign Main Product Id to Collection</label>
-        <locationX>6210</locationX>
+        <locationX>5716</locationX>
         <locationY>5828</locationY>
         <assignmentItems>
             <assignToReference>collMainProductIds</assignToReference>
@@ -1148,7 +1099,7 @@
     <assignments>
         <name>Assign_Non_Partnership_Lifetime_Product_Sku_Promotion_to_Display_Collection</name>
         <label>Assign Non-Partnership Lifetime Product Sku Promotion to Display Collection</label>
-        <locationX>10946</locationX>
+        <locationX>9958</locationX>
         <locationY>10976</locationY>
         <assignmentItems>
             <assignToReference>collLifetimeProductSkuPromosForSelection</assignToReference>
@@ -1171,7 +1122,7 @@
     <assignments>
         <name>Assign_Non_Partnership_Lifetime_Promo_to_Collection</name>
         <label>Assign Non-Partnership Lifetime Promo to Collection</label>
-        <locationX>10946</locationX>
+        <locationX>9958</locationX>
         <locationY>10376</locationY>
         <assignmentItems>
             <assignToReference>collNonPartnershipLifetimePromos</assignToReference>
@@ -1247,7 +1198,7 @@
     <assignments>
         <name>Assign_Opportunity_Sku_To_Update_Variable_to_Collection</name>
         <label>Assign Opportunity Sku To Update Variable to Collection</label>
-        <locationX>7803</locationX>
+        <locationX>7309</locationX>
         <locationY>22088</locationY>
         <assignmentItems>
             <assignToReference>collOpportunitySkusToUpdate</assignToReference>
@@ -1288,6 +1239,13 @@
         </assignmentItems>
         <assignmentItems>
             <assignToReference>varOpportunitySku.Promotional_Discount_Duration__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varOpportunitySku.Total_Discount__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <numberValue>0.0</numberValue>
@@ -1337,6 +1295,13 @@
                 <elementReference>varOpportunitySku</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varOpportunitySku.Total_Discount__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Strip_Promo_from_Lifetime_Opportunity_Sku_Loop</targetReference>
         </connector>
@@ -1344,7 +1309,7 @@
     <assignments>
         <name>Assign_Opportunity_SKU_to_Variable_2</name>
         <label>Assign Opportunity SKU to Variable</label>
-        <locationX>7803</locationX>
+        <locationX>7309</locationX>
         <locationY>21980</locationY>
         <assignmentItems>
             <assignToReference>varOpportunitySkuToUpdate</assignToReference>
@@ -1391,6 +1356,13 @@
             </value>
         </assignmentItems>
         <assignmentItems>
+            <assignToReference>varOpportunitySku.Total_Discount__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
             <assignToReference>collOpportunitySKUsForPromoRemoval</assignToReference>
             <operator>Add</operator>
             <value>
@@ -1404,7 +1376,7 @@
     <assignments>
         <name>Assign_Opportunity_SKU_Variable_to_Collection</name>
         <label>Assign Opportunity SKU Variable to Collection</label>
-        <locationX>8639</locationX>
+        <locationX>8145</locationX>
         <locationY>20120</locationY>
         <assignmentItems>
             <assignToReference>collOpportunitySKUs</assignToReference>
@@ -1420,7 +1392,7 @@
     <assignments>
         <name>Assign_Partnership_Lifetime_Promo_to_Display_Collection</name>
         <label>Assign Partnership Lifetime Promo to Display Collection</label>
-        <locationX>10645</locationX>
+        <locationX>9657</locationX>
         <locationY>9608</locationY>
         <assignmentItems>
             <assignToReference>collLifetimeProductSkuPromosForSelection</assignToReference>
@@ -1443,8 +1415,8 @@
     <assignments>
         <name>Assign_Product_Id_to_Collection</name>
         <label>Assign Product Id to Collection</label>
-        <locationX>5370</locationX>
-        <locationY>9176</locationY>
+        <locationX>4714</locationX>
+        <locationY>9860</locationY>
         <assignmentItems>
             <assignToReference>collSelectedProductIds</assignToReference>
             <operator>Add</operator>
@@ -1459,7 +1431,7 @@
     <assignments>
         <name>Assign_Product_Sku_Promotion_to_Variable</name>
         <label>Assign Product Sku Promotion to Variable</label>
-        <locationX>11114</locationX>
+        <locationX>10126</locationX>
         <locationY>7568</locationY>
         <assignmentItems>
             <assignToReference>varProductSkuPromotion</assignToReference>
@@ -1526,7 +1498,7 @@
     <assignments>
         <name>Assign_SKU_Product_to_Aggregate_Collection</name>
         <label>Assign SKU Product to Aggregate Collection</label>
-        <locationX>14808</locationX>
+        <locationX>13820</locationX>
         <locationY>6560</locationY>
         <assignmentItems>
             <assignToReference>collAggregateSelectedProducts</assignToReference>
@@ -1565,7 +1537,7 @@
     <assignments>
         <name>Assign_This_Opportunity_to_a_Colleciton</name>
         <label>Assign This Opportunity to a Colleciton</label>
-        <locationX>7847</locationX>
+        <locationX>7353</locationX>
         <locationY>242</locationY>
         <assignmentItems>
             <assignToReference>collThisOpportunity</assignToReference>
@@ -1611,7 +1583,7 @@
     <assignments>
         <name>Assign_Update_Opportunity_SKUs_with_Promo_Details_to_faultObject</name>
         <label>Assign Update Opportunity SKUs with Promo Details to faultObject</label>
-        <locationX>13620</locationX>
+        <locationX>12632</locationX>
         <locationY>14360</locationY>
         <assignmentItems>
             <assignToReference>faultObject</assignToReference>
@@ -1628,7 +1600,7 @@
     <assignments>
         <name>Assign_Variables_to_Collections</name>
         <label>Assign Variables to Collections</label>
-        <locationX>14830</locationX>
+        <locationX>13842</locationX>
         <locationY>13724</locationY>
         <assignmentItems>
             <assignToReference>collOpportunityPromo</assignToReference>
@@ -1651,7 +1623,7 @@
     <assignments>
         <name>Copy_1_of_Add_Selected_Promotion_SKUs_to_Collection2</name>
         <label>Add Selected Promotion SKUs to Collection</label>
-        <locationX>12652</locationX>
+        <locationX>11664</locationX>
         <locationY>12176</locationY>
         <assignmentItems>
             <assignToReference>collSelectedPromotionSkus</assignToReference>
@@ -1668,7 +1640,7 @@
     <assignments>
         <name>Copy_1_of_Assign_Variables_to_Collections</name>
         <label>Copy 1 of Assign Variables to Collections</label>
-        <locationX>15358</locationX>
+        <locationX>14370</locationX>
         <locationY>13724</locationY>
         <assignmentItems>
             <assignToReference>collOpportunityPromo</assignToReference>
@@ -1707,7 +1679,7 @@
     <assignments>
         <name>No_Main_Product_Selected_Variable_Assigment</name>
         <label>No Main Product Selected Variable Assigment</label>
-        <locationX>5641</locationX>
+        <locationX>5147</locationX>
         <locationY>6620</locationY>
         <assignmentItems>
             <assignToReference>var_No_Main_Product_Selected</assignToReference>
@@ -1740,7 +1712,7 @@
     <assignments>
         <name>Reset_Duration_Validation_Variables2</name>
         <label>Reset Duration Validation Variables</label>
-        <locationX>12520</locationX>
+        <locationX>11532</locationX>
         <locationY>11960</locationY>
         <assignmentItems>
             <assignToReference>varSelectedPromo</assignToReference>
@@ -1772,42 +1744,10 @@
         </connector>
     </assignments>
     <assignments>
-        <name>Reset_Edited_Addon_Variable</name>
-        <label>Reset Edited Addon Variable</label>
-        <locationX>5374</locationX>
-        <locationY>10052</locationY>
-        <assignmentItems>
-            <assignToReference>var_Edited_Record_Added</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Selected_Add_On_Loop</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>Reset_Edited_Main_Product_Added_Variable</name>
-        <label>Reset Edited Main Product Added Variable</label>
-        <locationX>7658</locationX>
-        <locationY>10934</locationY>
-        <assignmentItems>
-            <assignToReference>var_Edited_Main_Product_Added</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Get_Required_SKU_Product_Records</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
         <name>Reset_Filtered_Main_Product_Collection</name>
         <label>Reset Filtered Main Product Collection</label>
-        <locationX>7042</locationX>
-        <locationY>10676</locationY>
+        <locationX>6386</locationX>
+        <locationY>10376</locationY>
         <assignmentItems>
             <assignToReference>collFilteredMainProducts</assignToReference>
             <operator>Assign</operator>
@@ -1829,7 +1769,7 @@
     <assignments>
         <name>Reset_Opportunity_SKU_Variable</name>
         <label>Reset Opportunity SKU Variable</label>
-        <locationX>9079</locationX>
+        <locationX>8585</locationX>
         <locationY>16676</locationY>
         <assignmentItems>
             <assignToReference>varOpportunitySku</assignToReference>
@@ -1845,7 +1785,7 @@
     <assignments>
         <name>Reset_Promo_Variables</name>
         <label>Reset Promo Variables</label>
-        <locationX>11241</locationX>
+        <locationX>10253</locationX>
         <locationY>5696</locationY>
         <assignmentItems>
             <assignToReference>varNoLifetimePromotionsFound</assignToReference>
@@ -1903,8 +1843,8 @@
     <assignments>
         <name>Reset_Validation_Variables</name>
         <label>Reset Validation Variables</label>
-        <locationX>5240</locationX>
-        <locationY>8636</locationY>
+        <locationX>4758</locationX>
+        <locationY>8336</locationY>
         <assignmentItems>
             <assignToReference>varQuantityLocked</assignToReference>
             <operator>Assign</operator>
@@ -1999,7 +1939,7 @@
     <assignments>
         <name>Rest_Opportunity_SKU_Variable</name>
         <label>Reset Opportunity SKU Variable</label>
-        <locationX>8771</locationX>
+        <locationX>8277</locationX>
         <locationY>19304</locationY>
         <assignmentItems>
             <assignToReference>varOpportunitySku</assignToReference>
@@ -2012,7 +1952,7 @@
     <assignments>
         <name>Sales_Approved_Promo_Selected</name>
         <label>Sales_Approved_Promo_Selected</label>
-        <locationX>11398</locationX>
+        <locationX>10410</locationX>
         <locationY>7952</locationY>
         <assignmentItems>
             <assignToReference>var_Sales_Approved_Promo_Selected</assignToReference>
@@ -2035,8 +1975,8 @@
     <assignments>
         <name>Set_Add_On_Exists_Variable</name>
         <label>Set Add On Exists Variable</label>
-        <locationX>5328</locationX>
-        <locationY>10628</locationY>
+        <locationX>4846</locationX>
+        <locationY>10352</locationY>
         <assignmentItems>
             <assignToReference>varAddOnExists</assignToReference>
             <operator>Assign</operator>
@@ -2052,7 +1992,7 @@
     <assignments>
         <name>Set_Add_On_Filtering_Variables</name>
         <label>Set Add On Filtering Variables</label>
-        <locationX>6191</locationX>
+        <locationX>5697</locationX>
         <locationY>6620</locationY>
         <assignmentItems>
             <assignToReference>varSelectedBrand</assignToReference>
@@ -2087,40 +2027,10 @@
         </connector>
     </assignments>
     <assignments>
-        <name>Set_Add_On_Quantity_to_1</name>
-        <label>Set Add On Quantity to 1</label>
-        <locationX>6279</locationX>
-        <locationY>7844</locationY>
-        <assignmentItems>
-            <assignToReference>var_Temp_Sku_Product</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Update_Add_On_Quantity_Loop</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>var_Temp_Sku_Product.Quantity__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <numberValue>1.0</numberValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>coll_Add_Ons_with_Quantity</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <elementReference>var_Temp_Sku_Product</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Update_Add_On_Quantity_Loop</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
         <name>Set_Brand_Exists_on_Opportunity_Variable</name>
         <label>Set Brand Exists on Opportunity Variable</label>
-        <locationX>7306</locationX>
-        <locationY>9284</locationY>
+        <locationX>6650</locationX>
+        <locationY>8984</locationY>
         <assignmentItems>
             <assignToReference>varBrandExistsOnOpportunity</assignToReference>
             <operator>Assign</operator>
@@ -2135,7 +2045,7 @@
     <assignments>
         <name>Set_Brand_Variable</name>
         <label>Set Brand Variable</label>
-        <locationX>8199</locationX>
+        <locationX>7705</locationX>
         <locationY>17408</locationY>
         <assignmentItems>
             <assignToReference>varBrand</assignToReference>
@@ -2151,7 +2061,7 @@
     <assignments>
         <name>Set_Change_Tier_Variable</name>
         <label>Set Change Tier Variable</label>
-        <locationX>15171</locationX>
+        <locationX>14183</locationX>
         <locationY>5396</locationY>
         <assignmentItems>
             <assignToReference>varChangeTier</assignToReference>
@@ -2167,7 +2077,7 @@
     <assignments>
         <name>Set_Company_Promo_Variable</name>
         <label>Set Company Promo Variable</label>
-        <locationX>10870</locationX>
+        <locationX>9882</locationX>
         <locationY>7952</locationY>
         <assignmentItems>
             <assignToReference>var_Company_Promo_Selected</assignToReference>
@@ -2190,7 +2100,7 @@
     <assignments>
         <name>Set_Contract_SKU_Variable</name>
         <label>Set Contract SKU Variable</label>
-        <locationX>14676</locationX>
+        <locationX>13688</locationX>
         <locationY>6368</locationY>
         <assignmentItems>
             <assignToReference>varChangedContractSku</assignToReference>
@@ -2206,7 +2116,7 @@
     <assignments>
         <name>Set_Discount_Limit_Exceeded_Variable</name>
         <label>Set Discount Limit Exceeded Variable</label>
-        <locationX>14698</locationX>
+        <locationX>13710</locationX>
         <locationY>12842</locationY>
         <assignmentItems>
             <assignToReference>varDiscountMaxExceeded</assignToReference>
@@ -2237,7 +2147,7 @@
     <assignments>
         <name>Set_Discount_Locked_Variable</name>
         <label>Set Discount Locked Variable</label>
-        <locationX>14434</locationX>
+        <locationX>13446</locationX>
         <locationY>12734</locationY>
         <assignmentItems>
             <assignToReference>varDiscountLocked</assignToReference>
@@ -2252,33 +2162,10 @@
         </connector>
     </assignments>
     <assignments>
-        <name>Set_Display_Collection</name>
-        <label>Set Display Collection</label>
-        <locationX>6191</locationX>
-        <locationY>8036</locationY>
-        <assignmentItems>
-            <assignToReference>collDisplayProducts</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>collEmptyProducts</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>collDisplayProducts</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>coll_Add_Ons_with_Quantity</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Sort_Display_Products_Collection</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
         <name>Set_Display_Products_Collection</name>
         <label>Set Display Products Collection</label>
-        <locationX>6059</locationX>
-        <locationY>6944</locationY>
+        <locationX>5565</locationX>
+        <locationY>7052</locationY>
         <assignmentItems>
             <assignToReference>collDisplayProducts</assignToReference>
             <operator>Assign</operator>
@@ -2293,7 +2180,7 @@
     <assignments>
         <name>Set_Display_Products_Collection2</name>
         <label>Set Display Products Collection</label>
-        <locationX>6587</locationX>
+        <locationX>6093</locationX>
         <locationY>6404</locationY>
         <assignmentItems>
             <assignToReference>varNoMainProductsValidation</assignToReference>
@@ -2309,7 +2196,7 @@
     <assignments>
         <name>Set_Duration_Locked_Variable2</name>
         <label>Set Duration Locked Variable</label>
-        <locationX>14170</locationX>
+        <locationX>13182</locationX>
         <locationY>12734</locationY>
         <assignmentItems>
             <assignToReference>varDurationLocked</assignToReference>
@@ -2333,7 +2220,7 @@
     <assignments>
         <name>Set_Duration_Override_Validation_Variable_to_True</name>
         <label>Set Duration Override Validation Variable to True</label>
-        <locationX>15138</locationX>
+        <locationX>14150</locationX>
         <locationY>12734</locationY>
         <assignmentItems>
             <assignToReference>varDurationMaxExceeded</assignToReference>
@@ -2364,7 +2251,7 @@
     <assignments>
         <name>Set_HasPromos_Variable</name>
         <label>Set HasPromos Variable</label>
-        <locationX>7715</locationX>
+        <locationX>7221</locationX>
         <locationY>3296</locationY>
         <assignmentItems>
             <assignToReference>varHasPromos</assignToReference>
@@ -2380,7 +2267,7 @@
     <assignments>
         <name>Set_HasUnbundledSKUs_Variable</name>
         <label>Set HasUnbundledSKUs Variable</label>
-        <locationX>7715</locationX>
+        <locationX>7221</locationX>
         <locationY>2480</locationY>
         <assignmentItems>
             <assignToReference>varHasUnbundledSKUs</assignToReference>
@@ -2461,8 +2348,8 @@
     <assignments>
         <name>Set_No_Add_Ons_Found_Variable</name>
         <label>Set No Add-Ons Found Variable</label>
-        <locationX>6323</locationX>
-        <locationY>6944</locationY>
+        <locationX>5829</locationX>
+        <locationY>7052</locationY>
         <assignmentItems>
             <assignToReference>varNoAddons</assignToReference>
             <operator>Assign</operator>
@@ -2477,8 +2364,8 @@
     <assignments>
         <name>Set_No_Brand_Selected_Variable</name>
         <label>Set No Brand Selected Variable</label>
-        <locationX>5986</locationX>
-        <locationY>9068</locationY>
+        <locationX>5330</locationX>
+        <locationY>8768</locationY>
         <assignmentItems>
             <assignToReference>var_No_Brand_Selected</assignToReference>
             <operator>Assign</operator>
@@ -2494,8 +2381,8 @@
     <assignments>
         <name>Set_No_Main_Product_Selected_Variable</name>
         <label>Set No Main Product Selected Variable</label>
-        <locationX>8626</locationX>
-        <locationY>8960</locationY>
+        <locationX>7638</locationX>
+        <locationY>8660</locationY>
         <assignmentItems>
             <assignToReference>var_No_Main_Product_Selected</assignToReference>
             <operator>Assign</operator>
@@ -2511,8 +2398,8 @@
     <assignments>
         <name>Set_No_Pricing_Type_Variable</name>
         <label>Set No Pricing Type Variable</label>
-        <locationX>6250</locationX>
-        <locationY>9068</locationY>
+        <locationX>5594</locationX>
+        <locationY>8768</locationY>
         <assignmentItems>
             <assignToReference>var_No_Pricing_Type_Selected</assignToReference>
             <operator>Assign</operator>
@@ -2528,7 +2415,7 @@
     <assignments>
         <name>Set_no_Short_Term_Discounts_Found_Variable_to_True</name>
         <label>Set no Short Term Discounts Found Variable to True</label>
-        <locationX>11134</locationX>
+        <locationX>10146</locationX>
         <locationY>7952</locationY>
         <assignmentItems>
             <assignToReference>varNoShortTermDiscountsFound</assignToReference>
@@ -2544,7 +2431,7 @@
     <assignments>
         <name>Set_Opp_Id_Variable</name>
         <label>Set Opp Id Variable</label>
-        <locationX>7583</locationX>
+        <locationX>7089</locationX>
         <locationY>18056</locationY>
         <assignmentItems>
             <assignToReference>varNewOpportunityId</assignToReference>
@@ -2568,7 +2455,7 @@
     <assignments>
         <name>Set_Opp_Id_Variable2</name>
         <label>Set Opp Id Variable</label>
-        <locationX>7737</locationX>
+        <locationX>7243</locationX>
         <locationY>18614</locationY>
         <assignmentItems>
             <assignToReference>varNewOpportunityId</assignToReference>
@@ -2584,7 +2471,7 @@
     <assignments>
         <name>Set_Opportunity_Id_Variable_to_This_Opportunity</name>
         <label>Set Opportunity Id Variable to This Opportunity</label>
-        <locationX>8529</locationX>
+        <locationX>8035</locationX>
         <locationY>17624</locationY>
         <assignmentItems>
             <assignToReference>varNewOpportunityId</assignToReference>
@@ -2600,7 +2487,7 @@
     <assignments>
         <name>Set_Opportunity_Promo_Variable</name>
         <label>Set Opportunity Promo Variable</label>
-        <locationX>8287</locationX>
+        <locationX>7793</locationX>
         <locationY>23072</locationY>
         <assignmentItems>
             <assignToReference>varOpportunityPromo.CurrencyIsoCode</assignToReference>
@@ -2616,7 +2503,7 @@
     <assignments>
         <name>Set_Opportunity_SKU_Updates_Lifetime</name>
         <label>Set Opportunity SKU Updates - Lifetime</label>
-        <locationX>15358</locationX>
+        <locationX>14370</locationX>
         <locationY>13616</locationY>
         <assignmentItems>
             <assignToReference>varOpportunitySku</assignToReference>
@@ -2688,6 +2575,27 @@
                 <elementReference>Selected_Promos_Loop.Discount_Duration__c</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varOpportunitySku.Total_Discount__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Selected_Promos_Loop.Promotion__r.Promotion_Discount__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varOpportunitySku.Discount_Value_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Selected_Promos_Loop.Promotion__r.Discount_Value_Type__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varOpportunityPromo.Discount_Qty__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Selected_Promos_Loop.Promotion__r.Discount_Qty_Default__c</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Copy_1_of_Assign_Variables_to_Collections</targetReference>
         </connector>
@@ -2695,7 +2603,7 @@
     <assignments>
         <name>Set_Opportunity_SKU_Updates_Short_Term</name>
         <label>Set Opportunity SKU Updates - Short-Term</label>
-        <locationX>14830</locationX>
+        <locationX>13842</locationX>
         <locationY>13616</locationY>
         <assignmentItems>
             <assignToReference>varOpportunitySku</assignToReference>
@@ -2767,6 +2675,27 @@
                 <elementReference>Selected_Promos_Loop.SKU_Product_Specific_Duration__c</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varOpportunitySku.Total_Discount__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Selected_Promos_Loop.Promotion__r.Promotion_Discount__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varOpportunitySku.Discount_Value_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Selected_Promos_Loop.Promotion__r.Discount_Value_Type__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varOpportunityPromo.Discount_Qty__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Selected_Promos_Loop.Promotion__r.Discount_Qty_Default__c</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Assign_Variables_to_Collections</targetReference>
         </connector>
@@ -2774,7 +2703,7 @@
     <assignments>
         <name>Set_Opportunity_SKU_Variable</name>
         <label>Set Opportunity SKU Variable</label>
-        <locationX>8639</locationX>
+        <locationX>8145</locationX>
         <locationY>19520</locationY>
         <assignmentItems>
             <assignToReference>varOpportunitySku.Opportunity__c</assignToReference>
@@ -2860,7 +2789,7 @@
     <assignments>
         <name>Set_Parent_Opportunity_Id_Variable_2</name>
         <label>Set Parent Opportunity Id Variable</label>
-        <locationX>7319</locationX>
+        <locationX>6825</locationX>
         <locationY>17108</locationY>
         <assignmentItems>
             <assignToReference>varParentOpportunityId</assignToReference>
@@ -2876,7 +2805,7 @@
     <assignments>
         <name>Set_Parent_Opportunity_Variable</name>
         <label>Set Parent Opportunity Variable</label>
-        <locationX>6791</locationX>
+        <locationX>6297</locationX>
         <locationY>16676</locationY>
         <assignmentItems>
             <assignToReference>varParentOpportunityId</assignToReference>
@@ -2892,7 +2821,7 @@
     <assignments>
         <name>Set_Parent_Opportunity_Variable_2</name>
         <label>Set Parent Opportunity Variable</label>
-        <locationX>7319</locationX>
+        <locationX>6825</locationX>
         <locationY>16784</locationY>
         <assignmentItems>
             <assignToReference>varParentOpportunity.Id</assignToReference>
@@ -3111,7 +3040,7 @@
     <assignments>
         <name>Set_Parent_Opportunity_Variable_to_this_Opportunity</name>
         <label>Set Parent Opportunity Variable to this Opportunity</label>
-        <locationX>7055</locationX>
+        <locationX>6561</locationX>
         <locationY>16676</locationY>
         <assignmentItems>
             <assignToReference>varParentOpportunityId</assignToReference>
@@ -3127,7 +3056,7 @@
     <assignments>
         <name>Set_Parent_Variable</name>
         <label>Set Parent Variable</label>
-        <locationX>7583</locationX>
+        <locationX>7089</locationX>
         <locationY>458</locationY>
         <assignmentItems>
             <assignToReference>varThisOppIsParent</assignToReference>
@@ -3143,7 +3072,7 @@
     <assignments>
         <name>Set_Promotion_on_Opportunity_SKU_Variable</name>
         <label>Set Promotion on Opportunity SKU Variable</label>
-        <locationX>8727</locationX>
+        <locationX>8233</locationX>
         <locationY>19844</locationY>
         <assignmentItems>
             <assignToReference>varOpportunitySku.Lifetime_Promotion__c</assignToReference>
@@ -3166,8 +3095,8 @@
     <assignments>
         <name>Set_Quantity_Locked_Variable</name>
         <label>Set Quantity Locked Variable</label>
-        <locationX>5154</locationX>
-        <locationY>9068</locationY>
+        <locationX>4714</locationX>
+        <locationY>8768</locationY>
         <assignmentItems>
             <assignToReference>varQuantityLocked</assignToReference>
             <operator>Assign</operator>
@@ -3182,8 +3111,8 @@
     <assignments>
         <name>Set_Quantity_Locked_Variable_MainProduct</name>
         <label>Set Quantity Locked Variable</label>
-        <locationX>7878</locationX>
-        <locationY>9992</locationY>
+        <locationX>7222</locationX>
+        <locationY>9692</locationY>
         <assignmentItems>
             <assignToReference>varQuantityLocked</assignToReference>
             <operator>Assign</operator>
@@ -3199,8 +3128,8 @@
     <assignments>
         <name>Set_Quantity_on_Loop_Item</name>
         <label>Set Quantity on Loop Item</label>
-        <locationX>7130</locationX>
-        <locationY>10484</locationY>
+        <locationX>6474</locationX>
+        <locationY>10184</locationY>
         <assignmentItems>
             <assignToReference>varSkuProduct</assignToReference>
             <operator>Assign</operator>
@@ -3229,7 +3158,7 @@
     <assignments>
         <name>Set_Remaining_Opportunity_Promo_Fields</name>
         <label>Set Remaining Opportunity Promo Fields</label>
-        <locationX>8375</locationX>
+        <locationX>7881</locationX>
         <locationY>22796</locationY>
         <assignmentItems>
             <assignToReference>varOpportunityPromo</assignToReference>
@@ -3296,8 +3225,8 @@
     <assignments>
         <name>Set_Variables</name>
         <label>Set Variables</label>
-        <locationX>8054</locationX>
-        <locationY>9560</locationY>
+        <locationX>7266</locationX>
+        <locationY>9260</locationY>
         <assignmentItems>
             <assignToReference>collRequiredProductIds</assignToReference>
             <operator>Assign</operator>
@@ -3326,7 +3255,7 @@
     <assignments>
         <name>Single_Brand_Assign_Opportunity_SKU_Variable_to_Collection</name>
         <label>Single Brand Assign Opportunity SKU Variable to Collection</label>
-        <locationX>9079</locationX>
+        <locationX>8585</locationX>
         <locationY>17384</locationY>
         <assignmentItems>
             <assignToReference>collOpportunitySKUs</assignToReference>
@@ -3342,7 +3271,7 @@
     <assignments>
         <name>Single_Brand_Set_Opportunity_SKU_Variable</name>
         <label>Single Brand Set Opportunity SKU Variable</label>
-        <locationX>9079</locationX>
+        <locationX>8585</locationX>
         <locationY>16784</locationY>
         <assignmentItems>
             <assignToReference>varOpportunitySku.Opportunity__c</assignToReference>
@@ -3428,7 +3357,7 @@
     <assignments>
         <name>Single_Brand_Set_Promotion_on_Opportunity_SKU_Variable</name>
         <label>Single Brand Set Promotion on Opportunity SKU Variable</label>
-        <locationX>9167</locationX>
+        <locationX>8673</locationX>
         <locationY>17108</locationY>
         <assignmentItems>
             <assignToReference>varOpportunitySku.Lifetime_Promotion__c</assignToReference>
@@ -3451,7 +3380,7 @@
     <assignments>
         <name>Update_Opportunity_SKU_Collection</name>
         <label>Update Opportunity SKU Collection</label>
-        <locationX>7715</locationX>
+        <locationX>7221</locationX>
         <locationY>21356</locationY>
         <assignmentItems>
             <assignToReference>collOpportunitySKUs</assignToReference>
@@ -3467,7 +3396,7 @@
     <assignments>
         <name>Update_Opportunity_SKU_with_Bundle_Attributes</name>
         <label>Update Opportunity SKU with Bundle Attributes</label>
-        <locationX>8243</locationX>
+        <locationX>7749</locationX>
         <locationY>20996</locationY>
         <assignmentItems>
             <assignToReference>Apply_Bundle_Attributes_Loop.Bundle__c</assignToReference>
@@ -3511,11 +3440,32 @@
         </value>
     </choices>
     <collectionProcessors>
+        <name>Filter_Addons</name>
+        <elementSubtype>FilterCollectionProcessor</elementSubtype>
+        <label>Filter Addons</label>
+        <locationX>5697</locationX>
+        <locationY>6836</locationY>
+        <assignNextValueToReference>currentItem_Filter_Addons</assignNextValueToReference>
+        <collectionProcessorType>FilterCollectionProcessor</collectionProcessorType>
+        <collectionReference>Get_Add_On_Products</collectionReference>
+        <conditionLogic>and</conditionLogic>
+        <conditions>
+            <leftValueReference>currentItem_Filter_Addons.Product_Tier__c</leftValueReference>
+            <operator>Contains</operator>
+            <rightValue>
+                <elementReference>varTier</elementReference>
+            </rightValue>
+        </conditions>
+        <connector>
+            <targetReference>Are_Add_On_Products_Found</targetReference>
+        </connector>
+    </collectionProcessors>
+    <collectionProcessors>
         <name>Filter_Main_Product_Collection_by_Selected_Brand</name>
         <elementSubtype>FilterCollectionProcessor</elementSubtype>
         <label>Filter Main Product Collection by Selected Brand</label>
-        <locationX>7042</locationX>
-        <locationY>9560</locationY>
+        <locationX>6386</locationX>
+        <locationY>9260</locationY>
         <assignNextValueToReference>currentItem_Filter_Main_Product_Collection_by_Selected_Brand</assignNextValueToReference>
         <collectionProcessorType>FilterCollectionProcessor</collectionProcessorType>
         <collectionReference>collAllProducts</collectionReference>
@@ -3549,8 +3499,8 @@
         <name>Sort_Display_Products_Collection</name>
         <elementSubtype>SortCollectionProcessor</elementSubtype>
         <label>Sort Display Products Collection</label>
-        <locationX>6191</locationX>
-        <locationY>8144</locationY>
+        <locationX>5697</locationX>
+        <locationY>7844</locationY>
         <collectionProcessorType>SortCollectionProcessor</collectionProcessorType>
         <collectionReference>collDisplayProducts</collectionReference>
         <connector>
@@ -3567,7 +3517,7 @@
         <name>Sort_Opportunity_SKUs_by_Name</name>
         <elementSubtype>SortCollectionProcessor</elementSubtype>
         <label>Sort Opportunity SKUs by Name</label>
-        <locationX>7715</locationX>
+        <locationX>7221</locationX>
         <locationY>2588</locationY>
         <collectionProcessorType>SortCollectionProcessor</collectionProcessorType>
         <collectionReference>collUnbundledSkus</collectionReference>
@@ -3590,7 +3540,7 @@
     <decisions>
         <name>Action_Type</name>
         <label>Action Type</label>
-        <locationX>7847</locationX>
+        <locationX>7353</locationX>
         <locationY>5288</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -3702,7 +3652,7 @@
     <decisions>
         <name>Add_to_Selected_Opp</name>
         <label>Add to Selected Opp</label>
-        <locationX>7715</locationX>
+        <locationX>7221</locationX>
         <locationY>17948</locationY>
         <defaultConnector>
             <targetReference>Get_Open_Child_Opportunity</targetReference>
@@ -3727,8 +3677,8 @@
     <decisions>
         <name>Are_Add_On_Products_Found</name>
         <label>Are Add-On Products Found?</label>
-        <locationX>6191</locationX>
-        <locationY>6836</locationY>
+        <locationX>5697</locationX>
+        <locationY>6944</locationY>
         <defaultConnector>
             <targetReference>Set_No_Add_Ons_Found_Variable</targetReference>
         </defaultConnector>
@@ -3777,8 +3727,8 @@
     <decisions>
         <name>Are_Main_Products_Available</name>
         <label>Are Main Products Available?</label>
-        <locationX>7042</locationX>
-        <locationY>10892</locationY>
+        <locationX>6386</locationX>
+        <locationY>10592</locationY>
         <defaultConnector>
             <targetReference>No_Main_Products_Found_Screen</targetReference>
         </defaultConnector>
@@ -3803,7 +3753,7 @@
     <decisions>
         <name>Are_Non_Parntership_Lifetime_Product_Sku_Promos_Found</name>
         <label>Are Non-Parntership Lifetime Product Sku Promos Found?</label>
-        <locationX>10966</locationX>
+        <locationX>9978</locationX>
         <locationY>10760</locationY>
         <defaultConnector>
             <targetReference>Select_Promotion_Screen</targetReference>
@@ -3828,7 +3778,7 @@
     <decisions>
         <name>Are_Non_Partnership_Promos_Found</name>
         <label>Are Non-Partnership Promos Found?</label>
-        <locationX>10966</locationX>
+        <locationX>9978</locationX>
         <locationY>10160</locationY>
         <defaultConnector>
             <targetReference>Get_Non_Parntership_Lifetime_Product_Sku_Promos</targetReference>
@@ -3878,7 +3828,7 @@
     <decisions>
         <name>Are_Promotions_Edited</name>
         <label>Are Promotions Edited?</label>
-        <locationX>12520</locationX>
+        <locationX>11532</locationX>
         <locationY>12068</locationY>
         <defaultConnector>
             <targetReference>Copy_1_of_Add_Selected_Promotion_SKUs_to_Collection2</targetReference>
@@ -3954,7 +3904,7 @@
     <decisions>
         <name>Bundle_SKU_Product_Match</name>
         <label>Bundle SKU Product Match</label>
-        <locationX>8375</locationX>
+        <locationX>7881</locationX>
         <locationY>20888</locationY>
         <defaultConnector>
             <targetReference>Apply_Bundle_Attributes_Sub_Loop</targetReference>
@@ -3979,7 +3929,7 @@
     <decisions>
         <name>Bundles_on_Opportunity</name>
         <label>Bundles on Opportunity?</label>
-        <locationX>7847</locationX>
+        <locationX>7353</locationX>
         <locationY>1772</locationY>
         <defaultConnector>
             <targetReference>Opportunity_SKUs_Exist</targetReference>
@@ -4004,7 +3954,7 @@
     <decisions>
         <name>Check_Discount_Limit</name>
         <label>Check Discount Limit</label>
-        <locationX>14830</locationX>
+        <locationX>13842</locationX>
         <locationY>12734</locationY>
         <defaultConnector>
             <targetReference>SKU_Product_Promo_Match_Loop</targetReference>
@@ -4043,7 +3993,7 @@
     <decisions>
         <name>Check_if_Parent_Exists</name>
         <label>Check if Parent Exists</label>
-        <locationX>7055</locationX>
+        <locationX>6561</locationX>
         <locationY>16568</locationY>
         <defaultConnector>
             <targetReference>Get_Parent_Opportunity_Record_Type</targetReference>
@@ -4083,7 +4033,7 @@
     <decisions>
         <name>Check_Override_Duration</name>
         <label>Check Override Duration</label>
-        <locationX>14478</locationX>
+        <locationX>13490</locationX>
         <locationY>12626</locationY>
         <defaultConnector>
             <targetReference>Set_Duration_Override_Validation_Variable_to_True</targetReference>
@@ -4231,7 +4181,7 @@
     <decisions>
         <name>Contract_SKU_Found</name>
         <label>Contract SKU Found?</label>
-        <locationX>14808</locationX>
+        <locationX>13820</locationX>
         <locationY>6260</locationY>
         <defaultConnector>
             <targetReference>Assign_SKU_Product_to_Aggregate_Collection</targetReference>
@@ -4256,7 +4206,7 @@
     <decisions>
         <name>Contract_SKUs_Found_0</name>
         <label>Contract SKUs Found?</label>
-        <locationX>7715</locationX>
+        <locationX>7221</locationX>
         <locationY>4112</locationY>
         <defaultConnector>
             <targetReference>Product_Selection</targetReference>
@@ -4281,8 +4231,8 @@
     <decisions>
         <name>dec_Add_on_Selection</name>
         <label>Add-on Selection Made?</label>
-        <locationX>6186</locationX>
-        <locationY>8528</locationY>
+        <locationX>5692</locationX>
+        <locationY>8228</locationY>
         <defaultConnector>
             <isGoTo>true</isGoTo>
             <targetReference>Get_Opportunity</targetReference>
@@ -4411,8 +4361,8 @@
     <decisions>
         <name>dec_Brand_Screen_Action</name>
         <label>Brand Screen Action</label>
-        <locationX>6382</locationX>
-        <locationY>8960</locationY>
+        <locationX>5726</locationX>
+        <locationY>8660</locationY>
         <defaultConnector>
             <targetReference>Check_if_Opportunity_Already_Has_Brand_Loop</targetReference>
         </defaultConnector>
@@ -4467,8 +4417,8 @@
     <decisions>
         <name>dec_Check_if_Add_On_Already_Exists_on_Opportunity</name>
         <label>Check if Add On Already Exists on Opportunity</label>
-        <locationX>5460</locationX>
-        <locationY>10520</locationY>
+        <locationX>4978</locationX>
+        <locationY>10244</locationY>
         <defaultConnector>
             <targetReference>Check_for_Existing_Add_On_Loop</targetReference>
         </defaultConnector>
@@ -4518,8 +4468,8 @@
     <decisions>
         <name>dec_Deleted_Opportunity_SKUs</name>
         <label>Deleted Opportunity SKUs?</label>
-        <locationX>8054</locationX>
-        <locationY>8960</locationY>
+        <locationX>7266</locationX>
+        <locationY>8660</locationY>
         <defaultConnector>
             <targetReference>Set_Variables</targetReference>
         </defaultConnector>
@@ -4541,35 +4491,10 @@
         </rules>
     </decisions>
     <decisions>
-        <name>dec_Does_Edited_Product_Match_Selected_Product</name>
-        <label>Does Edited Product Match Selected Product</label>
-        <locationX>5726</locationX>
-        <locationY>9560</locationY>
-        <defaultConnector>
-            <targetReference>Edited_Addons_Loop</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>No</defaultConnectorLabel>
-        <rules>
-            <name>dec_Does_Edited_Product_Match_Selected_Product_Yes</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>Selected_Add_On_Loop.Id</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <elementReference>Edited_Addons_Loop.Id</elementReference>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Add_Edited_Addon_Id_to_Collection</targetReference>
-            </connector>
-            <label>Yes</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>dec_Does_Opportunity_Already_have_Brand_Sku</name>
         <label>Does Opportunity Already have Brand Sku?</label>
-        <locationX>7350</locationX>
-        <locationY>9176</locationY>
+        <locationX>6694</locationX>
+        <locationY>8876</locationY>
         <defaultConnector>
             <targetReference>Check_if_Opportunity_Already_Has_Brand_Loop</targetReference>
         </defaultConnector>
@@ -4615,8 +4540,8 @@
     <decisions>
         <name>dec_Is_Addon_Edited</name>
         <label>Is Addon Edited?</label>
-        <locationX>5240</locationX>
-        <locationY>8744</locationY>
+        <locationX>4758</locationX>
+        <locationY>8444</locationY>
         <defaultConnector>
             <targetReference>Is_Addon_Selected</targetReference>
         </defaultConnector>
@@ -4640,8 +4565,8 @@
     <decisions>
         <name>dec_Is_Edited_Addon_Quantity_Locked</name>
         <label>Is Edited Addon Quantity Locked?</label>
-        <locationX>5286</locationX>
-        <locationY>8960</locationY>
+        <locationX>4846</locationX>
+        <locationY>8660</locationY>
         <defaultConnector>
             <targetReference>Check_for_Quantity_Lock_on_Edited_Addon_Loop</targetReference>
         </defaultConnector>
@@ -4665,7 +4590,7 @@
     <decisions>
         <name>dec_Is_Lifetime_Promo_Already_Added</name>
         <label>Is Lifetime Promo Already Added?</label>
-        <locationX>15226</locationX>
+        <locationX>14238</locationX>
         <locationY>13508</locationY>
         <defaultConnector>
             <targetReference>Set_Opportunity_SKU_Updates_Lifetime</targetReference>
@@ -4690,7 +4615,7 @@
     <decisions>
         <name>dec_Is_Lifetime_Promo_Selected</name>
         <label>Is Lifetime Promo Selected?</label>
-        <locationX>12850</locationX>
+        <locationX>11862</locationX>
         <locationY>11552</locationY>
         <defaultConnector>
             <targetReference>Short_Term_Promo_Type</targetReference>
@@ -4715,7 +4640,7 @@
     <decisions>
         <name>dec_Is_Short_Term_Promo_Already_Added</name>
         <label>Is Short Term Promo Already Added?</label>
-        <locationX>14698</locationX>
+        <locationX>13710</locationX>
         <locationY>13508</locationY>
         <defaultConnector>
             <targetReference>Set_Opportunity_SKU_Updates_Short_Term</targetReference>
@@ -4766,8 +4691,8 @@
     <decisions>
         <name>dec_Main_Product_Actions</name>
         <label>Main Product Actions</label>
-        <locationX>7361</locationX>
-        <locationY>8744</locationY>
+        <locationX>6589</locationX>
+        <locationY>8444</locationY>
         <defaultConnector>
             <targetReference>dec_Main_Product_Selected</targetReference>
         </defaultConnector>
@@ -4791,7 +4716,7 @@
     <decisions>
         <name>dec_Main_Product_for_Add_Ons_Actions</name>
         <label>Main Product for Add Ons Actions</label>
-        <locationX>5784</locationX>
+        <locationX>5290</locationX>
         <locationY>6512</locationY>
         <defaultConnector>
             <targetReference>Set_Add_On_Filtering_Variables</targetReference>
@@ -4832,8 +4757,8 @@
     <decisions>
         <name>dec_Main_Product_Quantity_is_Locked</name>
         <label>Main Product Quantity is Locked?</label>
-        <locationX>8010</locationX>
-        <locationY>9884</locationY>
+        <locationX>7354</locationX>
+        <locationY>9584</locationY>
         <defaultConnector>
             <targetReference>Edited_Main_Product_Quantity_Locked_Loop</targetReference>
         </defaultConnector>
@@ -4857,8 +4782,8 @@
     <decisions>
         <name>dec_Main_Product_Selected</name>
         <label>Main Product Selected?</label>
-        <locationX>8340</locationX>
-        <locationY>8852</locationY>
+        <locationX>7452</locationX>
+        <locationY>8552</locationY>
         <defaultConnector>
             <targetReference>Set_No_Main_Product_Selected_Variable</targetReference>
         </defaultConnector>
@@ -4889,8 +4814,8 @@
     <decisions>
         <name>dec_Opportunity_SKUs_to_Delete_Found</name>
         <label>Opportunity SKUs to Delete Found?</label>
-        <locationX>7900</locationX>
-        <locationY>9176</locationY>
+        <locationX>7112</locationX>
+        <locationY>8876</locationY>
         <defaultConnector>
             <targetReference>Set_Variables</targetReference>
         </defaultConnector>
@@ -4914,7 +4839,7 @@
     <decisions>
         <name>dec_Promo_Action</name>
         <label>Promo Action</label>
-        <locationX>11241</locationX>
+        <locationX>10253</locationX>
         <locationY>5912</locationY>
         <defaultConnector>
             <targetReference>Get_Existing_Opportunity_Promos</targetReference>
@@ -4940,8 +4865,8 @@
     <decisions>
         <name>dec_Required_Products_Action</name>
         <label>Required Products Action</label>
-        <locationX>7858</locationX>
-        <locationY>11942</locationY>
+        <locationX>7070</locationX>
+        <locationY>11558</locationY>
         <defaultConnector>
             <targetReference>Required_Products_Loop</targetReference>
         </defaultConnector>
@@ -4966,7 +4891,7 @@
     <decisions>
         <name>dec_Select_Promo_Action</name>
         <label>Select Promo Action</label>
-        <locationX>11134</locationX>
+        <locationX>10146</locationX>
         <locationY>11444</locationY>
         <defaultConnector>
             <targetReference>dec_Is_Lifetime_Promo_Selected</targetReference>
@@ -4994,56 +4919,6 @@
                 <targetReference>Reset_Promo_Variables</targetReference>
             </connector>
             <label>Back</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>dec_Was_Selected_Main_Product_Added_to_Collection</name>
-        <label>Was Selected Main Product Added to Collection?</label>
-        <locationX>7790</locationX>
-        <locationY>10826</locationY>
-        <defaultConnector>
-            <targetReference>Add_Selected_Main_Product_to_Collection</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>No</defaultConnectorLabel>
-        <rules>
-            <name>dec_Was_Selected_Main_Product_Added_to_Collection_Yes</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>var_Edited_Main_Product_Added</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Reset_Edited_Main_Product_Added_Variable</targetReference>
-            </connector>
-            <label>Yes</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>dec_Was_Selected_Product_Edited</name>
-        <label>Was Selected Product Edited?</label>
-        <locationX>5506</locationX>
-        <locationY>9944</locationY>
-        <defaultConnector>
-            <targetReference>Add_Selected_Product_to_Collection</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>No</defaultConnectorLabel>
-        <rules>
-            <name>dec_Was_Selected_Product_Edited_Yes</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>var_Edited_Record_Added</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Reset_Edited_Addon_Variable</targetReference>
-            </connector>
-            <label>Yes</label>
         </rules>
     </decisions>
     <decisions>
@@ -5149,7 +5024,7 @@
     <decisions>
         <name>Do_Partnership_Discounts_Exist</name>
         <label>Do Partnership Discounts Exist?</label>
-        <locationX>10807</locationX>
+        <locationX>9819</locationX>
         <locationY>8468</locationY>
         <defaultConnector>
             <targetReference>Get_All_Non_Partnership_Lifetime_Promotions</targetReference>
@@ -5174,7 +5049,7 @@
     <decisions>
         <name>Does_Open_Child_Opportunity_Exist</name>
         <label>Does Open Child Opportunity Exist?</label>
-        <locationX>7869</locationX>
+        <locationX>7375</locationX>
         <locationY>18506</locationY>
         <defaultConnector>
             <targetReference>Get_Opportunity_Record_Types</targetReference>
@@ -5199,7 +5074,7 @@
     <decisions>
         <name>Does_Opportunity_have_a_Partnership</name>
         <label>Does Opportunity have a Partnership?</label>
-        <locationX>10966</locationX>
+        <locationX>9978</locationX>
         <locationY>8252</locationY>
         <defaultConnector>
             <targetReference>Get_All_Non_Partnership_Lifetime_Promotions</targetReference>
@@ -5224,7 +5099,7 @@
     <decisions>
         <name>Does_Product_Match_Opportunity_Promo</name>
         <label>Does Product Match Opportunity Promo?</label>
-        <locationX>8507</locationX>
+        <locationX>8013</locationX>
         <locationY>22688</locationY>
         <defaultConnector>
             <targetReference>Opportunity_Promos_Loop</targetReference>
@@ -5249,7 +5124,7 @@
     <decisions>
         <name>Does_SKU_Product_have_Record_Type_Override</name>
         <label>Does SKU Product have Record Type Override?</label>
-        <locationX>8067</locationX>
+        <locationX>7573</locationX>
         <locationY>15560</locationY>
         <defaultConnector>
             <targetReference>Assign_Brand_to_Brand_Collection</targetReference>
@@ -5281,10 +5156,10 @@
     <decisions>
         <name>Grandfathered1</name>
         <label>Grandfathered?</label>
-        <locationX>6191</locationX>
-        <locationY>7136</locationY>
+        <locationX>5697</locationX>
+        <locationY>7244</locationY>
         <defaultConnector>
-            <targetReference>Update_Add_On_Quantity_Loop</targetReference>
+            <targetReference>Sort_Display_Products_Collection</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -5313,10 +5188,10 @@
     <decisions>
         <name>Grandfathered_Add_Ons_Found</name>
         <label>Grandfathered Add Ons Found?</label>
-        <locationX>6037</locationX>
-        <locationY>7352</locationY>
+        <locationX>5543</locationX>
+        <locationY>7460</locationY>
         <defaultConnector>
-            <targetReference>Update_Add_On_Quantity_Loop</targetReference>
+            <targetReference>Sort_Display_Products_Collection</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -5338,8 +5213,8 @@
     <decisions>
         <name>Grandfathered_Products_Found</name>
         <label>Grandfathered Products Found?</label>
-        <locationX>6888</locationX>
-        <locationY>9992</locationY>
+        <locationX>6232</locationX>
+        <locationY>9692</locationY>
         <defaultConnector>
             <targetReference>Set_Quantity_on_Filtered_Products_Loop</targetReference>
         </defaultConnector>
@@ -5363,8 +5238,8 @@
     <decisions>
         <name>Has_Add_Ons</name>
         <label>Has Add Ons?</label>
-        <locationX>8054</locationX>
-        <locationY>12626</locationY>
+        <locationX>7266</locationX>
+        <locationY>12242</locationY>
         <defaultConnector>
             <targetReference>Get_Opportunity</targetReference>
         </defaultConnector>
@@ -5388,7 +5263,7 @@
     <decisions>
         <name>Has_Opportunity_Promos</name>
         <label>Has Opportunity Promos?</label>
-        <locationX>7847</locationX>
+        <locationX>7353</locationX>
         <locationY>3188</locationY>
         <defaultConnector>
             <targetReference>Get_Contract_Subscriptions_0</targetReference>
@@ -5413,7 +5288,7 @@
     <decisions>
         <name>Have_Opportunity_Promos</name>
         <label>Have Opportunity Promos?</label>
-        <locationX>7847</locationX>
+        <locationX>7353</locationX>
         <locationY>23264</locationY>
         <defaultConnector>
             <targetReference>Navigate_to_New_Parent_Opportunity</targetReference>
@@ -5463,7 +5338,7 @@
     <decisions>
         <name>Is_Active_Contract_Found_0</name>
         <label>Is Active Contract Found?</label>
-        <locationX>7847</locationX>
+        <locationX>7353</locationX>
         <locationY>3596</locationY>
         <defaultConnector>
             <targetReference>Product_Selection</targetReference>
@@ -5488,8 +5363,8 @@
     <decisions>
         <name>Is_Addon_Selected</name>
         <label>Is Addon Selected?</label>
-        <locationX>5414</locationX>
-        <locationY>8852</locationY>
+        <locationX>4758</locationX>
+        <locationY>9536</locationY>
         <defaultConnector>
             <targetReference>Check_for_Existing_Add_On_Loop</targetReference>
         </defaultConnector>
@@ -5513,7 +5388,7 @@
     <decisions>
         <name>Is_Bundle_Selection</name>
         <label>Is Bundle Selection</label>
-        <locationX>7847</locationX>
+        <locationX>7353</locationX>
         <locationY>20564</locationY>
         <defaultConnector>
             <targetReference>Create_Opportunity_SKU_Records</targetReference>
@@ -5538,7 +5413,7 @@
     <decisions>
         <name>Is_Contract_SKU_a_Main_Product_Type_0</name>
         <label>Is Contract SKU a Main Product Type?</label>
-        <locationX>7871</locationX>
+        <locationX>7377</locationX>
         <locationY>4328</locationY>
         <defaultConnector>
             <targetReference>Is_SKU_Product_Grandfathered</targetReference>
@@ -5564,7 +5439,7 @@
         <description>Checks if current loop item&#39;s brand is the same as Opportunity that started transaction in order to skip creating an Opportunity for the brand.</description>
         <name>Is_Current_Opportunity_Brand</name>
         <label>Is Current Opportunity Brand?</label>
-        <locationX>8199</locationX>
+        <locationX>7705</locationX>
         <locationY>17516</locationY>
         <defaultConnector>
             <targetReference>Set_Opportunity_Id_Variable_to_This_Opportunity</targetReference>
@@ -5589,8 +5464,8 @@
     <decisions>
         <name>Is_Grandfathered</name>
         <label>Is Grandfathered?</label>
-        <locationX>7042</locationX>
-        <locationY>9776</locationY>
+        <locationX>6386</locationX>
+        <locationY>9476</locationY>
         <defaultConnector>
             <targetReference>Set_Quantity_on_Filtered_Products_Loop</targetReference>
         </defaultConnector>
@@ -5621,7 +5496,7 @@
     <decisions>
         <name>Is_Lifetime_Selected</name>
         <label>Is Lifetime Discount Selected?</label>
-        <locationX>11134</locationX>
+        <locationX>10146</locationX>
         <locationY>8144</locationY>
         <defaultConnector>
             <targetReference>Select_Promotion_Screen</targetReference>
@@ -5646,7 +5521,7 @@
     <decisions>
         <name>Is_Parent_Opportunity</name>
         <label>Is Parent Opportunity?</label>
-        <locationX>7847</locationX>
+        <locationX>7353</locationX>
         <locationY>350</locationY>
         <defaultConnector>
             <targetReference>Add_This_Opportunity_ID_to_Filter_Collection</targetReference>
@@ -5671,7 +5546,7 @@
     <decisions>
         <name>Is_Short_Term_Selected</name>
         <label>Is Short-Term Selected?</label>
-        <locationX>13328</locationX>
+        <locationX>12340</locationX>
         <locationY>6620</locationY>
         <defaultConnector>
             <isGoTo>true</isGoTo>
@@ -5697,7 +5572,7 @@
     <decisions>
         <name>Is_SKU_Main_Product</name>
         <label>Is SKU Main Product?</label>
-        <locationX>6342</locationX>
+        <locationX>5848</locationX>
         <locationY>5720</locationY>
         <defaultConnector>
             <targetReference>Assign_Main_Product_Loop</targetReference>
@@ -5722,7 +5597,7 @@
     <decisions>
         <name>Is_SKU_Product_Grandfathered</name>
         <label>Is SKU Product Grandfathered?</label>
-        <locationX>7871</locationX>
+        <locationX>7377</locationX>
         <locationY>4628</locationY>
         <defaultConnector>
             <targetReference>Contract_SKUs_Assignment_Loop_0</targetReference>
@@ -5772,7 +5647,7 @@
     <decisions>
         <name>Lifetime_Promotions_Found</name>
         <label>Lifetime Promotions Found?</label>
-        <locationX>10665</locationX>
+        <locationX>9677</locationX>
         <locationY>9392</locationY>
         <defaultConnector>
             <targetReference>Get_All_Non_Partnership_Lifetime_Promotions</targetReference>
@@ -5797,7 +5672,7 @@
     <decisions>
         <name>Main_Products_Exist</name>
         <label>Main Products Exist?</label>
-        <locationX>6186</locationX>
+        <locationX>5692</locationX>
         <locationY>6296</locationY>
         <defaultConnector>
             <targetReference>Set_Display_Products_Collection2</targetReference>
@@ -5822,7 +5697,7 @@
     <decisions>
         <name>Main_Products_Exist_5</name>
         <label>Main Products Exist?</label>
-        <locationX>15171</locationX>
+        <locationX>14183</locationX>
         <locationY>5612</locationY>
         <defaultConnector>
             <targetReference>No_Products_to_Upgrade_Screen</targetReference>
@@ -5847,7 +5722,7 @@
     <decisions>
         <name>Multiple_Brands</name>
         <label>Multiple Brands?</label>
-        <locationX>7847</locationX>
+        <locationX>7353</locationX>
         <locationY>16460</locationY>
         <defaultConnector>
             <targetReference>Single_Brand_Product_Loop</targetReference>
@@ -5886,7 +5761,7 @@
     <decisions>
         <name>Navigate_to_New_Parent_Opportunity</name>
         <label>Navigate to New Parent Opportunity?</label>
-        <locationX>7847</locationX>
+        <locationX>7353</locationX>
         <locationY>23762</locationY>
         <defaultConnectorLabel>No</defaultConnectorLabel>
         <rules>
@@ -5908,7 +5783,7 @@
     <decisions>
         <name>Open_Opp_Found</name>
         <label>Open Opp Found?</label>
-        <locationX>7869</locationX>
+        <locationX>7375</locationX>
         <locationY>17732</locationY>
         <defaultConnector>
             <targetReference>Get_Open_Child_Opportunity</targetReference>
@@ -5933,7 +5808,7 @@
     <decisions>
         <name>Open_Opportunities_Exist</name>
         <label>Open Opportunities Exist?</label>
-        <locationX>7847</locationX>
+        <locationX>7353</locationX>
         <locationY>956</locationY>
         <defaultConnector>
             <targetReference>Get_Opportunity_SKUs</targetReference>
@@ -5958,7 +5833,7 @@
     <decisions>
         <name>Opportunity_Promos_Exist2</name>
         <label>Opportunity Promos Exist?</label>
-        <locationX>13328</locationX>
+        <locationX>12340</locationX>
         <locationY>6128</locationY>
         <defaultConnector>
             <targetReference>Is_Short_Term_Selected</targetReference>
@@ -6005,7 +5880,7 @@
     <decisions>
         <name>Opportunity_SKUs_Exist</name>
         <label>Opportunity SKUs Exist?</label>
-        <locationX>7847</locationX>
+        <locationX>7353</locationX>
         <locationY>2372</locationY>
         <defaultConnector>
             <targetReference>Get_All_Opportunity_SKUs</targetReference>
@@ -6055,7 +5930,7 @@
     <decisions>
         <name>Opportunity_SKUs_Found</name>
         <label>Opportunity SKUs Found?</label>
-        <locationX>6186</locationX>
+        <locationX>5692</locationX>
         <locationY>5504</locationY>
         <defaultConnector>
             <targetReference>Get_Main_Products_0</targetReference>
@@ -6080,7 +5955,7 @@
     <decisions>
         <name>Opportunity_SKUs_Found_2</name>
         <label>Opportunity SKUs Found</label>
-        <locationX>7847</locationX>
+        <locationX>7353</locationX>
         <locationY>21764</locationY>
         <defaultConnector>
             <targetReference>Create_Opportunity_Promos_Loop</targetReference>
@@ -6130,7 +6005,7 @@
     <decisions>
         <name>Other_Main_Products_Found</name>
         <label>Other Main Products Found?</label>
-        <locationX>14962</locationX>
+        <locationX>13974</locationX>
         <locationY>5936</locationY>
         <defaultConnector>
             <targetReference>No_Other_Products_Found_Screen</targetReference>
@@ -6155,7 +6030,7 @@
     <decisions>
         <name>Product_Match_Brand</name>
         <label>Product Match Brand?</label>
-        <locationX>8771</locationX>
+        <locationX>8277</locationX>
         <locationY>19412</locationY>
         <defaultConnector>
             <targetReference>Product_Loop</targetReference>
@@ -6187,7 +6062,7 @@
     <decisions>
         <name>Product_Sku_Promotions_Found</name>
         <label>Product Sku Promotions Found?</label>
-        <locationX>11134</locationX>
+        <locationX>10146</locationX>
         <locationY>7352</locationY>
         <defaultConnector>
             <targetReference>Short_Term_Discount_Type2</targetReference>
@@ -6212,8 +6087,8 @@
     <decisions>
         <name>Products_Edited</name>
         <label>Products Edited?</label>
-        <locationX>8054</locationX>
-        <locationY>9668</locationY>
+        <locationX>7266</locationX>
+        <locationY>9368</locationY>
         <defaultConnector>
             <targetReference>Products_Selected</targetReference>
         </defaultConnector>
@@ -6237,8 +6112,8 @@
     <decisions>
         <name>Products_Selected</name>
         <label>Products Selected?</label>
-        <locationX>8318</locationX>
-        <locationY>9776</locationY>
+        <locationX>7266</locationX>
+        <locationY>10526</locationY>
         <defaultConnector>
             <targetReference>Get_Required_SKU_Product_Records</targetReference>
         </defaultConnector>
@@ -6262,7 +6137,7 @@
     <decisions>
         <name>Promotion_Match</name>
         <label>Promotion Match?</label>
-        <locationX>8859</locationX>
+        <locationX>8365</locationX>
         <locationY>19736</locationY>
         <defaultConnector>
             <targetReference>Find_Promotion_Loop</targetReference>
@@ -6359,8 +6234,8 @@
     <decisions>
         <name>Required_Products_Found</name>
         <label>Required Products Found?</label>
-        <locationX>8054</locationX>
-        <locationY>11726</locationY>
+        <locationX>7266</locationX>
+        <locationY>11342</locationY>
         <defaultConnector>
             <targetReference>Get_Add_Ons_and_Services_for_Main_Product</targetReference>
         </defaultConnector>
@@ -6384,7 +6259,7 @@
     <decisions>
         <name>Short_Term_Discount_Type2</name>
         <label>Short-Term Discount Type</label>
-        <locationX>11134</locationX>
+        <locationX>10146</locationX>
         <locationY>7844</locationY>
         <defaultConnector>
             <targetReference>Sales_Approved_Promo_Selected</targetReference>
@@ -6431,7 +6306,7 @@
     <decisions>
         <name>Short_Term_or_Lifetime</name>
         <label>Short-Term or Lifetime</label>
-        <locationX>14962</locationX>
+        <locationX>13974</locationX>
         <locationY>13400</locationY>
         <defaultConnector>
             <targetReference>dec_Is_Lifetime_Promo_Already_Added</targetReference>
@@ -6521,7 +6396,7 @@
     <decisions>
         <name>Short_Term_Promo_Type</name>
         <label>Short-Term Promo Type</label>
-        <locationX>12850</locationX>
+        <locationX>11862</locationX>
         <locationY>11852</locationY>
         <defaultConnector>
             <targetReference>Selected_Promos_Loop</targetReference>
@@ -6586,7 +6461,7 @@
     <decisions>
         <name>Short_Term_Promotions_Found</name>
         <label>Short Term Promotions Found?</label>
-        <locationX>12509</locationX>
+        <locationX>11521</locationX>
         <locationY>6836</locationY>
         <defaultConnector>
             <isGoTo>true</isGoTo>
@@ -6612,7 +6487,7 @@
     <decisions>
         <name>Single_Brand_Promotion_Match</name>
         <label>Single Brand Promotion Match?</label>
-        <locationX>9299</locationX>
+        <locationX>8805</locationX>
         <locationY>17000</locationY>
         <defaultConnector>
             <targetReference>Single_Brand_Find_Promotion_Loop</targetReference>
@@ -6637,7 +6512,7 @@
     <decisions>
         <name>SKU_Product_and_Promotion_SKU_Product_Match</name>
         <label>SKU Product and Promotion SKU Product Match</label>
-        <locationX>15292</locationX>
+        <locationX>14304</locationX>
         <locationY>13292</locationY>
         <defaultConnector>
             <targetReference>SKU_Product_Promo_Match_Loop</targetReference>
@@ -6708,6 +6583,11 @@
         <picklistObject>Promotions__c</picklistObject>
     </dynamicChoiceSets>
     <environments>Default</environments>
+    <formulas>
+        <name>forToday</name>
+        <dataType>Date</dataType>
+        <expression>today()</expression>
+    </formulas>
     <formulas>
         <name>fxBrandisGrandfathered</name>
         <dataType>Boolean</dataType>
@@ -6835,7 +6715,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Add_Non_Partnership_Lifetime_Product_Sku_Promos_to_Display_Collection</name>
         <label>Add Non-Partnership Lifetime Product Sku Promos to Display Collection</label>
-        <locationX>10858</locationX>
+        <locationX>9870</locationX>
         <locationY>10868</locationY>
         <collectionReference>Get_Non_Parntership_Lifetime_Product_Sku_Promos</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -6849,8 +6729,8 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Add_Selected_Add_On_and_Service_Ids_to_Selected_Product_Id_Collection</name>
         <label>Add Selected Add On and Service Ids to Selected Product Id Collection</label>
-        <locationX>5282</locationX>
-        <locationY>9068</locationY>
+        <locationX>4626</locationX>
+        <locationY>9752</locationY>
         <collectionReference>collSelectedProducts</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -6863,7 +6743,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Apply_Bundle_Attributes_Loop</name>
         <label>Apply Bundle Attributes Loop</label>
-        <locationX>7715</locationX>
+        <locationX>7221</locationX>
         <locationY>20672</locationY>
         <collectionReference>collOpportunitySKUs</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -6877,7 +6757,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Apply_Bundle_Attributes_Sub_Loop</name>
         <label>Apply Bundle Attributes Sub-Loop</label>
-        <locationX>8155</locationX>
+        <locationX>7661</locationX>
         <locationY>20780</locationY>
         <collectionReference>Get_Bundle_SKU_Products</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -6891,7 +6771,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Assign_Main_Product_Loop</name>
         <label>Assign Main Product Loop</label>
-        <locationX>6122</locationX>
+        <locationX>5628</locationX>
         <locationY>5612</locationY>
         <collectionReference>Get_Existing_Opportunity_SKUs</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -6905,7 +6785,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Brand_Count_Loop</name>
         <label>Brand Count Loop</label>
-        <locationX>7847</locationX>
+        <locationX>7353</locationX>
         <locationY>15452</locationY>
         <collectionReference>collAggregateSelectedProducts</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -6919,7 +6799,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Brand_Loop</name>
         <label>Brand Loop</label>
-        <locationX>7055</locationX>
+        <locationX>6561</locationX>
         <locationY>17300</locationY>
         <collectionReference>varSelectedBrands</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -6933,7 +6813,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Build_All_Opp_SKU_Id_Loop</name>
         <label>Build All Opp SKU Id Loop</label>
-        <locationX>11241</locationX>
+        <locationX>10253</locationX>
         <locationY>5396</locationY>
         <collectionReference>Get_All_Opportunity_SKUs</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -6947,8 +6827,8 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Build_Required_SKU_Product_Id_Collection_Loop</name>
         <label>Build Required SKU Product Id Collection Loop</label>
-        <locationX>8054</locationX>
-        <locationY>11318</locationY>
+        <locationX>7266</locationX>
+        <locationY>10934</locationY>
         <collectionReference>Get_Required_SKU_Product_Records</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -6975,8 +6855,8 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Check_for_Existing_Add_On_Loop</name>
         <label>Check for Existing Add On Loop</label>
-        <locationX>5240</locationX>
-        <locationY>10412</locationY>
+        <locationX>4758</locationX>
+        <locationY>10136</locationY>
         <collectionReference>Get_All_Opportunity_SKUs</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -6989,22 +6869,22 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Check_for_Quantity_Lock_on_Edited_Addon_Loop</name>
         <label>Check for Quantity Lock on Edited Addon Loop</label>
-        <locationX>5066</locationX>
-        <locationY>8852</locationY>
+        <locationX>4626</locationX>
+        <locationY>8552</locationY>
         <collectionReference>dtAddOnsAndServices.outputEditedRows</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
             <targetReference>dec_Is_Edited_Addon_Quantity_Locked</targetReference>
         </nextValueConnector>
         <noMoreValuesConnector>
-            <targetReference>Selected_Add_On_Loop</targetReference>
+            <targetReference>Add_Edited_Addon_to_Collection</targetReference>
         </noMoreValuesConnector>
     </loops>
     <loops>
         <name>Check_if_Opportunity_Already_Has_Brand_Loop</name>
         <label>Check if Opportunity Already Has Brand Loop</label>
-        <locationX>7042</locationX>
-        <locationY>9068</locationY>
+        <locationX>6386</locationX>
+        <locationY>8768</locationY>
         <collectionReference>Get_Opportunity_SKUs</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -7017,7 +6897,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Contract_SKUs_Assignment_Loop_0</name>
         <label>Contract SKUs Assignment Loop</label>
-        <locationX>7651</locationX>
+        <locationX>7157</locationX>
         <locationY>4220</locationY>
         <collectionReference>Get_Contract_Line_Items_0</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -7031,7 +6911,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Create_Already_Picked_Products_Collection_Loop</name>
         <label>Create Already Picked Products Collection Loop</label>
-        <locationX>7847</locationX>
+        <locationX>7353</locationX>
         <locationY>2888</locationY>
         <collectionReference>Get_All_Opportunity_SKUs</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -7045,7 +6925,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Create_Opportunity_Promos_Loop</name>
         <label>Create Opportunity Promos Loop</label>
-        <locationX>7847</locationX>
+        <locationX>7353</locationX>
         <locationY>22472</locationY>
         <collectionReference>collOpportunitySKUs</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -7059,7 +6939,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Create_Promotion_Id_Loop</name>
         <label>Create Promotion Id Loop</label>
-        <locationX>11134</locationX>
+        <locationX>10146</locationX>
         <locationY>6944</locationY>
         <collectionReference>Get_Short_Term_Promotions</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -7073,49 +6953,49 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Edited_Addons_Loop</name>
         <label>Edited Addons Loop</label>
-        <locationX>5506</locationX>
-        <locationY>9452</locationY>
+        <locationX>4626</locationX>
+        <locationY>9152</locationY>
         <collectionReference>dtAddOnsAndServices.outputEditedRows</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
-            <targetReference>dec_Does_Edited_Product_Match_Selected_Product</targetReference>
+            <targetReference>Add_Edited_Addon_Id_to_Collection</targetReference>
         </nextValueConnector>
         <noMoreValuesConnector>
-            <targetReference>dec_Was_Selected_Product_Edited</targetReference>
+            <targetReference>Is_Addon_Selected</targetReference>
         </noMoreValuesConnector>
     </loops>
     <loops>
         <name>Edited_Main_Product_Quantity_Locked_Loop</name>
         <label>Edited Main Product Quantity Locked Loop</label>
-        <locationX>7790</locationX>
-        <locationY>9776</locationY>
+        <locationX>7134</locationX>
+        <locationY>9476</locationY>
         <collectionReference>dtMainProducts.outputEditedRows</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
             <targetReference>dec_Main_Product_Quantity_is_Locked</targetReference>
         </nextValueConnector>
         <noMoreValuesConnector>
-            <targetReference>Selected_Main_Product_Loop</targetReference>
+            <targetReference>Add_Edited_Main_Product_to_Selected_Products_Collection</targetReference>
         </noMoreValuesConnector>
     </loops>
     <loops>
         <name>Edited_Main_Products_Loop</name>
         <label>Edited Main Products Loop</label>
-        <locationX>7966</locationX>
-        <locationY>10442</locationY>
+        <locationX>7134</locationX>
+        <locationY>10142</locationY>
         <collectionReference>dtMainProducts.outputEditedRows</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
             <targetReference>Assign_Edited_Product_Ids_to_Collections</targetReference>
         </nextValueConnector>
         <noMoreValuesConnector>
-            <targetReference>Selected_Main_Product_Loop</targetReference>
+            <targetReference>Products_Selected</targetReference>
         </noMoreValuesConnector>
     </loops>
     <loops>
         <name>Existing_Opportunity_Promo_Id_Loop</name>
         <label>Existing Opportunity Promo Id Loop</label>
-        <locationX>13220</locationX>
+        <locationX>12232</locationX>
         <locationY>6236</locationY>
         <collectionReference>Get_Existing_Opportunity_Promos</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -7143,7 +7023,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Find_Promotion_Loop</name>
         <label>Find Promotion Loop</label>
-        <locationX>8639</locationX>
+        <locationX>8145</locationX>
         <locationY>19628</locationY>
         <collectionReference>collAggregatePromotions</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -7157,7 +7037,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Get_Bundle_Ids_Loop</name>
         <label>Get Bundle Ids Loop</label>
-        <locationX>7715</locationX>
+        <locationX>7221</locationX>
         <locationY>1880</locationY>
         <collectionReference>Get_Bundled_Opportunity_SKUs</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -7171,7 +7051,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Lifetime_Partnership_Promos_Loop</name>
         <label>Lifetime Partnership Promos Loop</label>
-        <locationX>10557</locationX>
+        <locationX>9569</locationX>
         <locationY>9500</locationY>
         <collectionReference>Get_All_Related_Lifetime_Promotions</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -7185,7 +7065,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Lifetime_Promotion_Id_Loop</name>
         <label>Lifetime Promotion Id Loop</label>
-        <locationX>10665</locationX>
+        <locationX>9677</locationX>
         <locationY>8984</locationY>
         <collectionReference>Get_Lifetime_Promotions</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -7199,7 +7079,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Non_Parntership_Lifetime_Promos_Loop</name>
         <label>Non-Parntership Lifetime Promos Loop</label>
-        <locationX>10858</locationX>
+        <locationX>9870</locationX>
         <locationY>10268</locationY>
         <collectionReference>Get_All_Non_Partnership_Lifetime_Promotions</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -7213,7 +7093,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Open_Opportunity_Loop</name>
         <label>Open Opportunity Loop</label>
-        <locationX>7739</locationX>
+        <locationX>7245</locationX>
         <locationY>1064</locationY>
         <collectionReference>collOpportunities</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -7227,7 +7107,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Open_Opportunity_SKU_Loop</name>
         <label>Open Opportunity SKU Loop</label>
-        <locationX>7847</locationX>
+        <locationX>7353</locationX>
         <locationY>16052</locationY>
         <collectionReference>Get_Open_Opportunity_SKUs</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -7255,7 +7135,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Opportunity_Promos_Loop</name>
         <label>Opportunity Promos Loop</label>
-        <locationX>8287</locationX>
+        <locationX>7793</locationX>
         <locationY>22580</locationY>
         <collectionReference>collOpportunityPromo</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -7269,7 +7149,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Partnership_Discounts_Loop</name>
         <label>Partnership Discounts Loop</label>
-        <locationX>10665</locationX>
+        <locationX>9677</locationX>
         <locationY>8576</locationY>
         <collectionReference>Get_Partnership_Discounts</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -7283,7 +7163,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Product_Loop</name>
         <label>Product Loop</label>
-        <locationX>8199</locationX>
+        <locationX>7705</locationX>
         <locationY>19196</locationY>
         <collectionReference>collAggregateSelectedProducts</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -7325,8 +7205,8 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Required_Products_Loop</name>
         <label>Required Products Loop</label>
-        <locationX>8034</locationX>
-        <locationY>12050</locationY>
+        <locationX>7246</locationX>
+        <locationY>11666</locationY>
         <collectionReference>Get_Required_SKU_Products</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -7334,34 +7214,6 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
         </nextValueConnector>
         <noMoreValuesConnector>
             <targetReference>Get_Add_Ons_and_Services_for_Main_Product</targetReference>
-        </noMoreValuesConnector>
-    </loops>
-    <loops>
-        <name>Selected_Add_On_Loop</name>
-        <label>Selected Add On Loop</label>
-        <locationX>5066</locationX>
-        <locationY>9344</locationY>
-        <collectionReference>dtAddOnsAndServices.outputSelectedRows</collectionReference>
-        <iterationOrder>Asc</iterationOrder>
-        <nextValueConnector>
-            <targetReference>Edited_Addons_Loop</targetReference>
-        </nextValueConnector>
-        <noMoreValuesConnector>
-            <targetReference>Check_for_Existing_Add_On_Loop</targetReference>
-        </noMoreValuesConnector>
-    </loops>
-    <loops>
-        <name>Selected_Main_Product_Loop</name>
-        <label>Selected Main Product Loop</label>
-        <locationX>7790</locationX>
-        <locationY>10334</locationY>
-        <collectionReference>dtMainProducts.outputSelectedRows</collectionReference>
-        <iterationOrder>Asc</iterationOrder>
-        <nextValueConnector>
-            <targetReference>Edited_Main_Products_Loop</targetReference>
-        </nextValueConnector>
-        <noMoreValuesConnector>
-            <targetReference>dec_Was_Selected_Main_Product_Added_to_Collection</targetReference>
         </noMoreValuesConnector>
     </loops>
     <loops>
@@ -7381,7 +7233,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Selected_Promos_Loop</name>
         <label>Selected Promos Loop</label>
-        <locationX>12850</locationX>
+        <locationX>11862</locationX>
         <locationY>12518</locationY>
         <collectionReference>collSelectedPromotionSkus</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -7395,7 +7247,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Set_Contract_Id_Collection_0</name>
         <label>Set Contract Id Collection</label>
-        <locationX>7715</locationX>
+        <locationX>7221</locationX>
         <locationY>3704</locationY>
         <collectionReference>Get_Contract_Subscriptions_0</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -7409,8 +7261,8 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Set_Quantity_on_Filtered_Products_Loop</name>
         <label>Set Quantity on Filtered Products Loop</label>
-        <locationX>7042</locationX>
-        <locationY>10376</locationY>
+        <locationX>6386</locationX>
+        <locationY>10076</locationY>
         <collectionReference>collFilteredMainProducts</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -7423,7 +7275,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Short_Term_Promot</name>
         <label>Short Term Promotion Loop</label>
-        <locationX>11026</locationX>
+        <locationX>10038</locationX>
         <locationY>7460</locationY>
         <collectionReference>Get_All_Related_Short_Term_Promotions</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -7437,7 +7289,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Single_Brand_Find_Promotion_Loop</name>
         <label>Single Brand Find Promotion Loop</label>
-        <locationX>9079</locationX>
+        <locationX>8585</locationX>
         <locationY>16892</locationY>
         <collectionReference>collAggregatePromotions</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -7451,7 +7303,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>Single_Brand_Product_Loop</name>
         <label>Single Brand Product Loop</label>
-        <locationX>8639</locationX>
+        <locationX>8145</locationX>
         <locationY>16568</locationY>
         <collectionReference>collAggregateSelectedProducts</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -7465,7 +7317,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <loops>
         <name>SKU_Product_Promo_Match_Loop</name>
         <label>SKU Product Promo Match Loop</label>
-        <locationX>14478</locationX>
+        <locationX>13490</locationX>
         <locationY>13184</locationY>
         <collectionReference>Get_All_Opportunity_SKUs</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -7505,23 +7357,9 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
         </noMoreValuesConnector>
     </loops>
     <loops>
-        <name>Update_Add_On_Quantity_Loop</name>
-        <label>Update Add On Quantity Loop</label>
-        <locationX>6191</locationX>
-        <locationY>7736</locationY>
-        <collectionReference>collDisplayProducts</collectionReference>
-        <iterationOrder>Asc</iterationOrder>
-        <nextValueConnector>
-            <targetReference>Set_Add_On_Quantity_to_1</targetReference>
-        </nextValueConnector>
-        <noMoreValuesConnector>
-            <targetReference>Set_Display_Collection</targetReference>
-        </noMoreValuesConnector>
-    </loops>
-    <loops>
         <name>Update_Opportunity_SKUs_to_Parent_Loop</name>
         <label>Update Opportunity SKUs to Parent Loop</label>
-        <locationX>7715</locationX>
+        <locationX>7221</locationX>
         <locationY>21872</locationY>
         <collectionReference>Get_This_Opportunity_s_SKUs</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -7554,7 +7392,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordCreates>
         <name>Create_Brand_Opportuntiy</name>
         <label>Create Brand Opportuntiy</label>
-        <locationX>8001</locationX>
+        <locationX>7507</locationX>
         <locationY>18722</locationY>
         <assignRecordIdToReference>varNewOpportunityId</assignRecordIdToReference>
         <connector>
@@ -7736,7 +7574,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordCreates>
         <name>Create_Opportunity_Promos</name>
         <label>Create Opportunity Promos</label>
-        <locationX>7583</locationX>
+        <locationX>7089</locationX>
         <locationY>23372</locationY>
         <connector>
             <targetReference>Navigate_to_New_Parent_Opportunity</targetReference>
@@ -7749,7 +7587,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordCreates>
         <name>Create_Opportunity_Promos2</name>
         <label>Create Opportunity Promos</label>
-        <locationX>12850</locationX>
+        <locationX>11862</locationX>
         <locationY>14468</locationY>
         <faultConnector>
             <targetReference>Assign_Create_Opportunity_Promos_to_faultObject2</targetReference>
@@ -7759,7 +7597,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordCreates>
         <name>Create_Opportunity_SKU_Records</name>
         <label>Create Opportunity SKU Records</label>
-        <locationX>7847</locationX>
+        <locationX>7353</locationX>
         <locationY>21548</locationY>
         <connector>
             <targetReference>Get_This_Opportunity_s_SKUs</targetReference>
@@ -7772,7 +7610,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordCreates>
         <name>Create_Parent_Opportunity</name>
         <label>Create Parent Opportunity</label>
-        <locationX>7319</locationX>
+        <locationX>6825</locationX>
         <locationY>16892</locationY>
         <connector>
             <targetReference>Update_This_Opportunity</targetReference>
@@ -7816,8 +7654,8 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordDeletes>
         <name>Delete_Opportunity_SKUs3</name>
         <label>Delete Opportunity SKUs</label>
-        <locationX>7768</locationX>
-        <locationY>9284</locationY>
+        <locationX>6980</locationX>
+        <locationY>8984</locationY>
         <connector>
             <targetReference>Set_Variables</targetReference>
         </connector>
@@ -7847,32 +7685,18 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_Add_On_Products</name>
         <label>Get Add-On Products</label>
-        <locationX>6191</locationX>
+        <locationX>5697</locationX>
         <locationY>6728</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Are_Add_On_Products_Found</targetReference>
+            <targetReference>Filter_Addons</targetReference>
         </connector>
-        <filterLogic>1 AND (2 OR 3) AND 4 AND (5 OR 8) AND 6 AND 7 AND 9</filterLogic>
+        <filterLogic>1 AND 2 AND (3 OR 6) AND 4 AND 5 AND 7</filterLogic>
         <filters>
             <field>Product_Sub_Family__c</field>
             <operator>EqualTo</operator>
             <value>
                 <elementReference>varSelectedBrand</elementReference>
-            </value>
-        </filters>
-        <filters>
-            <field>Product_Tier__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>varTier</elementReference>
-            </value>
-        </filters>
-        <filters>
-            <field>Product_Tier__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>N/A</stringValue>
             </value>
         </filters>
         <filters>
@@ -7924,8 +7748,8 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_Add_Ons_and_Services_for_Main_Product</name>
         <label>Get Add Ons and Services for Main Product</label>
-        <locationX>8054</locationX>
-        <locationY>12518</locationY>
+        <locationX>7266</locationX>
+        <locationY>12134</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Has_Add_Ons</targetReference>
@@ -8043,7 +7867,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_All_Non_Partnership_Lifetime_Promotions</name>
         <label>Get All Non Partnership Lifetime Promotions</label>
-        <locationX>10966</locationX>
+        <locationX>9978</locationX>
         <locationY>10052</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -8078,7 +7902,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_All_Opportunity_SKUs</name>
         <label>Get All Opportunity SKUs</label>
-        <locationX>7847</locationX>
+        <locationX>7353</locationX>
         <locationY>2780</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -8126,7 +7950,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
         <connector>
             <targetReference>Reset_Variables</targetReference>
         </connector>
-        <filterLogic>and</filterLogic>
+        <filterLogic>1 AND 2 AND 3 AND ((4 OR 5) OR (6 AND 7 AND 8) OR (9 AND 10 AND 11))</filterLogic>
         <filters>
             <field>Status__c</field>
             <operator>EqualTo</operator>
@@ -8148,6 +7972,62 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
                 <elementReference>coll_Picked_Sku_Product_Ids</elementReference>
             </value>
         </filters>
+        <filters>
+            <field>Activation_Type__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Activation_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Not Date Controlled</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Activation_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Opportunity Created Date</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Activation_Date__c</field>
+            <operator>LessThanOrEqualTo</operator>
+            <value>
+                <elementReference>Get_This_Opportunity.CreatedDate</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Deactivation_Date__c</field>
+            <operator>LessThan</operator>
+            <value>
+                <elementReference>Get_Opportunity.CreatedDate</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Activation_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Today Date</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Activation_Date__c</field>
+            <operator>LessThanOrEqualTo</operator>
+            <value>
+                <elementReference>forToday</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Deactivation_Date__c</field>
+            <operator>LessThan</operator>
+            <value>
+                <elementReference>forToday</elementReference>
+            </value>
+        </filters>
         <object>SKU_Product__c</object>
         <outputReference>collAllProducts</outputReference>
         <queriedFields>Id</queriedFields>
@@ -8167,7 +8047,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_All_Related_Lifetime_Promotions</name>
         <label>Get All Related Lifetime Promotions</label>
-        <locationX>10665</locationX>
+        <locationX>9677</locationX>
         <locationY>9284</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -8202,7 +8082,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_All_Related_Short_Term_Promotions</name>
         <label>Get All Related Short-Term Promotions</label>
-        <locationX>11134</locationX>
+        <locationX>10146</locationX>
         <locationY>7244</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -8273,7 +8153,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
         <description>Get bundled Opportunity SKUs related to Opportunity.</description>
         <name>Get_Bundled_Opportunity_SKUs</name>
         <label>Get Bundled Opportunity SKUs</label>
-        <locationX>7847</locationX>
+        <locationX>7353</locationX>
         <locationY>1556</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -8369,7 +8249,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_Contract_Line_Items_0</name>
         <label>Get Contract Line Items</label>
-        <locationX>7715</locationX>
+        <locationX>7221</locationX>
         <locationY>4004</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -8390,7 +8270,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_Contract_SKU</name>
         <label>Get Contract SKU</label>
-        <locationX>14808</locationX>
+        <locationX>13820</locationX>
         <locationY>6152</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -8418,7 +8298,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_Contract_Subscriptions_0</name>
         <label>Get Contract Subscriptions</label>
-        <locationX>7847</locationX>
+        <locationX>7353</locationX>
         <locationY>3488</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -8446,7 +8326,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_Existing_Opportunity_Promos</name>
         <label>Get Existing Opportunity Promos</label>
-        <locationX>13328</locationX>
+        <locationX>12340</locationX>
         <locationY>6020</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -8481,7 +8361,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_Existing_Opportunity_SKUs</name>
         <label>Get Existing Opportunity SKUs</label>
-        <locationX>6186</locationX>
+        <locationX>5692</locationX>
         <locationY>5396</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -8509,8 +8389,8 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_Grandfathered_Add_On_Products</name>
         <label>Get Grandfathered Add-On Products</label>
-        <locationX>6037</locationX>
-        <locationY>7244</locationY>
+        <locationX>5543</locationX>
+        <locationY>7352</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Grandfathered_Add_Ons_Found</targetReference>
@@ -8579,8 +8459,8 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_Grandfathered_Main_Products</name>
         <label>Get Grandfathered Main Products</label>
-        <locationX>6888</locationX>
-        <locationY>9884</locationY>
+        <locationX>6232</locationX>
+        <locationY>9584</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Grandfathered_Products_Found</targetReference>
@@ -8614,7 +8494,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_Lifetime_Promotions</name>
         <label>Get Lifetime Promotions</label>
-        <locationX>10665</locationX>
+        <locationX>9677</locationX>
         <locationY>8876</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -8656,7 +8536,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_Main_Products</name>
         <label>Get Main Products</label>
-        <locationX>15171</locationX>
+        <locationX>14183</locationX>
         <locationY>5504</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -8677,7 +8557,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_Main_Products_0</name>
         <label>Get Main Products</label>
-        <locationX>6186</locationX>
+        <locationX>5692</locationX>
         <locationY>6188</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -8698,7 +8578,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_Non_Parntership_Lifetime_Product_Sku_Promos</name>
         <label>Get Non-Parntership Lifetime Product Sku Promos</label>
-        <locationX>10966</locationX>
+        <locationX>9978</locationX>
         <locationY>10652</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -8726,7 +8606,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_Open_Child_Opportunities</name>
         <label>Get Open Child Opportunities</label>
-        <locationX>7583</locationX>
+        <locationX>7089</locationX>
         <locationY>566</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -8771,7 +8651,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_Open_Child_Opportunity</name>
         <label>Get Open Child Opportunity</label>
-        <locationX>7869</locationX>
+        <locationX>7375</locationX>
         <locationY>18398</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -8827,7 +8707,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_Open_Opportunities</name>
         <label>Get Open Opportunities</label>
-        <locationX>7869</locationX>
+        <locationX>7375</locationX>
         <locationY>17624</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -8883,7 +8763,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_Open_Opportunity_SKUs</name>
         <label>Get Open Opportunity SKUs</label>
-        <locationX>7847</locationX>
+        <locationX>7353</locationX>
         <locationY>15944</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -8925,7 +8805,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_Opportunity</name>
         <label>Get Opportunity</label>
-        <locationX>7847</locationX>
+        <locationX>7353</locationX>
         <locationY>15344</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -8946,7 +8826,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_Opportunity_Bundles</name>
         <label>Get Opportunity Bundles</label>
-        <locationX>7715</locationX>
+        <locationX>7221</locationX>
         <locationY>2180</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -8967,7 +8847,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_Opportunity_Promos</name>
         <label>Get Opportunity Promos</label>
-        <locationX>7847</locationX>
+        <locationX>7353</locationX>
         <locationY>1664</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -9027,7 +8907,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_Opportunity_Record_Types</name>
         <label>Get Opportunity Record Types</label>
-        <locationX>8001</locationX>
+        <locationX>7507</locationX>
         <locationY>18614</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -9055,7 +8935,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_Opportunity_SKU_Standard_Record_Type</name>
         <label>Get Opportunity SKU Standard Record Type</label>
-        <locationX>7847</locationX>
+        <locationX>7353</locationX>
         <locationY>16352</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -9083,7 +8963,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_Opportunity_SKUs</name>
         <label>Get Opportunity SKUs</label>
-        <locationX>7847</locationX>
+        <locationX>7353</locationX>
         <locationY>1448</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -9149,8 +9029,8 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_Opportunity_SKUs_to_Delete</name>
         <label>Get Opportunity SKUs to Delete</label>
-        <locationX>7900</locationX>
-        <locationY>9068</locationY>
+        <locationX>7112</locationX>
+        <locationY>8768</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>dec_Opportunity_SKUs_to_Delete_Found</targetReference>
@@ -9198,7 +9078,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_Opportunity_SKUs_with_Unlocked_Quantities</name>
         <label>Get Opportunity SKUs with Unlocked Quantities</label>
-        <locationX>14412</locationX>
+        <locationX>13424</locationX>
         <locationY>5396</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -9240,7 +9120,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_Other_Main_Products</name>
         <label>Get Other Main Products</label>
-        <locationX>14962</locationX>
+        <locationX>13974</locationX>
         <locationY>5828</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -9282,7 +9162,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_Parent_Opportunity_Record_Type</name>
         <label>Get Parent Opportunity Record Type</label>
-        <locationX>7319</locationX>
+        <locationX>6825</locationX>
         <locationY>16676</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -9303,7 +9183,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_Partnership_Discounts</name>
         <label>Get Partnership Discounts</label>
-        <locationX>10807</locationX>
+        <locationX>9819</locationX>
         <locationY>8360</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -9345,8 +9225,8 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_Required_SKU_Product_Records</name>
         <label>Get Required SKU Product Records</label>
-        <locationX>8054</locationX>
-        <locationY>11210</locationY>
+        <locationX>7266</locationX>
+        <locationY>10826</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Build_Required_SKU_Product_Id_Collection_Loop</targetReference>
@@ -9366,8 +9246,8 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_Required_SKU_Products</name>
         <label>Get Required SKU Products</label>
-        <locationX>8054</locationX>
-        <locationY>11618</locationY>
+        <locationX>7266</locationX>
+        <locationY>11234</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Required_Products_Found</targetReference>
@@ -9387,7 +9267,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_Short_Term_Promotions</name>
         <label>Get Short-Term Promotions</label>
-        <locationX>12509</locationX>
+        <locationX>11521</locationX>
         <locationY>6728</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -9443,7 +9323,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_This_Opportunity</name>
         <label>Get This Opportunity</label>
-        <locationX>7847</locationX>
+        <locationX>7353</locationX>
         <locationY>134</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -9467,7 +9347,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordLookups>
         <name>Get_This_Opportunity_s_SKUs</name>
         <label>Get This Opportunity&#39;s SKUs</label>
-        <locationX>7847</locationX>
+        <locationX>7353</locationX>
         <locationY>21656</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -9509,7 +9389,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordUpdates>
         <name>Update_Lifetime_Opportunity_Skus</name>
         <label>Update Lifetime Opportunity Skus</label>
-        <locationX>12850</locationX>
+        <locationX>11862</locationX>
         <locationY>14360</locationY>
         <connector>
             <targetReference>Create_Opportunity_Promos2</targetReference>
@@ -9532,7 +9412,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordUpdates>
         <name>Update_Opportunity_SKU_Quantities</name>
         <label>Update Opportunity SKU Quantities</label>
-        <locationX>14412</locationX>
+        <locationX>13424</locationX>
         <locationY>5612</locationY>
         <connector>
             <targetReference>Get_Opportunity</targetReference>
@@ -9555,7 +9435,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordUpdates>
         <name>Update_Opportunity_SKUs_2</name>
         <label>Update Opportunity SKUs</label>
-        <locationX>7715</locationX>
+        <locationX>7221</locationX>
         <locationY>22280</locationY>
         <connector>
             <targetReference>Create_Opportunity_Promos_Loop</targetReference>
@@ -9565,7 +9445,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordUpdates>
         <name>Update_Opportunity_SKUs_with_Promo_Details</name>
         <label>Update Opportunity SKUs with Promo Details</label>
-        <locationX>12850</locationX>
+        <locationX>11862</locationX>
         <locationY>14252</locationY>
         <connector>
             <targetReference>Update_Lifetime_Opportunity_Skus</targetReference>
@@ -9588,7 +9468,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <recordUpdates>
         <name>Update_This_Opportunity</name>
         <label>Update This Opportunity</label>
-        <locationX>7319</locationX>
+        <locationX>6825</locationX>
         <locationY>17000</locationY>
         <connector>
             <targetReference>Set_Parent_Opportunity_Id_Variable_2</targetReference>
@@ -9613,8 +9493,8 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <screens>
         <name>Add_Ons_and_Services</name>
         <label>Add Ons and Services</label>
-        <locationX>6186</locationX>
-        <locationY>8420</locationY>
+        <locationX>5692</locationX>
+        <locationY>8120</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -10025,8 +9905,8 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <screens>
         <name>Brand_Selection</name>
         <label>Brand Selection</label>
-        <locationX>6382</locationX>
-        <locationY>8852</locationY>
+        <locationX>5726</locationX>
+        <locationY>8552</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -10202,7 +10082,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <screens>
         <name>Copy_1_of_No_Other_Products_Found_Screen</name>
         <label>Change Tier Screen</label>
-        <locationX>14808</locationX>
+        <locationX>13820</locationX>
         <locationY>6044</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
@@ -10368,7 +10248,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <screens>
         <name>Fault_Screen</name>
         <label>Fault Screen</label>
-        <locationX>13356</locationX>
+        <locationX>12368</locationX>
         <locationY>14684</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
@@ -10384,7 +10264,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <screens>
         <name>Lifetime_Promo_Already_Exists_Screen</name>
         <label>Lifetime Promo Already Exists Screen</label>
-        <locationX>15094</locationX>
+        <locationX>14106</locationX>
         <locationY>13616</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
@@ -10539,8 +10419,8 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <screens>
         <name>Main_Product_Selection</name>
         <label>Main Product Selection</label>
-        <locationX>7361</locationX>
-        <locationY>8636</locationY>
+        <locationX>6589</locationX>
+        <locationY>8336</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -10782,7 +10662,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <screens>
         <name>Main_Product_Selection_for_Add_On_Screen</name>
         <label>Main Product Selection for Add-On Screen</label>
-        <locationX>5784</locationX>
+        <locationX>5290</locationX>
         <locationY>6404</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
@@ -10938,7 +10818,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <screens>
         <name>Main_Product_Selection_Screen</name>
         <label>Main Product Selection Screen</label>
-        <locationX>14962</locationX>
+        <locationX>13974</locationX>
         <locationY>5720</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
@@ -11041,8 +10921,8 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <screens>
         <name>No_Main_Products_Found_Screen</name>
         <label>No Main Products Found Screen</label>
-        <locationX>7174</locationX>
-        <locationY>11000</locationY>
+        <locationX>6518</locationX>
+        <locationY>10700</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -11104,7 +10984,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <screens>
         <name>No_Other_Products_Found_Screen</name>
         <label>No Other Products Found Screen</label>
-        <locationX>15116</locationX>
+        <locationX>14128</locationX>
         <locationY>6044</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
@@ -11120,7 +11000,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <screens>
         <name>No_Products_to_Upgrade_Screen</name>
         <label>No Products to Upgrade Screen</label>
-        <locationX>15380</locationX>
+        <locationX>14392</locationX>
         <locationY>5720</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
@@ -11141,7 +11021,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <screens>
         <name>Open_Opportunities_Screen</name>
         <label>Open Opportunities Screen</label>
-        <locationX>7715</locationX>
+        <locationX>7221</locationX>
         <locationY>17840</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
@@ -11220,7 +11100,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <screens>
         <name>Product_Selection</name>
         <label>Product Selection</label>
-        <locationX>7847</locationX>
+        <locationX>7353</locationX>
         <locationY>5180</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
@@ -11584,7 +11464,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
                     <inputParameters>
                         <name>columnFields</name>
                         <value>
-                            <stringValue>Name,Promotion_Name__c,Promotion_Type__c,Applied_to_Product__c,Discount__c,Discount_Duration__c</stringValue>
+                            <stringValue>Name,Promotion_Name__c,Promotion_Type__c,Applied_to_Product__c,Discount__c,Discount_Duration__c,Promotion_Discount__c</stringValue>
                         </value>
                     </inputParameters>
                     <inputParameters>
@@ -11608,7 +11488,13 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
                     <inputParameters>
                         <name>columnWidths</name>
                         <value>
-                            <stringValue>Name:241, Promotion_Name__c:241, Promotion_Type__c:241, Applied_to_Product__c:241, Discount__c:241, Discount_Duration__c:241</stringValue>
+                            <stringValue>Name:241, Promotion_Name__c:241, Promotion_Type__c:241, Applied_to_Product__c:241, Discount__c:241, Discount_Duration__c:241, Promotion_Discount__c:418</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>columnLabels</name>
+                        <value>
+                            <stringValue>Promotion_Discount__c:Discount (Fixed $)</stringValue>
                         </value>
                     </inputParameters>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
@@ -11673,7 +11559,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
                     <inputParameters>
                         <name>buttons</name>
                         <value>
-                            <stringValue>[{&quot;label&quot;:&quot;Add Product&quot;,&quot;value&quot;:&quot;Add Product&quot;,&quot;iconPosition&quot;:&quot;left&quot;,&quot;variant&quot;:&quot;neutral&quot;,&quot;iconName&quot;:&quot;utility:add&quot;,&quot;index&quot;:0},{&quot;label&quot;:&quot;Add Add-On&quot;,&quot;value&quot;:&quot;Add Add-On&quot;,&quot;iconPosition&quot;:&quot;left&quot;,&quot;variant&quot;:&quot;neutral&quot;,&quot;iconName&quot;:&quot;utility:add&quot;,&quot;index&quot;:1},{&quot;label&quot;:&quot;Add Bundle&quot;,&quot;value&quot;:&quot;Add Bundle&quot;,&quot;iconPosition&quot;:&quot;left&quot;,&quot;variant&quot;:&quot;neutral&quot;,&quot;iconName&quot;:&quot;utility:ad_set&quot;,&quot;index&quot;:2},{&quot;label&quot;:&quot;Add Discount&quot;,&quot;value&quot;:&quot;Add Discount&quot;,&quot;iconPosition&quot;:&quot;left&quot;,&quot;variant&quot;:&quot;neutral&quot;,&quot;iconName&quot;:&quot;utility:money&quot;,&quot;index&quot;:3}]</stringValue>
+                            <stringValue>[{&quot;label&quot;:&quot;Add Product&quot;,&quot;value&quot;:&quot;Add Product&quot;,&quot;iconPosition&quot;:&quot;left&quot;,&quot;variant&quot;:&quot;brand&quot;,&quot;iconName&quot;:&quot;utility:add&quot;,&quot;index&quot;:0},{&quot;label&quot;:&quot;Add Add-On&quot;,&quot;value&quot;:&quot;Add Add-On&quot;,&quot;iconPosition&quot;:&quot;left&quot;,&quot;variant&quot;:&quot;brand&quot;,&quot;iconName&quot;:&quot;utility:add&quot;,&quot;index&quot;:1},{&quot;label&quot;:&quot;Add Bundle&quot;,&quot;value&quot;:&quot;Add Bundle&quot;,&quot;iconPosition&quot;:&quot;left&quot;,&quot;variant&quot;:&quot;brand&quot;,&quot;iconName&quot;:&quot;utility:ad_set&quot;,&quot;index&quot;:2},{&quot;label&quot;:&quot;Add Discount&quot;,&quot;value&quot;:&quot;Add Discount&quot;,&quot;iconPosition&quot;:&quot;left&quot;,&quot;variant&quot;:&quot;brand&quot;,&quot;iconName&quot;:&quot;utility:money&quot;,&quot;index&quot;:3}]</stringValue>
                         </value>
                     </inputParameters>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
@@ -11722,7 +11608,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
                     <inputParameters>
                         <name>buttons</name>
                         <value>
-                            <stringValue>[{&quot;label&quot;:&quot;Edit Quantity&quot;,&quot;value&quot;:&quot;Edit Quantity&quot;,&quot;iconPosition&quot;:&quot;left&quot;,&quot;variant&quot;:&quot;neutral&quot;,&quot;iconName&quot;:&quot;utility:edit&quot;,&quot;index&quot;:0},{&quot;label&quot;:&quot;Remove Item(s)&quot;,&quot;value&quot;:&quot;Remove Items&quot;,&quot;iconPosition&quot;:&quot;left&quot;,&quot;variant&quot;:&quot;neutral&quot;,&quot;iconName&quot;:&quot;utility:close&quot;,&quot;index&quot;:1},{&quot;label&quot;:&quot;Upgrade/Downgrade&quot;,&quot;value&quot;:&quot;Upgrade/Downgrade&quot;,&quot;iconPosition&quot;:&quot;left&quot;,&quot;variant&quot;:&quot;neutral&quot;,&quot;iconName&quot;:&quot;utility:arrowup&quot;,&quot;index&quot;:2}]</stringValue>
+                            <stringValue>[{&quot;label&quot;:&quot;Edit Quantity&quot;,&quot;value&quot;:&quot;Edit Quantity&quot;,&quot;iconPosition&quot;:&quot;left&quot;,&quot;variant&quot;:&quot;brand&quot;,&quot;iconName&quot;:&quot;utility:edit&quot;,&quot;index&quot;:0},{&quot;label&quot;:&quot;Remove Item(s)&quot;,&quot;value&quot;:&quot;Remove Items&quot;,&quot;iconPosition&quot;:&quot;left&quot;,&quot;variant&quot;:&quot;brand&quot;,&quot;iconName&quot;:&quot;utility:close&quot;,&quot;index&quot;:1},{&quot;label&quot;:&quot;Upgrade/Downgrade&quot;,&quot;value&quot;:&quot;Upgrade/Downgrade&quot;,&quot;iconPosition&quot;:&quot;left&quot;,&quot;variant&quot;:&quot;brand&quot;,&quot;iconName&quot;:&quot;utility:arrowup&quot;,&quot;index&quot;:2}]</stringValue>
                         </value>
                     </inputParameters>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
@@ -11746,8 +11632,8 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <screens>
         <name>Required_Products_Screen</name>
         <label>Required Products Screen</label>
-        <locationX>7858</locationX>
-        <locationY>11834</locationY>
+        <locationX>7070</locationX>
+        <locationY>11450</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -11905,7 +11791,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <screens>
         <name>Screen_Edit_Quantity</name>
         <label>Screen Edit Quantity</label>
-        <locationX>14412</locationX>
+        <locationX>13424</locationX>
         <locationY>5504</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
@@ -12308,7 +12194,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <screens>
         <name>Select_Discount_Type_Screen</name>
         <label>Select Discount Type Screen</label>
-        <locationX>11241</locationX>
+        <locationX>10253</locationX>
         <locationY>5804</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
@@ -12442,7 +12328,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <screens>
         <name>Select_Promotion_Screen</name>
         <label>Select Promotion Screen</label>
-        <locationX>11134</locationX>
+        <locationX>10146</locationX>
         <locationY>11336</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
@@ -12484,7 +12370,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
             <inputParameters>
                 <name>columnFields</name>
                 <value>
-                    <stringValue>Name,SKU_Name__c,SKU_Product_Specific_Duration__c,SKU_Product_Specific_Discount__c</stringValue>
+                    <stringValue>Name,SKU_Name__c,SKU_Product_Specific_Duration__c,SKU_Product_Specific_Discount__c,Discount_Fix_or_Percent__c</stringValue>
                 </value>
             </inputParameters>
             <inputParameters>
@@ -12514,13 +12400,13 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
             <inputParameters>
                 <name>columnLabels</name>
                 <value>
-                    <stringValue>SKU_Product_Specific_Duration__c:# of Periods, SKU_Product_Specific_Discount__c:Discount</stringValue>
+                    <stringValue>SKU_Product_Specific_Duration__c:# of Periods, SKU_Product_Specific_Discount__c:Discount, Discount_Fix_or_Percent__c:Base Discount</stringValue>
                 </value>
             </inputParameters>
             <inputParameters>
                 <name>columnWidths</name>
                 <value>
-                    <stringValue>Name:284, SKU_Name__c:284, SKU_Product_Specific_Duration__c:285, SKU_Product_Specific_Discount__c:285</stringValue>
+                    <stringValue>Name:284, SKU_Name__c:284, SKU_Product_Specific_Duration__c:285, SKU_Product_Specific_Discount__c:285, Discount_Fix_or_Percent__c:774</stringValue>
                 </value>
             </inputParameters>
             <inputParameters>
@@ -12687,7 +12573,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
             <inputParameters>
                 <name>columnFields</name>
                 <value>
-                    <stringValue>Name,SKU_Name__c,Discount_Duration__c,Discount_Percentage__c</stringValue>
+                    <stringValue>Name,SKU_Name__c,Discount_Duration__c,Discount_Percentage__c,Discount_Fix_or_Percent__c</stringValue>
                 </value>
             </inputParameters>
             <inputParameters>
@@ -12699,7 +12585,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
             <inputParameters>
                 <name>columnWidths</name>
                 <value>
-                    <stringValue>Name:284, SKU_Name__c:284, Discount_Duration__c:284, Discount_Percentage__c:284</stringValue>
+                    <stringValue>Name:284, SKU_Name__c:284, Discount_Duration__c:284, Discount_Percentage__c:284, Discount_Fix_or_Percent__c:828</stringValue>
                 </value>
             </inputParameters>
             <inputParameters>
@@ -12718,6 +12604,18 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
                 <name>cb_isDisplayHeader</name>
                 <value>
                     <stringValue>CB_TRUE</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>columnEdits</name>
+                <value>
+                    <stringValue>Discount_Percentage__c:true</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>columnLabels</name>
+                <value>
+                    <stringValue>Discount_Fix_or_Percent__c:Base Discount</stringValue>
                 </value>
             </inputParameters>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
@@ -12827,7 +12725,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
             <inputParameters>
                 <name>columnFields</name>
                 <value>
-                    <stringValue>Name,SKU_Name__c,Discount_Percentage__c</stringValue>
+                    <stringValue>Name,SKU_Name__c,Discount_Percentage__c,Discount_Fix_or_Percent__c</stringValue>
                 </value>
             </inputParameters>
             <inputParameters>
@@ -12839,7 +12737,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
             <inputParameters>
                 <name>columnWidths</name>
                 <value>
-                    <stringValue>Name:379, SKU_Name__c:379, Discount_Percentage__c:379</stringValue>
+                    <stringValue>Name:379, SKU_Name__c:379, Discount_Percentage__c:379, Discount_Fix_or_Percent__c:827</stringValue>
                 </value>
             </inputParameters>
             <inputParameters>
@@ -12870,6 +12768,12 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
                 <name>tableLabel</name>
                 <value>
                     <stringValue>Lifetime Promotions</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>columnLabels</name>
+                <value>
+                    <stringValue>Discount_Fix_or_Percent__c:Base Discount</stringValue>
                 </value>
             </inputParameters>
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
@@ -13024,7 +12928,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     <screens>
         <name>Short_Term_Promo_Already_Exists_Screen</name>
         <label>Short Term Promo Already Exists Screen</label>
-        <locationX>14566</locationX>
+        <locationX>13578</locationX>
         <locationY>13616</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
@@ -13080,21 +12984,13 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
         <showHeader>false</showHeader>
     </screens>
     <start>
-        <locationX>7721</locationX>
+        <locationX>7227</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Get_This_Opportunity</targetReference>
         </connector>
     </start>
     <status>Active</status>
-    <variables>
-        <name>coll_Add_Ons_with_Quantity</name>
-        <dataType>SObject</dataType>
-        <isCollection>true</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-        <objectType>SKU_Product__c</objectType>
-    </variables>
     <variables>
         <name>coll_Picked_Sku_Product_Ids</name>
         <dataType>String</dataType>
@@ -13606,6 +13502,14 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
         <objectType>Opportunity_SKU__c</objectType>
     </variables>
     <variables>
+        <name>currentItem_Filter_Addons</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>SKU_Product__c</objectType>
+    </variables>
+    <variables>
         <name>currentItem_Filter_Main_Product_Collection_by_Selected_Brand</name>
         <dataType>SObject</dataType>
         <isCollection>false</isCollection>
@@ -13645,26 +13549,6 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
     </variables>
     <variables>
         <name>var_Company_Promo_Selected</name>
-        <dataType>Boolean</dataType>
-        <isCollection>false</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-        <value>
-            <booleanValue>false</booleanValue>
-        </value>
-    </variables>
-    <variables>
-        <name>var_Edited_Main_Product_Added</name>
-        <dataType>Boolean</dataType>
-        <isCollection>false</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-        <value>
-            <booleanValue>false</booleanValue>
-        </value>
-    </variables>
-    <variables>
-        <name>var_Edited_Record_Added</name>
         <dataType>Boolean</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
@@ -13722,14 +13606,6 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
         <value>
             <booleanValue>false</booleanValue>
         </value>
-    </variables>
-    <variables>
-        <name>var_Temp_Sku_Product</name>
-        <dataType>SObject</dataType>
-        <isCollection>false</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-        <objectType>SKU_Product__c</objectType>
     </variables>
     <variables>
         <name>varAddOnCount</name>
