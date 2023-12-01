@@ -14077,6 +14077,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Opportunity_Promo__c.Promotion_Discount__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Opportunity_Promo__c.Promotion_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -15823,6 +15828,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Promotions__c.Promo_Description__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Promotions__c.Promotion_Discount__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
