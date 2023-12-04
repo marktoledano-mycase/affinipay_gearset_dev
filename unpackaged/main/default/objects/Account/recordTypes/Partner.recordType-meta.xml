@@ -2156,21 +2156,36 @@
             <default>false</default>
         </values>
     </picklistValues>
-        <picklistValues>
-            <picklist>Partner_Request_Form__c</picklist>
-            <values>
-                <fullName>Alliance Partner</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Consultant Partner</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Integration Partner</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
+    <picklistValues>
+        <picklist>Partner_Request_Form__c</picklist>
+        <values>
+            <fullName>Alliance Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consultant Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integration Partner</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Partner_Software_Non_Compete_Type__c</picklist>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbound Prohibited %28time bound%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbound and Inbound Prohibited</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
     <picklistValues>
         <picklist>Partner_Status_Overall__c</picklist>
         <values>
@@ -2183,6 +2198,17 @@
         </values>
         <values>
             <fullName>Prospect</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Payments_Enterprise_Account__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -2512,7 +2538,7 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Tax</fullName>
+            <fullName>Tax%2FAccounting</fullName>
             <default>false</default>
         </values>
         <values>
@@ -3610,6 +3636,21 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Software_Non_Compete_in_Effect__c</picklist>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbound Prohibited %28time bound%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbound and Inbound Prohibited</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Soluno_Customer_Status__c</picklist>
         <values>
             <fullName>Active</fullName>
@@ -3959,10 +4000,10 @@
             <fullName>N%2FA</fullName>
             <default>false</default>
         </values>
-            <values>
-                <fullName>NDF</fullName>
-                <default>false</default>
-            </values>
+        <values>
+            <fullName>NDF</fullName>
+            <default>false</default>
+        </values>
         <values>
             <fullName>Other - see explanation</fullName>
             <default>false</default>
