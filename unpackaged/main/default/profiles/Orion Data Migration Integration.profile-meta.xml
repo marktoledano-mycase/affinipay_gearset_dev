@@ -10912,6 +10912,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Merchant_Application__c.Partner_Token__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Merchant_Application__c.Pricing_Plan_ID__c</field>
         <readable>true</readable>
