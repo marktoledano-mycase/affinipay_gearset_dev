@@ -24,6 +24,7 @@
     <permissionSets>Modify_All_Contacts</permissionSets>
     <permissionSets>Modify_All_Inbound_Requests</permissionSets>
     <permissionSets>Modify_All_Leads</permissionSets>
+    <permissionSets>Modify_Billing_Subscriptions_First_Time_Charge</permissionSets>
     <permissionSets>Modify_Linked_Records_on_Product_Environment_and_Opportunity</permissionSets>
     <permissionSets>Process_Opportunity_for_Subscription_Contract</permissionSets>
     <permissionSets>Product_Picker_Read_Write</permissionSets>
