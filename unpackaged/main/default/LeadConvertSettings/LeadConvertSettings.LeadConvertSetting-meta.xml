@@ -4,6 +4,10 @@
     <objectMapping>
         <inputObject>Lead</inputObject>
         <mappingFields>
+            <inputField>Legacy_Practice_Areas__c</inputField>
+            <outputField>Legacy_Practice_Areas__c</outputField>
+        </mappingFields>
+        <mappingFields>
             <inputField>Accepts_Credit_Cards__c</inputField>
             <outputField>Accepts_Credit_Cards__c</outputField>
         </mappingFields>
@@ -143,10 +147,6 @@
             <inputField>ZoomInfo_Company_ID__c</inputField>
             <outputField>ZoomInfo_Company_ID__c</outputField>
         </mappingFields>
-        <mappingFields>
-            <inputField>Legacy_Practice_Areas__c</inputField>
-            <outputField>Legacy_Practice_Areas__c</outputField>
-        </mappingFields>
         <outputObject>Account</outputObject>
     </objectMapping>
     <objectMapping>
@@ -174,74 +174,6 @@
         <mappingFields>
             <inputField>bizible2__Ad_Campaign_Name_FT__c</inputField>
             <outputField>bizible2__Ad_Campaign_Name_FT__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>bizible2__Ad_Campaign_Name_LC__c</inputField>
-            <outputField>bizible2__Ad_Campaign_Name_LC__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Add_to_Marketo__c</inputField>
-            <outputField>Add_to_Marketo__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>AffiniPay_Customer_Status__c</inputField>
-            <outputField>AffiniPay_Customer_Status__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Bar_Association__c</inputField>
-            <outputField>Bar_Association__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Behavior_Score__c</inputField>
-            <outputField>Behavior_Score__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>CASEpeer_Customer_Status__c</inputField>
-            <outputField>CASEpeer_Customer_Status__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Current_Accounting_Solution_Other__c</inputField>
-            <outputField>Current_Accounting_Solution_Other__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Current_LPM__c</inputField>
-            <outputField>Current_LPM__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Current_LPM_Other__c</inputField>
-            <outputField>Current_LPM_Other__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>CASEpeer_Marketing_Engagement__c</inputField>
-            <outputField>CASEpeer_Marketing_Engagement__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>ClientPay_Customer_Status__c</inputField>
-            <outputField>ClientPay_Customer_Status__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>ClientPay_Marketing_Engagement__c</inputField>
-            <outputField>ClientPay_Marketing_Enagement__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Converted_from_Lead__c</inputField>
-            <outputField>Converted_from_Lead__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>CPACharge_Customer_Status__c</inputField>
-            <outputField>CPACharge_Customer_Status__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>CPACharge_Marketing_Engagement__c</inputField>
-            <outputField>CPACharge_Marketing_Engagement__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Current_Accounting_Solution__c</inputField>
-            <outputField>Current_Accounting_Solution__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Current_Payments_Solution__c</inputField>
-            <outputField>Current_Payments_Solution__c</outputField>
         </mappingFields>
         <mappingFields>
             <inputField>Current_Payments_Solution_Other__c</inputField>
@@ -284,136 +216,88 @@
             <outputField>Customer_Referral_Email__c</outputField>
         </mappingFields>
         <mappingFields>
+            <inputField>bizible2__Ad_Campaign_Name_LC__c</inputField>
+            <outputField>bizible2__Ad_Campaign_Name_LC__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Add_to_Marketo__c</inputField>
+            <outputField>Add_to_Marketo__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>AffiniPay_Customer_Status__c</inputField>
+            <outputField>AffiniPay_Customer_Status__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Bar_Association__c</inputField>
+            <outputField>Bar_Association__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Behavior_Score__c</inputField>
+            <outputField>Behavior_Score__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>CASEpeer_Customer_Status__c</inputField>
+            <outputField>CASEpeer_Customer_Status__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>CASEpeer_Marketing_Engagement__c</inputField>
+            <outputField>CASEpeer_Marketing_Engagement__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>ClientPay_Customer_Status__c</inputField>
+            <outputField>ClientPay_Customer_Status__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>ClientPay_Marketing_Engagement__c</inputField>
+            <outputField>ClientPay_Marketing_Enagement__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Converted_from_Lead__c</inputField>
+            <outputField>Converted_from_Lead__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>CPACharge_Customer_Status__c</inputField>
+            <outputField>CPACharge_Customer_Status__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>CPACharge_Marketing_Engagement__c</inputField>
+            <outputField>CPACharge_Marketing_Engagement__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>cRO1__c</inputField>
+            <outputField>cRO1__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>cRO2__c</inputField>
+            <outputField>cRO2__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>cRO3__c</inputField>
+            <outputField>cRO3__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Current_Accounting_Solution__c</inputField>
+            <outputField>Current_Accounting_Solution__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Current_Accounting_Solution_Other__c</inputField>
+            <outputField>Current_Accounting_Solution_Other__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Current_LPM__c</inputField>
+            <outputField>Current_LPM__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Current_LPM_Other__c</inputField>
+            <outputField>Current_LPM_Other__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Current_Payments_Solution__c</inputField>
+            <outputField>Current_Payments_Solution__c</outputField>
+        </mappingFields>
+        <mappingFields>
             <inputField>Outreach_Date_Added_to_Sequence__c</inputField>
             <outputField>Outreach_Date_Added_to_Sequence__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>bizible2__Landing_Page_FT__c</inputField>
-            <outputField>bizible2__Landing_Page_FT__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>bizible2__Landing_Page_LC__c</inputField>
-            <outputField>bizible2__Landing_Page_LC__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>mkto_si__Last_Activity_By_Sales__c</inputField>
-            <outputField>mkto_si__Last_Activity_By_Sales__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Last_Assigned_Date__c</inputField>
-            <outputField>Last_Assigned_Date__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>mkto_si__Last_Interesting_Moment_Date__c</inputField>
-            <outputField>mkto_si__Last_Interesting_Moment_Date__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>LinkedIn_Link__c</inputField>
-            <outputField>LinkedIn_Link__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Manager_Notes__c</inputField>
-            <outputField>Manager_Notes__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Mark_Email_as_Spam__c</inputField>
-            <outputField>Mark_Email_as_Spam__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Nurture_Marketing_Reasons__c</inputField>
-            <outputField>Nurture_Marketing_Reasons__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Merchant_App_ID__c</inputField>
-            <outputField>Merchant_App_ID__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Microsoft_Click_ID__c</inputField>
-            <outputField>Microsoft_Click_ID__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>MyCase_Customer_Status__c</inputField>
-            <outputField>MyCase_Customer_Status__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>MyCase_Marketing_Engagement__c</inputField>
-            <outputField>MyCase_Marketing_Engagement__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Outreach_Number_of_Active_Sequences__c</inputField>
-            <outputField>Outreach_Number_of_Active_Sequences__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Original_Lead_Channel__c</inputField>
-            <outputField>Original_Lead_Channel__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Original_Lead_Source__c</inputField>
-            <outputField>Original_Lead_Source__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Original_MEL_Date__c</inputField>
-            <outputField>Original_MEL_Date__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Original_MEL_Program_Name__c</inputField>
-            <outputField>Original_MEL_Program_Name__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>mkto71_Original_Referrer__c</inputField>
-            <outputField>mkto71_Original_Referrer__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>mkto71_Original_Search_Engine__c</inputField>
-            <outputField>mkto71_Original_Search_Engine__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>mkto71_Original_Search_Phrase__c</inputField>
-            <outputField>mkto71_Original_Search_Phrase__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>mkto71_Original_Source_Info__c</inputField>
-            <outputField>mkto71_Original_Source_Info__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>mkto71_Original_Source_Type__c</inputField>
-            <outputField>mkto71_Original_Source_Type__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Outbound_Reason__c</inputField>
-            <outputField>Outbound_Reason__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Person_Master_ID__c</inputField>
-            <outputField>Person_Master_ID__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Preferred_Language__c</inputField>
-            <outputField>Preferred_Language__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Qualification_Notes__c</inputField>
-            <outputField>Qualification_Notes__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Referral_Partnership__c</inputField>
-            <outputField>Referral_Partnership__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Role__c</inputField>
-            <outputField>Role__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>SAL_Date_Time__c</inputField>
-            <outputField>SAL_Date_Time__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Sales_Brand__c</inputField>
-            <outputField>Sales_Brand__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Sales_Email_Opt_Out__c</inputField>
-            <outputField>Sales_Email_Opt_Out__c</outputField>
         </mappingFields>
         <mappingFields>
             <inputField>Demo_Scheduled_Date__c</inputField>
@@ -532,6 +416,26 @@
             <outputField>Interested_in_Template_Dev_Services__c</outputField>
         </mappingFields>
         <mappingFields>
+            <inputField>bizible2__Landing_Page_FT__c</inputField>
+            <outputField>bizible2__Landing_Page_FT__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>bizible2__Landing_Page_LC__c</inputField>
+            <outputField>bizible2__Landing_Page_LC__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>mkto_si__Last_Activity_By_Sales__c</inputField>
+            <outputField>mkto_si__Last_Activity_By_Sales__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Last_Assigned_Date__c</inputField>
+            <outputField>Last_Assigned_Date__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>mkto_si__Last_Interesting_Moment_Date__c</inputField>
+            <outputField>mkto_si__Last_Interesting_Moment_Date__c</outputField>
+        </mappingFields>
+        <mappingFields>
             <inputField>mkto_si__Last_Interesting_Moment_Desc__c</inputField>
             <outputField>mkto_si__Last_Interesting_Moment_Desc__c</outputField>
         </mappingFields>
@@ -608,6 +512,122 @@
             <outputField>LinkedIn_Click_ID__c</outputField>
         </mappingFields>
         <mappingFields>
+            <inputField>LinkedIn_Link__c</inputField>
+            <outputField>LinkedIn_Link__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Manager_Notes__c</inputField>
+            <outputField>Manager_Notes__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Mark_Email_as_Spam__c</inputField>
+            <outputField>Mark_Email_as_Spam__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Nurture_Marketing_Reasons__c</inputField>
+            <outputField>Nurture_Marketing_Reasons__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Merchant_App_ID__c</inputField>
+            <outputField>Merchant_App_ID__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Microsoft_Click_ID__c</inputField>
+            <outputField>Microsoft_Click_ID__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>MyCase_Customer_Status__c</inputField>
+            <outputField>MyCase_Customer_Status__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>MyCase_Marketing_Engagement__c</inputField>
+            <outputField>MyCase_Marketing_Engagement__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Outreach_Number_of_Active_Sequences__c</inputField>
+            <outputField>Outreach_Number_of_Active_Sequences__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Original_Lead_Channel__c</inputField>
+            <outputField>Original_Lead_Channel__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Original_Lead_Source__c</inputField>
+            <outputField>Original_Lead_Source__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Original_MEL_Date__c</inputField>
+            <outputField>Original_MEL_Date__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Original_MEL_Program_Name__c</inputField>
+            <outputField>Original_MEL_Program_Name__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>mkto71_Original_Referrer__c</inputField>
+            <outputField>mkto71_Original_Referrer__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>mkto71_Original_Search_Engine__c</inputField>
+            <outputField>mkto71_Original_Search_Engine__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Unsubscribed_from_MyCase__c</inputField>
+            <outputField>Unsubscribed_from_MyCase__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>mkto71_Original_Search_Phrase__c</inputField>
+            <outputField>mkto71_Original_Search_Phrase__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>mkto71_Original_Source_Info__c</inputField>
+            <outputField>mkto71_Original_Source_Info__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>mkto71_Original_Source_Type__c</inputField>
+            <outputField>mkto71_Original_Source_Type__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Outbound_Reason__c</inputField>
+            <outputField>Outbound_Reason__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Person_Master_ID__c</inputField>
+            <outputField>Person_Master_ID__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Unsubscribed_from_Sales__c</inputField>
+            <outputField>Unsubscribed_from_Sales__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Preferred_Language__c</inputField>
+            <outputField>Preferred_Language__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Qualification_Notes__c</inputField>
+            <outputField>Qualification_Notes__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Referral_Partnership__c</inputField>
+            <outputField>Referral_Partnership__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Role__c</inputField>
+            <outputField>Role__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>SAL_Date_Time__c</inputField>
+            <outputField>SAL_Date_Time__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Sales_Brand__c</inputField>
+            <outputField>Sales_Brand__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Sales_Email_Opt_Out__c</inputField>
+            <outputField>Sales_Email_Opt_Out__c</outputField>
+        </mappingFields>
+        <mappingFields>
             <inputField>Sales_Lead_Type__c</inputField>
             <outputField>Sales_Lead_Type__c</outputField>
         </mappingFields>
@@ -672,16 +692,16 @@
             <outputField>Unsubscribed_from_LawPay_Plus__c</outputField>
         </mappingFields>
         <mappingFields>
-            <inputField>Unsubscribed_from_MyCase__c</inputField>
-            <outputField>Unsubscribed_from_MyCase__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Unsubscribed_from_Sales__c</inputField>
-            <outputField>Unsubscribed_from_Sales__c</outputField>
-        </mappingFields>
-        <mappingFields>
             <inputField>Unsubscribed_from_Soluno__c</inputField>
             <outputField>Unsubscribed_from_Soluno__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>utm_medium__c</inputField>
+            <outputField>utm_medium__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>utm_name__c</inputField>
+            <outputField>utm_name__c</outputField>
         </mappingFields>
         <mappingFields>
             <inputField>Unsubscribed_from_Woodpecker__c</inputField>
@@ -708,14 +728,6 @@
             <outputField>utm_last_landing_page__c</outputField>
         </mappingFields>
         <mappingFields>
-            <inputField>utm_medium__c</inputField>
-            <outputField>utm_medium__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>utm_name__c</inputField>
-            <outputField>utm_name__c</outputField>
-        </mappingFields>
-        <mappingFields>
             <inputField>utm_source__c</inputField>
             <outputField>utm_source__c</outputField>
         </mappingFields>
@@ -739,6 +751,14 @@
     </objectMapping>
     <objectMapping>
         <inputObject>Lead</inputObject>
+        <mappingFields>
+            <inputField>Accepts_Online_Payments__c</inputField>
+            <outputField>Accepts_Online_Payments__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>AffiniPay_Customer_Status__c</inputField>
+            <outputField>AffiniPay_Customer_Status__c</outputField>
+        </mappingFields>
         <mappingFields>
             <inputField>CASEpeer_Customer_Status__c</inputField>
             <outputField>CASEpeer_Customer_Status__c</outputField>
@@ -856,32 +876,12 @@
             <outputField>LawPay_Customer_Status__c</outputField>
         </mappingFields>
         <mappingFields>
-            <inputField>Lead_Next_Step_Date__c</inputField>
-            <outputField>Next_Step_Date__c</outputField>
+            <inputField>WP_Technologies_Used__c</inputField>
+            <outputField>WP_Technologies_Used__c</outputField>
         </mappingFields>
         <mappingFields>
-            <inputField>Lead_Step_Last_Edited__c</inputField>
-            <outputField>Next_Step_Last_Edited__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Legacy_Lead_Source__c</inputField>
-            <outputField>Legacy_Lead_Source__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>LinkedIn_Click_ID__c</inputField>
-            <outputField>LinkedIn_Click_ID__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Merchant_App_ID__c</inputField>
-            <outputField>Merchant_App_ID__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Microsoft_Click_ID__c</inputField>
-            <outputField>Microsoft_Click_ID__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>NetDocuments_Integration__c</inputField>
-            <outputField>NetDocuments_Integration__c</outputField>
+            <inputField>BDR__c</inputField>
+            <outputField>BDR__c</outputField>
         </mappingFields>
         <mappingFields>
             <inputField>Original_Referral_Partnership__c</inputField>
@@ -960,24 +960,36 @@
             <outputField>WP_Practice_Management_Platform__c</outputField>
         </mappingFields>
         <mappingFields>
-            <inputField>WP_Technologies_Used__c</inputField>
-            <outputField>WP_Technologies_Used__c</outputField>
+            <inputField>Microsoft_Click_ID__c</inputField>
+            <outputField>Microsoft_Click_ID__c</outputField>
         </mappingFields>
         <mappingFields>
-            <inputField>BDR__c</inputField>
-            <outputField>BDR__c</outputField>
+            <inputField>NetDocuments_Integration__c</inputField>
+            <outputField>NetDocuments_Integration__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Lead_Next_Step_Date__c</inputField>
+            <outputField>Next_Step_Date__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Lead_Step_Last_Edited__c</inputField>
+            <outputField>Next_Step_Last_Edited__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Legacy_Lead_Source__c</inputField>
+            <outputField>Legacy_Lead_Source__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>LinkedIn_Click_ID__c</inputField>
+            <outputField>LinkedIn_Click_ID__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Merchant_App_ID__c</inputField>
+            <outputField>Merchant_App_ID__c</outputField>
         </mappingFields>
         <mappingFields>
             <inputField>SDR__c</inputField>
             <outputField>SDR__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>Accepts_Online_Payments__c</inputField>
-            <outputField>Accepts_Online_Payments__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>AffiniPay_Customer_Status__c</inputField>
-            <outputField>AffiniPay_Customer_Status__c</outputField>
         </mappingFields>
         <outputObject>Opportunity</outputObject>
     </objectMapping>
