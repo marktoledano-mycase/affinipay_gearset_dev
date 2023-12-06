@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Junior Sales Ops Permission Set Group</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Junior Sales Ops</label>
+    <permissionSets>Create_Report_and_Dashboard_Folders</permissionSets>
+    <permissionSets>Manage_Dashboards</permissionSets>
+    <permissionSets>Manage_Forecasts</permissionSets>
+    <permissionSets>Modify_All_Accounts</permissionSets>
+    <permissionSets>Modify_All_Assignment_Groups_and_Members</permissionSets>
+    <permissionSets>Modify_All_Contacts</permissionSets>
+    <permissionSets>View_All_Forecasts_and_Manage_Quotas</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>
