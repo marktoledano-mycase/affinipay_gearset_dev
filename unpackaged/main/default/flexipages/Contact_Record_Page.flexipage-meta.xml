@@ -63,6 +63,100 @@
                 <identifier>force_relatedListQuickLinksContainer</identifier>
             </componentInstance>
         </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p&gt;&lt;strong style=&quot;font-size: 28px; color: rgb(247, 2, 2);&quot;&gt;Only Enterprise Payments Team can sell payments into this firm (both inbound and outbound)&lt;/strong&gt;&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Account.Payments_Enterprise_Account__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>Yes</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p&gt;&lt;strong style=&quot;color: rgb(250, 5, 5); font-size: 28px;&quot;&gt;No outbound or inbound software sales, even if a customer initiates. They have a pre-existing relationship with one of our partners.&lt;/strong&gt;&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText2</identifier>
+                <visibilityRule>
+                    <booleanFilter>1 OR 2 OR 3 OR 4 OR 5 OR 6 OR 7</booleanFilter>
+                    <criteria>
+                        <leftValue>{!Record.Account.Partner_Software_Non_Compete_Type__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>Outbound and Inbound Prohibited</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Account.Current_LPM_Prohibited__c}</leftValue>
+                        <operator>CONTAINS</operator>
+                        <rightValue>Aderant</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Account.Current_LPM_Prohibited__c}</leftValue>
+                        <operator>CONTAINS</operator>
+                        <rightValue>Firm Central</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Account.Current_LPM_Prohibited__c}</leftValue>
+                        <operator>CONTAINS</operator>
+                        <rightValue>ProLaw</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Account.Current_LPM_Prohibited__c}</leftValue>
+                        <operator>CONTAINS</operator>
+                        <rightValue>Thomson Reuters</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Account.Primary_Referral_Partnership__r.Partner_Account_has_Prohibition__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>true</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Account.Oppty_with_Prohibited_Status__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>true</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p&gt;&lt;strong style=&quot;color: rgb(253, 4, 4); font-size: 28px;&quot;&gt;Inbound software sales only, no outbound software sales.&lt;/strong&gt;&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText3</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Account.Partner_Software_Non_Compete_Type__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>Outbound Prohibited (time bound)</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </componentInstance>
+        </itemInstances>
         <name>header</name>
         <type>Region</type>
     </flexiPageRegions>
@@ -669,6 +763,36 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Demo_Scheduled_Date__c</fieldItem>
                 <identifier>RecordDemo_Scheduled_Date_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.cRO1__c</fieldItem>
+                <identifier>RecordcRO1_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.cRO2__c</fieldItem>
+                <identifier>RecordcRO2_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.cRO3__c</fieldItem>
+                <identifier>RecordcRO3_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-bedb11c2-9015-4b08-9565-ba9ecbc18c43</name>
@@ -2148,6 +2272,36 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Nurture_Marketing_Reasons__c</fieldItem>
                 <identifier>RecordNurture_Marketing_Reasons_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.cRO1__c</fieldItem>
+                <identifier>RecordcRO1_cField2</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.cRO2__c</fieldItem>
+                <identifier>RecordcRO2_cField2</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.cRO3__c</fieldItem>
+                <identifier>RecordcRO3_cField2</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-0602bc83-e9a9-4810-b134-3e044e919d6a</name>
