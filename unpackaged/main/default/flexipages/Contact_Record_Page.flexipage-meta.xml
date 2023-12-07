@@ -2234,6 +2234,36 @@
                 <identifier>RecordNurture_Marketing_Reasons_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.cRO1__c</fieldItem>
+                <identifier>RecordcRO1_cField2</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.cRO2__c</fieldItem>
+                <identifier>RecordcRO2_cField2</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.cRO3__c</fieldItem>
+                <identifier>RecordcRO3_cField2</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-0602bc83-e9a9-4810-b134-3e044e919d6a</name>
         <type>Facet</type>
     </flexiPageRegions>
