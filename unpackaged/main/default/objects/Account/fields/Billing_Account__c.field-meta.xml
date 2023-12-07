@@ -2,6 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Billing_Account__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
+    <description>Needed to locate the billing account number for billing accounts with active subscriptions.</description>
     <externalId>false</externalId>
     <label>Billing Account</label>
     <referenceTo>Billing_Account__c</referenceTo>
