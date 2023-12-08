@@ -467,7 +467,7 @@
         </rules>
         <rules>
             <name>New_Business_New_Account</name>
-            <conditionLogic>and</conditionLogic>
+            <conditionLogic>1 AND 2 AND (3 OR  4 OR 5)</conditionLogic>
             <conditions>
                 <leftValueReference>Select_Opportunity_Type</leftValueReference>
                 <operator>EqualTo</operator>
@@ -487,6 +487,20 @@
                 <operator>EqualTo</operator>
                 <rightValue>
                     <stringValue>MyCase</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>RecordType_ContractMapping</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>CASEpeer</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>RecordType_ContractMapping</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Docketwise</stringValue>
                 </rightValue>
             </conditions>
             <connector>
