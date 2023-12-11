@@ -34,7 +34,7 @@
         <name>Navigate_to_Opportunity</name>
         <label>Navigate to Opportunity</label>
         <locationX>600</locationX>
-        <locationY>2006</locationY>
+        <locationY>2114</locationY>
         <actionName>c:navigateEverywhereLFA</actionName>
         <actionType>component</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -104,14 +104,14 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Assign_Opportunity_Values</targetReference>
+            <targetReference>Update_Contact_with_New_Account</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>Assign_Opportunity_Values</name>
         <label>Assign Opportunity Values</label>
         <locationX>600</locationX>
-        <locationY>1082</locationY>
+        <locationY>1190</locationY>
         <assignmentItems>
             <assignToReference>varOpportunity.RecordTypeId</assignToReference>
             <operator>Assign</operator>
@@ -381,7 +381,7 @@
         <name>Link_Application_Check</name>
         <label>Link Application Check</label>
         <locationX>446</locationX>
-        <locationY>1622</locationY>
+        <locationY>1730</locationY>
         <defaultConnector>
             <targetReference>Navigate_to_Opportunity</targetReference>
         </defaultConnector>
@@ -438,7 +438,7 @@
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Already_Customer</name>
-            <conditionLogic>and</conditionLogic>
+            <conditionLogic>1 AND (2 OR 4 OR 5) AND (3 OR 6)</conditionLogic>
             <conditions>
                 <leftValueReference>Validation_Opportunity_Creation.output_HasActiveContract</leftValueReference>
                 <operator>EqualTo</operator>
@@ -460,6 +460,27 @@
                     <elementReference>SellUpsell</elementReference>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>RecordType_ContractMapping</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>CASEpeer</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>RecordType_ContractMapping</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Docketwise</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Select_Opportunity_Type_2</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>SellUpsell</elementReference>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>Assign_Upsell</targetReference>
             </connector>
@@ -467,7 +488,7 @@
         </rules>
         <rules>
             <name>New_Business_New_Account</name>
-            <conditionLogic>1 AND 2 AND (3 OR  4 OR 5)</conditionLogic>
+            <conditionLogic>(1 OR 6)  AND 2 AND (3 OR  4 OR 5)</conditionLogic>
             <conditions>
                 <leftValueReference>Select_Opportunity_Type</leftValueReference>
                 <operator>EqualTo</operator>
@@ -503,6 +524,13 @@
                     <stringValue>Docketwise</stringValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>Select_Opportunity_Type_2</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>SellNewBusiness</elementReference>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>Create_New_Account_for_Opportunity</targetReference>
             </connector>
@@ -513,7 +541,7 @@
         <name>Software_or_Payments</name>
         <label>Software or Payments</label>
         <locationX>600</locationX>
-        <locationY>1514</locationY>
+        <locationY>1622</locationY>
         <defaultConnector>
             <targetReference>Navigate_to_Opportunity</targetReference>
         </defaultConnector>
@@ -650,7 +678,7 @@ AND( {!Validation_Opportunity_Creation.output_HasActiveContract},
         <name>Create_Opportunity</name>
         <label>Create Opportunity</label>
         <locationX>600</locationX>
-        <locationY>1190</locationY>
+        <locationY>1298</locationY>
         <connector>
             <targetReference>Update_Contact_Status</targetReference>
         </connector>
@@ -681,7 +709,7 @@ AND( {!Validation_Opportunity_Creation.output_HasActiveContract},
         <name>Update_Account_Employees</name>
         <label>Update Account Employees</label>
         <locationX>600</locationX>
-        <locationY>1406</locationY>
+        <locationY>1514</locationY>
         <connector>
             <targetReference>Software_or_Payments</targetReference>
         </connector>
@@ -705,7 +733,7 @@ AND( {!Validation_Opportunity_Creation.output_HasActiveContract},
         <name>Update_Contact_Status</name>
         <label>Update Contact Status</label>
         <locationX>600</locationX>
-        <locationY>1298</locationY>
+        <locationY>1406</locationY>
         <connector>
             <targetReference>Update_Account_Employees</targetReference>
         </connector>
@@ -721,6 +749,30 @@ AND( {!Validation_Opportunity_Creation.output_HasActiveContract},
             <field>Status__c</field>
             <value>
                 <stringValue>Open Opportunity</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Contact_with_New_Account</name>
+        <label>Update Contact with New Account</label>
+        <locationX>600</locationX>
+        <locationY>998</locationY>
+        <connector>
+            <targetReference>Assign_Opportunity_Values</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>AccountId</field>
+            <value>
+                <elementReference>Create_New_Account_for_Opportunity.varCreatedAccountId</elementReference>
             </value>
         </inputAssignments>
         <object>Contact</object>
@@ -1308,7 +1360,7 @@ AND( {!Validation_Opportunity_Creation.output_HasActiveContract},
         <name>Lookup_Merchant_Application</name>
         <label>Lookup Merchant Application</label>
         <locationX>314</locationX>
-        <locationY>1730</locationY>
+        <locationY>1838</locationY>
         <connector>
             <targetReference>Navigate_to_Opportunity</targetReference>
         </connector>
