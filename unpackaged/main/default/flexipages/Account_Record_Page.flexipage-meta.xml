@@ -71,6 +71,100 @@
                 </visibilityRule>
             </componentInstance>
         </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p&gt;&lt;strong style=&quot;font-size: 28px; color: rgb(244, 8, 8);&quot;&gt;Only Enterprise Payments Team Can sell payments into this firm (both inbound or outbound)&lt;/strong&gt;&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText2</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Payments_Enterprise_Account__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>Yes</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p&gt;&lt;strong style=&quot;color: rgb(255, 5, 5); font-size: 28px;&quot;&gt;No outbound or inbound software sales, even if a customer initiates. They have a pre-existing relationship with one of our partners.&lt;/strong&gt;&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText3</identifier>
+                <visibilityRule>
+                    <booleanFilter>1 OR 2 OR 3 OR 4 OR 5 OR 6 OR 7</booleanFilter>
+                    <criteria>
+                        <leftValue>{!Record.Partner_Software_Non_Compete_Type__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>Outbound and Inbound Prohibited</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Oppty_with_Prohibited_Status__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>true</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Current_LPM_Prohibited__c}</leftValue>
+                        <operator>CONTAINS</operator>
+                        <rightValue>Aderant</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Current_LPM_Prohibited__c}</leftValue>
+                        <operator>CONTAINS</operator>
+                        <rightValue>Firm Central</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Current_LPM_Prohibited__c}</leftValue>
+                        <operator>CONTAINS</operator>
+                        <rightValue>ProLaw</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Current_LPM_Prohibited__c}</leftValue>
+                        <operator>CONTAINS</operator>
+                        <rightValue>Thomson Reuters</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Primary_Referral_Partnership__r.Partner_Account_has_Prohibition__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>true</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p&gt;&lt;strong style=&quot;font-size: 28px; color: rgb(253, 3, 3);&quot;&gt;Inbound software sales only, no outbound software sales.&lt;/strong&gt;&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText4</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Partner_Software_Non_Compete_Type__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>Outbound Prohibited (time bound)</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </componentInstance>
+        </itemInstances>
         <name>header</name>
         <type>Region</type>
     </flexiPageRegions>
@@ -165,6 +259,40 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
+                <fieldItem>Record.Partner_Software_Non_Compete_Type__c</fieldItem>
+                <identifier>RecordPartner_Software_Non_Compete_Type_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.RecordType.DeveloperName}</leftValue>
+                        <operator>CONTAINS</operator>
+                        <rightValue>Partner</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Software_Non_Compete_Expiry_Date__c</fieldItem>
+                <identifier>RecordSoftware_Non_Compete_Expiry_Date_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.RecordType.DeveloperName}</leftValue>
+                        <operator>CONTAINS</operator>
+                        <rightValue>Partner</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Primary_Referral_Partnership__c</fieldItem>
                 <identifier>RecordPrimary_Referral_Partnership_cField</identifier>
             </fieldInstance>
@@ -177,6 +305,40 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.RecordTypeId</fieldItem>
                 <identifier>RecordRecordTypeIdField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Payments_Enterprise_Account__c</fieldItem>
+                <identifier>RecordPayments_Enterprise_Account_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.RecordType.DeveloperName}</leftValue>
+                        <operator>CONTAINS</operator>
+                        <rightValue>Customer</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Software_Non_Compete_in_Effect__c</fieldItem>
+                <identifier>RecordSoftware_Non_Compete_in_Effect_cField</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.RecordType.DeveloperName}</leftValue>
+                        <operator>CONTAINS</operator>
+                        <rightValue>Customer</rightValue>
+                    </criteria>
+                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -1270,10 +1432,6 @@
                     <value>Facet-10b43ed7-fd43-4558-90a0-e9c86f50bdd5</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>label</name>
                     <value>Account Information</value>
                 </componentInstanceProperties>
@@ -1286,10 +1444,6 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-f507f312-2b63-4a54-810f-7e240f0962a4</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -1306,10 +1460,6 @@
                     <value>Facet-ac55e970-ae98-4733-ac33-6bafd2834ef0</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>label</name>
                     <value>Customer Statuses</value>
                 </componentInstanceProperties>
@@ -1322,10 +1472,6 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-dd2e9fca-8ec8-4f5f-b2ce-7696f5f28716</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -1342,10 +1488,6 @@
                     <value>Facet-2cf78718-dad9-46ca-9a17-0db81e4c3850</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>label</name>
                     <value>Industry information</value>
                 </componentInstanceProperties>
@@ -1358,10 +1500,6 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-fdbe122a-27b5-4a4c-b858-9c11503452e5</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -1378,10 +1516,6 @@
                     <value>Facet-f4c0c13f-e59e-4353-959f-eaaff700b5ca</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>label</name>
                     <value>Address Information</value>
                 </componentInstanceProperties>
@@ -1394,10 +1528,6 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-ebcf797e-7159-4d05-b786-6b3e71847c7b</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -1414,10 +1544,6 @@
                     <value>Facet-fdec3e84-85b9-48c4-8ebf-bbb7ab905cba</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>label</name>
                     <value>New Section</value>
                 </componentInstanceProperties>
@@ -1432,10 +1558,6 @@
                     <value>Facet-3ffb8d3c-4096-4bbe-be8f-229ee6c38138</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>label</name>
                     <value>Strategic Accounts</value>
                 </componentInstanceProperties>
@@ -1448,10 +1570,6 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-00ff102b-80af-4bfd-818b-4aa4569ba714</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -1472,10 +1590,6 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-822561ea-33d9-4f64-98bf-f7856a32697f</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -2102,10 +2216,6 @@
                     <value>Facet-3d62556e-d7bd-4b03-9dad-67b13fbc2584</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>label</name>
                     <value>Soluno Information</value>
                 </componentInstanceProperties>
@@ -2125,10 +2235,6 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-ac2050aa-5700-4cec-80eb-f4177196ecef</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
