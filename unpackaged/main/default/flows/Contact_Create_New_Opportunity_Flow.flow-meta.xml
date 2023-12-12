@@ -3,8 +3,8 @@
     <actionCalls>
         <name>Navigate_to_Active_Opp</name>
         <label>Navigate to Active Opp</label>
-        <locationX>495</locationX>
-        <locationY>796</locationY>
+        <locationX>50</locationX>
+        <locationY>674</locationY>
         <actionName>c:navigateEverywhereLFA</actionName>
         <actionType>component</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -26,13 +26,15 @@
                 <stringValue>view</stringValue>
             </value>
         </inputParameters>
+        <nameSegment>c:navigateEverywhereLFA</nameSegment>
         <storeOutputAutomatically>true</storeOutputAutomatically>
+        <versionSegment>1</versionSegment>
     </actionCalls>
     <actionCalls>
         <name>Navigate_to_Opportunity</name>
         <label>Navigate to Opportunity</label>
-        <locationX>1470</locationX>
-        <locationY>530</locationY>
+        <locationX>600</locationX>
+        <locationY>2006</locationY>
         <actionName>c:navigateEverywhereLFA</actionName>
         <actionType>component</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -54,14 +56,16 @@
                 <stringValue>view</stringValue>
             </value>
         </inputParameters>
+        <nameSegment>c:navigateEverywhereLFA</nameSegment>
         <storeOutputAutomatically>true</storeOutputAutomatically>
+        <versionSegment>1</versionSegment>
     </actionCalls>
     <apiVersion>57.0</apiVersion>
     <assignments>
         <name>Assign_Contact_Account</name>
         <label>Assign Contact Account</label>
-        <locationX>927</locationX>
-        <locationY>504</locationY>
+        <locationX>864</locationX>
+        <locationY>782</locationY>
         <assignmentItems>
             <assignToReference>varOpportunity.AccountId</assignToReference>
             <operator>Assign</operator>
@@ -83,8 +87,8 @@
     <assignments>
         <name>Assign_New_Account_Id</name>
         <label>Assign New Account Id</label>
-        <locationX>1172</locationX>
-        <locationY>97</locationY>
+        <locationX>600</locationX>
+        <locationY>890</locationY>
         <assignmentItems>
             <assignToReference>varOpportunity.AccountId</assignToReference>
             <operator>Assign</operator>
@@ -106,8 +110,8 @@
     <assignments>
         <name>Assign_Opportunity_Values</name>
         <label>Assign Opportunity Values</label>
-        <locationX>1173</locationX>
-        <locationY>358</locationY>
+        <locationX>600</locationX>
+        <locationY>1082</locationY>
         <assignmentItems>
             <assignToReference>varOpportunity.RecordTypeId</assignToReference>
             <operator>Assign</operator>
@@ -297,8 +301,8 @@
     <assignments>
         <name>Assign_Upsell</name>
         <label>Assign Upsell</label>
-        <locationX>989</locationX>
-        <locationY>204</locationY>
+        <locationX>336</locationX>
+        <locationY>782</locationY>
         <assignmentItems>
             <assignToReference>var_OpportunityType</assignToReference>
             <operator>Assign</operator>
@@ -358,6 +362,14 @@
         </value>
     </choices>
     <choices>
+        <name>SellUpsellCASEpeer</name>
+        <choiceText>Sell additional {!varRecordTypeName} seats or products (Upsell)</choiceText>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Upsell</stringValue>
+        </value>
+    </choices>
+    <choices>
         <name>YesChoice</name>
         <choiceText>Yes</choiceText>
         <dataType>String</dataType>
@@ -368,8 +380,8 @@
     <decisions>
         <name>Link_Application_Check</name>
         <label>Link Application Check</label>
-        <locationX>1703</locationX>
-        <locationY>689</locationY>
+        <locationX>446</locationX>
+        <locationY>1622</locationY>
         <defaultConnector>
             <targetReference>Navigate_to_Opportunity</targetReference>
         </defaultConnector>
@@ -393,8 +405,8 @@
     <decisions>
         <name>Opportunity_Create_Validation</name>
         <label>Opportunity Create Validation</label>
-        <locationX>491</locationX>
-        <locationY>475</locationY>
+        <locationX>325</locationX>
+        <locationY>458</locationY>
         <defaultConnector>
             <targetReference>New_Opportunity</targetReference>
         </defaultConnector>
@@ -418,8 +430,8 @@
     <decisions>
         <name>Opportunity_Type_Validation</name>
         <label>Opportunity Type Validation</label>
-        <locationX>689</locationX>
-        <locationY>289</locationY>
+        <locationX>600</locationX>
+        <locationY>674</locationY>
         <defaultConnector>
             <targetReference>Assign_Contact_Account</targetReference>
         </defaultConnector>
@@ -455,7 +467,7 @@
         </rules>
         <rules>
             <name>New_Business_New_Account</name>
-            <conditionLogic>and</conditionLogic>
+            <conditionLogic>1 AND 2 AND (3 OR  4 OR 5)</conditionLogic>
             <conditions>
                 <leftValueReference>Select_Opportunity_Type</leftValueReference>
                 <operator>EqualTo</operator>
@@ -477,6 +489,20 @@
                     <stringValue>MyCase</stringValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>RecordType_ContractMapping</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>CASEpeer</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>RecordType_ContractMapping</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Docketwise</stringValue>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>Create_New_Account_for_Opportunity</targetReference>
             </connector>
@@ -486,8 +512,8 @@
     <decisions>
         <name>Software_or_Payments</name>
         <label>Software or Payments</label>
-        <locationX>1465</locationX>
-        <locationY>805</locationY>
+        <locationX>600</locationX>
+        <locationY>1514</locationY>
         <defaultConnector>
             <targetReference>Navigate_to_Opportunity</targetReference>
         </defaultConnector>
@@ -610,7 +636,7 @@ AND( {!Validation_Opportunity_Creation.output_HasActiveContract},
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>FREE_FORM_CANVAS</stringValue>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -623,8 +649,8 @@ AND( {!Validation_Opportunity_Creation.output_HasActiveContract},
     <recordCreates>
         <name>Create_Opportunity</name>
         <label>Create Opportunity</label>
-        <locationX>1172</locationX>
-        <locationY>593</locationY>
+        <locationX>600</locationX>
+        <locationY>1190</locationY>
         <connector>
             <targetReference>Update_Contact_Status</targetReference>
         </connector>
@@ -633,8 +659,8 @@ AND( {!Validation_Opportunity_Creation.output_HasActiveContract},
     <recordLookups>
         <name>Contact</name>
         <label>Contact</label>
-        <locationX>265</locationX>
-        <locationY>203</locationY>
+        <locationX>325</locationX>
+        <locationY>134</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Select_Brand</targetReference>
@@ -654,8 +680,8 @@ AND( {!Validation_Opportunity_Creation.output_HasActiveContract},
     <recordUpdates>
         <name>Update_Account_Employees</name>
         <label>Update Account Employees</label>
-        <locationX>1317</locationX>
-        <locationY>730</locationY>
+        <locationX>600</locationX>
+        <locationY>1406</locationY>
         <connector>
             <targetReference>Software_or_Payments</targetReference>
         </connector>
@@ -678,8 +704,8 @@ AND( {!Validation_Opportunity_Creation.output_HasActiveContract},
     <recordUpdates>
         <name>Update_Contact_Status</name>
         <label>Update Contact Status</label>
-        <locationX>1318</locationX>
-        <locationY>593</locationY>
+        <locationX>600</locationX>
+        <locationY>1298</locationY>
         <connector>
             <targetReference>Update_Account_Employees</targetReference>
         </connector>
@@ -703,8 +729,8 @@ AND( {!Validation_Opportunity_Creation.output_HasActiveContract},
     <screens>
         <name>Active_Open_Opportunity</name>
         <label>Active Open Opportunity</label>
-        <locationX>498</locationX>
-        <locationY>633</locationY>
+        <locationX>50</locationX>
+        <locationY>566</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -761,6 +787,7 @@ AND( {!Validation_Opportunity_Creation.output_HasActiveContract},
                     <dataType>String</dataType>
                     <fieldText>Related Accounts</fieldText>
                     <fieldType>RadioButtons</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
                     <visibilityRule>
                         <conditionLogic>and</conditionLogic>
@@ -790,8 +817,8 @@ AND( {!Validation_Opportunity_Creation.output_HasActiveContract},
     <screens>
         <name>New_Opportunity</name>
         <label>New Opportunity</label>
-        <locationX>697</locationX>
-        <locationY>476</locationY>
+        <locationX>600</locationX>
+        <locationY>566</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -821,16 +848,88 @@ AND( {!Validation_Opportunity_Creation.output_HasActiveContract},
                     <dataType>String</dataType>
                     <fieldText>Select Opportunity Type</fieldText>
                     <fieldType>RadioButtons</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                 </fields>
                 <fields>
                     <name>newAccountDisplay</name>
-                    <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Customer wants another &lt;/span&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;{!varRecordTypeName}&lt;/strong&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt; account. This will create a new Account in Salesforce and relate the existing contact to it.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt;Customer wants another &lt;/span&gt;&lt;strong style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt;{!varRecordTypeName}&lt;/strong&gt;&lt;span style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt; account. This will create a new Account in Salesforce and relate the existing contact to it.&lt;/span&gt;&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                     <visibilityRule>
                         <conditionLogic>and</conditionLogic>
                         <conditions>
                             <leftValueReference>Select_Opportunity_Type</leftValueReference>
+                            <operator>EqualTo</operator>
+                            <rightValue>
+                                <elementReference>SellNewBusiness</elementReference>
+                            </rightValue>
+                        </conditions>
+                    </visibilityRule>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+            <visibilityRule>
+                <conditionLogic>1 AND (2 OR 3)</conditionLogic>
+                <conditions>
+                    <leftValueReference>Validation_Opportunity_Creation.output_HasActiveContract</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <booleanValue>true</booleanValue>
+                    </rightValue>
+                </conditions>
+                <conditions>
+                    <leftValueReference>RecordType_ContractMapping</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <stringValue>MyCase</stringValue>
+                    </rightValue>
+                </conditions>
+                <conditions>
+                    <leftValueReference>RecordType_ContractMapping</leftValueReference>
+                    <operator>EqualTo</operator>
+                    <rightValue>
+                        <stringValue>Docketwise</stringValue>
+                    </rightValue>
+                </conditions>
+            </visibilityRule>
+        </fields>
+        <fields>
+            <name>New_Opportunity_Section2</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>New_Opportunity_Section2_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>opptypeDisplay2</name>
+                    <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;ALERT&lt;/strong&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;: This Account is currently a &lt;/span&gt;&lt;strong style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;{!varRecordTypeName}&lt;/strong&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt; Customer. Choose an option below.&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>Select_Opportunity_Type_2</name>
+                    <choiceReferences>SellUpsellCASEpeer</choiceReferences>
+                    <choiceReferences>SellNewBusiness</choiceReferences>
+                    <dataType>String</dataType>
+                    <fieldText>Select Opportunity Type</fieldText>
+                    <fieldType>RadioButtons</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>false</isRequired>
+                </fields>
+                <fields>
+                    <name>newAccountDisplay2</name>
+                    <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Customer wants another &lt;/span&gt;&lt;strong style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;{!varRecordTypeName}&lt;/strong&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt; account. This will create a new Account in Salesforce and relate the existing contact to it.&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                    <visibilityRule>
+                        <conditionLogic>and</conditionLogic>
+                        <conditions>
+                            <leftValueReference>Select_Opportunity_Type_2</leftValueReference>
                             <operator>EqualTo</operator>
                             <rightValue>
                                 <elementReference>SellNewBusiness</elementReference>
@@ -861,16 +960,16 @@ AND( {!Validation_Opportunity_Creation.output_HasActiveContract},
                     <leftValueReference>RecordType_ContractMapping</leftValueReference>
                     <operator>EqualTo</operator>
                     <rightValue>
-                        <stringValue>MyCase</stringValue>
+                        <stringValue>CASEpeer</stringValue>
                     </rightValue>
                 </conditions>
             </visibilityRule>
         </fields>
         <fields>
-            <name>New_Opportunity_Section2</name>
+            <name>New_Opportunity_Section3</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>New_Opportunity_Section2_Column1</name>
+                <name>New_Opportunity_Section3_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Close_Date</name>
@@ -880,6 +979,7 @@ AND( {!Validation_Opportunity_Creation.output_HasActiveContract},
                     </defaultValue>
                     <fieldText>Close Date</fieldText>
                     <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                 </fields>
                 <inputParameters>
@@ -891,7 +991,7 @@ AND( {!Validation_Opportunity_Creation.output_HasActiveContract},
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>New_Opportunity_Section2_Column2</name>
+                <name>New_Opportunity_Section3_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Employees</name>
@@ -902,6 +1002,7 @@ AND( {!Validation_Opportunity_Creation.output_HasActiveContract},
                     <fieldText>Employees</fieldText>
                     <fieldType>InputField</fieldType>
                     <helpText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Defaults to Employees field from the Contact&lt;/span&gt;&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                     <scale>0</scale>
                 </fields>
@@ -914,6 +1015,7 @@ AND( {!Validation_Opportunity_Creation.output_HasActiveContract},
                     <fieldText>Forecasted Users</fieldText>
                     <fieldType>InputField</fieldType>
                     <helpText>&lt;p&gt;Defaults to Forecasted field from the Contact&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>false</isRequired>
                     <scale>0</scale>
                     <visibilityRule>
@@ -960,10 +1062,10 @@ AND( {!Validation_Opportunity_Creation.output_HasActiveContract},
             <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
-            <name>New_Opportunity_Section3</name>
+            <name>New_Opportunity_Section4</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>New_Opportunity_Section3_Column1</name>
+                <name>New_Opportunity_Section4_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
                     <name>Link_Merchant_Application_Now</name>
@@ -972,6 +1074,7 @@ AND( {!Validation_Opportunity_Creation.output_HasActiveContract},
                     <dataType>String</dataType>
                     <fieldText>Link Merchant Application Now</fieldText>
                     <fieldType>RadioButtons</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                 </fields>
                 <fields>
@@ -1118,6 +1221,7 @@ AND( {!Validation_Opportunity_Creation.output_HasActiveContract},
             <fieldText>Demo Scheduled Date</fieldText>
             <fieldType>InputField</fieldType>
             <helpText>&lt;p&gt;If populated will copy over to the Opportunity&lt;/p&gt;</helpText>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>false</isRequired>
         </fields>
         <showFooter>true</showFooter>
@@ -1126,8 +1230,8 @@ AND( {!Validation_Opportunity_Creation.output_HasActiveContract},
     <screens>
         <name>Select_Brand</name>
         <label>Select Brand</label>
-        <locationX>153</locationX>
-        <locationY>324</locationY>
+        <locationX>325</locationX>
+        <locationY>242</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -1146,6 +1250,7 @@ AND( {!Validation_Opportunity_Creation.output_HasActiveContract},
                     <dataType>String</dataType>
                     <fieldText>Choose Opportunity Record Type</fieldText>
                     <fieldType>DropdownBox</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                 </fields>
                 <inputParameters>
@@ -1163,8 +1268,8 @@ AND( {!Validation_Opportunity_Creation.output_HasActiveContract},
         <showHeader>true</showHeader>
     </screens>
     <start>
-        <locationX>139</locationX>
-        <locationY>60</locationY>
+        <locationX>199</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Contact</targetReference>
         </connector>
@@ -1173,8 +1278,8 @@ AND( {!Validation_Opportunity_Creation.output_HasActiveContract},
     <subflows>
         <name>Create_New_Account_for_Opportunity</name>
         <label>Create New Account for Opportunity</label>
-        <locationX>708</locationX>
-        <locationY>104</locationY>
+        <locationX>600</locationX>
+        <locationY>782</locationY>
         <connector>
             <targetReference>Assign_New_Account_Id</targetReference>
         </connector>
@@ -1202,8 +1307,8 @@ AND( {!Validation_Opportunity_Creation.output_HasActiveContract},
     <subflows>
         <name>Lookup_Merchant_Application</name>
         <label>Lookup Merchant Application</label>
-        <locationX>1712</locationX>
-        <locationY>522</locationY>
+        <locationX>314</locationX>
+        <locationY>1730</locationY>
         <connector>
             <targetReference>Navigate_to_Opportunity</targetReference>
         </connector>
@@ -1230,8 +1335,8 @@ AND( {!Validation_Opportunity_Creation.output_HasActiveContract},
     <subflows>
         <name>Validation_Opportunity_Creation</name>
         <label>Validation Opportunity Creation</label>
-        <locationX>250</locationX>
-        <locationY>473</locationY>
+        <locationX>325</locationX>
+        <locationY>350</locationY>
         <connector>
             <targetReference>Opportunity_Create_Validation</targetReference>
         </connector>
