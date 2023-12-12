@@ -276,6 +276,23 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
+                <fieldItem>Record.Payments_Enterprise_Account__c</fieldItem>
+                <identifier>RecordPayments_Enterprise_Account_cField2</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Record_Type_Name__c}</leftValue>
+                        <operator>CONTAINS</operator>
+                        <rightValue>Partner</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Software_Non_Compete_Expiry_Date__c</fieldItem>
                 <identifier>RecordSoftware_Non_Compete_Expiry_Date_cField</identifier>
                 <visibilityRule>
@@ -295,6 +312,16 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Primary_Referral_Partnership__c</fieldItem>
                 <identifier>RecordPrimary_Referral_Partnership_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Payments_Enterprise_Partner__c</fieldItem>
+                <identifier>RecordPayments_Enterprise_Partner_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
