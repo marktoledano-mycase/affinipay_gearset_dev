@@ -24,6 +24,11 @@
                 <label>AI &amp; Automation</label>
             </value>
             <value>
+                <fullName>Banks</fullName>
+                <default>false</default>
+                <label>Banks</label>
+            </value>
+            <value>
                 <fullName>Court Forms</fullName>
                 <default>false</default>
                 <label>Court Forms</label>
@@ -44,14 +49,34 @@
                 <label>Evergreen Retainers</label>
             </value>
             <value>
+                <fullName>Fees</fullName>
+                <default>false</default>
+                <label>Fees</label>
+            </value>
+            <value>
                 <fullName>Group Permissions</fullName>
                 <default>false</default>
                 <label>Group Permissions</label>
             </value>
             <value>
+                <fullName>Integrations</fullName>
+                <default>false</default>
+                <label>Integrations</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
                 <fullName>Payable Statements</fullName>
                 <default>false</default>
                 <label>Payable Statements</label>
+            </value>
+            <value>
+                <fullName>Payment Types</fullName>
+                <default>false</default>
+                <label>Payment Types</label>
             </value>
             <value>
                 <fullName>Rate Schedules</fullName>
@@ -77,6 +102,11 @@
                 <fullName>SSO</fullName>
                 <default>false</default>
                 <label>SSO</label>
+            </value>
+            <value>
+                <fullName>Surcharging</fullName>
+                <default>false</default>
+                <label>Surcharging</label>
             </value>
             <value>
                 <fullName>Updating Case Rates</fullName>

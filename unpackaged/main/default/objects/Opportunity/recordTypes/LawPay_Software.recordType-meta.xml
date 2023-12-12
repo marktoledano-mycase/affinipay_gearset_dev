@@ -2729,6 +2729,18 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Competition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Card Processing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cross-Sell</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Document Automation</fullName>
             <default>false</default>
         </values>
@@ -2745,7 +2757,19 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Large Processing Volume</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Lead Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Migration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Demo Area</fullName>
             <default>false</default>
         </values>
         <values>
@@ -2753,7 +2777,27 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Process Walkthrough%2FUnderstanding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rate Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Reporting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resource</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ride Along</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surcharging</fullName>
             <default>false</default>
         </values>
         <values>
@@ -3281,6 +3325,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Banks</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Court Forms</fullName>
             <default>false</default>
         </values>
@@ -3293,11 +3341,27 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Fees</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Group Permissions</fullName>
             <default>false</default>
         </values>
         <values>
+            <fullName>Integrations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Payable Statements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment Types</fullName>
             <default>false</default>
         </values>
         <values>
@@ -3314,6 +3378,10 @@
         </values>
         <values>
             <fullName>Split Billing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surcharging</fullName>
             <default>false</default>
         </values>
         <values>
