@@ -1456,6 +1456,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Current_LPM_Prohibited__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Account.Current_LPM__c</field>
         <readable>true</readable>
@@ -1741,6 +1746,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Last_Assigned_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Account.Last_Invoiced__c</field>
         <readable>true</readable>
@@ -2023,6 +2033,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Open_Edge_Customer__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Oppty_with_Prohibited_Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2533,6 +2548,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Account.Record_Count__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Record_Type_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -9651,6 +9671,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.Current_LPM_Prohibited__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Lead.Current_LPM__c</field>
         <readable>true</readable>
@@ -9853,6 +9878,21 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Lead.HasOptedOutOfEmail</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Has_Referral_with_Paymnts_Entrprse_Acct__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Has_Referral_with_Prohibited_Status_Time__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Has_Referral_with_Prohibited_Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -11146,6 +11186,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Merchant_Application__c.Partner_Token__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Merchant_Application__c.Pricing_Plan_ID__c</field>
         <readable>true</readable>
@@ -11168,6 +11213,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Merchant_Application__c.Sales_Rep__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Merchant_Application__c.VT_Application_Link__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -12658,6 +12708,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Opportunity.Has_Referral_Partner__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.Has_Referral_with_Prohibited_Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -14867,11 +14922,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Partnerships__c.LawPay_Enterprise_Partnership__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Partnerships__c.Legacy_Notes__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -14898,6 +14948,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Partnerships__c.PartnerStack_Partner_Key__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Partnerships__c.Partner_Account_has_Prohibition__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
