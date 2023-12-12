@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Minimum_Amount_Processed__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>The minimum amount the merchant is required to process within a specific timeframe (ex: $6000 over a 6-month period).</inlineHelpText>
+    <label>Minimum Amount Processed</label>
+    <precision>12</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>
