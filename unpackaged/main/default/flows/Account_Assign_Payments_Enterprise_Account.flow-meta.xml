@@ -304,14 +304,6 @@
         <connector>
             <targetReference>Get_Referral_Records</targetReference>
         </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Payments_Enterprise_Account__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue></stringValue>
-            </value>
-        </filters>
         <object>Account</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
