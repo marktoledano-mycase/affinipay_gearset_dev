@@ -282,15 +282,39 @@
     </picklistValues>
     <picklistValues>
         <picklist>Status</picklist>
-        
-            
-            
-            
-            
-            
-            
-            
-        </picklistValues>
+        <values>
+            <fullName>Agreement Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Awaiting Partner Redlines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Executed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Negotiating</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renegotiating</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted for review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Terminated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting on AP Dept</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
     <picklistValues>
         <picklist>eCheck_included__c</picklist>
         <values>
