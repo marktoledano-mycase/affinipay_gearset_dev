@@ -173,6 +173,221 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Competitor__c</picklist>
+        <values>
+            <fullName>ACT%21 CRM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Abacus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ActionStep</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aderant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amicus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BestCase</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bill4Time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CASEpeer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CaseFox</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cerenade%2FSerenade</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clio Grow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clio Manage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cosmolex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Daylite</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Docketwise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E-Bility</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FileVine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Firm Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High Rise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hubspot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INSZoom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Juris</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Law Logix</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lawcus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lawyaw</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal Master</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lolly Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MerusCase</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Competition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PC Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Perfect Practice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PerfectLaw</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Practice Panther</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PrimaFacie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pro Docs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ProLaw</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quickbooks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rippe %26 Kingston</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rocket Matter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salesforce</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Smokeball</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TABS3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Time Tracker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Time and Chaos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Time59</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TimeMatters</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TimeSlips</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TimeSolv</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TrialWorks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zola suite</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Deployment__c</picklist>
         <values>
             <fullName>Cloud</fullName>
