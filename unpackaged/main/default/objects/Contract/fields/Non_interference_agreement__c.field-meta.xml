@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Non_interference_agreement__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Strategic Non-Compete:CANNOT sell/cross-sell LPM to all customers (Sales determine customer’s LPM)
+Even if a customer/prospect initiates (i.e. asks for recommendation)
+
+Non-Strategic:CANNOT cross-sell LPMs to customers that had an active integration in the last 6 months or referred by a partner in the last year unless a customer/prospect initiates (i.e. asks for recommendation)
+
+Strategic:CANNOT sell/cross-sell LPMs to customers active with integration or referred by a partner (regardless of timeline</inlineHelpText>
+    <label>Non-interference agreement</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+            <value>
+                <fullName>Strategic non-compete</fullName>
+                <default>false</default>
+                <label>Strategic non-compete</label>
+            </value>
+            <value>
+                <fullName>Non-strategic</fullName>
+                <default>false</default>
+                <label>Non-strategic</label>
+            </value>
+            <value>
+                <fullName>Strategic</fullName>
+                <default>false</default>
+                <label>Strategic</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
