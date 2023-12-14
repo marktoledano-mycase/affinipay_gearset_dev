@@ -7,7 +7,8 @@
     TEXT(Contract_SKU__r.SKU_Product__r.Product_Type__c) = &quot;Add-On&quot;,
     ADDMONTHS(Contract_Effective_Date__c, 6) &gt;= Effective_Date__c,
     IF(
-        ISNULL(Opportunity_Close_Date__c),TRUE,
+       AND( ISNULL(Opportunity_Close_Date__c),
+        ADDMONTHS(Contract_Effective_Date__c ,6)&gt;=Effective_Date__c), TRUE,
        IF( ADDMONTHS(Opportunity_Close_Date__c, 6) &gt;= Effective_Date__c,
         TRUE,
         FALSE)
