@@ -76,6 +76,10 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
+                <field>Monthly_Fee_Start_Date__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
                 <field>Platform__c</field>
             </layoutItems>
             <layoutItems>
