@@ -20,4 +20,52 @@
         <label>Draft</label>
         <groupingString>Draft</groupingString>
     </standardValue>
+    <standardValue>
+        <fullName>Awaiting Partner Redlines</fullName>
+        <default>false</default>
+        <label>Awaiting Partner Redlines</label>
+        <groupingString>Draft</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Negotiating</fullName>
+        <default>false</default>
+        <label>Negotiating</label>
+        <groupingString>Draft</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Submitted for review</fullName>
+        <default>false</default>
+        <label>Submitted for review</label>
+        <groupingString>Draft</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Agreement Pending</fullName>
+        <default>false</default>
+        <label>Agreement Pending</label>
+        <groupingString>Draft</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Executed</fullName>
+        <default>false</default>
+        <label>Executed</label>
+        <groupingString>Activated</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Waiting on AP Dept</fullName>
+        <default>false</default>
+        <label>Waiting on AP Dept</label>
+        <groupingString>InApproval</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Renegotiating</fullName>
+        <default>false</default>
+        <label>Renegotiating</label>
+        <groupingString>Draft</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Terminated</fullName>
+        <default>false</default>
+        <label>Terminated</label>
+        <groupingString>Activated</groupingString>
+    </standardValue>
 </StandardValueSet>
