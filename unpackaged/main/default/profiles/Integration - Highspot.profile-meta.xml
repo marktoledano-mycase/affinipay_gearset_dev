@@ -9819,6 +9819,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>ValuePlus__c.Monthly_Fee_Start_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>ValuePlus__c.MyCase_Sub_Domain__c</field>
         <readable>true</readable>
     </fieldPermissions>
