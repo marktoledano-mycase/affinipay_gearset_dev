@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
-    <excludeButtons>DataDotComAccountInsights</excludeButtons>
-    <excludeButtons>DataDotComClean</excludeButtons>
+    <excludeButtons>DataDotComCompanyHierarchy</excludeButtons>
     <excludeButtons>DisableCustomerPortalAccount</excludeButtons>
     <excludeButtons>DisablePartnerPortalAccount</excludeButtons>
     <excludeButtons>IncludeOffline</excludeButtons>
@@ -801,9 +800,8 @@
         <fields>Stage__c</fields>
         <fields>Stage_Entered__c</fields>
         <fields>Platform__c</fields>
-        <fields>ProfitStars_Push_Status__c</fields>
-        <fields>OnBoardingStatus__c</fields>
         <fields>Website_URL__c</fields>
+        <fields>onboarding_specialist__c</fields>
         <relatedList>ValuePlus__c.Account__c</relatedList>
     </relatedLists>
     <relatedLists>
