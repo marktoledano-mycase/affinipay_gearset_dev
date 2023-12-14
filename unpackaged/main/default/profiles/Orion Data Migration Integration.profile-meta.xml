@@ -19582,6 +19582,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>ValuePlus__c.Purchase_at_Signing__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>ValuePlus__c.QuaternaryCondition1__c</field>
         <readable>true</readable>

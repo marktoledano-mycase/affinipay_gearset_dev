@@ -12489,6 +12489,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>ValuePlus__c.Purchase_at_Signing__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>ValuePlus__c.Secondary_Brand__c</field>
         <readable>true</readable>
     </fieldPermissions>
