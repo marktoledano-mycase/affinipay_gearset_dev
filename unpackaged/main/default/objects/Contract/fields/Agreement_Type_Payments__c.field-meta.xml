@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agreement_Type_Payments__c</fullName>
+    <externalId>false</externalId>
+    <label>Agreement Type (Payments)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Referral Bonus</fullName>
+                <default>false</default>
+                <label>Referral Bonus</label>
+            </value>
+            <value>
+                <fullName>Referral Volume</fullName>
+                <default>false</default>
+                <label>Referral Volume</label>
+            </value>
+            <value>
+                <fullName>Referral Bonus &amp; Referral Volume</fullName>
+                <default>false</default>
+                <label>Referral Bonus &amp; Referral Volume</label>
+            </value>
+            <value>
+                <fullName>Referral Bonus &amp; Referral Integrated Volume</fullName>
+                <default>false</default>
+                <label>Referral Bonus &amp; Referral Integrated Volume</label>
+            </value>
+            <value>
+                <fullName>Integrated Volume</fullName>
+                <default>false</default>
+                <label>Integrated Volume</label>
+            </value>
+            <value>
+                <fullName>Integrated Volume &amp; Referral Bonus</fullName>
+                <default>false</default>
+                <label>Integrated Volume &amp; Referral Bonus</label>
+            </value>
+            <value>
+                <fullName>Royalty Free</fullName>
+                <default>false</default>
+                <label>Royalty Free</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
