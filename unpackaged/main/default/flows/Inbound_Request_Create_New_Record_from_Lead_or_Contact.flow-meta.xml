@@ -407,6 +407,34 @@
                 <elementReference>varRequestType</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varInboundRequest.Number_of_Employees__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>varNumberofEmployees</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varInboundRequest.cRO1__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>varCRO1</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varInboundRequest.cRO2__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>varCRO2</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varInboundRequest.cRO3__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>varCRO3</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Created_From</targetReference>
         </connector>
@@ -666,6 +694,36 @@
         </value>
     </variables>
     <variables>
+        <name>varCRO1</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>varCRO2</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>varCRO3</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
         <name>varCustomerSuccessQualifyingRep</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
@@ -883,6 +941,14 @@
         <isCollection>false</isCollection>
         <isInput>true</isInput>
         <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varNumberofEmployees</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
     </variables>
     <variables>
         <name>varOldPersonStatus</name>
