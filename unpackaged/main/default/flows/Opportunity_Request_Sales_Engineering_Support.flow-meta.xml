@@ -175,7 +175,7 @@
         <defaultConnectorLabel>MyCase Opportunity</defaultConnectorLabel>
         <rules>
             <name>LawPay_Opportunity</name>
-            <conditionLogic>and</conditionLogic>
+            <conditionLogic>or</conditionLogic>
             <conditions>
                 <leftValueReference>Opportunity.Record_Type_Name__c</leftValueReference>
                 <operator>Contains</operator>
@@ -183,10 +183,17 @@
                     <stringValue>LawPay</stringValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>Opportunity.Record_Type_Name__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>CPACharge</stringValue>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>Sales_Engineering_Request_0</targetReference>
             </connector>
-            <label>LawPay Opportunity</label>
+            <label>LawPay/CPA Charge Opportunity</label>
         </rules>
     </decisions>
     <description>Screen flow to enable reps to request sales engineering support on a deal and copy values to the opportunity for reporting</description>
