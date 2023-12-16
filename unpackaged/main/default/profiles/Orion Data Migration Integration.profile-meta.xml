@@ -2047,6 +2047,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Partner_ID_VT__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Account.Partner_Status_Overall__c</field>
         <readable>true</readable>
@@ -2709,6 +2714,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Zuora_Payment_Method__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.oAuth_App_ID__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
