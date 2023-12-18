@@ -4,7 +4,7 @@
     <assignments>
         <name>Set_Current_Case</name>
         <label>Set Current Case</label>
-        <locationX>2294</locationX>
+        <locationX>2558</locationX>
         <locationY>242</locationY>
         <assignmentItems>
             <assignToReference>Current_Case.Id</assignToReference>
@@ -127,9 +127,48 @@
         </value>
     </choices>
     <decisions>
+        <name>Action_Close_as_Spam_Duplicate</name>
+        <label>Close as Spam/Duplicate</label>
+        <locationX>710</locationX>
+        <locationY>566</locationY>
+        <defaultConnector>
+            <targetReference>Update_Close_as_Spam_Duplicate</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Case Is Not Owned</defaultConnectorLabel>
+        <rules>
+            <name>Case_Is_Owned</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Current_Case.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>MyCase_Support</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Current_Case.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>New</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Current_Case.Owner:Group.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>MyCase Team</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Own_Case_Error</targetReference>
+            </connector>
+            <label>Case Is Owned</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Case_Contact_Required</name>
         <label>Case Contact Required</label>
-        <locationX>2294</locationX>
+        <locationX>2822</locationX>
         <locationY>674</locationY>
         <defaultConnector>
             <targetReference>Function_Get_RecordTypeId_Billing_MyCase_Case</targetReference>
@@ -154,7 +193,7 @@
     <decisions>
         <name>Decision_Assignment_Action</name>
         <label>Decision Assignment Action</label>
-        <locationX>2294</locationX>
+        <locationX>2558</locationX>
         <locationY>458</locationY>
         <defaultConnectorLabel>No Selection</defaultConnectorLabel>
         <rules>
@@ -186,6 +225,21 @@
                 <targetReference>Action_Close_as_Admin_Dupe</targetReference>
             </connector>
             <label>Close as Admin/Dupe</label>
+        </rules>
+        <rules>
+            <name>Select_Close_as_Spam_Duplicate</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Send_To_Selection</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Close_as_Spam_Duplicate</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Action_Close_as_Spam_Duplicate</targetReference>
+            </connector>
+            <label>Close as Spam/Duplicate</label>
         </rules>
         <rules>
             <name>Select_Escalate_Case</name>
@@ -356,7 +410,7 @@
     <decisions>
         <name>Escalate_Case_Already_Escalated_Check</name>
         <label>Escalate Case Already Escalated Check</label>
-        <locationX>974</locationX>
+        <locationX>1502</locationX>
         <locationY>674</locationY>
         <defaultConnector>
             <targetReference>Update_Escalate_Case</targetReference>
@@ -381,7 +435,7 @@
     <decisions>
         <name>Escalate_Case_Ownership_Check</name>
         <label>Escalate Case Ownership Check</label>
-        <locationX>776</locationX>
+        <locationX>1304</locationX>
         <locationY>566</locationY>
         <defaultConnector>
             <targetReference>Escalate_Case_Already_Escalated_Check</targetReference>
@@ -420,7 +474,7 @@
     <decisions>
         <name>Sent_to_Billing_Refund_Credit</name>
         <label>Sent to Billing Refund/Credit</label>
-        <locationX>2096</locationX>
+        <locationX>2624</locationX>
         <locationY>566</locationY>
         <defaultConnector>
             <targetReference>Case_Contact_Required</targetReference>
@@ -468,7 +522,7 @@
     <recordLookups>
         <name>Get_Current_Case</name>
         <label>Get Current Case</label>
-        <locationX>2294</locationX>
+        <locationX>2558</locationX>
         <locationY>350</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -522,7 +576,7 @@
     <recordUpdates>
         <name>Send_to_MyCase_Specialists_Update</name>
         <label>Send to MyCase Specialists</label>
-        <locationX>4010</locationX>
+        <locationX>4538</locationX>
         <locationY>674</locationY>
         <filterLogic>and</filterLogic>
         <filters>
@@ -543,7 +597,7 @@
     <recordUpdates>
         <name>Send_to_Prof_Services</name>
         <label>Send to Professional Services</label>
-        <locationX>4274</locationX>
+        <locationX>4802</locationX>
         <locationY>782</locationY>
         <filterLogic>and</filterLogic>
         <filters>
@@ -576,7 +630,7 @@
     <recordUpdates>
         <name>Update_Billing_Case</name>
         <label>Billing Case</label>
-        <locationX>3746</locationX>
+        <locationX>4274</locationX>
         <locationY>674</locationY>
         <filterLogic>and</filterLogic>
         <filters>
@@ -601,9 +655,42 @@
         <object>Case</object>
     </recordUpdates>
     <recordUpdates>
+        <name>Update_Close_as_Spam_Duplicate</name>
+        <label>Close as Spam/Duplicate</label>
+        <locationX>842</locationX>
+        <locationY>674</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Case_Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>DontAssign__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Reason</field>
+            <value>
+                <stringValue>Admin/Duplicates</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Closed</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+    </recordUpdates>
+    <recordUpdates>
         <name>Update_Escalate_Case</name>
         <label>Escalate Case</label>
-        <locationX>1106</locationX>
+        <locationX>1634</locationX>
         <locationY>782</locationY>
         <filterLogic>and</filterLogic>
         <filters>
@@ -642,7 +729,7 @@
     <recordUpdates>
         <name>Update_Own_the_Escalation</name>
         <label>Own the Escalation</label>
-        <locationX>1370</locationX>
+        <locationX>1898</locationX>
         <locationY>566</locationY>
         <filterLogic>and</filterLogic>
         <filters>
@@ -708,7 +795,7 @@
     <recordUpdates>
         <name>Update_Send_to_Accounting</name>
         <label>Send to Accounting</label>
-        <locationX>3482</locationX>
+        <locationX>4010</locationX>
         <locationY>782</locationY>
         <filterLogic>and</filterLogic>
         <filters>
@@ -741,7 +828,7 @@
     <recordUpdates>
         <name>Update_Send_to_Billing</name>
         <label>Send to Billing</label>
-        <locationX>2426</locationX>
+        <locationX>2954</locationX>
         <locationY>998</locationY>
         <filterLogic>and</filterLogic>
         <filters>
@@ -780,7 +867,7 @@
     <recordUpdates>
         <name>Update_Send_to_CS</name>
         <label>Send to CS</label>
-        <locationX>1634</locationX>
+        <locationX>2162</locationX>
         <locationY>782</locationY>
         <filterLogic>and</filterLogic>
         <filters>
@@ -813,7 +900,7 @@
     <recordUpdates>
         <name>Update_Send_to_Payments</name>
         <label>Send to Payments</label>
-        <locationX>3218</locationX>
+        <locationX>3746</locationX>
         <locationY>782</locationY>
         <filterLogic>and</filterLogic>
         <filters>
@@ -852,7 +939,7 @@
     <recordUpdates>
         <name>Update_Send_to_Sales</name>
         <label>Send to Sales</label>
-        <locationX>2954</locationX>
+        <locationX>3482</locationX>
         <locationY>566</locationY>
         <filterLogic>and</filterLogic>
         <filters>
@@ -885,7 +972,7 @@
     <recordUpdates>
         <name>Update_Send_to_Websites</name>
         <label>Send to Websites</label>
-        <locationX>2690</locationX>
+        <locationX>3218</locationX>
         <locationY>782</locationY>
         <filterLogic>and</filterLogic>
         <filters>
@@ -924,7 +1011,7 @@
     <screens>
         <name>Already_Escalated_Message</name>
         <label>Already Escalated Message</label>
-        <locationX>842</locationX>
+        <locationX>1370</locationX>
         <locationY>782</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
@@ -941,7 +1028,7 @@
     <screens>
         <name>Escalated_Please_Own_Case</name>
         <label>Escalated Please Own Case</label>
-        <locationX>578</locationX>
+        <locationX>1106</locationX>
         <locationY>674</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
@@ -958,7 +1045,7 @@
     <screens>
         <name>Message_No_Case_Contact</name>
         <label>No Case Contact</label>
-        <locationX>2162</locationX>
+        <locationX>2690</locationX>
         <locationY>782</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
@@ -973,9 +1060,26 @@
         <showHeader>false</showHeader>
     </screens>
     <screens>
+        <name>Own_Case_Error</name>
+        <label>Own Case Error</label>
+        <locationX>578</locationX>
+        <locationY>674</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>Please_Own_Case</name>
+            <fieldText>&lt;p&gt;Please own the case first!&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>OK</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
         <name>Refund_Credit_Message</name>
         <label>Refund/Credit Message</label>
-        <locationX>1898</locationX>
+        <locationX>2426</locationX>
         <locationY>674</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
@@ -992,7 +1096,7 @@
     <screens>
         <name>Select_Assignment_Action</name>
         <label>Select Assignment Action</label>
-        <locationX>2294</locationX>
+        <locationX>2558</locationX>
         <locationY>134</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
@@ -1024,7 +1128,6 @@
             <dataType>String</dataType>
             <fieldText>Select Assignment Action</fieldText>
             <fieldType>DropdownBox</fieldType>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>false</isRequired>
         </fields>
         <nextOrFinishButtonLabel>Submit</nextOrFinishButtonLabel>
@@ -1032,17 +1135,17 @@
         <showHeader>false</showHeader>
     </screens>
     <start>
-        <locationX>2168</locationX>
+        <locationX>2432</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Select_Assignment_Action</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Obsolete</status>
     <subflows>
         <name>Copy_1_of_Function_Get_RecordTypeId_Websites_Case</name>
         <label>Function: Get RecordTypeId Payments Case</label>
-        <locationX>3218</locationX>
+        <locationX>3746</locationX>
         <locationY>566</locationY>
         <connector>
             <targetReference>Function_Get_Queue_Id_Payments</targetReference>
@@ -1068,7 +1171,7 @@
     <subflows>
         <name>Function_Get_Queue_Id</name>
         <label>Function: Get Queue Id</label>
-        <locationX>2690</locationX>
+        <locationX>3218</locationX>
         <locationY>674</locationY>
         <connector>
             <targetReference>Update_Send_to_Websites</targetReference>
@@ -1088,7 +1191,7 @@
     <subflows>
         <name>Function_Get_Queue_Id_MyCase_Accounting</name>
         <label>Function: Get Queue Id MyCase Accounting</label>
-        <locationX>3482</locationX>
+        <locationX>4010</locationX>
         <locationY>674</locationY>
         <connector>
             <targetReference>Update_Send_to_Accounting</targetReference>
@@ -1108,7 +1211,7 @@
     <subflows>
         <name>Function_Get_Queue_Id_MyCase_Billing</name>
         <label>Function: Get Queue Id MyCase Billing</label>
-        <locationX>2426</locationX>
+        <locationX>2954</locationX>
         <locationY>890</locationY>
         <connector>
             <targetReference>Update_Send_to_Billing</targetReference>
@@ -1128,7 +1231,7 @@
     <subflows>
         <name>Function_Get_Queue_Id_MyCase_Specialists</name>
         <label>Function: Get Queue Id MyCase Specialists</label>
-        <locationX>4010</locationX>
+        <locationX>4538</locationX>
         <locationY>566</locationY>
         <connector>
             <targetReference>Send_to_MyCase_Specialists_Update</targetReference>
@@ -1148,7 +1251,7 @@
     <subflows>
         <name>Function_Get_Queue_Id_MyCase_Team</name>
         <label>Function: Get Queue Id MyCase Team</label>
-        <locationX>1634</locationX>
+        <locationX>2162</locationX>
         <locationY>674</locationY>
         <connector>
             <targetReference>Update_Send_to_CS</targetReference>
@@ -1168,7 +1271,7 @@
     <subflows>
         <name>Function_Get_Queue_Id_Payments</name>
         <label>Function: Get Queue Id Payments</label>
-        <locationX>3218</locationX>
+        <locationX>3746</locationX>
         <locationY>674</locationY>
         <connector>
             <targetReference>Update_Send_to_Payments</targetReference>
@@ -1188,7 +1291,7 @@
     <subflows>
         <name>Function_Get_Queue_Id_Professional_Services</name>
         <label>Function: Get Queue Id Professional Services</label>
-        <locationX>4274</locationX>
+        <locationX>4802</locationX>
         <locationY>674</locationY>
         <connector>
             <targetReference>Send_to_Prof_Services</targetReference>
@@ -1208,7 +1311,7 @@
     <subflows>
         <name>Function_Get_RecordTypeId_Billing_Case</name>
         <label>Function: Get RecordTypeId Billing Case</label>
-        <locationX>3746</locationX>
+        <locationX>4274</locationX>
         <locationY>566</locationY>
         <connector>
             <targetReference>Update_Billing_Case</targetReference>
@@ -1234,7 +1337,7 @@
     <subflows>
         <name>Function_Get_RecordTypeId_Billing_MyCase_Case</name>
         <label>Function: Get RecordTypeId Billing Case</label>
-        <locationX>2426</locationX>
+        <locationX>2954</locationX>
         <locationY>782</locationY>
         <connector>
             <targetReference>Function_Get_Queue_Id_MyCase_Billing</targetReference>
@@ -1260,7 +1363,7 @@
     <subflows>
         <name>Function_Get_RecordTypeId_MyCase_Accounting_Case</name>
         <label>Function: Get RecordTypeId MyCase Accounting Case</label>
-        <locationX>3482</locationX>
+        <locationX>4010</locationX>
         <locationY>566</locationY>
         <connector>
             <targetReference>Function_Get_Queue_Id_MyCase_Accounting</targetReference>
@@ -1286,7 +1389,7 @@
     <subflows>
         <name>Function_Get_RecordTypeId_PS_Case</name>
         <label>Function: Get RecordTypeId PS Case</label>
-        <locationX>4274</locationX>
+        <locationX>4802</locationX>
         <locationY>566</locationY>
         <connector>
             <targetReference>Function_Get_Queue_Id_Professional_Services</targetReference>
@@ -1312,7 +1415,7 @@
     <subflows>
         <name>Function_Get_RecordTypeId_Support_Case</name>
         <label>Function: Get RecordTypeId MyCase Support Case</label>
-        <locationX>1634</locationX>
+        <locationX>2162</locationX>
         <locationY>566</locationY>
         <connector>
             <targetReference>Function_Get_Queue_Id_MyCase_Team</targetReference>
@@ -1338,7 +1441,7 @@
     <subflows>
         <name>Function_Get_RecordTypeId_Websites_Case</name>
         <label>Function: Get RecordTypeId Websites Case</label>
-        <locationX>2690</locationX>
+        <locationX>3218</locationX>
         <locationY>566</locationY>
         <connector>
             <targetReference>Function_Get_Queue_Id</targetReference>
