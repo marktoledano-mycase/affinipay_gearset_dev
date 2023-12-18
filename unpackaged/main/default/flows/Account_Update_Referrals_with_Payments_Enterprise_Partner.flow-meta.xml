@@ -18,19 +18,19 @@
         </connector>
     </assignments>
     <assignments>
-        <name>Assign_Referral_Partner_Value</name>
-        <label>Assign Referral Partner Value</label>
+        <name>Assign_Referrals_to_Referral_List_IDs</name>
+        <label>Assign Referrals to Referral List IDs</label>
         <locationX>264</locationX>
         <locationY>947</locationY>
         <assignmentItems>
-            <assignToReference>Loop_thru_Referrals.Payments_Enterprise_Account__c</assignToReference>
-            <operator>Assign</operator>
+            <assignToReference>var_ReferralIDs</assignToReference>
+            <operator>Add</operator>
             <value>
-                <elementReference>$Record.Payments_Enterprise_Partner__c</elementReference>
+                <elementReference>Loop_through_Referral_Records.Id</elementReference>
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Loop_thru_Referrals</targetReference>
+            <targetReference>Loop_through_Referral_Records</targetReference>
         </connector>
     </assignments>
     <environments>Default</environments>
@@ -52,14 +52,14 @@
         </noMoreValuesConnector>
     </loops>
     <loops>
-        <name>Loop_thru_Referrals</name>
-        <label>Loop thru Referrals</label>
+        <name>Loop_through_Referral_Records</name>
+        <label>Loop through Referral Records</label>
         <locationX>176</locationX>
         <locationY>839</locationY>
-        <collectionReference>rs_Referal_List</collectionReference>
+        <collectionReference>Get_Referral_Records</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
-            <targetReference>Assign_Referral_Partner_Value</targetReference>
+            <targetReference>Assign_Referrals_to_Referral_List_IDs</targetReference>
         </nextValueConnector>
         <noMoreValuesConnector>
             <targetReference>Update_Referral_Records</targetReference>
@@ -112,7 +112,7 @@
         <locationY>731</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Loop_thru_Referrals</targetReference>
+            <targetReference>Loop_through_Referral_Records</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -122,17 +122,30 @@
                 <elementReference>var_PartnersipIDs</elementReference>
             </value>
         </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
         <object>Referral__c</object>
-        <outputReference>rs_Referal_List</outputReference>
-        <queriedFields>Id</queriedFields>
-        <queriedFields>Payments_Enterprise_Account__c</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
         <name>Update_Referral_Records</name>
         <label>Update Referral Records</label>
         <locationX>176</locationX>
         <locationY>1139</locationY>
-        <inputReference>rs_Referal_List</inputReference>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>In</operator>
+            <value>
+                <elementReference>var_ReferralIDs</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Payments_Enterprise_Account__c</field>
+            <value>
+                <elementReference>$Record.Payments_Enterprise_Partner__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Referral__c</object>
     </recordUpdates>
     <start>
         <locationX>50</locationX>
@@ -152,7 +165,7 @@
         <recordTriggerType>Update</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <name>coll_Partnerships</name>
         <dataType>SObject</dataType>
@@ -163,22 +176,6 @@
     </variables>
     <variables>
         <name>coll_ReferralRecords</name>
-        <dataType>SObject</dataType>
-        <isCollection>true</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-        <objectType>Referral__c</objectType>
-    </variables>
-    <variables>
-        <name>currentItemFromSourceCollection</name>
-        <dataType>SObject</dataType>
-        <isCollection>false</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-        <objectType>Referral__c</objectType>
-    </variables>
-    <variables>
-        <name>rs_Referal_List</name>
         <dataType>SObject</dataType>
         <isCollection>true</isCollection>
         <isInput>false</isInput>
