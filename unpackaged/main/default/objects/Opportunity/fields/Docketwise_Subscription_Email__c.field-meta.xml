@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Docketwise_Subscription_Email__c</fullName>
+    <description>The customer&#39;s email address that receives Docketwise subscription invoices.  This will be used to match Salesforce Opportunities to Stripe subscriptions.</description>
+    <externalId>false</externalId>
+    <label>Docketwise Subscription Email</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
