@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Docketwise_Subscription_Email</fullName>
+    <active>true</active>
+    <errorConditionFormula>$Permission.Bypass_Defined_VR_s = FALSE &amp;&amp;
+ISBLANK(Docketwise_Subscription_Email__c) &amp;&amp;
+ISPICKVAL(StageName,&quot;Closed Won&quot;)&amp;&amp;
+Record_Type_Name__c = &quot;Docketwise&quot;</errorConditionFormula>
+    <errorMessage>Docketwise Subscription Email must be filled out when a Docketwise Opportunity is Closed Won.</errorMessage>
+</ValidationRule>
