@@ -22146,6 +22146,7 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
+        <personAccountDefault>true</personAccountDefault>
         <recordType>Contract.Partner</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>

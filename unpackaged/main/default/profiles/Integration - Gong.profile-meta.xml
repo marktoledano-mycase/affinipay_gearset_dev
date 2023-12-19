@@ -10393,12 +10393,12 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
+        <object>Contract</object>
         <allowCreate>false</allowCreate>
         <allowDelete>false</allowDelete>
         <allowEdit>false</allowEdit>
-        <allowRead>true</allowRead>
+        <allowRead>false</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
-        <object>Contract</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
