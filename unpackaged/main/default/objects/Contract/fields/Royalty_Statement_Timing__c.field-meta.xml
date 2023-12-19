@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Royalty_Statement_Timing__c</fullName>
+    <externalId>false</externalId>
+    <label>Royalty Statement Timing</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Monthly, no later than the 30 days following the end of each fiscal quarter</fullName>
+                <default>false</default>
+                <label>Monthly, no later than the 30 days following the end of each fiscal quarter</label>
+            </value>
+            <value>
+                <fullName>Monthly, within 30 days of the end of each month</fullName>
+                <default>false</default>
+                <label>Monthly, within 30 days of the end of each month</label>
+            </value>
+            <value>
+                <fullName>Monthly, within 45 days of the end of each month</fullName>
+                <default>false</default>
+                <label>Monthly, within 45 days of the end of each month</label>
+            </value>
+            <value>
+                <fullName>Quarterly, 30 days following the end of each calendar quarter</fullName>
+                <default>false</default>
+                <label>Quarterly, 30 days following the end of each calendar quarter</label>
+            </value>
+            <value>
+                <fullName>Quarterly, 30 days following the end of each fiscal quarter</fullName>
+                <default>false</default>
+                <label>Quarterly, 30 days following the end of each fiscal quarter</label>
+            </value>
+            <value>
+                <fullName>Quarterly, 45 days following the end of each fiscal quarter</fullName>
+                <default>false</default>
+                <label>Quarterly, 45 days following the end of each fiscal quarter</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
