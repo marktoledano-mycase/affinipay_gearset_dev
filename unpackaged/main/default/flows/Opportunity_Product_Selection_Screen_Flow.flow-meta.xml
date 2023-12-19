@@ -13278,7 +13278,7 @@ right( text( ( 1 + {!Get_This_Opportunity.Short_Term_ARR__c}- floor( {!Get_This_
             <targetReference>Get_This_Opportunity</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <variables>
         <name>coll_Addons_With_Quantity</name>
         <dataType>SObject</dataType>
