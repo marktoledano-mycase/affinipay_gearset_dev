@@ -12,24 +12,9 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Referral Bonus</fullName>
+                <fullName>Hybrid</fullName>
                 <default>false</default>
-                <label>Referral Bonus</label>
-            </value>
-            <value>
-                <fullName>Referral Volume</fullName>
-                <default>false</default>
-                <label>Referral Volume</label>
-            </value>
-            <value>
-                <fullName>Referral Bonus &amp; Referral Volume</fullName>
-                <default>false</default>
-                <label>Referral Bonus &amp; Referral Volume</label>
-            </value>
-            <value>
-                <fullName>Referral Bonus &amp; Referral Integrated Volume</fullName>
-                <default>false</default>
-                <label>Referral Bonus &amp; Referral Integrated Volume</label>
+                <label>Hybrid</label>
             </value>
             <value>
                 <fullName>Integrated Volume</fullName>
@@ -42,14 +27,39 @@
                 <label>Integrated Volume &amp; Referral Bonus</label>
             </value>
             <value>
-                <fullName>Royalty Free</fullName>
-                <default>false</default>
-                <label>Royalty Free</label>
-            </value>
-            <value>
                 <fullName>Other</fullName>
                 <default>false</default>
                 <label>Other</label>
+            </value>
+            <value>
+                <fullName>Referral Bonus</fullName>
+                <default>false</default>
+                <label>Referral Bonus</label>
+            </value>
+            <value>
+                <fullName>Referral Bonus &amp; Referral Volume</fullName>
+                <default>false</default>
+                <label>Referral Bonus &amp; Referral Volume</label>
+            </value>
+            <value>
+                <fullName>Referral Bonus &amp; Referred Integrated Volume</fullName>
+                <default>false</default>
+                <label>Referral Bonus &amp; Referred Integrated Volume</label>
+            </value>
+            <value>
+                <fullName>Referral Volume</fullName>
+                <default>false</default>
+                <label>Referral Volume</label>
+            </value>
+            <value>
+                <fullName>Referred Volume &amp; Integrated Volume</fullName>
+                <default>false</default>
+                <label>Referred Volume &amp; Integrated Volume</label>
+            </value>
+            <value>
+                <fullName>Royalty Free</fullName>
+                <default>false</default>
+                <label>Royalty Free</label>
             </value>
         </valueSetDefinition>
     </valueSet>
