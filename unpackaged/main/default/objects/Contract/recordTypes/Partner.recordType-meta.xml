@@ -17,6 +17,10 @@
     <picklistValues>
         <picklist>Agreement_Type_Payments__c</picklist>
         <values>
+            <fullName>Hybrid</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Integrated Volume</fullName>
             <default>false</default>
         </values>
@@ -33,15 +37,19 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Referral Bonus %26 Referral Integrated Volume</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Referral Bonus %26 Referral Volume</fullName>
             <default>false</default>
         </values>
         <values>
+            <fullName>Referral Bonus %26 Referred Integrated Volume</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Referral Volume</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referred Volume %26 Integrated Volume</fullName>
             <default>false</default>
         </values>
         <values>
@@ -177,6 +185,21 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Fee_Waiver_Applicable_to__c</picklist>
+        <values>
+            <fullName>Both</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Net new</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Integrated_Volume__c</picklist>
         <values>
             <fullName>No</fullName>
@@ -281,6 +304,33 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Royalty_Statement_Timing__c</picklist>
+        <values>
+            <fullName>Monthly%2C no later than the 30 days following the end of each fiscal quarter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monthly%2C within 30 days of the end of each month</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monthly%2C within 45 days of the end of each month</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quarterly%2C 30 days following the end of each calendar quarter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quarterly%2C 30 days following the end of each fiscal quarter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quarterly%2C 45 days following the end of each fiscal quarter</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Status</picklist>
         <values>
             <fullName>Agreement Pending</fullName>
@@ -312,6 +362,66 @@
         </values>
         <values>
             <fullName>Waiting on AP Dept</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tiers_non_standard__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tiers_standard__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Volume_Type_Standard__c</picklist>
+        <values>
+            <fullName>All volume for integrated merchants</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integrated %26 Referral Volume</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integrated Volume</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral Volume</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Volume_Type_non_Standard__c</picklist>
+        <values>
+            <fullName>All volume for integrated merchants</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integrated %26 Referral Volume</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integrated Volume</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral Volume</fullName>
             <default>false</default>
         </values>
     </picklistValues>

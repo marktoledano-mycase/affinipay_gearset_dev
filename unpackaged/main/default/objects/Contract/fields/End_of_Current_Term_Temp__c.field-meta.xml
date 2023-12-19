@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>End_of_Current_Term_Temp__c</fullName>
+    <description>Temporary date field to track end of current term. Will be replaced with a formula field.</description>
+    <externalId>false</externalId>
+    <label>End of Current Term</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

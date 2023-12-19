@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Pricebook2Id</fullName>
+    <fullName>eCheck_Notes__c</fullName>
+    <externalId>false</externalId>
+    <label>eCheck Notes</label>
+    <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>
-    <type>Lookup</type>
+    <type>TextArea</type>
 </CustomField>
