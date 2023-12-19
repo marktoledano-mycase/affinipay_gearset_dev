@@ -47,6 +47,20 @@
                 <elementReference>Edited_Addons_Loop.Id</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_Addon_Is_Edited</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>collSelectedProducts</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Edited_Addons_Loop</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Edited_Addons_Loop</targetReference>
         </connector>
@@ -870,6 +884,27 @@
                 <elementReference>Edited_Main_Products_Loop.Pricing_Type__c</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>collSelectedProducts</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Edited_Main_Products_Loop</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>collAggregateSelectedProducts</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Edited_Main_Products_Loop</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_Main_Product_Is_Edited</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Edited_Main_Products_Loop</targetReference>
         </connector>
@@ -909,7 +944,7 @@
         </assignmentItems>
         <connector>
             <isGoTo>true</isGoTo>
-            <targetReference>Sort_Display_Products_Collection</targetReference>
+            <targetReference>Update_Add_On_Quantity_Loop</targetReference>
         </connector>
     </assignments>
     <assignments>
