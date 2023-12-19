@@ -1,35 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>of_Tiers_non_standard_pricing__c</fullName>
+    <fullName>Volume_Type_non_Standard__c</fullName>
+    <description>Volume type for non-standard pricing</description>
     <externalId>false</externalId>
-    <label># of Tiers</label>
+    <label>Volume Type</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
-    <trackHistory>true</trackHistory>
+    <trackHistory>false</trackHistory>
     <type>Picklist</type>
     <valueSet>
         <restricted>true</restricted>
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>1</fullName>
+                <fullName>Referral Volume</fullName>
                 <default>false</default>
-                <label>1</label>
+                <label>Referral Volume</label>
             </value>
             <value>
-                <fullName>2</fullName>
+                <fullName>Integrated Volume</fullName>
                 <default>false</default>
-                <label>2</label>
+                <label>Integrated Volume</label>
             </value>
             <value>
-                <fullName>3</fullName>
+                <fullName>Integrated &amp; Referral Volume</fullName>
                 <default>false</default>
-                <label>3</label>
+                <label>Integrated &amp; Referral Volume</label>
             </value>
             <value>
-                <fullName>4</fullName>
+                <fullName>All volume for integrated merchants</fullName>
                 <default>false</default>
-                <label>4</label>
+                <label>All volume for integrated merchants</label>
             </value>
         </valueSetDefinition>
     </valueSet>
