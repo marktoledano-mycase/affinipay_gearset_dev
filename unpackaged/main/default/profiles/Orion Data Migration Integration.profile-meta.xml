@@ -7513,6 +7513,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Contract_SKU__c.Docketwise_Stripe_Subscription_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Contract_SKU__c.Effective_End_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -12544,6 +12549,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Opportunity.Docketwise_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.Docketwise_Subscription_Email__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
