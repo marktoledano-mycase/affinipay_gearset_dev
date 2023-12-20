@@ -13,17 +13,30 @@
     
     <aura:attribute name="selected_article_title" type="String" default=""/>
     <aura:attribute name="selected_article_body" type="String" default=""/>
-    
+    <aura:attribute name="options" type="List" default="[
+    {'label': 'MyCase', 'value': 'MyCase'},
+    {'label': 'Affinipay', 'value': 'Affinipay'}
+]"/>
+<aura:attribute name="selectedOption" type="String" />
     
     <br/>
     
     <table>
         <tr>
             <th scope="col" style="width: 300px;">
-                KB Center
-            </th>
-            <th scope="col" style="width: 400px;vertical-align: bottom;" onkeyup="{!c.handleKeyUp}">
-                
+                <div class="selector">
+
+                    <!-- Input for the selected option -->
+                    <lightning:select name="knowledgeBaseSelect" label="KB Center" aura:id="selectKnowledgeBase" value="{!v.selectOption}">
+                        <aura:iteration items="{!v.options}" var="option">
+                            <option text="{!option.label}" value="{!option.value}"/>
+                        </aura:iteration>
+                    </lightning:select>
+                   
+                </div>
+                </th>
+                <th scope="col" style="width: 400px;vertical-align: bottom;" onkeyup="{!c.handleKeyUp}">
+                    
                 <!-- Search Input -->
                 <lightning:input label="Search" value="{!v.searchTerm}" placeholder="Search articles..." />
             
