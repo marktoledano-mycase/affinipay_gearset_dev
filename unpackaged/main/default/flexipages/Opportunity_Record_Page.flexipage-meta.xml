@@ -40,7 +40,7 @@
                         <valueListItems>
                             <value>Opportunity.SE_Request</value>
                             <visibilityRule>
-                                <booleanFilter>(1 OR 2 OR 4) AND 3</booleanFilter>
+                                <booleanFilter>(1 OR 2 OR 4 OR 5) AND 3</booleanFilter>
                                 <criteria>
                                     <leftValue>{!Record.Record_Type_Name__c}</leftValue>
                                     <operator>EQUAL</operator>
@@ -60,6 +60,11 @@
                                     <leftValue>{!Record.Record_Type_Name__c}</leftValue>
                                     <operator>EQUAL</operator>
                                     <rightValue>CPACharge</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.Record_Type_Name__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Docketwise</rightValue>
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>
@@ -248,6 +253,100 @@
                         <leftValue>{!Record.Account.Do_Not_Sell_MC_Accounting__c}</leftValue>
                         <operator>EQUAL</operator>
                         <rightValue>true</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p&gt;&lt;strong style=&quot;color: rgb(250, 2, 2); font-size: 28px;&quot;&gt;Only Enterprise Payments Team can sell payments into this firm (both inbound or outbound)&lt;/strong&gt;&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText2</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Account.Payments_Enterprise_Account__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>Yes</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p&gt;&lt;strong style=&quot;color: rgb(250, 5, 5); font-size: 28px;&quot;&gt;No outbound or inbound software sales, even if a customer initiates.  They have a pre-existing relationship with one of our partners.&lt;/strong&gt;&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText3</identifier>
+                <visibilityRule>
+                    <booleanFilter>1 OR 2 OR 3 OR 4 OR 5 OR 6 OR 7</booleanFilter>
+                    <criteria>
+                        <leftValue>{!Record.Account.Partner_Software_Non_Compete_Type__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>Outbound and Inbound Prohibited</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Has_Referral_with_Prohibited_Status__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>true</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Account.Current_LPM_Prohibited__c}</leftValue>
+                        <operator>CONTAINS</operator>
+                        <rightValue>Aderant</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Account.Current_LPM_Prohibited__c}</leftValue>
+                        <operator>CONTAINS</operator>
+                        <rightValue>Firm Central</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Account.Current_LPM_Prohibited__c}</leftValue>
+                        <operator>CONTAINS</operator>
+                        <rightValue>ProLaw</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Account.Current_LPM_Prohibited__c}</leftValue>
+                        <operator>CONTAINS</operator>
+                        <rightValue>Thomson Reuters</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Account.Primary_Referral_Partnership__r.Partner_Account_has_Prohibition__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>true</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p&gt;&lt;strong style=&quot;color: rgb(253, 7, 7); font-size: 28px;&quot;&gt;Inbound software sales only, no outbound software sales.&lt;/strong&gt;&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText4</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Account.Partner_Software_Non_Compete_Type__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>Outbound Prohibited (time bound)</rightValue>
                     </criteria>
                 </visibilityRule>
             </componentInstance>
@@ -654,10 +753,6 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-2d0ce6b8-92a8-4c6c-8452-0bdcfd3b4f29</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -1564,10 +1659,6 @@
                     <value>Facet-66484c1a-3ef8-4c0e-926b-1006db589bef</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>label</name>
                     <value>Commissions Fields</value>
                 </componentInstanceProperties>
@@ -1580,10 +1671,6 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-f896f7d2-f3b4-490c-9c06-4e80c306cdf8</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
