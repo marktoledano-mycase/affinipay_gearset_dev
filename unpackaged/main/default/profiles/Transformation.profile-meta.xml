@@ -13946,6 +13946,9 @@
         <layout>Integrations__c-Integrations Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Intercom_Key__mdt-Intercom Key Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Knowledge__kav-Knowledge Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
