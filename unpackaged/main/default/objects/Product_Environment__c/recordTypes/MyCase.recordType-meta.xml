@@ -58,122 +58,7 @@
         </values>
     </picklistValues>
     <picklistValues>
-        <picklist>Churn_Reason__c</picklist>
-        <values>
-            <fullName>Adoption Issues</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Auto-Canceled After Suspension</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Business Change</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Business Issue%3A Health%2FAudit%2FUnderwriting</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Business Issue%3A Out of Business%2FDownsized%2FDidn%27t Grow%2FOther Focus</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Declined Credit Card</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Development Resources Not Available</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Don%E2%80%99t Know%3A Went Dark%2FNon-Payment</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Expectations%3A Business Fit%2FProduct Features%2FValue</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Expectations%3A Implementation%2FSupport%2FTraining</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Expired Credit Card</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Financial</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>I am closing my business</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>I am using a different software</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>I can%27t afford it</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>I don%27t use it enough</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>It%27s too expensive</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>My firm is closing</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>MyCase doesn%27t have the features I need</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Others</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Partner Opted out of Program</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Product Fit</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Sales Expectations</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Support Expectations</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>We Opted Out of Partnership</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>We are switching to a different product</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>We don%27t use it enough</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Went Dark %2F Past Due</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
-        <picklist>Competitor__c</picklist>
+        <picklist>Churn_Competitor__c</picklist>
         <values>
             <fullName>ACT%21 CRM</fullName>
             <default>false</default>
@@ -384,6 +269,121 @@
         </values>
         <values>
             <fullName>Zola suite</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Churn_Reason__c</picklist>
+        <values>
+            <fullName>Adoption Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Auto-Canceled After Suspension</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Issue%3A Health%2FAudit%2FUnderwriting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Issue%3A Out of Business%2FDownsized%2FDidn%27t Grow%2FOther Focus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declined Credit Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Development Resources Not Available</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Don%E2%80%99t Know%3A Went Dark%2FNon-Payment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expectations%3A Business Fit%2FProduct Features%2FValue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expectations%3A Implementation%2FSupport%2FTraining</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expired Credit Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I am closing my business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I am using a different software</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I can%27t afford it</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I don%27t use it enough</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>It%27s too expensive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>My firm is closing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MyCase doesn%27t have the features I need</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Others</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner Opted out of Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Fit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Support Expectations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>We Opted Out of Partnership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>We are switching to a different product</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>We don%27t use it enough</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Went Dark %2F Past Due</fullName>
             <default>false</default>
         </values>
     </picklistValues>
