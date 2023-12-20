@@ -1,0 +1,47 @@
+.THIS .slds-box {
+    padding: 1rem;
+    border: 0px solid #d8dde6;
+    border-radius: 0.25rem;
+}
+
+.THIS .slds-text-heading_medium {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.THIS .slds-hide {
+    display: none;
+}
+
+.THIS .slds-show {
+    display: block;
+}
+.THIS .custom-button-icon {
+    border: 0px solid #ff0000; /* Replace #ff0000 with your desired border color */
+    border-radius: 4px; /* Optional: Add border radius for rounded corners */
+    padding: 4px; /* Optional: Add padding for space around the icon */
+}
+
+/* myComponent.css */
+.THIS .highlightOnHover {
+    padding: 10px;
+    border: 0px solid #ccc;
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.THIS .highlightOnHover:hover {
+    background-color: #f0f0f0; /* Change the background color on hover */
+}
+.THIS .slds-card {
+    width:300px;
+}
+.THIS .article_display{
+    height:600px;
+    overflow-y: auto;
+}
+.THIS .selector{
+    width: 100px;
+    vertical-align: top;
+    text-align: left;
+}
