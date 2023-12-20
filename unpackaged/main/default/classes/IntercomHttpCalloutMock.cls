@@ -13,4 +13,5 @@ public class IntercomHttpCalloutMock implements HttpCalloutMock {
         res.setStatusCode(200);
         return res;
     }
+
 }

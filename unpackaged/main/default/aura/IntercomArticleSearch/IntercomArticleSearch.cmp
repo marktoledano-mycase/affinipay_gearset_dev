@@ -5,10 +5,13 @@
     <aura:attribute name="searchTerm" type="String" default=""/>
     <aura:attribute name="searchResults" type="List" />
     <aura:attribute name="searchInfo" type="String" />
+    <aura:attribute name="selectedArticleId" type="String" />
+    <aura:attribute name="articleURL" type="String" default=""/>
     <aura:attribute name="total_articles" type="String" />
     <aura:attribute name="total_pages" type="String" />
     <aura:attribute name="current_page" type="String" />
     <aura:attribute name="next_url" type="String" />
+    <aura:attribute name="copy_message" type="String" />
     <aura:attribute name="isCollapsed" type="Boolean" default="true" />
     
     <aura:attribute name="selected_article_title" type="String" default=""/>
@@ -95,17 +98,18 @@
                 {!v.searchInfo}
             </td>
             <td colspan="2" style="vertical-align:top;">
-                <!-- <h2 class="slds-card__header-title" style="vertical-align:top;">
-                    Public Link
-                </h2> -->
                 <br/>
-                <div aura:id="display_article_body" class="article_display">
+                <aura:if isTrue="{!not(empty(v.articleURL))}">
+                    <div aura:id="display_article_body" class="article_display">
                     <h2 class="slds-card__header-title">
-                        {!v.selected_article_title}
+                        <a href="{!v.articleURL}" target="_blank">Public Link</a>
+                        <button onclick="{!c.copyText}" title="Copy Link" class="copy_button_display" key="{!v.articleURL}" data-id="{!v.articleURL}"><lightning:icon iconName="utility:link" size="x-small" alternativeText="Copy"/></button>
                     </h2>
+                    <div class="slds-text-color_weak slds-text-body_small slds-italic">{!v.copy_message}</div>
                     <br/>
                     <aura:unescapedHtml value="{!v.selected_article_body}" />
                 </div>
+                </aura:if>
             </td>
         </tr>
     </table>

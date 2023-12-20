@@ -83,4 +83,19 @@ public class IntercomArticleSearchTest {
         // Add more assertions based on your response structure
     }
 
+    @isTest
+    static void testGetArticlePublicLink() {
+          // Set up test data
+          String articleId = '123456789'; // Replace with a valid article ID
+          String expectedUrl = 'https://example.com/test-article';
+  
+          // Mock the HTTP callout
+          Test.setMock(HttpCalloutMock.class, new IntercomURLHttpCalloutMock(expectedUrl));
+  
+          // Call the AuraEnabled method
+          String result = IntercomArticleSearch.GetArticlePublicLink(articleId);
+  
+          // Assert the result
+          System.assertEquals(expectedUrl, result);
+    }
 }

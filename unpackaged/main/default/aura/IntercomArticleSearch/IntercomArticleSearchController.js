@@ -12,6 +12,28 @@
         }
     },
 
+    copyText: function(component, event, helper) {
+        const itemId = event.currentTarget.dataset.id;
+        console.log('Copied URL:', itemId);
+        // Create a temporary input element
+        var inputElement = document.createElement("input");
+        inputElement.value = itemId;
+        component.set("v.copy_message", "Public link copied to clipboard");
+
+        // Append the input element to the body
+        document.body.appendChild(inputElement);
+
+        // Select the text inside the input element
+        inputElement.select();
+        inputElement.setSelectionRange(0, 99999); // For mobile devices
+
+        // Copy the text to the clipboard
+        document.execCommand("copy");
+
+        // Remove the temporary input element
+        document.body.removeChild(inputElement);
+    },
+
     search : function(component, event, helper) {
         var searchTerm = component.get("v.searchTerm");
         component.set("v.total_articles",null);
@@ -121,6 +143,7 @@
     select_article : function(component, event, helper) {
         const itemId = event.currentTarget.dataset.id;
         console.log('Clicked Article id:', itemId);
+        component.set("v.selectedArticleId", itemId)
         
         var ArticleId = itemId;
 
@@ -137,8 +160,30 @@
             }
         });
         $A.enqueueAction(action);
+        $A.enqueueAction(component.get('c.getArticleURL'));
     
     },
+    getArticleURL : function(component, event, helper) {
+    var ArticleId = component.get("v.selectedArticleId");
+        var action = component.get("c.GetArticlePublicLink");
+        action.setParams({
+            "ArticleId": ArticleId
+        });
+        action.setCallback(this, function(response) {
+            var state = response.getState();
+            if (state === "SUCCESS") {
+                component.set("v.articleURL", response.getReturnValue());
+                component.set("v.copy_message", "");
+
+            } else {
+                console.log("Error: " + JSON.stringify(response.getError()));
+            }
+        });
+        $A.enqueueAction(action);
+
+
+    },
+
     toggleCollapse : function(component, event, helper) {
         var isCollapsed = component.get("v.isCollapsed");
         component.set("v.isCollapsed", isCollapsed);

@@ -20,9 +20,29 @@ public static String GetArticleBody(String ArticleId){
 
     ArticleBodyWrapper article = (ArticleBodyWrapper) JSON.deserialize(jsonStr, ArticleBodyWrapper.class);
     
-    // Now you can access the "body" field as a string
-    String bodyContent = '<h1 class="slds-card__header-title"><a href=' + article.url + ' target="_blank">Public Link</a></h1><br/><h1 class="slds-card__header-title">' + article.title + '</h1><br/>' + article.body;
+    String bodyContent = '<h1 class="slds-card__header-title">' + article.title + '</h1><br/>' + article.body;
     return bodyContent;
+}
+
+@AuraEnabled
+public static String GetArticlePublicLink(String ArticleId){
+    Http h = new Http();
+    HttpRequest req = new HttpRequest();
+    req.setEndpoint('https://api.intercom.io/articles/'+ ArticleId);
+    req.setMethod('GET');
+    req.setHeader('Content-Type', 'application/json');
+    string workspace = system.label.Intercom_Workspace;
+    string bearer_key = [Select Workspace__c, Key__c from Intercom_Key__mdt WHERE Workspace__c = : workspace LIMIT 1].Key__c;
+    req.setHeader('Intercom-Version', '2.10');
+    req.setHeader('Authorization', 'Bearer ' + bearer_key);
+    
+    HttpResponse res = h.send(req);
+    string jsonStr = res.getBody();
+    system.debug('Response: ' + jsonStr);
+
+    ArticleBodyWrapper article = (ArticleBodyWrapper) JSON.deserialize(jsonStr, ArticleBodyWrapper.class);
+    return article.url;
+
 }
 
 @AuraEnabled
