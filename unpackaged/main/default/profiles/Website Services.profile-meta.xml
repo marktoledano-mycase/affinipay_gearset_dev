@@ -8778,6 +8778,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Product_Environment__c.Churn_Competitor__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Product_Environment__c.Churn_Date__c</field>
         <readable>true</readable>
@@ -8790,11 +8795,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Product_Environment__c.Churn_Reason__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Product_Environment__c.Competitor__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

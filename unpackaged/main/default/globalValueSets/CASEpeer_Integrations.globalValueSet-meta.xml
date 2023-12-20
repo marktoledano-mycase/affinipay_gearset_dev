@@ -100,6 +100,11 @@
         <default>false</default>
         <label>Soluno</label>
     </customValue>
+    <customValue>
+        <fullName>Zapier</fullName>
+        <default>false</default>
+        <label>Zapier</label>
+    </customValue>
     <description>List of available CASEpeer integrations which will be referenced on the Opp and mapped to the CP onboarding record.</description>
     <masterLabel>CASEpeer Integrations</masterLabel>
     <sorted>false</sorted>
