@@ -24283,7 +24283,7 @@
         <name>AIViewInsightObjects</name>
     </userPermissions>
     <userPermissions>
-        <enabled>true</enabled>
+        <enabled>false</enabled>
         <name>ActivateContract</name>
     </userPermissions>
     <userPermissions>
@@ -24319,7 +24319,7 @@
         <name>ApiEnabled</name>
     </userPermissions>
     <userPermissions>
-        <enabled>true</enabled>
+        <enabled>false</enabled>
         <name>ApproveContract</name>
     </userPermissions>
     <userPermissions>
@@ -24443,7 +24443,7 @@
         <name>DelegatedTwoFactor</name>
     </userPermissions>
     <userPermissions>
-        <enabled>true</enabled>
+        <enabled>false</enabled>
         <name>DeleteActivatedContract</name>
     </userPermissions>
     <userPermissions>
