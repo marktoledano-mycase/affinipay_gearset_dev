@@ -17,7 +17,7 @@
             <assignToReference>Opportunity.Sales_Engineer__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>SalesEngineerId</elementReference>
+                <elementReference>LindsayBushongUserId</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -63,7 +63,7 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Update_Opportunity</targetReference>
+            <targetReference>Update_Opportunity_0</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -82,7 +82,7 @@
             <assignToReference>Opportunity.Sales_Engineer__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>SalesEngineerId</elementReference>
+                <elementReference>StevenLamanUserId</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -132,6 +132,14 @@
         </connector>
     </assignments>
     <constants>
+        <description>Lindsay Bushong&#39;s USER ID</description>
+        <name>LindsayBushongUserId</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>0058W00000CgpKhQAJ</stringValue>
+        </value>
+    </constants>
+    <constants>
         <description>CSV list of values for the Dual List Box (Unofficial SF Component). These List of Top Features values are specific to MyCase Opps.</description>
         <name>productAreasInterestValues</name>
         <dataType>String</dataType>
@@ -148,19 +156,19 @@
         </value>
     </constants>
     <constants>
-        <description>Lindsay Bushong&#39;s USER ID</description>
-        <name>SalesEngineerId</name>
-        <dataType>String</dataType>
-        <value>
-            <stringValue>0058W00000CgpKhQAJ</stringValue>
-        </value>
-    </constants>
-    <constants>
         <description>Private channel - #se-request</description>
         <name>SE_Channel_ID</name>
         <dataType>String</dataType>
         <value>
             <stringValue>C03U2J9FD0A</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <description>Steven Laman&#39;s USER ID</description>
+        <name>StevenLamanUserId</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>005VR000000R8SwYAK</stringValue>
         </value>
     </constants>
     <decisions>
@@ -169,10 +177,7 @@
         <label>Check Record Type</label>
         <locationX>281</locationX>
         <locationY>398</locationY>
-        <defaultConnector>
-            <targetReference>Sales_Engineering_Request</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>MyCase Opportunity</defaultConnectorLabel>
+        <defaultConnectorLabel>None</defaultConnectorLabel>
         <rules>
             <name>LawPay_Opportunity</name>
             <conditionLogic>or</conditionLogic>
@@ -194,6 +199,28 @@
                 <targetReference>Sales_Engineering_Request_0</targetReference>
             </connector>
             <label>LawPay/CPA Charge Opportunity</label>
+        </rules>
+        <rules>
+            <name>MyCase_Docketwise_Opportunity</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>Opportunity.Record_Type_Name__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>MyCase</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Opportunity.Record_Type_Name__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Docketwise</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Sales_Engineering_Request</targetReference>
+            </connector>
+            <label>MyCase/Docketwise Opportunity</label>
         </rules>
     </decisions>
     <description>Screen flow to enable reps to request sales engineering support on a deal and copy values to the opportunity for reporting</description>
@@ -266,8 +293,19 @@
         <description>Updates the Opportunity record with information the user input on the screen flow</description>
         <name>Update_Opportunity</name>
         <label>Update Opportunity</label>
-        <locationX>1116</locationX>
-        <locationY>297</locationY>
+        <locationX>1074</locationX>
+        <locationY>397</locationY>
+        <connector>
+            <targetReference>Send_SE_Alert_0</targetReference>
+        </connector>
+        <inputReference>Opportunity</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Updates the Opportunity record with information the user input on the screen flow</description>
+        <name>Update_Opportunity_0</name>
+        <label>Update Opportunity</label>
+        <locationX>1073</locationX>
+        <locationY>222</locationY>
         <connector>
             <targetReference>Send_SE_Alert</targetReference>
         </connector>
@@ -637,8 +675,8 @@
         <description>Alerts #se-request that there is a new Sales Engineer Request on an Opportunity</description>
         <name>Send_SE_Alert</name>
         <label>Send SE Alert</label>
-        <locationX>1297</locationX>
-        <locationY>295</locationY>
+        <locationX>1280</locationX>
+        <locationY>219</locationY>
         <flowName>Autolaunched_Send_Slack_Message</flowName>
         <inputAssignments>
             <name>var_SlackConversationID</name>
@@ -653,6 +691,26 @@
             </value>
         </inputAssignments>
     </subflows>
+    <subflows>
+        <description>Alerts #se-request that there is a new Sales Engineer Request on an Opportunity</description>
+        <name>Send_SE_Alert_0</name>
+        <label>Send SE Alert</label>
+        <locationX>1289</locationX>
+        <locationY>390</locationY>
+        <flowName>Autolaunched_Send_Slack_Message</flowName>
+        <inputAssignments>
+            <name>var_SlackConversationID</name>
+            <value>
+                <elementReference>SE_Channel_ID</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_SlackMessage</name>
+            <value>
+                <elementReference>slackMessageBody2</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
     <textTemplates>
         <name>slackMessageBody</name>
         <isViewedAsPlainText>true</isViewedAsPlainText>
@@ -664,6 +722,19 @@
 &gt;*Product Feature Interests*: {!ProductInterests.selectedOptionsCSV}
 &gt;*Why SE is requested*: _{!Why_is_SE_being_requested}_
 &gt;*Compelling Case to Win Deal*: _{!Compelling_case_to_win_the_deal}_
+&gt;*Opportunity*: &lt;https://affinipaymain.lightning.force.com/lightning/r/Opportunity/{!Opportunity.Id}/view|{!Opportunity.Name}&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>slackMessageBody2</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>*SE Engagement Request - {!Opportunity.Account_Name__c}*
+&gt;*Requested By*: {!$User.Full_Name__c}
+&gt;*Employees*: {!Firm_Employees_0}
+&gt;*Potential Users*: {!Potential_Users_0}
+&gt;*Potential Demo Date*: {!Potential_Demo_Date_0}
+&gt;*Product Feature Interests*: {!ProductInterests_0.selectedOptionsCSV}
+&gt;*Why SE is requested*: _{!Why_is_SE_being_requested_0}_
+&gt;*Compelling Case to Win Deal*: _{!Compelling_case_to_win_the_deal_0}_
 &gt;*Opportunity*: &lt;https://affinipaymain.lightning.force.com/lightning/r/Opportunity/{!Opportunity.Id}/view|{!Opportunity.Name}&gt;</text>
     </textTemplates>
     <variables>
