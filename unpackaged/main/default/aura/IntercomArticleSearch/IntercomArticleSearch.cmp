@@ -1,0 +1,100 @@
+<!-- AccountSearchComponent.cmp -->
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" controller="IntercomArticleSearch">
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="searchTerm" type="String" default=""/>
+    <aura:attribute name="searchResults" type="List" />
+    <aura:attribute name="searchInfo" type="String" />
+    <aura:attribute name="total_articles" type="String" />
+    <aura:attribute name="total_pages" type="String" />
+    <aura:attribute name="current_page" type="String" />
+    <aura:attribute name="next_url" type="String" />
+    <aura:attribute name="isCollapsed" type="Boolean" default="true" />
+    
+    <aura:attribute name="selected_article_title" type="String" default=""/>
+    <aura:attribute name="selected_article_body" type="String" default=""/>
+    
+    
+    <br/>
+    
+    <table>
+        <tr>
+            <th scope="col" style="width: 300px;">
+                KB Center
+            </th>
+            <th scope="col" style="width: 400px;vertical-align: bottom;" onkeyup="{!c.handleKeyUp}">
+                
+                <!-- Search Input -->
+                <lightning:input label="Search" value="{!v.searchTerm}" placeholder="Search articles..." />
+            
+            </th>
+            <th scope="col" style="width: 50px;vertical-align: bottom;">
+                
+                <!-- Search Button -->
+                <lightning:button aura:id="search_button" label="Search" onclick="{!c.search}"/>
+            </th>
+        </tr>
+        <tr>
+            <td colspan="1" style="vertical-align:top;">
+                <div class="slds-text-color_success slds-text-align_center">
+                <aura:if isTrue="{!not(empty(v.total_articles))}">
+                    <!-- Display the attribute content -->
+                        {!v.total_articles} articles found (page {!v.current_page} of {!v.total_pages})<br/>
+                        <aura:if isTrue="{!v.current_page>1}">
+                            <a onclick="{!c.get_previous}" style="cursor: pointer;">Previous</a>
+                        </aura:if>&nbsp;                
+                        <aura:if isTrue="{!not(empty(v.next_url))}">
+                            <a onclick="{!c.get_next}" style="cursor: pointer;">Next</a>
+                        </aura:if>                
+                    </aura:if>
+                </div>
+                <div class="article_display">
+
+                    <ul>
+                        <aura:iteration items="{!v.searchResults}" var="article">
+                            <li class="slds-item">
+                                <article class="slds-card highlightOnHover" key="{!article.id}" data-id="{!article.id}" onclick="{!c.select_article}">
+                                    <div class="slds-card__header slds-grid">
+                                        <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                            <div class="slds-media__figure">
+                                                <span class="slds-icon_container slds-icon-standard-account">
+                                                    <lightning:icon iconName="standard:article" size="small" alternativeText="Account Icon"/>
+                                                </span>
+                                            </div>
+                                            <div class="slds-media__body">
+                                                <h2 class="slds-card__header-title">
+                                                    {!article.title}
+                                                    <!-- <a href="{!'/article/' + article.id}">{!article.title}</a> -->
+                                                </h2>
+                                                <p class="" title="{!article.description}">{!article.description}</p>
+                                            </div>
+                                        </header>
+                                        
+                                    </div>
+                                    
+                                </article>
+                            </li>
+                            
+                        </aura:iteration>
+                    </ul>
+                </div>
+                <br/>
+                {!v.searchInfo}
+            </td>
+            <td colspan="2" style="vertical-align:top;">
+                <!-- <h2 class="slds-card__header-title" style="vertical-align:top;">
+                    Public Link
+                </h2> -->
+                <br/>
+                <div aura:id="display_article_body" class="article_display">
+                    <h2 class="slds-card__header-title">
+                        {!v.selected_article_title}
+                    </h2>
+                    <br/>
+                    <aura:unescapedHtml value="{!v.selected_article_body}" />
+                </div>
+            </td>
+        </tr>
+    </table>
+   
+</aura:component>
