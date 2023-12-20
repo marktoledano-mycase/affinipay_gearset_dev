@@ -40,7 +40,7 @@
                         <valueListItems>
                             <value>Opportunity.SE_Request</value>
                             <visibilityRule>
-                                <booleanFilter>(1 OR 2 OR 4) AND 3</booleanFilter>
+                                <booleanFilter>(1 OR 2 OR 4 OR 5) AND 3</booleanFilter>
                                 <criteria>
                                     <leftValue>{!Record.Record_Type_Name__c}</leftValue>
                                     <operator>EQUAL</operator>
@@ -60,6 +60,11 @@
                                     <leftValue>{!Record.Record_Type_Name__c}</leftValue>
                                     <operator>EQUAL</operator>
                                     <rightValue>CPACharge</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.Record_Type_Name__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Docketwise</rightValue>
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>
