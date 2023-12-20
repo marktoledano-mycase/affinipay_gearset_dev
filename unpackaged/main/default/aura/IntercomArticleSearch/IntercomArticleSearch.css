@@ -40,3 +40,8 @@
     height:600px;
     overflow-y: auto;
 }
+.THIS .selector{
+    width: 100px;
+    vertical-align: top;
+    text-align: left;
+}
