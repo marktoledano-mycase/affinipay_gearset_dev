@@ -80,13 +80,6 @@
         <value>Mass reassign opportunities</value>
     </labels>
     <labels>
-        <fullName>Intercom_Workspace</fullName>
-        <language>en_US</language>
-        <protected>false</protected>
-        <shortDescription>Intercom Workspace</shortDescription>
-        <value>MyCase Production</value>
-    </labels>
-    <labels>
         <fullName>MyCaseSupportEmail</fullName>
         <language>en_US</language>
         <protected>false</protected>
