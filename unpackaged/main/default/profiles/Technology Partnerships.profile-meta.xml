@@ -378,6 +378,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Current_LPM_Prohibited__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Account.Current_LPM__c</field>
         <readable>true</readable>
@@ -624,6 +629,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Account.Oppty_with_Prohibited_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Account.Other_N_A_Explained__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -659,6 +669,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Account.Partner_ID_VT__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Account.Partner_Request_Form__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -690,6 +705,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Primary_Referral_Partnership__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Record_Type_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -800,6 +820,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Account.X6Sense_Segment__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.oAuth_App_ID__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3224,7 +3249,22 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Contract.End_of_Current_Term_Temp__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Contract.Exclusivity__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contract.Fee_Waiver_Applicable_to__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contract.Fee_Waiver_Period_months__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3325,6 +3365,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Contract.Royalties_paid_to_other_partner_relation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contract.Royalty_Statement_Timing__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3438,8 +3483,33 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Contract.Tiers_non_standard__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contract.Tiers_standard__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Contract.Total_Users__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contract.Volume_Type_Standard__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contract.Volume_Type_non_Standard__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contract.eCheck_Notes__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3655,6 +3725,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Contract_SKU__c.Docketwise_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contract_SKU__c.Docketwise_Stripe_Subscription_ID__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -4833,6 +4908,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.Current_LPM_Prohibited__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Lead.Current_LPM__c</field>
         <readable>true</readable>
@@ -5030,6 +5110,21 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Lead.HasOptedOutOfEmail</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Has_Referral_with_Paymnts_Entrprse_Acct__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Has_Referral_with_Prohibited_Status_Time__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Has_Referral_with_Prohibited_Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -6224,6 +6319,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Merchant_Application__c.Partner_Token__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Merchant_Application__c.Pricing_Plan_ID__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -6250,6 +6350,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Merchant_Application__c.Trial_Merchant__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Merchant_Application__c.VT_Application_Link__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -7089,6 +7194,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Opportunity.Docketwise_Subscription_Email__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Opportunity.Email_Solution__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -7160,6 +7270,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Opportunity.Has_Referral_Partner__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.Has_Referral_with_Prohibited_Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -8709,11 +8824,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Partnerships__c.LawPay_Enterprise_Partnership__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Partnerships__c.Legacy_Notes__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -8740,6 +8850,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Partnerships__c.PartnerStack_Partner_Key__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Partnerships__c.Partner_Account_has_Prohibition__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -9023,6 +9138,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Product_Environment__c.Churn_Competitor__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Product_Environment__c.Churn_Date__c</field>
         <readable>true</readable>
@@ -9075,11 +9195,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Product_Environment__c.Companies__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Product_Environment__c.Competitor__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -12208,6 +12323,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>ValuePlus__c.Monthly_Fee_Start_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>ValuePlus__c.MyCaseWebsiteImplFee__c</field>
         <readable>true</readable>
@@ -12750,6 +12870,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>ValuePlus__c.Promo__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ValuePlus__c.Purchase_at_Signing__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -13854,6 +13979,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Integrations__c-Integrations Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Intercom_Key__mdt-Intercom Key Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Knowledge__kav-Knowledge Layout</layout>
@@ -15235,6 +15363,7 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
+        <personAccountDefault>true</personAccountDefault>
         <recordType>Contract.Partner</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
