@@ -23,13 +23,14 @@ public class IntercomArticleSearchTest {
         // Test data setup
         String searchTerm = 'Test';
         String expectedUrl = 'https://api.intercom.io/articles/search?phrase=Test';
+        String helpCenterId = '123456';
         String expectedResponse = '{"type": "list", "total_count": 1, "data": {"articles": [{"id": "123456", "title": "Test Article", "body": "Test Body", "url": "https://example.com"}]}}';
 
         // Set up HTTP mock
         Test.setMock(HttpCalloutMock.class, new IntercomHttpCalloutMock(expectedResponse));
 
         // Call the method to be tested
-        List<IntercomArticleSearch.ArticleWrapper> articles = IntercomArticleSearch.SearchArticles(searchTerm);
+        List<IntercomArticleSearch.ArticleWrapper> articles = IntercomArticleSearch.SearchArticles(searchTerm, helpCenterId);
 
         // Verify the results
         System.assertEquals(1, articles.size());
@@ -43,13 +44,14 @@ public class IntercomArticleSearchTest {
         // Test data setup
         String searchTerm = 'Test';
         String nextURL = 'https://api.intercom.io/articles/search?phrase=Test';
+        String helpCenterId = '123456';
         String expectedResponse = '{"type": "pages", "total_count": 1, "data": {"articles": [{"id": "123456", "title": "Test Article", "body": "Test Body", "url": "https://example.com"}]}, "pages": {"type": "pages", "next": null, "page": 1, "total_pages": 1, "per_page": 10}}';
 
         // Set up HTTP mock
         Test.setMock(HttpCalloutMock.class, new IntercomHttpCalloutMock(expectedResponse));
 
         // Call the method to be tested
-        List<IntercomArticleSearch.SearchInfoWrapper> resultList = IntercomArticleSearch.SearchArticlesInfo(searchTerm, nextURL);
+        List<IntercomArticleSearch.SearchInfoWrapper> resultList = IntercomArticleSearch.SearchArticlesInfo(searchTerm, nextURL, helpCenterId);
 
         // Verify the results
         System.assertEquals(1, resultList.size());
@@ -97,5 +99,20 @@ public class IntercomArticleSearchTest {
   
           // Assert the result
           System.assertEquals(expectedUrl, result);
+    }
+
+    @isTest
+    static void testGetHelpCenters() {
+        // Create a mock HTTP response
+        String mockResponse = '{"type":"list","data":[{"id":"123","workspace_id":"xyz","created_at":123456789,"updated_at":987654321,"identifier":"example","website_turned_on":true,"display_name":"Example"}]}';
+        Test.setMock(HttpCalloutMock.class, new IntercomHttpCalloutMock(mockResponse));
+
+        // Test your AuraEnabled method
+        List<IntercomArticleSearch.HelpCenterDataWrapper> result = IntercomArticleSearch.GetHelpCenters();
+
+        // Verify the result
+        System.assertNotEquals(null, result);
+        System.assertEquals(1, result.size());
+        // Add more assertions based on your specific response and expected behavior
     }
 }
