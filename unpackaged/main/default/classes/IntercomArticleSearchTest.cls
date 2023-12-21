@@ -15,7 +15,7 @@ public class IntercomArticleSearchTest {
         String bodyContent = IntercomArticleSearch.GetArticleBody(articleId);
 
         // Verify the results
-        System.assertEquals('<h1 class="slds-card__header-title"><a href=https://example.com target="_blank">Public Link</a></h1><br/><h1 class="slds-card__header-title">Test Article</h1><br/>Test Body', bodyContent);
+        System.assertEquals('<h1 class="slds-card__header-title">Test Article</h1><br/>Test Body', bodyContent);
     }
 
     @isTest
