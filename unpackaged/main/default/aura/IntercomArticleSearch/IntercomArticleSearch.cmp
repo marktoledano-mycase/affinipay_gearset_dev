@@ -17,8 +17,8 @@
     <aura:attribute name="selected_article_title" type="String" default=""/>
     <aura:attribute name="selected_article_body" type="String" default=""/>
     <aura:attribute name="options" type="List" default="[
-    {'label': 'MyCase', 'value': 'MyCase'},
-    {'label': 'Affinipay', 'value': 'Affinipay'}
+    {'label': 'MyCase Support', 'value': 'MyCase'},
+    {'label': 'Woodpecker', 'value': 'Woodpecker'}
 ]"/>
 <aura:attribute name="selectedOption" type="String" />
     
