@@ -1,7 +1,25 @@
 // AccountSearchComponentController.js
 ({
     doInit: function (component, event, helper) {
+        $A.enqueueAction(component.get('c.get_HelpCenters'));
+    },
 
+    get_HelpCenters: function (component, event, helper) {
+        var action = component.get("c.GetHelpCenters");
+
+        action.setCallback(this, function(response) {
+            var state = response.getState();
+            if (state === "SUCCESS") {
+                var result_data = response.getReturnValue();
+                component.set("v.helpCenters", response.getReturnValue());
+                console.log('Selected Help Center Id: ' + response.getReturnValue()[0].id);
+                component.set("v.selectedHelpCenter", response.getReturnValue()[0].id);
+        
+            } else {
+                console.log("Error: " + JSON.stringify(response.getError()));
+            }
+        });
+        $A.enqueueAction(action);
     },
 
     handleKeyUp: function(component, event, helper) {
@@ -36,6 +54,7 @@
 
     search : function(component, event, helper) {
         var searchTerm = component.get("v.searchTerm");
+        var helpCenterId = component.get("v.selectedHelpCenter");
         component.set("v.total_articles",null);
         component.set("v.total_pages",null);
         component.set("v.current_page",null);
@@ -44,7 +63,8 @@
 
         var action = component.get("c.SearchArticles");
         action.setParams({
-            "searchTerm": searchTerm
+            "searchTerm": searchTerm,
+            "helpCenterId" : helpCenterId
         });
 
         action.setCallback(this, function(response) {
@@ -64,6 +84,8 @@
     },
     search_Info : function(component, event, helper) {
         var searchTerm = component.get("v.searchTerm");
+        var helpCenterId = component.get("v.selectedHelpCenter");
+
         console.log('Search Info NEXT: ' + component.get("v.next_url"));
         var nextURL = null;
         if(component.get("v.next_url")!=null){
@@ -73,7 +95,8 @@
         var action = component.get("c.SearchArticlesInfo");
         action.setParams({
             "searchTerm": searchTerm,
-            "nextURL": nextURL
+            "nextURL": nextURL,
+            "helpCenterId" : helpCenterId
         });
 
         action.setCallback(this, function(response) {

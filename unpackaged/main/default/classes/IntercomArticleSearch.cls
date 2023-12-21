@@ -46,13 +46,13 @@ public static String GetArticlePublicLink(String ArticleId){
 }
 
 @AuraEnabled
-public static List<ArticleWrapper> SearchArticles(String searchTerm){
+public static List<ArticleWrapper> SearchArticles(String searchTerm, String helpCenterId){
 
     String urlSafeString = searchTerm.replace(' ', '%20');
 
     Http h = new Http();
     HttpRequest req = new HttpRequest();
-    req.setEndpoint('https://api.intercom.io/articles/search?phrase='+ urlSafeString);
+    req.setEndpoint('https://api.intercom.io/articles/search?help_center_id=' + helpCenterId + '&phrase='+ urlSafeString);
     req.setMethod('GET');
     req.setHeader('Content-Type', 'application/json');
     string workspace = system.label.Intercom_Workspace;
@@ -76,14 +76,14 @@ public static List<ArticleWrapper> SearchArticles(String searchTerm){
 }
 
 @AuraEnabled
-public static List<SearchInfoWrapper> SearchArticlesInfo(String searchTerm, String nextURL){
+public static List<SearchInfoWrapper> SearchArticlesInfo(String searchTerm, String nextURL, String helpCenterId){
     
     String urlSafeString = searchTerm.replace(' ', '%20');
     String api_endpoint;
     if(nextURL != null){
         api_endpoint = nextURL;
     }else{
-        api_endpoint = 'https://api.intercom.io/articles/search?phrase='+ urlSafeString;
+        api_endpoint = 'https://api.intercom.io/articles/search?help_center_id=' + helpCenterId + '&phrase='+ urlSafeString;
     }
     System.debug('NEXT ENDPOINT: ' + api_endpoint);
     Http h = new Http();
@@ -139,6 +139,35 @@ public static List<ArticleWrapper> SearchArticles_Next(String searchTerm, String
     }
 
 }
+
+@AuraEnabled
+public static List<HelpCenterDataWrapper> GetHelpCenters(){
+
+    Http h = new Http();
+    HttpRequest req = new HttpRequest();
+    req.setEndpoint('https://api.intercom.io/help_center/help_centers');
+    req.setMethod('GET');
+    req.setHeader('Content-Type', 'application/json');
+    string workspace = system.label.Intercom_Workspace;
+    string bearer_key = [Select Workspace__c, Key__c from Intercom_Key__mdt WHERE Workspace__c = : workspace LIMIT 1].Key__c;
+    req.setHeader('Intercom-Version', '2.10');
+    req.setHeader('Authorization', 'Bearer ' + bearer_key);
+    
+    HttpResponse res = h.send(req);
+    string jsonStr = res.getBody();
+    system.debug('Response: ' + jsonStr);
+
+    HelpCenterResponseWrapper response = (HelpCenterResponseWrapper)JSON.deserialize(jsonStr, HelpCenterResponseWrapper.class);
+
+    if (response != null && response.data != null) {
+        System.debug('Help Center Data: ' + response.data);
+        return response.data;
+    } else {
+        return new List<HelpCenterDataWrapper>();
+    }
+}
+
+
 
 public class ArticleWrapper {
     @AuraEnabled public String id;
@@ -229,4 +258,18 @@ public class ArticleBodyWrapper {
         @AuraEnabled public String url;
     }
 
+    public class HelpCenterDataWrapper {
+        @AuraEnabled public String id;
+        @AuraEnabled public String workspace_id;
+        @AuraEnabled public Long created_at;
+        @AuraEnabled public Long updated_at;
+        @AuraEnabled public String identifier;
+        @AuraEnabled public Boolean website_turned_on;
+        @AuraEnabled public String display_name;
+    }
+
+    public class HelpCenterResponseWrapper {
+        @AuraEnabled public String type;
+        @AuraEnabled public List<HelpCenterDataWrapper> data;
+    }
 }
