@@ -31,9 +31,6 @@
                         <valueListItems>
                             <value>Contact.Update_Customer_Status_Fields</value>
                         </valueListItems>
-                        <valueListItems>
-                            <value>Contact.Get_Intercom_Contact_Info</value>
-                        </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
