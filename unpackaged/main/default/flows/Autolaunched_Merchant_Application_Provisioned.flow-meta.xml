@@ -41,6 +41,7 @@
                 <elementReference>f_SelfServeLeadOwner</elementReference>
             </value>
         </inputParameters>
+        <nameSegment>AutoConvertLeads</nameSegment>
         <outputParameters>
             <assignToReference>output_convertedAccountId</assignToReference>
             <name>accountId</name>
@@ -53,6 +54,7 @@
             <assignToReference>output_convertedOppId</assignToReference>
             <name>opportunityId</name>
         </outputParameters>
+        <versionSegment>1</versionSegment>
     </actionCalls>
     <apiVersion>57.0</apiVersion>
     <assignments>
@@ -419,9 +421,6 @@
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
-            <connector>
-                <targetReference>Converted_Contact</targetReference>
-            </connector>
             <label>Is Converted</label>
         </rules>
     </decisions>
@@ -441,9 +440,6 @@
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
-            <connector>
-                <targetReference>Self_Serve_Contact</targetReference>
-            </connector>
             <label>Contact Self Serve</label>
         </rules>
         <rules>
