@@ -426,6 +426,17 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>X0_10_per_transaction__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>eCheck_included__c</picklist>
         <values>
             <fullName>No</fullName>

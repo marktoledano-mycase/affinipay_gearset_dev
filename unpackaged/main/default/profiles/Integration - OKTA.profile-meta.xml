@@ -2804,6 +2804,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Contract.Notes__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Contract.OwnerExpirationNotice</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -2975,6 +2980,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Contract.Total_Users__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contract.X0_10_per_transaction__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
