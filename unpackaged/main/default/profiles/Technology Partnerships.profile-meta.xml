@@ -3309,6 +3309,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Contract.Notes__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Contract.OwnerExpirationNotice</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -3505,6 +3510,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Contract.Volume_Type_non_Standard__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contract.X0_10_per_transaction__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
