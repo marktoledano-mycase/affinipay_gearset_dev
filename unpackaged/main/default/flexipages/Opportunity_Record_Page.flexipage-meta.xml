@@ -260,6 +260,100 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p&gt;&lt;strong style=&quot;color: rgb(250, 2, 2); font-size: 28px;&quot;&gt;Only Enterprise Payments Team can sell payments into this firm (both inbound or outbound)&lt;/strong&gt;&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText2</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Account.Payments_Enterprise_Account__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>Yes</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p&gt;&lt;strong style=&quot;color: rgb(250, 5, 5); font-size: 28px;&quot;&gt;No outbound or inbound software sales, even if a customer initiates.  They have a pre-existing relationship with one of our partners.&lt;/strong&gt;&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText3</identifier>
+                <visibilityRule>
+                    <booleanFilter>1 OR 2 OR 3 OR 4 OR 5 OR 6 OR 7</booleanFilter>
+                    <criteria>
+                        <leftValue>{!Record.Account.Partner_Software_Non_Compete_Type__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>Outbound and Inbound Prohibited</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Has_Referral_with_Prohibited_Status__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>true</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Account.Current_LPM_Prohibited__c}</leftValue>
+                        <operator>CONTAINS</operator>
+                        <rightValue>Aderant</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Account.Current_LPM_Prohibited__c}</leftValue>
+                        <operator>CONTAINS</operator>
+                        <rightValue>Firm Central</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Account.Current_LPM_Prohibited__c}</leftValue>
+                        <operator>CONTAINS</operator>
+                        <rightValue>ProLaw</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Account.Current_LPM_Prohibited__c}</leftValue>
+                        <operator>CONTAINS</operator>
+                        <rightValue>Thomson Reuters</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Account.Primary_Referral_Partnership__r.Partner_Account_has_Prohibition__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>true</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p&gt;&lt;strong style=&quot;color: rgb(253, 7, 7); font-size: 28px;&quot;&gt;Inbound software sales only, no outbound software sales.&lt;/strong&gt;&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText4</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Account.Partner_Software_Non_Compete_Type__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>Outbound Prohibited (time bound)</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
                     <name>flowArguments</name>
                     <value>[{&quot;label&quot;:&quot;recordId&quot;,&quot;dataType&quot;:&quot;String&quot;,&quot;supportsRecordId&quot;:true,&quot;value&quot;:&quot;{!Record.Id}&quot;}]</value>
                 </componentInstanceProperties>
@@ -1460,6 +1554,16 @@
                 <identifier>RecordCross_Sell_Base_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Qualification_Fields_Completed__c</fieldItem>
+                <identifier>RecordQualification_Fields_Completed_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-7ef3b657-b057-4c8a-af86-183f7e12a232</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -1675,7 +1779,7 @@
             <componentInstance>
                 <componentInstanceProperties>
                     <name>lookupFieldName</name>
-                    <value>Id</value>
+                    <value>Opportunity.Merchant_Application__c</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>titleFieldName</name>
@@ -1683,7 +1787,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>updateQuickActionName</name>
-                    <value>Opportunity.Linked_Application</value>
+                    <value>Merchant_Application__c.Linked_Application</value>
                 </componentInstanceProperties>
                 <componentName>console:relatedRecord</componentName>
                 <identifier>console_relatedRecord3</identifier>
@@ -1712,6 +1816,47 @@
                     <criteria>
                         <leftValue>{!Record.Merchant_Application__r.Merchant_Name__c}</leftValue>
                         <operator>NE</operator>
+                    </criteria>
+                </visibilityRule>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>flowArguments</name>
+                    <value>[{&quot;label&quot;:&quot;RecordID&quot;,&quot;dataType&quot;:&quot;String&quot;,&quot;supportsRecordId&quot;:true,&quot;value&quot;:&quot;{!Record.Id}&quot;}]</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>flowLayout</name>
+                    <value>oneColumn</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>flowName</name>
+                    <value>Opportunity_Set_Qualification_Fields</value>
+                </componentInstanceProperties>
+                <componentName>flowruntime:interview</componentName>
+                <identifier>flowruntime_interview7</identifier>
+                <visibilityRule>
+                    <booleanFilter>1 AND 2 AND (3 OR 4)</booleanFilter>
+                    <criteria>
+                        <leftValue>{!Record.Qualification_Fields_Completed__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>YES</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Record_Type_Name__c}</leftValue>
+                        <operator>NE</operator>
+                        <rightValue>Soluno</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Type}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>New Business</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Type}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>Cross-Sell</rightValue>
                     </criteria>
                 </visibilityRule>
             </componentInstance>
