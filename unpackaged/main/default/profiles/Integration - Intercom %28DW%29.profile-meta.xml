@@ -5209,6 +5209,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Merchant_Application__c.VT_Application_Link__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Merchant_Application__c.Virtual_Terminal_ID__c</field>
         <readable>true</readable>
     </fieldPermissions>
