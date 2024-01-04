@@ -2,9 +2,9 @@
 <Role xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseAccessLevel>Read</caseAccessLevel>
     <contactAccessLevel>Edit</contactAccessLevel>
-    <description>Account Executive, CASEpeer</description>
+    <description>Account Executive, Docketwise Core (A)</description>
     <mayForecastManagerShare>false</mayForecastManagerShare>
-    <name>Account Executive, CASEpeer</name>
+    <name>Account Executive, Docketwise Core (A)</name>
     <opportunityAccessLevel>Edit</opportunityAccessLevel>
-    <parentRole>Sales_Manager_CASEpeer_MyCase_Core_C</parentRole>
+    <parentRole>Sales_Manager_Software_Core_A</parentRole>
 </Role>

@@ -6,5 +6,5 @@
     <mayForecastManagerShare>false</mayForecastManagerShare>
     <name>SDR, MyCase</name>
     <opportunityAccessLevel>Edit</opportunityAccessLevel>
-    <parentRole>Sales_Manager_MyCase_SDR_BDR</parentRole>
+    <parentRole>Director_SDR_BDR</parentRole>
 </Role>

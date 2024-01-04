@@ -2,9 +2,9 @@
 <Role xmlns="http://soap.sforce.com/2006/04/metadata">
     <caseAccessLevel>Read</caseAccessLevel>
     <contactAccessLevel>Edit</contactAccessLevel>
-    <description>Sales Manager, MyCase Core (B)</description>
+    <description>Sales Manager, Software Core (A)</description>
     <mayForecastManagerShare>false</mayForecastManagerShare>
-    <name>Sales Manager, MyCase Core (B)</name>
+    <name>Sales Manager, Software Core (A)</name>
     <opportunityAccessLevel>Edit</opportunityAccessLevel>
     <parentRole>VP_Sales</parentRole>
 </Role>
