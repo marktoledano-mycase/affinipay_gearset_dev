@@ -4,8 +4,8 @@
     <assignments>
         <name>Assign_Contact_and_Account</name>
         <label>Assign Contact and Account</label>
-        <locationX>1865</locationX>
-        <locationY>628</locationY>
+        <locationX>567</locationX>
+        <locationY>2993</locationY>
         <assignmentItems>
             <assignToReference>$Record.Contact__c</assignToReference>
             <operator>Assign</operator>
@@ -24,8 +24,8 @@
     <assignments>
         <name>Assign_Last_Event_Date</name>
         <label>Assign Last Event Date</label>
-        <locationX>200</locationX>
-        <locationY>540</locationY>
+        <locationX>534</locationX>
+        <locationY>395</locationY>
         <assignmentItems>
             <assignToReference>$Record.Last_Event_Date__c</assignToReference>
             <operator>Assign</operator>
@@ -40,8 +40,8 @@
     <assignments>
         <name>Assign_Lead</name>
         <label>Assign Lead</label>
-        <locationX>1632</locationX>
-        <locationY>860</locationY>
+        <locationX>303</locationX>
+        <locationY>2777</locationY>
         <assignmentItems>
             <assignToReference>$Record.Lead__c</assignToReference>
             <operator>Assign</operator>
@@ -53,8 +53,8 @@
     <assignments>
         <name>Assign_Referral_Partner</name>
         <label>Assign Referral Partner</label>
-        <locationX>1297</locationX>
-        <locationY>663</locationY>
+        <locationX>512</locationX>
+        <locationY>2177</locationY>
         <assignmentItems>
             <assignToReference>$Record.Referral_Partner__c</assignToReference>
             <operator>Assign</operator>
@@ -69,8 +69,8 @@
     <assignments>
         <name>Assign_Sales_Rep_from_Admin_ID</name>
         <label>Assign Sales Rep from Admin ID</label>
-        <locationX>1008</locationX>
-        <locationY>628</locationY>
+        <locationX>50</locationX>
+        <locationY>1019</locationY>
         <assignmentItems>
             <assignToReference>$Record.Sales_Rep__c</assignToReference>
             <operator>Assign</operator>
@@ -79,14 +79,15 @@
             </value>
         </assignmentItems>
         <connector>
+            <isGoTo>true</isGoTo>
             <targetReference>Partner_Search</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>Assign_Sales_Rep_from_Email</name>
         <label>Assign Sales Rep from Email</label>
-        <locationX>779</locationX>
-        <locationY>493</locationY>
+        <locationX>468</locationX>
+        <locationY>1577</locationY>
         <assignmentItems>
             <assignToReference>$Record.Sales_Rep__c</assignToReference>
             <operator>Assign</operator>
@@ -101,8 +102,8 @@
     <decisions>
         <name>Contact_Check</name>
         <label>Contact Check</label>
-        <locationX>1849</locationX>
-        <locationY>488</locationY>
+        <locationX>699</locationX>
+        <locationY>2885</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Contact_Found</name>
@@ -123,8 +124,8 @@
     <decisions>
         <name>Lead_Check</name>
         <label>Lead Check</label>
-        <locationX>1621</locationX>
-        <locationY>677</locationY>
+        <locationX>501</locationX>
+        <locationY>2669</locationY>
         <defaultConnector>
             <targetReference>Contact</targetReference>
         </defaultConnector>
@@ -148,21 +149,9 @@
     <decisions>
         <name>Lead_or_Contact_Search_Check</name>
         <label>Lead or Contact Search Check</label>
-        <locationX>1474</locationX>
-        <locationY>313</locationY>
+        <locationX>798</locationX>
+        <locationY>2453</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>On_Create_Skip_Search</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record__Prior</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <label>On Create Skip Search</label>
-        </rules>
         <rules>
             <name>Search_for_Lead_or_Contact</name>
             <conditionLogic>and</conditionLogic>
@@ -189,8 +178,8 @@
     <decisions>
         <name>Partner_Check</name>
         <label>Partner Check</label>
-        <locationX>1279</locationX>
-        <locationY>417</locationY>
+        <locationX>644</locationX>
+        <locationY>2069</locationY>
         <defaultConnector>
             <targetReference>Lead_or_Contact_Search_Check</targetReference>
         </defaultConnector>
@@ -214,8 +203,8 @@
     <decisions>
         <name>Partner_Search</name>
         <label>Partner Search</label>
-        <locationX>930</locationX>
-        <locationY>306</locationY>
+        <locationX>798</locationX>
+        <locationY>1853</locationY>
         <defaultConnector>
             <targetReference>Lead_or_Contact_Search_Check</targetReference>
         </defaultConnector>
@@ -246,8 +235,8 @@
     <decisions>
         <name>Sales_Rep_Search</name>
         <label>Sales Rep Search</label>
-        <locationX>320</locationX>
-        <locationY>298</locationY>
+        <locationX>798</locationX>
+        <locationY>587</locationY>
         <defaultConnector>
             <targetReference>Partner_Search</targetReference>
         </defaultConnector>
@@ -335,6 +324,7 @@
                 </rightValue>
             </conditions>
             <connector>
+                <isGoTo>true</isGoTo>
                 <targetReference>Search_By</targetReference>
             </connector>
             <label>Search User on Admin User Update</label>
@@ -357,6 +347,7 @@
                 </rightValue>
             </conditions>
             <connector>
+                <isGoTo>true</isGoTo>
                 <targetReference>Search_By</targetReference>
             </connector>
             <label>Search User on Admin Email Update</label>
@@ -365,8 +356,8 @@
     <decisions>
         <name>Search_By</name>
         <label>Search By</label>
-        <locationX>321</locationX>
-        <locationY>616</locationY>
+        <locationX>600</locationX>
+        <locationY>695</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Admin_ID</name>
@@ -402,8 +393,8 @@
     <decisions>
         <name>Status_Change_Check</name>
         <label>Status Change Check</label>
-        <locationX>54</locationX>
-        <locationY>367</locationY>
+        <locationX>798</locationX>
+        <locationY>287</locationY>
         <defaultConnector>
             <targetReference>Sales_Rep_Search</targetReference>
         </defaultConnector>
@@ -448,6 +439,7 @@
                 </rightValue>
             </conditions>
             <connector>
+                <isGoTo>true</isGoTo>
                 <targetReference>Assign_Last_Event_Date</targetReference>
             </connector>
             <label>Status Changed</label>
@@ -456,8 +448,8 @@
     <decisions>
         <name>User_Found_By_Email_Check</name>
         <label>User Found By Email Check</label>
-        <locationX>549</locationX>
-        <locationY>387</locationY>
+        <locationX>600</locationX>
+        <locationY>1469</locationY>
         <defaultConnector>
             <targetReference>Partner_Search</targetReference>
         </defaultConnector>
@@ -481,9 +473,10 @@
     <decisions>
         <name>User_ID_Check</name>
         <label>User ID Check</label>
-        <locationX>843</locationX>
-        <locationY>630</locationY>
+        <locationX>270</locationX>
+        <locationY>911</locationY>
         <defaultConnector>
+            <isGoTo>true</isGoTo>
             <targetReference>Partner_Search</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Null Email</defaultConnectorLabel>
@@ -536,7 +529,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>FREE_FORM_CANVAS</stringValue>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -549,8 +542,8 @@
     <recordLookups>
         <name>Contact</name>
         <label>Contact</label>
-        <locationX>1674</locationX>
-        <locationY>485</locationY>
+        <locationX>699</locationX>
+        <locationY>2777</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Contact_Check</targetReference>
@@ -579,8 +572,8 @@
     <recordLookups>
         <name>Get_Partner</name>
         <label>Get Partner</label>
-        <locationX>1145</locationX>
-        <locationY>414</locationY>
+        <locationX>644</locationX>
+        <locationY>1961</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Partner_Check</targetReference>
@@ -602,8 +595,8 @@
     <recordLookups>
         <name>Lead</name>
         <label>Lead</label>
-        <locationX>1564</locationX>
-        <locationY>496</locationY>
+        <locationX>501</locationX>
+        <locationY>2561</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Lead_Check</targetReference>
@@ -639,8 +632,8 @@
     <recordLookups>
         <name>User_by_Email</name>
         <label>User by Email</label>
-        <locationX>566</locationX>
-        <locationY>526</locationY>
+        <locationX>600</locationX>
+        <locationY>1361</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>User_Found_By_Email_Check</targetReference>
@@ -669,8 +662,8 @@
     <recordLookups>
         <name>User_by_ID</name>
         <label>User by ID</label>
-        <locationX>555</locationX>
-        <locationY>734</locationY>
+        <locationX>270</locationX>
+        <locationY>803</locationY>
         <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>User_ID_Check</targetReference>
@@ -690,8 +683,8 @@
         </outputAssignments>
     </recordLookups>
     <start>
-        <locationX>44</locationX>
-        <locationY>25</locationY>
+        <locationX>672</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Status_Change_Check</targetReference>
         </connector>
