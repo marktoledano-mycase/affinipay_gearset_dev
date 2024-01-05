@@ -659,6 +659,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Account.Partner_ID_VT__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Account.Partner_Request_Form__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -800,6 +805,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Account.X6Sense_Segment__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.oAuth_App_ID__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
