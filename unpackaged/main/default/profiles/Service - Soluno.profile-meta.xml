@@ -4327,6 +4327,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Contract_SKU_Transaction__c.Docketwise_Stripe_Subscription_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Contract_SKU_Transaction__c.Effective_Date_2__c</field>
         <readable>true</readable>
     </fieldPermissions>
