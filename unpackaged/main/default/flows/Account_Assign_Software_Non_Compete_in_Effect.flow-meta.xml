@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <assignments>
+        <name>Assign_Value_to_Collection</name>
+        <label>Assign Value to Collection</label>
+        <locationX>446</locationX>
+        <locationY>755</locationY>
+        <assignmentItems>
+            <assignToReference>colOutboundandInboundProhibited</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Find_Partner_Software_Non_Compete_Type</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Find_Partner_Software_Non_Compete_Type</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Value_to_Collection_Time_Bound</name>
+        <label>Assign Value to Collection Time Bound</label>
+        <locationX>754</locationX>
+        <locationY>1355</locationY>
+        <assignmentItems>
+            <assignToReference>colOutboundandInboundTimeBound</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Find_Partner_Software_Non_Compete_Time_Bound</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Find_Partner_Software_Non_Compete_Time_Bound</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Account_has_Referral_Records</name>
+        <label>Account has Referral Records?</label>
+        <locationX>710</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>No Referral Records Present</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Referral_Records_Present</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Referral_Records</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Find_Partner_Software_Non_Compete_Type</targetReference>
+            </connector>
+            <label>Yes Referral Records Present</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Has_records_in_Time_Bound_Collection</name>
+        <label>Has records in Time Bound Collection</label>
+        <locationX>666</locationX>
+        <locationY>1631</locationY>
+        <defaultConnector>
+            <targetReference>Update_Account_to_None</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Has_Records_in_Time_Bound_Collection</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>colOutboundandInboundTimeBound</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Account_to_Time_Bound</targetReference>
+            </connector>
+            <label>Yes Has Records in Time Bound Collection</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Has_referral_record_Outbound_and_inbound_prohibited</name>
+        <label>Has referral record Outbound and inbound prohibited</label>
+        <locationX>358</locationX>
+        <locationY>1031</locationY>
+        <defaultConnector>
+            <targetReference>Find_Partner_Software_Non_Compete_Time_Bound</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_has_referral_record_outbound_and_inbound_prohibited</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>colOutboundandInboundProhibited</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Software_Non_Compete_in_Effect</targetReference>
+            </connector>
+            <label>Yes has referral record outbound and inbound prohibited</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Outbound_and_Inbound_Prohibited</name>
+        <label>Outbound and Inbound Prohibited</label>
+        <locationX>578</locationX>
+        <locationY>647</locationY>
+        <defaultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Find_Partner_Software_Non_Compete_Time_Bound</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_outbound_and_Inbound_Prohibited</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Find_Partner_Software_Non_Compete_Type.Partner_Software_Non_Compete_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Outbound and Inbound Prohibited</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Value_to_Collection</targetReference>
+            </connector>
+            <label>Yes outbound and Inbound Prohibited</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Outbound_Prohibited_Time_Bound</name>
+        <label>Outbound Prohibited (Time Bound)</label>
+        <locationX>886</locationX>
+        <locationY>1247</locationY>
+        <defaultConnector>
+            <targetReference>Find_Partner_Software_Non_Compete_Time_Bound</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Record_Outbound_Prohibited_Time_Bound</name>
+            <conditionLogic>1 AND (2 OR 3) AND 4</conditionLogic>
+            <conditions>
+                <leftValueReference>Find_Partner_Software_Non_Compete_Time_Bound.Partner_Software_Non_Compete_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Outbound Prohibited (Time Bound)</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Software_Non_Compete_in_Effect__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>None</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Software_Non_Compete_in_Effect__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Software_Non_Compete_Expiry_Date__c</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Flow.CurrentDate</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Value_to_Collection_Time_Bound</targetReference>
+            </connector>
+            <label>Yes Record Outbound Prohibited (Time Bound)</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Account: Assign Software Non-Compete in Effect {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Account: Assign Software Non-Compete in Effect</label>
+    <loops>
+        <name>Find_Partner_Software_Non_Compete_Time_Bound</name>
+        <label>Find Partner Software Non Compete Time Bound</label>
+        <locationX>666</locationX>
+        <locationY>1139</locationY>
+        <collectionReference>Get_Referral_Records</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Outbound_Prohibited_Time_Bound</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Has_records_in_Time_Bound_Collection</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
+        <name>Find_Partner_Software_Non_Compete_Type</name>
+        <label>Find Partner Software Non-Compete Type</label>
+        <locationX>358</locationX>
+        <locationY>539</locationY>
+        <collectionReference>Get_Referral_Records</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Outbound_and_Inbound_Prohibited</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Has_referral_record_Outbound_and_inbound_prohibited</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Referral_Records</name>
+        <label>Get Referral Records</label>
+        <locationX>710</locationX>
+        <locationY>323</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Account_has_Referral_Records</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Partner_Account__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Referral__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Account_to_None</name>
+        <label>Update Account to None</label>
+        <locationX>798</locationX>
+        <locationY>1739</locationY>
+        <inputAssignments>
+            <field>Software_Non_Compete_in_Effect__c</field>
+            <value>
+                <stringValue>None</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Account_to_Time_Bound</name>
+        <label>Update Account to Time Bound</label>
+        <locationX>534</locationX>
+        <locationY>1739</locationY>
+        <inputAssignments>
+            <field>Software_Non_Compete_in_Effect__c</field>
+            <value>
+                <stringValue>Outbound Prohibited (time bound)</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Software_Non_Compete_in_Effect</name>
+        <label>Update Software Non Compete in Effect</label>
+        <locationX>50</locationX>
+        <locationY>1139</locationY>
+        <inputAssignments>
+            <field>Software_Non_Compete_in_Effect__c</field>
+            <value>
+                <stringValue>Outbound and Inbound Prohibited</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>584</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Referral_Records</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Partner_Software_Non_Compete_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Record_Type_Name__c</field>
+            <operator>Contains</operator>
+            <value>
+                <stringValue>Partner</stringValue>
+            </value>
+        </filters>
+        <object>Account</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+    <variables>
+        <name>colOutboundandInboundProhibited</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Referral__c</objectType>
+    </variables>
+    <variables>
+        <name>colOutboundandInboundTimeBound</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Referral__c</objectType>
+    </variables>
+</Flow>

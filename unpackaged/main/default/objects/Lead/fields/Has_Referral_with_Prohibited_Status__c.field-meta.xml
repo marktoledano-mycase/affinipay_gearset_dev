@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Has_Referral_with_Prohibited_Status__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used to determine if Lead has a referral with a prohibited selling status.  Updated via a flow.</description>
+    <externalId>false</externalId>
+    <label>Has Referral with Prohibited Status</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>
