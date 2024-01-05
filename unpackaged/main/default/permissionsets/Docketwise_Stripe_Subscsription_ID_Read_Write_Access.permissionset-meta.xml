@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Gives user the ability to edit Docketwise Stripe Subscription ID on the Contract SKU Transaction record</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contract_SKU_Transaction__c.Docketwise_Stripe_Subscription_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Docketwise Stripe Subscsription ID Read/Write Access</label>
+</PermissionSet>
