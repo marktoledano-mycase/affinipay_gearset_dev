@@ -294,6 +294,13 @@
                 <elementReference>Contact.LastActivityDate</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varOpportunity.Industry__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Contact.Industry__c</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Create_Opportunity</targetReference>
         </connector>
