@@ -23,9 +23,9 @@
                 <label>Existing</label>
             </value>
             <value>
-                <fullName>Both</fullName>
+                <fullName>All Merchants</fullName>
                 <default>false</default>
-                <label>Both</label>
+                <label>All Merchants</label>
             </value>
         </valueSetDefinition>
     </valueSet>
