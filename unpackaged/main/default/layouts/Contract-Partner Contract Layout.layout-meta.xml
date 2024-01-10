@@ -19,14 +19,6 @@
                 <behavior>Edit</behavior>
                 <field>Partnership__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Tier_5_Min__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Tier_5_Rate__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -275,6 +267,10 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
+                <field>Tier_5_Min__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
                 <field>X0_10_per_transaction__c</field>
             </layoutItems>
         </layoutColumns>
@@ -301,6 +297,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Tier_4_Rate__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Tier_5_Rate__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
