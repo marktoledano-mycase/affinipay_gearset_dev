@@ -3226,6 +3226,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Drive</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Email Automation</fullName>
             <default>false</default>
         </values>
@@ -3239,6 +3243,22 @@
         </values>
         <values>
             <fullName>Payable Statements</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rate Schedules</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reporting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SSO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Security %26 Compliance</fullName>
             <default>false</default>
         </values>
         <values>

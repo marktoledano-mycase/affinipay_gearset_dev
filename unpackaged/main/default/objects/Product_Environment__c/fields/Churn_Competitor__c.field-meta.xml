@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Competitor__c</fullName>
+    <fullName>Churn_Competitor__c</fullName>
     <description>Competitor that the customer has chosen instead</description>
     <externalId>false</externalId>
-    <label>Competitor</label>
+    <label>Churn Competitor</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>

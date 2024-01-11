@@ -6,6 +6,7 @@
     <permissionSets>Contract_Sku_Transactions_and_Contract_Skus_Delete</permissionSets>
     <permissionSets>Create_Onboarding_after_Opportunity_Is_Closed</permissionSets>
     <permissionSets>Create_Report_and_Dashboard_Folders</permissionSets>
+    <permissionSets>Docketwise_Stripe_Subscsription_ID_Read_Write_Access</permissionSets>
     <permissionSets>Edit_Closed_Won_Opportunities</permissionSets>
     <permissionSets>Edit_MQL_Fields</permissionSets>
     <permissionSets>Inbound_Requests_Readonly</permissionSets>

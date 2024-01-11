@@ -1328,6 +1328,10 @@
                     <value>Facet-82b3f290-05fe-481c-8fed-b0fca1f88df6</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>label</name>
                     <value>Lead Information</value>
                 </componentInstanceProperties>
@@ -1340,6 +1344,10 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-6cf9333f-f7fc-4996-b54f-4dfaccdf61c5</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -1356,8 +1364,12 @@
                     <value>Facet-6442b6d6-3307-4a74-9b29-79b15bcbe43c</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>label</name>
-                    <value>Required Qualification Fiels</value>
+                    <value>Required Qualification Fields</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
                 <identifier>flexipage_fieldSection20</identifier>
@@ -1368,6 +1380,10 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-9e3fa32b-463d-472f-a6d4-50c4bec00a6e</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -1384,6 +1400,10 @@
                     <value>Facet-e067b6dd-15f2-4daf-b939-25bd37423864</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>label</name>
                     <value>MQL Details</value>
                 </componentInstanceProperties>
@@ -1396,6 +1416,10 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-558aaf77-38cf-4db8-a294-78d5b059f887</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -1434,6 +1458,10 @@
                     <value>Facet-3d40e2e1-cbef-4eb1-a434-24607b6ff9f8</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>label</name>
                     <value>Current Solution</value>
                 </componentInstanceProperties>
@@ -1448,6 +1476,10 @@
                     <value>Facet-ab4d776e-8ed2-4bba-8367-90e6904695a4</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>label</name>
                     <value>Address Information</value>
                 </componentInstanceProperties>
@@ -1460,6 +1492,10 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-fecb27c8-9bc7-4a37-9339-65960436560c</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -1488,6 +1524,10 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-b4aa020e-4111-4963-8555-5b0e0451b016</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -1614,152 +1654,14 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Outreach_Actively_being_sequenced__c</fieldItem>
-                <identifier>RecordOutreach_Actively_being_sequenced_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Outreach_Number_of_Active_Sequences__c</fieldItem>
-                <identifier>RecordOutreach_Number_of_Active_Sequences_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Outreach_Date_Added_to_Sequence__c</fieldItem>
-                <identifier>RecordOutreach_Date_Added_to_Sequence_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Outreach_Initial_Sequence_Name__c</fieldItem>
-                <identifier>RecordOutreach_Initial_Sequence_Name_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Outreach_Finished_Sequences__c</fieldItem>
-                <identifier>RecordOutreach_Finished_Sequences_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Most_Recently_Completed_Sequence__c</fieldItem>
-                <identifier>RecordMost_Recently_Completed_Sequence_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <name>Facet-8b4c2cdd-04cb-430e-89e8-a2ac6bf5faee</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Outreach_Current_Sequence_Name__c</fieldItem>
-                <identifier>RecordOutreach_Current_Sequence_Name_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Outreach_Current_Sequence_Status__c</fieldItem>
-                <identifier>RecordOutreach_Current_Sequence_Status_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Outreach_Current_Sequence_Step_Number__c</fieldItem>
-                <identifier>RecordOutreach_Current_Sequence_Step_Number_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Outreach_Current_Sequence_Step_Type__c</fieldItem>
-                <identifier>RecordOutreach_Current_Sequence_Step_Type_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Outreach_Current_Sequence_Task_Due_Date__c</fieldItem>
-                <identifier>RecordOutreach_Current_Sequence_Task_Due_Date_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <name>Facet-0a424240-8e2e-46ac-bdfb-96a896de1a8e</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>body</name>
-                    <value>Facet-8b4c2cdd-04cb-430e-89e8-a2ac6bf5faee</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column15</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>body</name>
-                    <value>Facet-0a424240-8e2e-46ac-bdfb-96a896de1a8e</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column16</identifier>
-            </componentInstance>
-        </itemInstances>
-        <name>Facet-37b7e61b-6b1b-4ee0-9b35-dad6de943b91</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-4c0d9e8c-dbb3-43fc-9f9b-4a642dec2106</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -1767,20 +1669,6 @@
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
                 <identifier>flexipage_fieldSection7</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>columns</name>
-                    <value>Facet-37b7e61b-6b1b-4ee0-9b35-dad6de943b91</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>label</name>
-                    <value>Outreach</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:fieldSection</componentName>
-                <identifier>flexipage_fieldSection8</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-n7ex2e8oxcf</name>
@@ -2598,6 +2486,10 @@
                     <value>Facet-cae99f4c-2911-4d49-a032-e2c25ca0caed</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>label</name>
                     <value>Overview</value>
                 </componentInstanceProperties>
@@ -2610,6 +2502,10 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-f27eade2-4e3e-4121-bbd4-4ff7cc44c0e0</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -2626,6 +2522,10 @@
                     <value>Facet-f5d9942f-db9b-4b65-85c4-51a384913e6f</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>label</name>
                     <value>Email Opt Out</value>
                 </componentInstanceProperties>
@@ -2638,6 +2538,10 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-ef7600c3-b328-483b-9383-37d76564ec7e</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -2654,6 +2558,10 @@
                     <value>Facet-fc711fa0-9bfa-41f1-ad69-1e92f16b5f36</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>label</name>
                     <value>Marketo Information</value>
                 </componentInstanceProperties>
@@ -2668,6 +2576,10 @@
                     <value>Facet-cd9fd318-62a1-4a44-9a03-927009ef4f99</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>label</name>
                     <value>Inferred Geography</value>
                 </componentInstanceProperties>
@@ -2680,6 +2592,10 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-5a7ba663-2fb1-458d-ad8c-c371e23d2b90</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -2966,6 +2882,148 @@
             </componentInstance>
         </itemInstances>
         <name>Facet-65869c40-f71f-425b-9ce2-8c46fade3c2d</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Outreach_Actively_being_sequenced__c</fieldItem>
+                <identifier>RecordOutreach_Actively_being_sequenced_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Outreach_Number_of_Active_Sequences__c</fieldItem>
+                <identifier>RecordOutreach_Number_of_Active_Sequences_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Outreach_Date_Added_to_Sequence__c</fieldItem>
+                <identifier>RecordOutreach_Date_Added_to_Sequence_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Outreach_Initial_Sequence_Name__c</fieldItem>
+                <identifier>RecordOutreach_Initial_Sequence_Name_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Outreach_Finished_Sequences__c</fieldItem>
+                <identifier>RecordOutreach_Finished_Sequences_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Most_Recently_Completed_Sequence__c</fieldItem>
+                <identifier>RecordMost_Recently_Completed_Sequence_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <name>Facet-8b4c2cdd-04cb-430e-89e8-a2ac6bf5faee</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Outreach_Current_Sequence_Name__c</fieldItem>
+                <identifier>RecordOutreach_Current_Sequence_Name_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Outreach_Current_Sequence_Status__c</fieldItem>
+                <identifier>RecordOutreach_Current_Sequence_Status_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Outreach_Current_Sequence_Step_Number__c</fieldItem>
+                <identifier>RecordOutreach_Current_Sequence_Step_Number_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Outreach_Current_Sequence_Step_Type__c</fieldItem>
+                <identifier>RecordOutreach_Current_Sequence_Step_Type_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Outreach_Current_Sequence_Task_Due_Date__c</fieldItem>
+                <identifier>RecordOutreach_Current_Sequence_Task_Due_Date_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <name>Facet-0a424240-8e2e-46ac-bdfb-96a896de1a8e</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-8b4c2cdd-04cb-430e-89e8-a2ac6bf5faee</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column15</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-0a424240-8e2e-46ac-bdfb-96a896de1a8e</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column16</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>Facet-37b7e61b-6b1b-4ee0-9b35-dad6de943b91</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -3283,6 +3341,10 @@
                     <value>Facet-0aef5798-d65e-43cb-8ac3-1790f20cd314</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>label</name>
                     <value>Section</value>
                 </componentInstanceProperties>
@@ -3589,6 +3651,10 @@
                     <value>Facet-384ab8bd-b0a9-4d3a-bafb-369a950a6f39</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>label</name>
                     <value>2023 Migration IDs</value>
                 </componentInstanceProperties>
@@ -3603,6 +3669,10 @@
                     <value>Facet-4875f73a-c13f-4199-bbf4-10183fcd0573</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>label</name>
                     <value>Integration IDs</value>
                 </componentInstanceProperties>
@@ -3615,6 +3685,10 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-a706801e-7720-45c8-8c32-5eae76cf8dfe</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -3745,6 +3819,24 @@
                 </componentInstanceProperties>
                 <componentName>flexipage:tabset</componentName>
                 <identifier>flexipage_tabset3</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>columns</name>
+                    <value>Facet-37b7e61b-6b1b-4ee0-9b35-dad6de943b91</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>label</name>
+                    <value>Outreach</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:fieldSection</componentName>
+                <identifier>flexipage_fieldSection8</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
