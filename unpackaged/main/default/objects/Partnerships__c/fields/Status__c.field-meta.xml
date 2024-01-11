@@ -48,6 +48,11 @@
                 <label>Terminated</label>
             </value>
             <value>
+                <fullName>In Discussion</fullName>
+                <default>false</default>
+                <label>In Discussion</label>
+            </value>
+            <value>
                 <fullName>COMPETITOR</fullName>
                 <default>false</default>
                 <isActive>false</isActive>

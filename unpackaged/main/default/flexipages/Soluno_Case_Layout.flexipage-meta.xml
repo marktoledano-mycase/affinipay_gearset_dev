@@ -87,6 +87,16 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <componentName>IntercomArticleSearch</componentName>
+                <identifier>c_IntercomArticleSearch</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>Facet-571a5825-fdd1-43a4-bab3-6b0ac80ff950</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
                 <componentInstanceProperties>
                     <name>active</name>
                     <value>true</value>
@@ -129,6 +139,20 @@
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
                 <identifier>activityTab</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-571a5825-fdd1-43a4-bab3-6b0ac80ff950</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>Knowledge</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:tab</componentName>
+                <identifier>flexipage_tab8</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-8e741d91-4b37-483b-81ef-dfc3e95bff00</name>

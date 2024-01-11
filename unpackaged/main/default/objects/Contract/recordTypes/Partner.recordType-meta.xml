@@ -187,7 +187,7 @@
     <picklistValues>
         <picklist>Fee_Waiver_Applicable_to__c</picklist>
         <values>
-            <fullName>Both</fullName>
+            <fullName>All Merchants</fullName>
             <default>false</default>
         </values>
         <values>
@@ -426,6 +426,17 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>X0_10_per_transaction__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>eCheck_included__c</picklist>
         <values>
             <fullName>No</fullName>
@@ -471,6 +482,10 @@
         </values>
         <values>
             <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
             <default>false</default>
         </values>
     </picklistValues>
