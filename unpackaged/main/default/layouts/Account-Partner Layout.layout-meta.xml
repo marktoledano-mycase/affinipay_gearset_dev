@@ -40,10 +40,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Software_Non_Compete_Expiry_Date__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>Partner_Request_Form__c</field>
             </layoutItems>
             <layoutItems>
