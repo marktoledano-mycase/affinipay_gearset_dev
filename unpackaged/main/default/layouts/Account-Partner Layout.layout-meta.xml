@@ -272,6 +272,7 @@
                 <field>Bypass_VR_and_Automation__c</field>
             </layoutItems>
         </layoutColumns>
+        <style>TwoColumnsLeftToRight</style>
     </layoutSections>
     <layoutSections>
         <customLabel>true</customLabel>
