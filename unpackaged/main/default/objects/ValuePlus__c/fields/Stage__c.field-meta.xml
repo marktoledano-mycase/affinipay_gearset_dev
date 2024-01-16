@@ -42,6 +42,11 @@
                 <label>KOC Complete</label>
             </value>
             <value>
+                <fullName>Build In Progress</fullName>
+                <default>false</default>
+                <label>Build In Progress</label>
+            </value>
+            <value>
                 <fullName>Site Presentation</fullName>
                 <default>false</default>
                 <label>Site Presentation</label>
@@ -65,11 +70,6 @@
                 <fullName>Agreement Pending</fullName>
                 <default>false</default>
                 <label>Agreement Pending</label>
-            </value>
-            <value>
-                <fullName>Build In Progress</fullName>
-                <default>false</default>
-                <label>Build In Progress</label>
             </value>
             <value>
                 <fullName>Cancelled</fullName>
