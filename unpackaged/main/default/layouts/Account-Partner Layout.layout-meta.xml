@@ -231,6 +231,10 @@
                 <behavior>Edit</behavior>
                 <field>Partner_ID_VT__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Payments_Enterprise_Account__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
