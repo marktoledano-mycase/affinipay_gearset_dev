@@ -3957,11 +3957,6 @@
                 </visibilityRule>
             </componentInstance>
         </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentName>IntercomGetContact</componentName>
-                <identifier>c_IntercomGetContact</identifier>
-            </componentInstance>
         </itemInstances>
         <name>rightcol</name>
         <type>Region</type>
