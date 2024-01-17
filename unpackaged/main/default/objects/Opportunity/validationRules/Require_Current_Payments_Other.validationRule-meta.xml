@@ -11,7 +11,9 @@ ISCHANGED(Current_Payments_Solution_Other__c)
 ) &amp;&amp;
 
 ISPICKVAL(Current_Payments_Solution__c, &quot;Other&quot;) &amp;&amp;
-ISBLANK(Current_Payments_Solution_Other__c)</errorConditionFormula>
+ISBLANK(Current_Payments_Solution_Other__c) &amp;&amp;
+
+RecordType.Name != &#39;Websites&#39;</errorConditionFormula>
     <errorDisplayField>Current_Payments_Solution_Other__c</errorDisplayField>
     <errorMessage>Current Payments Solution (Other) is required when Current Payments Solution is &quot;Other.&quot;</errorMessage>
 </ValidationRule>
