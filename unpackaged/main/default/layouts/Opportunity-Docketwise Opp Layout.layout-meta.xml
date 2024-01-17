@@ -50,6 +50,10 @@
                 <behavior>Edit</behavior>
                 <field>Gearset_Checkbox__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Owner_Team__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -223,6 +227,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Secondary_Practice_Areas__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Industry__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -625,6 +633,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Contract_Processing_Sucessful__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Qualification_Fields_Completed__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>

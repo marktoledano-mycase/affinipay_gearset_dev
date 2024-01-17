@@ -4449,6 +4449,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Opportunity.Industry__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Opportunity.Integrations_Requested_CASEpeer__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -4614,6 +4619,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Opportunity.Owner_Team__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Opportunity.Payments_Opportunity__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -4645,6 +4655,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Opportunity.Professional_Users__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.Qualification_Fields_Completed__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -4725,6 +4740,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Opportunity.Total_of_Sales_Activity__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.Website_Purchasing_Brand__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
