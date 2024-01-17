@@ -3,12 +3,40 @@
     <fullName>Qualification_Fields_Completed__c</fullName>
     <description>Determines if all qualification fields are completed on an opportunity. If they aren&#39;t, it displays a banner on the opportunity prompting the rep to fill out the required fields</description>
     <externalId>false</externalId>
-    <formula>IF (OR (ISNULL(Number_of_Employees__c) ,
-ISNULL(TEXT(Industry__c)),
-ISNULL(Current_LPM__c),
-ISNULL(TEXT(Accepts_Online_Payments__c)),
-ISNULL(TEXT(Current_Payments_Solution__c))),&quot;YES&quot;,&quot;NO&quot;)</formula>
-    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <formula>IF(
+    AND(
+        OR(
+            Record_Type_Name__c = &quot;MyCase&quot;,
+            Record_Type_Name__c = &quot;Docketwise&quot;,
+            Record_Type_Name__c = &quot;LawPay Software&quot;,
+            Record_Type_Name__c = &quot;CASEpeer&quot;
+        ),
+        OR(
+            ISBLANK(Number_of_Employees__c),
+            ISBLANK(TEXT(Industry__c)),
+            ISBLANK(Current_LPM__c),
+            ISBLANK(TEXT(Accepts_Online_Payments__c)),
+            ISBLANK(TEXT(Current_Payments_Solution__c))
+        )
+    ),
+    &quot;YES&quot;,
+    IF(
+        AND(
+            OR(
+                Record_Type_Name__c = &quot;CPACharge&quot;,
+                Record_Type_Name__c = &quot;LawPay Payments&quot;,
+                Record_Type_Name__c = &quot;ClientPay&quot;,
+                Record_Type_Name__c = &quot;AffiniPay&quot;
+            ),
+            OR(
+                ISBLANK(TEXT(Industry__c)),
+                ISBLANK(Number_of_Employees__c)
+            )
+        ),
+        &quot;YES&quot;,
+        &quot;NO&quot;
+    )
+)</formula>
     <label>Qualification Fields Completed</label>
     <required>false</required>
     <trackHistory>false</trackHistory>

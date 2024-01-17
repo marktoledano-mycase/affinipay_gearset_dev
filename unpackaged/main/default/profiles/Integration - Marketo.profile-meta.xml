@@ -4514,6 +4514,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Opportunity.Industry__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Opportunity.Integrations_Requested_CASEpeer__c</field>
         <readable>true</readable>
     </fieldPermissions>
