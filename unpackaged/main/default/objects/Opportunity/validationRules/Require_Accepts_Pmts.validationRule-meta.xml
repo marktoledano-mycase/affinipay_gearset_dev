@@ -15,12 +15,13 @@ ISBLANK(TEXT(Accepts_Online_Payments__c)) &amp;&amp;
 CASE(
     StageName,
     &quot;Decision Making&quot;, 1,
+    &quot;Commit&quot;, 1,
     &quot;Approvals&quot;, 1,
     &quot;Closed Won&quot;, 1,
     0
 ) = 1 &amp;&amp;
 
-RecordType.Name != &#39;Parent&#39;</errorConditionFormula>
+RecordType.Name != &#39;Parent&#39; &amp;&amp; RecordType.Name != &#39;Websites&#39;</errorConditionFormula>
     <errorDisplayField>Accepts_Online_Payments__c</errorDisplayField>
-    <errorMessage>Accepts Online Payments is required when Stage is &quot;Decision Making,&quot; &quot;Approvals,&quot; or &quot;Closed Won.&quot;</errorMessage>
+    <errorMessage>Accepts Online Payments is required when Stage is &quot;Decision Making,&quot; &quot;Commit&quot;, &quot;Approvals,&quot; or &quot;Closed Won.&quot;</errorMessage>
 </ValidationRule>
