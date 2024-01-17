@@ -6974,6 +6974,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Opportunity.Industry__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Opportunity.Installed_On_Premise_MICR_Font__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -7328,6 +7333,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.Owner_Team__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Opportunity.Paid_Upfront__c</field>
         <readable>true</readable>
@@ -7430,6 +7440,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Opportunity.Promo__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.Qualification_Fields_Completed__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -7640,6 +7655,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Opportunity.WP_Technologies_Used__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.Website_Purchasing_Brand__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
