@@ -47,6 +47,10 @@
                 <behavior>Readonly</behavior>
                 <field>Opportunity_Source__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Owner_Team__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -72,6 +76,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>RecordTypeId</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Website_Purchasing_Brand__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
