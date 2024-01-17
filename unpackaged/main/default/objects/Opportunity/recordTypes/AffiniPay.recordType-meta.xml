@@ -2155,6 +2155,41 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Industry__c</picklist>
+        <values>
+            <fullName>Architecture%2FDesign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Funeral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Law</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non Profit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Psychologists</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Integrations_Requested_CASEpeer__c</picklist>
         <values>
             <fullName>Alert Communications</fullName>
@@ -2234,6 +2269,10 @@
         </values>
         <values>
             <fullName>Soluno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zapier</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -4720,6 +4759,53 @@
         </values>
         <values>
             <fullName>iManage</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Website_Purchasing_Brand__c</picklist>
+        <values>
+            <fullName>AffiniPay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Associations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CASEpeer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPACharge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ClientPay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Docketwise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LawPay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MyCase</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Soluno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Websites</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Woodpecker</fullName>
             <default>false</default>
         </values>
     </picklistValues>

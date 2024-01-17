@@ -7518,6 +7518,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Opportunity.Industry__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Opportunity.Installed_On_Premise_MICR_Font__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -7979,6 +7984,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Opportunity.Promo__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.Qualification_Fields_Completed__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
