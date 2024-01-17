@@ -162,6 +162,16 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Software_Non_Compete_in_Effect__c</fieldItem>
+                <identifier>RecordSoftware_Non_Compete_in_Effect_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
                     <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Contract_Effective_Start__c</fieldItem>
@@ -1581,10 +1591,6 @@
                     <value>Facet-0ad5e716-7709-4de2-a6a5-01cfea4d823d</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>label</name>
                     <value>Account Information</value>
                 </componentInstanceProperties>
@@ -1597,10 +1603,6 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-0b2ff2fe-4b17-4323-aad3-77b67defc11c</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -1617,10 +1619,6 @@
                     <value>Facet-45cc7cf0-efcf-4fd2-9c3f-b30112f15d60</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>label</name>
                     <value>Customer Statuses</value>
                 </componentInstanceProperties>
@@ -1633,10 +1631,6 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-4bfa95ff-b5d6-42ef-a4eb-c61ed1d4cc76</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -1653,10 +1647,6 @@
                     <value>Facet-1140d4f6-65b4-40b5-8464-720642b6bff3</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>label</name>
                     <value>Industry information</value>
                 </componentInstanceProperties>
@@ -1669,10 +1659,6 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-c0fb3e2e-9bfe-4f74-bb9c-57223a40c139</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -1689,10 +1675,6 @@
                     <value>Facet-a7a9ee97-30b9-48cd-a52b-81628ea83f42</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>label</name>
                     <value>Address Information</value>
                 </componentInstanceProperties>
@@ -1705,10 +1687,6 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-8f3fe482-1e30-42be-b184-db6acb7cd5f5</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -1725,10 +1703,6 @@
                     <value>Facet-4411864e-6188-4930-aab8-b945c3eef553</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>label</name>
                     <value>New Section</value>
                 </componentInstanceProperties>
@@ -1743,10 +1717,6 @@
                     <value>Facet-3adc1415-8e56-4550-bbcd-69ac2b5c4fd9</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>label</name>
                     <value>Strategic Accounts</value>
                 </componentInstanceProperties>
@@ -1759,10 +1729,6 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-bb940f23-529d-4e23-98d1-9be2bebf4875</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -1783,10 +1749,6 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-2a712375-5550-4c06-85e3-1eaf754ac831</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -1810,10 +1772,6 @@
                     <value>Facet-446c9d2b-4320-41b3-9cf4-a08baafacce6</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>label</name>
                     <value>TEST</value>
                 </componentInstanceProperties>
@@ -1833,10 +1791,6 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-0ef777b5-da63-4dcc-806f-0e8728584b66</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -1860,10 +1814,6 @@
                     <value>Facet-c1bea0cb-e94b-40c0-a736-874b574999a4</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>label</name>
                     <value>Soluno Manager Information</value>
                 </componentInstanceProperties>
@@ -1883,10 +1833,6 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-8def7384-17ef-4bbf-8cb7-81f69c45c8db</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -2065,14 +2011,184 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.X6Sense_Segment__c</fieldItem>
-                <identifier>RecordX6Sense_Segment_cField</identifier>
+                <fieldItem>Record.X6sense_Street_Address__c</fieldItem>
+                <identifier>RecordX6sense_Street_Address_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.X6sense_City__c</fieldItem>
+                <identifier>RecordX6sense_City_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.X6sense_State_Region__c</fieldItem>
+                <identifier>RecordX6sense_State_Region_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.X6sense_Postal_Zip_Code__c</fieldItem>
+                <identifier>RecordX6sense_Postal_Zip_Code_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.X6sense_Country__c</fieldItem>
+                <identifier>RecordX6sense_Country_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.X6sense_Country_Abbreviated__c</fieldItem>
+                <identifier>RecordX6sense_Country_Abbreviated_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Sic</fieldItem>
+                <identifier>RecordSicField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.SicDesc</fieldItem>
+                <identifier>RecordSicDescField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-fe9d51c4-43a5-427d-ad0f-78e316fad9ab</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.X6Sense_Segment__c</fieldItem>
+                <identifier>RecordX6Sense_Segment_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.X6sense_Account_Source__c</fieldItem>
+                <identifier>RecordX6sense_Account_Source_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.X6Sense_Segment__c</fieldItem>
+                <identifier>RecordX6Sense_Segment_cField2</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.X6sense_Employee_Range__c</fieldItem>
+                <identifier>RecordX6sense_Employee_Range_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.X6sense_Employee_Count_Est__c</fieldItem>
+                <identifier>RecordX6sense_Employee_Count_Est_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.X6sense_Industry__c</fieldItem>
+                <identifier>RecordX6sense_Industry_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.X6sense_Revenue_Range__c</fieldItem>
+                <identifier>RecordX6sense_Revenue_Range_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.X6sense_Revenue_Est__c</fieldItem>
+                <identifier>RecordX6sense_Revenue_Est_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.NAICS_Code__c</fieldItem>
+                <identifier>RecordNAICS_Code_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.NAICS_Description__c</fieldItem>
+                <identifier>RecordNAICS_Description_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-6e2e8829-ec63-45ae-a281-7ce11b817b34</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -2108,12 +2224,8 @@
                     <value>Facet-72b7ee56-41ca-4745-a4f3-9fa999255b89</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>label</name>
-                    <value>Section</value>
+                    <value>6sense</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
                 <identifier>flexipage_fieldSection6</identifier>
