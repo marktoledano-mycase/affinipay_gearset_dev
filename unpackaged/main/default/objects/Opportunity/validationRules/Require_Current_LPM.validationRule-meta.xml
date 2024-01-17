@@ -15,13 +15,15 @@ ISBLANK(Current_LPM__c) &amp;&amp;
 CASE(
     StageName,
     &quot;Decision Making&quot;, 1,
+    &quot;Commit&quot;,1,
     &quot;Approvals&quot;, 0,
     &quot;Closed Won&quot;, 1,
     0
 ) = 1 &amp;&amp;
 
 RecordType.Name != &#39;Parent&#39; &amp;&amp;
-RecordType.Name != &#39;CPACharge&#39;</errorConditionFormula>
+RecordType.Name != &#39;CPACharge&#39; &amp;&amp;
+RecordType.Name != &#39;Websites&#39;</errorConditionFormula>
     <errorDisplayField>Current_LPM__c</errorDisplayField>
-    <errorMessage>Current LPM is required when Stage is &quot;Decision Making,&quot; &quot;Approvals,&quot; or &quot;Closed Won.&quot;</errorMessage>
+    <errorMessage>Current LPM is required when Stage is &quot;Decision Making,&quot;,&quot;Commit&quot;, &quot;Approvals,&quot; or &quot;Closed Won.&quot;</errorMessage>
 </ValidationRule>
