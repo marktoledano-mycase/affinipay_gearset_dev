@@ -5083,8 +5083,18 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.CASEpeer_Marketing_Engagement__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Lead.CPACharge_Customer_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.CPACharge_Marketing_Engagement__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -5095,6 +5105,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Lead.ClientPay_Customer_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.ClientPay_Marketing_Engagement__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -5125,6 +5140,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Lead.Current_File_Mgmt_System__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.Current_LPM_Prohibited__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -5195,6 +5215,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Lead.Docketwise_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Docketwise_Marketing_Engagement__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -5280,6 +5305,21 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Lead.Handraiser_Form__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Has_Referral_with_Paymnts_Entrprse_Acct__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Has_Referral_with_Prohibited_Status_Time__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Has_Referral_with_Prohibited_Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -5379,6 +5419,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Lead.LawPay_Marketing_Engagement__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Lead.LeadSource</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -5420,6 +5465,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Lead.Lead_Vetting_Outcome__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Leading_Brand_Engagement__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -5510,6 +5560,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Lead.MyCase_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.MyCase_Marketing_Engagement__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

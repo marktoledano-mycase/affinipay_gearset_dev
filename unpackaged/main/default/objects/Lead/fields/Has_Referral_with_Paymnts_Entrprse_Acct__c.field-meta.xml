@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Has_Referral_with_Paymnts_Entrprse_Acct__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Helper field - Has a referral record that is Payments Enterprise Account = True</description>
+    <externalId>false</externalId>
+    <label>Has Referral with Paymnts Entrprse Acct</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>
