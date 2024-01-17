@@ -8,12 +8,19 @@
         HYPERLINK(&quot;https://&quot;&amp; Subdomain__c &amp; &quot;.mycase.com/admin/firm&quot;, &quot;MyCase Admin Portal Link&quot;),
         
         IF(
-     AND(RecordType.Name = &#39;LawPay Pro&#39;,
-     NOT(ISBLANK(Subdomain__c))),
+        AND(RecordType.Name = &#39;LawPay Pro&#39;,
+        NOT(ISBLANK(Subdomain__c))),
         HYPERLINK(&quot;https://&quot;&amp; Subdomain__c &amp; &quot;.mycase.com/admin/firm&quot;, &quot;LawPay Pro Admin Portal Link&quot;),
             
-        &quot;N/A&quot;
-        
+            IF(
+            AND(RecordType.Name = &#39;Affinipay&#39;,
+            NOT(ISBLANK( VTID__c ))),
+            HYPERLINK(&quot;https://secure.affinipay.com/admin/merchants/&quot;&amp; VTID__c , &quot;VT Account Record Link&quot;),
+                
+
+
+           &quot;N/A&quot;
+        )
         )
         )</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
