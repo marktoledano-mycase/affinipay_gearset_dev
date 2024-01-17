@@ -5,8 +5,8 @@
     <externalId>false</externalId>
     <formula>CASE(Owner.Role_Name__c, 
 &quot;Sales Manager, Software Core (A)&quot;, &quot;Core (A)&quot;, 
-&quot;AE, CASEpeer Core(A)&quot;, &quot;Core ( A)&quot;,
-&quot;AE, Docketwise Core(A)&quot;, &quot;Core(A)&quot;,
+&quot;AE, CASEpeer Core (A)&quot;, &quot;Core ( A)&quot;,
+&quot;AE, Docketwise Core (A)&quot;, &quot;Core(A)&quot;,
 &quot;AE, MyCase Core (A)&quot;, &quot;Core (A)&quot;,
 &quot;Sales Manager, Software Core (B)&quot;, &quot;Core (B)&quot;,
 &quot;AE, CASEpeer Core (B)&quot;, &quot;Core (B)&quot;,
