@@ -6839,6 +6839,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Opportunity.Website_Purchasing_Brand__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Opportunity.Websites_Customer_Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
