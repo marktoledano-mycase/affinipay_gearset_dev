@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Owner_Team__c</fullName>
+    <description>Opportunity Owner&#39;s team, derived from Owner&#39;s Role.</description>
+    <externalId>false</externalId>
+    <formula>CASE(Owner.Role_Name__c, 
+&quot;Sales Manager, Software Core (A)&quot;, &quot;Core (A)&quot;, 
+&quot;AE, CASEpeer Core(A)&quot;, &quot;Core ( A)&quot;,
+&quot;AE, Docketwise Core(A)&quot;, &quot;Core(A)&quot;,
+&quot;AE, MyCase Core (A)&quot;, &quot;Core (A)&quot;,
+&quot;Sales Manager, Software Core (B)&quot;, &quot;Core (B)&quot;,
+&quot;AE, CASEpeer Core (B)&quot;, &quot;Core (B)&quot;,
+&quot;AE, Docketwise Core (B)&quot;, &quot;Core (B)&quot;,
+&quot;AE, MyCase Core (B)&quot;, &quot;Core (B)&quot;,
+&quot;Sales Manager, Software Core (C)&quot;, &quot;Core (C)&quot;,
+&quot;AE, CASEpeer Core (C)&quot;, &quot;Core (C)&quot;,
+&quot;AE, Docketwise Core (C)&quot;, &quot;Core (C)&quot;, 
+&quot;AE, MyCase Core (C)&quot;, &quot;Core (C)&quot;,
+&quot;Sales Manager, Software Core (D)&quot;, &quot;Core (D)&quot;,
+&quot;AE, CASEpeer Core (D)&quot;, &quot;Core (D)&quot;,
+&quot;AE, Docketwise Core (D)&quot;, &quot;Core (D)&quot;,
+&quot;AE, MyCase Core (D)&quot;, &quot;Core (D)&quot;,
+&quot;AE, CASEpeer Mid-Market&quot;, &quot;Mid-Market&quot;,
+&quot;AE, Docketwise Mid- Market&quot;, &quot;Mid-Market&quot;,
+&quot;AE, MyCase Mid-Market&quot;, &quot;Mid-Market&quot;,
+&quot;AE, MyCase Special Operations&quot;, &quot;Special Operations&quot;,
+&quot;&quot;)</formula>
+    <label>Owner Team</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -50,6 +50,10 @@
                 <behavior>Edit</behavior>
                 <field>Gearset_Checkbox__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Owner_Team__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

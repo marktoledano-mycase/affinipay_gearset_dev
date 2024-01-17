@@ -4679,6 +4679,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Opportunity.Owner_Team__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Opportunity.Payments_Opportunity__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -4795,6 +4800,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Opportunity.Total_of_Sales_Activity__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.Website_Purchasing_Brand__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
