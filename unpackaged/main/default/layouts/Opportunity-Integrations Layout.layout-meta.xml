@@ -46,6 +46,14 @@
                 <behavior>Readonly</behavior>
                 <field>Opportunity_Source__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Gearset_Checkbox__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Owner_Team__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -53,8 +61,8 @@
                 <field>StageName</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Forecast__c</field>
+                <behavior>Required</behavior>
+                <field>ForecastCategoryName</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -213,6 +221,10 @@
                 <behavior>Edit</behavior>
                 <field>Secondary_Practice_Areas__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Industry__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
@@ -227,7 +239,7 @@
                 <field>Current_LPM__c</field>
             </layoutItems>
         </layoutColumns>
-        <layoutColumns/>
+        <layoutColumns />
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
     <layoutSections>
@@ -476,8 +488,8 @@
         <detailHeading>false</detailHeading>
         <editHeading>false</editHeading>
         <label>Additional Information</label>
-        <layoutColumns/>
-        <layoutColumns/>
+        <layoutColumns />
+        <layoutColumns />
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
     <layoutSections>
@@ -555,6 +567,10 @@
                 <behavior>Readonly</behavior>
                 <field>Contract_Processing_Sucessful__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Qualification_Fields_Completed__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>
@@ -563,9 +579,9 @@
         <detailHeading>false</detailHeading>
         <editHeading>false</editHeading>
         <label>Custom Links</label>
-        <layoutColumns/>
-        <layoutColumns/>
-        <layoutColumns/>
+        <layoutColumns />
+        <layoutColumns />
+        <layoutColumns />
         <style>CustomLinks</style>
     </layoutSections>
     <platformActionList>
@@ -596,13 +612,6 @@
             <sortOrder>2</sortOrder>
         </platformActionListItems>
     </platformActionList>
-    <relatedContent>
-        <relatedContentItems>
-            <layoutItem>
-                <component>wits:newsPanel</component>
-            </layoutItem>
-        </relatedContentItems>
-    </relatedContent>
     <relatedLists>
         <fields>MemberName</fields>
         <fields>OppAccessLevel</fields>
