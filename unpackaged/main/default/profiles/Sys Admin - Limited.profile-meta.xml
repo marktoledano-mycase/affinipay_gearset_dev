@@ -8729,8 +8729,18 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.CASEpeer_Marketing_Engagement__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Lead.CPACharge_Customer_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.CPACharge_Marketing_Engagement__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -8741,6 +8751,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Lead.ClientPay_Customer_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.ClientPay_Marketing_Engagement__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -8896,6 +8911,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Lead.Docketwise_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Docketwise_Marketing_Engagement__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -9169,6 +9189,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.LawPay_Marketing_Engagement__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Lead.LeadOne__c</field>
         <readable>true</readable>
@@ -9261,6 +9286,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Lead.Lead_next_steps__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Leading_Brand_Engagement__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -9411,6 +9441,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Lead.MyCase_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.MyCase_Marketing_Engagement__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -9961,6 +9996,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Lead.Woodpecker_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.Workable__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
