@@ -13321,6 +13321,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Opportunity.Industry__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Opportunity.Initial_Sale_ARR__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -14042,6 +14047,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Opportunity.Promo__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.Qualification_Fields_Completed__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
