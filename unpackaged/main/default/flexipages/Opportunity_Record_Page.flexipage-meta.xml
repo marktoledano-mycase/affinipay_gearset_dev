@@ -720,6 +720,26 @@
                 <identifier>RecordSE_Post_Demo_Notes_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Proposed_Rate__c</fieldItem>
+                <identifier>RecordProposed_Rate_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Supporting_Documentation__c</fieldItem>
+                <identifier>RecordSupporting_Documentation_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-42ff95ff-dde5-4406-9def-37c14b7fcc32</name>
         <type>Facet</type>
     </flexiPageRegions>
