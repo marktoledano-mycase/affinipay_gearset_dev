@@ -2909,11 +2909,27 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Closed Won</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Commit</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>Decision Making</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting Scheduled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Analysis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
             <default>false</default>
         </values>
     </picklistValues>
