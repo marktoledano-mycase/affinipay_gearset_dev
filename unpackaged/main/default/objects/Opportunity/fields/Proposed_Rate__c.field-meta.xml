@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Proposed_Rate__c</fullName>
+    <description>After completing a requested rate review for Sales, Sales Engineering will use this field to enter in the proposed rate for reporting purposes.</description>
+    <externalId>false</externalId>
+    <label>Proposed Rate</label>
+    <length>100</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
