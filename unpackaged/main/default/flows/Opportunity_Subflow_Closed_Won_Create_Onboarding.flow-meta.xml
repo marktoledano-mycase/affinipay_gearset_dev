@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>56.0</apiVersion>
+    <assignments>
+        <name>Purchase_at_Signing_Flag</name>
+        <label>Purchase at Signing Flag</label>
+        <locationX>1348</locationX>
+        <locationY>1274</locationY>
+        <assignmentItems>
+            <assignToReference>PurchaseatSigningFlag</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Non_MyCase_Brand_Purchase</targetReference>
+        </connector>
+    </assignments>
     <decisions>
         <name>Does_a_Value_Record_Exist_for_This_Opportunity</name>
         <label>Does a Value+ Record Exist for This Opportunity</label>
-        <locationX>1150</locationX>
+        <locationX>1579</locationX>
         <locationY>950</locationY>
         <defaultConnector>
             <targetReference>Update_Opp_with_Onboarding_Record_Created</targetReference>
@@ -29,7 +45,7 @@
     <decisions>
         <name>Is_There_and_Existing_Onboarding_Record</name>
         <label>Is There and Existing Onboarding Record?</label>
-        <locationX>1854</locationX>
+        <locationX>2382</locationX>
         <locationY>950</locationY>
         <defaultConnector>
             <targetReference>Update_Opp_with_Onboarding_Record_Created</targetReference>
@@ -54,7 +70,7 @@
     <decisions>
         <name>Is_Upsell</name>
         <label>Is Upsell</label>
-        <locationX>864</locationX>
+        <locationX>996</locationX>
         <locationY>626</locationY>
         <defaultConnector>
             <targetReference>Websites_or_Other_Brands</targetReference>
@@ -79,7 +95,7 @@
     <decisions>
         <name>MyCase_with_3_Users</name>
         <label>MyCase with &lt; 3 Users</label>
-        <locationX>864</locationX>
+        <locationX>996</locationX>
         <locationY>134</locationY>
         <defaultConnector>
             <targetReference>Onboarding_Created_Already</targetReference>
@@ -128,9 +144,59 @@
         </rules>
     </decisions>
     <decisions>
+        <name>New_or_Old_MyCase</name>
+        <label>New or Old MyCase</label>
+        <locationX>1150</locationX>
+        <locationY>1490</locationY>
+        <defaultConnector>
+            <targetReference>Create_Value_Record_with_Old_Process</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Old MyCase</defaultConnectorLabel>
+        <rules>
+            <name>New_MyCase</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>recordId.CreatedDate</leftValueReference>
+                <operator>LessThanOrEqualTo</operator>
+                <rightValue>
+                    <dateTimeValue>2024-01-29T08:00:00.000Z</dateTimeValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Purchase_at_Signing_Value_Record</targetReference>
+            </connector>
+            <label>New MyCase</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Non_MyCase_Brand_Purchase</name>
+        <label>Non-MyCase Brand Purchase</label>
+        <locationX>1348</locationX>
+        <locationY>1382</locationY>
+        <defaultConnector>
+            <targetReference>Create_Value_Record_No_Zuora</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Non-MyCase</defaultConnectorLabel>
+        <rules>
+            <name>MyCase</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>recordId.Website_Purchasing_Brand__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>MyCase</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>New_or_Old_MyCase</targetReference>
+            </connector>
+            <label>MyCase</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Onboarding_Created_Already</name>
         <label>Onboarding Created Already?</label>
-        <locationX>1150</locationX>
+        <locationX>1282</locationX>
         <locationY>242</locationY>
         <defaultConnector>
             <targetReference>Is_Upsell</targetReference>
@@ -234,7 +300,7 @@
     <decisions>
         <name>Websites_or_Other_Brands</name>
         <label>Websites or Other Brands</label>
-        <locationX>1348</locationX>
+        <locationX>1612</locationX>
         <locationY>734</locationY>
         <defaultConnector>
             <targetReference>Get_Onboarding_Records_for_Opp</targetReference>
@@ -297,7 +363,8 @@
             <label>Integrations</label>
         </rules>
     </decisions>
-    <description>This flow will create the Onboarding record for the Opportunity. Additionally it can create a Value+ and Professional Services record.  10/10/23</description>
+    <description>Updated the V+ records to populate the Onboarding POC 10/27/23
+Updated Website creation to single purchase billing model</description>
     <environments>Default</environments>
     <formulas>
         <name>fmlaValuePlusPrimaryContact</name>
@@ -364,6 +431,65 @@ ISBLANK({!recordId.Signer__c}),
         <object>Professional_Service__c</object>
     </recordCreates>
     <recordCreates>
+        <name>Create_Purchase_at_Signing_Value_Record</name>
+        <label>Create Purchase at Signing Value+ Record</label>
+        <locationX>1018</locationX>
+        <locationY>1598</locationY>
+        <connector>
+            <targetReference>Update_Opp_with_Onboarding_Record_Created</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Account__c</field>
+            <value>
+                <elementReference>recordId.AccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>On_Boarding_Contact_Primary__c</field>
+            <value>
+                <elementReference>fmlaValuePlusPrimaryContact</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Opportunity__c</field>
+            <value>
+                <elementReference>recordId.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Purchase_at_Signing__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>Get_MyCase_Websites_Record_Type_for_Value.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Sold_Not_Started__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Stage__c</field>
+            <value>
+                <stringValue>Sold/Not Started</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>onboarding_specialist__c</field>
+            <value>
+                <elementReference>Get_Default_Onboarding_Specialist_Id.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>ValuePlus__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
         <name>Create_V_Record</name>
         <label>Create V+ Record</label>
         <locationX>50</locationX>
@@ -386,7 +512,7 @@ ISBLANK({!recordId.Signer__c}),
         <inputAssignments>
             <field>On_Boarding_Contact_Primary__c</field>
             <value>
-                <elementReference>recordId.Signer_Id__c</elementReference>
+                <elementReference>recordId.Onboarding_POC__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -445,7 +571,7 @@ ISBLANK({!recordId.Signer__c}),
         <inputAssignments>
             <field>On_Boarding_Contact_Primary__c</field>
             <value>
-                <elementReference>recordId.Signer_Id__c</elementReference>
+                <elementReference>recordId.Onboarding_POC__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -482,10 +608,75 @@ ISBLANK({!recordId.Signer__c}),
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordCreates>
-        <name>Create_Valueplus_Record</name>
-        <label>Create Value+ Record</label>
-        <locationX>1018</locationX>
-        <locationY>1274</locationY>
+        <name>Create_Value_Record_No_Zuora</name>
+        <label>Create Value+ Record No Zuora</label>
+        <locationX>1546</locationX>
+        <locationY>1490</locationY>
+        <connector>
+            <targetReference>Update_Opp_with_Onboarding_Record_Created</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Account__c</field>
+            <value>
+                <elementReference>recordId.AccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>No_Zuora__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>On_Boarding_Contact_Primary__c</field>
+            <value>
+                <elementReference>fmlaValuePlusPrimaryContact</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Opportunity__c</field>
+            <value>
+                <elementReference>recordId.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Purchase_at_Signing__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <elementReference>Get_MyCase_Websites_Record_Type_for_Value.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Sold_Not_Started__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Stage__c</field>
+            <value>
+                <stringValue>Sold/Not Started</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>onboarding_specialist__c</field>
+            <value>
+                <elementReference>Get_Default_Onboarding_Specialist_Id.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>ValuePlus__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>Create_Value_Record_with_Old_Process</name>
+        <label>Create Value+ Record with Old Process</label>
+        <locationX>1282</locationX>
+        <locationY>1598</locationY>
         <connector>
             <targetReference>Update_Opp_with_Onboarding_Record_Created</targetReference>
         </connector>
@@ -505,6 +696,12 @@ ISBLANK({!recordId.Signer__c}),
             <field>Opportunity__c</field>
             <value>
                 <elementReference>recordId.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Purchase_at_Signing__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -537,7 +734,7 @@ ISBLANK({!recordId.Signer__c}),
     <recordCreates>
         <name>CreateOnboarding_Record</name>
         <label>Create Onboarding Record</label>
-        <locationX>1722</locationX>
+        <locationX>2250</locationX>
         <locationY>1166</locationY>
         <connector>
             <targetReference>Update_Opp_with_Onboarding_Record_Created</targetReference>
@@ -795,12 +992,6 @@ ISBLANK({!recordId.Signer__c}),
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Software_Discount__c</field>
-            <value>
-                <elementReference>recordId.Software_Discount__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>Software_Tier__c</field>
             <value>
                 <elementReference>recordId.Software_Tier__c</elementReference>
@@ -854,11 +1045,11 @@ ISBLANK({!recordId.Signer__c}),
     <recordLookups>
         <name>Get_Default_Onboarding_Specialist_Id</name>
         <label>Get Default Onboarding Specialist Id</label>
-        <locationX>1018</locationX>
+        <locationX>1348</locationX>
         <locationY>1166</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Create_Valueplus_Record</targetReference>
+            <targetReference>Purchase_at_Signing_Flag</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -938,7 +1129,7 @@ ISBLANK({!recordId.Signer__c}),
     <recordLookups>
         <name>Get_MyCase_Websites_Record_Type_for_Value</name>
         <label>Get MyCase Websites Record Type for Value+</label>
-        <locationX>1018</locationX>
+        <locationX>1348</locationX>
         <locationY>1058</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -966,7 +1157,7 @@ ISBLANK({!recordId.Signer__c}),
     <recordLookups>
         <name>Get_Onboarding_Record_Types</name>
         <label>Get Onboarding Record Types</label>
-        <locationX>1722</locationX>
+        <locationX>2250</locationX>
         <locationY>1058</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -994,7 +1185,7 @@ ISBLANK({!recordId.Signer__c}),
     <recordLookups>
         <name>Get_Onboarding_Records_for_Opp</name>
         <label>Get Onboarding Records for Opp</label>
-        <locationX>1854</locationX>
+        <locationX>2382</locationX>
         <locationY>842</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1036,7 +1227,7 @@ ISBLANK({!recordId.Signer__c}),
     <recordLookups>
         <name>Get_ValuePlus_Record</name>
         <label>Get ValuePlus Record</label>
-        <locationX>1150</locationX>
+        <locationX>1579</locationX>
         <locationY>842</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1057,8 +1248,8 @@ ISBLANK({!recordId.Signer__c}),
     <recordUpdates>
         <name>Update_Opp_with_Onboarding_Record_Created</name>
         <label>Update Opp with Onboarding Record Created</label>
-        <locationX>864</locationX>
-        <locationY>1742</locationY>
+        <locationX>996</locationX>
+        <locationY>2126</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -1077,13 +1268,30 @@ ISBLANK({!recordId.Signer__c}),
     </recordUpdates>
     <runInMode>SystemModeWithoutSharing</runInMode>
     <start>
-        <locationX>738</locationX>
+        <locationX>870</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>MyCase_with_3_Users</targetReference>
         </connector>
     </start>
-    <status>Obsolete</status>
+    <status>Active</status>
+    <variables>
+        <name>PurchaseatSigningFlag</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </variables>
+    <variables>
+        <name>PurchaseBrand</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
     <variables>
         <name>recordId</name>
         <dataType>SObject</dataType>
