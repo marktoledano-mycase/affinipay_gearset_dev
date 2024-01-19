@@ -11,9 +11,19 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Disco/Demo</fullName>
+                <fullName>Open</fullName>
                 <default>false</default>
-                <label>Disco/Demo</label>
+                <label>Open</label>
+            </value>
+            <value>
+                <fullName>Meeting Scheduled</fullName>
+                <default>false</default>
+                <label>Meeting Scheduled</label>
+            </value>
+            <value>
+                <fullName>Needs Analysis</fullName>
+                <default>false</default>
+                <label>Needs Analysis</label>
             </value>
             <value>
                 <fullName>Decision Making</fullName>
@@ -21,9 +31,14 @@
                 <label>Decision Making</label>
             </value>
             <value>
-                <fullName>Application/Approval</fullName>
+                <fullName>Commit</fullName>
                 <default>false</default>
-                <label>Application/Approval</label>
+                <label>Commit</label>
+            </value>
+            <value>
+                <fullName>Approvals</fullName>
+                <default>false</default>
+                <label>Approvals</label>
             </value>
         </valueSetDefinition>
     </valueSet>
