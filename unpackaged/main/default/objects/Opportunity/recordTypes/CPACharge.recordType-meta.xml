@@ -2957,15 +2957,15 @@
     <picklistValues>
         <picklist>Lost_From_Stage__c</picklist>
         <values>
-            <fullName>Application%2FApproval</fullName>
+            <fullName>Approvals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commit</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>Decision Making</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Disco%2FDemo</fullName>
             <default>false</default>
         </values>
     </picklistValues>
