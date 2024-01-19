@@ -2972,7 +2972,15 @@
     <picklistValues>
         <picklist>Lost_From_Stage__c</picklist>
         <values>
-            <fullName>Application%2FApproval</fullName>
+            <fullName>Approvals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed Won</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commit</fullName>
             <default>false</default>
         </values>
         <values>
@@ -2980,7 +2988,15 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Disco%2FDemo</fullName>
+            <fullName>Meeting Scheduled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Analysis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
             <default>false</default>
         </values>
     </picklistValues>
