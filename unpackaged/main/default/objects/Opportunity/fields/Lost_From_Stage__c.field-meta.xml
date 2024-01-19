@@ -40,6 +40,11 @@
                 <default>false</default>
                 <label>Approvals</label>
             </value>
+            <value>
+                <fullName>Closed Won</fullName>
+                <default>false</default>
+                <label>Closed Won</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>
