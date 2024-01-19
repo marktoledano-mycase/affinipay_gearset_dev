@@ -8,6 +8,7 @@
     <permissionSets>Create_Report_and_Dashboard_Folders</permissionSets>
     <permissionSets>Docketwise_Stripe_Subscsription_ID_Read_Write_Access</permissionSets>
     <permissionSets>Edit_Closed_Won_Opportunities</permissionSets>
+    <permissionSets>Edit_Last_Assigned_Date_on_Account</permissionSets>
     <permissionSets>Edit_MQL_Fields</permissionSets>
     <permissionSets>Inbound_Requests_Readonly</permissionSets>
     <permissionSets>Manage_Business_Hours_Holidays</permissionSets>
