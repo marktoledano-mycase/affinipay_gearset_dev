@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Supporting_Documentation__c</fullName>
+    <description>In relation to the Proposed Rates, Sales Engineering will use this field to link supporting documentation from a Google Drive folder.</description>
+    <externalId>false</externalId>
+    <label>Supporting Documentation</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Url</type>
+</CustomField>
