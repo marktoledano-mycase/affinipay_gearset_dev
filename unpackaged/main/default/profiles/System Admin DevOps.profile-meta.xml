@@ -15681,6 +15681,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Product_Environment__c.Account_Matched_On__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Product_Environment__c.Account__c</field>
         <readable>true</readable>
@@ -16127,6 +16132,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Product_Environment__c.Run_Account_Matching__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Product_Environment__c.Serial_Number__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -16398,6 +16408,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Product_User__c.Last_Login__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Product_User__c.Last_Touch_Automation__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
