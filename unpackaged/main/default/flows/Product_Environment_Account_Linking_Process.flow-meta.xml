@@ -2,10 +2,40 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>59.0</apiVersion>
     <assignments>
+        <name>Account_Assignment_Account_Name_Search</name>
+        <label>Account Assignment Account Name Search</label>
+        <locationX>5858</locationX>
+        <locationY>1772</locationY>
+        <assignmentItems>
+            <assignToReference>r_Update_PE_Record.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>invar_Prod_Env_Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Update_PE_Record.Account__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Account_Name_Match.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Update_PE_Record.Account_Matched_On__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>PE: Account Name Match</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Last_Touch_Assignment</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>Account_Assignment_from_Applicant_Email</name>
         <label>Account Assignment from Applicant Email</label>
-        <locationX>1370</locationX>
-        <locationY>1430</locationY>
+        <locationX>2162</locationX>
+        <locationY>1862</locationY>
         <assignmentItems>
             <assignToReference>r_Update_PE_Record.Id</assignToReference>
             <operator>Assign</operator>
@@ -32,10 +62,40 @@
         </connector>
     </assignments>
     <assignments>
+        <name>Account_Assignment_from_Contact_Merch_App_ID</name>
+        <label>Account Assignment from Contact Merch App ID</label>
+        <locationX>1370</locationX>
+        <locationY>1322</locationY>
+        <assignmentItems>
+            <assignToReference>r_Update_PE_Record.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>invar_Prod_Env_Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Update_PE_Record.Account__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Contact_With_Merch_App_ID.Account.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Update_PE_Record.Account_Matched_On__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Merch App: Merch ID Contact Search</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Last_Touch_Assignment</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>Account_Assignment_from_Converted_Lead_Applicant_Email</name>
         <label>Account Assignment from Converted Lead Applicant Email</label>
-        <locationX>2162</locationX>
-        <locationY>2204</locationY>
+        <locationX>2954</locationX>
+        <locationY>2636</locationY>
         <assignmentItems>
             <assignToReference>r_Update_PE_Record.Id</assignToReference>
             <operator>Assign</operator>
@@ -62,10 +122,41 @@
         </connector>
     </assignments>
     <assignments>
+        <name>Account_Assignment_from_Converted_Lead_Merch_App_ID</name>
+        <label>Account Assignment from Converted Lead Merch App ID</label>
+        <locationX>1634</locationX>
+        <locationY>1538</locationY>
+        <assignmentItems>
+            <assignToReference>r_Update_PE_Record.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>invar_Prod_Env_Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Update_PE_Record.Account__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Lead_Merch_App_ID.ConvertedAccountId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Update_PE_Record.Account_Matched_On__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Merch App: Merch App ID Search Converted Lead </stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Last_Touch_Assignment</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>Account_Assignment_from_Converted_Lead_Owner_Email</name>
         <label>Account Assignment from Converted Lead Owner Email</label>
-        <locationX>2954</locationX>
-        <locationY>2312</locationY>
+        <locationX>3746</locationX>
+        <locationY>2744</locationY>
         <assignmentItems>
             <assignToReference>r_Update_PE_Record.Id</assignToReference>
             <operator>Assign</operator>
@@ -92,7 +183,7 @@
     <assignments>
         <name>Account_Assignment_from_Converted_Lead_PE_Owner_Email</name>
         <label>Account Assignment from Converted Lead PE Owner Email</label>
-        <locationX>4538</locationX>
+        <locationX>5330</locationX>
         <locationY>1556</locationY>
         <assignmentItems>
             <assignToReference>r_Update_PE_Record.Id</assignToReference>
@@ -212,8 +303,8 @@
     <assignments>
         <name>Account_Assignment_from_Owner_Email</name>
         <label>Account Assignment from Owner Email</label>
-        <locationX>2668</locationX>
-        <locationY>1538</locationY>
+        <locationX>3460</locationX>
+        <locationY>1970</locationY>
         <assignmentItems>
             <assignToReference>r_Update_PE_Record.Id</assignToReference>
             <operator>Assign</operator>
@@ -243,7 +334,7 @@
     <assignments>
         <name>Account_Assignment_from_PE_Owner_Email</name>
         <label>Account Assignment from PE Owner Email</label>
-        <locationX>4274</locationX>
+        <locationX>5066</locationX>
         <locationY>1340</locationY>
         <assignmentItems>
             <assignToReference>r_Update_PE_Record.Id</assignToReference>
@@ -273,7 +364,7 @@
     <assignments>
         <name>End_Search_Assignments</name>
         <label>End Search Assignments</label>
-        <locationX>5330</locationX>
+        <locationX>6386</locationX>
         <locationY>1124</locationY>
         <assignmentItems>
             <assignToReference>r_Update_PE_Record.Id</assignToReference>
@@ -296,7 +387,7 @@
     <assignments>
         <name>End_Search_Assignments_Account_and_Lead_Links</name>
         <label>End Search Assignments - Account and Lead Links</label>
-        <locationX>6122</locationX>
+        <locationX>7178</locationX>
         <locationY>242</locationY>
         <assignmentItems>
             <assignToReference>r_Update_PE_Record.Id</assignToReference>
@@ -319,7 +410,7 @@
     <assignments>
         <name>End_Search_Assignments_Other_Brands</name>
         <label>End Search Assignments - Other Brands</label>
-        <locationX>5594</locationX>
+        <locationX>6650</locationX>
         <locationY>350</locationY>
         <assignmentItems>
             <assignToReference>r_Update_PE_Record.Id</assignToReference>
@@ -342,8 +433,8 @@
     <assignments>
         <name>Last_Touch_Assignment</name>
         <label>Last Touch Assignment</label>
-        <locationX>5349</locationX>
-        <locationY>3494</locationY>
+        <locationX>6307</locationX>
+        <locationY>4094</locationY>
         <assignmentItems>
             <assignToReference>r_Update_PE_Record.Last_Touch_Automation__c</assignToReference>
             <operator>Assign</operator>
@@ -395,8 +486,8 @@
     <assignments>
         <name>Lead_Assignment_from_Non_Converted_lead_Applicant_Email</name>
         <label>Lead Assignment from Non Converted lead Applicant Email</label>
-        <locationX>2426</locationX>
-        <locationY>2204</locationY>
+        <locationX>3218</locationX>
+        <locationY>2636</locationY>
         <assignmentItems>
             <assignToReference>r_Update_PE_Record.Id</assignToReference>
             <operator>Assign</operator>
@@ -423,10 +514,40 @@
         </connector>
     </assignments>
     <assignments>
+        <name>Lead_Assignment_from_Non_Converted_Lead_Merch_App_ID</name>
+        <label>Lead Assignment from Non Converted Lead Merch App ID</label>
+        <locationX>1898</locationX>
+        <locationY>1538</locationY>
+        <assignmentItems>
+            <assignToReference>r_Update_PE_Record.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>invar_Prod_Env_Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Update_PE_Record.Lead__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Lead_Merch_App_ID.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Update_PE_Record.Account_Matched_On__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Merch App: Merch App ID Search Non Converted Lead </stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Last_Touch_Assignment</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>Lead_Assignment_from_Non_Converted_lead_Owner_Email</name>
         <label>Lead Assignment from Non Converted lead Owner Email</label>
-        <locationX>3218</locationX>
-        <locationY>2312</locationY>
+        <locationX>4010</locationX>
+        <locationY>2744</locationY>
         <assignmentItems>
             <assignToReference>r_Update_PE_Record.Id</assignToReference>
             <operator>Assign</operator>
@@ -456,7 +577,7 @@
     <assignments>
         <name>Lead_Assignment_from_Non_Converted_lead_PE_Owner_Email</name>
         <label>Lead Assignment from Non Converted lead PE Owner Email</label>
-        <locationX>4802</locationX>
+        <locationX>5594</locationX>
         <locationY>1556</locationY>
         <assignmentItems>
             <assignToReference>r_Update_PE_Record.Id</assignToReference>
@@ -486,7 +607,7 @@
     <assignments>
         <name>PE_Account_Assignment_ConvertedLead</name>
         <label>PE Account Assignment</label>
-        <locationX>5858</locationX>
+        <locationX>6914</locationX>
         <locationY>242</locationY>
         <assignmentItems>
             <assignToReference>r_Update_PE_Record.Id</assignToReference>
@@ -544,9 +665,35 @@
         </connector>
     </assignments>
     <decisions>
+        <name>Account_Found_Name_Match</name>
+        <label>Account Found Name Match</label>
+        <locationX>5990</locationX>
+        <locationY>1664</locationY>
+        <defaultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>End_Search_Assignments</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Account Found Name Match</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Account_Found_Name_Match</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Account_Name_Match.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Account_Assignment_Account_Name_Search</targetReference>
+            </connector>
+            <label>Yes Account Found Name Match</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Account_Lead_Links</name>
         <label>Has Account and Lead Links</label>
-        <locationX>5349</locationX>
+        <locationX>6307</locationX>
         <locationY>134</locationY>
         <defaultConnector>
             <targetReference>End_Search_Assignments_Account_and_Lead_Links</targetReference>
@@ -607,8 +754,8 @@
     <decisions>
         <name>Contact_Found_Applicant_Email</name>
         <label>Contact Found - Applicant Email</label>
-        <locationX>1568</locationX>
-        <locationY>1322</locationY>
+        <locationX>2360</locationX>
+        <locationY>1754</locationY>
         <defaultConnector>
             <targetReference>Owner_and_Applicant_Email_Match</targetReference>
         </defaultConnector>
@@ -630,10 +777,35 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Contact_Found_Merch_App_ID</name>
+        <label>Contact Found Merch App ID</label>
+        <locationX>1856</locationX>
+        <locationY>1214</locationY>
+        <defaultConnector>
+            <targetReference>Get_Lead_Merch_App_ID</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Contact Found Merch ID</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Contact_Found_Merch_App_ID</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Contact_With_Merch_App_ID.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Account_Assignment_from_Contact_Merch_App_ID</targetReference>
+            </connector>
+            <label>Yes Contact Found Merch App ID</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Contact_Found_Owner_Email</name>
         <label>Contact Found Owner Email</label>
-        <locationX>2800</locationX>
-        <locationY>1430</locationY>
+        <locationX>3592</locationX>
+        <locationY>1862</locationY>
         <defaultConnector>
             <targetReference>Has_Applicant_Email</targetReference>
         </defaultConnector>
@@ -657,7 +829,7 @@
     <decisions>
         <name>Contact_Found_PE_Owner_Email</name>
         <label>Contact Found PE Owner Email</label>
-        <locationX>4538</locationX>
+        <locationX>5363</locationX>
         <locationY>1232</locationY>
         <defaultConnector>
             <targetReference>Get_Lead_PE_Owner_Email</targetReference>
@@ -682,8 +854,8 @@
     <decisions>
         <name>Found_Lead_Applicant_Email</name>
         <label>Found Lead Applicant Email</label>
-        <locationX>2426</locationX>
-        <locationY>2096</locationY>
+        <locationX>3218</locationX>
+        <locationY>2528</locationY>
         <defaultConnector>
             <isGoTo>true</isGoTo>
             <targetReference>Has_Owner_Email2</targetReference>
@@ -735,10 +907,64 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Found_Lead_Merch_App_ID</name>
+        <label>Found Lead Merch App ID</label>
+        <locationX>2343</locationX>
+        <locationY>1430</locationY>
+        <defaultConnector>
+            <targetReference>Has_Application_Email</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Lead Found Merch App ID</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Converted_Lead_Found_Merch_App_ID</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Lead_Merch_App_ID.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Lead_Merch_App_ID.IsConverted</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Account_Assignment_from_Converted_Lead_Merch_App_ID</targetReference>
+            </connector>
+            <label>Yes Converted Lead Found Merch App ID</label>
+        </rules>
+        <rules>
+            <name>Yes_Non_Converted_Lead_Found_Merch_App_ID</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Lead_Merch_App_ID.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Lead_Merch_App_ID.IsConverted</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Lead_Assignment_from_Non_Converted_Lead_Merch_App_ID</targetReference>
+            </connector>
+            <label>Yes Non Converted Lead Found Merch App ID</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Found_Lead_Merch_App_Owner_Email</name>
         <label>Found Lead Merch App Owner Email</label>
-        <locationX>3218</locationX>
-        <locationY>2204</locationY>
+        <locationX>4010</locationX>
+        <locationY>2636</locationY>
         <defaultConnector>
             <isGoTo>true</isGoTo>
             <targetReference>ProdEnv_Has_Owner_Email</targetReference>
@@ -792,7 +1018,7 @@
     <decisions>
         <name>Found_Merch_App</name>
         <label>Found Merch App</label>
-        <locationX>2189</locationX>
+        <locationX>2573</locationX>
         <locationY>566</locationY>
         <defaultConnector>
             <isGoTo>true</isGoTo>
@@ -818,7 +1044,7 @@
     <decisions>
         <name>Found_Merch_App_App_ID</name>
         <label>Found Merch App - App ID</label>
-        <locationX>4780</locationX>
+        <locationX>5720</locationX>
         <locationY>674</locationY>
         <defaultConnector>
             <targetReference>ProdEnv_Has_Owner_Email</targetReference>
@@ -844,8 +1070,8 @@
     <decisions>
         <name>Has_Applicant_Email</name>
         <label>Has Applicant Email</label>
-        <locationX>2954</locationX>
-        <locationY>1880</locationY>
+        <locationX>3746</locationX>
+        <locationY>2312</locationY>
         <defaultConnector>
             <targetReference>Has_Owner_Email2</targetReference>
         </defaultConnector>
@@ -869,8 +1095,8 @@
     <decisions>
         <name>Has_Application_Email</name>
         <label>Has Application Email</label>
-        <locationX>2261</locationX>
-        <locationY>1106</locationY>
+        <locationX>3053</locationX>
+        <locationY>1538</locationY>
         <defaultConnector>
             <targetReference>Has_Owner</targetReference>
         </defaultConnector>
@@ -894,7 +1120,7 @@
     <decisions>
         <name>Has_Merch_App_ID</name>
         <label>Has Merch App ID</label>
-        <locationX>4934</locationX>
+        <locationX>5874</locationX>
         <locationY>458</locationY>
         <defaultConnector>
             <targetReference>ProdEnv_Has_Owner_Email</targetReference>
@@ -919,8 +1145,8 @@
     <decisions>
         <name>Has_Owner</name>
         <label>Has Owner Email</label>
-        <locationX>2954</locationX>
-        <locationY>1214</locationY>
+        <locationX>3746</locationX>
+        <locationY>1646</locationY>
         <defaultConnector>
             <targetReference>Has_Applicant_Email</targetReference>
         </defaultConnector>
@@ -944,8 +1170,8 @@
     <decisions>
         <name>Has_Owner_Email2</name>
         <label>Has Owner Email</label>
-        <locationX>3482</locationX>
-        <locationY>1988</locationY>
+        <locationX>4274</locationX>
+        <locationY>2420</locationY>
         <defaultConnector>
             <isGoTo>true</isGoTo>
             <targetReference>ProdEnv_Has_Owner_Email</targetReference>
@@ -970,7 +1196,7 @@
     <decisions>
         <name>Is_Account_Linked_Merch_App</name>
         <label>Is Account Linked - Merch App</label>
-        <locationX>369</locationX>
+        <locationX>344</locationX>
         <locationY>674</locationY>
         <defaultConnector>
             <targetReference>Is_Oppty_Linked_Merch_App</targetReference>
@@ -995,7 +1221,7 @@
     <decisions>
         <name>Is_Contact_Linked_Merch_App</name>
         <label>Is Contact Linked - Merch App</label>
-        <locationX>1064</locationX>
+        <locationX>963</locationX>
         <locationY>890</locationY>
         <defaultConnector>
             <targetReference>Is_Lead_Linked</targetReference>
@@ -1020,10 +1246,10 @@
     <decisions>
         <name>Is_Lead_Linked</name>
         <label>Is Lead Linked</label>
-        <locationX>1551</locationX>
+        <locationX>1349</locationX>
         <locationY>998</locationY>
         <defaultConnector>
-            <targetReference>Has_Application_Email</targetReference>
+            <targetReference>Get_Contact_With_Merch_App_ID</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>No Lead Linked</defaultConnectorLabel>
         <rules>
@@ -1075,7 +1301,7 @@
         <description>Looks to see if an opportunity is linked to MErch App</description>
         <name>Is_Oppty_Linked_Merch_App</name>
         <label>Is Oppty Linked - Merch App</label>
-        <locationX>689</locationX>
+        <locationX>638</locationX>
         <locationY>782</locationY>
         <defaultConnector>
             <targetReference>Is_Contact_Linked_Merch_App</targetReference>
@@ -1100,11 +1326,10 @@
     <decisions>
         <name>Lead_Found_PE_Owner_Email</name>
         <label>Lead Found PE Owner Email</label>
-        <locationX>4802</locationX>
+        <locationX>5660</locationX>
         <locationY>1448</locationY>
         <defaultConnector>
-            <isGoTo>true</isGoTo>
-            <targetReference>End_Search_Assignments</targetReference>
+            <targetReference>Get_Account_Name_Match</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>No Lead PE Owner Email Found</defaultConnectorLabel>
         <rules>
@@ -1155,8 +1380,8 @@
     <decisions>
         <name>Owner_and_Applicant_Email_Match</name>
         <label>Owner and Applicant Email Match</label>
-        <locationX>1766</locationX>
-        <locationY>1430</locationY>
+        <locationX>2558</locationX>
+        <locationY>1862</locationY>
         <defaultConnector>
             <isGoTo>true</isGoTo>
             <targetReference>Has_Owner</targetReference>
@@ -1182,7 +1407,7 @@
     <decisions>
         <name>PE_Has_VTID</name>
         <label>PE Has VTID</label>
-        <locationX>3561</locationX>
+        <locationX>4223</locationX>
         <locationY>350</locationY>
         <defaultConnector>
             <targetReference>Has_Merch_App_ID</targetReference>
@@ -1207,7 +1432,7 @@
     <decisions>
         <name>PE_Record_Type</name>
         <label>PE Record Type</label>
-        <locationX>4577</locationX>
+        <locationX>5436</locationX>
         <locationY>242</locationY>
         <defaultConnector>
             <targetReference>End_Search_Assignments_Other_Brands</targetReference>
@@ -1232,7 +1457,7 @@
     <decisions>
         <name>ProdEnv_Has_Owner_Email</name>
         <label>ProdEnv Has Owner Email</label>
-        <locationX>4934</locationX>
+        <locationX>5874</locationX>
         <locationY>1016</locationY>
         <defaultConnector>
             <targetReference>End_Search_Assignments</targetReference>
@@ -1278,10 +1503,31 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordLookups>
+        <name>Get_Account_Name_Match</name>
+        <label>Get Account Name Match</label>
+        <locationX>5990</locationX>
+        <locationY>1556</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Account_Found_Name_Match</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>invar_Prod_Env_Record.Firm_Name__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
         <name>Get_Contact_Applicant_Email</name>
         <label>Get Contact Applicant Email</label>
-        <locationX>1568</locationX>
-        <locationY>1214</locationY>
+        <locationX>2360</locationX>
+        <locationY>1646</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Contact_Found_Applicant_Email</targetReference>
@@ -1301,8 +1547,8 @@
     <recordLookups>
         <name>Get_Contact_Owner_Email</name>
         <label>Get Contact Owner Email</label>
-        <locationX>2800</locationX>
-        <locationY>1322</locationY>
+        <locationX>3592</locationX>
+        <locationY>1754</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Contact_Found_Owner_Email</targetReference>
@@ -1322,7 +1568,7 @@
     <recordLookups>
         <name>Get_Contact_PE_Owner_Email</name>
         <label>Get Contact PE Owner Email</label>
-        <locationX>4538</locationX>
+        <locationX>5363</locationX>
         <locationY>1124</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1341,10 +1587,31 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
+        <name>Get_Contact_With_Merch_App_ID</name>
+        <label>Get Contact With Merch App ID</label>
+        <locationX>1856</locationX>
+        <locationY>1106</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Contact_Found_Merch_App_ID</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Merchant_App_ID__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>r_Merchant_Application_Found.Merchant_App_ID__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Contact</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
         <name>Get_Lead_Applicant_Email</name>
         <label>Get Lead Applicant Email</label>
-        <locationX>2426</locationX>
-        <locationY>1988</locationY>
+        <locationX>3218</locationX>
+        <locationY>2420</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Found_Lead_Applicant_Email</targetReference>
@@ -1362,10 +1629,31 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
+        <name>Get_Lead_Merch_App_ID</name>
+        <label>Get Lead Merch App ID</label>
+        <locationX>2343</locationX>
+        <locationY>1322</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Found_Lead_Merch_App_ID</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Merchant_App_ID__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>r_Merchant_Application_Found.Merchant_App_ID__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Lead</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
         <name>Get_Lead_Owner_Email</name>
         <label>Get Lead Owner Email</label>
-        <locationX>3218</locationX>
-        <locationY>2096</locationY>
+        <locationX>4010</locationX>
+        <locationY>2528</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Found_Lead_Merch_App_Owner_Email</targetReference>
@@ -1385,7 +1673,7 @@
     <recordLookups>
         <name>Get_Lead_PE_Owner_Email</name>
         <label>Get Lead PE Owner Email</label>
-        <locationX>4802</locationX>
+        <locationX>5660</locationX>
         <locationY>1340</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1406,7 +1694,7 @@
     <recordLookups>
         <name>Get_Merch_Application_APPID</name>
         <label>Get Merch Application - APPID</label>
-        <locationX>4780</locationX>
+        <locationX>5720</locationX>
         <locationY>566</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1434,7 +1722,7 @@
     <recordLookups>
         <name>Get_Merch_Application_VTID</name>
         <label>Get Merch Application - VTID</label>
-        <locationX>2189</locationX>
+        <locationX>2573</locationX>
         <locationY>458</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1463,19 +1751,19 @@
         <description>Updates the PE record with the Account found</description>
         <name>Update_PE_Record</name>
         <label>Update PE Record</label>
-        <locationX>5349</locationX>
-        <locationY>3602</locationY>
+        <locationX>6307</locationX>
+        <locationY>4202</locationY>
         <inputReference>r_Update_PE_Record</inputReference>
     </recordUpdates>
     <runInMode>SystemModeWithoutSharing</runInMode>
     <start>
-        <locationX>5223</locationX>
+        <locationX>6181</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Account_Lead_Links</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <description>Record variable for the Product Environment REcord that needs to to have the account linked.</description>
         <name>invar_Prod_Env_Record</name>
