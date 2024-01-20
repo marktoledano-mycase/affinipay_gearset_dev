@@ -7934,6 +7934,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Product_User__c.Last_Touch_Automation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Product_User__c.Lead__c</field>
         <readable>true</readable>
     </fieldPermissions>
