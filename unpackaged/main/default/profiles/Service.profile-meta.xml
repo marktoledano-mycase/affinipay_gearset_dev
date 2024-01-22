@@ -1631,7 +1631,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Billing_Account__c.Account__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1751,7 +1751,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Billing_Account__c.Subscription_Contract__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1906,7 +1906,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Billing_Subscription_Product_Charge__c.Billing_Account__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -2056,7 +2056,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>Billing_Subscription__c.Account__c</field>
         <readable>true</readable>
     </fieldPermissions>
