@@ -5,8 +5,8 @@
         <description>Assign Product environment value to Record Var</description>
         <name>Assign_Product_Environment_Variables</name>
         <label>Assign Product Environment Variables</label>
-        <locationX>50</locationX>
-        <locationY>647</locationY>
+        <locationX>710</locationX>
+        <locationY>947</locationY>
         <assignmentItems>
             <assignToReference>r_Product_Evniornment_Final.Firm_Name__c</assignToReference>
             <operator>Assign</operator>
@@ -56,15 +56,123 @@
                 <elementReference>f_PE_Record_Name</elementReference>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>Create_Product_Environment</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Linked_Account_Assignment</name>
+        <label>Linked Account Assignment</label>
+        <locationX>50</locationX>
+        <locationY>755</locationY>
         <assignmentItems>
             <assignToReference>r_Product_Evniornment_Final.Account__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>f_Account</elementReference>
+                <elementReference>$Record.Account__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Product_Evniornment_Final.Account_Matched_On__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>On Create: Merch App Linked Account</stringValue>
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Create_Product_Environment</targetReference>
+            <targetReference>Assign_Product_Environment_Variables</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Linked_Contact_Assignment</name>
+        <label>Linked Contact Assignment</label>
+        <locationX>578</locationX>
+        <locationY>755</locationY>
+        <assignmentItems>
+            <assignToReference>r_Product_Evniornment_Final.Account__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Contact__r.AccountId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Product_Evniornment_Final.Account_Matched_On__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>On Create: Merch App Linked Contact</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_Product_Environment_Variables</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Linked_Converted_Lead_Assignment</name>
+        <label>Linked Converted Lead Assignment</label>
+        <locationX>842</locationX>
+        <locationY>755</locationY>
+        <assignmentItems>
+            <assignToReference>r_Product_Evniornment_Final.Account__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Lead__r.ConvertedAccountId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Product_Evniornment_Final.Account_Matched_On__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>On Create: Merch App Linked Converted Lead</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_Product_Environment_Variables</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Linked_Non_Converted_Lead_Assignments</name>
+        <label>Linked Non Converted Lead Assignments</label>
+        <locationX>1106</locationX>
+        <locationY>755</locationY>
+        <assignmentItems>
+            <assignToReference>r_Product_Evniornment_Final.Lead__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Lead__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Product_Evniornment_Final.Account_Matched_On__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>On Create: Merch App Linked Non Converted Lead</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_Product_Environment_Variables</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Linked_Opportunity_Assignment</name>
+        <label>Linked Opportunity Assignment</label>
+        <locationX>314</locationX>
+        <locationY>755</locationY>
+        <assignmentItems>
+            <assignToReference>r_Product_Evniornment_Final.Account__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Opportunity__r.AccountId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Product_Evniornment_Final.Account_Matched_On__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>On Create: Merch App Linked Oppty</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_Product_Environment_Variables</targetReference>
         </connector>
     </assignments>
     <constants>
@@ -77,7 +185,7 @@
     <decisions>
         <name>Check_if_record_is_returned</name>
         <label>Check if record is returned</label>
-        <locationX>182</locationX>
+        <locationX>1128</locationX>
         <locationY>539</locationY>
         <defaultConnectorLabel>Record Found</defaultConnectorLabel>
         <rules>
@@ -91,7 +199,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Assign_Product_Environment_Variables</targetReference>
+                <targetReference>Merch_Application_Links</targetReference>
             </connector>
             <label>Record Not Returned</label>
         </rules>
@@ -100,7 +208,7 @@
         <description>Check to make sure VTID is on record</description>
         <name>Has_VTID</name>
         <label>Has VTID</label>
-        <locationX>380</locationX>
+        <locationX>1469</locationX>
         <locationY>323</locationY>
         <defaultConnectorLabel>No</defaultConnectorLabel>
         <rules>
@@ -119,6 +227,105 @@
             <label>Yes</label>
         </rules>
     </decisions>
+    <decisions>
+        <name>Merch_Application_Links</name>
+        <label>Merch Application Links</label>
+        <locationX>710</locationX>
+        <locationY>647</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Product_Environment_Variables</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Links</defaultConnectorLabel>
+        <rules>
+            <name>Account_Linked</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Linked_Account_Assignment</targetReference>
+            </connector>
+            <label>Account Linked</label>
+        </rules>
+        <rules>
+            <name>Opportunity_Linked</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Opportunity__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Linked_Opportunity_Assignment</targetReference>
+            </connector>
+            <label>Opportunity Linked</label>
+        </rules>
+        <rules>
+            <name>Contact_Linked</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Contact__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Linked_Contact_Assignment</targetReference>
+            </connector>
+            <label>Contact Linked</label>
+        </rules>
+        <rules>
+            <name>Converted_Lead_Linked</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Lead__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Lead__r.IsConverted</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Linked_Converted_Lead_Assignment</targetReference>
+            </connector>
+            <label>Converted Lead Linked</label>
+        </rules>
+        <rules>
+            <name>Non_Converted_Lead_Linked</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Lead__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Lead__r.IsConverted</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Linked_Non_Converted_Lead_Assignments</targetReference>
+            </connector>
+            <label>Non Converted Lead Linked</label>
+        </rules>
+    </decisions>
     <description>Creates a product environment record when a merchant application is set to provisioned</description>
     <environments>Default</environments>
     <formulas>
@@ -126,12 +333,24 @@
         <dataType>String</dataType>
         <expression>IF(
     NOT(ISBLANK({!$Record.Opportunity__c})),
-    {!$Record.Opportunity__r.AccountId},
+    {!$Record.Opportunity__r.Account.Id},
     IF(
         NOT(ISBLANK({!$Record.Account__c})),
         {!$Record.Account__c},
         &quot;&quot;
     )
+)</expression>
+    </formulas>
+    <formulas>
+        <name>f_Lead</name>
+        <dataType>String</dataType>
+        <expression>IF(
+    AND(
+        NOT(ISBLANK({!$Record.Lead__c})),
+        NOT ({!$Record.Lead__r.IsConverted} = FALSE)
+    ),
+    {!$Record.Lead__c},
+    NULL
 )</expression>
     </formulas>
     <formulas>
@@ -163,15 +382,15 @@
     <recordCreates>
         <name>Create_Product_Environment</name>
         <label>Create Product Environment</label>
-        <locationX>50</locationX>
-        <locationY>755</locationY>
+        <locationX>710</locationX>
+        <locationY>1055</locationY>
         <inputReference>r_Product_Evniornment_Final</inputReference>
     </recordCreates>
     <recordLookups>
         <description>Get Product Environment Records based on the VTID</description>
         <name>Get_Product_Environment_Record</name>
         <label>Get Product Environment Record</label>
-        <locationX>182</locationX>
+        <locationX>1128</locationX>
         <locationY>431</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -197,7 +416,7 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <start>
-        <locationX>254</locationX>
+        <locationX>1343</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Has_VTID</targetReference>
@@ -221,7 +440,7 @@
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <name>r_Product_Evniornment_Final</name>
         <dataType>SObject</dataType>
@@ -229,5 +448,12 @@
         <isInput>false</isInput>
         <isOutput>false</isOutput>
         <objectType>Product_Environment__c</objectType>
+    </variables>
+    <variables>
+        <name>v_AccountID_From_MerchApp</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
     </variables>
 </Flow>
