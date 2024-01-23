@@ -574,6 +574,10 @@
                 <behavior>Readonly</behavior>
                 <field>Woodpecker_ID__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Last_Touch_Automation__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

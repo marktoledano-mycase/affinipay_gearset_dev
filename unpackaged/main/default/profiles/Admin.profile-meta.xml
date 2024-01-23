@@ -1781,6 +1781,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Account.Last_Touch_Automation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Account.LawPay_6QA__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -6261,6 +6266,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Contact.Last_Touch_Automation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Contact.Last_Touch_Program__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -8292,6 +8302,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Contract__c.Historical_Discount__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contract__c.Last_Touch_Automation__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -10536,6 +10551,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Lead.Last_Touch_Automation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Lead.Last_Touch_Program__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -11772,6 +11792,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Merchant_Application__c.Last_Event_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Merchant_Application__c.Last_Touch_Automation__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -13466,6 +13491,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Opportunity.Last_Touch_Automation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Opportunity.Last_Touch_Program__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -14816,6 +14846,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Opportunity_Promo__c.Last_Touch_Automation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Opportunity_Promo__c.MyCase_Id__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -14987,6 +15022,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Opportunity_SKU__c.Is_Tier_Change__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity_SKU__c.Last_Touch_Automation__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -16042,6 +16082,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Product_Environment__c.Last_12_Month_Volume__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Product_Environment__c.Last_Touch_Automation__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -18927,6 +18972,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Trial_Request__c.Last_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Trial_Request__c.Last_Touch_Automation__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
