@@ -20136,6 +20136,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>ValuePlus__c.Monthly_Fee_Start_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>ValuePlus__c.MyCaseWebsiteImplFee__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -20687,6 +20692,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>ValuePlus__c.Promo__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ValuePlus__c.Purchase_at_Signing__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
