@@ -643,6 +643,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Account.X6sense_Phone_Number__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Account.X6sense_Postal_Zip_Code__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -2934,6 +2939,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Contact.X6sense_Country__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Contact.X6sense_Email__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -5528,6 +5538,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Lead.X6sense_Email__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Lead.X6sense_Employee_Count_Est__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -5539,6 +5554,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Lead.X6sense_Industry__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.X6sense_Phone_Company__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

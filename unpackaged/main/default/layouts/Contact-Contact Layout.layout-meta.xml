@@ -503,6 +503,10 @@
                 <behavior>Edit</behavior>
                 <field>X6sense_Account_Source__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>X6sense_Email__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
@@ -668,6 +672,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Bypass_Duplicate_Rules_on_Create__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Last_Touch_Automation__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>

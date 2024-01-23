@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
-    <excludeButtons>DataDotComClean</excludeButtons>
     <layoutSections>
         <customLabel>false</customLabel>
         <detailHeading>true</detailHeading>
@@ -384,6 +383,14 @@
                 <behavior>Edit</behavior>
                 <field>X6sense_Employee_Range__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>X6sense_Email__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>X6sense_Phone_Company__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -587,6 +594,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Bypass_Duplicate_Rules_on_Create__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Last_Touch_Automation__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>

@@ -281,6 +281,10 @@
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
+                <field>X6sense_Phone_Number__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
                 <field>X6sense_Street_Address__c</field>
             </layoutItems>
             <layoutItems>
@@ -516,6 +520,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Billing_Country_Avatax__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Last_Touch_Automation__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
