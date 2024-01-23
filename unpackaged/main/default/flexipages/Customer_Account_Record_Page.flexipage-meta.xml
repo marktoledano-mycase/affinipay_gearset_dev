@@ -1611,10 +1611,6 @@
                     <value>Facet-0ad5e716-7709-4de2-a6a5-01cfea4d823d</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>label</name>
                     <value>Account Information</value>
                 </componentInstanceProperties>
@@ -1627,10 +1623,6 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-0b2ff2fe-4b17-4323-aad3-77b67defc11c</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -1647,10 +1639,6 @@
                     <value>Facet-45cc7cf0-efcf-4fd2-9c3f-b30112f15d60</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>label</name>
                     <value>Customer Statuses</value>
                 </componentInstanceProperties>
@@ -1663,10 +1651,6 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-4bfa95ff-b5d6-42ef-a4eb-c61ed1d4cc76</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -1683,10 +1667,6 @@
                     <value>Facet-1140d4f6-65b4-40b5-8464-720642b6bff3</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>label</name>
                     <value>Industry information</value>
                 </componentInstanceProperties>
@@ -1699,10 +1679,6 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-c0fb3e2e-9bfe-4f74-bb9c-57223a40c139</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -1719,10 +1695,6 @@
                     <value>Facet-a7a9ee97-30b9-48cd-a52b-81628ea83f42</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>label</name>
                     <value>Address Information</value>
                 </componentInstanceProperties>
@@ -1735,10 +1707,6 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-8f3fe482-1e30-42be-b184-db6acb7cd5f5</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -1755,10 +1723,6 @@
                     <value>Facet-4411864e-6188-4930-aab8-b945c3eef553</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>label</name>
                     <value>New Section</value>
                 </componentInstanceProperties>
@@ -1773,10 +1737,6 @@
                     <value>Facet-3adc1415-8e56-4550-bbcd-69ac2b5c4fd9</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>label</name>
                     <value>Strategic Accounts</value>
                 </componentInstanceProperties>
@@ -1789,10 +1749,6 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-bb940f23-529d-4e23-98d1-9be2bebf4875</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -1813,10 +1769,6 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-2a712375-5550-4c06-85e3-1eaf754ac831</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -1840,10 +1792,6 @@
                     <value>Facet-446c9d2b-4320-41b3-9cf4-a08baafacce6</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>label</name>
                     <value>TEST</value>
                 </componentInstanceProperties>
@@ -1863,10 +1811,6 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-0ef777b5-da63-4dcc-806f-0e8728584b66</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -1890,10 +1834,6 @@
                     <value>Facet-c1bea0cb-e94b-40c0-a736-874b574999a4</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>label</name>
                     <value>Soluno Manager Information</value>
                 </componentInstanceProperties>
@@ -1913,10 +1853,6 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-8def7384-17ef-4bbf-8cb7-81f69c45c8db</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -2316,10 +2252,6 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-72b7ee56-41ca-4745-a4f3-9fa999255b89</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>

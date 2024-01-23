@@ -411,6 +411,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Current_LPM_Prohibited__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Account.Current_LPM__c</field>
         <readable>true</readable>
@@ -547,6 +552,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Account.Last_Touch_Automation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Account.LawPay_6QA__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -672,6 +682,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Account.Oppty_with_Prohibited_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Account.Other_N_A_Explained__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -698,6 +713,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.ParentId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Partner_ID_VT__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -738,6 +758,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.ProfitStars_Update_Field__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Record_Type_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -853,6 +878,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Account.X6Sense_Segment__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.oAuth_App_ID__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3436,6 +3466,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.Last_Touch_Automation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Contact.Last_Touch_Program__c</field>
         <readable>true</readable>
@@ -4842,6 +4877,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Contract__c.Last_Touch_Automation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Contract__c.Legacy_Affinipay_Promotion__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -6022,6 +6062,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Lead.Last_Touch_Automation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Lead.Last_Touch_Program__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -6314,6 +6359,16 @@
         <editable>false</editable>
         <readable>false</readable>
         <field>Lead.PartnerStack_Partner_Key__c</field>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Partner_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Partner_Referral_Email__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -6826,6 +6881,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Merchant_Application__c.Last_Touch_Automation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Merchant_Application__c.Lead__c</field>
         <readable>true</readable>
@@ -6863,6 +6923,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Merchant_Application__c.Partner_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Merchant_Application__c.Partner_Token__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -7996,6 +8061,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.Has_Referral_with_Prohibited_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Opportunity.Has_Won_Payments__c</field>
         <readable>true</readable>
@@ -8083,6 +8153,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Opportunity.Last_MQL_Type_Before_Opportunity_Create__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.Last_Touch_Automation__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -8967,6 +9042,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Opportunity_Promo__c.Last_Touch_Automation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Opportunity_Promo__c.MyCase_Id__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -9138,6 +9218,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Opportunity_SKU__c.Is_Tier_Change__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity_SKU__c.Last_Touch_Automation__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -9672,6 +9757,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Partnerships__c.Partner_Account_has_Prohibition__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Partnerships__c.Partnership_ID_Case_Safe__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -10083,6 +10173,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Product_Environment__c.Last_12_Month_Volume__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Product_Environment__c.Last_Touch_Automation__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -12037,6 +12132,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Trial_Request__c.Last_Touch_Automation__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Trial_Request__c.Last_Touch_Program__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -12962,6 +13062,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>ValuePlus__c.Monthly_Fee_Start_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>ValuePlus__c.MyCaseWebsiteImplFee__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -13483,6 +13588,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>ValuePlus__c.Promo__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ValuePlus__c.Purchase_at_Signing__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
