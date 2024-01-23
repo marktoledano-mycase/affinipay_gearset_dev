@@ -1122,6 +1122,16 @@
                 <identifier>RecordBilling_Country_Avatax_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Last_Touch_Automation__c</fieldItem>
+                <identifier>RecordLast_Touch_Automation_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-9059d402-56b5-4a6d-b2f6-b394ad565a79</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -1452,6 +1462,16 @@
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Linking_Firm_Name__c</fieldItem>
+                <identifier>RecordLinking_Firm_Name_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldInstanceProperties>
