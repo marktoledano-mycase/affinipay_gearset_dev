@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>When Non-Admin User Emails to downgrade</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>MyCase_Inc_v1</letterhead>
+    <name>2024 Price Increase, Non-Admin User</name>
+    <style>freeForm</style>
+    <subject>Subscription Request Invalid</subject>
+    <textOnly>Hello {!Contact.FirstName},
+
+
+Your request to change your subscription is invalid as you are not an Admin User on your firm’s account. Please have an Admin User send a separate request to subscription.change@mycase.com in order to switch your subscription to the basic plan.
+
+
+Please contact support with any questions here between the hours of 6am - 5pm PT; we’d be happy to help you.
+
+
+Sincerely,
+
+The MyCase Team</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>
