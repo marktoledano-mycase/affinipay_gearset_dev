@@ -16224,8 +16224,18 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Trial_Request__c.CASEpeer_Marketing_Score__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Trial_Request__c.CPACharge_Customer_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Trial_Request__c.CPACharge_Marketing_Score__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -16284,6 +16294,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Trial_Request__c.Docketwise_Marketing_Score__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Trial_Request__c.Facebook_Click_ID__c</field>
         <readable>true</readable>
@@ -16316,6 +16331,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Trial_Request__c.LawPay_Customer_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Trial_Request__c.Lawpay_Marketing_Score__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -16386,6 +16406,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Trial_Request__c.MyCase_Customer_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Trial_Request__c.MyCase_Marketing_Score__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
