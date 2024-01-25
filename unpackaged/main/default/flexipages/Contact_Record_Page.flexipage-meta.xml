@@ -301,6 +301,26 @@
                 <identifier>RecordLead_Channel_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Partner_Name__c</fieldItem>
+                <identifier>RecordPartner_Name_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Partner_Referral_Email__c</fieldItem>
+                <identifier>RecordPartner_Referral_Email_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-c4bd7bd5-a9d4-42ab-b277-989178b64f7f</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -669,6 +689,36 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Demo_Scheduled_Date__c</fieldItem>
                 <identifier>RecordDemo_Scheduled_Date_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.cRO1__c</fieldItem>
+                <identifier>RecordcRO1_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.cRO2__c</fieldItem>
+                <identifier>RecordcRO2_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.cRO3__c</fieldItem>
+                <identifier>RecordcRO3_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-bedb11c2-9015-4b08-9565-ba9ecbc18c43</name>
@@ -1912,6 +1962,26 @@
                 <identifier>Recordmkto_si_Last_Interesting_Moment_Source_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Facebook_Ad_Name__c</fieldItem>
+                <identifier>RecordFacebook_Ad_Name_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Linkedin_Ad_Name__c</fieldItem>
+                <identifier>RecordLinkedin_Ad_Name_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-a4653c58-a1e4-4fec-b923-902ffd43c947</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -1994,6 +2064,36 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Nurture_Marketing_Reasons__c</fieldItem>
                 <identifier>RecordNurture_Marketing_Reasons_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.cRO1__c</fieldItem>
+                <identifier>RecordcRO1_cField2</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.cRO2__c</fieldItem>
+                <identifier>RecordcRO2_cField2</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.cRO3__c</fieldItem>
+                <identifier>RecordcRO3_cField2</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-0602bc83-e9a9-4810-b134-3e044e919d6a</name>
@@ -2680,6 +2780,21 @@
                         <valueListItems>
                             <value>Request_Date__c</value>
                         </valueListItems>
+                        <valueListItems>
+                            <value>CASEpeer_Marketing_Score__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>CPACharge_Marketing_Score__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Docketwise_Marketing_Score__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Lawpay_Marketing_Score__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>MyCase_Marketing_Score__c</value>
+                        </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
@@ -3275,6 +3390,68 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.ReCalculate_PU_Record_Count__c</fieldItem>
+                <identifier>RecordReCalculate_PU_Record_Count_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.PlaceHolder_PU_Cleanup__c</fieldItem>
+                <identifier>RecordPlaceHolder_PU_Cleanup_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <name>Facet-474b8233-8c87-442b-911d-139e201f9b57</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Product_User_Count__c</fieldItem>
+                <identifier>RecordProduct_User_Count_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <name>Facet-1e79e32d-200e-44bf-b508-a9fc1b1bb7d4</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-474b8233-8c87-442b-911d-139e201f9b57</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column43</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-1e79e32d-200e-44bf-b508-a9fc1b1bb7d4</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column44</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>Facet-0cdd3a35-0b60-48a3-a535-d8433cbb6644</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
                     <name>columns</name>
@@ -3326,6 +3503,24 @@
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
                 <identifier>flexipage_fieldSection16</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>columns</name>
+                    <value>Facet-0cdd3a35-0b60-48a3-a535-d8433cbb6644</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>label</name>
+                    <value>Product Users</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:fieldSection</componentName>
+                <identifier>flexipage_fieldSection23</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-95649a60-e33b-4239-bdfe-e363218c92e2</name>
@@ -3413,6 +3608,9 @@
                         </valueListItems>
                         <valueListItems>
                             <value>User_ID__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Chargeback_POC__c</value>
                         </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
