@@ -10321,6 +10321,10 @@
         <recordType>Product_Environment__c.Affinipay</recordType>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Product_Environment__c-Docketwise Product Environment Layout</layout>
+        <recordType>Product_Environment__c.Docketwise</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Product_Environment__c-LawPay Pro</layout>
         <recordType>Product_Environment__c.LawPay_Pro</recordType>
     </layoutAssignments>
@@ -11355,6 +11359,11 @@
         <default>false</default>
         <recordType>Product_Environment__c.Affinipay</recordType>
         <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Product_Environment__c.Docketwise</recordType>
+        <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>

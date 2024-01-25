@@ -573,6 +573,11 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
+        <recordType>Product_Environment__c.Docketwise</recordType>
+        <visible>false</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
         <recordType>Product_Environment__c.LawPay_Pro</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
@@ -1082,5 +1087,9 @@
         <tab>standard-Opportunity</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
+    <layoutAssignments>
+        <layout>Product_Environment__c-Docketwise Product Environment Layout</layout>
+        <recordType>Product_Environment__c.Docketwise</recordType>
+    </layoutAssignments>
     <userLicense>Salesforce Integration</userLicense>
 </Profile>
