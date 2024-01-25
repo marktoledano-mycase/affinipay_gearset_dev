@@ -2528,6 +2528,26 @@
                 <identifier>RecordcRO3_cField2</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Facebook_Ad_Name__c</fieldItem>
+                <identifier>RecordFacebook_Ad_Name_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Linkedin_Ad_Name__c</fieldItem>
+                <identifier>RecordLinkedin_Ad_Name_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-a48f8a3f-48f8-4a0d-994b-0bc95d121f5e</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -3337,6 +3357,21 @@
                         </valueListItems>
                         <valueListItems>
                             <value>Requested_At__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>CASEpeer_Marketing_Score__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>CPACharge_Marketing_Score__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Docketwise_Marketing_Score__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Lawpay_Marketing_Score__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>MyCase_Marketing_Score__c</value>
                         </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
