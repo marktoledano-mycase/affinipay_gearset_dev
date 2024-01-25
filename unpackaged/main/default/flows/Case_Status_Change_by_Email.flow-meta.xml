@@ -4,7 +4,7 @@
     <assignments>
         <name>Assign_New_Case_Values</name>
         <label>Assign New Case Values</label>
-        <locationX>1458</locationX>
+        <locationX>1898</locationX>
         <locationY>755</locationY>
         <assignmentItems>
             <assignToReference>Get_Case.ParentId</assignToReference>
@@ -176,7 +176,7 @@
     <decisions>
         <name>Case_Record_Type_Inbound</name>
         <label>Case Record Type</label>
-        <locationX>1194</locationX>
+        <locationX>1634</locationX>
         <locationY>431</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -271,8 +271,8 @@
     <decisions>
         <name>Case_Record_Type_Outbound</name>
         <label>Case Record Type</label>
-        <locationX>50</locationX>
-        <locationY>431</locationY>
+        <locationX>402</locationX>
+        <locationY>539</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Case_MyCase_Outbound</name>
@@ -362,11 +362,33 @@
             </connector>
             <label>Case: Accounting</label>
         </rules>
+        <rules>
+            <name>Case_Partner</name>
+            <conditionLogic>1 AND 2</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Parent.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Partner</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Parent.IsClosed</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Case_Status_Change_Waiting_on_Client</targetReference>
+            </connector>
+            <label>Case: Partner</label>
+        </rules>
     </decisions>
     <decisions>
         <name>Case_Status</name>
         <label>Case Status</label>
-        <locationX>1194</locationX>
+        <locationX>1634</locationX>
         <locationY>1247</locationY>
         <defaultConnector>
             <targetReference>Case_Status_Change_Re_Opened</targetReference>
@@ -391,7 +413,7 @@
     <decisions>
         <name>Case_Status_Accounting</name>
         <label>Case Status</label>
-        <locationX>1326</locationX>
+        <locationX>1766</locationX>
         <locationY>539</locationY>
         <defaultConnector>
             <targetReference>Get_Case</targetReference>
@@ -417,7 +439,7 @@
     <decisions>
         <name>Email_Direction</name>
         <label>Email Direction</label>
-        <locationX>1018</locationX>
+        <locationX>1238</locationX>
         <locationY>323</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -438,7 +460,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Case_Record_Type_Outbound</targetReference>
+                <targetReference>Is_Auto_Response</targetReference>
             </connector>
             <label>Outbound</label>
         </rules>
@@ -458,7 +480,30 @@
             <label>Inbound</label>
         </rules>
     </decisions>
-    <description>07-20-20203 - changed trigger to be on created or updated</description>
+    <decisions>
+        <description>Checks to see if the outbound email is an auto response</description>
+        <name>Is_Auto_Response</name>
+        <label>Is Auto Response?</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Case_Record_Type_Outbound</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Auto Response</defaultConnectorLabel>
+        <rules>
+            <name>Auto_Response</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Headers</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>AutoResponse</stringValue>
+                </rightValue>
+            </conditions>
+            <label>Auto Response</label>
+        </rules>
+    </decisions>
+    <description>1/25/24 JC - Added decision under Outbound emails to not include Auto Response Emails in following logic</description>
     <environments>Default</environments>
     <interviewLabel>Case: Status Change by Email {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Case: Status Change by Email</label>
@@ -484,14 +529,14 @@
     <recordCreates>
         <name>Create_New_Case</name>
         <label>Create New Case</label>
-        <locationX>1458</locationX>
+        <locationX>1898</locationX>
         <locationY>863</locationY>
         <inputReference>Get_Case</inputReference>
     </recordCreates>
     <recordLookups>
         <name>Get_Case</name>
         <label>Get Case</label>
-        <locationX>1458</locationX>
+        <locationX>1898</locationX>
         <locationY>647</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -512,7 +557,7 @@
     <recordUpdates>
         <name>Case_Status_Change_New_Customer_Email</name>
         <label>Case Status Change: New Customer Email</label>
-        <locationX>1062</locationX>
+        <locationX>1502</locationX>
         <locationY>1355</locationY>
         <filterLogic>and</filterLogic>
         <filters>
@@ -533,7 +578,7 @@
     <recordUpdates>
         <name>Case_Status_Change_Re_Opened</name>
         <label>Case Status Change: Re-Opened</label>
-        <locationX>1326</locationX>
+        <locationX>1766</locationX>
         <locationY>1355</locationY>
         <filterLogic>and</filterLogic>
         <filters>
@@ -554,8 +599,8 @@
     <recordUpdates>
         <name>Case_Status_Change_Waiting_on_Client</name>
         <label>Case Status Change: Waiting on Client</label>
-        <locationX>50</locationX>
-        <locationY>731</locationY>
+        <locationX>402</locationX>
+        <locationY>839</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -573,7 +618,7 @@
         <object>Case</object>
     </recordUpdates>
     <start>
-        <locationX>892</locationX>
+        <locationX>1112</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Email_Direction</targetReference>
@@ -582,5 +627,5 @@
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Active</status>
+    <status>Obsolete</status>
 </Flow>
