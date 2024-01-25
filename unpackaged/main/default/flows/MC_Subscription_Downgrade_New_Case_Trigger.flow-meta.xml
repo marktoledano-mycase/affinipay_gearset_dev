@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>53.0</apiVersion>
-    <description>evaluates cases on create to see if they are part of the Subscription Downgrade process.</description>
+    <description>Evaluates cases on create to see if they are part of the Subscription Downgrade process.
+1/23/24  JC - Updated entry criteria to remove hardcoded record IDs</description>
+    <environments>Default</environments>
     <interviewLabel>MC: Subscription Downgrade - New Case Trigger {!$Flow.CurrentDateTime}</interviewLabel>
     <label>MC: Subscription Downgrade - New Case Trigger</label>
     <processMetadataValues>
@@ -29,26 +31,14 @@
         <connector>
             <targetReference>Launch_Flow</targetReference>
         </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Origin</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>Email (MyCase Subscription Change)</stringValue>
-            </value>
-        </filters>
-        <filters>
-            <field>RecordTypeId</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>0123g000000POio</stringValue>
-            </value>
-        </filters>
+        <filterFormula>ISPICKVAL({!$Record.Origin}, &quot;Email (MyCase Subscription Change)&quot;)
+&amp;&amp;
+{!$Record.RecordType.DeveloperName}= &quot;MyCase_Support&quot;</filterFormula>
         <object>Case</object>
         <recordTriggerType>Create</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Obsolete</status>
+    <status>Active</status>
     <subflows>
         <description>Launches the MC: subscription Downgrade processing flow and passes needed case variables</description>
         <name>Launch_Flow</name>
