@@ -53,16 +53,21 @@
                 <default>false</default>
                 <label>System Performance / Bug</label>
             </value>
-            <value>
-                <fullName>Training</fullName>
-                <default>false</default>
-                <label>Training</label>
-            </value>
+                <value>
+                    <fullName>Training - General</fullName>
+                    <default>false</default>
+                    <label>Training - General</label>
+                </value>
             <value>
                 <fullName>Unresponsive</fullName>
                 <default>false</default>
                 <label>Unresponsive</label>
             </value>
+                <value>
+                    <fullName>Training - Usability</fullName>
+                    <default>false</default>
+                    <label>Training - Usability</label>
+                </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>
