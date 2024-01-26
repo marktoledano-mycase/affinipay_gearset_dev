@@ -7,6 +7,8 @@ public with sharing class IntercomGetContactsTest {
       Contact testContact = new Contact(
         FirstName = 'Test',
         LastName = 'Contact',
+        LeadSource = 'Email',
+        Lead_Channel__c = 'Customer',
         Email = 'test.contact@example.com'
     );
     insert testContact;
@@ -25,6 +27,8 @@ public with sharing class IntercomGetContactsTest {
       Contact testContact = new Contact(
         FirstName = 'Test',
         LastName = 'Contact',
+        LeadSource = 'Email',
+        Lead_Channel__c = 'Customer',
         Email = 'test.contact@example.com'
     );
     insert testContact;
