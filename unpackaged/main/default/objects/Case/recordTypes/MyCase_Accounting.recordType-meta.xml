@@ -4053,7 +4053,11 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Training</fullName>
+            <fullName>Training - General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training - Usability</fullName>
             <default>false</default>
         </values>
         <values>
