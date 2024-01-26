@@ -628,10 +628,18 @@
             <fullName>Invoice Management</fullName>
             <default>false</default>
         </values>
+            <values>
+                <fullName>Invoicing - Payments Plus</fullName>
+                <default>false</default>
+            </values>
         <values>
             <fullName>Lead Management</fullName>
             <default>false</default>
         </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
         <values>
             <fullName>Payments</fullName>
             <default>false</default>
