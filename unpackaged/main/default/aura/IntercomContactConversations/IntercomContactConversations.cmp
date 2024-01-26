@@ -1,0 +1,10 @@
+<aura:component implements="force:hasRecordId,force:lightningQuickAction,flexipage:availableForAllPageTypes" access="global" Controller="IntercomGetContacts">
+
+<aura:handler name = "init" value = "{!this}" action = "{!c.doInit}"/>
+<aura:attribute name="ConversationData" type="List"/>
+<aura:attribute name="contact_id" type="String"/>
+<aura:attribute name="conversation_count" type="String" default="0"/>
+
+Conversation count: {!v.conversation_count}
+
+</aura:component>
