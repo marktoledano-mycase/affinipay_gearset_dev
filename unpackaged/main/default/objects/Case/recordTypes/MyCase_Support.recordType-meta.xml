@@ -1708,10 +1708,14 @@
             <fullName>System Performance %2F Bug</fullName>
             <default>false</default>
         </values>
-        <values>
-            <fullName>Training</fullName>
-            <default>false</default>
-        </values>
+            <values>
+                <fullName>Training - General</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Training - Usability</fullName>
+                <default>false</default>
+            </values>
         <values>
             <fullName>Unresponsive</fullName>
             <default>false</default>
