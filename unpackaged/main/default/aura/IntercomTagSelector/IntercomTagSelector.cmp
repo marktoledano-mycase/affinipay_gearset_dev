@@ -1,0 +1,39 @@
+<aura:component implements="force:hasRecordId,force:lightningQuickAction,flexipage:availableForAllPageTypes" access="global" Controller="IntercomGetContacts">
+    <aura:handler name = "init" value = "{!this}" action = "{!c.doInit}"/>
+    <aura:attribute name="contact_id" type="String"/>
+    <aura:attribute name="TagDataAll" type="List"/>
+    <aura:attribute name="TagDataSearch" type="List"/>
+    <aura:attribute name="selected_tag_id" type="String"/>
+    <aura:attribute name="searchTerm" type="String"/>
+    <aura:attribute name="new_tag_name" type="String"/>
+    <aura:attribute name="new_tag_id" type="String"/>
+    <aura:attribute name="new_tag_status" type="String"/>
+    <aura:attribute name="attach_status" type="String"/>
+    <aura:registerEvent name="callParentFunctionEvent" type="c:IntercomAddTagRefresh" />
+
+
+    <!-- Search Input -->
+    <!-- search pulled list of all tags as found and update combobox above -->
+    <lightning:input label="Search Available Tags" value="{!v.searchTerm}" placeholder="Search tags..." onchange="{!c.updateSearch}"/>
+
+    <div class="selector">
+
+        <!-- Search for Tag -->
+        <!-- combo box to list tags as found -->
+        <lightning:select name="TagSelector" label="Select from available Tags" aura:id="TagSearchSelector" value="{!v.selected_tag_id}">
+            <aura:iteration items="{!v.TagDataSearch}" var="option">
+                <option text="{!option.name}" value="{!option.id}"/>
+            </aura:iteration>
+        </lightning:select>
+    </div>
+    <!-- Once found or created attach to contact -->
+    <lightning:button aura:id="attach_tag" label="Attach Tag" onclick="{!c.attach_tag}"/>{!v.attach_status}
+    OR
+    <br/>
+    <!-- Create and Attach -->
+    <lightning:input label="Create New Tag" value="{!v.new_tag_name}" placeholder="Enter new tag..." />
+    <lightning:button aura:id="create_tag" label="Create Tag" onclick="{!c.create_tag}"/>
+    <br/>
+    <br/>
+    
+</aura:component>
