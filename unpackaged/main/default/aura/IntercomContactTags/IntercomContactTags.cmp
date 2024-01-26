@@ -1,0 +1,116 @@
+<aura:component implements="force:hasRecordId,force:lightningQuickAction,flexipage:availableForAllPageTypes" access="global" Controller="IntercomGetContacts">
+    <aura:handler name = "init" value = "{!this}" action = "{!c.doInit}"/>
+    <aura:attribute name="contact_id" type="String"/>
+    <aura:attribute name="contact_name" type="String"/>
+    <aura:attribute name="contact_email" type="String"/>
+    <aura:attribute name="contact_phone" type="String"/>
+    <aura:attribute name="contact_location" type="String"/>
+    <aura:attribute name="created_at" type="String"/>
+    <aura:attribute name="last_seen_at" type="String"/>
+    <aura:attribute name="external_id" type="String"/>
+    <aura:attribute name="custom_attributes_salesforce_id" type="String"/>
+    <aura:attribute name="workspace_id" type="String"/>
+    <aura:attribute name="TagData" type="List"/>
+    <aura:attribute name="CurrentContactData" type="List"/>
+    <aura:attribute name="isDivVisible" type="Boolean" default="false"/>
+    <aura:attribute name="IntercomContactData" type="List"/>
+    <aura:attribute name="TagDataAll" type="List"/>
+    <aura:attribute name="TagDataSearch" type="List"/>
+    <aura:attribute name="selected_tag_id" type="String"/>
+    <aura:attribute name="searchTerm" type="String"/>
+    <aura:attribute name="new_tag_name" type="String"/>
+    <aura:attribute name="new_tag_id" type="String"/>
+    <aura:attribute name="new_tag_status" type="String"/>
+    <aura:attribute name="attach_status" type="String"/>
+    <aura:attribute name="ConversationData" type="List"/>
+    <aura:attribute name="conversation_count" type="String" default="0"/>
+    <aura:attribute name="tagging_permissions" type="boolean" default="false"/>
+
+    <div class="slds"></div>
+
+    <table style="width:100%;" class="slds-table">
+            <tr>
+                <td scope="col" style="width: 40px;">
+                    <div class="slds-media__figure">
+                        <span class="slds-icon_container slds-icon-standard-contact" title="contact">
+                            <lightning:icon iconName="standard:people" size="large" alternativeText="Intercom Contact"/>
+                        <span class="slds-assistive-text">contact</span>
+                        </span>
+                        </div>
+                </td>                    
+                <td scope="col" style="width: 200px;">
+                    <div class="show-on-hover">
+                
+                        <div class="slds-text-title_bold">
+                            <lightning:formattedUrl value="{!'https://app.intercom.com/a/apps/xae1gxww/users/' + v.contact_id}" tooltip="Click to open contact in Intercom" label="{!v.contact_name}" target="_blank" /><br/>
+                        </div>
+                    </div>  
+                    Email: {!v.contact_email}<br/>
+                    Phone: {!v.contact_phone}<br/>
+                    Location: {!v.contact_location}<br/>
+                    Created: <c:IntercomEpochTimeConvertor datetimevalue="{!v.created_at}"/><br/>
+                    Last Seen: <c:IntercomEpochTimeConvertor datetimevalue="{!v.last_seen_at}"/><br/>
+                    Conversation count: {!v.conversation_count}
+                </td>
+        
+                <td scope="col" style="width: 200px;">
+                        Tags<br/>
+                        <aura:iteration items="{!v.TagData}" var="tag">
+                            <div class="slds-media__figure">
+                                <span class="slds-pill">
+                                    <span class="slds-pill__label">{!tag.name}</span>
+                    <aura:if isTrue="{!v.tagging_permissions}">
+
+                        <button class="slds-button slds-button_icon slds-button_icon slds-pill__remove" title="Remove" data-id="{!tag.id}" onclick="{!c.removeTag}">
+                            <lightning:icon iconName="utility:close" size="x-small" alternativeText="remove" data-id="{!tag.id}" onclick="{!c.removeTag}"/>
+                        </button>
+                    </aura:if>
+                        
+                    </span>
+                </div>
+            </aura:iteration>
+            <br/>
+            <aura:if isTrue="{!v.tagging_permissions}">
+
+            <lightning:button label="{!v.isDivVisible ? 'Done' : 'Add Tag'}" onclick="{!c.toggleDiv}" class="{!v.isDivVisible ? 'slds-button_brand' : 'slds-button_neutral'}" />
+            
+            <div aura:id="tagSelectDiv" class="{!'slds-box' + (v.isDivVisible ? '' : ' slds-hide')}">
+                
+                <lightning:input label="Search Available Tags" value="{!v.searchTerm}" placeholder="Search tags..." onchange="{!c.updateSearch}"/>
+                
+                <div class="selector">
+                    
+                    <!-- Search for Tag -->
+                    <!-- combo box to list tags as found -->
+                    <lightning:select name="TagSelector" label="Select from available Tags" aura:id="TagSearchSelector" value="{!v.selected_tag_id}">
+                        <aura:iteration items="{!v.TagDataSearch}" var="option">
+                            <option text="{!option.name}" value="{!option.id}"/>
+                        </aura:iteration>
+                                </lightning:select>
+                            </div>
+                            <!-- Once found or created attach to contact -->
+                            <lightning:button aura:id="attach_tag" label="Attach Tag" onclick="{!c.attach_tag}"/>
+                            <div class="slds-text-color_success">
+                                {!v.attach_status}
+                            </div>
+                            <br/>
+                            OR
+                            <br/>
+                            <!-- Create and Attach -->
+                            <lightning:input label="Create New Tag" value="{!v.new_tag_name}" placeholder="Enter new tag..." />
+                            <lightning:button aura:id="create_tag" label="Create Tag" onclick="{!c.create_tag}"/>
+                            <br/>
+                            <br/>
+
+                    </div>
+                </aura:if>
+                    <div class="hidden-div">
+                        External Id: {!v.external_id}<br/>
+                        Salesforce Id: {!v.custom_attributes_salesforce_id}<br/>
+                        Workspace Id: {!v.workspace_id}<br/>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+</aura:component>
