@@ -211,6 +211,50 @@
         </connector>
     </assignments>
     <assignments>
+        <name>Account_Assignment_from_Create_Account_from_Merch_App</name>
+        <label>Account Assignment from Create Account from Merch App</label>
+        <locationX>6518</locationX>
+        <locationY>1448</locationY>
+        <assignmentItems>
+            <assignToReference>r_Update_PE_Record.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>invar_Prod_Env_Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Update_PE_Record.Account__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Create_New_Account_Record.output_Created_AccountID</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Update_PE_Record.Account_Matched_On__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Create Account: Used Merch App </stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Merch_App_Update.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>r_Merchant_Application_Found.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Merch_App_Update.Account__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Create_New_Account_Record.output_Created_AccountID</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Create_Contact_Applicant</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>Account_Assignment_from_MerchApp_Contact_Link</name>
         <label>Account Assignment from MerchApp Contact Link</label>
         <locationX>578</locationX>
@@ -362,10 +406,33 @@
         </connector>
     </assignments>
     <assignments>
+        <name>Contact_Assignment_From_Applicaint</name>
+        <label>Contact Assignment From Applicaint</label>
+        <locationX>6386</locationX>
+        <locationY>1772</locationY>
+        <assignmentItems>
+            <assignToReference>r_Update_PE_Record.Contact__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Create_Contact_Applicant.output_Created_Contact_ID</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Merch_App_Update.Contact__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Create_Contact_Applicant.output_Created_Contact_ID</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Merch_App_with_Account</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>End_Search_Assignments</name>
         <label>End Search Assignments</label>
-        <locationX>6386</locationX>
-        <locationY>1124</locationY>
+        <locationX>7090</locationX>
+        <locationY>1232</locationY>
         <assignmentItems>
             <assignToReference>r_Update_PE_Record.Id</assignToReference>
             <operator>Assign</operator>
@@ -387,7 +454,7 @@
     <assignments>
         <name>End_Search_Assignments_Account_and_Lead_Links</name>
         <label>End Search Assignments - Account and Lead Links</label>
-        <locationX>7178</locationX>
+        <locationX>7882</locationX>
         <locationY>242</locationY>
         <assignmentItems>
             <assignToReference>r_Update_PE_Record.Id</assignToReference>
@@ -410,7 +477,7 @@
     <assignments>
         <name>End_Search_Assignments_Other_Brands</name>
         <label>End Search Assignments - Other Brands</label>
-        <locationX>6650</locationX>
+        <locationX>7354</locationX>
         <locationY>350</locationY>
         <assignmentItems>
             <assignToReference>r_Update_PE_Record.Id</assignToReference>
@@ -431,9 +498,33 @@
         </connector>
     </assignments>
     <assignments>
+        <name>Error_Creating_Account_Assignment</name>
+        <label>Error Creating Account Assignment</label>
+        <locationX>6826</locationX>
+        <locationY>1448</locationY>
+        <assignmentItems>
+            <assignToReference>r_Update_PE_Record.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>invar_Prod_Env_Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Update_PE_Record.Account_Matched_On__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Create Account: ERROR Creating</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Last_Touch_Assignment</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>Last_Touch_Assignment</name>
         <label>Last Touch Assignment</label>
-        <locationX>6307</locationX>
+        <locationX>6866</locationX>
         <locationY>4094</locationY>
         <assignmentItems>
             <assignToReference>r_Update_PE_Record.Last_Touch_Automation__c</assignToReference>
@@ -607,7 +698,7 @@
     <assignments>
         <name>PE_Account_Assignment_ConvertedLead</name>
         <label>PE Account Assignment</label>
-        <locationX>6914</locationX>
+        <locationX>7618</locationX>
         <locationY>242</locationY>
         <assignmentItems>
             <assignToReference>r_Update_PE_Record.Id</assignToReference>
@@ -693,7 +784,7 @@
     <decisions>
         <name>Account_Lead_Links</name>
         <label>Has Account and Lead Links</label>
-        <locationX>6307</locationX>
+        <locationX>6866</locationX>
         <locationY>134</locationY>
         <defaultConnector>
             <targetReference>End_Search_Assignments_Account_and_Lead_Links</targetReference>
@@ -849,6 +940,81 @@
                 <targetReference>Account_Assignment_from_PE_Owner_Email</targetReference>
             </connector>
             <label>Yes Contact Found PE Owner Email</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Create_Account_Record_Types_Found</name>
+        <label>Create Account: Record Types Found</label>
+        <locationX>6881</locationX>
+        <locationY>1124</locationY>
+        <defaultConnector>
+            <targetReference>End_Search_Assignments</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Product Environment Record</defaultConnectorLabel>
+        <rules>
+            <name>Mech_App_Found</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>r_Merchant_Application_Found.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_New_Account_Record</targetReference>
+            </connector>
+            <label>Mech App Found</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Error_When_Creating_Account</name>
+        <label>Error When Creating Account</label>
+        <locationX>6672</locationX>
+        <locationY>1340</locationY>
+        <defaultConnector>
+            <targetReference>Error_Creating_Account_Assignment</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Error</defaultConnectorLabel>
+        <rules>
+            <name>No_Error</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Create_New_Account_Record.output_Create_Account_Error</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Account_Assignment_from_Create_Account_from_Merch_App</targetReference>
+            </connector>
+            <label>No Error</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Error_When_Creating_Applicant_Contact</name>
+        <label>Error When Creating Applicant Contact</label>
+        <locationX>6518</locationX>
+        <locationY>1664</locationY>
+        <defaultConnector>
+            <targetReference>Update_Merch_App_with_Account</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Error Recieved</defaultConnectorLabel>
+        <rules>
+            <name>No_Error_Creating_Applicant_Contact</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Create_Contact_Applicant.output_Error_Recieved</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Contact_Assignment_From_Applicaint</targetReference>
+            </connector>
+            <label>No Error Creating Applicant Contact</label>
         </rules>
     </decisions>
     <decisions>
@@ -1044,7 +1210,7 @@
     <decisions>
         <name>Found_Merch_App_App_ID</name>
         <label>Found Merch App - App ID</label>
-        <locationX>5720</locationX>
+        <locationX>5968</locationX>
         <locationY>674</locationY>
         <defaultConnector>
             <targetReference>ProdEnv_Has_Owner_Email</targetReference>
@@ -1120,7 +1286,7 @@
     <decisions>
         <name>Has_Merch_App_ID</name>
         <label>Has Merch App ID</label>
-        <locationX>5874</locationX>
+        <locationX>6122</locationX>
         <locationY>458</locationY>
         <defaultConnector>
             <targetReference>ProdEnv_Has_Owner_Email</targetReference>
@@ -1407,7 +1573,7 @@
     <decisions>
         <name>PE_Has_VTID</name>
         <label>PE Has VTID</label>
-        <locationX>4223</locationX>
+        <locationX>4347</locationX>
         <locationY>350</locationY>
         <defaultConnector>
             <targetReference>Has_Merch_App_ID</targetReference>
@@ -1432,7 +1598,7 @@
     <decisions>
         <name>PE_Record_Type</name>
         <label>PE Record Type</label>
-        <locationX>5436</locationX>
+        <locationX>5850</locationX>
         <locationY>242</locationY>
         <defaultConnector>
             <targetReference>End_Search_Assignments_Other_Brands</targetReference>
@@ -1457,10 +1623,10 @@
     <decisions>
         <name>ProdEnv_Has_Owner_Email</name>
         <label>ProdEnv Has Owner Email</label>
-        <locationX>5874</locationX>
+        <locationX>6122</locationX>
         <locationY>1016</locationY>
         <defaultConnector>
-            <targetReference>End_Search_Assignments</targetReference>
+            <targetReference>Create_Account_Record_Types_Found</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>No PE Owner Email</defaultConnectorLabel>
         <rules>
@@ -1694,7 +1860,7 @@
     <recordLookups>
         <name>Get_Merch_Application_APPID</name>
         <label>Get Merch Application - APPID</label>
-        <locationX>5720</locationX>
+        <locationX>5968</locationX>
         <locationY>566</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1718,6 +1884,9 @@
         <queriedFields>Merchant_Name__c</queriedFields>
         <queriedFields>Applicant_Email__c</queriedFields>
         <queriedFields>Owner_Email_Address__c</queriedFields>
+        <queriedFields>Merchant_App_ID__c</queriedFields>
+        <queriedFields>Applicant_First_Name__c</queriedFields>
+        <queriedFields>Applicant_Last_Name__c</queriedFields>
     </recordLookups>
     <recordLookups>
         <name>Get_Merch_Application_VTID</name>
@@ -1746,24 +1915,109 @@
         <queriedFields>Merchant_Name__c</queriedFields>
         <queriedFields>Applicant_Email__c</queriedFields>
         <queriedFields>Owner_Email_Address__c</queriedFields>
+        <queriedFields>Merchant_App_ID__c</queriedFields>
+        <queriedFields>Applicant_First_Name__c</queriedFields>
+        <queriedFields>Applicant_Last_Name__c</queriedFields>
     </recordLookups>
+    <recordUpdates>
+        <name>Update_Merch_App_with_Account</name>
+        <label>Update Merch App with Account</label>
+        <locationX>6518</locationX>
+        <locationY>1964</locationY>
+        <connector>
+            <targetReference>Last_Touch_Assignment</targetReference>
+        </connector>
+        <inputReference>r_Merch_App_Update</inputReference>
+    </recordUpdates>
     <recordUpdates>
         <description>Updates the PE record with the Account found</description>
         <name>Update_PE_Record</name>
         <label>Update PE Record</label>
-        <locationX>6307</locationX>
+        <locationX>6866</locationX>
         <locationY>4202</locationY>
         <inputReference>r_Update_PE_Record</inputReference>
     </recordUpdates>
     <runInMode>SystemModeWithoutSharing</runInMode>
     <start>
-        <locationX>6181</locationX>
+        <locationX>6740</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Account_Lead_Links</targetReference>
         </connector>
     </start>
     <status>Active</status>
+    <subflows>
+        <description>Create a user based on the Applicant information. Setting Checks to be skipped because all searches performed to get to this point to find contact.</description>
+        <name>Create_Contact_Applicant</name>
+        <label>Create Contact - Applicant</label>
+        <locationX>6518</locationX>
+        <locationY>1556</locationY>
+        <connector>
+            <targetReference>Error_When_Creating_Applicant_Contact</targetReference>
+        </connector>
+        <flowName>Autolaunch_Create_Contact_Service</flowName>
+        <inputAssignments>
+            <name>input_Link_To_Account_ID</name>
+            <value>
+                <elementReference>Create_New_Account_Record.output_Created_AccountID</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>input_Owner_ID</name>
+            <value>
+                <elementReference>Create_New_Account_Record.output_Owner_ID</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>input_Person_Email</name>
+            <value>
+                <elementReference>r_Merchant_Application_Found.Applicant_Email__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>input_Person_First_Name</name>
+            <value>
+                <elementReference>r_Merchant_Application_Found.Applicant_First_Name__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>input_Person_Last_Name</name>
+            <value>
+                <elementReference>r_Merchant_Application_Found.Applicant_Last_Name__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>input_Skip_Lookup_Checks</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>input_Triggering_Automation</name>
+            <value>
+                <stringValue>Product Environment: Account Linking - Process</stringValue>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <subflows>
+        <description>Subflow: Autolaunch: Create Account Service</description>
+        <name>Create_New_Account_Record</name>
+        <label>Create New Account Record</label>
+        <locationX>6672</locationX>
+        <locationY>1232</locationY>
+        <connector>
+            <targetReference>Error_When_Creating_Account</targetReference>
+        </connector>
+        <flowName>Autolaunch_Create_Account_Service</flowName>
+        <inputAssignments>
+            <name>input_Merch_App_Record_ID</name>
+            <value>
+                <elementReference>r_Merchant_Application_Found.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
     <variables>
         <description>Record variable for the Product Environment REcord that needs to to have the account linked.</description>
         <name>invar_Prod_Env_Record</name>
@@ -1772,6 +2026,14 @@
         <isInput>true</isInput>
         <isOutput>false</isOutput>
         <objectType>Product_Environment__c</objectType>
+    </variables>
+    <variables>
+        <name>r_Merch_App_Update</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Merchant_Application__c</objectType>
     </variables>
     <variables>
         <name>r_Merchant_Application_Found</name>

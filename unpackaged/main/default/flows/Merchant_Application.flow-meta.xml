@@ -187,6 +187,9 @@
         <label>Check if record is returned</label>
         <locationX>1128</locationX>
         <locationY>539</locationY>
+        <defaultConnector>
+            <targetReference>Link_Merch_App_to_Existing_PE</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Record Found</defaultConnectorLabel>
         <rules>
             <name>Record_Not_Returned</name>
@@ -384,6 +387,9 @@
         <label>Create Product Environment</label>
         <locationX>710</locationX>
         <locationY>1055</locationY>
+        <connector>
+            <targetReference>Link_Merch_App_to_New_PE</targetReference>
+        </connector>
         <inputReference>r_Product_Evniornment_Final</inputReference>
     </recordCreates>
     <recordLookups>
@@ -415,6 +421,32 @@
         <object>Product_Environment__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordUpdates>
+        <name>Link_Merch_App_to_Existing_PE</name>
+        <label>Link Merch App to Existing PE</label>
+        <locationX>1546</locationX>
+        <locationY>647</locationY>
+        <inputAssignments>
+            <field>Product_Environment__c</field>
+            <value>
+                <elementReference>Get_Product_Environment_Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Link_Merch_App_to_New_PE</name>
+        <label>Link Merch App to New PE</label>
+        <locationX>710</locationX>
+        <locationY>1163</locationY>
+        <inputAssignments>
+            <field>Product_Environment__c</field>
+            <value>
+                <elementReference>r_Product_Evniornment_Final.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
     <start>
         <locationX>1343</locationX>
         <locationY>0</locationY>
