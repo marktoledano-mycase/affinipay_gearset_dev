@@ -1155,6 +1155,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Account_Created_By__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Account.Account_DBA_Name__c</field>
         <readable>true</readable>
@@ -5917,6 +5922,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Contact.Create_Person_Master_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.Created_By_Process__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -11847,6 +11857,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Merchant_Application__c.Pricing_Plan_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Merchant_Application__c.Product_Environment__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
