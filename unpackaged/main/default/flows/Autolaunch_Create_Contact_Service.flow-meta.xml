@@ -105,14 +105,55 @@
                 <elementReference>input_Triggering_Automation</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Create_Contact.Bypass_Duplicate_Rules_on_Create__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Create_Contact.Bypass_Duplicate_Rules__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Create_Contact.Bypass_VR_and_Automation__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Create_Contact</targetReference>
         </connector>
     </assignments>
     <assignments>
+        <name>Error_Contact_Creation_Error</name>
+        <label>Error - Contact Creation Error</label>
+        <locationX>754</locationX>
+        <locationY>1058</locationY>
+        <assignmentItems>
+            <assignToReference>output_Error_Recieved</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>output_Create_Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>ERROR: Could Not Create Contact</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
         <name>Error_Missing_Data</name>
         <label>Error - Missing Data</label>
-        <locationX>754</locationX>
+        <locationX>1018</locationX>
         <locationY>242</locationY>
         <assignmentItems>
             <assignToReference>output_Error_Recieved</assignToReference>
@@ -196,7 +237,7 @@
     <decisions>
         <name>Enough_Data_to_Proceed</name>
         <label>Enough Data to Proceed</label>
-        <locationX>567</locationX>
+        <locationX>699</locationX>
         <locationY>134</locationY>
         <defaultConnector>
             <targetReference>Error_Missing_Data</targetReference>
@@ -295,10 +336,13 @@
         <connector>
             <targetReference>Assign_Success_Variables</targetReference>
         </connector>
+        <faultConnector>
+            <targetReference>Error_Contact_Creation_Error</targetReference>
+        </faultConnector>
         <inputReference>r_Create_Contact</inputReference>
     </recordCreates>
     <start>
-        <locationX>441</locationX>
+        <locationX>573</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Enough_Data_to_Proceed</targetReference>
