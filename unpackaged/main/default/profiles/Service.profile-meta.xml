@@ -3141,8 +3141,18 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.CASEpeer_Marketing_Engagement__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Contact.CPACharge_Customer_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.CPACharge_Marketing_Engagement__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3258,6 +3268,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Contact.Docketwise_Customer_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.Docketwise_Marketing_Engagement__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3457,6 +3472,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Contact.LawPay_Marketing_Engagement__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Contact.LeadSource</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -3563,6 +3583,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Contact.MyCase_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.MyCase_Marketing_Engagement__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -12102,6 +12127,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Trial_Request__c.CASEpeer_Marketing_Engagement__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Trial_Request__c.CASEpeer_Marketing_Score__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -12112,12 +12142,22 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Trial_Request__c.CPACharge_Marketing_Engagement__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Trial_Request__c.CPACharge_Marketing_Score__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>Trial_Request__c.ClientPay_Customer_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Trial_Request__c.ClientPay_Marketing_Engagement__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -12172,6 +12212,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Trial_Request__c.Docketwise_Marketing_Engagement__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Trial_Request__c.Docketwise_Marketing_Score__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -12208,6 +12253,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Trial_Request__c.LawPay_Customer_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Trial_Request__c.LawPay_Marketing_Engagement__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -12278,6 +12328,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Trial_Request__c.MyCase_Customer_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Trial_Request__c.MyCase_Marketing_Engagement__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
