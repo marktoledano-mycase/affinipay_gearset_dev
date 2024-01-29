@@ -2,25 +2,11 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>53.0</apiVersion>
     <assignments>
-        <description>Sets Variable to end the processes gracefully</description>
-        <name>End_Process</name>
-        <label>End Process</label>
-        <locationX>308</locationX>
-        <locationY>774</locationY>
-        <assignmentItems>
-            <assignToReference>Int_EndProcess</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>No Changes</stringValue>
-            </value>
-        </assignmentItems>
-    </assignments>
-    <assignments>
         <description>Sets Variable to Closed Case</description>
         <name>Set_Closed_Case</name>
         <label>Set Closed Case</label>
-        <locationX>302</locationX>
-        <locationY>386</locationY>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
         <assignmentItems>
             <assignToReference>int_CaseStatus</assignToReference>
             <operator>Assign</operator>
@@ -36,8 +22,8 @@
         <description>Sets Case Status variable to Open</description>
         <name>Set_Open_Case</name>
         <label>Set Open Case</label>
-        <locationX>29</locationX>
-        <locationY>387</locationY>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
         <assignmentItems>
             <assignToReference>int_CaseStatus</assignToReference>
             <operator>Assign</operator>
@@ -53,8 +39,8 @@
         <description>Sets New Contact Variable to Same Contact</description>
         <name>Set_Same_Contact</name>
         <label>Set Same Contact</label>
-        <locationX>28</locationX>
-        <locationY>574</locationY>
+        <locationX>314</locationX>
+        <locationY>731</locationY>
         <assignmentItems>
             <assignToReference>int_NewContact</assignToReference>
             <operator>Assign</operator>
@@ -70,8 +56,8 @@
         <description>Sets new contact variable to New Contact</description>
         <name>Sets_New_Contact</name>
         <label>Sets New Contact</label>
-        <locationX>292</locationX>
-        <locationY>570</locationY>
+        <locationX>50</locationX>
+        <locationY>731</locationY>
         <assignmentItems>
             <assignToReference>int_NewContact</assignToReference>
             <operator>Assign</operator>
@@ -102,8 +88,8 @@
     <decisions>
         <name>Contact_Changed</name>
         <label>Contact Changed</label>
-        <locationX>159</locationX>
-        <locationY>612</locationY>
+        <locationX>182</locationX>
+        <locationY>623</locationY>
         <defaultConnector>
             <targetReference>Set_Same_Contact</targetReference>
         </defaultConnector>
@@ -128,11 +114,8 @@
         <description>evaluates if the case was closed or the contacts had changed and either ends process or launches processing flow.</description>
         <name>Launch_Flow</name>
         <label>Launch Flow</label>
-        <locationX>152</locationX>
-        <locationY>781</locationY>
-        <defaultConnector>
-            <targetReference>End_Process</targetReference>
-        </defaultConnector>
+        <locationX>182</locationX>
+        <locationY>923</locationY>
         <defaultConnectorLabel>End Process</defaultConnectorLabel>
         <rules>
             <name>Launch_Flow_1</name>
@@ -161,8 +144,8 @@
         <description>Evaluates if the case wend from opened to clsoed</description>
         <name>Was_Case_Closed</name>
         <label>Was Case Closed</label>
-        <locationX>158</locationX>
-        <locationY>448</locationY>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
         <defaultConnector>
             <targetReference>Set_Open_Case</targetReference>
         </defaultConnector>
@@ -190,7 +173,9 @@
             <label>Case was Closed</label>
         </rules>
     </decisions>
-    <description>Evaluates Subscription Downgrade cases on update to identify if the case has been closed or has had a contact changed</description>
+    <description>Evaluates Subscription Downgrade cases on update to identify if the case has been closed or has had a contact changed
+1/23/24 JC - Updated entry criteria to remove hardcoded record IDs</description>
+    <environments>Default</environments>
     <interviewLabel>MC: Subscription Downgrade - Updated Case Trigger {!$Flow.CurrentDateTime}</interviewLabel>
     <label>MC: Subscription Downgrade - Updated Case Trigger</label>
     <processMetadataValues>
@@ -202,7 +187,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>FREE_FORM_CANVAS</stringValue>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -213,37 +198,25 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <start>
-        <locationX>52</locationX>
-        <locationY>50</locationY>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Was_Case_Closed</targetReference>
         </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Origin</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>Email (MyCase Subscription Change)</stringValue>
-            </value>
-        </filters>
-        <filters>
-            <field>RecordTypeId</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>0123g000000POio</stringValue>
-            </value>
-        </filters>
+        <filterFormula>ISPICKVAL({!$Record.Origin}, &quot;Email (MyCase Subscription Change)&quot;)
+&amp;&amp;
+{!$Record.RecordType.DeveloperName}= &quot;MyCase_Support&quot;</filterFormula>
         <object>Case</object>
         <recordTriggerType>Update</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Obsolete</status>
+    <status>Active</status>
     <subflows>
         <description>Launches Processing flow</description>
         <name>Launch_Flow_2</name>
         <label>Launch Flow</label>
-        <locationX>162</locationX>
-        <locationY>948</locationY>
+        <locationX>50</locationX>
+        <locationY>1031</locationY>
         <flowName>MC_Subscription_Downgrade_Processing_Flow</flowName>
         <inputAssignments>
             <name>ex_Case_Status</name>
