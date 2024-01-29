@@ -435,6 +435,48 @@
                 <elementReference>varCRO3</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varInboundRequest.CASEpeer_Marketing_Engagement__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_CASEpeer_Marketing_Engagement</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varInboundRequest.ClientPay_Marketing_Engagement__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_ClientPay_Marketing_Engagement</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varInboundRequest.CPACharge_Marketing_Engagement__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_CPACharge_Marketing_Engagement</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varInboundRequest.Docketwise_Marketing_Engagement__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_Docketwise_Marketing_Engagement</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varInboundRequest.LawPay_Marketing_Engagement__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_LawPay_Marketing_Engagement</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varInboundRequest.MyCase_Marketing_Engagement__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>var_MyCase_Marketing_Engagement</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Created_From</targetReference>
         </connector>
@@ -536,6 +578,54 @@
         <value>
             <numberValue>0.0</numberValue>
         </value>
+    </variables>
+    <variables>
+        <name>var_CASEpeer_Marketing_Engagement</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <name>var_ClientPay_Marketing_Engagement</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <name>var_CPACharge_Marketing_Engagement</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <name>var_Docketwise_Marketing_Engagement</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <name>var_LawPay_Marketing_Engagement</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <name>var_MyCase_Marketing_Engagement</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
     </variables>
     <variables>
         <description>utm campaign on lead or contact</description>
