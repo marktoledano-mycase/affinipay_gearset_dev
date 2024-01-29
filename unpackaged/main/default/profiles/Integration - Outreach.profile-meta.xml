@@ -12833,6 +12833,16 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Trial_Request__c.CASEpeer_Marketing_Score__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Trial_Request__c.CPACharge_Marketing_Score__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Trial_Request__c.Customer_Success_Qualifying_Rep2__c</field>
         <readable>true</readable>
@@ -12845,6 +12855,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Trial_Request__c.Days_to_SQL__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Trial_Request__c.Docketwise_Marketing_Score__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -12870,6 +12885,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Trial_Request__c.Last_Touch_Program__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Trial_Request__c.Lawpay_Marketing_Score__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -12900,6 +12920,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Trial_Request__c.Microsoft_Click_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Trial_Request__c.MyCase_Marketing_Score__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
