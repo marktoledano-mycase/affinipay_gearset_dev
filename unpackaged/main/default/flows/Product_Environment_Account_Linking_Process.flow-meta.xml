@@ -250,6 +250,13 @@
                 <elementReference>Create_New_Account_Record.output_Created_AccountID</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Merch_App_Update.Product_Environment__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>invar_Prod_Env_Record.Id</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Create_Contact_Applicant</targetReference>
         </connector>
