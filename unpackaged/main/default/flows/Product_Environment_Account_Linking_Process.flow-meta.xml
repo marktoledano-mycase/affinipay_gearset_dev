@@ -513,7 +513,7 @@
             <assignToReference>r_Update_PE_Record.Account_Matched_On__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue>Create Account: ERROR Creating</stringValue>
+                <elementReference>Create_New_Account_Record.output_Create_Account_Error</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -762,7 +762,7 @@
         <locationY>1664</locationY>
         <defaultConnector>
             <isGoTo>true</isGoTo>
-            <targetReference>End_Search_Assignments</targetReference>
+            <targetReference>Create_Account_Record_Types_Found</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>No Account Found Name Match</defaultConnectorLabel>
         <rules>
