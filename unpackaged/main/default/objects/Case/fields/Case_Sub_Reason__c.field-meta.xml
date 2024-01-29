@@ -4748,6 +4748,11 @@
                 <default>false</default>
                 <label>ZRN Mutual Client</label>
             </value>
+            <value>
+                <fullName>Downgrade Canceled</fullName>
+                <default>false</default>
+                <label>Downgrade Canceled</label>
+            </value>
         </valueSetDefinition>
         <valueSettings>
             <controllingFieldValue>General</controllingFieldValue>
