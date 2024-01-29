@@ -5,7 +5,7 @@
         <name>Before_Launch_Email</name>
         <label>Before Launch Email</label>
         <locationX>50</locationX>
-        <locationY>566</locationY>
+        <locationY>674</locationY>
         <actionName>Case.MC_Subscription_Downgrade_Master_Account_Before_3_1_2022</actionName>
         <actionType>emailAlert</actionType>
         <connector>
@@ -26,7 +26,7 @@
         <name>Closed_Case_Email</name>
         <label>Closed Case Email</label>
         <locationX>314</locationX>
-        <locationY>674</locationY>
+        <locationY>782</locationY>
         <actionName>Case.MC_Subscription_Downgrade_Master_Account_After_3_1_2022</actionName>
         <actionType>emailAlert</actionType>
         <connector>
@@ -47,7 +47,7 @@
         <name>Send_Non_Master_Email</name>
         <label>Send Non-Master Email</label>
         <locationX>842</locationX>
-        <locationY>458</locationY>
+        <locationY>566</locationY>
         <actionName>Case.MC_Subscription_Downgrade_Not_Master_Account</actionName>
         <actionType>emailAlert</actionType>
         <connector>
@@ -76,7 +76,7 @@
         <description>Evaluates if the case entering this flow has a Contact.</description>
         <name>Case_Has_Contact</name>
         <label>Case Has Contact</label>
-        <locationX>825</locationX>
+        <locationX>1023</locationX>
         <locationY>134</locationY>
         <defaultConnectorLabel>No Contact</defaultConnectorLabel>
         <rules>
@@ -100,7 +100,7 @@
         <name>Is_Case_Closed</name>
         <label>Is Case Closed</label>
         <locationX>446</locationX>
-        <locationY>566</locationY>
+        <locationY>674</locationY>
         <defaultConnector>
             <targetReference>Update_Open_Record</targetReference>
         </defaultConnector>
@@ -122,20 +122,17 @@
         </rules>
     </decisions>
     <decisions>
-        <description>Evaluates if contact record is selected as a master record for their MyCase account.</description>
-        <name>Is_Master_Contact_Record</name>
-        <label>Is Master Contact Record</label>
-        <locationX>545</locationX>
-        <locationY>350</locationY>
-        <defaultConnector>
-            <targetReference>Send_Non_Master_Email</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Not Master Contact</defaultConnectorLabel>
+        <description>Checks to see if the contact that populated the case has an associated product user that is the master user</description>
+        <name>Is_Product_User_Master_User</name>
+        <label>Is Product User Master User?</label>
+        <locationX>677</locationX>
+        <locationY>458</locationY>
+        <defaultConnectorLabel>No Product User Found</defaultConnectorLabel>
         <rules>
-            <name>Is_Master_Contact</name>
+            <name>Is_Master_User</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Get_Contact_Record.Master_User__c</leftValueReference>
+                <leftValueReference>Get_Product_User.Master_User__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -144,7 +141,22 @@
             <connector>
                 <targetReference>Launch_Date</targetReference>
             </connector>
-            <label>Is Master Contact</label>
+            <label>Is Master User</label>
+        </rules>
+        <rules>
+            <name>Not_Master_User</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Product_User.Master_User__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Non_Master_Email</targetReference>
+            </connector>
+            <label>Not Master User</label>
         </rules>
     </decisions>
     <decisions>
@@ -152,7 +164,7 @@
         <name>Launch_Date</name>
         <label>Launch Date</label>
         <locationX>248</locationX>
-        <locationY>458</locationY>
+        <locationY>566</locationY>
         <defaultConnector>
             <targetReference>Is_Case_Closed</targetReference>
         </defaultConnector>
@@ -201,11 +213,11 @@
         <description>Gets the contact record for the case that has entered the flow</description>
         <name>Get_Contact_Record</name>
         <label>Get Contact Record</label>
-        <locationX>545</locationX>
+        <locationX>677</locationX>
         <locationY>242</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Is_Master_Contact_Record</targetReference>
+            <targetReference>Get_Product_User</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -221,12 +233,48 @@
         <queriedFields>Master_User__c</queriedFields>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordLookups>
+        <description>Gets the product user associated to the contact that entered the flow</description>
+        <name>Get_Product_User</name>
+        <label>Get Product User</label>
+        <locationX>677</locationX>
+        <locationY>350</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Is_Product_User_Master_User</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Contact__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Get_Contact_Record.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Brand__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>MyCase</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Customer</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Product_User__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <recordUpdates>
         <description>Ensures correct resolution was selected</description>
         <name>Closed_Case_Update</name>
         <label>Closed Case Update</label>
         <locationX>314</locationX>
-        <locationY>782</locationY>
+        <locationY>890</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -248,7 +296,7 @@
         <name>Non_Master_Case_Update</name>
         <label>Non-Master Case Update</label>
         <locationX>842</locationX>
-        <locationY>566</locationY>
+        <locationY>674</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -294,7 +342,7 @@
         <name>Update_Case</name>
         <label>Update Case</label>
         <locationX>50</locationX>
-        <locationY>674</locationY>
+        <locationY>782</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -340,7 +388,7 @@
         <name>Update_Open_Record</name>
         <label>Update Open Record</label>
         <locationX>578</locationX>
-        <locationY>674</locationY>
+        <locationY>782</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -371,7 +419,7 @@
     </recordUpdates>
     <runInMode>DefaultMode</runInMode>
     <start>
-        <locationX>699</locationX>
+        <locationX>897</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Case_Has_Contact</targetReference>
