@@ -231,6 +231,33 @@
                 <booleanValue>true</booleanValue>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>outbound_Error_Message</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Error Account Create: Issues on Create</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Set_Missing_Record_ID_Error_Flag</name>
+        <label>Set Missing Record ID Error Flag</label>
+        <locationX>1546</locationX>
+        <locationY>242</locationY>
+        <assignmentItems>
+            <assignToReference>output_Create_Account_Error</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>outbound_Error_Message</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Create Account Error: Record ID</stringValue>
+            </value>
+        </assignmentItems>
     </assignments>
     <constants>
         <name>c_Customer_Account_Record_Type_ID</name>
@@ -336,6 +363,9 @@
         <label>Record Variable Recieved</label>
         <locationX>1062</locationX>
         <locationY>134</locationY>
+        <defaultConnector>
+            <targetReference>Set_Missing_Record_ID_Error_Flag</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Merch_App_Record_ID_Received</name>
@@ -466,6 +496,16 @@
         <isCollection>false</isCollection>
         <isInput>true</isInput>
         <isOutput>false</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>outbound_Error_Message</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
         <value>
             <stringValue></stringValue>
         </value>
