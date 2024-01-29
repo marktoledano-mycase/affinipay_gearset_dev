@@ -1399,6 +1399,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Contact.ClientPay_Marketing_Enagement__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Contact.Current_Accounting_Solution_Other__c</field>
         <readable>true</readable>
     </fieldPermissions>
