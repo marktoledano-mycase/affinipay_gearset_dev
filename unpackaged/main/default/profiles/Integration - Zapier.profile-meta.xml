@@ -9335,6 +9335,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Product_Environment__c.Stripe_Price_ID_DW__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Product_Environment__c.Subscription_Tier__c</field>
         <readable>true</readable>
     </fieldPermissions>

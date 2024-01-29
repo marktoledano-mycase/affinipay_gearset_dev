@@ -16390,6 +16390,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Product_Environment__c.Stripe_Price_ID_DW__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Product_Environment__c.Stripe_Product_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
