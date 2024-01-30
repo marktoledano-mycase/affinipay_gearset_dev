@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
-        <description>Sends Email Alert: MyCase Support Close Case Survey</description>
-        <name>Send_MyCase_Support_Close_Case_Survey</name>
-        <label>Send MyCase Support Close Case Survey</label>
-        <locationX>600</locationX>
-        <locationY>957</locationY>
-        <actionName>Case.MyCase_Support_Close_Case_Survey</actionName>
-        <actionType>emailAlert</actionType>
-        <connector>
-            <targetReference>Update_Case</targetReference>
-        </connector>
-        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
-        <inputParameters>
-            <name>SObjectRowId</name>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </inputParameters>
-    </actionCalls>
-    <actionCalls>
         <description>Triggers email alert: Website Case Close Survey</description>
         <name>Send_Website_Case_Close</name>
         <label>Send Website Case Close</label>
@@ -37,6 +18,8 @@
                 <elementReference>$Record.Id</elementReference>
             </value>
         </inputParameters>
+        <nameSegment>Case.MyCase_Case_Close_Survey</nameSegment>
+        <versionSegment>1</versionSegment>
     </actionCalls>
     <apiVersion>56.0</apiVersion>
     <assignments>
@@ -164,7 +147,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Send_MyCase_Support_Close_Case_Survey</targetReference>
+                <targetReference>End_Flow</targetReference>
             </connector>
             <label>MyCase Support</label>
         </rules>
@@ -184,7 +167,10 @@
             <label>Website Support</label>
         </rules>
     </decisions>
-    <description>Manages Emails notifications On closed actions.</description>
+    <description>Manages Emails notifications On closed actions.
+Updated trigger criteria to exclude Product Feedback cases.
+
+1/29/24: Modified to ensure a survey is not sent for MyCase Support record types beginning on 1/30</description>
     <environments>Default</environments>
     <formulas>
         <name>for_Today</name>
@@ -244,7 +230,7 @@
         <name>Update_Case</name>
         <label>Update Case</label>
         <locationX>488</locationX>
-        <locationY>1123</locationY>
+        <locationY>1124</locationY>
         <connector>
             <targetReference>Update_Contact</targetReference>
         </connector>
@@ -264,8 +250,8 @@
         <inputReference>rv_Case_Contact</inputReference>
     </recordUpdates>
     <start>
-        <locationX>43</locationX>
-        <locationY>50</locationY>
+        <locationX>44</locationX>
+        <locationY>49</locationY>
         <connector>
             <targetReference>Contact_Check</targetReference>
         </connector>
