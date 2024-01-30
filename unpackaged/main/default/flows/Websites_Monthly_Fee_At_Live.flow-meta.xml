@@ -28,6 +28,9 @@
         <label>Create Integration Queue Record</label>
         <locationX>176</locationX>
         <locationY>323</locationY>
+        <connector>
+            <targetReference>Update_Go_Live_Date</targetReference>
+        </connector>
         <inputAssignments>
             <field>Integration_Record_Id__c</field>
             <value>
@@ -55,6 +58,19 @@
         <object>Integration_Queue__c</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
+    <recordUpdates>
+        <name>Update_Go_Live_Date</name>
+        <label>Update Go Live Date</label>
+        <locationX>176</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Go_Live__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
     <start>
         <locationX>50</locationX>
         <locationY>0</locationY>
