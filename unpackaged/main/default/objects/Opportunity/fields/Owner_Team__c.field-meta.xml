@@ -5,8 +5,8 @@
     <externalId>false</externalId>
     <formula>CASE(Owner.Role_Name__c, 
 &quot;Sales Manager, Software Core (A)&quot;, &quot;Core (A)&quot;, 
-&quot;AE, CASEpeer Core (A)&quot;, &quot;Core ( A)&quot;,
-&quot;AE, Docketwise Core (A)&quot;, &quot;Core(A)&quot;,
+&quot;AE, CASEpeer Core (A)&quot;, &quot;Core (A)&quot;,
+&quot;AE, Docketwise Core (A)&quot;, &quot;Core (A)&quot;,
 &quot;AE, MyCase Core (A)&quot;, &quot;Core (A)&quot;,
 &quot;Sales Manager, Software Core (B)&quot;, &quot;Core (B)&quot;,
 &quot;AE, CASEpeer Core (B)&quot;, &quot;Core (B)&quot;,
@@ -21,10 +21,16 @@
 &quot;AE, Docketwise Core (D)&quot;, &quot;Core (D)&quot;,
 &quot;AE, MyCase Core (D)&quot;, &quot;Core (D)&quot;,
 &quot;AE, CASEpeer Mid-Market&quot;, &quot;Mid-Market&quot;,
-&quot;AE, Docketwise Mid- Market&quot;, &quot;Mid-Market&quot;,
+&quot;AE, Docketwise Mid-Market&quot;, &quot;Mid-Market&quot;,
 &quot;AE, MyCase Mid-Market&quot;, &quot;Mid-Market&quot;,
 &quot;AE, MyCase Special Operations&quot;, &quot;Special Operations&quot;,
-&quot;&quot;)</formula>
+&quot;AE, CPACharge&quot;, &quot;CPACharge&quot;,
+&quot;AE, LawPay&quot;, &quot;LawPay&quot;,
+&quot;VP, Enterprise Solutions&quot;, &quot;Enterprise Solutions&quot;,
+&quot;BDR (A)&quot;, &quot;BDR (A)&quot;,
+&quot;BDR (B)&quot;, &quot;BDR (B)&quot;,
+&quot;SDR (A)&quot;, &quot;SDR (A)&quot;,
+&quot;Other&quot;)</formula>
     <label>Owner Team</label>
     <required>false</required>
     <trackHistory>false</trackHistory>
