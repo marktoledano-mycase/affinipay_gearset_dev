@@ -291,12 +291,19 @@
         <defaultConnectorLabel>No Set to Sys Admin</defaultConnectorLabel>
         <rules>
             <name>Yes_Owner_ID_Provided</name>
-            <conditionLogic>and</conditionLogic>
+            <conditionLogic>or</conditionLogic>
             <conditions>
                 <leftValueReference>input_Owner_ID</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>input_Owner_ID</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>00G</stringValue>
                 </rightValue>
             </conditions>
             <connector>

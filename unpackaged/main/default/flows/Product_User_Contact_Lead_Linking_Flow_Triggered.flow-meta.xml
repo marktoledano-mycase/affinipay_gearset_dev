@@ -1,22 +1,181 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>58.0</apiVersion>
-    <assignments>
-        <name>Assign_Record_ID_to_variable</name>
-        <label>Assign Record ID to variable</label>
-        <locationX>176</locationX>
-        <locationY>323</locationY>
-        <assignmentItems>
-            <assignToReference>varRecordID</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Record</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
+    <decisions>
+        <name>Excluded_Email_Address</name>
+        <label>Excluded Email Address</label>
+        <locationX>314</locationX>
+        <locationY>839</locationY>
+        <defaultConnector>
             <targetReference>Contact_Lead_Linking_Flow</targetReference>
-        </connector>
-    </assignments>
+        </defaultConnector>
+        <defaultConnectorLabel>Go Evaluate</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Place_Holder</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.User_Email__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>placeholder</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_PU_Match_On_Place_Holder_PU</targetReference>
+            </connector>
+            <label>Yes - Place Holder</label>
+        </rules>
+        <rules>
+            <name>Yes_Internal_Email_Domains</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.User_Email__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>@mycase.com</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.User_Email__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>@affinipay.com</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.User_Email__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>@lawpay.com</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.User_Email__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>@clientpay.com</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.User_Email__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>@cpacharge.com</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.User_Email__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>@casepeer.com</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.User_Email__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>@docketwise.com</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_PU_Match_On_Internal_Email_Domains</targetReference>
+            </connector>
+            <label>Yes Internal Email Domains</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Last_Name_Provided</name>
+        <label>Last Name Provided</label>
+        <locationX>578</locationX>
+        <locationY>731</locationY>
+        <defaultConnector>
+            <targetReference>Update_PU_Match_On_Missing_Last_Name</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Provided</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Last_Name_in_Record</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.User_Last_Name__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Excluded_Email_Address</targetReference>
+            </connector>
+            <label>Yes Last Name in Record</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Record_Type</name>
+        <label>PE Record Type</label>
+        <locationX>578</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>Update_PU_Match_On_Brand_not_Supported</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Supported Brand</defaultConnectorLabel>
+        <rules>
+            <name>Outcome_1_of_Record_Type</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Product_Environment__r.Brand__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>MyCase</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Last_Name_Provided</targetReference>
+            </connector>
+            <label>MyCase</label>
+        </rules>
+        <rules>
+            <name>Payments</name>
+            <conditionLogic>1 OR 2 OR 3 OR (4 AND 5)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Product_Environment__r.Brand__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>AffiniPay</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Product_Environment__r.Brand__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>ClientPay</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Product_Environment__r.Brand__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>CPACharge</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Product_Environment__r.Brand__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>LawPay</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Product_Environment__r.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Affinipay</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Last_Name_Provided</targetReference>
+            </connector>
+            <label>Payments</label>
+        </rules>
+    </decisions>
     <environments>Default</environments>
     <interviewLabel>Product User: Contact Lead Linking Flow Triggered {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Product User: Contact Lead Linking Flow Triggered</label>
@@ -39,22 +198,91 @@
         </value>
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
-    <start>
+    <recordUpdates>
+        <name>Update_PU_Match_On_Brand_not_Supported</name>
+        <label>Update PU Match On - Brand not Supported</label>
+        <locationX>754</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Contact_Matched_On__c</field>
+            <value>
+                <stringValue>Not Evaluated: Brand Not Supported Yet</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Run_Contact_Matching__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_PU_Match_On_Internal_Email_Domains</name>
+        <label>Update PU Match On - Internal Email Domains</label>
+        <locationX>314</locationX>
+        <locationY>947</locationY>
+        <inputAssignments>
+            <field>Contact_Matched_On__c</field>
+            <value>
+                <stringValue>Not Evaluated: Internal Email Domain</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Run_Contact_Matching__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_PU_Match_On_Missing_Last_Name</name>
+        <label>Update PU Match On - Missing Last Name</label>
+        <locationX>842</locationX>
+        <locationY>839</locationY>
+        <inputAssignments>
+            <field>Contact_Matched_On__c</field>
+            <value>
+                <stringValue>Not Evaluated: Missing Last Name</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Run_Contact_Matching__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_PU_Match_On_Place_Holder_PU</name>
+        <label>Update PU Match On - Place Holder PU</label>
         <locationX>50</locationX>
+        <locationY>947</locationY>
+        <inputAssignments>
+            <field>Contact_Matched_On__c</field>
+            <value>
+                <stringValue>Not Evaluated: PlaceHolder PU</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Run_Contact_Matching__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>452</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Assign_Record_ID_to_variable</targetReference>
+            <targetReference>Record_Type</targetReference>
         </connector>
-        <filterLogic>(1 OR 2) AND 3 AND 4</filterLogic>
+        <filterLogic>1 AND 2 AND 3</filterLogic>
         <filters>
             <field>Contact__c</field>
-            <operator>IsNull</operator>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </filters>
-        <filters>
-            <field>Lead__c</field>
             <operator>IsNull</operator>
             <value>
                 <booleanValue>true</booleanValue>
@@ -75,20 +303,20 @@
             </value>
         </filters>
         <object>Product_User__c</object>
-        <recordTriggerType>Create</recordTriggerType>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
     <subflows>
         <name>Contact_Lead_Linking_Flow</name>
         <label>Contact/ Lead Linking Flow</label>
-        <locationX>176</locationX>
-        <locationY>431</locationY>
+        <locationX>578</locationX>
+        <locationY>947</locationY>
         <flowName>Product_User_Contact_Linking_Flow_Autolaunched</flowName>
         <inputAssignments>
-            <name>varRecordID</name>
+            <name>Input_Product_User_Record</name>
             <value>
-                <elementReference>varRecordID</elementReference>
+                <elementReference>$Record</elementReference>
             </value>
         </inputAssignments>
     </subflows>
