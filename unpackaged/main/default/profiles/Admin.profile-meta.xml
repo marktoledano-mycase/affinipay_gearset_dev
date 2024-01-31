@@ -16586,6 +16586,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Product_User__c.Contact_Matched_On__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Product_User__c.Contact__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -16662,6 +16667,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Product_User__c.Placeholder_User__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Product_User__c.Run_Contact_Matching__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
