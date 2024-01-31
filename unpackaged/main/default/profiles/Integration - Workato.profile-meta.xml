@@ -14540,6 +14540,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Product_User__c.Run_Contact_Matching__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Product_User__c.Score_Behavior__c</field>
         <readable>true</readable>
     </fieldPermissions>

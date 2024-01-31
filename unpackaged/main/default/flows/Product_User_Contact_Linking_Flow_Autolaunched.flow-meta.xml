@@ -1,16 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
-    <apiVersion>58.0</apiVersion>
+    <apiVersion>59.0</apiVersion>
+    <assignments>
+        <name>Add_Collection_Record_to_Single_RV</name>
+        <label>Add Collection Record to Single RV</label>
+        <locationX>1282</locationX>
+        <locationY>890</locationY>
+        <assignmentItems>
+            <assignToReference>Adding_single_record_to_RV</assignToReference>
+            <operator>Assign</operator>
+        </assignmentItems>
+        <connector>
+            <targetReference>Adding_single_record_to_RV</targetReference>
+        </connector>
+    </assignments>
     <assignments>
         <name>Assign_Contact_from_Sort_by_Last_Modified</name>
         <label>Assign Contact from Sort by Last Modified</label>
-        <locationX>1326</locationX>
+        <locationX>1942</locationX>
         <locationY>1706</locationY>
         <assignmentItems>
-            <assignToReference>varContactFromSortLastModified.Id</assignToReference>
+            <assignToReference>varContactFromSortLastModified</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Collection_Loop.Id</elementReference>
+                <elementReference>Collection_Loop</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -18,15 +31,251 @@
         </connector>
     </assignments>
     <assignments>
-        <name>Assign_number_of_Contacts_Found</name>
-        <label>Assign number of Contacts Found</label>
-        <locationX>622</locationX>
+        <name>Build_PU_Update_Linked_Contact_Many_Email_1_Name_Match</name>
+        <label>Build PU Update - Linked Contact  Many Email  1 Name Match</label>
+        <locationX>1854</locationX>
+        <locationY>1382</locationY>
+        <assignmentItems>
+            <assignToReference>r_Update_PU_Final.Contact_Matched_On__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Contact Linked: Many Email / No Name Match</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Sort_by_Last_Modified</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Build_PU_Update_Linked_Contact_Many_Email_No_Name_Match</name>
+        <label>Build PU Update - Linked Contact  Many Email No Name Match</label>
+        <locationX>2118</locationX>
+        <locationY>1382</locationY>
+        <assignmentItems>
+            <assignToReference>r_Update_PU_Final.Contact_Matched_On__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Contact Linked: Many Email / Many Name Match</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Sort_by_Last_Modified</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Build_PU_Update_Linked_on_1_found</name>
+        <label>Build PU Update - Linked on 1 found</label>
+        <locationX>1194</locationX>
+        <locationY>1082</locationY>
+        <assignmentItems>
+            <assignToReference>r_Update_PU_Final.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Input_Product_User_Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Update_PU_Final.Account__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Input_Product_User_Record.Product_Environment__r.Account__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Update_PU_Final.Contact__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>r_Single_Contact_Found.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Update_PU_Final.Contact_Matched_On__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Contact Linked: Email 1 match</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Update_Product_USer_Record</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Build_PU_Update_Linked_on_1_Name_Match</name>
+        <label>Build PU Update - Linked on 1 Name Match</label>
+        <locationX>1502</locationX>
+        <locationY>1382</locationY>
+        <assignmentItems>
+            <assignToReference>r_Update_PU_Final.Contact_Matched_On__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Contact Linked: Many Email / 1 Name Match</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Build_PU_Update_Many_Matched_Email</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Build_PU_Update_Many_Matched_Email</name>
+        <label>Build PU Update - Many Matched Email</label>
+        <locationX>1810</locationX>
+        <locationY>1982</locationY>
+        <assignmentItems>
+            <assignToReference>r_Update_PU_Final.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Input_Product_User_Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Update_PU_Final.Account__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Input_Product_User_Record.Product_Environment__r.Account__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Update_PU_Final.Contact__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>varContactFromSortLastModified.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Reset_Flag</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Build_PU_Update_On_Contact_Create</name>
+        <label>Build PU Update - On Contact Create</label>
+        <locationX>578</locationX>
+        <locationY>998</locationY>
+        <assignmentItems>
+            <assignToReference>r_Update_PU_Final.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Input_Product_User_Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Update_PU_Final.Account__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Input_Product_User_Record.Product_Environment__r.Account__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Update_PU_Final.Contact__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Create_Contact.output_Created_Contact_ID</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Update_PU_Final.Contact_Matched_On__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Contact Created: On 0 match</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Reset_Flag</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Build_PU_Update_On_Contact_Error</name>
+        <label>Build PU Update - On Contact Error</label>
+        <locationX>842</locationX>
+        <locationY>998</locationY>
+        <assignmentItems>
+            <assignToReference>r_Update_PU_Final.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Input_Product_User_Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Update_PU_Final.Contact_Matched_On__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>ERROR: Error Returned on Contact Create</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Reset_Flag</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Contact_Linked_On_No_PE_Linked</name>
+        <label>Contact Linked On - No PE Linked</label>
+        <locationX>3174</locationX>
+        <locationY>350</locationY>
+        <assignmentItems>
+            <assignToReference>Output_Contact_Link_On</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>No Match: PU Not Linked to PE</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Contact_Linked_On_PE_Lead_Email</name>
+        <label>Contact Linked On - PE Lead Email</label>
+        <locationX>2382</locationX>
         <locationY>674</locationY>
         <assignmentItems>
-            <assignToReference>varCountofContacts</assignToReference>
+            <assignToReference>r_Update_PU_Final.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Input_Product_User_Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Update_PU_Final.Contact_Matched_On__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Lead Match: Email Matches PE Lead</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Update_PU_Final.Lead__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Input_Product_User_Record.Product_Environment__r.Lead__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Reset_Flag</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Contact_Linked_On_PE_Not_Linked_to_account_or_lead</name>
+        <label>Contact Linked On - PE Not Linked to account or lead</label>
+        <locationX>2910</locationX>
+        <locationY>566</locationY>
+        <assignmentItems>
+            <assignToReference>Output_Contact_Link_On</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>No Match: Linked PE Not Linked to account or lead</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Reset_Flag</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Count_Contacts</name>
+        <label>Count Contacts</label>
+        <locationX>1260</locationX>
+        <locationY>566</locationY>
+        <assignmentItems>
+            <assignToReference>var_Count_of_Contacts_Returned</assignToReference>
             <operator>AssignCount</operator>
             <value>
-                <elementReference>Get_Matching_Contacts</elementReference>
+                <elementReference>Get_PE_Account_Contacts</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -34,54 +283,101 @@
         </connector>
     </assignments>
     <assignments>
-        <name>End_Flow</name>
-        <label>End Flow</label>
-        <locationX>2558</locationX>
-        <locationY>350</locationY>
-        <assignmentItems>
-            <assignToReference>varEndFlow</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>No PE Linked</stringValue>
-            </value>
-        </assignmentItems>
-    </assignments>
-    <assignments>
         <name>End_Flow_Assign</name>
         <label>End Flow Assign</label>
-        <locationX>2030</locationX>
-        <locationY>782</locationY>
-        <assignmentItems>
-            <assignToReference>varEndFlow</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>Lead Email does not match PU Email</stringValue>
-            </value>
-        </assignmentItems>
-    </assignments>
-    <assignments>
-        <name>End_Flow_Assignment</name>
-        <label>End Flow Assignment</label>
-        <locationX>2294</locationX>
+        <locationX>2646</locationX>
         <locationY>674</locationY>
         <assignmentItems>
-            <assignToReference>varEndFlow</assignToReference>
+            <assignToReference>Output_Contact_Link_On</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue>PE Not linked to Lead or Account</stringValue>
+                <stringValue>No Match: PE Linked to Diffrent Lead</stringValue>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>Reset_Flag</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Link_Contact_Converted_Lead</name>
+        <label>Link Contact - Converted Lead</label>
+        <locationX>50</locationX>
+        <locationY>242</locationY>
+        <assignmentItems>
+            <assignToReference>r_Update_PU_Final.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Input_Product_User_Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Update_PU_Final.Contact_Matched_On__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Lead Match: Converted Lead</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Update_PU_Final.Contact__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Input_Product_User_Record.Lead__r.ConvertedContactId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Update_Product_USer_Record</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>No_Link_Non_Converted_Lead</name>
+        <label>No Link - Non Converted Lead</label>
+        <locationX>314</locationX>
+        <locationY>242</locationY>
+        <assignmentItems>
+            <assignToReference>r_Update_PU_Final.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Input_Product_User_Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>r_Update_PU_Final.Contact_Matched_On__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>No Match: Non Converted Lead Linked</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Reset_Flag</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Reset_Flag</name>
+        <label>Reset Flag</label>
+        <locationX>1315</locationX>
+        <locationY>2426</locationY>
+        <assignmentItems>
+            <assignToReference>r_Update_PU_Final.Run_Contact_Matching__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Product_USer_Record</targetReference>
+        </connector>
     </assignments>
     <assignments>
         <name>Update_Count</name>
         <label>Update Count</label>
-        <locationX>1282</locationX>
-        <locationY>1106</locationY>
+        <locationX>1898</locationX>
+        <locationY>998</locationY>
         <assignmentItems>
-            <assignToReference>varCountofContacts</assignToReference>
-            <operator>Add</operator>
+            <assignToReference>var_Count_of_Name_Matches</assignToReference>
+            <operator>Assign</operator>
             <value>
-                <numberValue>1.0</numberValue>
+                <elementReference>for_Name_Match_Loop_Count_Update</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -99,7 +395,7 @@
         <name>Sort_by_Last_Modified</name>
         <elementSubtype>SortCollectionProcessor</elementSubtype>
         <label>Sort by Last Modified</label>
-        <locationX>1238</locationX>
+        <locationX>1854</locationX>
         <locationY>1490</locationY>
         <collectionProcessorType>SortCollectionProcessor</collectionProcessorType>
         <collectionReference>colvarMatchingNameMatchingEmail</collectionReference>
@@ -114,10 +410,35 @@
         </sortOptions>
     </collectionProcessors>
     <decisions>
+        <name>Contact_Creation_Error</name>
+        <label>Contact Creation Error</label>
+        <locationX>710</locationX>
+        <locationY>890</locationY>
+        <defaultConnector>
+            <targetReference>Build_PU_Update_On_Contact_Error</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Yes Error Recieved</defaultConnectorLabel>
+        <rules>
+            <name>No_Error_Recieved</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Create_Contact.output_Error_Recieved</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Build_PU_Update_On_Contact_Create</targetReference>
+            </connector>
+            <label>No Error Recieved</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Lead_Email_Matches_Product_User_Email</name>
         <label>Lead Email Matches Product User Email</label>
-        <locationX>1898</locationX>
-        <locationY>674</locationY>
+        <locationX>2514</locationX>
+        <locationY>566</locationY>
         <defaultConnector>
             <targetReference>End_Flow_Assign</targetReference>
         </defaultConnector>
@@ -126,48 +447,103 @@
             <name>Yes_Lead_Email_Matches_PU_Email</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>varRecordID.User_Email__c</leftValueReference>
+                <leftValueReference>Input_Product_User_Record.User_Email__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <elementReference>Get_PE_Record.Lead__c</elementReference>
+                    <elementReference>Input_Product_User_Record.Product_Environment__r.Lead__r.Email</elementReference>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Update_PU_Record_with_Lead_Information</targetReference>
+                <targetReference>Contact_Linked_On_PE_Lead_Email</targetReference>
             </connector>
             <label>Yes Lead Email Matches PU Email</label>
         </rules>
     </decisions>
     <decisions>
+        <name>Linked_to_Lead</name>
+        <label>Linked to Lead</label>
+        <locationX>1315</locationX>
+        <locationY>134</locationY>
+        <defaultConnector>
+            <targetReference>Linked_to_Product_Environment</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Lead Linked</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Converted_Lead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Input_Product_User_Record.Lead__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Input_Product_User_Record.Lead__r.IsConverted</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Link_Contact_Converted_Lead</targetReference>
+            </connector>
+            <label>Yes Converted Lead</label>
+        </rules>
+        <rules>
+            <name>Yes_Non_Converted_Lead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Input_Product_User_Record.Lead__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Input_Product_User_Record.Lead__r.IsConverted</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>No_Link_Non_Converted_Lead</targetReference>
+            </connector>
+            <label>Yes Non Converted Lead</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Linked_to_Product_Environment</name>
         <label>Linked to Product Environment</label>
-        <locationX>1958</locationX>
+        <locationX>2580</locationX>
         <locationY>242</locationY>
         <defaultConnector>
-            <targetReference>End_Flow</targetReference>
+            <targetReference>Contact_Linked_On_No_PE_Linked</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>No Not Linked to PE</defaultConnectorLabel>
         <rules>
             <name>Yes_Linked_to_PE</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>varRecordID.Product_Environment__c</leftValueReference>
+                <leftValueReference>Input_Product_User_Record.Product_Environment__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Get_PE_Record</targetReference>
+                <targetReference>PE_Linked_to_an_Account</targetReference>
             </connector>
             <label>Yes Linked to PE</label>
         </rules>
     </decisions>
     <decisions>
+        <description>Loops through to see if the record returned match on first and last name</description>
         <name>Matching_Name</name>
         <label>Matching Name?</label>
-        <locationX>1414</locationX>
-        <locationY>998</locationY>
+        <locationX>2030</locationX>
+        <locationY>890</locationY>
         <defaultConnector>
             <targetReference>Find_Matching_Name</targetReference>
         </defaultConnector>
@@ -176,14 +552,14 @@
             <name>Yes_Matching_Name</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>varRecordID.User_First_Name__c</leftValueReference>
+                <leftValueReference>Input_Product_User_Record.User_First_Name__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <elementReference>Find_Matching_Name.FirstName</elementReference>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>varRecordID.User_Last_Name__c</leftValueReference>
+                <leftValueReference>Input_Product_User_Record.User_Last_Name__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <elementReference>Find_Matching_Name.LastName</elementReference>
@@ -198,25 +574,24 @@
     <decisions>
         <name>Multiple_Email_and_Name_Matches</name>
         <label>Multiple Email and Name Matches?</label>
-        <locationX>1194</locationX>
-        <locationY>1382</locationY>
+        <locationX>1810</locationX>
+        <locationY>1274</locationY>
         <defaultConnector>
-            <isGoTo>true</isGoTo>
-            <targetReference>Sort_by_Last_Modified</targetReference>
+            <targetReference>Build_PU_Update_Linked_Contact_Many_Email_No_Name_Match</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>No Matching Name</defaultConnectorLabel>
         <rules>
             <name>X1_Match_Email_and_Name</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>varCountofContacts</leftValueReference>
+                <leftValueReference>var_Count_of_Name_Matches</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <numberValue>1.0</numberValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Update_Triggering_PU_Record</targetReference>
+                <targetReference>Build_PU_Update_Linked_on_1_Name_Match</targetReference>
             </connector>
             <label>1 Match Email and Name</label>
         </rules>
@@ -224,14 +599,14 @@
             <name>More_than_1_Match_Email_Name</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>varCountofContacts</leftValueReference>
+                <leftValueReference>var_Count_of_Name_Matches</leftValueReference>
                 <operator>GreaterThan</operator>
                 <rightValue>
                     <numberValue>1.0</numberValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Sort_by_Last_Modified</targetReference>
+                <targetReference>Build_PU_Update_Linked_Contact_Many_Email_1_Name_Match</targetReference>
             </connector>
             <label>More than 1 Match Email / Name</label>
         </rules>
@@ -239,8 +614,8 @@
     <decisions>
         <name>of_Matching_Contacts</name>
         <label># of Matching Contacts</label>
-        <locationX>622</locationX>
-        <locationY>782</locationY>
+        <locationX>1260</locationX>
+        <locationY>674</locationY>
         <defaultConnector>
             <targetReference>Find_Matching_Name</targetReference>
         </defaultConnector>
@@ -249,7 +624,7 @@
             <name>X0_Matching_Contacts</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>varCountofContacts</leftValueReference>
+                <leftValueReference>var_Count_of_Contacts_Returned</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <numberValue>0.0</numberValue>
@@ -264,14 +639,14 @@
             <name>X1_Matching_Contact</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>varCountofContacts</leftValueReference>
+                <leftValueReference>var_Count_of_Contacts_Returned</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <numberValue>1.0</numberValue>
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Update_PU_with_Contact_Information2</targetReference>
+                <targetReference>Adding_single_record_to_RV</targetReference>
             </connector>
             <label>1 Matching Contact</label>
         </rules>
@@ -279,8 +654,8 @@
     <decisions>
         <name>PE_Linked_to_an_Account</name>
         <label>PE Linked to an Account</label>
-        <locationX>1359</locationX>
-        <locationY>458</locationY>
+        <locationX>1986</locationX>
+        <locationY>350</locationY>
         <defaultConnector>
             <targetReference>Product_Environment_Linked_to_Lead</targetReference>
         </defaultConnector>
@@ -289,21 +664,14 @@
             <name>Yes_PE_Linked_to_Account</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Get_PE_Record.Account__c</leftValueReference>
+                <leftValueReference>Input_Product_User_Record.Product_Environment__r.Account__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
-            <conditions>
-                <leftValueReference>Get_PE_Record.Trial_Expiration__c</leftValueReference>
-                <operator>GreaterThan</operator>
-                <rightValue>
-                    <elementReference>fmlaTODAY</elementReference>
-                </rightValue>
-            </conditions>
             <connector>
-                <targetReference>Get_Matching_Contacts</targetReference>
+                <targetReference>Get_PE_Account_Contacts</targetReference>
             </connector>
             <label>Yes PE Linked to Account</label>
         </rules>
@@ -311,17 +679,17 @@
     <decisions>
         <name>Product_Environment_Linked_to_Lead</name>
         <label>Product Environment Linked to Lead</label>
-        <locationX>2096</locationX>
-        <locationY>566</locationY>
+        <locationX>2712</locationX>
+        <locationY>458</locationY>
         <defaultConnector>
-            <targetReference>End_Flow_Assignment</targetReference>
+            <targetReference>Contact_Linked_On_PE_Not_Linked_to_account_or_lead</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>No PE Not Linked to Lead</defaultConnectorLabel>
         <rules>
             <name>Yes_PE_Linked_to_Lead</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Get_PE_Record.Lead__c</leftValueReference>
+                <leftValueReference>Input_Product_User_Record.Product_Environment__r.Lead__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
@@ -333,40 +701,39 @@
             <label>Yes PE Linked to Lead</label>
         </rules>
     </decisions>
-    <decisions>
-        <name>Temp_Product_User_Placeholder</name>
-        <label>Temp Product User (Placeholder)</label>
-        <locationX>872</locationX>
-        <locationY>134</locationY>
-        <defaultConnector>
-            <targetReference>Linked_to_Product_Environment</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Not a Placeholder Email</defaultConnectorLabel>
-        <rules>
-            <name>Placeholder</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>varRecordID.User_Email__c</leftValueReference>
-                <operator>Contains</operator>
-                <rightValue>
-                    <stringValue>Placeholder</stringValue>
-                </rightValue>
-            </conditions>
-            <label>Placeholder</label>
-        </rules>
-    </decisions>
     <environments>Default</environments>
     <formulas>
         <name>fmlaTODAY</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
+    <formulas>
+        <name>for_Name_Match_Loop_Count_Update</name>
+        <dataType>Number</dataType>
+        <expression>{!var_Count_of_Name_Matches} + 1</expression>
+        <scale>0</scale>
+    </formulas>
     <interviewLabel>Product User: Contact Linking Flow Autolaunched {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Product User: Contact Linking Flow Autolaunched</label>
     <loops>
+        <description>Loop adds the single record found in collection to a single RV</description>
+        <name>Adding_single_record_to_RV</name>
+        <label>Adding single record to RV</label>
+        <locationX>1194</locationX>
+        <locationY>782</locationY>
+        <collectionReference>Get_PE_Account_Contacts</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Add_Collection_Record_to_Single_RV</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Build_PU_Update_Linked_on_1_found</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <loops>
         <name>Collection_Loop</name>
         <label>Collection Loop</label>
-        <locationX>1238</locationX>
+        <locationX>1854</locationX>
         <locationY>1598</locationY>
         <collectionReference>colvarMatchingNameMatchingEmail</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -374,15 +741,15 @@
             <targetReference>Assign_Contact_from_Sort_by_Last_Modified</targetReference>
         </nextValueConnector>
         <noMoreValuesConnector>
-            <targetReference>Update_Contact_on_Triggering_PU_Record</targetReference>
+            <targetReference>Build_PU_Update_Many_Matched_Email</targetReference>
         </noMoreValuesConnector>
     </loops>
     <loops>
         <name>Find_Matching_Name</name>
         <label>Find Matching Name</label>
-        <locationX>1194</locationX>
-        <locationY>890</locationY>
-        <collectionReference>Get_Matching_Contacts</collectionReference>
+        <locationX>1810</locationX>
+        <locationY>782</locationY>
+        <collectionReference>Get_PE_Account_Contacts</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
             <targetReference>Matching_Name</targetReference>
@@ -410,254 +777,104 @@
         </value>
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
-    <recordCreates>
-        <name>Create_Contact</name>
-        <label>Create Contact</label>
-        <locationX>50</locationX>
-        <locationY>890</locationY>
-        <connector>
-            <targetReference>Update_PU_with_Contact_Information</targetReference>
-        </connector>
-        <faultConnector>
-            <targetReference>Send_Slack_Error_Message</targetReference>
-        </faultConnector>
-        <inputAssignments>
-            <field>AccountId</field>
-            <value>
-                <elementReference>Get_PE_Record.Account__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Email</field>
-            <value>
-                <elementReference>varRecordID.User_Email__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>FirstName</field>
-            <value>
-                <elementReference>varRecordID.User_First_Name__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>LastName</field>
-            <value>
-                <elementReference>varRecordID.User_Last_Name__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>LeadSource</field>
-            <value>
-                <stringValue>Product</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Lead_Channel__c</field>
-            <value>
-                <elementReference>varRecordID.Brand__c</elementReference>
-            </value>
-        </inputAssignments>
-        <object>Contact</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordCreates>
     <recordLookups>
-        <name>Get_Matching_Contacts</name>
-        <label>Get Matching Contacts</label>
-        <locationX>622</locationX>
-        <locationY>566</locationY>
+        <description>Searches by Account ID and Email Address</description>
+        <name>Get_PE_Account_Contacts</name>
+        <label>Get PE Account Contacts</label>
+        <locationX>1260</locationX>
+        <locationY>458</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Assign_number_of_Contacts_Found</targetReference>
+            <targetReference>Count_Contacts</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>AccountId</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>Get_PE_Record.Account__r.Id</elementReference>
+                <elementReference>Input_Product_User_Record.Product_Environment__r.Account__c</elementReference>
             </value>
         </filters>
         <filters>
             <field>Email</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>varRecordID.User_Email__c</elementReference>
+                <elementReference>Input_Product_User_Record.User_Email__c</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>false</getFirstRecordOnly>
         <object>Contact</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
-    <recordLookups>
-        <name>Get_PE_Record</name>
-        <label>Get PE Record</label>
-        <locationX>1359</locationX>
-        <locationY>350</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>PE_Linked_to_an_Account</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>varRecordID.Product_Environment__r.Id</elementReference>
-            </value>
-        </filters>
-        <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>Product_Environment__c</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
     <recordUpdates>
-        <name>Update_Contact_on_Triggering_PU_Record</name>
-        <label>Update Contact on Triggering PU Record</label>
-        <locationX>1238</locationX>
-        <locationY>1898</locationY>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>varRecordID.Id</elementReference>
-            </value>
-        </filters>
-        <inputAssignments>
-            <field>Account__c</field>
-            <value>
-                <elementReference>Get_PE_Record.Account__r.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Contact__c</field>
-            <value>
-                <elementReference>varContactFromSortLastModified.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <object>Product_User__c</object>
+        <name>Update_Product_USer_Record</name>
+        <label>Update Product User Record</label>
+        <locationX>1315</locationX>
+        <locationY>2534</locationY>
+        <inputReference>r_Update_PU_Final</inputReference>
     </recordUpdates>
-    <recordUpdates>
-        <name>Update_PU_Record_with_Lead_Information</name>
-        <label>Update PU Record with Lead Information</label>
-        <locationX>1766</locationX>
-        <locationY>782</locationY>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>varRecordID.Id</elementReference>
-            </value>
-        </filters>
-        <inputAssignments>
-            <field>Lead__c</field>
-            <value>
-                <elementReference>Get_PE_Record.Lead__c</elementReference>
-            </value>
-        </inputAssignments>
-        <object>Product_User__c</object>
-    </recordUpdates>
-    <recordUpdates>
-        <name>Update_PU_with_Contact_Information</name>
-        <label>Update PU with Contact Information</label>
-        <locationX>50</locationX>
-        <locationY>998</locationY>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>varRecordID.Id</elementReference>
-            </value>
-        </filters>
-        <inputAssignments>
-            <field>Account__c</field>
-            <value>
-                <elementReference>Get_PE_Record.Account__r.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Contact__c</field>
-            <value>
-                <elementReference>Create_Contact</elementReference>
-            </value>
-        </inputAssignments>
-        <object>Product_User__c</object>
-    </recordUpdates>
-    <recordUpdates>
-        <name>Update_PU_with_Contact_Information2</name>
-        <label>Update PU with Contact Information</label>
-        <locationX>578</locationX>
-        <locationY>890</locationY>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>varRecordID.Id</elementReference>
-            </value>
-        </filters>
-        <inputAssignments>
-            <field>Contact__c</field>
-            <value>
-                <elementReference>currentItemFromSourceCollection.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <object>Product_User__c</object>
-    </recordUpdates>
-    <recordUpdates>
-        <name>Update_Triggering_PU_Record</name>
-        <label>Update Triggering PU Record</label>
-        <locationX>886</locationX>
-        <locationY>1490</locationY>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>varRecordID.Id</elementReference>
-            </value>
-        </filters>
-        <inputAssignments>
-            <field>Account__c</field>
-            <value>
-                <elementReference>Get_PE_Record.Account__r.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Contact__c</field>
-            <value>
-                <elementReference>Find_Matching_Name.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <object>Product_User__c</object>
-    </recordUpdates>
+    <runInMode>SystemModeWithoutSharing</runInMode>
     <start>
-        <locationX>746</locationX>
+        <locationX>1189</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Temp_Product_User_Placeholder</targetReference>
+            <targetReference>Linked_to_Lead</targetReference>
         </connector>
     </start>
     <status>Active</status>
     <subflows>
-        <name>Send_Slack_Error_Message</name>
-        <label>Send Slack Error Message</label>
-        <locationX>314</locationX>
-        <locationY>998</locationY>
-        <flowName>Autolaunched_Send_Slack_Message</flowName>
+        <description>Launch Create Contact Subflow: Autolaunch: Create Contact Service</description>
+        <name>Create_Contact</name>
+        <label>Create Contact</label>
+        <locationX>710</locationX>
+        <locationY>782</locationY>
+        <connector>
+            <targetReference>Contact_Creation_Error</targetReference>
+        </connector>
+        <flowName>Autolaunch_Create_Contact_Service</flowName>
         <inputAssignments>
-            <name>var_SlackConversationID</name>
+            <name>input_Link_To_Account_ID</name>
             <value>
-                <stringValue>C04RPB07761</stringValue>
+                <elementReference>Input_Product_User_Record.Product_Environment__r.Account__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
-            <name>var_SlackMessage</name>
+            <name>input_Owner_ID</name>
             <value>
-                <elementReference>txt_SlackMessageDuplicateContactFault</elementReference>
+                <elementReference>Input_Product_User_Record.Product_Environment__r.OwnerId</elementReference>
             </value>
         </inputAssignments>
+        <inputAssignments>
+            <name>input_Person_Email</name>
+            <value>
+                <elementReference>Input_Product_User_Record.User_Email__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>input_Person_First_Name</name>
+            <value>
+                <elementReference>Input_Product_User_Record.User_First_Name__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>input_Person_Last_Name</name>
+            <value>
+                <elementReference>Input_Product_User_Record.User_Last_Name__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>input_Skip_Lookup_Checks</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>input_Triggering_Automation</name>
+            <value>
+                <stringValue>Product User: Contact Linking Flow</stringValue>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
     </subflows>
     <textTemplates>
         <name>txt_SlackMessageDuplicateContactFault</name>
@@ -685,7 +902,36 @@ Duplicate Contact Exists
         <objectType>Contact</objectType>
     </variables>
     <variables>
-        <name>varContactFromSortLastModified</name>
+        <name>Input_Product_User_Record</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Product_User__c</objectType>
+    </variables>
+    <variables>
+        <name>Output_Contact_Link_On</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <description>ID of Contacted created or linked</description>
+        <name>Output_Linked_Contact_ID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>r_Single_Contact_Found</name>
         <dataType>SObject</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
@@ -693,7 +939,15 @@ Duplicate Contact Exists
         <objectType>Contact</objectType>
     </variables>
     <variables>
-        <name>varCountofContacts</name>
+        <name>r_Update_PU_Final</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Product_User__c</objectType>
+    </variables>
+    <variables>
+        <name>var_Count_of_Contacts_Returned</name>
         <dataType>Number</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
@@ -704,21 +958,22 @@ Duplicate Contact Exists
         </value>
     </variables>
     <variables>
-        <name>varEndFlow</name>
-        <dataType>String</dataType>
+        <name>var_Count_of_Name_Matches</name>
+        <dataType>Number</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
         <isOutput>false</isOutput>
+        <scale>0</scale>
         <value>
-            <stringValue></stringValue>
+            <numberValue>0.0</numberValue>
         </value>
     </variables>
     <variables>
-        <name>varRecordID</name>
+        <name>varContactFromSortLastModified</name>
         <dataType>SObject</dataType>
         <isCollection>false</isCollection>
-        <isInput>true</isInput>
+        <isInput>false</isInput>
         <isOutput>false</isOutput>
-        <objectType>Product_User__c</objectType>
+        <objectType>Contact</objectType>
     </variables>
 </Flow>
