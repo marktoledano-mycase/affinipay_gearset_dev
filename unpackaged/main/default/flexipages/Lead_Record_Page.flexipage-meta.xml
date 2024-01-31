@@ -64,6 +64,95 @@
                 <identifier>runtime_sales_lead_pathAssistant</identifier>
             </componentInstance>
         </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p&gt;&lt;strong style=&quot;color: rgb(253, 5, 5); font-size: 28px;&quot;&gt;Only Enterprise Payments Team can sell payments into this firm (both inbound or outbound)&lt;/strong&gt;&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText3</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Has_Referral_with_Paymnts_Entrprse_Acct__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>true</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p&gt;&lt;strong style=&quot;color: rgb(253, 10, 10); font-size: 28px;&quot;&gt;No outbound or inbound software sales, even if a customer initiates. They have a pre-existing relationship with one of our partners.&lt;/strong&gt;&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText4</identifier>
+                <visibilityRule>
+                    <booleanFilter>1 OR 2 OR 3 OR 4 OR 5 OR 6</booleanFilter>
+                    <criteria>
+                        <leftValue>{!Record.Has_Referral_with_Prohibited_Status__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>true</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Referral_Partnership__r.Partner_Account_has_Prohibition__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>true</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Current_LPM_Prohibited__c}</leftValue>
+                        <operator>CONTAINS</operator>
+                        <rightValue>Aderant</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Current_LPM_Prohibited__c}</leftValue>
+                        <operator>CONTAINS</operator>
+                        <rightValue>Firm Central</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Current_LPM_Prohibited__c}</leftValue>
+                        <operator>CONTAINS</operator>
+                        <rightValue>ProLaw</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Current_LPM_Prohibited__c}</leftValue>
+                        <operator>CONTAINS</operator>
+                        <rightValue>Thomson Reuters</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>decorate</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>richTextValue</name>
+                    <value>&lt;p&gt;&lt;strong style=&quot;color: rgb(253, 5, 5); font-size: 28px;&quot;&gt;Inbound software sales only, no outbound software sales.&lt;/strong&gt;&lt;/p&gt;</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:richText</componentName>
+                <identifier>flexipage_richText5</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Has_Referral_with_Prohibited_Status_Time__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>true</rightValue>
+                    </criteria>
+                </visibilityRule>
+            </componentInstance>
+        </itemInstances>
         <name>header</name>
         <type>Region</type>
     </flexiPageRegions>
@@ -726,6 +815,36 @@
                 <identifier>RecordDemo_Scheduled_Date_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.cRO1__c</fieldItem>
+                <identifier>RecordcRO1_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.cRO2__c</fieldItem>
+                <identifier>RecordcRO2_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.cRO3__c</fieldItem>
+                <identifier>RecordcRO3_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-c2858231-f880-4df2-8ebf-c07337d961b6</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -1259,6 +1378,16 @@
                 <identifier>RecordReferral_Token_cField2</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Workable__c</fieldItem>
+                <identifier>RecordWorkable_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-d304d2cd-dd06-4627-922c-9f5df2601af5</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -1311,6 +1440,16 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Employees_formula__c</fieldItem>
                 <identifier>RecordEmployees_formula_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Has_Referral_with_Paymnts_Entrprse_Acct__c</fieldItem>
+                <identifier>RecordHas_Referral_with_Paymnts_Entrprse_Acct_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-cfa1013e-7b80-4106-9519-f0d2ec6df7d9</name>
@@ -1959,6 +2098,108 @@
                 <identifier>RecordCASEpeer_Marketing_Engagement_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <name>Facet-3185a66c-61a8-4d95-ae2a-4586a9a2eb57</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Docketwise_Marketing_Engagement__c</fieldItem>
+                <identifier>RecordDocketwise_Marketing_Engagement_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.LawPay_Marketing_Engagement__c</fieldItem>
+                <identifier>RecordLawPay_Marketing_Engagement_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.CPACharge_Marketing_Engagement__c</fieldItem>
+                <identifier>RecordCPACharge_Marketing_Engagement_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Leading_Brand_Engagement__c</fieldItem>
+                <identifier>RecordLeading_Brand_Engagement_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <name>Facet-beb95687-8e84-4f72-ba19-27b47c0d5b6b</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-3185a66c-61a8-4d95-ae2a-4586a9a2eb57</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column33</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-beb95687-8e84-4f72-ba19-27b47c0d5b6b</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column34</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>Facet-ff29a5cb-cf2d-4981-8746-3c4bb155b880</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.MyCase_Marketing_Engagement__c</fieldItem>
+                <identifier>RecordMyCase_Marketing_Engagement_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.ClientPay_Marketing_Engagement__c</fieldItem>
+                <identifier>RecordClientPay_Marketing_Engagement_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.CASEpeer_Marketing_Engagement__c</fieldItem>
+                <identifier>RecordCASEpeer_Marketing_Engagement_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-c3fff7e6-e1a6-424c-807a-97e5cc952e31</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -2365,6 +2606,36 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
+                <fieldItem>Record.cRO1__c</fieldItem>
+                <identifier>RecordcRO1_cField2</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.cRO2__c</fieldItem>
+                <identifier>RecordcRO2_cField2</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.cRO3__c</fieldItem>
+                <identifier>RecordcRO3_cField2</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Facebook_Ad_Name__c</fieldItem>
                 <identifier>RecordFacebook_Ad_Name_cField</identifier>
             </fieldInstance>
@@ -2404,6 +2675,208 @@
             </componentInstance>
         </itemInstances>
         <name>Facet-fc711fa0-9bfa-41f1-ad69-1e92f16b5f36</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.X6sense_Street_Address__c</fieldItem>
+                <identifier>RecordX6sense_Street_Address_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.X6sense_City__c</fieldItem>
+                <identifier>RecordX6sense_City_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.X6sense_State_Region__c</fieldItem>
+                <identifier>RecordX6sense_State_Region_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.X6sense_Postal_Zip_Code__c</fieldItem>
+                <identifier>RecordX6sence_Postal_Zip_Code_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.X6sense_City__c</fieldItem>
+                <identifier>RecordX6sense_City_cField2</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.X6sense_Country_Abbreviated__c</fieldItem>
+                <identifier>RecordX6sense_Country_Abbreviated_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <name>Facet-4d9569dd-9ee2-4548-9390-697b82eb950d</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.X6sense_Account_Source__c</fieldItem>
+                <identifier>RecordX6sense_Account_Source_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.X6sense_Employee_Count_Est__c</fieldItem>
+                <identifier>RecordX6sense_Employee_Count_Est_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.X6sense_Employee_Range__c</fieldItem>
+                <identifier>RecordX6sense_Employee_Range_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.X6sense_Industry__c</fieldItem>
+                <identifier>RecordX6sense_Industry_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.X6sense_Revenue_Est__c</fieldItem>
+                <identifier>RecordX6sense_Revenue_Est_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.X6sense_Revenue_Range__c</fieldItem>
+                <identifier>RecordX6sense_Revenue_Range_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.X6sense_Segment__c</fieldItem>
+                <identifier>RecordX6sense_Segment_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.NAICS_Code__c</fieldItem>
+                <identifier>RecordNAICS_Code_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.NAICS_Description__c</fieldItem>
+                <identifier>RecordNAICS_Description_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.SIC_Code__c</fieldItem>
+                <identifier>RecordSIC_Code_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.SIC_Description__c</fieldItem>
+                <identifier>RecordSIC_Description_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <name>Facet-e25b229a-460d-4b8f-a055-c6ae4a0e68e9</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-4d9569dd-9ee2-4548-9390-697b82eb950d</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column35</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-e25b229a-460d-4b8f-a055-c6ae4a0e68e9</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column40</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>Facet-8feefcc9-6073-430a-ab16-e36f69b867e0</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -2733,6 +3206,24 @@
             <componentInstance>
                 <componentInstanceProperties>
                     <name>columns</name>
+                    <value>Facet-8feefcc9-6073-430a-ab16-e36f69b867e0</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>label</name>
+                    <value>6sense</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:fieldSection</componentName>
+                <identifier>flexipage_fieldSection21</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>columns</name>
                     <value>Facet-cd9fd318-62a1-4a44-9a03-927009ef4f99</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
@@ -2968,6 +3459,21 @@
                         </valueListItems>
                         <valueListItems>
                             <value>Requested_At__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>CASEpeer_Marketing_Score__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>CPACharge_Marketing_Score__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Docketwise_Marketing_Score__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Lawpay_Marketing_Score__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>MyCase_Marketing_Score__c</value>
                         </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
