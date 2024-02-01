@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Sends an email to the contact letting them know that their requested subscription change has successfully processed</description>
+        <name>Send_Confirmation_Email</name>
+        <label>Send Confirmation Email</label>
+        <locationX>1106</locationX>
+        <locationY>647</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+            <value>
+                <elementReference>$Record.ContactId</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailTemplateId</name>
+            <value>
+                <elementReference>Get_Confirmation_Email_Template.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <description>Sends email to the contact explaining they need to be an admin user in order to change their subscription plan</description>
+        <name>Send_Non_Admin_Email</name>
+        <label>Send Non Admin Email</label>
+        <locationX>314</locationX>
+        <locationY>863</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Non_Admin_Case_Update</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+            <value>
+                <elementReference>$Record.ContactId</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>logEmailOnSend</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailTemplateId</name>
+            <value>
+                <elementReference>Get_Non_Admin_Email_Template.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>59.0</apiVersion>
+    <decisions>
+        <description>Evaluates if the Case entering this flow has a contact</description>
+        <name>Has_Contact</name>
+        <label>Has Contact</label>
+        <locationX>578</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>No Contact</defaultConnectorLabel>
+        <rules>
+            <name>Case_Has_Contact</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.ContactId</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Product_User</targetReference>
+            </connector>
+            <label>Case Has Contact</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Evaluates if the existing case is closed</description>
+        <name>Is_Case_Closed</name>
+        <label>Is Case Closed?</label>
+        <locationX>1238</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>Open</defaultConnectorLabel>
+        <rules>
+            <name>Is_Closed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Confirmation_Email_Template</targetReference>
+            </connector>
+            <label>Is Closed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks to see if the case that triggers this flow is new or existing</description>
+        <name>Is_New_Case</name>
+        <label>Is New Case?</label>
+        <locationX>908</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>Is_Case_Closed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Existing Case</defaultConnectorLabel>
+        <rules>
+            <name>New_Case</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>IsNewFormula</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Has_Contact</targetReference>
+            </connector>
+            <label>New Case</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks to see if the contact that populated the case has an associated product user that is the master user</description>
+        <name>Is_Product_User_Master_User</name>
+        <label>Is Product User Master User?</label>
+        <locationX>314</locationX>
+        <locationY>647</locationY>
+        <defaultConnectorLabel>No Product User Found</defaultConnectorLabel>
+        <rules>
+            <name>Is_Master_User</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Product_User.Master_User__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Case_Details</targetReference>
+            </connector>
+            <label>Is Master User</label>
+        </rules>
+        <rules>
+            <name>Not_Master_User</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Product_User.Master_User__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Non_Admin_Email_Template</targetReference>
+            </connector>
+            <label>Not Master User</label>
+        </rules>
+    </decisions>
+    <description>Supports the MyCase Subscription Downgrade process</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Formula to see if the case is new</description>
+        <name>IsNewFormula</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <interviewLabel>Case - MyCase Subscription Change Request {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Case - MyCase Subscription Change Request</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Get the email template record details to use in the email alert flow action</description>
+        <name>Get_Confirmation_Email_Template</name>
+        <label>Get Confirmation Email Template</label>
+        <locationX>1106</locationX>
+        <locationY>539</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Send_Confirmation_Email</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Downgrade_Confirmation</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>EmailTemplate</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Get the email template record details to use in the email alert flow action</description>
+        <name>Get_Non_Admin_Email_Template</name>
+        <label>Get Non Admin Email Template</label>
+        <locationX>314</locationX>
+        <locationY>755</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Send_Non_Admin_Email</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>X2022_Price_Increase_Non_Admin_User</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>EmailTemplate</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Gets the product user associated to the contact that entered the flow</description>
+        <name>Get_Product_User</name>
+        <label>Get Product User</label>
+        <locationX>314</locationX>
+        <locationY>539</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Is_Product_User_Master_User</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Contact__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.ContactId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Brand__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>MyCase</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Customer</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Product_User__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Updates and closes case since contact is not an admin user</description>
+        <name>Non_Admin_Case_Update</name>
+        <label>Non Admin Case Update</label>
+        <locationX>314</locationX>
+        <locationY>971</locationY>
+        <inputAssignments>
+            <field>Case_Sub_Reason__c</field>
+            <value>
+                <stringValue>Downgrade Canceled</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MyCase_Send_Close_Notification_Survey__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Reason</field>
+            <value>
+                <stringValue>Administrative Support</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Resolution_mc__c</field>
+            <value>
+                <stringValue>Administrative</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Closed</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Updates the case details upon creation</description>
+        <name>Update_Case_Details</name>
+        <label>Update Case Details</label>
+        <locationX>50</locationX>
+        <locationY>755</locationY>
+        <inputAssignments>
+            <field>Case_Sub_Reason__c</field>
+            <value>
+                <stringValue>Downgrade</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MyCase_Send_Close_Notification_Survey__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Reason</field>
+            <value>
+                <stringValue>Administrative Support</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Resolution_mc__c</field>
+            <value>
+                <stringValue>Administrative</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>782</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Is_New_Case</targetReference>
+        </connector>
+        <filterFormula>ISPICKVAL({!$Record.Origin}, &quot;Email (MyCase Subscription Change)&quot;)
+&amp;&amp;
+{!$Record.RecordType.DeveloperName}= &quot;MyCase_Support&quot;</filterFormula>
+        <object>Case</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>
