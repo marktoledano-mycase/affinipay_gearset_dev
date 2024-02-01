@@ -38,6 +38,10 @@
                 <behavior>Edit</behavior>
                 <field>Payments_Enterprise_Account__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Payments_Enterprise_Account2__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

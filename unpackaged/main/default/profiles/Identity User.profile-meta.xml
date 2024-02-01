@@ -3724,6 +3724,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Referral__c.Payments_Enterprise_Account2__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Referral__c.Primary_Referral_Partnership__c</field>
         <readable>true</readable>
     </fieldPermissions>

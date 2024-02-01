@@ -11,10 +11,10 @@
             <name>Yes_Payments_Enterprise_Account_is_True</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.Payments_Enterprise_Account__c</leftValueReference>
+                <leftValueReference>$Record.Payments_Enterprise_Account2__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <booleanValue>true</booleanValue>
+                    <stringValue>Yes</stringValue>
                 </rightValue>
             </conditions>
             <connector>
