@@ -388,6 +388,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Referral__c.Payments_Enterprise_Account2__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Trial_Request__c.CASEpeer_Marketing_Engagement__c</field>
         <readable>true</readable>
     </fieldPermissions>
