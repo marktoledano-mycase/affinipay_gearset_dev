@@ -48,6 +48,11 @@
                 <label>MQA</label>
             </value>
             <value>
+                <fullName>Partner Oath</fullName>
+                <default>false</default>
+                <label>Partner Oath</label>
+            </value>
+            <value>
                 <fullName>Referral</fullName>
                 <default>false</default>
                 <label>Referral</label>
