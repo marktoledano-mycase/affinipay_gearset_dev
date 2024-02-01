@@ -10,7 +10,7 @@
     <textOnly>Hello {!Contact.FirstName},
 
 
-Your request to change your subscription is invalid as you are not an Admin User on your firm’s account. Please have an Admin User send a separate request to subscription.change@mycase.com in order to switch your subscription to the basic plan.
+Your request to change your subscription is invalid as you are not an Admin User on your firm’s account. Please have an Admin User send a separate request to subscription.change@mycase.com in order to switch your subscription plan.
 
 
 Please contact support with any questions here between the hours of 6am - 5pm PT; we’d be happy to help you.
