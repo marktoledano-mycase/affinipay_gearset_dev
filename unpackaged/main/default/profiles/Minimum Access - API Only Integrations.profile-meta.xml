@@ -1183,6 +1183,10 @@
         <visibility>Hidden</visibility>
     </tabVisibilities>
     <layoutAssignments>
+        <layout>CaseClose-Partner Close Case Layout</layout>
+        <recordType>Case.Partner</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Product_Environment__c-Docketwise Product Environment Layout</layout>
         <recordType>Product_Environment__c.Docketwise</recordType>
     </layoutAssignments>

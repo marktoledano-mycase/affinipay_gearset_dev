@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Partnership Case Queue</name>
+    <queueMembers>
+        <roles>
+            <role>Account_Executive_Partnerships</role>
+            <role>Partnerships_Director</role>
+            <role>Technology_Partnerships</role>
+            <role>VP_Affinity_Partner_Marketing</role>
+        </roles>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

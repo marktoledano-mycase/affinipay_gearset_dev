@@ -194,6 +194,12 @@
         <cssExposed>false</cssExposed>
     </standardValue>
     <standardValue>
+        <fullName>BizDev</fullName>
+        <default>false</default>
+        <label>BizDev</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
         <fullName>Bug/Outage</fullName>
         <default>false</default>
         <label>Bug/Outage</label>
@@ -722,6 +728,12 @@
         <cssExposed>false</cssExposed>
     </standardValue>
     <standardValue>
+        <fullName>Legal</fullName>
+        <default>false</default>
+        <label>Legal</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
         <fullName>Legal Name/Tax ID Change</fullName>
         <default>false</default>
         <label>Legal Name/Tax ID Change</label>
@@ -1241,6 +1253,12 @@
         <fullName>Risk/Compliance</fullName>
         <default>false</default>
         <label>Risk/Compliance</label>
+        <cssExposed>false</cssExposed>
+    </standardValue>
+    <standardValue>
+        <fullName>Royalty</fullName>
+        <default>false</default>
+        <label>Royalty</label>
         <cssExposed>false</cssExposed>
     </standardValue>
     <standardValue>

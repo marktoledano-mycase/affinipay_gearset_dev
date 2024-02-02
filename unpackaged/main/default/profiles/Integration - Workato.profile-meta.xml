@@ -18657,6 +18657,10 @@
         <layout>Case-Case Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Case-Partnerships</layout>
+        <recordType>Case.Partner</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Case-Case Layout</layout>
         <recordType>Case.Payment_Services</recordType>
     </layoutAssignments>
@@ -18707,6 +18711,10 @@
     <layoutAssignments>
         <layout>CaseClose-BIlling Close Case Layout</layout>
         <recordType>Case.MyCase_Accounting</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CaseClose-Partner Close Case Layout</layout>
+        <recordType>Case.Partner</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>CaseClose-BIlling Close Case Layout</layout>
@@ -20909,6 +20917,11 @@
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Case.MyCase_Websites</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Case.Partner</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
