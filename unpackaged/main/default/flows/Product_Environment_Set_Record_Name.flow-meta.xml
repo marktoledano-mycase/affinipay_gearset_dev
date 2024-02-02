@@ -4,44 +4,35 @@
     <assignments>
         <name>Record_Type</name>
         <label>Record Type</label>
-        <locationX>50</locationX>
-        <locationY>395</locationY>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
         <assignmentItems>
             <assignToReference>$Record.Name</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>PE_Record_Name_DW</elementReference>
+                <elementReference>f_PE_Record_Name</elementReference>
             </value>
         </assignmentItems>
     </assignments>
-    <decisions>
-        <name>Assign_Name_Var</name>
-        <label>Assign Name Var</label>
-        <locationX>182</locationX>
-        <locationY>287</locationY>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>Docketwise</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Brand__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Docketwise</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Record_Type</targetReference>
-            </connector>
-            <label>Docketwise</label>
-        </rules>
-    </decisions>
     <description>Sets record name when name is the record ID</description>
     <environments>Default</environments>
     <formulas>
-        <name>PE_Record_Name_DW</name>
+        <name>f_Firm_ID</name>
         <dataType>String</dataType>
-        <expression>LEFT({!$Record.Firm_Name__c}, 78 - LEN({!$Record.Firm_ID_DW__c}) - 3) &amp; &quot; - &quot; &amp; {!$Record.Firm_ID_DW__c}</expression>
+        <expression>case({!$Record.Brand__c},
+&quot;MyCase&quot;, {!$Record.Firm_ID__c},
+&quot;Docketwise&quot;, {!$Record.Firm_ID_DW__c},
+&quot;Lawpay&quot;, {!$Record.VTID__c},
+&quot;AffiniPay&quot;, {!$Record.VTID__c},
+&quot;CPACharge&quot;, {!$Record.VTID__c},
+&quot;LawPay&quot;, {!$Record.VTID__c},
+&quot;&quot;
+)</expression>
+    </formulas>
+    <formulas>
+        <name>f_PE_Record_Name</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Record.Firm_Name__c}, 78 - LEN({!f_Firm_ID}) - 3) &amp; &quot; - &quot; &amp; {!f_Firm_ID}</expression>
     </formulas>
     <interviewLabel>Product Environment: Set Record Name {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Product Environment: Set Record Name</label>
@@ -65,10 +56,10 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <start>
-        <locationX>56</locationX>
+        <locationX>50</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Assign_Name_Var</targetReference>
+            <targetReference>Record_Type</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
