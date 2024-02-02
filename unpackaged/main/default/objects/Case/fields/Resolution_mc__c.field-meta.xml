@@ -29,6 +29,11 @@
                 <label>Hire</label>
             </value>
             <value>
+                <fullName>Integration Management</fullName>
+                <default>false</default>
+                <label>Integration Management</label>
+            </value>
+            <value>
                 <fullName>No Hire</fullName>
                 <default>false</default>
                 <label>No Hire</label>
@@ -37,6 +42,16 @@
                 <fullName>Product Feedback</fullName>
                 <default>false</default>
                 <label>Product Feedback</label>
+            </value>
+            <value>
+                <fullName>Sent to Sales</fullName>
+                <default>false</default>
+                <label>Sent to Sales</label>
+            </value>
+            <value>
+                <fullName>Sent to Support</fullName>
+                <default>false</default>
+                <label>Sent to Support</label>
             </value>
             <value>
                 <fullName>Special Ops</fullName>
@@ -53,21 +68,21 @@
                 <default>false</default>
                 <label>System Performance / Bug</label>
             </value>
-                <value>
-                    <fullName>Training - General</fullName>
-                    <default>false</default>
-                    <label>Training - General</label>
-                </value>
+            <value>
+                <fullName>Training - General</fullName>
+                <default>false</default>
+                <label>Training - General</label>
+            </value>
+            <value>
+                <fullName>Training - Usability</fullName>
+                <default>false</default>
+                <label>Training - Usability</label>
+            </value>
             <value>
                 <fullName>Unresponsive</fullName>
                 <default>false</default>
                 <label>Unresponsive</label>
             </value>
-                <value>
-                    <fullName>Training - Usability</fullName>
-                    <default>false</default>
-                    <label>Training - Usability</label>
-                </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

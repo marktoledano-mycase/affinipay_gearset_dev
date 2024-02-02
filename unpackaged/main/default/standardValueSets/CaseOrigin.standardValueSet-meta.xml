@@ -37,6 +37,11 @@
         <label>Called support line</label>
     </standardValue>
     <standardValue>
+        <fullName>Chat (LawPay)</fullName>
+        <default>false</default>
+        <label>Chat (LawPay)</label>
+    </standardValue>
+    <standardValue>
         <fullName>Chat (Soluno)</fullName>
         <default>false</default>
         <label>Chat (Soluno)</label>
@@ -92,6 +97,11 @@
         <label>Email (Contact Center)</label>
     </standardValue>
     <standardValue>
+        <fullName>Email (LawPay)</fullName>
+        <default>false</default>
+        <label>Email (LawPay)</label>
+    </standardValue>
+    <standardValue>
         <fullName>Email (MyCase)</fullName>
         <default>false</default>
         <label>Email (MyCase)</label>
@@ -110,6 +120,11 @@
         <fullName>Email (MyCase Websites)</fullName>
         <default>false</default>
         <label>Email (MyCase Websites)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email (Partner)</fullName>
+        <default>false</default>
+        <label>Email (Partner)</label>
     </standardValue>
     <standardValue>
         <fullName>Email (Payment Election)</fullName>
@@ -137,6 +152,11 @@
         <label>Email (Rentlinx Support)</label>
     </standardValue>
     <standardValue>
+        <fullName>Email (Soluno)</fullName>
+        <default>false</default>
+        <label>Email (Soluno)</label>
+    </standardValue>
+    <standardValue>
         <fullName>Email (Solutions)</fullName>
         <default>false</default>
         <label>Email (Solutions)</label>
@@ -160,6 +180,11 @@
         <fullName>Email (Website Changes)</fullName>
         <default>false</default>
         <label>Email (Website Changes)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email (Woodpecker Support)</fullName>
+        <default>false</default>
+        <label>Email (Woodpecker Support)</label>
     </standardValue>
     <standardValue>
         <fullName>Emailed IM support</fullName>
@@ -207,9 +232,19 @@
         <label>In-App</label>
     </standardValue>
     <standardValue>
+        <fullName>In-App (LawPay)</fullName>
+        <default>false</default>
+        <label>In-App (LawPay)</label>
+    </standardValue>
+    <standardValue>
         <fullName>Initiative</fullName>
         <default>false</default>
         <label>Initiative</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Intercom</fullName>
+        <default>false</default>
+        <label>Intercom</label>
     </standardValue>
     <standardValue>
         <fullName>Internal</fullName>
@@ -235,6 +270,11 @@
         <fullName>Internal: V+</fullName>
         <default>false</default>
         <label>Internal: V+</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Internal (Customer Support)</fullName>
+        <default>false</default>
+        <label>Internal (Customer Support)</label>
     </standardValue>
     <standardValue>
         <fullName>Key Account Team</fullName>
@@ -317,6 +357,16 @@
         <label>Phone (Consumer Relations)</label>
     </standardValue>
     <standardValue>
+        <fullName>Phone (LawPay)</fullName>
+        <default>false</default>
+        <label>Phone (LawPay)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Phone (Soluno)</fullName>
+        <default>false</default>
+        <label>Phone (Soluno)</label>
+    </standardValue>
+    <standardValue>
         <fullName>Phone (Support Request)</fullName>
         <default>false</default>
         <label>Phone (Support Request)</label>
@@ -330,6 +380,11 @@
         <fullName>Phone 4 (CR - Main)</fullName>
         <default>false</default>
         <label>Phone 4 (CR - Main)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Phone VM (Soluno)</fullName>
+        <default>false</default>
+        <label>Phone VM (Soluno)</label>
     </standardValue>
     <standardValue>
         <fullName>Proactive Outreach</fullName>
@@ -367,58 +422,13 @@
         <label>Web: Product Request</label>
     </standardValue>
     <standardValue>
-        <fullName>Web - Community KB (MyCase)</fullName>
-        <default>false</default>
-        <label>Web - Community KB (MyCase)</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Email (Soluno)</fullName>
-        <default>false</default>
-        <label>Email (Soluno)</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Phone (Soluno)</fullName>
-        <default>false</default>
-        <label>Phone (Soluno)</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Phone VM (Soluno)</fullName>
-        <default>false</default>
-        <label>Phone VM (Soluno)</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Intercom</fullName>
-        <default>false</default>
-        <label>Intercom</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Email (LawPay)</fullName>
-        <default>false</default>
-        <label>Email (LawPay)</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Chat (LawPay)</fullName>
-        <default>false</default>
-        <label>Chat (LawPay)</label>
-    </standardValue>
-    <standardValue>
-        <fullName>In-App (LawPay)</fullName>
-        <default>false</default>
-        <label>In-App (LawPay)</label>
-    </standardValue>
-    <standardValue>
         <fullName>Web (LawPay)</fullName>
         <default>false</default>
         <label>Web (LawPay)</label>
     </standardValue>
     <standardValue>
-        <fullName>Phone (LawPay)</fullName>
+        <fullName>Web - Community KB (MyCase)</fullName>
         <default>false</default>
-        <label>Phone (LawPay)</label>
-    </standardValue>
-    <standardValue>
-        <fullName>Email (Woodpecker Support)</fullName>
-        <default>false</default>
-        <label>Email (Woodpecker Support)</label>
+        <label>Web - Community KB (MyCase)</label>
     </standardValue>
 </StandardValueSet>
