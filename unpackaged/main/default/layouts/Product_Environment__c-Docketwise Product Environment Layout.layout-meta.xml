@@ -20,7 +20,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Stripe_Price_ID_DW__c</field>
+                <field>Firm_ID_DW__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -104,6 +104,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Stripe_Subscription_Item_ID_DW__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Stripe_Price_ID_DW__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
