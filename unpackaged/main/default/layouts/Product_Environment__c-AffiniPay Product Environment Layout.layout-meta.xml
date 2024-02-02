@@ -272,6 +272,14 @@
                 <behavior>Edit</behavior>
                 <field>Payments_Reminders_Opt_Out_Date__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>LPP_Provisioned_Date__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>LPP_Provisioned__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
