@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>When Admin User emails to downgrade their subscription</description>
+    <encodingKey>UTF-8</encodingKey>
+    <letterhead>MyCase_Inc_v1</letterhead>
+    <name>Downgrade Confirmation</name>
+    <style>freeForm</style>
+    <subject>Subscription Change Confirmed</subject>
+    <textOnly>Hello {!Contact.FirstName},
+
+
+Your request has been processed successfully and your account will automatically switch to your requested tier on your next billing date. To view details about your subscription and billing information, login to your MyCase account, then navigate to the Billing Plan section of Firm Settings. (For step by step instructions, click here.)
+
+
+
+If you change your mind, please send an email to billing@mycase.com and we’ll cancel your change request (up to 2 business days before your next billing date).
+
+
+Please contact support with any questions here between the hours of 6am - 5pm PT; we’d be happy to help you.
+
+
+
+Sincerely,
+
+The MyCase Team</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>
