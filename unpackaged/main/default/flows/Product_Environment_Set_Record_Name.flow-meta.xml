@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <assignments>
+        <name>Record_Type</name>
+        <label>Record Type</label>
+        <locationX>50</locationX>
+        <locationY>395</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>PE_Record_Name_DW</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Assign_Name_Var</name>
+        <label>Assign Name Var</label>
+        <locationX>182</locationX>
+        <locationY>287</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Docketwise</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Brand__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Docketwise</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Record_Type</targetReference>
+            </connector>
+            <label>Docketwise</label>
+        </rules>
+    </decisions>
+    <description>Sets record name when name is the record ID</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>PE_Record_Name_DW</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Record.Firm_Name__c}, 78 - LEN({!$Record.Firm_ID_DW__c}) - 3) &amp; &quot; - &quot; &amp; {!$Record.Firm_ID_DW__c}</expression>
+    </formulas>
+    <interviewLabel>Product Environment: Set Record Name {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Product Environment: Set Record Name</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Assign_Name_Var</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>StartsWith</operator>
+            <value>
+                <stringValue>a2Z</stringValue>
+            </value>
+        </filters>
+        <object>Product_Environment__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>
