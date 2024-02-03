@@ -9,6 +9,12 @@
         <actionType>emailSimple</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>EmailList</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
             <name>emailSubject</name>
             <value>
                 <stringValue>Non-MyCase Website Purchase Alert</stringValue>
@@ -18,6 +24,12 @@
             <name>emailBody</name>
             <value>
                 <elementReference>EmailTemplate</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
             </value>
         </inputParameters>
         <nameSegment>emailSimple</nameSegment>
@@ -106,10 +118,22 @@
         <recordTriggerType>Update</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>InvalidDraft</status>
+    <status>Active</status>
+    <textTemplates>
+        <name>EmailList</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>salesforce@mycase.com</text>
+    </textTemplates>
     <textTemplates>
         <name>EmailTemplate</name>
         <isViewedAsPlainText>false</isViewedAsPlainText>
-        <text>&lt;p&gt;Opportunity: {!$Record.Name} ({!$Record.Id})&lt;/p&gt;&lt;p&gt;Purchasing Brand: {!$Record.Website_Purchasing_Brand__c}&lt;/p&gt;&lt;p&gt;Value+: {!Find_Websites_Value.Name} {!Find_Websites_Value.Id}&lt;/p&gt;</text>
+        <text>&lt;p&gt;Non-MyCase Website Opportunity Close - Won&lt;/p&gt;&lt;p&gt;Opportunity: {!$Record.Name} ({!$Record.Id})&lt;/p&gt;&lt;p&gt;Purchasing Brand: {!$Record.Website_Purchasing_Brand__c}&lt;/p&gt;&lt;p&gt;Value+: {!Find_Websites_Value.Name} {!Find_Websites_Value.Id}&lt;/p&gt;</text>
     </textTemplates>
+    <variables>
+        <name>Emails</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
 </Flow>
