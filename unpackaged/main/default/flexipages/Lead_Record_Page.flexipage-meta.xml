@@ -445,6 +445,26 @@
                 </visibilityRule>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Sales_Rep_Name__c</fieldItem>
+                <identifier>RecordSales_Rep_Name_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Partner_Account_Number__c</fieldItem>
+                <identifier>RecordPartner_Account_Number_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-272f7461-5595-4460-b8ec-d3df6c5448a2</name>
         <type>Facet</type>
     </flexiPageRegions>
