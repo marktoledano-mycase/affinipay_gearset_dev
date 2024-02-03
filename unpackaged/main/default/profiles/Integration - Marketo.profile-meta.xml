@@ -1724,6 +1724,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Contact.Partner_Account_Number__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Contact.Partner_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1790,6 +1795,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Contact.Sales_Product_Tier__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.Sales_Rep_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3399,6 +3409,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Lead.Partner_Account_Number__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Lead.Partner_Request_Form__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -3470,6 +3485,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Lead.Sales_Product_Tier__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Sales_Rep_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
