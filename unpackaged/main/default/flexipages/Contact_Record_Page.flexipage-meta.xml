@@ -301,6 +301,46 @@
                 <identifier>RecordLead_Channel_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Partner_Name__c</fieldItem>
+                <identifier>RecordPartner_Name_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Partner_Referral_Email__c</fieldItem>
+                <identifier>RecordPartner_Referral_Email_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Sales_Rep_Name__c</fieldItem>
+                <identifier>RecordSales_Rep_Name_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Partner_Account_Number__c</fieldItem>
+                <identifier>RecordPartner_Account_Number_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-c4bd7bd5-a9d4-42ab-b277-989178b64f7f</name>
         <type>Facet</type>
     </flexiPageRegions>
