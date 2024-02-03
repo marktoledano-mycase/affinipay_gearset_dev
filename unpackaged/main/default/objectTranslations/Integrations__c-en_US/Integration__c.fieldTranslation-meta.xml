@@ -15,6 +15,10 @@
             <translation><!-- Case Status --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>Clearbrief</masterLabel>
+            <translation><!-- Clearbrief --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>ClientCredit</masterLabel>
             <translation><!-- ClientCredit --></translation>
         </picklistValues>
@@ -97,6 +101,10 @@
         <picklistValues>
             <masterLabel>Smith AI</masterLabel>
             <translation><!-- Smith AI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Time Miner</masterLabel>
+            <translation><!-- Time Miner --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Truve</masterLabel>

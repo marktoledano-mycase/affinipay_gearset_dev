@@ -28,6 +28,11 @@
                 <label>Case Status</label>
             </value>
             <value>
+                <fullName>Clearbrief</fullName>
+                <default>false</default>
+                <label>Clearbrief</label>
+            </value>
+            <value>
                 <fullName>ClientCredit</fullName>
                 <default>false</default>
                 <label>ClientCredit</label>
@@ -131,6 +136,11 @@
                 <fullName>smith_ai</fullName>
                 <default>false</default>
                 <label>Smith AI</label>
+            </value>
+            <value>
+                <fullName>timeminer</fullName>
+                <default>false</default>
+                <label>Time Miner</label>
             </value>
             <value>
                 <fullName>truve</fullName>
