@@ -40,17 +40,7 @@
                         <valueListItems>
                             <value>Opportunity.SE_Request</value>
                             <visibilityRule>
-                                <booleanFilter>(1 OR 2 OR 4 OR 5) AND 3</booleanFilter>
-                                <criteria>
-                                    <leftValue>{!Record.Record_Type_Name__c}</leftValue>
-                                    <operator>EQUAL</operator>
-                                    <rightValue>MyCase</rightValue>
-                                </criteria>
-                                <criteria>
-                                    <leftValue>{!Record.Record_Type_Name__c}</leftValue>
-                                    <operator>CONTAINS</operator>
-                                    <rightValue>LawPay</rightValue>
-                                </criteria>
+                                <booleanFilter>1 OR 2</booleanFilter>
                                 <criteria>
                                     <leftValue>{!Record.IsClosed}</leftValue>
                                     <operator>EQUAL</operator>
@@ -58,13 +48,8 @@
                                 </criteria>
                                 <criteria>
                                     <leftValue>{!Record.Record_Type_Name__c}</leftValue>
-                                    <operator>EQUAL</operator>
-                                    <rightValue>CPACharge</rightValue>
-                                </criteria>
-                                <criteria>
-                                    <leftValue>{!Record.Record_Type_Name__c}</leftValue>
-                                    <operator>EQUAL</operator>
-                                    <rightValue>Docketwise</rightValue>
+                                    <operator>NE</operator>
+                                    <rightValue>Websites</rightValue>
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>
@@ -1578,6 +1563,16 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Qualification_Fields_Completed__c</fieldItem>
                 <identifier>RecordQualification_Fields_Completed_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Last_Touch_Automation__c</fieldItem>
+                <identifier>RecordLast_Touch_Automation_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-7ef3b657-b057-4c8a-af86-183f7e12a232</name>
