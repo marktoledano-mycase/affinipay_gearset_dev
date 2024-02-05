@@ -3,7 +3,7 @@
     <fullName>Websites_Closed_Won_Purchase_Brand</fullName>
     <active>true</active>
     <description>Websites Opportunities must have a Website Purchasing Brand specified before Closed Won</description>
-    <errorConditionFormula>AND(Record_Type_Name__c = &#39;Websites&#39;,  ISBLANK(TEXT(Website_Purchasing_Brand__c)))</errorConditionFormula>
+    <errorConditionFormula>AND(Record_Type_Name__c = &#39;Websites&#39;,  ISBLANK(TEXT(Website_Purchasing_Brand__c)), TEXT(StageName) = &#39;Closed Won&#39;)</errorConditionFormula>
     <errorDisplayField>Website_Purchasing_Brand__c</errorDisplayField>
     <errorMessage>Website Purchasing Brand must be selected before setting Closed Won</errorMessage>
 </ValidationRule>
