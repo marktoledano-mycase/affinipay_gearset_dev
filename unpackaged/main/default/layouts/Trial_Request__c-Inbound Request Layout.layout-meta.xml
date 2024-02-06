@@ -58,6 +58,10 @@
                 <behavior>Edit</behavior>
                 <field>Professional_Service_Status__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Marketing_Campaign__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
