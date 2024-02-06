@@ -592,7 +592,7 @@
             </conditions>
             <conditions>
                 <leftValueReference>$Record__Prior.Data_Migration_Stage__c</leftValueReference>
-                <operator>EqualTo</operator>
+                <operator>NotEqualTo</operator>
                 <rightValue>
                     <stringValue>Lost</stringValue>
                 </rightValue>
