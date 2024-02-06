@@ -1644,6 +1644,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Campaign.utm_campaign__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>CampaignMember.AffiniPay_ID__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -9605,6 +9610,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Trial_Request__c.MQL_Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Trial_Request__c.Marketing_Campaign__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
