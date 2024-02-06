@@ -18,6 +18,29 @@
         </connector>
     </assignments>
     <assignments>
+        <name>Churn_Risk_Assignment</name>
+        <label>Churn Risk</label>
+        <locationX>1704</locationX>
+        <locationY>763</locationY>
+        <assignmentItems>
+            <assignToReference>rv_Onboarding_Record_Update.Churn_Risk__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>for_TodaysDate</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rv_Onboarding_Record_Update.Stage_Entered__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>for_TodaysDate</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Onboarding_Record</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>Introduction_sent</name>
         <label>Introduction sent</label>
         <locationX>272</locationX>
@@ -133,10 +156,33 @@
         </connector>
     </assignments>
     <assignments>
+        <name>Non_Responsive_Assignment</name>
+        <label>Non-Responsive</label>
+        <locationX>1813</locationX>
+        <locationY>767</locationY>
+        <assignmentItems>
+            <assignToReference>rv_Onboarding_Record_Update.Non_responsive__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>for_TodaysDate</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rv_Onboarding_Record_Update.Stage_Entered__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>for_TodaysDate</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Onboarding_Record</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>Onboarding_Assignment</name>
         <label>Onboarding</label>
-        <locationX>1615</locationX>
-        <locationY>766</locationY>
+        <locationX>1614</locationX>
+        <locationY>764</locationY>
         <assignmentItems>
             <assignToReference>rv_Onboarding_Record_Update.Stage_Entered__c</assignToReference>
             <operator>Assign</operator>
@@ -243,7 +289,7 @@
     <assignments>
         <name>P2_Import_In_Progress_Assignment</name>
         <label>P2 - Import In Progress</label>
-        <locationX>1043</locationX>
+        <locationX>1042</locationX>
         <locationY>763</locationY>
         <assignmentItems>
             <assignToReference>rv_Onboarding_Record_Update.Phase_2_Import_In_Progress__c</assignToReference>
@@ -286,13 +332,6 @@
             <targetReference>Update_Onboarding_Record</targetReference>
         </connector>
     </assignments>
-    <constants>
-        <name>con_MyCaseOnboarding</name>
-        <dataType>String</dataType>
-        <value>
-            <stringValue>0128W000001DlloQAC</stringValue>
-        </value>
-    </constants>
     <decisions>
         <name>Onboarding_Group</name>
         <label>Onboarding Record Type</label>
@@ -303,10 +342,10 @@
             <name>MyCase_Onboarding</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <elementReference>con_MyCaseOnboarding</elementReference>
+                    <stringValue>MyCase</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -585,7 +624,52 @@
             </connector>
             <label>Onboarding</label>
         </rules>
+        <rules>
+            <name>Churn_Risk</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Data_Migration_Stage__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Churn Risk</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Data_Migration_Stage__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Churn Risk</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Churn_Risk_Assignment</targetReference>
+            </connector>
+            <label>Churn Risk</label>
+        </rules>
+        <rules>
+            <name>Non_Responsive</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Data_Migration_Stage__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Non-responsive</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Data_Migration_Stage__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Non-responsive</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Non_Responsive_Assignment</targetReference>
+            </connector>
+            <label>Non Responsive</label>
+        </rules>
     </decisions>
+    <description>2/6/24 JC - Updated to include Churn Risk and Non-Responsive assignments. Removed constant for Record Type ID</description>
     <environments>Default</environments>
     <formulas>
         <name>for_TodaysDate</name>
@@ -616,8 +700,8 @@
     <recordUpdates>
         <name>Update_Onboarding_Record</name>
         <label>Update Onboarding Record</label>
-        <locationX>942</locationX>
-        <locationY>911</locationY>
+        <locationX>958</locationX>
+        <locationY>1023</locationY>
         <inputReference>rv_Onboarding_Record_Update</inputReference>
     </recordUpdates>
     <start>
