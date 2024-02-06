@@ -772,6 +772,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Campaign.utm_campaign__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Case.AccountId</field>
         <readable>true</readable>
@@ -3359,6 +3364,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Trial_Request__c.Lawpay_Marketing_Score__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Trial_Request__c.Marketing_Campaign__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
