@@ -122,7 +122,7 @@
     <textTemplates>
         <name>EmailList</name>
         <isViewedAsPlainText>true</isViewedAsPlainText>
-        <text>salesforce@mycase.com</text>
+        <text>salesforce@mycase.com, websiteteam@mycase.com</text>
     </textTemplates>
     <textTemplates>
         <name>EmailTemplate</name>
