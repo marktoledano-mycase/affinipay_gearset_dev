@@ -3,9 +3,9 @@
     <fullName>Tier_2_Split__c</fullName>
     <externalId>false</externalId>
     <label>Tier 2 Split</label>
-    <precision>12</precision>
+    <precision>14</precision>
     <required>false</required>
-    <scale>2</scale>
+    <scale>4</scale>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>
     <type>Percent</type>
