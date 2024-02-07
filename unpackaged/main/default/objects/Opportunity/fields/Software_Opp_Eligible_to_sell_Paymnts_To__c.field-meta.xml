@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Software_Opp_Eligible_to_sell_Paymnts_To__c</fullName>
+    <description>Indicates if at time of opportunity creation we can sell payments to this software opportunity. Evaluates if this customer has already purchased one of our software products.</description>
+    <externalId>false</externalId>
+    <formula>IF(AffiniPay_Customer_Status__c = &#39;Active&#39;, &quot;No&quot;,
+    IF(CPACharge_Customer_Status__c = &#39;Active&#39;, &quot;No&quot;,
+        IF(ClientPay_Customer_Status__c = &#39;Active&#39;, &quot;No&quot;,
+            IF(
+                AND(
+                    LawPay_Customer_Status__c = &#39;Active&#39;,
+                    OR(
+                        LawPay_Product_Tier__c = &#39;LawPay Classic&#39;,
+                        ISBLANK(LawPay_Product_Tier__c)
+                    )
+                ),
+                &quot;No&quot;,
+                &quot;Yes&quot;
+            )
+        )
+    )
+)</formula>
+    <label>Software Opp Eligible to sell Paymnts To</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
