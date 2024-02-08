@@ -1790,7 +1790,7 @@
             <targetReference>PE_Has_VTID</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <subflows>
         <description>Create a user based on the Applicant information. Setting Checks to be skipped because all searches performed to get to this point to find contact.</description>
         <name>Create_Contact_Applicant</name>
@@ -1859,6 +1859,12 @@
             <name>input_Merch_App_Record_ID</name>
             <value>
                 <elementReference>r_Merchant_Application_Found.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>input_PE_Record</name>
+            <value>
+                <elementReference>input_Prod_Env_Record</elementReference>
             </value>
         </inputAssignments>
         <storeOutputAutomatically>true</storeOutputAutomatically>
