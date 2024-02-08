@@ -136,14 +136,14 @@
             <assignToReference>rv_Final_Account_Create.AffiniPay_Customer_Status__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue>Active</stringValue>
+                <elementReference>f_Brand_Status</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>rv_Final_Account_Create.Customer_Status_Overall__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue>Active</stringValue>
+                <elementReference>f_Brand_Status</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -159,14 +159,14 @@
             <assignToReference>rv_Final_Account_Create.ClientPay_Customer_Status__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue>Active</stringValue>
+                <elementReference>f_Brand_Status</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>rv_Final_Account_Create.Customer_Status_Overall__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue>Active</stringValue>
+                <elementReference>f_Brand_Status</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -182,14 +182,14 @@
             <assignToReference>rv_Final_Account_Create.CPACharge_Customer_Status__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue>Active</stringValue>
+                <elementReference>f_Brand_Status</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>rv_Final_Account_Create.Customer_Status_Overall__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue>Active</stringValue>
+                <elementReference>f_Brand_Status</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -205,14 +205,14 @@
             <assignToReference>rv_Final_Account_Create.LawPay_Customer_Status__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue>Active</stringValue>
+                <elementReference>f_Brand_Status</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>rv_Final_Account_Create.Customer_Status_Overall__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue>Active</stringValue>
+                <elementReference>f_Brand_Status</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -411,6 +411,16 @@
     <description>Process allows for records to be be passed in to create account record from. Current support is for Merchant Applications and Product Environments</description>
     <environments>Default</environments>
     <formulas>
+        <description>Looks at passed PE record and determines the status</description>
+        <name>f_Brand_Status</name>
+        <dataType>String</dataType>
+        <expression>CASE({!input_PE_Record.Status__c}, 
+&quot;Open&quot;, &quot;Active&quot;,
+&quot;Closed&quot;, &quot;Churned&quot;,
+&quot;No Status&quot;
+)</expression>
+    </formulas>
+    <formulas>
         <name>for_Account_Created_By_Merch_App</name>
         <dataType>String</dataType>
         <expression>&quot;Merchant Application:  (&quot; &amp;  {!Get_Merch_App.Name} &amp; &quot;  )&quot;</expression>
@@ -499,6 +509,15 @@
         <value>
             <stringValue></stringValue>
         </value>
+    </variables>
+    <variables>
+        <description>Passed PE record from flows calling this service</description>
+        <name>input_PE_Record</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Product_Environment__c</objectType>
     </variables>
     <variables>
         <name>outbound_Error_Message</name>
