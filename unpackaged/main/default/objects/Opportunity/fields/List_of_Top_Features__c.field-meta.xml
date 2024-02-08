@@ -122,6 +122,11 @@
                 <label>Process Walkthrough/Understanding</label>
             </value>
             <value>
+                <fullName>Quick Bill</fullName>
+                <default>false</default>
+                <label>Quick Bill</label>
+            </value>
+            <value>
                 <fullName>Rate Review</fullName>
                 <default>false</default>
                 <label>Rate Review</label>
