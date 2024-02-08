@@ -43,6 +43,21 @@
                 <label>Client Intake</label>
             </value>
             <value>
+                <fullName>Competition</fullName>
+                <default>false</default>
+                <label>Competition</label>
+            </value>
+            <value>
+                <fullName>Credit Card Processing</fullName>
+                <default>false</default>
+                <label>Credit Card Processing</label>
+            </value>
+            <value>
+                <fullName>Cross-Sell</fullName>
+                <default>false</default>
+                <label>Cross-Sell</label>
+            </value>
+            <value>
                 <fullName>Document Automation</fullName>
                 <default>false</default>
                 <label>Document Automation</label>
@@ -73,9 +88,29 @@
                 <label>Invoicing - Payments Plus</label>
             </value>
             <value>
+                <fullName>Large Processing Volume</fullName>
+                <default>false</default>
+                <label>Large Processing Volume</label>
+            </value>
+            <value>
                 <fullName>Lead Management</fullName>
                 <default>false</default>
                 <label>Lead Management</label>
+            </value>
+            <value>
+                <fullName>Migration</fullName>
+                <default>false</default>
+                <label>Migration</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Other Demo Area</fullName>
+                <default>false</default>
+                <label>Other Demo Area</label>
             </value>
             <value>
                 <fullName>Payments</fullName>
@@ -83,9 +118,39 @@
                 <label>Payments</label>
             </value>
             <value>
+                <fullName>Process Walkthrough/Understanding</fullName>
+                <default>false</default>
+                <label>Process Walkthrough/Understanding</label>
+            </value>
+            <value>
+                <fullName>Quick Bill</fullName>
+                <default>false</default>
+                <label>Quick Bill</label>
+            </value>
+            <value>
+                <fullName>Rate Review</fullName>
+                <default>false</default>
+                <label>Rate Review</label>
+            </value>
+            <value>
                 <fullName>Reporting</fullName>
                 <default>false</default>
                 <label>Reporting</label>
+            </value>
+            <value>
+                <fullName>Resource</fullName>
+                <default>false</default>
+                <label>Resource</label>
+            </value>
+            <value>
+                <fullName>Ride Along</fullName>
+                <default>false</default>
+                <label>Ride Along</label>
+            </value>
+            <value>
+                <fullName>Surcharging</fullName>
+                <default>false</default>
+                <label>Surcharging</label>
             </value>
             <value>
                 <fullName>Text Messaging</fullName>
@@ -111,66 +176,6 @@
                 <fullName>Workflow Automation</fullName>
                 <default>false</default>
                 <label>Workflow Automation</label>
-            </value>
-            <value>
-                <fullName>Competition</fullName>
-                <default>false</default>
-                <label>Competition</label>
-            </value>
-            <value>
-                <fullName>Credit Card Processing</fullName>
-                <default>false</default>
-                <label>Credit Card Processing</label>
-            </value>
-            <value>
-                <fullName>Cross-Sell</fullName>
-                <default>false</default>
-                <label>Cross-Sell</label>
-            </value>
-            <value>
-                <fullName>Large Processing Volume</fullName>
-                <default>false</default>
-                <label>Large Processing Volume</label>
-            </value>
-            <value>
-                <fullName>Migration</fullName>
-                <default>false</default>
-                <label>Migration</label>
-            </value>
-            <value>
-                <fullName>None</fullName>
-                <default>false</default>
-                <label>None</label>
-            </value>
-            <value>
-                <fullName>Other Demo Area</fullName>
-                <default>false</default>
-                <label>Other Demo Area</label>
-            </value>
-            <value>
-                <fullName>Process Walkthrough/Understanding</fullName>
-                <default>false</default>
-                <label>Process Walkthrough/Understanding</label>
-            </value>
-            <value>
-                <fullName>Rate Review</fullName>
-                <default>false</default>
-                <label>Rate Review</label>
-            </value>
-            <value>
-                <fullName>Resource</fullName>
-                <default>false</default>
-                <label>Resource</label>
-            </value>
-            <value>
-                <fullName>Ride Along</fullName>
-                <default>false</default>
-                <label>Ride Along</label>
-            </value>
-            <value>
-                <fullName>Surcharging</fullName>
-                <default>false</default>
-                <label>Surcharging</label>
             </value>
         </valueSetDefinition>
     </valueSet>
