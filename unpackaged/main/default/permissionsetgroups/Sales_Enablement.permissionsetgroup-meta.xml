@@ -5,5 +5,6 @@
     <permissionSets>Edit_Closed_Won_Opportunities</permissionSets>
     <permissionSets>View_Admin_Section_in_Page_Layouts</permissionSets>
     <permissionSets>View_All_Billing_Information</permissionSets>
+    <permissionSets>sixsense__X6sense_User</permissionSets>
     <status>Updated</status>
 </PermissionSetGroup>
