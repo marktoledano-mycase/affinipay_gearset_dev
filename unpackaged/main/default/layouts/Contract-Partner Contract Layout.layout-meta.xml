@@ -104,6 +104,10 @@
                 <behavior>Edit</behavior>
                 <field>Termination_Reason__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Royalty_Survives_Termination__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
@@ -211,6 +215,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Promo_Bonus_Amount__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Statement_Creation__c</field>
             </layoutItems>
             <layoutItems>
                 <emptySpace>true</emptySpace>
