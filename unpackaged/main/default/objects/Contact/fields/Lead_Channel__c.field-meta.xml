@@ -232,6 +232,7 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Call In</controllingFieldValue>
+            <controllingFieldValue>Referral</controllingFieldValue>
             <valueName>Event</valueName>
         </valueSettings>
         <valueSettings>
@@ -369,6 +370,10 @@
         <valueSettings>
             <controllingFieldValue>Referral</controllingFieldValue>
             <valueName>Web</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Referral</controllingFieldValue>
+            <valueName>Partner API</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>In-App</controllingFieldValue>

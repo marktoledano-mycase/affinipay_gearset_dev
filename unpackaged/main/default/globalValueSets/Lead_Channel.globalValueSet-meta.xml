@@ -415,6 +415,11 @@
         <default>false</default>
         <label>YouTube</label>
     </customValue>
+    <customValue>
+        <fullName>Partner API</fullName>
+        <default>false</default>
+        <label>Partner API</label>
+    </customValue>
     <masterLabel>Lead Channel</masterLabel>
     <sorted>false</sorted>
 </GlobalValueSet>
