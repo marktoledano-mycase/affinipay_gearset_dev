@@ -2984,6 +2984,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Contract.Royalty_Survives_Termination__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Contract.Signed_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -2995,6 +3000,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Contract.Signed_by__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contract.Statement_Creation__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
