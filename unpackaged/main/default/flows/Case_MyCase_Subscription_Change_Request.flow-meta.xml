@@ -88,9 +88,9 @@
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.ContactId</leftValueReference>
-                <operator>NotEqualTo</operator>
+                <operator>IsNull</operator>
                 <rightValue>
-                    <stringValue></stringValue>
+                    <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -186,7 +186,8 @@
             <label>Not Master User</label>
         </rules>
     </decisions>
-    <description>Supports the MyCase Subscription Downgrade process</description>
+    <description>Supports the MyCase Subscription Downgrade process
+2/9/24 JC - Updated contact decision to better handle null values</description>
     <environments>Default</environments>
     <formulas>
         <description>Formula to see if the case is new</description>
