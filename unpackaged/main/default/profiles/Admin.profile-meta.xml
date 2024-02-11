@@ -16465,6 +16465,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Product_Environment__c.Run_Account_Status_Review__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Product_Environment__c.Serial_Number__c</field>
         <readable>true</readable>
