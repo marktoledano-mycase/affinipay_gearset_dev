@@ -55,6 +55,11 @@
         <default>false</default>
         <label>Woodpecker</label>
     </customValue>
+    <customValue>
+        <fullName>MedPay</fullName>
+        <default>false</default>
+        <label>MedPay</label>
+    </customValue>
     <description>Newco Brands</description>
     <masterLabel>Brands</masterLabel>
     <sorted>false</sorted>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <decisions>
+        <name>Account_Linked</name>
+        <label>Account Linked</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>No Account Linked</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Account_is_Linked</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Account_Brand_Status</targetReference>
+            </connector>
+            <label>Yes Account is Linked</label>
+        </rules>
+    </decisions>
+    <description>Launches Brand update flows when PE record is created. (Payment Only)</description>
+    <environments>Default</environments>
+    <interviewLabel>Account: Brand Status Updates (Prod Env Trigger) {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Account: Brand Status Updates (Prod Env New Trigger)</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Account_Linked</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>0128W000001Dm9MQAS</stringValue>
+            </value>
+        </filters>
+        <object>Product_Environment__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <description>Account: Brand Status Updates By PE</description>
+        <name>Update_Account_Brand_Status</name>
+        <label>Update Account Brand Status</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <flowName>Account_Brand_Status_Updates_By_PE</flowName>
+        <inputAssignments>
+            <name>input_Product_Env_Record</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+</Flow>
