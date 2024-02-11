@@ -4,7 +4,7 @@
     <decisions>
         <name>Account_Changed_Type</name>
         <label>Account Changed Type</label>
-        <locationX>578</locationX>
+        <locationX>666</locationX>
         <locationY>323</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -97,10 +97,39 @@
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>$Record.Run_Account_Status_Review__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>Update_Current_Account3</targetReference>
             </connector>
             <label>Other Field Changes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Run_Flag_Set</name>
+        <label>Run Flag Set</label>
+        <locationX>974</locationX>
+        <locationY>539</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Run_Account_Status_Review__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Reset_Flag</targetReference>
+            </connector>
+            <label>Yes</label>
         </rules>
     </decisions>
     <description>Triggers brand update when Status updated</description>
@@ -126,13 +155,26 @@
         </value>
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Reset_Flag</name>
+        <label>Reset Flag</label>
+        <locationX>842</locationX>
+        <locationY>647</locationY>
+        <inputAssignments>
+            <field>Run_Account_Status_Review__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
     <start>
-        <locationX>452</locationX>
+        <locationX>540</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Account_Changed_Type</targetReference>
         </connector>
-        <filterLogic>1 AND (2 OR 3 OR 4)</filterLogic>
+        <filterLogic>1 AND  (2 OR 3 OR 4 OR (5 AND 6) )</filterLogic>
         <filters>
             <field>RecordTypeId</field>
             <operator>EqualTo</operator>
@@ -156,6 +198,20 @@
         </filters>
         <filters>
             <field>Brand__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Run_Account_Status_Review__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Run_Account_Status_Review__c</field>
             <operator>IsChanged</operator>
             <value>
                 <booleanValue>true</booleanValue>
@@ -201,8 +257,11 @@
         <description>Account: Brand Status Updates By PE</description>
         <name>Update_Current_Account3</name>
         <label>Update Current Account</label>
-        <locationX>842</locationX>
+        <locationX>974</locationX>
         <locationY>431</locationY>
+        <connector>
+            <targetReference>Run_Flag_Set</targetReference>
+        </connector>
         <flowName>Account_Brand_Status_Updates_By_PE</flowName>
         <inputAssignments>
             <name>input_Product_Env_Record</name>
