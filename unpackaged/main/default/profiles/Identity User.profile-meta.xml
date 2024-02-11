@@ -3169,6 +3169,26 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Product_Environment__c.Prod_Env_Count_AffiniPay__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product_Environment__c.Prod_Env_Count_CPACharge__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product_Environment__c.Prod_Env_Count_ClientPay__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product_Environment__c.Prod_Env_Count_LawPay__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Product_Environment__c.Referral_Auto_Royalty__c</field>
         <readable>true</readable>
     </fieldPermissions>

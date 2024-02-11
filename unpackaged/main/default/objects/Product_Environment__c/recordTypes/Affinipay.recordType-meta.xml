@@ -22,6 +22,10 @@
             <fullName>LawPay</fullName>
             <default>false</default>
         </values>
+        <values>
+            <fullName>MedPay</fullName>
+            <default>false</default>
+        </values>
     </picklistValues>
     <picklistValues>
         <picklist>Can_use_as_Reference__c</picklist>
