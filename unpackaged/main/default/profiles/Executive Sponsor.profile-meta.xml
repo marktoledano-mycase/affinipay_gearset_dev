@@ -7649,6 +7649,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Opportunity.Software_Opp_Eligible_to_sell_Paymnts_To__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Opportunity.Software_Opportunity__c</field>
         <readable>true</readable>
     </fieldPermissions>
