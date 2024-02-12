@@ -5871,6 +5871,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Contact.Affinipay_Marketing_Engagement__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Contact.Archived_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -10102,6 +10107,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Lead.AffiniPay_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Affinipay_Marketing_Engagement__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

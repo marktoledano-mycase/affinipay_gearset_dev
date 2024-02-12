@@ -1,13 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>59.0</apiVersion>
+    <assignments>
+        <name>Assign_Affinipay_Score</name>
+        <label>Assign Affinipay Score</label>
+        <locationX>2558</locationX>
+        <locationY>2255</locationY>
+        <assignmentItems>
+            <assignToReference>var_MaxScore</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Affinipay_Marketing_Engagement__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Equal_Values_Exist</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_CASEpeer_Score</name>
+        <label>Assign CASEpeer Score</label>
+        <locationX>2690</locationX>
+        <locationY>539</locationY>
+        <assignmentItems>
+            <assignToReference>var_MaxScore</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.CASEpeer_Marketing_Engagement__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Is_Docketwise_Greater</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_ClientPay_Score</name>
+        <label>Assign ClientPay Score</label>
+        <locationX>2558</locationX>
+        <locationY>1655</locationY>
+        <assignmentItems>
+            <assignToReference>var_MaxScore</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.ClientPay_Marketing_Enagement__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Is_CPACharge_Greater</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_CPACharge_Score</name>
+        <label>Assign CPACharge Score</label>
+        <locationX>2558</locationX>
+        <locationY>1955</locationY>
+        <assignmentItems>
+            <assignToReference>var_MaxScore</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.CPACharge_Marketing_Engagement__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Is_Affinipay_Greater</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_LawPay_Score</name>
+        <label>Assign LawPay Score</label>
+        <locationX>2558</locationX>
+        <locationY>1355</locationY>
+        <assignmentItems>
+            <assignToReference>var_MaxScore</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.LawPay_Marketing_Engagement__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Is_ClientPay_Greater</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_MyCase_Score</name>
+        <label>Assign MyCase Score</label>
+        <locationX>2558</locationX>
+        <locationY>1055</locationY>
+        <assignmentItems>
+            <assignToReference>var_MaxScore</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.MyCase_Marketing_Engagement__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Is_LawPay_Greater</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>AssignDocketwise_Score</name>
+        <label>AssignDocketwise Score</label>
+        <locationX>2558</locationX>
+        <locationY>755</locationY>
+        <assignmentItems>
+            <assignToReference>var_MaxScore</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Docketwise_Marketing_Engagement__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>is_MyCase_Greater</targetReference>
+        </connector>
+    </assignments>
     <decisions>
         <name>All_Scores_are_Null</name>
         <label>All Scores are Null</label>
-        <locationX>446</locationX>
+        <locationX>578</locationX>
         <locationY>323</locationY>
         <defaultConnector>
-            <targetReference>Equal_Values_Exist</targetReference>
+            <targetReference>Greater_Value</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>No all scores are not Null</defaultConnectorLabel>
         <rules>
@@ -61,15 +173,12 @@
     <decisions>
         <name>Equal_Values_Exist</name>
         <label>Equal Values Exist</label>
-        <locationX>1106</locationX>
-        <locationY>431</locationY>
-        <defaultConnector>
-            <targetReference>Greater_Value</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>No Values are Equal</defaultConnectorLabel>
+        <locationX>2690</locationX>
+        <locationY>2447</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>CASEpeer</name>
-            <conditionLogic>or</conditionLogic>
+            <conditionLogic>(1 OR 2 OR 3 OR 4 OR 5 OR 9) AND (6 AND 7 AND 8)</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.CASEpeer_Marketing_Engagement__c</leftValueReference>
                 <operator>EqualTo</operator>
@@ -105,6 +214,34 @@
                     <elementReference>$Record.MyCase_Marketing_Engagement__c</elementReference>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>$Record.CASEpeer_Marketing_Engagement__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CASEpeer_Marketing_Engagement__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CASEpeer_Marketing_Engagement__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>var_MaxScore</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CASEpeer_Marketing_Engagement__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Affinipay_Marketing_Engagement__c</elementReference>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>Stamp_Leading_Brand_Engagement_CASEpeer</targetReference>
             </connector>
@@ -112,7 +249,7 @@
         </rules>
         <rules>
             <name>Docketwise</name>
-            <conditionLogic>and</conditionLogic>
+            <conditionLogic>(1 OR 2 OR 3 OR 4 OR 8) AND (5 AND 6 AND 7)</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.Docketwise_Marketing_Engagement__c</leftValueReference>
                 <operator>EqualTo</operator>
@@ -141,6 +278,34 @@
                     <elementReference>$Record.MyCase_Marketing_Engagement__c</elementReference>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>$Record.Docketwise_Marketing_Engagement__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Docketwise_Marketing_Engagement__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Docketwise_Marketing_Engagement__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>var_MaxScore</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Docketwise_Marketing_Engagement__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Affinipay_Marketing_Engagement__c</elementReference>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>Stamp_Leading_Brand_Engagement_Docketwise</targetReference>
             </connector>
@@ -148,7 +313,7 @@
         </rules>
         <rules>
             <name>MyCase</name>
-            <conditionLogic>and</conditionLogic>
+            <conditionLogic>(1 OR 2 OR 3 OR 7) AND (4 AND 5 AND 6)</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.MyCase_Marketing_Engagement__c</leftValueReference>
                 <operator>EqualTo</operator>
@@ -170,6 +335,34 @@
                     <elementReference>$Record.LawPay_Marketing_Engagement__c</elementReference>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>$Record.MyCase_Marketing_Engagement__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MyCase_Marketing_Engagement__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MyCase_Marketing_Engagement__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>var_MaxScore</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MyCase_Marketing_Engagement__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Affinipay_Marketing_Engagement__c</elementReference>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>Stamp_Leading_Brand_Engagement_MyCase</targetReference>
             </connector>
@@ -177,7 +370,7 @@
         </rules>
         <rules>
             <name>LawPay</name>
-            <conditionLogic>and</conditionLogic>
+            <conditionLogic>(1 OR 2 OR 6) AND (3 AND 4 AND 5)</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.LawPay_Marketing_Engagement__c</leftValueReference>
                 <operator>EqualTo</operator>
@@ -192,6 +385,34 @@
                     <elementReference>$Record.CPACharge_Marketing_Engagement__c</elementReference>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>$Record.LawPay_Marketing_Engagement__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.LawPay_Marketing_Engagement__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.LawPay_Marketing_Engagement__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>var_MaxScore</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.LawPay_Marketing_Engagement__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Affinipay_Marketing_Engagement__c</elementReference>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>Stamp_Leading_Brand_Engagement_LawPay</targetReference>
             </connector>
@@ -199,7 +420,7 @@
         </rules>
         <rules>
             <name>ClientPay</name>
-            <conditionLogic>and</conditionLogic>
+            <conditionLogic>(1 OR 5) AND (2 AND 3 AND 4)</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.ClientPay_Marketing_Enagement__c</leftValueReference>
                 <operator>EqualTo</operator>
@@ -207,17 +428,81 @@
                     <elementReference>$Record.CPACharge_Marketing_Engagement__c</elementReference>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>$Record.ClientPay_Marketing_Enagement__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ClientPay_Marketing_Enagement__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ClientPay_Marketing_Enagement__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>var_MaxScore</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ClientPay_Marketing_Enagement__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Affinipay_Marketing_Engagement__c</elementReference>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>Stamp_Leading_Brand_Engagement_ClientPay</targetReference>
             </connector>
             <label>ClientPay</label>
         </rules>
+        <rules>
+            <name>CPACharge</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CPACharge_Marketing_Engagement__c</leftValueReference>
+                <operator>EqualTo</operator>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CPACharge_Marketing_Engagement__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CPACharge_Marketing_Engagement__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CPACharge_Marketing_Engagement__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>var_MaxScore</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Stamp_Leading_Brand_Engagement_CPACharge</targetReference>
+            </connector>
+            <label>CPACharge</label>
+        </rules>
     </decisions>
     <decisions>
         <name>Greater_Value</name>
         <label>Greater Value</label>
-        <locationX>2162</locationX>
-        <locationY>539</locationY>
+        <locationX>1370</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Assign_CASEpeer_Score</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>CASEpeer_is_Greater</name>
@@ -255,6 +540,13 @@
                 <operator>GreaterThan</operator>
                 <rightValue>
                     <elementReference>$Record.MyCase_Marketing_Engagement__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CASEpeer_Marketing_Engagement__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>$Record.Affinipay_Marketing_Engagement__c</elementReference>
                 </rightValue>
             </conditions>
             <connector>
@@ -300,6 +592,13 @@
                     <elementReference>$Record.MyCase_Marketing_Engagement__c</elementReference>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>$Record.ClientPay_Marketing_Enagement__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>$Record.Affinipay_Marketing_Engagement__c</elementReference>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>Stamp_Leading_Brand_ClientPay</targetReference>
             </connector>
@@ -341,6 +640,13 @@
                 <operator>GreaterThan</operator>
                 <rightValue>
                     <elementReference>$Record.MyCase_Marketing_Engagement__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CPACharge_Marketing_Engagement__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>$Record.Affinipay_Marketing_Engagement__c</elementReference>
                 </rightValue>
             </conditions>
             <connector>
@@ -386,6 +692,13 @@
                     <elementReference>$Record.MyCase_Marketing_Engagement__c</elementReference>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>$Record.Docketwise_Marketing_Engagement__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>$Record.Affinipay_Marketing_Engagement__c</elementReference>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>Stamp_Leading_Brand_Docketwise</targetReference>
             </connector>
@@ -427,6 +740,13 @@
                 <operator>GreaterThan</operator>
                 <rightValue>
                     <elementReference>$Record.LawPay_Marketing_Engagement__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.MyCase_Marketing_Engagement__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>$Record.Affinipay_Marketing_Engagement__c</elementReference>
                 </rightValue>
             </conditions>
             <connector>
@@ -472,10 +792,217 @@
                     <elementReference>$Record.MyCase_Marketing_Engagement__c</elementReference>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>$Record.LawPay_Marketing_Engagement__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>$Record.Affinipay_Marketing_Engagement__c</elementReference>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>Stamp_Leading_Brand_LawPay</targetReference>
             </connector>
             <label>LawPay is Greater</label>
+        </rules>
+        <rules>
+            <name>Affinipay_is_Greater</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Affinipay_Marketing_Engagement__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>$Record.CASEpeer_Marketing_Engagement__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Affinipay_Marketing_Engagement__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>$Record.ClientPay_Marketing_Enagement__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Affinipay_Marketing_Engagement__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>$Record.CPACharge_Marketing_Engagement__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Affinipay_Marketing_Engagement__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>$Record.Docketwise_Marketing_Engagement__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Affinipay_Marketing_Engagement__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>$Record.MyCase_Marketing_Engagement__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Affinipay_Marketing_Engagement__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>$Record.LawPay_Marketing_Engagement__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Stamp_Leading_Brand_Affinipay</targetReference>
+            </connector>
+            <label>Affinipay is Greater</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_Affinipay_Greater</name>
+        <label>Is Affinipay Greater</label>
+        <locationX>2690</locationX>
+        <locationY>2147</locationY>
+        <defaultConnector>
+            <targetReference>Equal_Values_Exist</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Affinipay_is_Greater</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Affinipay_Marketing_Engagement__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>var_MaxScore</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Affinipay_Score</targetReference>
+            </connector>
+            <label>Yes Affinipay is Greater</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_ClientPay_Greater</name>
+        <label>Is ClientPay Greater</label>
+        <locationX>2690</locationX>
+        <locationY>1547</locationY>
+        <defaultConnector>
+            <targetReference>Is_CPACharge_Greater</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_ClientPay_is_Greater</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.ClientPay_Marketing_Enagement__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>var_MaxScore</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_ClientPay_Score</targetReference>
+            </connector>
+            <label>Yes ClientPay is Greater</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_CPACharge_Greater</name>
+        <label>Is CPACharge Greater</label>
+        <locationX>2690</locationX>
+        <locationY>1847</locationY>
+        <defaultConnector>
+            <targetReference>Is_Affinipay_Greater</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_CPACharge_is_Greater</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CPACharge_Marketing_Engagement__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>var_MaxScore</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_CPACharge_Score</targetReference>
+            </connector>
+            <label>Yes CPACharge is Greater</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_Docketwise_Greater</name>
+        <label>Is Docketwise Greater</label>
+        <locationX>2690</locationX>
+        <locationY>647</locationY>
+        <defaultConnector>
+            <targetReference>is_MyCase_Greater</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Docketwise_is_Greater</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Docketwise_Marketing_Engagement__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>var_MaxScore</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>AssignDocketwise_Score</targetReference>
+            </connector>
+            <label>Yes Docketwise is Greater</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_LawPay_Greater</name>
+        <label>Is LawPay Greater</label>
+        <locationX>2690</locationX>
+        <locationY>1247</locationY>
+        <defaultConnector>
+            <targetReference>Is_ClientPay_Greater</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_LawPay_is_Greater</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LawPay_Marketing_Engagement__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>var_MaxScore</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_LawPay_Score</targetReference>
+            </connector>
+            <label>Yes LawPay is Greater</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>is_MyCase_Greater</name>
+        <label>is MyCase Greater</label>
+        <locationX>2690</locationX>
+        <locationY>947</locationY>
+        <defaultConnector>
+            <targetReference>Is_LawPay_Greater</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_MyCase_is_Greater</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.MyCase_Marketing_Engagement__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>var_MaxScore</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_MyCase_Score</targetReference>
+            </connector>
+            <label>Yes MyCase is Greater</label>
         </rules>
     </decisions>
     <description>Based on criteria stamps the Leading Brand Engagement on the Contact</description>
@@ -502,60 +1029,21 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordUpdates>
+        <name>Stamp_Leading_Brand_Affinipay</name>
+        <label>Stamp Leading Brand Affinipay</label>
+        <locationX>1634</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>Leading_Brand_Engagement__c</field>
+            <value>
+                <stringValue>AffiniPay</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
         <name>Stamp_Leading_Brand_CASEpeer</name>
         <label>Stamp Leading Brand CASEpeer</label>
-        <locationX>1370</locationX>
-        <locationY>647</locationY>
-        <inputAssignments>
-            <field>Leading_Brand_Engagement__c</field>
-            <value>
-                <stringValue>CASEpeer</stringValue>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record</inputReference>
-    </recordUpdates>
-    <recordUpdates>
-        <name>Stamp_Leading_Brand_ClientPay</name>
-        <label>Stamp Leading Brand ClientPay</label>
-        <locationX>1634</locationX>
-        <locationY>647</locationY>
-        <inputAssignments>
-            <field>Leading_Brand_Engagement__c</field>
-            <value>
-                <stringValue>ClientPay</stringValue>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record</inputReference>
-    </recordUpdates>
-    <recordUpdates>
-        <name>Stamp_Leading_Brand_CPACharge</name>
-        <label>Stamp Leading Brand CPACharge</label>
-        <locationX>1898</locationX>
-        <locationY>647</locationY>
-        <inputAssignments>
-            <field>Leading_Brand_Engagement__c</field>
-            <value>
-                <stringValue>CPACharge</stringValue>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record</inputReference>
-    </recordUpdates>
-    <recordUpdates>
-        <name>Stamp_Leading_Brand_Docketwise</name>
-        <label>Stamp Leading Brand Docketwise</label>
-        <locationX>2162</locationX>
-        <locationY>647</locationY>
-        <inputAssignments>
-            <field>Leading_Brand_Engagement__c</field>
-            <value>
-                <stringValue>Docketwise</stringValue>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record</inputReference>
-    </recordUpdates>
-    <recordUpdates>
-        <name>Stamp_Leading_Brand_Engagement_CASEpeer</name>
-        <label>Stamp Leading Brand Engagement CASEpeer</label>
         <locationX>50</locationX>
         <locationY>539</locationY>
         <inputAssignments>
@@ -567,9 +1055,9 @@
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <recordUpdates>
-        <name>Stamp_Leading_Brand_Engagement_ClientPay</name>
-        <label>Stamp Leading Brand Engagement ClientPay</label>
-        <locationX>1106</locationX>
+        <name>Stamp_Leading_Brand_ClientPay</name>
+        <label>Stamp Leading Brand ClientPay</label>
+        <locationX>314</locationX>
         <locationY>539</locationY>
         <inputAssignments>
             <field>Leading_Brand_Engagement__c</field>
@@ -580,10 +1068,75 @@
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <recordUpdates>
+        <name>Stamp_Leading_Brand_CPACharge</name>
+        <label>Stamp Leading Brand CPACharge</label>
+        <locationX>578</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>Leading_Brand_Engagement__c</field>
+            <value>
+                <stringValue>CPACharge</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Stamp_Leading_Brand_Docketwise</name>
+        <label>Stamp Leading Brand Docketwise</label>
+        <locationX>842</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>Leading_Brand_Engagement__c</field>
+            <value>
+                <stringValue>Docketwise</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Stamp_Leading_Brand_Engagement_CASEpeer</name>
+        <label>Stamp Leading Brand Engagement CASEpeer</label>
+        <locationX>1898</locationX>
+        <locationY>2555</locationY>
+        <inputAssignments>
+            <field>Leading_Brand_Engagement__c</field>
+            <value>
+                <stringValue>CASEpeer</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Stamp_Leading_Brand_Engagement_ClientPay</name>
+        <label>Stamp Leading Brand Engagement ClientPay</label>
+        <locationX>2954</locationX>
+        <locationY>2555</locationY>
+        <inputAssignments>
+            <field>Leading_Brand_Engagement__c</field>
+            <value>
+                <stringValue>ClientPay</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Stamp_Leading_Brand_Engagement_CPACharge</name>
+        <label>Stamp Leading Brand Engagement CPACharge</label>
+        <locationX>3218</locationX>
+        <locationY>2555</locationY>
+        <inputAssignments>
+            <field>Leading_Brand_Engagement__c</field>
+            <value>
+                <stringValue>CPACharge</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
         <name>Stamp_Leading_Brand_Engagement_Docketwise</name>
         <label>Stamp Leading Brand Engagement Docketwise</label>
-        <locationX>314</locationX>
-        <locationY>539</locationY>
+        <locationX>2162</locationX>
+        <locationY>2555</locationY>
         <inputAssignments>
             <field>Leading_Brand_Engagement__c</field>
             <value>
@@ -595,8 +1148,8 @@
     <recordUpdates>
         <name>Stamp_Leading_Brand_Engagement_LawPay</name>
         <label>Stamp Leading Brand Engagement LawPay</label>
-        <locationX>842</locationX>
-        <locationY>539</locationY>
+        <locationX>2690</locationX>
+        <locationY>2555</locationY>
         <inputAssignments>
             <field>Leading_Brand_Engagement__c</field>
             <value>
@@ -608,8 +1161,8 @@
     <recordUpdates>
         <name>Stamp_Leading_Brand_Engagement_MyCase</name>
         <label>Stamp Leading Brand Engagement MyCase</label>
-        <locationX>578</locationX>
-        <locationY>539</locationY>
+        <locationX>2426</locationX>
+        <locationY>2555</locationY>
         <inputAssignments>
             <field>Leading_Brand_Engagement__c</field>
             <value>
@@ -621,8 +1174,8 @@
     <recordUpdates>
         <name>Stamp_Leading_Brand_LawPay</name>
         <label>Stamp Leading Brand LawPay</label>
-        <locationX>2690</locationX>
-        <locationY>647</locationY>
+        <locationX>1370</locationX>
+        <locationY>539</locationY>
         <inputAssignments>
             <field>Leading_Brand_Engagement__c</field>
             <value>
@@ -634,8 +1187,8 @@
     <recordUpdates>
         <name>Stamp_Leading_Brand_MyCase</name>
         <label>Stamp Leading Brand MyCase</label>
-        <locationX>2426</locationX>
-        <locationY>647</locationY>
+        <locationX>1106</locationX>
+        <locationY>539</locationY>
         <inputAssignments>
             <field>Leading_Brand_Engagement__c</field>
             <value>
@@ -645,7 +1198,7 @@
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <start>
-        <locationX>320</locationX>
+        <locationX>452</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>All_Scores_are_Null</targetReference>
@@ -657,4 +1210,81 @@
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
+    <variables>
+        <name>var_Casepeer_Score</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <name>var_ClientPay_Score</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <name>var_CPACharge_Score</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <name>var_Docketwise_Score</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <name>var_LawPay_Score</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <name>var_MaxScore</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <name>var_MyCase_Score</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
 </Flow>
