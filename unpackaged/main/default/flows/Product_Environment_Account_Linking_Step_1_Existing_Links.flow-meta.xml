@@ -369,6 +369,9 @@
                     <elementReference>c_Docketwise_Type_ID</elementReference>
                 </rightValue>
             </conditions>
+            <connector>
+                <targetReference>Evaluate_Docketwise_Linking_Process</targetReference>
+            </connector>
             <label>Docketwise</label>
         </rules>
     </decisions>
@@ -452,7 +455,7 @@
             <targetReference>Current_Links</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <subflows>
         <description>Launch Product Environment: Account Linking (Step 2: Affinipay)</description>
         <name>Evaluate_Affinipay_Linking_Process</name>
@@ -460,6 +463,19 @@
         <locationX>1106</locationX>
         <locationY>782</locationY>
         <flowName>Product_Environment_Account_Linking_Step_2_Affinipay</flowName>
+        <inputAssignments>
+            <name>input_Prod_Env_Record</name>
+            <value>
+                <elementReference>input_Prod_Env_Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Evaluate_Docketwise_Linking_Process</name>
+        <label>Evaluate Docketwise Linking Process</label>
+        <locationX>1370</locationX>
+        <locationY>782</locationY>
+        <flowName>Product_Environment_Account_Linking_Step_2_Docketwise</flowName>
         <inputAssignments>
             <name>input_Prod_Env_Record</name>
             <value>
@@ -494,5 +510,15 @@
         <isInput>false</isInput>
         <isOutput>false</isOutput>
         <objectType>Product_Environment__c</objectType>
+    </variables>
+    <variables>
+        <name>var_Created_Account_ID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
     </variables>
 </Flow>
