@@ -504,6 +504,9 @@
         <relatedList>RelatedActivityList</relatedList>
     </relatedLists>
     <relatedLists>
+        <relatedList>RelatedFileList</relatedList>
+    </relatedLists>
+    <relatedLists>
         <relatedList>RelatedApprovalList</relatedList>
     </relatedLists>
     <relatedLists>

@@ -12570,7 +12570,7 @@
         <layout>Contract-Contract Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Contract-Partner Contract Layout</layout>
+        <layout>Contract-Contract Layout</layout>
         <recordType>Contract.Partner</recordType>
     </layoutAssignments>
     <layoutAssignments>
