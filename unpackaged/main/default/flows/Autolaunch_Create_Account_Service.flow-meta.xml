@@ -4,8 +4,8 @@
     <assignments>
         <name>Account_Standard_Field_Setup</name>
         <label>Account Standard Field Setup</label>
-        <locationX>578</locationX>
-        <locationY>1058</locationY>
+        <locationX>1194</locationX>
+        <locationY>1142</locationY>
         <assignmentItems>
             <assignToReference>rv_Final_Account_Create.RecordTypeId</assignToReference>
             <operator>Assign</operator>
@@ -78,10 +78,26 @@
         </connector>
     </assignments>
     <assignments>
+        <name>Assign_Sys_Admin_as_owner_DW</name>
+        <label>Assign Sys Admin as owner</label>
+        <locationX>1282</locationX>
+        <locationY>566</locationY>
+        <assignmentItems>
+            <assignToReference>rv_Final_Account_Create.OwnerId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>0058W00000BElhlQAD</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Account_Standard_Field_Setup</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>Assignment_2</name>
         <label>Populate Output Variables</label>
-        <locationX>578</locationX>
-        <locationY>1274</locationY>
+        <locationX>1194</locationX>
+        <locationY>1358</locationY>
         <assignmentItems>
             <assignToReference>output_Created_AccountID</assignToReference>
             <operator>Assign</operator>
@@ -96,6 +112,55 @@
                 <elementReference>rv_Final_Account_Create.OwnerId</elementReference>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>Create_Contacts</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Copy_1_of_Merchant_Application_Data_Setup</name>
+        <label>Merchant Application Data Setup</label>
+        <locationX>1414</locationX>
+        <locationY>242</locationY>
+        <assignmentItems>
+            <assignToReference>rv_Final_Account_Create.Phone</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>input_PE_Record.Business_Phone__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rv_Final_Account_Create.Account_Created_By__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>f_Account_Created_By_Prod_Env</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>What_Brand</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Dockwise_Assignments</name>
+        <label>Dockwise Assignments</label>
+        <locationX>1282</locationX>
+        <locationY>458</locationY>
+        <assignmentItems>
+            <assignToReference>rv_Final_Account_Create.Name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>f_DW_Firm_Name</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rv_Final_Account_Create.Docketwise_Customer_Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>input_Brand_Status</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_Sys_Admin_as_owner_DW</targetReference>
+        </connector>
     </assignments>
     <assignments>
         <name>Merchant_Application_Data_Setup</name>
@@ -120,12 +185,32 @@
             <assignToReference>rv_Final_Account_Create.Account_Created_By__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>for_Account_Created_By_Merch_App</elementReference>
+                <elementReference>f_Account_Created_By_Merch_App</elementReference>
             </value>
         </assignmentItems>
         <connector>
             <targetReference>Salesrep_Listed</targetReference>
         </connector>
+    </assignments>
+    <assignments>
+        <name>PE_Brand_Not_Support</name>
+        <label>PE Brand Not Support</label>
+        <locationX>1546</locationX>
+        <locationY>458</locationY>
+        <assignmentItems>
+            <assignToReference>output_Create_Account_Error</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>outbound_Error_Message</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Create Account Error: Brand Not Supported</stringValue>
+            </value>
+        </assignmentItems>
     </assignments>
     <assignments>
         <name>Set_Brand_Status_Affinipay</name>
@@ -222,8 +307,8 @@
     <assignments>
         <name>Set_Create_Error_Flag</name>
         <label>Set Create Error Flag</label>
-        <locationX>1282</locationX>
-        <locationY>1274</locationY>
+        <locationX>2074</locationX>
+        <locationY>1358</locationY>
         <assignmentItems>
             <assignToReference>output_Create_Account_Error</assignToReference>
             <operator>Assign</operator>
@@ -242,7 +327,7 @@
     <assignments>
         <name>Set_Missing_Record_ID_Error_Flag</name>
         <label>Set Missing Record ID Error Flag</label>
-        <locationX>1546</locationX>
+        <locationX>1810</locationX>
         <locationY>242</locationY>
         <assignmentItems>
             <assignToReference>output_Create_Account_Error</assignToReference>
@@ -359,9 +444,38 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Create_Contacts</name>
+        <label>Create Contacts</label>
+        <locationX>1194</locationX>
+        <locationY>1466</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Docketwise</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>input_PE_Record.Brand__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Docketwise</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Input_Create_Contacts_Flags</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>Docketwise</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Contact</targetReference>
+            </connector>
+            <label>Yes - Docketwise</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Record_Variable_Recieved</name>
         <label>Record Variable Recieved</label>
-        <locationX>1062</locationX>
+        <locationX>1194</locationX>
         <locationY>134</locationY>
         <defaultConnector>
             <targetReference>Set_Missing_Record_ID_Error_Flag</targetReference>
@@ -377,10 +491,32 @@
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>input_Merch_App_Record_ID</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>a3M</stringValue>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>Get_Merch_App</targetReference>
             </connector>
             <label>Merch App Record ID Received</label>
+        </rules>
+        <rules>
+            <name>Product_Environment</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>input_PE_Record</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Copy_1_of_Merchant_Application_Data_Setup</targetReference>
+            </connector>
+            <label>Product Environment</label>
         </rules>
     </decisions>
     <decisions>
@@ -408,8 +544,46 @@
             <label>Yes Sales Rep Linked</label>
         </rules>
     </decisions>
+    <decisions>
+        <name>What_Brand</name>
+        <label>What Brand</label>
+        <locationX>1414</locationX>
+        <locationY>350</locationY>
+        <defaultConnector>
+            <targetReference>PE_Brand_Not_Support</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Supported Yet</defaultConnectorLabel>
+        <rules>
+            <name>Docketwise</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>input_PE_Record.Brand__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Docketwise</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Dockwise_Assignments</targetReference>
+            </connector>
+            <label>Docketwise</label>
+        </rules>
+    </decisions>
     <description>Process allows for records to be be passed in to create account record from. Current support is for Merchant Applications and Product Environments</description>
     <environments>Default</environments>
+    <formulas>
+        <name>f_Account_Created_By_Merch_App</name>
+        <dataType>String</dataType>
+        <expression>&quot;Merchant Application:  (&quot; &amp;  {!Get_Merch_App.Name} &amp; &quot;  )&quot;</expression>
+    </formulas>
+    <formulas>
+        <name>f_Account_Created_By_Prod_Env</name>
+        <dataType>String</dataType>
+        <expression>Case({!input_PE_Record.Brand__c},
+&quot;Docketwise&quot;, &quot;PE: DWFirmID ( &quot; &amp; {!input_PE_Record.Firm_ID_DW__c} &amp; &quot; )&quot;,
+&quot;N/A&quot;
+)</expression>
+    </formulas>
     <formulas>
         <description>Looks at passed PE record and determines the status</description>
         <name>f_Brand_Status</name>
@@ -421,9 +595,10 @@
 )</expression>
     </formulas>
     <formulas>
-        <name>for_Account_Created_By_Merch_App</name>
+        <name>f_DW_Firm_Name</name>
         <dataType>String</dataType>
-        <expression>&quot;Merchant Application:  (&quot; &amp;  {!Get_Merch_App.Name} &amp; &quot;  )&quot;</expression>
+        <expression>if(NOT(ISBLANK({!input_PE_Record.Firm_Name__c})),{!input_PE_Record.Firm_Name__c}, &quot;Docketwise ID: &quot; &amp;{!input_PE_Record.Firm_ID_DW__c} &amp; &quot; ( &quot; &amp; {!input_PE_Record.Owners_Email__c} &amp; &quot; )&quot; 
+)</expression>
     </formulas>
     <interviewLabel>Autolaunch: Create Account Service {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Autolaunch: Create Account Service</label>
@@ -449,8 +624,8 @@
     <recordCreates>
         <name>Create_Account</name>
         <label>Create Account</label>
-        <locationX>578</locationX>
-        <locationY>1166</locationY>
+        <locationX>1194</locationX>
+        <locationY>1250</locationY>
         <connector>
             <targetReference>Assignment_2</targetReference>
         </connector>
@@ -482,13 +657,67 @@
     </recordLookups>
     <runInMode>SystemModeWithoutSharing</runInMode>
     <start>
-        <locationX>936</locationX>
+        <locationX>1068</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Record_Variable_Recieved</targetReference>
         </connector>
     </start>
     <status>Active</status>
+    <subflows>
+        <name>Create_Contact</name>
+        <label>Create Contact</label>
+        <locationX>1062</locationX>
+        <locationY>1574</locationY>
+        <flowName>Autolaunch_Create_Contact_Service</flowName>
+        <inputAssignments>
+            <name>input_Link_To_Account_ID</name>
+            <value>
+                <elementReference>output_Created_AccountID</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>input_Owner_ID</name>
+            <value>
+                <elementReference>output_Owner_ID</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>input_Person_Email</name>
+            <value>
+                <elementReference>input_PE_Record.Owners_Email__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>input_Person_First_Name</name>
+            <value>
+                <elementReference>input_PE_Record.Owner_First_Name__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>input_Person_Last_Name</name>
+            <value>
+                <elementReference>input_PE_Record.Owners_Last_Name__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>input_Skip_Lookup_Checks</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <variables>
+        <name>input_Brand_Status</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue></stringValue>
+        </value>
+    </variables>
     <variables>
         <description>when passed as true from triggering flow, Flow will activate a Create Contacts flow to try to verify that the contacts do not exsist already and create them</description>
         <name>Input_Create_Contacts_Flags</name>
