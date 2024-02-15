@@ -289,6 +289,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Account.Current_LPM_Prohibited__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Account.Current_Website_Solution__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -6240,6 +6245,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Opportunity.Current_LPM_Other__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.Current_LPM_Prohibited__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
