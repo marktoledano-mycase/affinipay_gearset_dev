@@ -95,7 +95,7 @@
             <assignToReference>rv_Lead_Create.Status</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue>New</stringValue>
+                <stringValue>Known</stringValue>
             </value>
         </assignmentItems>
         <assignmentItems>
