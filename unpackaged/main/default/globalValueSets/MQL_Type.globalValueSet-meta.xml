@@ -31,9 +31,9 @@
         <label>Live Chat</label>
     </customValue>
     <customValue>
-        <fullName>Partner Oath</fullName>
+        <fullName>Partner Ouath</fullName>
         <default>false</default>
-        <label>Partner Oath</label>
+        <label>Partner Ouath</label>
     </customValue>
     <customValue>
         <fullName>Referral</fullName>
