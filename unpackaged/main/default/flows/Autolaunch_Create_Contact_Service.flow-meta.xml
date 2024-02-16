@@ -245,7 +245,7 @@
         <defaultConnectorLabel>No Data Missing</defaultConnectorLabel>
         <rules>
             <name>Yes_Proceed</name>
-            <conditionLogic>and</conditionLogic>
+            <conditionLogic>or</conditionLogic>
             <conditions>
                 <leftValueReference>input_Link_To_Account_ID</leftValueReference>
                 <operator>IsNull</operator>

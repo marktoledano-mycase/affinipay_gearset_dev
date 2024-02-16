@@ -3,7 +3,7 @@
     <actionCalls>
         <name>Format_Firm_Name</name>
         <label>Format Firm Name</label>
-        <locationX>5308</locationX>
+        <locationX>5522</locationX>
         <locationY>1430</locationY>
         <actionName>FlowSanitizeString</actionName>
         <actionType>apex</actionType>
@@ -25,13 +25,43 @@
     <assignments>
         <name>Assign_Account</name>
         <label>Assign Account</label>
-        <locationX>5770</locationX>
+        <locationX>6298</locationX>
         <locationY>2078</locationY>
         <assignmentItems>
             <assignToReference>rv_PE_Update_Record.Account__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>Create_Active_Account.output_Created_AccountID</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rv_PE_Update_Record.Account_Matched_On__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Account Created</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_Standard_PE_Vars</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Lead_ID</name>
+        <label>Assign Lead ID</label>
+        <locationX>5506</locationX>
+        <locationY>2186</locationY>
+        <assignmentItems>
+            <assignToReference>rv_PE_Update_Record.Lead__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Create_Lead.output_Lead_ID</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rv_PE_Update_Record.Account_Matched_On__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Lead Created</stringValue>
             </value>
         </assignmentItems>
         <connector>
@@ -87,8 +117,8 @@
     <assignments>
         <name>assign_PU_Record_ID</name>
         <label>assign PU Record ID</label>
-        <locationX>2220</locationX>
-        <locationY>3266</locationY>
+        <locationX>2257</locationX>
+        <locationY>3458</locationY>
         <assignmentItems>
             <assignToReference>rv_Prod_User_Update.Id</assignToReference>
             <operator>Assign</operator>
@@ -103,8 +133,8 @@
     <assignments>
         <name>Assign_Standard_PE_Vars</name>
         <label>Assign Standard PE Vars</label>
-        <locationX>2352</locationX>
-        <locationY>2942</locationY>
+        <locationX>2389</locationX>
+        <locationY>3134</locationY>
         <assignmentItems>
             <assignToReference>rv_PE_Update_Record.Id</assignToReference>
             <operator>Assign</operator>
@@ -121,22 +151,6 @@
         </assignmentItems>
         <connector>
             <targetReference>Update_PE_Record</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>Can_Not_Proceed</name>
-        <label>Can Not Proceed</label>
-        <locationX>6298</locationX>
-        <locationY>998</locationY>
-        <assignmentItems>
-            <assignToReference>rv_PE_Update_Record.Account_Matched_On__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>ERROR: Could Not Link and Missing Firm Name </stringValue>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Assign_Standard_PE_Vars</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -186,9 +200,41 @@
         </connector>
     </assignments>
     <assignments>
+        <name>Create_Lead_Activation_Date_Exceeded</name>
+        <label>Create Lead Activation Date Exceeded</label>
+        <locationX>5770</locationX>
+        <locationY>1970</locationY>
+        <assignmentItems>
+            <assignToReference>rv_PE_Update_Record.Account_Matched_On__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>ERROR: Lead Create Blocked By Activation Date Limit</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_Standard_PE_Vars</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Error_On_Lead_Create</name>
+        <label>Error On Lead Create</label>
+        <locationX>5242</locationX>
+        <locationY>2186</locationY>
+        <assignmentItems>
+            <assignToReference>rv_PE_Update_Record.Account_Matched_On__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>ERROR: Lead Create Error</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_Standard_PE_Vars</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>Errors</name>
         <label>Errors</label>
-        <locationX>5506</locationX>
+        <locationX>6034</locationX>
         <locationY>2078</locationY>
         <assignmentItems>
             <assignToReference>rv_PE_Update_Record.Account_Matched_On__c</assignToReference>
@@ -579,7 +625,7 @@
     <assignments>
         <name>Unsupported_PE_Firm_Status</name>
         <label>Unsupported PE Firm Status</label>
-        <locationX>6034</locationX>
+        <locationX>6562</locationX>
         <locationY>1862</locationY>
         <assignmentItems>
             <assignToReference>rv_PE_Update_Record.Account_Matched_On__c</assignToReference>
@@ -589,23 +635,6 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Assign_Standard_PE_Vars</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>Update_Create_Lead</name>
-        <label>Update Create Lead</label>
-        <locationX>5242</locationX>
-        <locationY>1862</locationY>
-        <assignmentItems>
-            <assignToReference>rv_PE_Update_Record.Account_Matched_On__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>Create Lead: Not supported Yet</stringValue>
-            </value>
-        </assignmentItems>
-        <connector>
-            <isGoTo>true</isGoTo>
             <targetReference>Assign_Standard_PE_Vars</targetReference>
         </connector>
     </assignments>
@@ -656,9 +685,35 @@
         </connector>
     </assignments>
     <decisions>
+        <description>Activation date must be 1/1/2022 or Greater</description>
+        <name>Activation_Date_Filter</name>
+        <label>Activation Date Filter</label>
+        <locationX>5572</locationX>
+        <locationY>1862</locationY>
+        <defaultConnector>
+            <targetReference>Create_Lead_Activation_Date_Exceeded</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Do Not Create Lead</defaultConnectorLabel>
+        <rules>
+            <name>Create_Lead_Dec</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>input_Prod_Env_Record.Firm_Activation_Date__c</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <dateTimeValue>2022-01-01T08:00:00.000Z</dateTimeValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Lead</targetReference>
+            </connector>
+            <label>Create Lead</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Contact_Found</name>
         <label>Contact Found</label>
-        <locationX>3511</locationX>
+        <locationX>3584</locationX>
         <locationY>566</locationY>
         <defaultConnector>
             <targetReference>Get_Lead</targetReference>
@@ -683,7 +738,7 @@
     <decisions>
         <name>Found_Clean_Name</name>
         <label>Found Clean Name</label>
-        <locationX>5308</locationX>
+        <locationX>5522</locationX>
         <locationY>1646</locationY>
         <defaultConnector>
             <targetReference>PE_Status</targetReference>
@@ -824,7 +879,7 @@
     <decisions>
         <name>Found_Domain_Search</name>
         <label>Found Domain Search</label>
-        <locationX>4730</locationX>
+        <locationX>4784</locationX>
         <locationY>1106</locationY>
         <defaultConnector>
             <targetReference>Get_Email_In_Name_Account</targetReference>
@@ -849,7 +904,7 @@
     <decisions>
         <name>Found_Email_Name_Search</name>
         <label>Found Email Name Search</label>
-        <locationX>5011</locationX>
+        <locationX>5118</locationX>
         <locationY>1322</locationY>
         <defaultConnector>
             <targetReference>Format_Firm_Name</targetReference>
@@ -990,7 +1045,7 @@
     <decisions>
         <name>Found_PU_Record</name>
         <label>Found PU Record</label>
-        <locationX>2352</locationX>
+        <locationX>2389</locationX>
         <locationY>350</locationY>
         <defaultConnector>
             <targetReference>Get_Contact</targetReference>
@@ -1015,10 +1070,11 @@
     <decisions>
         <name>Has_Firm_Name</name>
         <label>Has Firm Name</label>
-        <locationX>5514</locationX>
+        <locationX>5805</locationX>
         <locationY>890</locationY>
         <defaultConnector>
-            <targetReference>Can_Not_Proceed</targetReference>
+            <isGoTo>true</isGoTo>
+            <targetReference>PE_Status</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -1040,7 +1096,7 @@
     <decisions>
         <name>Has_Owners_Email_Address</name>
         <label>Has Owners Email Address</label>
-        <locationX>4457</locationX>
+        <locationX>4739</locationX>
         <locationY>134</locationY>
         <defaultConnector>
             <isGoTo>true</isGoTo>
@@ -1064,9 +1120,34 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Lead_Create_Error</name>
+        <label>Lead Create Error</label>
+        <locationX>5374</locationX>
+        <locationY>2078</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Lead_ID</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No Error</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Error_on_Create_Lead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Create_Lead.error_Create_Lead_Error</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Error_On_Lead_Create</targetReference>
+            </connector>
+            <label>Yes Error on Create Lead</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Lead_Found</name>
         <label>Lead Found</label>
-        <locationX>4421</locationX>
+        <locationX>4566</locationX>
         <locationY>782</locationY>
         <defaultConnector>
             <targetReference>Has_Firm_Name</targetReference>
@@ -1152,7 +1233,7 @@
     <decisions>
         <name>PE_Status</name>
         <label>Create Lead or Account</label>
-        <locationX>5638</locationX>
+        <locationX>6067</locationX>
         <locationY>1754</locationY>
         <defaultConnector>
             <targetReference>Unsupported_PE_Firm_Status</targetReference>
@@ -1183,7 +1264,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Update_Create_Lead</targetReference>
+                <targetReference>Activation_Date_Filter</targetReference>
             </connector>
             <label>Lead</label>
         </rules>
@@ -1319,8 +1400,8 @@
     <decisions>
         <name>Update_PU_Record_Needed</name>
         <label>Update PU Record Needed</label>
-        <locationX>2352</locationX>
-        <locationY>3158</locationY>
+        <locationX>2389</locationX>
+        <locationY>3350</locationY>
         <defaultConnectorLabel>No</defaultConnectorLabel>
         <rules>
             <name>Yes_Update_PU_Record</name>
@@ -1341,7 +1422,7 @@
     <decisions>
         <name>Was_Error</name>
         <label>Was Error</label>
-        <locationX>5638</locationX>
+        <locationX>6166</locationX>
         <locationY>1970</locationY>
         <defaultConnector>
             <targetReference>Assign_Account</targetReference>
@@ -1403,7 +1484,7 @@
     <recordLookups>
         <name>Get_Clean_Name_Search</name>
         <label>Get Clean Name Search</label>
-        <locationX>5308</locationX>
+        <locationX>5522</locationX>
         <locationY>1538</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1424,7 +1505,7 @@
     <recordLookups>
         <name>Get_Contact</name>
         <label>Get Contact</label>
-        <locationX>3511</locationX>
+        <locationX>3584</locationX>
         <locationY>458</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1508,7 +1589,7 @@
     <recordLookups>
         <name>Get_Domain_Account</name>
         <label>Get Domain Account</label>
-        <locationX>4730</locationX>
+        <locationX>4784</locationX>
         <locationY>998</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1529,7 +1610,7 @@
     <recordLookups>
         <name>Get_Email_In_Name_Account</name>
         <label>Get Email In Name Account</label>
-        <locationX>5011</locationX>
+        <locationX>5118</locationX>
         <locationY>1214</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1550,7 +1631,7 @@
     <recordLookups>
         <name>Get_Lead</name>
         <label>Get Lead</label>
-        <locationX>4421</locationX>
+        <locationX>4566</locationX>
         <locationY>674</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1571,7 +1652,7 @@
     <recordLookups>
         <name>Get_Owners_PU_Record</name>
         <label>Get Owners PU Record</label>
-        <locationX>2352</locationX>
+        <locationX>2389</locationX>
         <locationY>242</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1669,8 +1750,8 @@
     <recordUpdates>
         <name>Update_PE_Record</name>
         <label>Update PE Record</label>
-        <locationX>2352</locationX>
-        <locationY>3050</locationY>
+        <locationX>2389</locationX>
+        <locationY>3242</locationY>
         <connector>
             <targetReference>Update_PU_Record_Needed</targetReference>
         </connector>
@@ -1679,13 +1760,13 @@
     <recordUpdates>
         <name>Update_PU_Record</name>
         <label>Update PU Record</label>
-        <locationX>2220</locationX>
-        <locationY>3374</locationY>
+        <locationX>2257</locationX>
+        <locationY>3566</locationY>
         <inputReference>rv_Prod_User_Update</inputReference>
     </recordUpdates>
     <runInMode>SystemModeWithoutSharing</runInMode>
     <start>
-        <locationX>4331</locationX>
+        <locationX>4613</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Has_Owners_Email_Address</targetReference>
@@ -1695,7 +1776,7 @@
     <subflows>
         <name>Create_Active_Account</name>
         <label>Create Active Account</label>
-        <locationX>5638</locationX>
+        <locationX>6166</locationX>
         <locationY>1862</locationY>
         <connector>
             <targetReference>Was_Error</targetReference>
@@ -1713,6 +1794,24 @@
                 <booleanValue>true</booleanValue>
             </value>
         </inputAssignments>
+        <inputAssignments>
+            <name>input_PE_Record</name>
+            <value>
+                <elementReference>input_Prod_Env_Record</elementReference>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <subflows>
+        <description>Autolaunch: Create Lead Service</description>
+        <name>Create_Lead</name>
+        <label>Create Lead</label>
+        <locationX>5374</locationX>
+        <locationY>1970</locationY>
+        <connector>
+            <targetReference>Lead_Create_Error</targetReference>
+        </connector>
+        <flowName>Autolaunch_Create_Lead_Service</flowName>
         <inputAssignments>
             <name>input_PE_Record</name>
             <value>
