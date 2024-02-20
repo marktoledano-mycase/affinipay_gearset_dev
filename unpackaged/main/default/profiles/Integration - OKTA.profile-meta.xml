@@ -353,6 +353,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Current_LPM_Prohibited__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Account.Current_LPM__c</field>
         <readable>true</readable>
@@ -5875,6 +5880,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Opportunity.Current_Intake_Solution__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Opportunity.Current_LPM_Prohibited__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
