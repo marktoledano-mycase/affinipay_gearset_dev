@@ -18,7 +18,7 @@
         <inputParameters>
             <name>soqlQuery</name>
             <value>
-                <stringValue>SELECT MasterLabel,Label, Assignment_Type__c,Assignment_Name__c,Send_Slack_Alert__c,Slack_ID__c , MQL_Type__c, MQL_Product_Tier__c, MQL_Brand__c FROM Assignment_Setting__mdt WHERE (MQL_Brand__c = &#39;All&#39; OR MQL_Brand__c = &#39;{!var_MQLBrand}&#39;) AND (MQL_Product_Tier__c = &#39;All&#39; OR MQL_Product_Tier__c = &#39;{!var_MQLProductTier}&#39;) AND (MQL_Type__c = &#39;All&#39; OR MQL_Type__c = &#39;{!var_MQLType}&#39;) AND Min_Demographic_Score__c &lt;= {!var_DemographicScore} AND Max_Demographic_Score__c &gt;= {!var_DemographicScore} AND (Business_Hour_Consideration__c = &#39;All&#39; OR Business_Hour_Consideration__c = &#39;{!fxBusinessHourDef}&#39;) AND Enterprise__c = {!EnterpriseVariable}</stringValue>
+                <stringValue>SELECT MasterLabel,Label, Assignment_Type__c,Assignment_Name__c,Send_Slack_Alert__c,Slack_ID__c , MQL_Type__c, MQL_Product_Tier__c, MQL_Brand__c FROM Assignment_Setting__mdt WHERE (MQL_Brand__c = &#39;All&#39; OR MQL_Brand__c = &#39;{!var_MQLBrand}&#39;) AND (MQL_Product_Tier__c = &#39;All&#39; OR MQL_Product_Tier__c = &#39;{!var_MQLProductTier}&#39;) AND (MQL_Type__c = &#39;All&#39; OR MQL_Type__c = &#39;{!var_MQLType}&#39;) AND Min_Demographic_Score__c &lt;= {!var_DemographicScore} AND Max_Demographic_Score__c &gt;= {!var_DemographicScore} AND (Business_Hour_Consideration__c = &#39;All&#39; OR Business_Hour_Consideration__c = &#39;{!fxBusinessHourDef}&#39;) AND Enterprise2__c = &#39;{!var_EnterpriseVariable}&#39;</stringValue>
             </value>
         </inputParameters>
         <nameSegment>ExecuteSOQL</nameSegment>
@@ -417,6 +417,16 @@
         <scale>0</scale>
         <value>
             <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <name>var_EnterpriseVariable</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>No</stringValue>
         </value>
     </variables>
     <variables>

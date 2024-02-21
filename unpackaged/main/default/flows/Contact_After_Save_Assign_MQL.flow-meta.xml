@@ -56,10 +56,10 @@
         <locationX>842</locationX>
         <locationY>1079</locationY>
         <assignmentItems>
-            <assignToReference>EnterpriseVariable</assignToReference>
+            <assignToReference>var_EnterpriseVariable</assignToReference>
             <operator>Assign</operator>
             <value>
-                <booleanValue>true</booleanValue>
+                <stringValue>Yes</stringValue>
             </value>
         </assignmentItems>
         <connector>
@@ -586,7 +586,7 @@
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Yes_Payments_Enterprise_Account</name>
-            <conditionLogic>(1 OR 5) AND (2 OR 3 OR 4)</conditionLogic>
+            <conditionLogic>1 AND (2 OR 3 OR 4)</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.Account.Payments_Enterprise_Account__c</leftValueReference>
                 <operator>EqualTo</operator>
@@ -615,20 +615,14 @@
                     <stringValue>LawPay</stringValue>
                 </rightValue>
             </conditions>
-            <conditions>
-                <leftValueReference>$Record.Referral_Partnership__r.Partner_Account__r.Payments_Enterprise_Account__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Yes</stringValue>
-                </rightValue>
-            </conditions>
             <connector>
                 <targetReference>Assign_Enterprise_Variable_True</targetReference>
             </connector>
             <label>Yes - Payments Enterprise Account</label>
         </rules>
     </decisions>
-    <description>Removed Queue Assignment Processing from Determine Assignment Type decision.
+    <description>Added EnterpriseVariable For Enterprise Routing
+Removed Queue Assignment Processing from Determine Assignment Type decision.
 Explicitly added Assignment Group to the Determine Assignment Type decision.
 This version created in order to allow Copado to select the most recent and applicable version.</description>
     <environments>Default</environments>
@@ -1142,6 +1136,12 @@ ISBLANK ( {!$Record.Referral_Partnership__c} ),
             </value>
         </inputAssignments>
         <inputAssignments>
+            <name>var_EnterpriseVariable</name>
+            <value>
+                <elementReference>var_EnterpriseVariable</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <name>var_MQLBrand</name>
             <value>
                 <elementReference>$Record.Last_MQL_Brand__c</elementReference>
@@ -1424,6 +1424,16 @@ ISBLANK ( {!$Record.Referral_Partnership__c} ),
         <isOutput>true</isOutput>
         <value>
             <booleanValue>false</booleanValue>
+        </value>
+    </variables>
+    <variables>
+        <name>var_EnterpriseVariable</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue>No</stringValue>
         </value>
     </variables>
     <variables>

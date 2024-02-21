@@ -11,6 +11,7 @@
     <columns>Assignment_Name__c</columns>
     <columns>Slack_ID__c</columns>
     <columns>Business_Hour_Consideration__c</columns>
+    <columns>Enterprise2__c</columns>
     <filterScope>Everything</filterScope>
     <filters>
         <field>Type__c</field>

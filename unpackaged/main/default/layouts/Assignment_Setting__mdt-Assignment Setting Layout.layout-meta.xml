@@ -18,6 +18,10 @@
                 <behavior>Edit</behavior>
                 <field>Enterprise__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Enterprise2__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
