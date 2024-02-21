@@ -630,6 +630,10 @@
                 <behavior>Edit</behavior>
                 <field>Last_Touch_Automation__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>SKUs_Added__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
