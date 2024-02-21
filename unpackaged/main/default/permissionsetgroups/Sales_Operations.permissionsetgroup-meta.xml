@@ -5,7 +5,6 @@
     <label>Sales Operations</label>
     <mutingPermissionSets>Mute_Hide_Option_to_Switch_to_Salesforce_Classic</mutingPermissionSets>
     <permissionSets>Access_Sales_Ops_Tools</permissionSets>
-    <permissionSets>Contract_Sku_Transactions_and_Contract_Skus_Delete</permissionSets>
     <permissionSets>Create_Onboarding_after_Opportunity_Is_Closed</permissionSets>
     <permissionSets>Create_Report_and_Dashboard_Folders</permissionSets>
     <permissionSets>Customize_Application</permissionSets>
@@ -13,6 +12,7 @@
     <permissionSets>Edit_MQL_Fields</permissionSets>
     <permissionSets>Inbound_Requests_Readonly</permissionSets>
     <permissionSets>Manage_Business_Hours_Holidays</permissionSets>
+    <permissionSets>Manage_Contract_SKUs_Transactions_for_Commissions</permissionSets>
     <permissionSets>Manage_Custom_Report_Types</permissionSets>
     <permissionSets>Manage_Dashboards</permissionSets>
     <permissionSets>Manage_Flows</permissionSets>
