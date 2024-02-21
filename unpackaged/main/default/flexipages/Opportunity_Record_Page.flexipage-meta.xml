@@ -672,6 +672,16 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
+                <fieldItem>Record.Additional_Sales_Engineer__c</fieldItem>
+                <identifier>RecordAdditional_Sales_Engineer_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Sales_Engineer_Status__c</fieldItem>
                 <identifier>RecordSales_Engineer_Status_cField</identifier>
             </fieldInstance>
