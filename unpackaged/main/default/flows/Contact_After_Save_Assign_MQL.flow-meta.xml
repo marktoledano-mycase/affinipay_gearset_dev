@@ -21,7 +21,7 @@
         <name>asg_SlackIDFromAssignmentGroupMember</name>
         <label>Assign Slack ID From Assignment Group Member</label>
         <locationX>1106</locationX>
-        <locationY>1727</locationY>
+        <locationY>2027</locationY>
         <assignmentItems>
             <assignToReference>var_SlackIDToUse</assignToReference>
             <operator>Assign</operator>
@@ -48,6 +48,22 @@
         <connector>
             <isGoTo>true</isGoTo>
             <targetReference>sub_SendSlackToUser</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Enterprise_Variable_True</name>
+        <label>Assign Enterprise Variable True</label>
+        <locationX>842</locationX>
+        <locationY>1079</locationY>
+        <assignmentItems>
+            <assignToReference>var_EnterpriseVariable</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Yes</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_the_Business_Hours</targetReference>
         </connector>
     </assignments>
     <decisions>
@@ -87,7 +103,7 @@
         <name>dec_AssignmentGroupMemberSlackIDIsNull</name>
         <label>Assignment Group Member Slack ID Is Null</label>
         <locationX>974</locationX>
-        <locationY>1619</locationY>
+        <locationY>1919</locationY>
         <defaultConnector>
             <targetReference>asg_SlackIDFromAssignmentGroupMember</targetReference>
         </defaultConnector>
@@ -120,7 +136,7 @@
         <name>dec_AssignmentGroupMemberUserIDIsNull</name>
         <label>Assignment Group Member User ID Is Null</label>
         <locationX>776</locationX>
-        <locationY>1403</locationY>
+        <locationY>1703</locationY>
         <defaultConnector>
             <targetReference>up_Contact</targetReference>
         </defaultConnector>
@@ -317,7 +333,7 @@
         <locationX>512</locationX>
         <locationY>863</locationY>
         <defaultConnector>
-            <targetReference>Check_the_Business_Hours</targetReference>
+            <targetReference>Payments_Enterprise_Account</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -525,7 +541,7 @@
         <name>Determine_Assignment_Type</name>
         <label>Determine Assignment Type</label>
         <locationX>974</locationX>
-        <locationY>1187</locationY>
+        <locationY>1487</locationY>
         <defaultConnectorLabel>Unhandled Condition</defaultConnectorLabel>
         <rules>
             <name>out_AssignmentTypeIsUser</name>
@@ -558,7 +574,55 @@
             <label>Group</label>
         </rules>
     </decisions>
-    <description>Removed Queue Assignment Processing from Determine Assignment Type decision.
+    <decisions>
+        <description>Contact&#39;s Account has a value of Payments Enterprise Account = YES</description>
+        <name>Payments_Enterprise_Account</name>
+        <label>Payments Enterprise Account</label>
+        <locationX>974</locationX>
+        <locationY>971</locationY>
+        <defaultConnector>
+            <targetReference>Check_the_Business_Hours</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Payments_Enterprise_Account</name>
+            <conditionLogic>1 AND (2 OR 3 OR 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account.Payments_Enterprise_Account__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Yes</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Last_MQL_Brand__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>CPACharge</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Last_MQL_Brand__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>ClientPay</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Last_MQL_Brand__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>LawPay</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Enterprise_Variable_True</targetReference>
+            </connector>
+            <label>Yes - Payments Enterprise Account</label>
+        </rules>
+    </decisions>
+    <description>Added EnterpriseVariable For Enterprise Routing
+Removed Queue Assignment Processing from Determine Assignment Type decision.
 Explicitly added Assignment Group to the Determine Assignment Type decision.
 This version created in order to allow Copado to select the most recent and applicable version.</description>
     <environments>Default</environments>
@@ -761,6 +825,12 @@ ISBLANK ( {!$Record.Referral_Partnership__c} ),
                 <booleanValue>false</booleanValue>
             </value>
         </inputAssignments>
+        <inputAssignments>
+            <field>Round_Robin_Locked__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <recordUpdates>
@@ -801,6 +871,12 @@ ISBLANK ( {!$Record.Referral_Partnership__c} ),
                 <booleanValue>false</booleanValue>
             </value>
         </inputAssignments>
+        <inputAssignments>
+            <field>Round_Robin_Locked__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <recordUpdates>
@@ -823,7 +899,7 @@ ISBLANK ( {!$Record.Referral_Partnership__c} ),
         <name>up_Contact</name>
         <label>Update Contact</label>
         <locationX>974</locationX>
-        <locationY>1511</locationY>
+        <locationY>1811</locationY>
         <connector>
             <targetReference>dec_AssignmentGroupMemberSlackIDIsNull</targetReference>
         </connector>
@@ -847,6 +923,12 @@ ISBLANK ( {!$Record.Referral_Partnership__c} ),
             <field>OwnerId</field>
             <value>
                 <elementReference>sub_GetAssignmentGroupMember.var_AssignmentGroupMemberUserID</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Round_Robin_Locked__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
             </value>
         </inputAssignments>
         <inputReference>$Record</inputReference>
@@ -881,6 +963,12 @@ ISBLANK ( {!$Record.Referral_Partnership__c} ),
                 <elementReference>$Record.Account.OwnerId</elementReference>
             </value>
         </inputAssignments>
+        <inputAssignments>
+            <field>Round_Robin_Locked__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <recordUpdates>
@@ -888,7 +976,7 @@ ISBLANK ( {!$Record.Referral_Partnership__c} ),
         <name>Update_Contact_Assign_to_Assignment_Name</name>
         <label>Update Contact - Assign to Assignment Name</label>
         <locationX>314</locationX>
-        <locationY>1295</locationY>
+        <locationY>1595</locationY>
         <connector>
             <targetReference>Send_Slack_to_User</targetReference>
         </connector>
@@ -910,6 +998,12 @@ ISBLANK ( {!$Record.Referral_Partnership__c} ),
                 <elementReference>sub_GetAssignmentSetting.var_AssignmentName</elementReference>
             </value>
         </inputAssignments>
+        <inputAssignments>
+            <field>Round_Robin_Locked__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <start>
@@ -918,7 +1012,7 @@ ISBLANK ( {!$Record.Referral_Partnership__c} ),
         <connector>
             <targetReference>dec_IsMQL</targetReference>
         </connector>
-        <filterFormula>{!$Record.Bypass_VR_and_Automation__c} = FALSE &amp;&amp; {!$Record.Assign_MQL__c} = TRUE</filterFormula>
+        <filterFormula>{!$Record.Bypass_VR_and_Automation__c} = FALSE &amp;&amp; {!$Record.Assign_MQL__c} = TRUE &amp;&amp; {!$Record.Round_Robin_Locked__c} = FALSE</filterFormula>
         <object>Contact</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
@@ -928,7 +1022,7 @@ ISBLANK ( {!$Record.Referral_Partnership__c} ),
         <name>Check_the_Business_Hours</name>
         <label>Check the Business Hours</label>
         <locationX>974</locationX>
-        <locationY>971</locationY>
+        <locationY>1271</locationY>
         <connector>
             <targetReference>sub_GetAssignmentSetting</targetReference>
         </connector>
@@ -954,7 +1048,7 @@ ISBLANK ( {!$Record.Referral_Partnership__c} ),
         <name>Send_Slack_to_Channel_About_User</name>
         <label>Send Slack to Channel About User</label>
         <locationX>314</locationX>
-        <locationY>1511</locationY>
+        <locationY>1811</locationY>
         <flowName>Autolaunched_Send_Slack_Message</flowName>
         <inputAssignments>
             <name>var_SlackConversationID</name>
@@ -973,7 +1067,7 @@ ISBLANK ( {!$Record.Referral_Partnership__c} ),
         <name>Send_Slack_to_User</name>
         <label>Send Slack to User</label>
         <locationX>314</locationX>
-        <locationY>1403</locationY>
+        <locationY>1703</locationY>
         <connector>
             <targetReference>Send_Slack_to_Channel_About_User</targetReference>
         </connector>
@@ -995,7 +1089,7 @@ ISBLANK ( {!$Record.Referral_Partnership__c} ),
         <name>sub_GetAssignmentGroupMember</name>
         <label>Get Assignment Group Member</label>
         <locationX>776</locationX>
-        <locationY>1295</locationY>
+        <locationY>1595</locationY>
         <connector>
             <targetReference>dec_AssignmentGroupMemberUserIDIsNull</targetReference>
         </connector>
@@ -1024,7 +1118,7 @@ ISBLANK ( {!$Record.Referral_Partnership__c} ),
         <name>sub_GetAssignmentSetting</name>
         <label>Get Assignment Setting</label>
         <locationX>974</locationX>
-        <locationY>1079</locationY>
+        <locationY>1379</locationY>
         <connector>
             <targetReference>Determine_Assignment_Type</targetReference>
         </connector>
@@ -1033,6 +1127,12 @@ ISBLANK ( {!$Record.Referral_Partnership__c} ),
             <name>var_DemographicScore</name>
             <value>
                 <elementReference>$Record.Demographic_Score__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_EnterpriseVariable</name>
+            <value>
+                <elementReference>var_EnterpriseVariable</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1090,7 +1190,7 @@ ISBLANK ( {!$Record.Referral_Partnership__c} ),
         <name>sub_SendSlackMissingSlackIDAssignmentGroupMember</name>
         <label>Send Slack (Missing Slack ID for Assignment Group Member)</label>
         <locationX>842</locationX>
-        <locationY>1727</locationY>
+        <locationY>2027</locationY>
         <flowName>Autolaunched_Send_Slack_Message</flowName>
         <inputAssignments>
             <name>var_SlackConversationID</name>
@@ -1128,7 +1228,7 @@ ISBLANK ( {!$Record.Referral_Partnership__c} ),
         <name>sub_SendSlackToChannel</name>
         <label>Send Slack to Channel</label>
         <locationX>2574</locationX>
-        <locationY>2555</locationY>
+        <locationY>2855</locationY>
         <flowName>Autolaunched_Send_Slack_Message</flowName>
         <inputAssignments>
             <name>var_SlackConversationID</name>
@@ -1147,7 +1247,7 @@ ISBLANK ( {!$Record.Referral_Partnership__c} ),
         <name>sub_SendSlackToUser</name>
         <label>Send Slack to User</label>
         <locationX>2574</locationX>
-        <locationY>2447</locationY>
+        <locationY>2747</locationY>
         <connector>
             <targetReference>sub_SendSlackToChannel</targetReference>
         </connector>
@@ -1310,6 +1410,26 @@ ISBLANK ( {!$Record.Referral_Partnership__c} ),
         <isViewedAsPlainText>false</isViewedAsPlainText>
         <text>&lt;p&gt;:error-triangle: *MQL Assignment Failure*&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&amp;gt; *What*&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;gt; An unhandled fault occurred.&lt;/p&gt;&lt;p&gt;&amp;gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;gt; :marketo-2: &amp;lt;{!$Setup.Instance_Configuration__c.Instance_URL__c}/apex/mkto_si__Marketo_Lead_Detail?objType=Lead&amp;amp;objId={!$Record.Id} |View in Marketo&amp;gt;&lt;/p&gt;&lt;p&gt;&amp;gt; :salesforce-2: &amp;lt;{!$Setup.Instance_Configuration__c.Instance_URL__c}/{!$Record.Id} |View in Salesforce&amp;gt;&lt;/p&gt;&lt;p&gt;&amp;gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;gt; *Fault Message*&lt;/p&gt;&lt;p&gt;&amp;gt; {!$Flow.FaultMessage}&lt;/p&gt;&lt;p&gt;&amp;gt;&amp;nbsp;&lt;/p&gt;&lt;p&gt;&amp;gt; *Investigation Required*&lt;/p&gt;&lt;p&gt;&amp;gt; 1. Assign the record to the relevant user.&lt;/p&gt;&lt;p&gt;&amp;gt; 2. Review the scenario with Marketing Operations to ensure that MQL fields are populated for all MQLs.&lt;/p&gt;</text>
     </textTemplates>
+    <variables>
+        <name>EnterpriseVariable</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </variables>
+    <variables>
+        <name>var_EnterpriseVariable</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue>No</stringValue>
+        </value>
+    </variables>
     <variables>
         <name>var_SlackIDToUse</name>
         <dataType>String</dataType>
