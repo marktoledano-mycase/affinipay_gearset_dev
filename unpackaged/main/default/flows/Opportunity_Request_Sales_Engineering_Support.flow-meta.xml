@@ -663,33 +663,33 @@
     <formulas>
         <name>f_AffinipayProductAreasInterestSelection</name>
         <dataType>String</dataType>
-        <expression>SUBSTITUTE( {!MyCaseProductInterests.selectedOptionsCSV}, &quot;,&quot; ,&quot;;&quot; )</expression>
+        <expression>SUBSTITUTE( {!AffinipayProductInterests.selectedOptionsCSV}, &quot;,&quot; ,&quot;;&quot; )</expression>
     </formulas>
     <formulas>
         <name>f_CASEpeerProductAreasInterestSelection</name>
         <dataType>String</dataType>
-        <expression>SUBSTITUTE( {!MyCaseProductInterests.selectedOptionsCSV}, &quot;,&quot; ,&quot;;&quot; )</expression>
+        <expression>SUBSTITUTE( {!CASEpeerProductInterests.selectedOptionsCSV}, &quot;,&quot; ,&quot;;&quot; )</expression>
     </formulas>
     <formulas>
         <name>f_ClientPayProductAreasInterestSelection</name>
         <dataType>String</dataType>
-        <expression>SUBSTITUTE( {!MyCaseProductInterests.selectedOptionsCSV}, &quot;,&quot; ,&quot;;&quot; )</expression>
+        <expression>SUBSTITUTE( {!ClientPayProductInterests.selectedOptionsCSV}, &quot;,&quot; ,&quot;;&quot; )</expression>
     </formulas>
     <formulas>
         <name>f_CPAchargeProductAreasInterestSelection</name>
         <dataType>String</dataType>
-        <expression>SUBSTITUTE( {!MyCaseProductInterests.selectedOptionsCSV}, &quot;,&quot; ,&quot;;&quot; )</expression>
+        <expression>SUBSTITUTE( {!CPAchargeProductInterests.selectedOptionsCSV}, &quot;,&quot; ,&quot;;&quot; )</expression>
     </formulas>
     <formulas>
         <name>f_DocketwiseProductAreasInterestSelection</name>
         <dataType>String</dataType>
-        <expression>SUBSTITUTE( {!MyCaseProductInterests.selectedOptionsCSV}, &quot;,&quot; ,&quot;;&quot; )</expression>
+        <expression>SUBSTITUTE( {!DocketwiseProductInterests.selectedOptionsCSV}, &quot;,&quot; ,&quot;;&quot; )</expression>
     </formulas>
     <formulas>
         <description>Formula for selections in the screen flow to be used in the assignment element</description>
         <name>f_LawPayProductAreasInterestSelection</name>
         <dataType>String</dataType>
-        <expression>SUBSTITUTE( {!MyCaseProductInterests.selectedOptionsCSV}, &quot;,&quot; ,&quot;;&quot; )</expression>
+        <expression>SUBSTITUTE( {!LawPayProductInterests.selectedOptionsCSV}, &quot;,&quot; ,&quot;;&quot; )</expression>
     </formulas>
     <formulas>
         <description>Formula for selections in the screen flow to be used in the assignment element</description>
@@ -2199,28 +2199,68 @@
     </subflows>
     <textTemplates>
         <name>AffinipaySlackMessageBody</name>
-        <isViewedAsPlainText>false</isViewedAsPlainText>
-        <text>&lt;p&gt;*SE Engagement Request - {!Opportunity.Account_Name__c}*&lt;/p&gt;&lt;p&gt;&amp;gt;*Requested By*: {!$User.Full_Name__c}&lt;/p&gt;&lt;p&gt;&amp;gt;*Employees*: {!Affinipay_Firm_Employees}&lt;/p&gt;&lt;p&gt;&amp;gt;*Potential Users*: {!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Affinipay&lt;/span&gt;_Potential_Users}&lt;/p&gt;&lt;p&gt;&amp;gt;*Potential Demo Date*: {!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Affinipay&lt;/span&gt;_Potential_Demo_Date}&lt;/p&gt;&lt;p&gt;&amp;gt;*Product Feature Interests*: {!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Affinipay&lt;/span&gt;ProductInterests.selectedOptionsCSV}&lt;/p&gt;&lt;p&gt;&amp;gt;*Why SE is requested*: _{!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Affinipay&lt;/span&gt;_Why_is_SE_being_requested}_&lt;/p&gt;&lt;p&gt;&amp;gt;*Compelling Case to Win Deal*: _{!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Affinipay&lt;/span&gt;_Compelling_case_to_win_the_deal}_&lt;/p&gt;&lt;p&gt;&amp;gt;*Opportunity*: &amp;lt;https://affinipaymain.lightning.force.com/lightning/r/Opportunity/{!Opportunity.Id}/view|{!Opportunity.Name}&amp;gt;&lt;/p&gt;</text>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>*SE Engagement Request - {!Opportunity.Account_Name__c}*
+&gt;*Requested By*: {!$User.Full_Name__c}
+&gt;*Employees*: {!Affinipay_Firm_Employees}
+&gt;*Potential Users*: {!Affinipay_Potential_Users}
+&gt;*Potential Demo Date*: {!Affinipay_Potential_Demo_Date}
+&gt;*Product Feature Interests*: {!AffinipayProductInterests.selectedOptionsCSV}
+&gt;*Why SE is requested*: _{!Affinipay_Why_is_SE_being_requested}_
+&gt;*Compelling Case to Win Deal*: _{!Affinipay_Compelling_case_to_win_the_deal}_
+&gt;*Opportunity*: &lt;https://affinipaymain.lightning.force.com/lightning/r/Opportunity/{!Opportunity.Id}/view|{!Opportunity.Name}&gt;</text>
     </textTemplates>
     <textTemplates>
         <name>CASEpeerSlackMessageBody</name>
-        <isViewedAsPlainText>false</isViewedAsPlainText>
-        <text>&lt;p&gt;*SE Engagement Request - {!Opportunity.Account_Name__c}*&lt;/p&gt;&lt;p&gt;&amp;gt;*Requested By*: {!$User.Full_Name__c}&lt;/p&gt;&lt;p&gt;&amp;gt;*Employees*: {!CASEpeer_Firm_Employees}&lt;/p&gt;&lt;p&gt;&amp;gt;*Potential Users*: {!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;CASEpeer&lt;/span&gt;_Potential_Users}&lt;/p&gt;&lt;p&gt;&amp;gt;*Potential Demo Date*: {!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;CASEpeer&lt;/span&gt;_Potential_Demo_Date}&lt;/p&gt;&lt;p&gt;&amp;gt;*Product Feature Interests*: {!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;CASEpeer&lt;/span&gt;ProductInterests.selectedOptionsCSV}&lt;/p&gt;&lt;p&gt;&amp;gt;*Why SE is requested*: _{!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;CASEpeer&lt;/span&gt;_Why_is_SE_being_requested}_&lt;/p&gt;&lt;p&gt;&amp;gt;*Compelling Case to Win Deal*: _{!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;CASEpeer&lt;/span&gt;_Compelling_case_to_win_the_deal}_&lt;/p&gt;&lt;p&gt;&amp;gt;*Opportunity*: &amp;lt;https://affinipaymain.lightning.force.com/lightning/r/Opportunity/{!Opportunity.Id}/view|{!Opportunity.Name}&amp;gt;&lt;/p&gt;</text>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>*SE Engagement Request - {!Opportunity.Account_Name__c}*
+&gt;*Requested By*: {!$User.Full_Name__c}
+&gt;*Employees*: {!CASEpeer_Firm_Employees}
+&gt;*Potential Users*: {!CASEpeer_Potential_Users}
+&gt;*Potential Demo Date*: {!CASEpeer_Potential_Demo_Date}
+&gt;*Product Feature Interests*: {!CASEpeerProductInterests.selectedOptionsCSV}
+&gt;*Why SE is requested*: _{!CASEpeer_Why_is_SE_being_requested}_
+&gt;*Compelling Case to Win Deal*: _{!CASEpeer_Compelling_case_to_win_the_deal}_
+&gt;*Opportunity*: &lt;https://affinipaymain.lightning.force.com/lightning/r/Opportunity/{!Opportunity.Id}/view|{!Opportunity.Name}&gt;</text>
     </textTemplates>
     <textTemplates>
         <name>ClientPaySlackMessageBody</name>
-        <isViewedAsPlainText>false</isViewedAsPlainText>
-        <text>&lt;p&gt;*SE Engagement Request - {!Opportunity.Account_Name__c}*&lt;/p&gt;&lt;p&gt;&amp;gt;*Requested By*: {!$User.Full_Name__c}&lt;/p&gt;&lt;p&gt;&amp;gt;*Employees*: {!ClientPay_Firm_Employees}&lt;/p&gt;&lt;p&gt;&amp;gt;*Potential Users*: {!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;ClientPay&lt;/span&gt;_Potential_Users}&lt;/p&gt;&lt;p&gt;&amp;gt;*Potential Demo Date*: {!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;ClientPay&lt;/span&gt;_Potential_Demo_Date}&lt;/p&gt;&lt;p&gt;&amp;gt;*Product Feature Interests*: {!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;ClientPay&lt;/span&gt;ProductInterests.selectedOptionsCSV}&lt;/p&gt;&lt;p&gt;&amp;gt;*Why SE is requested*: _{!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;ClientPay&lt;/span&gt;_Why_is_SE_being_requested}_&lt;/p&gt;&lt;p&gt;&amp;gt;*Compelling Case to Win Deal*: _{!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;ClientPay&lt;/span&gt;_Compelling_case_to_win_the_deal}_&lt;/p&gt;&lt;p&gt;&amp;gt;*Opportunity*: &amp;lt;https://affinipaymain.lightning.force.com/lightning/r/Opportunity/{!Opportunity.Id}/view|{!Opportunity.Name}&amp;gt;&lt;/p&gt;</text>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>*SE Engagement Request - {!Opportunity.Account_Name__c}*
+&gt;*Requested By*: {!$User.Full_Name__c}
+&gt;*Employees*: {!ClientPay_Firm_Employees}
+&gt;*Potential Users*: {!ClientPay_Potential_Users}
+&gt;*Potential Demo Date*: {!ClientPay_Demo_Date}
+&gt;*Product Feature Interests*: {!ClientPayProductInterests.selectedOptionsCSV}
+&gt;*Why SE is requested*: _{!ClientPay_Why_is_SE_being_requested}_
+&gt;*Compelling Case to Win Deal*: _{!ClientPay_Compelling_case_to_win_the_deal}_
+&gt;*Opportunity*: &lt;https://affinipaymain.lightning.force.com/lightning/r/Opportunity/{!Opportunity.Id}/view|{!Opportunity.Name}&gt;</text>
     </textTemplates>
     <textTemplates>
         <name>CPAchargeSlackMessageBody</name>
-        <isViewedAsPlainText>false</isViewedAsPlainText>
-        <text>&lt;p&gt;*SE Engagement Request - {!Opportunity.Account_Name__c}*&lt;/p&gt;&lt;p&gt;&amp;gt;*Requested By*: {!$User.Full_Name__c}&lt;/p&gt;&lt;p&gt;&amp;gt;*Employees*: {!CPAcharge_Firm_Employees}&lt;/p&gt;&lt;p&gt;&amp;gt;*Potential Users*: {!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;CPAcharge&lt;/span&gt;_Potential_Users}&lt;/p&gt;&lt;p&gt;&amp;gt;*Potential Demo Date*: {!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;CPAcharge&lt;/span&gt;_Potential_Demo_Date}&lt;/p&gt;&lt;p&gt;&amp;gt;*Product Feature Interests*: {!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;CPAcharge&lt;/span&gt;ProductInterests.selectedOptionsCSV}&lt;/p&gt;&lt;p&gt;&amp;gt;*Why SE is requested*: _{!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;CPAcharge&lt;/span&gt;_Why_is_SE_being_requested}_&lt;/p&gt;&lt;p&gt;&amp;gt;*Compelling Case to Win Deal*: _{!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;CPAcharge&lt;/span&gt;_Compelling_case_to_win_the_deal}_&lt;/p&gt;&lt;p&gt;&amp;gt;*Opportunity*: &amp;lt;https://affinipaymain.lightning.force.com/lightning/r/Opportunity/{!Opportunity.Id}/view|{!Opportunity.Name}&amp;gt;&lt;/p&gt;</text>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>*SE Engagement Request - {!Opportunity.Account_Name__c}*
+&gt;*Requested By*: {!$User.Full_Name__c}
+&gt;*Employees*: {!CPAcharge_Firm_Employees}
+&gt;*Potential Users*: {!CPAcharge_Potential_Users}
+&gt;*Potential Demo Date*: {!CPAcharge_Potential_Demo_Date}
+&gt;*Product Feature Interests*: {!CPAchargeProductInterests.selectedOptionsCSV}
+&gt;*Why SE is requested*: _{!CPAcharge_Why_is_SE_being_requested}_
+&gt;*Compelling Case to Win Deal*: _{!CPAcharge_Compelling_case_to_win_the_deal}_
+&gt;*Opportunity*: &lt;https://affinipaymain.lightning.force.com/lightning/r/Opportunity/{!Opportunity.Id}/view|{!Opportunity.Name}&gt;</text>
     </textTemplates>
     <textTemplates>
         <name>DocketwiseSlackMessageBody</name>
-        <isViewedAsPlainText>false</isViewedAsPlainText>
-        <text>&lt;p&gt;*SE Engagement Request - {!Opportunity.Account_Name__c}*&lt;/p&gt;&lt;p&gt;&amp;gt;*Requested By*: {!$User.Full_Name__c}&lt;/p&gt;&lt;p&gt;&amp;gt;*Employees*: {!Docketwise_Firm_Employees}&lt;/p&gt;&lt;p&gt;&amp;gt;*Potential Users*: {!Docketwise_Potential_Users}&lt;/p&gt;&lt;p&gt;&amp;gt;*Potential Demo Date*: {!Docketwise_Potential_Demo_Date}&lt;/p&gt;&lt;p&gt;&amp;gt;*Product Feature Interests*: {!DocketwiseProductInterests.selectedOptionsCSV}&lt;/p&gt;&lt;p&gt;&amp;gt;*Why SE is requested*: _{!Docketwise_Why_is_SE_being_requested}_&lt;/p&gt;&lt;p&gt;&amp;gt;*Compelling Case to Win Deal*: _{!Docketwise_Compelling_case_to_win_the_deal}_&lt;/p&gt;&lt;p&gt;&amp;gt;*Opportunity*: &amp;lt;https://affinipaymain.lightning.force.com/lightning/r/Opportunity/{!Opportunity.Id}/view|{!Opportunity.Name}&amp;gt;&lt;/p&gt;</text>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>*SE Engagement Request - {!Opportunity.Account_Name__c}*
+&gt;*Requested By*: {!$User.Full_Name__c}
+&gt;*Employees*: {!Docketwise_Firm_Employees}
+&gt;*Potential Users*: {!Docketwise_Potential_Users}
+&gt;*Potential Demo Date*: {!Docketwise_Potential_Demo_Date}
+&gt;*Product Feature Interests*: {!DocketwiseProductInterests.selectedOptionsCSV}
+&gt;*Why SE is requested*: _{!Docketwise_Why_is_SE_being_requested}_
+&gt;*Compelling Case to Win Deal*: _{!Docketwise_Compelling_case_to_win_the_deal}_
+&gt;*Opportunity*: &lt;https://affinipaymain.lightning.force.com/lightning/r/Opportunity/{!Opportunity.Id}/view|{!Opportunity.Name}&gt;</text>
     </textTemplates>
     <textTemplates>
         <name>LawPaySlackMessageBody</name>
