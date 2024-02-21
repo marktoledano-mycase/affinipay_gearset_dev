@@ -23,11 +23,11 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Abacus Law</fullName>
+            <fullName>Abacus</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Abacus%2FAmicus</fullName>
+            <fullName>Abacus Law</fullName>
             <default>false</default>
         </values>
         <values>
@@ -36,6 +36,10 @@
         </values>
         <values>
             <fullName>Aderant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advologix</fullName>
             <default>false</default>
         </values>
         <values>
@@ -55,7 +59,23 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Casepacer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Profiles</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Clio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cloudlex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CoCounselor</fullName>
             <default>false</default>
         </values>
         <values>
@@ -71,7 +91,11 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>File Vine</fullName>
+            <fullName>Filemaker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Filevine</fullName>
             <default>false</default>
         </values>
         <values>
@@ -95,6 +119,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Insightly</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Interbill</fullName>
             <default>false</default>
         </values>
@@ -111,6 +139,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Legal Eagle</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Legal Files</fullName>
             <default>false</default>
         </values>
@@ -119,11 +151,19 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Litfy</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>MyCase</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>Needles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neos</fullName>
             <default>false</default>
         </values>
         <values>
@@ -155,6 +195,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>PI Master</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>PIKA</fullName>
             <default>false</default>
         </values>
@@ -163,11 +207,11 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Practice Panther</fullName>
+            <fullName>PracticeMaster</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>PracticeMaster</fullName>
+            <fullName>PracticePanther</fullName>
             <default>false</default>
         </values>
         <values>
@@ -183,7 +227,15 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Smart Advocate</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Smokeball</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sugar CRM</fullName>
             <default>false</default>
         </values>
         <values>
@@ -216,6 +268,10 @@
         </values>
         <values>
             <fullName>Total Attorneys</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TriTek</fullName>
             <default>false</default>
         </values>
         <values>
@@ -717,30 +773,6 @@
     <picklistValues>
         <picklist>List_of_Top_Features__c</picklist>
         <values>
-            <fullName>Accounting</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Analytics</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Billing %26 Invoicing</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Calendaring</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Client Communications</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Client Intake</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Competition</fullName>
             <default>false</default>
         </values>
@@ -753,19 +785,11 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Document Automation</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Expense Tracking</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>Integrations</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Invoice Management</fullName>
             <default>false</default>
         </values>
         <values>
@@ -777,15 +801,7 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Lead Management</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Migration</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>None</fullName>
             <default>false</default>
         </values>
         <values>
@@ -805,10 +821,6 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Rate Review</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Reporting</fullName>
             <default>false</default>
         </values>
@@ -822,30 +834,6 @@
         </values>
         <values>
             <fullName>Surcharging</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Text Messaging</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Time Tracking</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>User Experience</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Websites</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Workflow Automation</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>eSignature</fullName>
             <default>false</default>
         </values>
     </picklistValues>

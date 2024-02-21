@@ -32,6 +32,16 @@
                 <label>Calendaring</label>
             </value>
             <value>
+                <fullName>Case Rating</fullName>
+                <default>false</default>
+                <label>Case Rating</label>
+            </value>
+            <value>
+                <fullName>Case Tracking</fullName>
+                <default>false</default>
+                <label>Case Tracking</label>
+            </value>
+            <value>
                 <fullName>Client Communications</fullName>
                 <default>false</default>
                 <label>Client Communications</label>
@@ -40,6 +50,11 @@
                 <fullName>Client Intake</fullName>
                 <default>false</default>
                 <label>Client Intake</label>
+            </value>
+            <value>
+                <fullName>Client Portal</fullName>
+                <default>false</default>
+                <label>Client Portal</label>
             </value>
             <value>
                 <fullName>Competition</fullName>
@@ -62,6 +77,16 @@
                 <label>Document Automation</label>
             </value>
             <value>
+                <fullName>Document Management</fullName>
+                <default>false</default>
+                <label>Document Management</label>
+            </value>
+            <value>
+                <fullName>eFiling</fullName>
+                <default>false</default>
+                <label>eFiling</label>
+            </value>
+            <value>
                 <fullName>eSignature</fullName>
                 <default>false</default>
                 <label>eSignature</label>
@@ -70,6 +95,11 @@
                 <fullName>Expense Tracking</fullName>
                 <default>false</default>
                 <label>Expense Tracking</label>
+            </value>
+            <value>
+                <fullName>Insurance Tracking</fullName>
+                <default>false</default>
+                <label>Insurance Tracking</label>
             </value>
             <value>
                 <fullName>Integrations</fullName>
@@ -97,6 +127,16 @@
                 <label>Lead Management</label>
             </value>
             <value>
+                <fullName>Liens</fullName>
+                <default>false</default>
+                <label>Liens</label>
+            </value>
+            <value>
+                <fullName>Medical Bills</fullName>
+                <default>false</default>
+                <label>Medical Bills</label>
+            </value>
+            <value>
                 <fullName>Migration</fullName>
                 <default>false</default>
                 <label>Migration</label>
@@ -115,6 +155,11 @@
                 <fullName>Payments</fullName>
                 <default>false</default>
                 <label>Payments</label>
+            </value>
+            <value>
+                <fullName>Permissions</fullName>
+                <default>false</default>
+                <label>Permissions</label>
             </value>
             <value>
                 <fullName>Process Walkthrough/Understanding</fullName>
@@ -147,9 +192,24 @@
                 <label>Ride Along</label>
             </value>
             <value>
+                <fullName>Settlement</fullName>
+                <default>false</default>
+                <label>Settlement</label>
+            </value>
+            <value>
+                <fullName>Smart Forms</fullName>
+                <default>false</default>
+                <label>Smart Forms</label>
+            </value>
+            <value>
                 <fullName>Surcharging</fullName>
                 <default>false</default>
                 <label>Surcharging</label>
+            </value>
+            <value>
+                <fullName>Task Management</fullName>
+                <default>false</default>
+                <label>Task Management</label>
             </value>
             <value>
                 <fullName>Text Messaging</fullName>

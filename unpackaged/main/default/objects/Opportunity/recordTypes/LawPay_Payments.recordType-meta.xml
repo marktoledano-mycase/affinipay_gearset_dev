@@ -1016,6 +1016,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>TPS Software</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>TaxDome</fullName>
             <default>false</default>
         </values>
@@ -2685,30 +2689,6 @@
     <picklistValues>
         <picklist>List_of_Top_Features__c</picklist>
         <values>
-            <fullName>Accounting</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Analytics</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Billing %26 Invoicing</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Calendaring</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Client Communications</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Client Intake</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Competition</fullName>
             <default>false</default>
         </values>
@@ -2721,10 +2701,6 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Document Automation</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Expense Tracking</fullName>
             <default>false</default>
         </values>
@@ -2733,15 +2709,11 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Invoice Management</fullName>
+            <fullName>Invoicing - Payments Plus</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>Large Processing Volume</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Lead Management</fullName>
             <default>false</default>
         </values>
         <values>
@@ -2761,7 +2733,7 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Rate Review</fullName>
+            <fullName>Quick Bill</fullName>
             <default>false</default>
         </values>
         <values>
@@ -2778,30 +2750,6 @@
         </values>
         <values>
             <fullName>Surcharging</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Text Messaging</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Time Tracking</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>User Experience</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Websites</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Workflow Automation</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>eSignature</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -3313,31 +3261,11 @@
     <picklistValues>
         <picklist>Product_Feedback_Category__c</picklist>
         <values>
-            <fullName>AI %26 Automation</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Accounting</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Banks</fullName>
             <default>false</default>
         </values>
         <values>
-            <fullName>Court Forms</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Email Automation</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Evergreen Retainers</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Fees</fullName>
             <default>false</default>
         </values>
         <values>
@@ -3366,10 +3294,6 @@
         </values>
         <values>
             <fullName>Surcharging</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Updating Case Rates</fullName>
             <default>false</default>
         </values>
     </picklistValues>
