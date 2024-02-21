@@ -3,6 +3,7 @@
     <description>Permissions to manage data for commissions. 💰</description>
     <hasActivationRequired>false</hasActivationRequired>
     <label>Sales Commissions</label>
+    <permissionSets>Manage_Contract_SKUs_Transactions_for_Commissions</permissionSets>
     <permissionSets>Process_Opportunity_for_Subscription_Contract</permissionSets>
     <status>Updated</status>
 </PermissionSetGroup>
