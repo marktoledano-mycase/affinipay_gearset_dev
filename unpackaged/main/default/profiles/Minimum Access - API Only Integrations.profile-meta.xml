@@ -338,6 +338,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Opportunity.Additional_Sales_Engineer__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Opportunity.Last_Touch_Automation__c</field>
         <readable>true</readable>
     </fieldPermissions>

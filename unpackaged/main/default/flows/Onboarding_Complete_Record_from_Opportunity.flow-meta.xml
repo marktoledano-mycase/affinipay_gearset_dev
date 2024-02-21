@@ -340,12 +340,6 @@ ISBLANK({!Get_Opportunity.Signer__c}),
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Software_Discount__c</field>
-            <value>
-                <elementReference>Get_Opportunity.Software_Discount__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>Software_Tier__c</field>
             <value>
                 <elementReference>Get_Opportunity.Software_Tier__c</elementReference>

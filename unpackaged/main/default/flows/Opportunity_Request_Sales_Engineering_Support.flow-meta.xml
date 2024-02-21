@@ -2,75 +2,10 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <apiVersion>58.0</apiVersion>
     <assignments>
-        <name>Assign_Opportunity_Values</name>
-        <label>Assign Opportunity Values</label>
-        <locationX>825</locationX>
-        <locationY>225</locationY>
-        <assignmentItems>
-            <assignToReference>Opportunity.Sales_Engineer_Status__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>Requested</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Opportunity.Sales_Engineer__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>LindsayBushongUserId</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Opportunity.Sales_Engineer_Notes__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Why_is_SE_being_requested</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Opportunity.List_of_Top_Features__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>f_productAreasInterestSelection</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Opportunity.Forecasted_Users__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Potential_Users</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Opportunity.Number_of_Employees__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Firm_Employees</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>varProductInterestUpdate</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>f_productAreasInterestSelection</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Opportunity.BDR_Demo_Scheduled_Date__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Potential_Demo_Date</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Update_Opportunity_0</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>Assign_Opportunity_Values_0</name>
-        <label>Assign Opportunity Values</label>
-        <locationX>823</locationX>
-        <locationY>406</locationY>
+        <name>Assign_Affinipay_Opportunity_Values</name>
+        <label>Assign Affinipay Opportunity Values</label>
+        <locationX>1106</locationX>
+        <locationY>458</locationY>
         <assignmentItems>
             <assignToReference>Opportunity.Sales_Engineer_Status__c</assignToReference>
             <operator>Assign</operator>
@@ -89,48 +24,486 @@
             <assignToReference>Opportunity.Sales_Engineer_Notes__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Why_is_SE_being_requested_0</elementReference>
+                <elementReference>Affinipay_Why_is_SE_being_requested</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>Opportunity.List_of_Top_Features__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>f_productAreasInterestSelection2</elementReference>
+                <elementReference>f_AffinipayProductAreasInterestSelection</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>Opportunity.Forecasted_Users__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Potential_Users_0</elementReference>
+                <elementReference>Affinipay_Potential_Users</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>Opportunity.Number_of_Employees__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Firm_Employees_0</elementReference>
+                <elementReference>Affinipay_Firm_Employees</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>varProductInterestUpdate</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>f_productAreasInterestSelection2</elementReference>
+                <elementReference>f_AffinipayProductAreasInterestSelection</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
             <assignToReference>Opportunity.BDR_Demo_Scheduled_Date__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>Potential_Demo_Date_0</elementReference>
+                <elementReference>Affinipay_Potential_Demo_Date</elementReference>
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Update_Opportunity</targetReference>
+            <targetReference>Update_Affinipay_Opportunity</targetReference>
         </connector>
     </assignments>
+    <assignments>
+        <name>Assign_CASEpeer_Opportunity_Values</name>
+        <label>Assign CASEpeer Opportunity Values</label>
+        <locationX>1370</locationX>
+        <locationY>458</locationY>
+        <assignmentItems>
+            <assignToReference>Opportunity.Sales_Engineer_Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Requested</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.Sales_Engineer__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>LindsayBushongUserId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.Sales_Engineer_Notes__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CASEpeer_Why_is_SE_being_requested</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.List_of_Top_Features__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>f_CASEpeerProductAreasInterestSelection</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.Forecasted_Users__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CASEpeer_Potential_Users</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.Number_of_Employees__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CASEpeer_Firm_Employees</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varProductInterestUpdate</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>f_CASEpeerProductAreasInterestSelection</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.BDR_Demo_Scheduled_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CASEpeer_Potential_Demo_Date</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_CASEpeer_Opportunity</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_ClientPay_Opportunity_Values</name>
+        <label>Assign ClientPay Opportunity Values</label>
+        <locationX>1634</locationX>
+        <locationY>458</locationY>
+        <assignmentItems>
+            <assignToReference>Opportunity.Sales_Engineer_Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Requested</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.Sales_Engineer__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>StevenLamanUserId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.Sales_Engineer_Notes__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ClientPay_Why_is_SE_being_requested</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.List_of_Top_Features__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>f_ClientPayProductAreasInterestSelection</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.Forecasted_Users__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ClientPay_Potential_Users</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.Number_of_Employees__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ClientPay_Firm_Employees</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varProductInterestUpdate</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>f_ClientPayProductAreasInterestSelection</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.BDR_Demo_Scheduled_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ClientPay_Demo_Date</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_ClientPay_Opportunity</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_CPAcharge_Opportunity_Values</name>
+        <label>Assign CPAcharge Opportunity Values</label>
+        <locationX>578</locationX>
+        <locationY>458</locationY>
+        <assignmentItems>
+            <assignToReference>Opportunity.Sales_Engineer_Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Requested</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.Sales_Engineer__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>StevenLamanUserId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.Sales_Engineer_Notes__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CPAcharge_Why_is_SE_being_requested</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.List_of_Top_Features__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>f_CPAchargeProductAreasInterestSelection</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.Forecasted_Users__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CPAcharge_Potential_Users</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.Number_of_Employees__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CPAcharge_Firm_Employees</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varProductInterestUpdate</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>f_CPAchargeProductAreasInterestSelection</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.BDR_Demo_Scheduled_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>CPAcharge_Potential_Demo_Date</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_CPAcharge_Opportunity</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Docketwise_Opportunity_Values</name>
+        <label>Assign Docketwise Opportunity Values</label>
+        <locationX>842</locationX>
+        <locationY>458</locationY>
+        <assignmentItems>
+            <assignToReference>Opportunity.Sales_Engineer_Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Requested</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.Sales_Engineer__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>LindsayBushongUserId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.Sales_Engineer_Notes__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Docketwise_Why_is_SE_being_requested</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.List_of_Top_Features__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>f_DocketwiseProductAreasInterestSelection</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.Forecasted_Users__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Docketwise_Potential_Users</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.Number_of_Employees__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Docketwise_Firm_Employees</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varProductInterestUpdate</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>f_DocketwiseProductAreasInterestSelection</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.BDR_Demo_Scheduled_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Docketwise_Potential_Demo_Date</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Docketwise_Opportunity</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_LawPay_Opportunity_Values</name>
+        <label>Assign LawPay Opportunity Values</label>
+        <locationX>50</locationX>
+        <locationY>458</locationY>
+        <assignmentItems>
+            <assignToReference>Opportunity.Sales_Engineer_Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Requested</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.Sales_Engineer__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>StevenLamanUserId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.Sales_Engineer_Notes__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>LawPay_Why_is_SE_being_requested</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.List_of_Top_Features__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>f_LawPayProductAreasInterestSelection</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.Forecasted_Users__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>LawPay_Potential_Users</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.Number_of_Employees__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>LawPay_Firm_Employees</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varProductInterestUpdate</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>f_LawPayProductAreasInterestSelection</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.BDR_Demo_Scheduled_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>LawPay_Potential_Demo_Date</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_LawPay_Opportunity</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_MyCase_Opportunity_Values</name>
+        <label>Assign MyCase Opportunity Values</label>
+        <locationX>314</locationX>
+        <locationY>458</locationY>
+        <assignmentItems>
+            <assignToReference>Opportunity.Sales_Engineer_Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Requested</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.Sales_Engineer__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>LindsayBushongUserId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.Sales_Engineer_Notes__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>MyCase_Why_is_SE_being_requested</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.List_of_Top_Features__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>f_MyCaseProductAreasInterestSelection</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.Forecasted_Users__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>MyCase_Potential_Users</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.Number_of_Employees__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>MyCase_Firm_Employees</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varProductInterestUpdate</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>f_MyCaseProductAreasInterestSelection</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Opportunity.BDR_Demo_Scheduled_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>MyCase_Potential_Demo_Date</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_MyCase_Opportunity</targetReference>
+        </connector>
+    </assignments>
+    <constants>
+        <description>CSV list of values for the Dual List Box (Unofficial SF Component). These List of Top Features values are specific to Affinipay Opps.</description>
+        <name>AffinipayProductAreasInterestValues</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Competition,Credit Card Processing,Cross-Sell,Expense Tracking,Integrations,Invoicing - Payments Plus,Large Processing Volume,Migration,Other Demo Area,Payments,Process Walkthrough/Understanding,Quick Bill,Reporting,Resource,Ride Along,Surcharging</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <description>CSV list of values for the Dual List Box (Unofficial SF Component). These List of Top Features values are specific to CASEpeer Opps.</description>
+        <name>CASEpeerProductAreasInterestValues</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Analytics,Calendaring,Case Rating,Client Communications,Client Intake,Document Automation,eSignature,Expense Tracking,Insurance Tracking,Integrations,Lead Management,Liens,Medical Bills,Migration,None,Other Demo Area,Permissions,Reporting,Settlement,Text Messaging,Time Tracking,User Experience,Workflow Automation</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <description>CSV list of values for the Dual List Box (Unofficial SF Component). These List of Top Features values are specific to ClientPay Opps.</description>
+        <name>ClientPayProductAreasInterestValues</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Competition,Credit Card Processing,Cross-Sell,Expense Tracking,Integrations,Invoicing - Payments Plus,Large Processing Volume,Migration,Other Demo Area,Payments,Process Walkthrough/Understanding,Quick Bill,Reporting,Resource,Ride Along,Surcharging</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <description>CSV list of values for the Dual List Box (Unofficial SF Component). These List of Top Features values are specific to CPACharge Opps.</description>
+        <name>CPAChargeProductAreasInterestValues</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Competition,Credit Card Processing,Cross-Sell,Expense Tracking,Integrations,Invoicing - Payments Plus,Large Processing Volume,Migration,Other Demo Area,Payments,Process Walkthrough/Understanding,Quick Bill,Reporting,Resource,Ride Along,Surcharging</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <description>CSV list of values for the Dual List Box (Unofficial SF Component). These List of Top Features values are specific to Docketwise Opps.</description>
+        <name>DocketwiseProductAreasInterestValues</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Analytics,Billing &amp; Invoicing,Calendaring,Case Tracking,Client Communications,Client Intake,Client Portal,Document Management,eFiling,eSignature,Integrations,Reporting,Smart Forms,Task Management,Text Messaging,Time Tracking,User Experience,Workflow Automation</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <description>CSV list of values for the Dual List Box (Unofficial SF Component). These List of Top Features values are specific to LawPay Opps.</description>
+        <name>LawPayProductAreasInterestValues</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Competition,Credit Card Processing,Cross-Sell,Expense Tracking,Integrations,Invoicing - Payments Plus,Large Processing Volume,Migration,Other Demo Area,Payments,Process Walkthrough/Understanding,Quick Bill,Reporting,Resource,Ride Along,Surcharging</stringValue>
+        </value>
+    </constants>
     <constants>
         <description>Lindsay Bushong&#39;s USER ID</description>
         <name>LindsayBushongUserId</name>
@@ -141,18 +514,10 @@
     </constants>
     <constants>
         <description>CSV list of values for the Dual List Box (Unofficial SF Component). These List of Top Features values are specific to MyCase Opps.</description>
-        <name>productAreasInterestValues</name>
+        <name>MyCaseProductAreasInterestValues</name>
         <dataType>String</dataType>
         <value>
             <stringValue>Accounting,Analytics,Billing &amp; Invoicing,Calendaring,Client Communications,Client Intake,Document Automation,eSignature,Expense Tracking,Integrations,Invoice Management,Lead Management,Payments,Reporting,Text Messaging,Time Tracking,User Experience,Websites,Workflow Automation</stringValue>
-        </value>
-    </constants>
-    <constants>
-        <description>CSV list of values for the Dual List Box (Unofficial SF Component). These List of Top Features values are specific to LawPay Opps.</description>
-        <name>productAreasInterestValues2</name>
-        <dataType>String</dataType>
-        <value>
-            <stringValue>Rate Review,Competition,Integrations,Credit Card Processing,Migration,Cross-Sell,Surcharging,Ride Along,Resource,Process Walkthrough/Understanding,Large Processing Volume,Other Demo Area</stringValue>
         </value>
     </constants>
     <constants>
@@ -175,12 +540,12 @@
         <description>Determines the record type of the Opportunity</description>
         <name>Check_Record_Type</name>
         <label>Check Record Type</label>
-        <locationX>281</locationX>
-        <locationY>398</locationY>
+        <locationX>974</locationX>
+        <locationY>242</locationY>
         <defaultConnectorLabel>None</defaultConnectorLabel>
         <rules>
             <name>LawPay_Opportunity</name>
-            <conditionLogic>or</conditionLogic>
+            <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>Opportunity.Record_Type_Name__c</leftValueReference>
                 <operator>Contains</operator>
@@ -188,20 +553,13 @@
                     <stringValue>LawPay</stringValue>
                 </rightValue>
             </conditions>
-            <conditions>
-                <leftValueReference>Opportunity.Record_Type_Name__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>CPACharge</stringValue>
-                </rightValue>
-            </conditions>
             <connector>
-                <targetReference>Sales_Engineering_Request_0</targetReference>
+                <targetReference>LawPay_Sales_Engineering_Request</targetReference>
             </connector>
-            <label>LawPay/CPA Charge Opportunity</label>
+            <label>LawPay Opportunity</label>
         </rules>
         <rules>
-            <name>MyCase_Docketwise_Opportunity</name>
+            <name>MyCase_Opportunity</name>
             <conditionLogic>or</conditionLogic>
             <conditions>
                 <leftValueReference>Opportunity.Record_Type_Name__c</leftValueReference>
@@ -210,6 +568,29 @@
                     <stringValue>MyCase</stringValue>
                 </rightValue>
             </conditions>
+            <connector>
+                <targetReference>MyCase_Sales_Engineering_Request</targetReference>
+            </connector>
+            <label>MyCase Opportunity</label>
+        </rules>
+        <rules>
+            <name>CPAcharge_Opportunity</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Opportunity.Record_Type_Name__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>CPACharge</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CPAcharge_Sales_Engineering_Request</targetReference>
+            </connector>
+            <label>CPAcharge Opportunity</label>
+        </rules>
+        <rules>
+            <name>Docketwise_Opportunity</name>
+            <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>Opportunity.Record_Type_Name__c</leftValueReference>
                 <operator>EqualTo</operator>
@@ -218,12 +599,57 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Sales_Engineering_Request</targetReference>
+                <targetReference>Docketwise_Sales_Engineering_Request</targetReference>
             </connector>
-            <label>MyCase/Docketwise Opportunity</label>
+            <label>Docketwise Opportunity</label>
+        </rules>
+        <rules>
+            <name>Affinipay_Opportunity</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Opportunity.Record_Type_Name__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Affinipay</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Affinipay_Sales_Engineering_Request</targetReference>
+            </connector>
+            <label>Affinipay Opportunity</label>
+        </rules>
+        <rules>
+            <name>CASEpeer_Opportunity</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Opportunity.Record_Type_Name__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>CASEpeer</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CASEpeer_Sales_Engineering_Request</targetReference>
+            </connector>
+            <label>CASEpeer Opportunity</label>
+        </rules>
+        <rules>
+            <name>ClientPay_Opportunity</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Opportunity.Record_Type_Name__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>ClientPay</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>ClientPay_Sales_Engineering_Request</targetReference>
+            </connector>
+            <label>ClientPay Opportunity</label>
         </rules>
     </decisions>
-    <description>Screen flow to enable reps to request sales engineering support on a deal and copy values to the opportunity for reporting</description>
+    <description>2/21/24 JC - Updated to include for all opportunity record types</description>
     <dynamicChoiceSets>
         <name>productAreasInterest</name>
         <dataType>Multipicklist</dataType>
@@ -235,16 +661,41 @@
     </dynamicChoiceSets>
     <environments>Default</environments>
     <formulas>
-        <description>Formula for selections in the screen flow to be used in the assignment element</description>
-        <name>f_productAreasInterestSelection</name>
+        <name>f_AffinipayProductAreasInterestSelection</name>
         <dataType>String</dataType>
-        <expression>SUBSTITUTE( {!ProductInterests.selectedOptionsCSV}, &quot;,&quot; ,&quot;;&quot; )</expression>
+        <expression>SUBSTITUTE( {!MyCaseProductInterests.selectedOptionsCSV}, &quot;,&quot; ,&quot;;&quot; )</expression>
+    </formulas>
+    <formulas>
+        <name>f_CASEpeerProductAreasInterestSelection</name>
+        <dataType>String</dataType>
+        <expression>SUBSTITUTE( {!MyCaseProductInterests.selectedOptionsCSV}, &quot;,&quot; ,&quot;;&quot; )</expression>
+    </formulas>
+    <formulas>
+        <name>f_ClientPayProductAreasInterestSelection</name>
+        <dataType>String</dataType>
+        <expression>SUBSTITUTE( {!MyCaseProductInterests.selectedOptionsCSV}, &quot;,&quot; ,&quot;;&quot; )</expression>
+    </formulas>
+    <formulas>
+        <name>f_CPAchargeProductAreasInterestSelection</name>
+        <dataType>String</dataType>
+        <expression>SUBSTITUTE( {!MyCaseProductInterests.selectedOptionsCSV}, &quot;,&quot; ,&quot;;&quot; )</expression>
+    </formulas>
+    <formulas>
+        <name>f_DocketwiseProductAreasInterestSelection</name>
+        <dataType>String</dataType>
+        <expression>SUBSTITUTE( {!MyCaseProductInterests.selectedOptionsCSV}, &quot;,&quot; ,&quot;;&quot; )</expression>
     </formulas>
     <formulas>
         <description>Formula for selections in the screen flow to be used in the assignment element</description>
-        <name>f_productAreasInterestSelection2</name>
+        <name>f_LawPayProductAreasInterestSelection</name>
         <dataType>String</dataType>
-        <expression>SUBSTITUTE( {!ProductInterests_0.selectedOptionsCSV}, &quot;,&quot; ,&quot;;&quot; )</expression>
+        <expression>SUBSTITUTE( {!MyCaseProductInterests.selectedOptionsCSV}, &quot;,&quot; ,&quot;;&quot; )</expression>
+    </formulas>
+    <formulas>
+        <description>Formula for selections in the screen flow to be used in the assignment element</description>
+        <name>f_MyCaseProductAreasInterestSelection</name>
+        <dataType>String</dataType>
+        <expression>SUBSTITUTE( {!MyCaseProductInterests.selectedOptionsCSV}, &quot;,&quot; ,&quot;;&quot; )</expression>
     </formulas>
     <interviewLabel>Opportunity: Request Sales Engineering Support {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Opportunity: Request Sales Engineering Support</label>
@@ -257,7 +708,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>FREE_FORM_CANVAS</stringValue>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -271,8 +722,8 @@
         <description>Gets the Opportunity record that an SE Request is being submitted for</description>
         <name>Opportunity</name>
         <label>Opportunity</label>
-        <locationX>288</locationX>
-        <locationY>228</locationY>
+        <locationX>974</locationX>
+        <locationY>134</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Check_Record_Type</targetReference>
@@ -291,45 +742,100 @@
     </recordLookups>
     <recordUpdates>
         <description>Updates the Opportunity record with information the user input on the screen flow</description>
-        <name>Update_Opportunity</name>
-        <label>Update Opportunity</label>
-        <locationX>1074</locationX>
-        <locationY>397</locationY>
+        <name>Update_Affinipay_Opportunity</name>
+        <label>Update Affinipay Opportunity</label>
+        <locationX>1106</locationX>
+        <locationY>566</locationY>
         <connector>
-            <targetReference>Send_SE_Alert_0</targetReference>
+            <targetReference>Send_Affinipay_SE_Alert</targetReference>
         </connector>
         <inputReference>Opportunity</inputReference>
     </recordUpdates>
     <recordUpdates>
         <description>Updates the Opportunity record with information the user input on the screen flow</description>
-        <name>Update_Opportunity_0</name>
-        <label>Update Opportunity</label>
-        <locationX>1073</locationX>
-        <locationY>222</locationY>
+        <name>Update_CASEpeer_Opportunity</name>
+        <label>Update CASEpeer Opportunity</label>
+        <locationX>1370</locationX>
+        <locationY>566</locationY>
         <connector>
-            <targetReference>Send_SE_Alert</targetReference>
+            <targetReference>Send_CASEpeer_SE_Alert</targetReference>
+        </connector>
+        <inputReference>Opportunity</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Updates the Opportunity record with information the user input on the screen flow</description>
+        <name>Update_ClientPay_Opportunity</name>
+        <label>Update ClientPay Opportunity</label>
+        <locationX>1634</locationX>
+        <locationY>566</locationY>
+        <connector>
+            <targetReference>Send_ClientPay_SE_Alert</targetReference>
+        </connector>
+        <inputReference>Opportunity</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Updates the Opportunity record with information the user input on the screen flow</description>
+        <name>Update_CPAcharge_Opportunity</name>
+        <label>Update CPAcharge Opportunity</label>
+        <locationX>578</locationX>
+        <locationY>566</locationY>
+        <connector>
+            <targetReference>Send_CPAcharge_SE_Alert</targetReference>
+        </connector>
+        <inputReference>Opportunity</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Updates the Opportunity record with information the user input on the screen flow</description>
+        <name>Update_Docketwise_Opportunity</name>
+        <label>Update Docketwise Opportunity</label>
+        <locationX>842</locationX>
+        <locationY>566</locationY>
+        <connector>
+            <targetReference>Send_Docketwise_SE_Alert</targetReference>
+        </connector>
+        <inputReference>Opportunity</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Updates the Opportunity record with information the user input on the screen flow</description>
+        <name>Update_LawPay_Opportunity</name>
+        <label>Update LawPay Opportunity</label>
+        <locationX>50</locationX>
+        <locationY>566</locationY>
+        <connector>
+            <targetReference>Send_LawPay_SE_Alert</targetReference>
+        </connector>
+        <inputReference>Opportunity</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Updates the Opportunity record with information the user input on the screen flow</description>
+        <name>Update_MyCase_Opportunity</name>
+        <label>Update MyCase Opportunity</label>
+        <locationX>314</locationX>
+        <locationY>566</locationY>
+        <connector>
+            <targetReference>Send_MyCase_SE_Alert</targetReference>
         </connector>
         <inputReference>Opportunity</inputReference>
     </recordUpdates>
     <screens>
-        <name>Sales_Engineering_Request</name>
-        <label>Sales Engineering Request</label>
-        <locationX>586</locationX>
-        <locationY>226</locationY>
+        <name>Affinipay_Sales_Engineering_Request</name>
+        <label>Affinipay Sales Engineering Request</label>
+        <locationX>1106</locationX>
+        <locationY>350</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>Assign_Opportunity_Values</targetReference>
+            <targetReference>Assign_Affinipay_Opportunity_Values</targetReference>
         </connector>
         <fields>
-            <name>Sales_Engineering_Request_Section1</name>
+            <name>Affinipay_Sales_Engineering_Request_Section1</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>Sales_Engineering_Request_Section1_Column1</name>
+                <name>Affinipay_Sales_Engineering_Request_Section1_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>ProductInterests</name>
+                    <name>AffinipayProductInterests</name>
                     <extensionName>c:fsc_dualListBox3</extensionName>
                     <fieldType>ComponentInstance</fieldType>
                     <inputParameters>
@@ -342,12 +848,6 @@
                         <name>useWhichObjectKeyForData</name>
                         <value>
                             <stringValue>value</stringValue>
-                        </value>
-                    </inputParameters>
-                    <inputParameters>
-                        <name>allOptionsCSV</name>
-                        <value>
-                            <elementReference>productAreasInterestValues</elementReference>
                         </value>
                     </inputParameters>
                     <inputParameters>
@@ -386,6 +886,12 @@
                             <stringValue>Available</stringValue>
                         </value>
                     </inputParameters>
+                    <inputParameters>
+                        <name>allOptionsCSV</name>
+                        <value>
+                            <elementReference>AffinipayProductAreasInterestValues</elementReference>
+                        </value>
+                    </inputParameters>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                     <storeOutputAutomatically>true</storeOutputAutomatically>
@@ -402,13 +908,13 @@
             <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
-            <name>Sales_Engineering_Request_Section2</name>
+            <name>Affinipay_Sales_Engineering_Request_Section2</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>Sales_Engineering_Request_Section2_Column1</name>
+                <name>Affinipay_Sales_Engineering_Request_Section2_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Potential_Demo_Date</name>
+                    <name>Affinipay_Potential_Demo_Date</name>
                     <dataType>Date</dataType>
                     <defaultValue>
                         <elementReference>Opportunity.BDR_Demo_Scheduled_Date__c</elementReference>
@@ -420,7 +926,7 @@
                     <isRequired>true</isRequired>
                 </fields>
                 <fields>
-                    <name>Firm_Employees</name>
+                    <name>Affinipay_Firm_Employees</name>
                     <dataType>Number</dataType>
                     <defaultValue>
                         <elementReference>Opportunity.Number_of_Employees__c</elementReference>
@@ -432,7 +938,7 @@
                     <scale>0</scale>
                 </fields>
                 <fields>
-                    <name>Potential_Users</name>
+                    <name>Affinipay_Potential_Users</name>
                     <dataType>Number</dataType>
                     <defaultValue>
                         <elementReference>Opportunity.Opportunity_SKU_License_Count__c</elementReference>
@@ -452,21 +958,21 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>Sales_Engineering_Request_Section2_Column2</name>
+                <name>Affinipay_Sales_Engineering_Request_Section2_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Why_is_SE_being_requested</name>
+                    <name>Affinipay_Why_is_SE_being_requested</name>
                     <fieldText>Why is SE being requested? (max: 255 characters)</fieldText>
                     <fieldType>LargeTextArea</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                     <validationRule>
                         <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Max 255 Characters&lt;/span&gt;&lt;/p&gt;</errorMessage>
-                        <formulaExpression>LEN( {!Why_is_SE_being_requested} ) &lt; 255</formulaExpression>
+                        <formulaExpression>LEN( {!MyCase_Why_is_SE_being_requested} ) &lt; 255</formulaExpression>
                     </validationRule>
                 </fields>
                 <fields>
-                    <name>Compelling_case_to_win_the_deal</name>
+                    <name>Affinipay_Compelling_case_to_win_the_deal</name>
                     <fieldText>Compelling case to win the deal</fieldText>
                     <fieldType>LargeTextArea</fieldType>
                     <helpText>&lt;p&gt;What is needed to make a compelling case and win the deal&lt;/p&gt;</helpText>
@@ -488,24 +994,24 @@
         <showHeader>true</showHeader>
     </screens>
     <screens>
-        <name>Sales_Engineering_Request_0</name>
-        <label>Sales Engineering Request</label>
-        <locationX>583</locationX>
-        <locationY>404</locationY>
+        <name>CASEpeer_Sales_Engineering_Request</name>
+        <label>CASEpeer Sales Engineering Request</label>
+        <locationX>1370</locationX>
+        <locationY>350</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
         <connector>
-            <targetReference>Assign_Opportunity_Values_0</targetReference>
+            <targetReference>Assign_CASEpeer_Opportunity_Values</targetReference>
         </connector>
         <fields>
-            <name>Sales_Engineering_Request_0_Section1</name>
+            <name>CASEpeer_Sales_Engineering_Request_Section1</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>Sales_Engineering_Request_0_Section1_Column1</name>
+                <name>CASEpeer_Sales_Engineering_Request_Section1_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>ProductInterests_0</name>
+                    <name>CASEpeerProductInterests</name>
                     <extensionName>c:fsc_dualListBox3</extensionName>
                     <fieldType>ComponentInstance</fieldType>
                     <inputParameters>
@@ -559,7 +1065,7 @@
                     <inputParameters>
                         <name>allOptionsCSV</name>
                         <value>
-                            <elementReference>productAreasInterestValues2</elementReference>
+                            <elementReference>CASEpeerProductAreasInterestValues</elementReference>
                         </value>
                     </inputParameters>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
@@ -578,13 +1084,13 @@
             <regionContainerType>SectionWithoutHeader</regionContainerType>
         </fields>
         <fields>
-            <name>Sales_Engineering_Request_0_Section2</name>
+            <name>CASEpeer_Sales_Engineering_Request_Section2</name>
             <fieldType>RegionContainer</fieldType>
             <fields>
-                <name>Sales_Engineering_Request_0_Section2_Column1</name>
+                <name>CASEpeer_Sales_Engineering_Request_Section2_Column1</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Potential_Demo_Date_0</name>
+                    <name>CASEpeer_Potential_Demo_Date</name>
                     <dataType>Date</dataType>
                     <defaultValue>
                         <elementReference>Opportunity.BDR_Demo_Scheduled_Date__c</elementReference>
@@ -596,7 +1102,7 @@
                     <isRequired>true</isRequired>
                 </fields>
                 <fields>
-                    <name>Firm_Employees_0</name>
+                    <name>CASEpeer_Firm_Employees</name>
                     <dataType>Number</dataType>
                     <defaultValue>
                         <elementReference>Opportunity.Number_of_Employees__c</elementReference>
@@ -608,7 +1114,7 @@
                     <scale>0</scale>
                 </fields>
                 <fields>
-                    <name>Potential_Users_0</name>
+                    <name>CASEpeer_Potential_Users</name>
                     <dataType>Number</dataType>
                     <defaultValue>
                         <elementReference>Opportunity.Opportunity_SKU_License_Count__c</elementReference>
@@ -628,21 +1134,901 @@
                 <isRequired>false</isRequired>
             </fields>
             <fields>
-                <name>Sales_Engineering_Request_0_Section2_Column2</name>
+                <name>CASEpeer_Sales_Engineering_Request_Section2_Column2</name>
                 <fieldType>Region</fieldType>
                 <fields>
-                    <name>Why_is_SE_being_requested_0</name>
+                    <name>CASEpeer_Why_is_SE_being_requested</name>
                     <fieldText>Why is SE being requested? (max: 255 characters)</fieldText>
                     <fieldType>LargeTextArea</fieldType>
                     <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
                     <isRequired>true</isRequired>
                     <validationRule>
                         <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Max 255 Characters&lt;/span&gt;&lt;/p&gt;</errorMessage>
-                        <formulaExpression>LEN( {!Why_is_SE_being_requested} ) &lt; 255</formulaExpression>
+                        <formulaExpression>LEN( {!MyCase_Why_is_SE_being_requested} ) &lt; 255</formulaExpression>
                     </validationRule>
                 </fields>
                 <fields>
-                    <name>Compelling_case_to_win_the_deal_0</name>
+                    <name>CASEpeer_Compelling_case_to_win_the_deal</name>
+                    <fieldText>Compelling case to win the deal</fieldText>
+                    <fieldType>LargeTextArea</fieldType>
+                    <helpText>&lt;p&gt;What is needed to make a compelling case and win the deal&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>ClientPay_Sales_Engineering_Request</name>
+        <label>ClientPay Sales Engineering Request</label>
+        <locationX>1634</locationX>
+        <locationY>350</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Assign_ClientPay_Opportunity_Values</targetReference>
+        </connector>
+        <fields>
+            <name>ClientPay_Sales_Engineering_Request_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>ClientPay_Sales_Engineering_Request_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>ClientPayProductInterests</name>
+                    <extensionName>c:fsc_dualListBox3</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>allOptionsStringFormat</name>
+                        <value>
+                            <stringValue>csv</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>useWhichObjectKeyForData</name>
+                        <value>
+                            <stringValue>value</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>required</name>
+                        <value>
+                            <booleanValue>true</booleanValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>min</name>
+                        <value>
+                            <numberValue>1.0</numberValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>size</name>
+                        <value>
+                            <numberValue>5.0</numberValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Select Areas of Interest for Demo</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>selectedLabel</name>
+                        <value>
+                            <stringValue>Selected</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>sourceLabel</name>
+                        <value>
+                            <stringValue>Available</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>allOptionsCSV</name>
+                        <value>
+                            <elementReference>ClientPayProductAreasInterestValues</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>ClientPay_Sales_Engineering_Request_Section2</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>ClientPay_Sales_Engineering_Request_Section2_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>ClientPay_Demo_Date</name>
+                    <dataType>Date</dataType>
+                    <defaultValue>
+                        <elementReference>Opportunity.BDR_Demo_Scheduled_Date__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Potential Demo Date</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;Or potential scheduled date&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>ClientPay_Firm_Employees</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Opportunity.Number_of_Employees__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Firm Employees</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                </fields>
+                <fields>
+                    <name>ClientPay_Potential_Users</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Opportunity.Opportunity_SKU_License_Count__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Potential Users</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>ClientPay_Sales_Engineering_Request_Section2_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>ClientPay_Why_is_SE_being_requested</name>
+                    <fieldText>Why is SE being requested? (max: 255 characters)</fieldText>
+                    <fieldType>LargeTextArea</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Max 255 Characters&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>LEN( {!MyCase_Why_is_SE_being_requested} ) &lt; 255</formulaExpression>
+                    </validationRule>
+                </fields>
+                <fields>
+                    <name>ClientPay_Compelling_case_to_win_the_deal</name>
+                    <fieldText>Compelling case to win the deal</fieldText>
+                    <fieldType>LargeTextArea</fieldType>
+                    <helpText>&lt;p&gt;What is needed to make a compelling case and win the deal&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>CPAcharge_Sales_Engineering_Request</name>
+        <label>CPAcharge Sales Engineering Request</label>
+        <locationX>578</locationX>
+        <locationY>350</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Assign_CPAcharge_Opportunity_Values</targetReference>
+        </connector>
+        <fields>
+            <name>CPAcharge_Sales_Engineering_Request_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>CPAcharge_Sales_Engineering_Request_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>CPAchargeProductInterests</name>
+                    <extensionName>c:fsc_dualListBox3</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>allOptionsStringFormat</name>
+                        <value>
+                            <stringValue>csv</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>useWhichObjectKeyForData</name>
+                        <value>
+                            <stringValue>value</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>required</name>
+                        <value>
+                            <booleanValue>true</booleanValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>min</name>
+                        <value>
+                            <numberValue>1.0</numberValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>size</name>
+                        <value>
+                            <numberValue>5.0</numberValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Select Areas of Interest for Demo</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>selectedLabel</name>
+                        <value>
+                            <stringValue>Selected</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>sourceLabel</name>
+                        <value>
+                            <stringValue>Available</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>allOptionsCSV</name>
+                        <value>
+                            <elementReference>CPAChargeProductAreasInterestValues</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>CPAcharge_Sales_Engineering_Request_Section2</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>CPAcharge_Sales_Engineering_Request_Section2_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>CPAcharge_Potential_Demo_Date</name>
+                    <dataType>Date</dataType>
+                    <defaultValue>
+                        <elementReference>Opportunity.BDR_Demo_Scheduled_Date__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Potential Demo Date</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;Or potential scheduled date&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>CPAcharge_Firm_Employees</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Opportunity.Number_of_Employees__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Firm Employees</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                </fields>
+                <fields>
+                    <name>CPAcharge_Potential_Users</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Opportunity.Opportunity_SKU_License_Count__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Potential Users</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>CPAcharge_Sales_Engineering_Request_Section2_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>CPAcharge_Why_is_SE_being_requested</name>
+                    <fieldText>Why is SE being requested? (max: 255 characters)</fieldText>
+                    <fieldType>LargeTextArea</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Max 255 Characters&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>LEN( {!MyCase_Why_is_SE_being_requested} ) &lt; 255</formulaExpression>
+                    </validationRule>
+                </fields>
+                <fields>
+                    <name>CPAcharge_Compelling_case_to_win_the_deal</name>
+                    <fieldText>Compelling case to win the deal</fieldText>
+                    <fieldType>LargeTextArea</fieldType>
+                    <helpText>&lt;p&gt;What is needed to make a compelling case and win the deal&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Docketwise_Sales_Engineering_Request</name>
+        <label>Docketwise Sales Engineering Request</label>
+        <locationX>842</locationX>
+        <locationY>350</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Assign_Docketwise_Opportunity_Values</targetReference>
+        </connector>
+        <fields>
+            <name>Docketwise_Sales_Engineering_Request_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Docketwise_Sales_Engineering_Request_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>DocketwiseProductInterests</name>
+                    <extensionName>c:fsc_dualListBox3</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>allOptionsStringFormat</name>
+                        <value>
+                            <stringValue>csv</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>useWhichObjectKeyForData</name>
+                        <value>
+                            <stringValue>value</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>required</name>
+                        <value>
+                            <booleanValue>true</booleanValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>min</name>
+                        <value>
+                            <numberValue>1.0</numberValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>size</name>
+                        <value>
+                            <numberValue>5.0</numberValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Select Areas of Interest for Demo</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>selectedLabel</name>
+                        <value>
+                            <stringValue>Selected</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>sourceLabel</name>
+                        <value>
+                            <stringValue>Available</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>allOptionsCSV</name>
+                        <value>
+                            <elementReference>DocketwiseProductAreasInterestValues</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>Docketwise_Sales_Engineering_Request_Section2</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Docketwise_Sales_Engineering_Request_Section2_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Docketwise_Potential_Demo_Date</name>
+                    <dataType>Date</dataType>
+                    <defaultValue>
+                        <elementReference>Opportunity.BDR_Demo_Scheduled_Date__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Potential Demo Date</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;Or potential scheduled date&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>Docketwise_Firm_Employees</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Opportunity.Number_of_Employees__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Firm Employees</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                </fields>
+                <fields>
+                    <name>Docketwise_Potential_Users</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Opportunity.Opportunity_SKU_License_Count__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Potential Users</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Docketwise_Sales_Engineering_Request_Section2_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Docketwise_Why_is_SE_being_requested</name>
+                    <fieldText>Why is SE being requested? (max: 255 characters)</fieldText>
+                    <fieldType>LargeTextArea</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Max 255 Characters&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>LEN( {!MyCase_Why_is_SE_being_requested} ) &lt; 255</formulaExpression>
+                    </validationRule>
+                </fields>
+                <fields>
+                    <name>Docketwise_Compelling_case_to_win_the_deal</name>
+                    <fieldText>Compelling case to win the deal</fieldText>
+                    <fieldType>LargeTextArea</fieldType>
+                    <helpText>&lt;p&gt;What is needed to make a compelling case and win the deal&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>LawPay_Sales_Engineering_Request</name>
+        <label>LawPay Sales Engineering Request</label>
+        <locationX>50</locationX>
+        <locationY>350</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Assign_LawPay_Opportunity_Values</targetReference>
+        </connector>
+        <fields>
+            <name>LawPay_Sales_Engineering_Request_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>LawPay_Sales_Engineering_Request_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>LawPayProductInterests</name>
+                    <extensionName>c:fsc_dualListBox3</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>allOptionsStringFormat</name>
+                        <value>
+                            <stringValue>csv</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>useWhichObjectKeyForData</name>
+                        <value>
+                            <stringValue>value</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>required</name>
+                        <value>
+                            <booleanValue>true</booleanValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>min</name>
+                        <value>
+                            <numberValue>1.0</numberValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>size</name>
+                        <value>
+                            <numberValue>5.0</numberValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Select Areas of Interest for Demo</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>selectedLabel</name>
+                        <value>
+                            <stringValue>Selected</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>sourceLabel</name>
+                        <value>
+                            <stringValue>Available</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>allOptionsCSV</name>
+                        <value>
+                            <elementReference>LawPayProductAreasInterestValues</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>LawPay_Sales_Engineering_Request_Section2</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>LawPay_Sales_Engineering_Request_Section2_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>LawPay_Potential_Demo_Date</name>
+                    <dataType>Date</dataType>
+                    <defaultValue>
+                        <elementReference>Opportunity.BDR_Demo_Scheduled_Date__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Potential Demo Date</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;Or potential scheduled date&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>LawPay_Firm_Employees</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Opportunity.Number_of_Employees__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Firm Employees</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                </fields>
+                <fields>
+                    <name>LawPay_Potential_Users</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Opportunity.Opportunity_SKU_License_Count__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Potential Users</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>LawPay_Sales_Engineering_Request_Section2_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>LawPay_Why_is_SE_being_requested</name>
+                    <fieldText>Why is SE being requested? (max: 255 characters)</fieldText>
+                    <fieldType>LargeTextArea</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Max 255 Characters&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>LEN( {!MyCase_Why_is_SE_being_requested} ) &lt; 255</formulaExpression>
+                    </validationRule>
+                </fields>
+                <fields>
+                    <name>LawPay_Compelling_case_to_win_the_deal</name>
+                    <fieldText>Compelling case to win the deal</fieldText>
+                    <fieldType>LargeTextArea</fieldType>
+                    <helpText>&lt;p&gt;What is needed to make a compelling case and win the deal&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>MyCase_Sales_Engineering_Request</name>
+        <label>MyCase Sales Engineering Request</label>
+        <locationX>314</locationX>
+        <locationY>350</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Assign_MyCase_Opportunity_Values</targetReference>
+        </connector>
+        <fields>
+            <name>MyCase_Sales_Engineering_Request_Section1</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>MyCase_Sales_Engineering_Request_Section1_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>MyCaseProductInterests</name>
+                    <extensionName>c:fsc_dualListBox3</extensionName>
+                    <fieldType>ComponentInstance</fieldType>
+                    <inputParameters>
+                        <name>allOptionsStringFormat</name>
+                        <value>
+                            <stringValue>csv</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>useWhichObjectKeyForData</name>
+                        <value>
+                            <stringValue>value</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>required</name>
+                        <value>
+                            <booleanValue>true</booleanValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>min</name>
+                        <value>
+                            <numberValue>1.0</numberValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>size</name>
+                        <value>
+                            <numberValue>5.0</numberValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Select Areas of Interest for Demo</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>selectedLabel</name>
+                        <value>
+                            <stringValue>Selected</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>sourceLabel</name>
+                        <value>
+                            <stringValue>Available</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>allOptionsCSV</name>
+                        <value>
+                            <elementReference>MyCaseProductAreasInterestValues</elementReference>
+                        </value>
+                    </inputParameters>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>12</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <fields>
+            <name>MyCase_Sales_Engineering_Request_Section2</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>MyCase_Sales_Engineering_Request_Section2_Column1</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>MyCase_Potential_Demo_Date</name>
+                    <dataType>Date</dataType>
+                    <defaultValue>
+                        <elementReference>Opportunity.BDR_Demo_Scheduled_Date__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Potential Demo Date</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <helpText>&lt;p&gt;Or potential scheduled date&lt;/p&gt;</helpText>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                </fields>
+                <fields>
+                    <name>MyCase_Firm_Employees</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Opportunity.Number_of_Employees__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Firm Employees</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                </fields>
+                <fields>
+                    <name>MyCase_Potential_Users</name>
+                    <dataType>Number</dataType>
+                    <defaultValue>
+                        <elementReference>Opportunity.Opportunity_SKU_License_Count__c</elementReference>
+                    </defaultValue>
+                    <fieldText>Potential Users</fieldText>
+                    <fieldType>InputField</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <scale>0</scale>
+                </fields>
+                <inputParameters>
+                    <name>width</name>
+                    <value>
+                        <stringValue>6</stringValue>
+                    </value>
+                </inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>MyCase_Sales_Engineering_Request_Section2_Column2</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>MyCase_Why_is_SE_being_requested</name>
+                    <fieldText>Why is SE being requested? (max: 255 characters)</fieldText>
+                    <fieldType>LargeTextArea</fieldType>
+                    <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+                    <isRequired>true</isRequired>
+                    <validationRule>
+                        <errorMessage>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Max 255 Characters&lt;/span&gt;&lt;/p&gt;</errorMessage>
+                        <formulaExpression>LEN( {!MyCase_Why_is_SE_being_requested} ) &lt; 255</formulaExpression>
+                    </validationRule>
+                </fields>
+                <fields>
+                    <name>MyCase_Compelling_case_to_win_the_deal</name>
                     <fieldText>Compelling case to win the deal</fieldText>
                     <fieldType>LargeTextArea</fieldType>
                     <helpText>&lt;p&gt;What is needed to make a compelling case and win the deal&lt;/p&gt;</helpText>
@@ -664,8 +2050,8 @@
         <showHeader>true</showHeader>
     </screens>
     <start>
-        <locationX>162</locationX>
-        <locationY>53</locationY>
+        <locationX>848</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Opportunity</targetReference>
         </connector>
@@ -673,10 +2059,10 @@
     <status>Active</status>
     <subflows>
         <description>Alerts #se-request that there is a new Sales Engineer Request on an Opportunity</description>
-        <name>Send_SE_Alert</name>
-        <label>Send SE Alert</label>
-        <locationX>1280</locationX>
-        <locationY>219</locationY>
+        <name>Send_Affinipay_SE_Alert</name>
+        <label>Send Affinipay SE Alert</label>
+        <locationX>1106</locationX>
+        <locationY>674</locationY>
         <flowName>Autolaunched_Send_Slack_Message</flowName>
         <inputAssignments>
             <name>var_SlackConversationID</name>
@@ -687,16 +2073,16 @@
         <inputAssignments>
             <name>var_SlackMessage</name>
             <value>
-                <elementReference>slackMessageBody</elementReference>
+                <elementReference>AffinipaySlackMessageBody</elementReference>
             </value>
         </inputAssignments>
     </subflows>
     <subflows>
         <description>Alerts #se-request that there is a new Sales Engineer Request on an Opportunity</description>
-        <name>Send_SE_Alert_0</name>
-        <label>Send SE Alert</label>
-        <locationX>1289</locationX>
-        <locationY>390</locationY>
+        <name>Send_CASEpeer_SE_Alert</name>
+        <label>Send CASEpeer SE Alert</label>
+        <locationX>1370</locationX>
+        <locationY>674</locationY>
         <flowName>Autolaunched_Send_Slack_Message</flowName>
         <inputAssignments>
             <name>var_SlackConversationID</name>
@@ -707,34 +2093,159 @@
         <inputAssignments>
             <name>var_SlackMessage</name>
             <value>
-                <elementReference>slackMessageBody2</elementReference>
+                <elementReference>CASEpeerSlackMessageBody</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Alerts #se-request that there is a new Sales Engineer Request on an Opportunity</description>
+        <name>Send_ClientPay_SE_Alert</name>
+        <label>Send ClientPay SE Alert</label>
+        <locationX>1634</locationX>
+        <locationY>674</locationY>
+        <flowName>Autolaunched_Send_Slack_Message</flowName>
+        <inputAssignments>
+            <name>var_SlackConversationID</name>
+            <value>
+                <elementReference>SE_Channel_ID</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_SlackMessage</name>
+            <value>
+                <elementReference>ClientPaySlackMessageBody</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Alerts #se-request that there is a new Sales Engineer Request on an Opportunity</description>
+        <name>Send_CPAcharge_SE_Alert</name>
+        <label>Send CPAcharge SE Alert</label>
+        <locationX>578</locationX>
+        <locationY>674</locationY>
+        <flowName>Autolaunched_Send_Slack_Message</flowName>
+        <inputAssignments>
+            <name>var_SlackConversationID</name>
+            <value>
+                <elementReference>SE_Channel_ID</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_SlackMessage</name>
+            <value>
+                <elementReference>CPAchargeSlackMessageBody</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Alerts #se-request that there is a new Sales Engineer Request on an Opportunity</description>
+        <name>Send_Docketwise_SE_Alert</name>
+        <label>Send Docketwise SE Alert</label>
+        <locationX>842</locationX>
+        <locationY>674</locationY>
+        <flowName>Autolaunched_Send_Slack_Message</flowName>
+        <inputAssignments>
+            <name>var_SlackConversationID</name>
+            <value>
+                <elementReference>SE_Channel_ID</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_SlackMessage</name>
+            <value>
+                <elementReference>DocketwiseSlackMessageBody</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Alerts #se-request that there is a new Sales Engineer Request on an Opportunity</description>
+        <name>Send_LawPay_SE_Alert</name>
+        <label>Send LawPay SE Alert</label>
+        <locationX>50</locationX>
+        <locationY>674</locationY>
+        <flowName>Autolaunched_Send_Slack_Message</flowName>
+        <inputAssignments>
+            <name>var_SlackConversationID</name>
+            <value>
+                <elementReference>SE_Channel_ID</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_SlackMessage</name>
+            <value>
+                <elementReference>LawPaySlackMessageBody</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <description>Alerts #se-request that there is a new Sales Engineer Request on an Opportunity</description>
+        <name>Send_MyCase_SE_Alert</name>
+        <label>Send MyCase SE Alert</label>
+        <locationX>314</locationX>
+        <locationY>674</locationY>
+        <flowName>Autolaunched_Send_Slack_Message</flowName>
+        <inputAssignments>
+            <name>var_SlackConversationID</name>
+            <value>
+                <elementReference>SE_Channel_ID</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_SlackMessage</name>
+            <value>
+                <elementReference>MyCaseSlackMessageBody</elementReference>
             </value>
         </inputAssignments>
     </subflows>
     <textTemplates>
-        <name>slackMessageBody</name>
+        <name>AffinipaySlackMessageBody</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;*SE Engagement Request - {!Opportunity.Account_Name__c}*&lt;/p&gt;&lt;p&gt;&amp;gt;*Requested By*: {!$User.Full_Name__c}&lt;/p&gt;&lt;p&gt;&amp;gt;*Employees*: {!Affinipay_Firm_Employees}&lt;/p&gt;&lt;p&gt;&amp;gt;*Potential Users*: {!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Affinipay&lt;/span&gt;_Potential_Users}&lt;/p&gt;&lt;p&gt;&amp;gt;*Potential Demo Date*: {!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Affinipay&lt;/span&gt;_Potential_Demo_Date}&lt;/p&gt;&lt;p&gt;&amp;gt;*Product Feature Interests*: {!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Affinipay&lt;/span&gt;ProductInterests.selectedOptionsCSV}&lt;/p&gt;&lt;p&gt;&amp;gt;*Why SE is requested*: _{!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Affinipay&lt;/span&gt;_Why_is_SE_being_requested}_&lt;/p&gt;&lt;p&gt;&amp;gt;*Compelling Case to Win Deal*: _{!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Affinipay&lt;/span&gt;_Compelling_case_to_win_the_deal}_&lt;/p&gt;&lt;p&gt;&amp;gt;*Opportunity*: &amp;lt;https://affinipaymain.lightning.force.com/lightning/r/Opportunity/{!Opportunity.Id}/view|{!Opportunity.Name}&amp;gt;&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>CASEpeerSlackMessageBody</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;*SE Engagement Request - {!Opportunity.Account_Name__c}*&lt;/p&gt;&lt;p&gt;&amp;gt;*Requested By*: {!$User.Full_Name__c}&lt;/p&gt;&lt;p&gt;&amp;gt;*Employees*: {!CASEpeer_Firm_Employees}&lt;/p&gt;&lt;p&gt;&amp;gt;*Potential Users*: {!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;CASEpeer&lt;/span&gt;_Potential_Users}&lt;/p&gt;&lt;p&gt;&amp;gt;*Potential Demo Date*: {!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;CASEpeer&lt;/span&gt;_Potential_Demo_Date}&lt;/p&gt;&lt;p&gt;&amp;gt;*Product Feature Interests*: {!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;CASEpeer&lt;/span&gt;ProductInterests.selectedOptionsCSV}&lt;/p&gt;&lt;p&gt;&amp;gt;*Why SE is requested*: _{!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;CASEpeer&lt;/span&gt;_Why_is_SE_being_requested}_&lt;/p&gt;&lt;p&gt;&amp;gt;*Compelling Case to Win Deal*: _{!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;CASEpeer&lt;/span&gt;_Compelling_case_to_win_the_deal}_&lt;/p&gt;&lt;p&gt;&amp;gt;*Opportunity*: &amp;lt;https://affinipaymain.lightning.force.com/lightning/r/Opportunity/{!Opportunity.Id}/view|{!Opportunity.Name}&amp;gt;&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>ClientPaySlackMessageBody</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;*SE Engagement Request - {!Opportunity.Account_Name__c}*&lt;/p&gt;&lt;p&gt;&amp;gt;*Requested By*: {!$User.Full_Name__c}&lt;/p&gt;&lt;p&gt;&amp;gt;*Employees*: {!ClientPay_Firm_Employees}&lt;/p&gt;&lt;p&gt;&amp;gt;*Potential Users*: {!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;ClientPay&lt;/span&gt;_Potential_Users}&lt;/p&gt;&lt;p&gt;&amp;gt;*Potential Demo Date*: {!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;ClientPay&lt;/span&gt;_Potential_Demo_Date}&lt;/p&gt;&lt;p&gt;&amp;gt;*Product Feature Interests*: {!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;ClientPay&lt;/span&gt;ProductInterests.selectedOptionsCSV}&lt;/p&gt;&lt;p&gt;&amp;gt;*Why SE is requested*: _{!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;ClientPay&lt;/span&gt;_Why_is_SE_being_requested}_&lt;/p&gt;&lt;p&gt;&amp;gt;*Compelling Case to Win Deal*: _{!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;ClientPay&lt;/span&gt;_Compelling_case_to_win_the_deal}_&lt;/p&gt;&lt;p&gt;&amp;gt;*Opportunity*: &amp;lt;https://affinipaymain.lightning.force.com/lightning/r/Opportunity/{!Opportunity.Id}/view|{!Opportunity.Name}&amp;gt;&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>CPAchargeSlackMessageBody</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;*SE Engagement Request - {!Opportunity.Account_Name__c}*&lt;/p&gt;&lt;p&gt;&amp;gt;*Requested By*: {!$User.Full_Name__c}&lt;/p&gt;&lt;p&gt;&amp;gt;*Employees*: {!CPAcharge_Firm_Employees}&lt;/p&gt;&lt;p&gt;&amp;gt;*Potential Users*: {!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;CPAcharge&lt;/span&gt;_Potential_Users}&lt;/p&gt;&lt;p&gt;&amp;gt;*Potential Demo Date*: {!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;CPAcharge&lt;/span&gt;_Potential_Demo_Date}&lt;/p&gt;&lt;p&gt;&amp;gt;*Product Feature Interests*: {!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;CPAcharge&lt;/span&gt;ProductInterests.selectedOptionsCSV}&lt;/p&gt;&lt;p&gt;&amp;gt;*Why SE is requested*: _{!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;CPAcharge&lt;/span&gt;_Why_is_SE_being_requested}_&lt;/p&gt;&lt;p&gt;&amp;gt;*Compelling Case to Win Deal*: _{!&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;CPAcharge&lt;/span&gt;_Compelling_case_to_win_the_deal}_&lt;/p&gt;&lt;p&gt;&amp;gt;*Opportunity*: &amp;lt;https://affinipaymain.lightning.force.com/lightning/r/Opportunity/{!Opportunity.Id}/view|{!Opportunity.Name}&amp;gt;&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>DocketwiseSlackMessageBody</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;*SE Engagement Request - {!Opportunity.Account_Name__c}*&lt;/p&gt;&lt;p&gt;&amp;gt;*Requested By*: {!$User.Full_Name__c}&lt;/p&gt;&lt;p&gt;&amp;gt;*Employees*: {!Docketwise_Firm_Employees}&lt;/p&gt;&lt;p&gt;&amp;gt;*Potential Users*: {!Docketwise_Potential_Users}&lt;/p&gt;&lt;p&gt;&amp;gt;*Potential Demo Date*: {!Docketwise_Potential_Demo_Date}&lt;/p&gt;&lt;p&gt;&amp;gt;*Product Feature Interests*: {!DocketwiseProductInterests.selectedOptionsCSV}&lt;/p&gt;&lt;p&gt;&amp;gt;*Why SE is requested*: _{!Docketwise_Why_is_SE_being_requested}_&lt;/p&gt;&lt;p&gt;&amp;gt;*Compelling Case to Win Deal*: _{!Docketwise_Compelling_case_to_win_the_deal}_&lt;/p&gt;&lt;p&gt;&amp;gt;*Opportunity*: &amp;lt;https://affinipaymain.lightning.force.com/lightning/r/Opportunity/{!Opportunity.Id}/view|{!Opportunity.Name}&amp;gt;&lt;/p&gt;</text>
+    </textTemplates>
+    <textTemplates>
+        <name>LawPaySlackMessageBody</name>
         <isViewedAsPlainText>true</isViewedAsPlainText>
         <text>*SE Engagement Request - {!Opportunity.Account_Name__c}*
 &gt;*Requested By*: {!$User.Full_Name__c}
-&gt;*Employees*: {!Firm_Employees}
-&gt;*Potential Users*: {!Potential_Users}
-&gt;*Potential Demo Date*: {!Potential_Demo_Date}
-&gt;*Product Feature Interests*: {!ProductInterests.selectedOptionsCSV}
-&gt;*Why SE is requested*: _{!Why_is_SE_being_requested}_
-&gt;*Compelling Case to Win Deal*: _{!Compelling_case_to_win_the_deal}_
+&gt;*Employees*: {!LawPay_Firm_Employees}
+&gt;*Potential Users*: {!LawPay_Potential_Users}
+&gt;*Potential Demo Date*: {!LawPay_Potential_Demo_Date}
+&gt;*Product Feature Interests*: {!LawPayProductInterests.selectedOptionsCSV}
+&gt;*Why SE is requested*: _{!LawPay_Why_is_SE_being_requested}_
+&gt;*Compelling Case to Win Deal*: _{!LawPay_Compelling_case_to_win_the_deal}_
 &gt;*Opportunity*: &lt;https://affinipaymain.lightning.force.com/lightning/r/Opportunity/{!Opportunity.Id}/view|{!Opportunity.Name}&gt;</text>
     </textTemplates>
     <textTemplates>
-        <name>slackMessageBody2</name>
+        <name>MyCaseSlackMessageBody</name>
         <isViewedAsPlainText>true</isViewedAsPlainText>
         <text>*SE Engagement Request - {!Opportunity.Account_Name__c}*
 &gt;*Requested By*: {!$User.Full_Name__c}
-&gt;*Employees*: {!Firm_Employees_0}
-&gt;*Potential Users*: {!Potential_Users_0}
-&gt;*Potential Demo Date*: {!Potential_Demo_Date_0}
-&gt;*Product Feature Interests*: {!ProductInterests_0.selectedOptionsCSV}
-&gt;*Why SE is requested*: _{!Why_is_SE_being_requested_0}_
-&gt;*Compelling Case to Win Deal*: _{!Compelling_case_to_win_the_deal_0}_
+&gt;*Employees*: {!MyCase_Firm_Employees}
+&gt;*Potential Users*: {!MyCase_Potential_Users}
+&gt;*Potential Demo Date*: {!MyCase_Potential_Demo_Date}
+&gt;*Product Feature Interests*: {!MyCaseProductInterests.selectedOptionsCSV}
+&gt;*Why SE is requested*: _{!MyCase_Why_is_SE_being_requested}_
+&gt;*Compelling Case to Win Deal*: _{!MyCase_Compelling_case_to_win_the_deal}_
 &gt;*Opportunity*: &lt;https://affinipaymain.lightning.force.com/lightning/r/Opportunity/{!Opportunity.Id}/view|{!Opportunity.Name}&gt;</text>
     </textTemplates>
     <variables>
