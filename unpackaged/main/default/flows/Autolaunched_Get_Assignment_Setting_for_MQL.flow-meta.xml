@@ -3,8 +3,8 @@
     <actionCalls>
         <name>act_GetAssignmentSettings</name>
         <label>Get Assignment Settings</label>
-        <locationX>666</locationX>
-        <locationY>842</locationY>
+        <locationX>314</locationX>
+        <locationY>734</locationY>
         <actionName>ExecuteSOQL</actionName>
         <actionType>apex</actionType>
         <connector>
@@ -18,7 +18,7 @@
         <inputParameters>
             <name>soqlQuery</name>
             <value>
-                <stringValue>SELECT MasterLabel,Label, Assignment_Type__c,Assignment_Name__c,Send_Slack_Alert__c,Slack_ID__c , MQL_Type__c, MQL_Product_Tier__c, MQL_Brand__c FROM Assignment_Setting__mdt WHERE (MQL_Brand__c = &#39;All&#39; OR MQL_Brand__c = &#39;{!var_MQLBrand}&#39;) AND (MQL_Product_Tier__c = &#39;All&#39; OR MQL_Product_Tier__c = &#39;{!var_MQLProductTier}&#39;) AND (MQL_Type__c = &#39;All&#39; OR MQL_Type__c = &#39;{!var_MQLType}&#39;) AND Min_Demographic_Score__c &lt;= {!var_DemographicScore} AND Max_Demographic_Score__c &gt;= {!var_DemographicScore} AND (Business_Hour_Consideration__c = &#39;All&#39; OR Business_Hour_Consideration__c = &#39;{!fxBusinessHourDef}&#39; )</stringValue>
+                <stringValue>SELECT MasterLabel,Label, Assignment_Type__c,Assignment_Name__c,Send_Slack_Alert__c,Slack_ID__c , MQL_Type__c, MQL_Product_Tier__c, MQL_Brand__c FROM Assignment_Setting__mdt WHERE (MQL_Brand__c = &#39;All&#39; OR MQL_Brand__c = &#39;{!var_MQLBrand}&#39;) AND (MQL_Product_Tier__c = &#39;All&#39; OR MQL_Product_Tier__c = &#39;{!var_MQLProductTier}&#39;) AND (MQL_Type__c = &#39;All&#39; OR MQL_Type__c = &#39;{!var_MQLType}&#39;) AND Min_Demographic_Score__c &lt;= {!var_DemographicScore} AND Max_Demographic_Score__c &gt;= {!var_DemographicScore} AND (Business_Hour_Consideration__c = &#39;All&#39; OR Business_Hour_Consideration__c = &#39;{!fxBusinessHourDef}&#39;) AND Enterprise2__c = &#39;{!var_EnterpriseVariable}&#39;</stringValue>
             </value>
         </inputParameters>
         <nameSegment>ExecuteSOQL</nameSegment>
@@ -29,8 +29,8 @@
     <assignments>
         <name>asg_AssignmentValues</name>
         <label>Assign Assignment Values</label>
-        <locationX>754</locationX>
-        <locationY>1574</locationY>
+        <locationX>402</locationX>
+        <locationY>1466</locationY>
         <assignmentItems>
             <assignToReference>var_AssignmentType</assignToReference>
             <operator>Assign</operator>
@@ -73,8 +73,8 @@
     <assignments>
         <name>asg_Count</name>
         <label>Assign Count</label>
-        <locationX>666</locationX>
-        <locationY>950</locationY>
+        <locationX>314</locationX>
+        <locationY>842</locationY>
         <assignmentItems>
             <assignToReference>var_AssignmentSettingCount</assignToReference>
             <operator>AssignCount</operator>
@@ -89,7 +89,7 @@
     <assignments>
         <name>asg_DemographicScoreValue</name>
         <label>Demographic Score Value</label>
-        <locationX>50</locationX>
+        <locationX>182</locationX>
         <locationY>542</locationY>
         <assignmentItems>
             <assignToReference>var_DemographicScore</assignToReference>
@@ -99,57 +99,13 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Last_MQL_Brand_is_CPACharge_ClientPay_or_LawPay</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>Assign_Assignment_Values_2</name>
-        <label>Assign Assignment Values 2</label>
-        <locationX>270</locationX>
-        <locationY>2174</locationY>
-        <assignmentItems>
-            <assignToReference>var_AssignmentType</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Loop_through_Assignment.Assignment_Type__c</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>var_AssignmentName</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Loop_through_Assignment.Assignment_Name__c</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>var_SendSlackAlert</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Loop_through_Assignment.Send_Slack_Alert__c</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>var_SlackID</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Loop_through_Assignment.Slack_ID__c</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>var_Label</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Loop_through_Assignment.Label</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Loop_through_Assignment</targetReference>
+            <targetReference>act_GetAssignmentSettings</targetReference>
         </connector>
     </assignments>
     <decisions>
         <name>Contact_Record_ID</name>
         <label>Contact Record ID</label>
-        <locationX>182</locationX>
+        <locationX>314</locationX>
         <locationY>134</locationY>
         <defaultConnector>
             <targetReference>Get_Lead_Record_ID</targetReference>
@@ -174,8 +130,8 @@
     <decisions>
         <name>dec_CheckCount</name>
         <label>Check Count</label>
-        <locationX>666</locationX>
-        <locationY>1058</locationY>
+        <locationX>314</locationX>
+        <locationY>950</locationY>
         <defaultConnector>
             <targetReference>loop_Collection</targetReference>
         </defaultConnector>
@@ -221,10 +177,10 @@
     <decisions>
         <name>dec_DemographicScoreIsNull</name>
         <label>Demographic Score Is Null</label>
-        <locationX>182</locationX>
+        <locationX>314</locationX>
         <locationY>434</locationY>
         <defaultConnector>
-            <targetReference>Last_MQL_Brand_is_CPACharge_ClientPay_or_LawPay</targetReference>
+            <targetReference>act_GetAssignmentSettings</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -243,160 +199,6 @@
             <label>True</label>
         </rules>
     </decisions>
-    <decisions>
-        <name>Last_MQL_Brand_is_CPACharge_ClientPay_or_LawPay</name>
-        <label>Last MQL Brand is CPACharge, ClientPay, or LawPay</label>
-        <locationX>182</locationX>
-        <locationY>734</locationY>
-        <defaultConnector>
-            <targetReference>act_GetAssignmentSettings</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>Yes_Contact_Last_MQL_Brand_is_CPACharge_ClientPay_or_LawPay_and_Acct_Payments_En</name>
-            <conditionLogic>(1 OR 2 OR 3) AND 4</conditionLogic>
-            <conditions>
-                <leftValueReference>var_MQLBrand</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>CPACharge</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>var_MQLBrand</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>ClientPay</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>var_MQLBrand</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>LawPay</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>Get_Contact.Account.Payments_Enterprise_Account__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Yes</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Get_Assignment_Mdt</targetReference>
-            </connector>
-            <label>Yes Contact_Last MQL Brand is CPACharge, ClientPay, or LawPay and Acct Payments Enterprise = Yes</label>
-        </rules>
-        <rules>
-            <name>Yes_Contact_Last_MQL_Brand_is_CPACharge_ClientPay_or_LawPay_and_referral_partner</name>
-            <conditionLogic>(1 OR 2 OR 3) AND 4</conditionLogic>
-            <conditions>
-                <leftValueReference>var_MQLBrand</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>CPACharge</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>var_MQLBrand</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>ClientPay</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>var_MQLBrand</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>LawPay</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>Get_Contact.Referral_Partnership__r.Partner_Account__r.Payments_Enterprise_Account__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Yes</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Get_Assignment_Mdt</targetReference>
-            </connector>
-            <label>Yes Contact Last MQL Brand is CPACharge, ClientPay, or LawPay and referral partnership partner account has Payments Enterprise Partner = True</label>
-        </rules>
-        <rules>
-            <name>Yes_Lead_Last_MQl_Brand_is_CPACharge_ClientPay_or_LawPay_and_the_associated_Acco</name>
-            <conditionLogic>(1 OR 2 OR 3) AND 4</conditionLogic>
-            <conditions>
-                <leftValueReference>var_MQLBrand</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>CPACharge</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>var_MQLBrand</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>ClientPay</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>var_MQLBrand</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>LawPay</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>Get_Lead_Record_ID.Linked_Account__r.Payments_Enterprise_Account__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Yes</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Get_Assignment_Mdt</targetReference>
-            </connector>
-            <label>Yes Lead Last MQl Brand is CPACharge, ClientPay or LawPay and the associated Account has Payments Enterprise Account = Yes</label>
-        </rules>
-        <rules>
-            <name>Yes_Lead_Last_MQL_Brand_is_CPACharge_ClientPay_or_LawPay_and_Referral_partnershi</name>
-            <conditionLogic>or</conditionLogic>
-            <conditions>
-                <leftValueReference>var_MQLBrand</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>CPACharge</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>var_MQLBrand</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>ClientPay</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>var_MQLBrand</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>LawPay</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>Get_Lead_Record_ID.Referral_Partnership__r.Partner_Account__r.Payments_Enterprise_Account__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>Yes</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Get_Assignment_Mdt</targetReference>
-            </connector>
-            <label>Yes Lead Last MQL Brand is CPACharge, ClientPay, or LawPay and Referral partnership record&#39;s partner account has Payments Enterprise Account = Yes</label>
-        </rules>
-    </decisions>
     <environments>Default</environments>
     <formulas>
         <description>Defines the text to be used in the query to the MDT based on input.</description>
@@ -413,23 +215,12 @@
     <loops>
         <name>loop_Collection</name>
         <label>Loop Collection</label>
-        <locationX>666</locationX>
-        <locationY>1466</locationY>
+        <locationX>314</locationX>
+        <locationY>1358</locationY>
         <collectionReference>act_GetAssignmentSettings.sObjects</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
             <targetReference>asg_AssignmentValues</targetReference>
-        </nextValueConnector>
-    </loops>
-    <loops>
-        <name>Loop_through_Assignment</name>
-        <label>Loop through Assignments</label>
-        <locationX>182</locationX>
-        <locationY>2066</locationY>
-        <collectionReference>Get_Assignment_Mdt</collectionReference>
-        <iterationOrder>Asc</iterationOrder>
-        <nextValueConnector>
-            <targetReference>Assign_Assignment_Values_2</targetReference>
         </nextValueConnector>
     </loops>
     <processMetadataValues>
@@ -452,44 +243,9 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordLookups>
-        <name>Get_Assignment_Mdt</name>
-        <label>Get Assignment Mdt</label>
-        <locationX>182</locationX>
-        <locationY>1958</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>Loop_through_Assignment</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Type__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>MQL</stringValue>
-            </value>
-        </filters>
-        <filters>
-            <field>Assignment_Type__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>Assignment Group</stringValue>
-            </value>
-        </filters>
-        <filters>
-            <field>Assignment_Name__c</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>MQL - LawPay Enterprise</stringValue>
-            </value>
-        </filters>
-        <getFirstRecordOnly>false</getFirstRecordOnly>
-        <object>Assignment_Setting__mdt</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
-    <recordLookups>
         <name>Get_Contact</name>
         <label>Get Contact</label>
-        <locationX>50</locationX>
+        <locationX>182</locationX>
         <locationY>242</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -510,7 +266,7 @@
     <recordLookups>
         <name>Get_Lead_Record_ID</name>
         <label>Get Lead Record ID</label>
-        <locationX>314</locationX>
+        <locationX>446</locationX>
         <locationY>242</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -529,7 +285,7 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <start>
-        <locationX>56</locationX>
+        <locationX>188</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Contact_Record_ID</targetReference>
@@ -539,8 +295,8 @@
     <subflows>
         <name>sub_SendSlackTwoPlus</name>
         <label>Send Slack (2+)</label>
-        <locationX>666</locationX>
-        <locationY>1166</locationY>
+        <locationX>314</locationX>
+        <locationY>1058</locationY>
         <connector>
             <targetReference>loop_Collection</targetReference>
         </connector>
@@ -561,8 +317,8 @@
     <subflows>
         <name>sub_SendSlackZeroOrNull</name>
         <label>Send Slack (Zero or Null)</label>
-        <locationX>402</locationX>
-        <locationY>1166</locationY>
+        <locationX>50</locationX>
+        <locationY>1058</locationY>
         <flowName>Autolaunched_Send_Slack_Message</flowName>
         <inputAssignments>
             <name>var_SlackConversationID</name>
@@ -621,6 +377,16 @@
 &gt; 2. Add or update Assignment Settings to prevent this from happening again.</text>
     </textTemplates>
     <variables>
+        <name>EnterpriseVariable</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </variables>
+    <variables>
         <name>var_AssignmentName</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
@@ -651,6 +417,16 @@
         <scale>0</scale>
         <value>
             <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <name>var_EnterpriseVariable</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>No</stringValue>
         </value>
     </variables>
     <variables>
