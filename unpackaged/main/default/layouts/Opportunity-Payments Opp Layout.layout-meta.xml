@@ -42,6 +42,10 @@
                 <behavior>Readonly</behavior>
                 <field>Owner_Team__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Qualifying_Rep_Team__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

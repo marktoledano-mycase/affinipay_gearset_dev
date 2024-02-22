@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <label>Opportunity - LawPay Software (MyCase)</label>
+    <label>Opportunity - Docketwise SDR</label>
     <protected>false</protected>
     <values>
         <field>Assignment_Name__c</field>
-        <value xsi:type="xsd:string">Opportunity - MyCase AE</value>
+        <value xsi:type="xsd:string">Opportunity - Docketwise AE</value>
     </values>
     <values>
         <field>Assignment_Type__c</field>
@@ -13,6 +13,14 @@
     <values>
         <field>Business_Hour_Consideration__c</field>
         <value xsi:type="xsd:string">All</value>
+    </values>
+    <values>
+        <field>Enterprise2__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>MQA_Brand__c</field>
+        <value xsi:nil="true"/>
     </values>
     <values>
         <field>MQL_Brand__c</field>
@@ -36,11 +44,11 @@
     </values>
     <values>
         <field>Opportunity_Brand__c</field>
-        <value xsi:type="xsd:string">LawPay Software</value>
+        <value xsi:type="xsd:string">Docketwise</value>
     </values>
     <values>
-        <field>Qualifying_Rep_Brand__c</field>
-        <value xsi:type="xsd:string">MyCase</value>
+        <field>Qualifying_Rep_Team__c</field>
+        <value xsi:type="xsd:string">SDR</value>
     </values>
     <values>
         <field>Send_Slack_Alert__c</field>
