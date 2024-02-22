@@ -10,6 +10,18 @@
         <actionType>emailSimple</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>support@mycase.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
             <name>relatedRecordId</name>
             <value>
                 <elementReference>$Record.Id</elementReference>
@@ -48,6 +60,18 @@
             <targetReference>Non_Admin_Case_Update</targetReference>
         </connector>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>support@mycase.com</stringValue>
+            </value>
+        </inputParameters>
         <inputParameters>
             <name>relatedRecordId</name>
             <value>
@@ -187,7 +211,7 @@
         </rules>
     </decisions>
     <description>Supports the MyCase Subscription Downgrade process
-2/9/24 JC - Updated contact decision to better handle null values</description>
+2/21/24 JC - Updated Email Actions to send from an org wide email address</description>
     <environments>Default</environments>
     <formulas>
         <description>Formula to see if the case is new</description>
