@@ -8,6 +8,9 @@
         <locationY>647</locationY>
         <actionName>emailSimple</actionName>
         <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Update_Case_Confirmation_Email_Sent</targetReference>
+        </connector>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>senderType</name>
@@ -211,7 +214,7 @@
         </rules>
     </decisions>
     <description>Supports the MyCase Subscription Downgrade process
-2/21/24 JC - Updated Email Actions to send from an org wide email address</description>
+2/22/24 JC - Added a checkbox to deter spamming the Contact with confirmation emails if Case is reopened</description>
     <environments>Default</environments>
     <formulas>
         <description>Formula to see if the case is new</description>
@@ -359,6 +362,20 @@
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <recordUpdates>
+        <description>Updates the Downgrade Confirmation Sent checkbox so we do not send another email to the contact if the case reopens</description>
+        <name>Update_Case_Confirmation_Email_Sent</name>
+        <label>Update Case Confirmation Email Sent</label>
+        <locationX>1106</locationX>
+        <locationY>755</locationY>
+        <inputAssignments>
+            <field>Downgrade_Confirmation_Sent__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
         <description>Updates the case details upon creation</description>
         <name>Update_Case_Details</name>
         <label>Update Case Details</label>
@@ -398,7 +415,9 @@
         </connector>
         <filterFormula>ISPICKVAL({!$Record.Origin}, &quot;Email (MyCase Subscription Change)&quot;)
 &amp;&amp;
-{!$Record.RecordType.DeveloperName}= &quot;MyCase_Support&quot;</filterFormula>
+{!$Record.RecordType.DeveloperName}= &quot;MyCase_Support&quot;
+&amp;&amp;
+{!$Record.Downgrade_Confirmation_Sent__c}= FALSE</filterFormula>
         <object>Case</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>

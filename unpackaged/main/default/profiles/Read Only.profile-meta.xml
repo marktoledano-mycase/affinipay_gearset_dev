@@ -2049,6 +2049,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Case.Downgrade_Confirmation_Sent__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Case.Due_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
