@@ -15,6 +15,14 @@
         <value xsi:type="xsd:string">All</value>
     </values>
     <values>
+        <field>Enterprise2__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>MQA_Brand__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
         <field>MQL_Brand__c</field>
         <value xsi:nil="true"/>
     </values>
@@ -39,8 +47,8 @@
         <value xsi:type="xsd:string">LawPay Payments</value>
     </values>
     <values>
-        <field>Qualifying_Rep_Brand__c</field>
-        <value xsi:type="xsd:string">LawPay</value>
+        <field>Qualifying_Rep_Team__c</field>
+        <value xsi:nil="true"/>
     </values>
     <values>
         <field>Send_Slack_Alert__c</field>

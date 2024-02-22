@@ -12,6 +12,14 @@
     </values>
     <values>
         <field>Business_Hour_Consideration__c</field>
+        <value xsi:type="xsd:string">All</value>
+    </values>
+    <values>
+        <field>Enterprise2__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>MQA_Brand__c</field>
         <value xsi:nil="true"/>
     </values>
     <values>
@@ -39,7 +47,7 @@
         <value xsi:type="xsd:string">ClientPay</value>
     </values>
     <values>
-        <field>Qualifying_Rep_Brand__c</field>
+        <field>Qualifying_Rep_Team__c</field>
         <value xsi:nil="true"/>
     </values>
     <values>

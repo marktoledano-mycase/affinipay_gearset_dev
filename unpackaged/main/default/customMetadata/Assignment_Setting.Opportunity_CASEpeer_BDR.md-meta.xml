@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <label>Opportunity - Soluno</label>
+    <label>Opportunity - CASEpeer BDR</label>
     <protected>false</protected>
     <values>
         <field>Assignment_Name__c</field>
-        <value xsi:type="xsd:string">Opportunity - Soluno AE</value>
+        <value xsi:type="xsd:string">Opportunity - Software AE</value>
     </values>
     <values>
         <field>Assignment_Type__c</field>
@@ -12,6 +12,14 @@
     </values>
     <values>
         <field>Business_Hour_Consideration__c</field>
+        <value xsi:type="xsd:string">All</value>
+    </values>
+    <values>
+        <field>Enterprise2__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>MQA_Brand__c</field>
         <value xsi:nil="true"/>
     </values>
     <values>
@@ -36,11 +44,11 @@
     </values>
     <values>
         <field>Opportunity_Brand__c</field>
-        <value xsi:type="xsd:string">Soluno</value>
+        <value xsi:type="xsd:string">CASEpeer</value>
     </values>
     <values>
-        <field>Qualifying_Rep_Brand__c</field>
-        <value xsi:nil="true"/>
+        <field>Qualifying_Rep_Team__c</field>
+        <value xsi:type="xsd:string">BDR</value>
     </values>
     <values>
         <field>Send_Slack_Alert__c</field>
