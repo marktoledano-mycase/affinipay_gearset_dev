@@ -209,7 +209,8 @@
             <label>True</label>
         </rules>
     </decisions>
-    <description>Send Opps to &quot;alert-sql-software&quot;</description>
+    <description>2/22/2024 - Added Qualifying Rep Team for Get Assignment Settings
+Send Opps to &quot;alert-sql-software&quot;</description>
     <dynamicChoiceSets>
         <name>chc_RecordType</name>
         <dataType>String</dataType>
@@ -354,6 +355,7 @@
             </defaultValue>
             <fieldText>Record Type</fieldText>
             <fieldType>DropdownBox</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
         </fields>
         <fields>
@@ -364,6 +366,7 @@
             </defaultValue>
             <fieldText>Number of Employees</fieldText>
             <fieldType>InputField</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>true</isRequired>
             <scale>0</scale>
             <validationRule>
@@ -558,9 +561,9 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <name>var_QualifyingRepBrand</name>
+            <name>var_QualifyingRepTeam</name>
             <value>
-                <elementReference>get_Opportunity.Qualifying_Rep_Brand__c</elementReference>
+                <elementReference>get_Opportunity.Qualifying_Rep_Team__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
