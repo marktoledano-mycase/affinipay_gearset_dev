@@ -5,7 +5,7 @@
     <columns>Assignment_Type__c</columns>
     <columns>Assignment_Name__c</columns>
     <columns>Opportunity_Brand__c</columns>
-    <columns>Qualifying_Rep_Brand__c</columns>
+    <columns>Qualifying_Rep_Team__c</columns>
     <filterScope>Everything</filterScope>
     <filters>
         <field>Type__c</field>

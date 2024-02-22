@@ -3,8 +3,8 @@
     <actionCalls>
         <name>act_GetAssignmentSettings</name>
         <label>Get Assignment Settings</label>
-        <locationX>490</locationX>
-        <locationY>242</locationY>
+        <locationX>314</locationX>
+        <locationY>134</locationY>
         <actionName>ExecuteSOQL</actionName>
         <actionType>apex</actionType>
         <connector>
@@ -18,40 +18,19 @@
         <inputParameters>
             <name>soqlQuery</name>
             <value>
-                <stringValue>SELECT MasterLabel,Assignment_Type__c,Assignment_Name__c FROM Assignment_Setting__mdt WHERE Type__c = &#39;Opportunity&#39; AND Opportunity_Brand__c = &#39;{!var_OpportunityBrand}&#39;</stringValue>
+                <stringValue>SELECT MasterLabel,Assignment_Type__c,Assignment_Name__c FROM Assignment_Setting__mdt WHERE Type__c = &#39;Opportunity&#39; AND Opportunity_Brand__c = &#39;{!var_OpportunityBrand}&#39; AND Qualifying_Rep_Team__c = &#39;{!var_QualifyingRepTeam}&#39;</stringValue>
             </value>
         </inputParameters>
+        <nameSegment>ExecuteSOQL</nameSegment>
         <storeOutputAutomatically>true</storeOutputAutomatically>
-    </actionCalls>
-    <actionCalls>
-        <name>act_GetAssignmentSettingsLawPay</name>
-        <label>Get Assignment Settings</label>
-        <locationX>138</locationX>
-        <locationY>242</locationY>
-        <actionName>ExecuteSOQL</actionName>
-        <actionType>apex</actionType>
-        <connector>
-            <targetReference>asg_CountLawPay</targetReference>
-        </connector>
-        <dataTypeMappings>
-            <typeName>U__sObjects</typeName>
-            <typeValue>Assignment_Setting__mdt</typeValue>
-        </dataTypeMappings>
-        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
-        <inputParameters>
-            <name>soqlQuery</name>
-            <value>
-                <stringValue>SELECT MasterLabel,Assignment_Type__c,Assignment_Name__c,Qualifying_Rep_Brand__c FROM Assignment_Setting__mdt WHERE Type__c = &#39;Opportunity&#39; AND Opportunity_Brand__c = &#39;{!var_OpportunityBrand}&#39; AND Qualifying_Rep_Brand__c = &#39;{!var_QualifyingRepBrand}&#39;</stringValue>
-            </value>
-        </inputParameters>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
+        <versionSegment>1</versionSegment>
     </actionCalls>
     <apiVersion>57.0</apiVersion>
     <assignments>
         <name>asg_AssignmentGroupName</name>
         <label>Assign Assignment Group Name</label>
-        <locationX>578</locationX>
-        <locationY>566</locationY>
+        <locationX>402</locationX>
+        <locationY>866</locationY>
         <assignmentItems>
             <assignToReference>var_AssignmentGroupName</assignToReference>
             <operator>Assign</operator>
@@ -64,26 +43,10 @@
         </connector>
     </assignments>
     <assignments>
-        <name>asg_AssignmentGroupNameLawPay</name>
-        <label>Assign Assignment Group Name</label>
-        <locationX>226</locationX>
-        <locationY>566</locationY>
-        <assignmentItems>
-            <assignToReference>var_AssignmentGroupName</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>loop_Collection_LawPay.Assignment_Name__c</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>loop_Collection_LawPay</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
         <name>asg_Count</name>
         <label>Assign Count</label>
-        <locationX>490</locationX>
-        <locationY>350</locationY>
+        <locationX>314</locationX>
+        <locationY>242</locationY>
         <assignmentItems>
             <assignToReference>var_AssignmentSettingCount</assignToReference>
             <operator>AssignCount</operator>
@@ -92,30 +55,17 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>loop_Collection</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>asg_CountLawPay</name>
-        <label>Assign Count</label>
-        <locationX>138</locationX>
-        <locationY>350</locationY>
-        <assignmentItems>
-            <assignToReference>var_AssignmentSettingCount</assignToReference>
-            <operator>AssignCount</operator>
-            <value>
-                <elementReference>act_GetAssignmentSettingsLawPay.sObjects</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>loop_Collection_LawPay</targetReference>
+            <targetReference>dec_CheckCount</targetReference>
         </connector>
     </assignments>
     <decisions>
         <name>dec_CheckCount</name>
         <label>Check Count</label>
         <locationX>314</locationX>
-        <locationY>842</locationY>
+        <locationY>350</locationY>
+        <defaultConnector>
+            <targetReference>loop_Collection</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>out_CheckCountIsZeroOrNull</name>
@@ -155,61 +105,20 @@
             <label>&gt; 1</label>
         </rules>
     </decisions>
-    <decisions>
-        <name>Opportunity_Brand</name>
-        <label>Opportunity Brand</label>
-        <locationX>314</locationX>
-        <locationY>134</locationY>
-        <defaultConnector>
-            <targetReference>act_GetAssignmentSettings</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>LawPay</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>var_OpportunityBrand</leftValueReference>
-                <operator>Contains</operator>
-                <rightValue>
-                    <stringValue>LawPay</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>act_GetAssignmentSettingsLawPay</targetReference>
-            </connector>
-            <label>LawPay</label>
-        </rules>
-    </decisions>
+    <description>2/22/24 - Added Qualifying Rep Team logic to SOQL query</description>
     <environments>Default</environments>
     <interviewLabel>Autolaunched - Get Assignment Setting for Opportunity {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Autolaunched - Get Assignment Setting for Opportunity</label>
     <loops>
         <name>loop_Collection</name>
         <label>Loop Collection</label>
-        <locationX>490</locationX>
-        <locationY>458</locationY>
+        <locationX>314</locationX>
+        <locationY>758</locationY>
         <collectionReference>act_GetAssignmentSettings.sObjects</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
             <targetReference>asg_AssignmentGroupName</targetReference>
         </nextValueConnector>
-        <noMoreValuesConnector>
-            <targetReference>dec_CheckCount</targetReference>
-        </noMoreValuesConnector>
-    </loops>
-    <loops>
-        <name>loop_Collection_LawPay</name>
-        <label>Loop Collection</label>
-        <locationX>138</locationX>
-        <locationY>458</locationY>
-        <collectionReference>act_GetAssignmentSettingsLawPay.sObjects</collectionReference>
-        <iterationOrder>Asc</iterationOrder>
-        <nextValueConnector>
-            <targetReference>asg_AssignmentGroupNameLawPay</targetReference>
-        </nextValueConnector>
-        <noMoreValuesConnector>
-            <targetReference>dec_CheckCount</targetReference>
-        </noMoreValuesConnector>
     </loops>
     <processMetadataValues>
         <name>BuilderType</name>
@@ -234,7 +143,7 @@
         <locationX>188</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Opportunity_Brand</targetReference>
+            <targetReference>act_GetAssignmentSettings</targetReference>
         </connector>
     </start>
     <status>Active</status>
@@ -242,7 +151,10 @@
         <name>sub_SendSlackTwoPlus</name>
         <label>Send Slack (2+)</label>
         <locationX>314</locationX>
-        <locationY>950</locationY>
+        <locationY>458</locationY>
+        <connector>
+            <targetReference>loop_Collection</targetReference>
+        </connector>
         <flowName>Autolaunched_Send_Slack_Message</flowName>
         <inputAssignments>
             <name>var_SlackConversationID</name>
@@ -261,7 +173,7 @@
         <name>sub_SendSlackZeroOrNull</name>
         <label>Send Slack (Zero or Null)</label>
         <locationX>50</locationX>
-        <locationY>950</locationY>
+        <locationY>458</locationY>
         <flowName>Autolaunched_Send_Slack_Message</flowName>
         <inputAssignments>
             <name>var_SlackConversationID</name>
@@ -310,14 +222,6 @@
 &gt; 2. Add or update Assignment Settings to prevent this from happening again.</text>
     </textTemplates>
     <variables>
-        <name>colvar_AssignmentSettingssObjects</name>
-        <dataType>SObject</dataType>
-        <isCollection>true</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-        <objectType>Assignment_Setting__mdt</objectType>
-    </variables>
-    <variables>
         <name>var_AssignmentGroupName</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
@@ -340,7 +244,7 @@
         <isOutput>false</isOutput>
     </variables>
     <variables>
-        <name>var_QualifyingRepBrand</name>
+        <name>var_QualifyingRepTeam</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
         <isInput>true</isInput>
