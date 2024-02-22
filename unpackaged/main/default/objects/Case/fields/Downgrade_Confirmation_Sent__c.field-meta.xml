@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Downgrade_Confirmation_Sent__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Modified by a record triggered flow, this checkbox will be updated to true after a Downgrade Confirmation email is sent to the contact. This will help us to not spam the contact if the case is reopened.</description>
+    <externalId>false</externalId>
+    <label>Downgrade Confirmation Sent</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>
