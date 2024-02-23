@@ -41,6 +41,22 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Docketwise</controllingFieldValue>
+            <controllingFieldValue>MyCase</controllingFieldValue>
+            <valueName>Basic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Docketwise</controllingFieldValue>
+            <controllingFieldValue>MyCase</controllingFieldValue>
+            <controllingFieldValue>Woodpecker</controllingFieldValue>
+            <valueName>Pro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Docketwise</controllingFieldValue>
+            <controllingFieldValue>MyCase</controllingFieldValue>
+            <valueName>Advanced</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Docketwise</controllingFieldValue>
             <valueName>Standard</valueName>
         </valueSettings>
         <valueSettings>
@@ -50,19 +66,6 @@
         <valueSettings>
             <controllingFieldValue>Docketwise</controllingFieldValue>
             <valueName>Enterprise</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>MyCase</controllingFieldValue>
-            <valueName>Basic</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>MyCase</controllingFieldValue>
-            <controllingFieldValue>Woodpecker</controllingFieldValue>
-            <valueName>Pro</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>MyCase</controllingFieldValue>
-            <valueName>Advanced</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Woodpecker</controllingFieldValue>
