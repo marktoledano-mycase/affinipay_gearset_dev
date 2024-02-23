@@ -115,6 +115,14 @@
     </picklistValues>
     <picklistValues>
         <picklist>Product_Tier__c</picklist>
+            <values>
+                <fullName>Advanced</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Basic</fullName>
+                <default>false</default>
+            </values>
         <values>
             <fullName>Enterprise</fullName>
             <default>false</default>
@@ -123,6 +131,10 @@
             <fullName>N%2FA</fullName>
             <default>false</default>
         </values>
+            <values>
+                <fullName>Pro</fullName>
+                <default>false</default>
+            </values>
         <values>
             <fullName>Standard</fullName>
             <default>false</default>

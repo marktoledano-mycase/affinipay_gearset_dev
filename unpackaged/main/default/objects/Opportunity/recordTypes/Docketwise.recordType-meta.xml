@@ -3619,6 +3619,14 @@
     <picklistValues>
         <picklist>Software_Tier__c</picklist>
         <values>
+            <fullName>Advanced</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Basic</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Enterprise</fullName>
             <default>false</default>
         </values>
@@ -3628,6 +3636,10 @@
         </values>
         <values>
             <fullName>LawPay Pro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pro</fullName>
             <default>false</default>
         </values>
         <values>
