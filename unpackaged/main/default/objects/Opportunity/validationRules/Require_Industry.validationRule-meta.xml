@@ -8,7 +8,7 @@ $Permission.Create_Onboarding_after_Opportunity_Is_Closed = FALSE &amp;&amp;
 
 (
     ISNEW() ||
-    ISCHANGED(Industry__c) ||
+    ISCHANGED(StageName) ||
     ISCHANGED (Industry__c) 
       ) &amp;&amp;
       
