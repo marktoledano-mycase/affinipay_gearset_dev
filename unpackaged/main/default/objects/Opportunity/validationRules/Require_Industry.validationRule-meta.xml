@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Require_Employees</fullName>
+    <fullName>Require_Industry</fullName>
     <active>true</active>
+    <description>Require Industry field</description>
     <errorConditionFormula>$Permission.Bypass_Defined_VR_s = FALSE &amp;&amp;
 $Permission.Create_Onboarding_after_Opportunity_Is_Closed = FALSE &amp;&amp;
 
 (
     ISNEW() ||
-    ISCHANGED(StageName) ||
-    ISCHANGED(Number_of_Employees__c) 
+    ISCHANGED(Industry__c) ||
+    ISCHANGED (Industry__c) 
       ) &amp;&amp;
       
 (RecordType.Name != &#39;Parent&#39; &amp;&amp; Record_Type_Name__c != &quot;Websites&quot;) &amp;&amp;
 
-ISBLANK(Number_of_Employees__c) &amp;&amp;
+ISBLANK(TEXT(Industry__c)) &amp;&amp;
 
 CASE(
     StageName,
@@ -23,6 +24,6 @@ CASE(
     &quot;Closed Won&quot;, 1,
     0
 ) = 1</errorConditionFormula>
-    <errorDisplayField>Number_of_Employees__c</errorDisplayField>
-    <errorMessage>Number of Employees is required when Stage is &quot;Decision Making,&quot; &quot;Commit&quot;, &quot;Closed Won.&quot;</errorMessage>
+    <errorDisplayField>Industry__c</errorDisplayField>
+    <errorMessage>Industry is required when Stage is &quot;Decision Making,&quot; &quot;Commit&quot;, &quot;Closed Won.&quot;</errorMessage>
 </ValidationRule>
