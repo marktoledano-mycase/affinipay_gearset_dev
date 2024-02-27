@@ -12489,6 +12489,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Trial_Request__c.Time_to_Response_Min__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Trial_Request__c.Type__c</field>
         <readable>true</readable>
     </fieldPermissions>
