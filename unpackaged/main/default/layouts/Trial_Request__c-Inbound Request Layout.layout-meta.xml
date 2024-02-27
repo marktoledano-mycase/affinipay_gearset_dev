@@ -62,6 +62,10 @@
                 <behavior>Edit</behavior>
                 <field>Marketing_Campaign__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Time_to_Response_Min__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

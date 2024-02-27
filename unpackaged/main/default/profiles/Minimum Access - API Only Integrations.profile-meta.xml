@@ -591,6 +591,11 @@
         <field>Trial_Request__c.MyCase_Marketing_Score__c</field>
         <readable>true</readable>
     </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Trial_Request__c.Time_to_Response_Min__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Account.Competitor</recordType>
