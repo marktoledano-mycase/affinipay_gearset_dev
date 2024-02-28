@@ -9261,6 +9261,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Product_Environment__c.Firm_ID_All_Brands__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Product_Environment__c.Firm_ID_DW__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -9292,6 +9297,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Product_Environment__c.Firm_URL__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product_Environment__c.Firm_UUID_All_Brands__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
