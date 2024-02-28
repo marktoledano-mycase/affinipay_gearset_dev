@@ -157,9 +157,9 @@
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>recordId.CreatedDate</leftValueReference>
-                <operator>GreaterThanOrEqualTo</operator>
+                <operator>LessThanOrEqualTo</operator>
                 <rightValue>
-                    <dateTimeValue>2024-01-18T08:00:00.000Z</dateTimeValue>
+                    <dateTimeValue>2024-01-29T08:00:00.000Z</dateTimeValue>
                 </rightValue>
             </conditions>
             <connector>

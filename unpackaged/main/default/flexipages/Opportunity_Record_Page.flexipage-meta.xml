@@ -795,10 +795,6 @@
                     <value>Facet-2d0ce6b8-92a8-4c6c-8452-0bdcfd3b4f29</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>label</name>
                     <value>Section</value>
                 </componentInstanceProperties>
@@ -1723,10 +1719,6 @@
                     <value>Facet-66484c1a-3ef8-4c0e-926b-1006db589bef</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>label</name>
                     <value>Commissions Fields</value>
                 </componentInstanceProperties>
@@ -1739,10 +1731,6 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-f896f7d2-f3b4-490c-9c06-4e80c306cdf8</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
