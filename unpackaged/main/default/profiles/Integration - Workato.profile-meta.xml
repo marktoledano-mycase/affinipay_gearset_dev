@@ -380,6 +380,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Account.Assign_MQA__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Account.Attachments_Received__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -860,6 +865,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Account.First_MQA_Brand__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.First_MQA_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Account.First_Purchase_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -936,6 +951,16 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Last_Invoiced__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Last_MQA_Brand__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Last_MQA_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

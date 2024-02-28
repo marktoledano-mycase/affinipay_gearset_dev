@@ -1377,6 +1377,57 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>First_MQA_Brand__c</picklist>
+        <values>
+            <fullName>AffiniPay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Associations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CASEpeer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPACharge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ClientPay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Docketwise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LawPay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MedPay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MyCase</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Soluno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Websites</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Woodpecker</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Fraud_Abuse__c</picklist>
         <values>
             <fullName>Account Ownership Dispute</fullName>
@@ -1525,6 +1576,57 @@
         </values>
         <values>
             <fullName>None</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Last_MQA_Brand__c</picklist>
+        <values>
+            <fullName>AffiniPay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Associations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CASEpeer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPACharge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ClientPay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Docketwise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LawPay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MedPay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MyCase</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Soluno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Websites</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Woodpecker</fullName>
             <default>false</default>
         </values>
     </picklistValues>
