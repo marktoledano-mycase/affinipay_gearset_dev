@@ -7,11 +7,12 @@
     <permissionSets>Gong__Gong_Users</permissionSets>
     <permissionSets>Inbound_Requests_Readonly</permissionSets>
     <permissionSets>Product_Picker_Read_Write</permissionSets>
+    <permissionSets>USF_Flow_Action_Collection_Actions</permissionSets>
     <permissionSets>bizible2__Bizible_Standard_User</permissionSets>
     <permissionSets>dfsle__DocuSign_Sender</permissionSets>
     <permissionSets>dfsle__DocuSign_User</permissionSets>
     <permissionSets>force__SalesConsoleUser</permissionSets>
     <permissionSets>mkto_si__Marketo_App_Access</permissionSets>
-    <permissionSets>zoom_app__Zoom_User</permissionSets>
+    <permissionSets>sixsense__X6sense_User</permissionSets>
     <status>Updated</status>
 </PermissionSetGroup>
