@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <description>2/29/2024: KC: Updates First MQA Date and First MQA Brand from Last MQA Date and Last MQA Brand when certain conditions apply.</description>
+    <environments>Default</environments>
+    <interviewLabel>Account: Update First MQA Date and First MQA Brand {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Account: Update First MQA Date and First MQA Brand</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_First_MQA_Date_and_First_MQA_Brand</name>
+        <label>Update First MQA Date and First MQA Brand</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <inputAssignments>
+            <field>First_MQA_Brand__c</field>
+            <value>
+                <elementReference>$Record.Last_MQA_Brand__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>First_MQA_Date__c</field>
+            <value>
+                <elementReference>$Record.Last_MQA_Date__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_First_MQA_Date_and_First_MQA_Brand</targetReference>
+        </connector>
+        <filterFormula>AND(
+  {!$Record.Bypass_VR_and_Automation__c} = FALSE,
+  OR(
+    AND(
+      ISNEW(),
+      NOT(ISBLANK({!$Record.Last_MQA_Date__c}))
+    ),
+    AND(
+      ISCHANGED({!$Record.Last_MQA_Date__c}),
+      NOT(ISBLANK({!$Record.Last_MQA_Date__c})),
+      ISBLANK({!$Record.First_MQA_Date__c})
+    )
+  )
+)</filterFormula>
+        <object>Account</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>
