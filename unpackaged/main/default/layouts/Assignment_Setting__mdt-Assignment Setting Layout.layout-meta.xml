@@ -18,14 +18,6 @@
                 <behavior>Edit</behavior>
                 <field>Enterprise__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Enterprise2__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Qualifying_Rep_Team__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -81,7 +73,12 @@
                 <field>Opportunity_Brand__c</field>
             </layoutItems>
         </layoutColumns>
-        <layoutColumns />
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Qualifying_Rep_Team__c</field>
+            </layoutItems>
+        </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
     <layoutSections>
@@ -101,6 +98,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>MQL_Type__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Enterprise2__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
