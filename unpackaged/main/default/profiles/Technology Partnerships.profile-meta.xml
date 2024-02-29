@@ -15103,6 +15103,10 @@
         <layout>Solution-Solution Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Survey__c-CSAT</layout>
+        <recordType>Survey__c.CSAT_Case_Survey</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Survey__c-MyCase NPS Survey</layout>
         <recordType>Survey__c.MyCase_NPS</recordType>
     </layoutAssignments>
@@ -16482,6 +16486,11 @@
         <personAccountDefault>true</personAccountDefault>
         <recordType>Survey__c.BizSys_Requests</recordType>
         <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Survey__c.CSAT_Case_Survey</recordType>
+        <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>

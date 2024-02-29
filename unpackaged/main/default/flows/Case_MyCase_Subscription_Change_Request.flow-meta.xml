@@ -214,7 +214,7 @@
         </rules>
     </decisions>
     <description>Supports the MyCase Subscription Downgrade process
-2/22/24 JC - Added a checkbox to deter spamming the Contact with confirmation emails if Case is reopened</description>
+2/28/24 JC - Updated Update elements to use correct checkbox field for Send Case Close Notification Survey</description>
     <environments>Default</environments>
     <formulas>
         <description>Formula to see if the case is new</description>
@@ -223,7 +223,7 @@
         <expression>ISNEW()</expression>
     </formulas>
     <interviewLabel>Case - MyCase Subscription Change Request {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Case - MyCase Subscription Change Request</label>
+    <label>Case: MyCase Subscription Change Request</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -336,12 +336,6 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>MyCase_Send_Close_Notification_Survey__c</field>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>Reason</field>
             <value>
                 <stringValue>Administrative Support</stringValue>
@@ -351,6 +345,12 @@
             <field>Resolution_mc__c</field>
             <value>
                 <stringValue>Administrative</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Send_Case_Close_Notification_Survey__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -388,12 +388,6 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>MyCase_Send_Close_Notification_Survey__c</field>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>Reason</field>
             <value>
                 <stringValue>Administrative Support</stringValue>
@@ -403,6 +397,12 @@
             <field>Resolution_mc__c</field>
             <value>
                 <stringValue>Administrative</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Send_Case_Close_Notification_Survey__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
             </value>
         </inputAssignments>
         <inputReference>$Record</inputReference>
