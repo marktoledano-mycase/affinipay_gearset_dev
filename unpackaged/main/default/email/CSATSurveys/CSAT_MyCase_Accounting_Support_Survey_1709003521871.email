@@ -1,0 +1,21 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">
+<p>Hello {{{Recipient.FirstName}}},<br />
+<br />
+We wanted to follow up with you in regards to your recent experience with MyCase Accounting support.<br />
+<br />
+We are committed to making your MyCase Accounting support experience the best possible! To help us do that we would like to invite you to please take a moment to complete this brief survey:</p>
+
+<p><a href="https://www.surveygizmo.com/s3/7733255/CSAT-MC-Accounting-Support-Experience-Survey?c={{{Case.ContactId}}}&amp;a={{{Case.AccountId}}}&amp;ca={{{Case.Id}}}&amp;e={{{Case.OwnerId}}}">Click Here to Take the Survey</a><br />
+<br />
+Thank you for sharing your feedback!<br />
+<br />
+Adam Wilson<br />
+Vice President, Client Services<br />
+MyCase<br />
+www.mycase.com</p>
+</body>
+</html>
