@@ -229,7 +229,8 @@
     <textTemplates>
         <name>text_Product_Line_WithPromo</name>
         <isViewedAsPlainText>true</isViewedAsPlainText>
-        <text>Qty: {!Loop.Qty__c} | Product: {!Loop.SKU_Product__r.Name}  | Unit Price: ${!Loop.SKU_Product__r.Price_Base__c}   | Promotion: {!Get_Oppy_Promos.Product_SKU_Promotion__r.Name}  {!con_LineBreak}
+        <text>Qty: {!Loop.Qty__c} | Product: {!Loop.SKU_Product__r.Name}  | Unit Price: ${!Loop.SKU_Product__r.Price_Base__c} 
+Promotion: {!Get_Oppy_Promos.Product_SKU_Promotion__r.Name} | Discount %: {!Get_Oppy_Promos.Discount__c} | Discount Duration (months): {!Get_Oppy_Promos.Discount_Duration__c}
 {!con_LineBreak}</text>
     </textTemplates>
     <variables>
