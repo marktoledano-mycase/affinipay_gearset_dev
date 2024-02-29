@@ -286,19 +286,20 @@
         </connector>
     </assignments>
     <assignments>
+        <description>MedPay to be included in the Affinipay count</description>
         <name>Assign_MedPay_Active</name>
         <label>Assign MedPay Active</label>
         <locationX>2426</locationX>
         <locationY>998</locationY>
         <assignmentItems>
-            <assignToReference>count_MedPay_Active</assignToReference>
+            <assignToReference>count_Affinipay_Active</assignToReference>
             <operator>Add</operator>
             <value>
                 <numberValue>1.0</numberValue>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>count_MedPay_Total</assignToReference>
+            <assignToReference>count_Affinipay_Total</assignToReference>
             <operator>Add</operator>
             <value>
                 <numberValue>1.0</numberValue>
@@ -309,19 +310,20 @@
         </connector>
     </assignments>
     <assignments>
+        <description>MedPay to be included in the Affinipay count</description>
         <name>Assign_MedPay_Churned</name>
         <label>Assign MedPay Churned</label>
         <locationX>2690</locationX>
         <locationY>998</locationY>
         <assignmentItems>
-            <assignToReference>count_MedPay_Churned</assignToReference>
+            <assignToReference>count_Affinipay_Chruned</assignToReference>
             <operator>Add</operator>
             <value>
                 <numberValue>1.0</numberValue>
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>count_MedPay_Total</assignToReference>
+            <assignToReference>count_Affinipay_Total</assignToReference>
             <operator>Add</operator>
             <value>
                 <numberValue>1.0</numberValue>
