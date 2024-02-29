@@ -1124,6 +1124,12 @@ ISBLANK ( {!$Record.Referral_Partnership__c} ),
         </connector>
         <flowName>Autolaunched_Get_Assignment_Setting_for_MQL</flowName>
         <inputAssignments>
+            <name>EnterpriseVariable</name>
+            <value>
+                <elementReference>EnterpriseVariable</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <name>var_DemographicScore</name>
             <value>
                 <elementReference>$Record.Demographic_Score__c</elementReference>
