@@ -12,6 +12,7 @@
     <permissionSets>dfsle__DocuSign_User</permissionSets>
     <permissionSets>force__SalesConsoleUser</permissionSets>
     <permissionSets>mkto_si__Marketo_App_Access</permissionSets>
+    <permissionSets>sixsense__X6sense_User</permissionSets>
     <permissionSets>zoom_app__Zoom_User</permissionSets>
     <status>Updated</status>
 </PermissionSetGroup>
