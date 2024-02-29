@@ -47,7 +47,7 @@
             </quickActionLayoutItems>
             <quickActionLayoutItems>
                 <emptySpace>false</emptySpace>
-                <field>MyCase_Send_Close_Notification_Survey__c</field>
+                <field>Send_Case_Close_Notification_Survey__c</field>
                 <uiBehavior>Edit</uiBehavior>
             </quickActionLayoutItems>
         </quickActionLayoutColumns>

@@ -3213,6 +3213,10 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Survey__c-Survey Layout</layout>
+        <recordType>Survey__c.CSAT_Case_Survey</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Survey__c-Survey Layout</layout>
         <recordType>Survey__c.MyCase_NPS</recordType>
     </layoutAssignments>
     <layoutAssignments>
@@ -3869,6 +3873,11 @@
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Survey__c.BizSys_Requests</recordType>
+        <visible>false</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Survey__c.CSAT_Case_Survey</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
