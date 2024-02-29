@@ -11758,6 +11758,10 @@
         <layout>Survey_Question__c-Survey Question Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Survey__c-Survey Layout</layout>
+        <recordType>Survey__c.CSAT_Case_Survey</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Swarm-Swarm Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -13009,6 +13013,11 @@
         <default>false</default>
         <recordType>Product_Environment__c.Soluno</recordType>
         <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Survey__c.CSAT_Case_Survey</recordType>
+        <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>

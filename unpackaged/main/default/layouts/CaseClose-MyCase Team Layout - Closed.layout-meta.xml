@@ -53,7 +53,7 @@
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>MyCase_Send_Close_Notification_Survey__c</field>
+                <field>Send_Case_Close_Notification_Survey__c</field>
             </layoutItems>
         </layoutColumns>
         <style>OneColumn</style>
@@ -64,7 +64,7 @@
     <showSolutionSection>false</showSolutionSection>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h3g000000Rvdv</masterLabel>
+        <masterLabel>00h8W000005S8iE</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>
