@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>60.0</apiVersion>
-    <description>2/29/2024: KC: Updates First MQA Date and First MQA Brand from Last MQA Date and Last MQA Brand when certain conditions apply.</description>
+    <description>2/29/2024: KC: Updates First MQA Date and First MQA Brand from Last MQA Date and Last MQA Brand when certain conditions apply.
+3/1/2024: Changed to a before save flow</description>
     <environments>Default</environments>
     <interviewLabel>Account: Update First MQA Date and First MQA Brand {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Account: Update First MQA Date and First MQA Brand</label>
@@ -28,7 +29,7 @@
         <name>Update_First_MQA_Date_and_First_MQA_Brand</name>
         <label>Update First MQA Date and First MQA Brand</label>
         <locationX>176</locationX>
-        <locationY>323</locationY>
+        <locationY>287</locationY>
         <inputAssignments>
             <field>First_MQA_Brand__c</field>
             <value>
@@ -65,7 +66,7 @@
 )</filterFormula>
         <object>Account</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
-        <triggerType>RecordAfterSave</triggerType>
+        <triggerType>RecordBeforeSave</triggerType>
     </start>
     <status>Active</status>
 </Flow>
