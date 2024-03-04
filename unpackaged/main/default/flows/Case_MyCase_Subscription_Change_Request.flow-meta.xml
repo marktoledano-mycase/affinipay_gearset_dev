@@ -157,6 +157,13 @@ If this problem persists, please submit a ticket to Business.Systems.Request@aff
                     <stringValue>Closed</stringValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>$Record.Resolution_mc__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Unresponsive</stringValue>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>Get_Confirmation_Email_Template</targetReference>
             </connector>
@@ -228,7 +235,7 @@ If this problem persists, please submit a ticket to Business.Systems.Request@aff
         </rules>
     </decisions>
     <description>Supports the MyCase Subscription Downgrade process
-3/3/24 JC - Add custom error message fault path for emails that fail to send to the contact</description>
+3/4/24 JC - Updated decision element to not send confirmation email to Contact when the Case Resolution is unresponsive.</description>
     <environments>Default</environments>
     <formulas>
         <description>Formula to see if the case is new</description>
