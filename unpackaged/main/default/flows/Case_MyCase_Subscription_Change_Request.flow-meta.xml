@@ -11,6 +11,9 @@
         <connector>
             <targetReference>Update_Case_Confirmation_Email_Sent</targetReference>
         </connector>
+        <faultConnector>
+            <targetReference>Display_Flow_Fault_Message</targetReference>
+        </faultConnector>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>senderType</name>
@@ -103,6 +106,17 @@
         <versionSegment>1</versionSegment>
     </actionCalls>
     <apiVersion>59.0</apiVersion>
+    <customErrors>
+        <name>Display_Flow_Fault_Message</name>
+        <label>Display Flow Fault Message</label>
+        <locationX>1370</locationX>
+        <locationY>755</locationY>
+        <customErrorMessages>
+            <errorMessage>{!$Flow.FaultMessage} 
+If this problem persists, please submit a ticket to Business.Systems.Request@affinipay.com</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
     <decisions>
         <description>Evaluates if the Case entering this flow has a contact</description>
         <name>Has_Contact</name>
@@ -130,7 +144,7 @@
         <description>Evaluates if the existing case is closed</description>
         <name>Is_Case_Closed</name>
         <label>Is Case Closed?</label>
-        <locationX>1238</locationX>
+        <locationX>1370</locationX>
         <locationY>431</locationY>
         <defaultConnectorLabel>Open</defaultConnectorLabel>
         <rules>
@@ -153,7 +167,7 @@
         <description>Checks to see if the case that triggers this flow is new or existing</description>
         <name>Is_New_Case</name>
         <label>Is New Case?</label>
-        <locationX>908</locationX>
+        <locationX>974</locationX>
         <locationY>323</locationY>
         <defaultConnector>
             <targetReference>Is_Case_Closed</targetReference>
@@ -214,7 +228,7 @@
         </rules>
     </decisions>
     <description>Supports the MyCase Subscription Downgrade process
-2/28/24 JC - Updated Update elements to use correct checkbox field for Send Case Close Notification Survey</description>
+3/3/24 JC - Add custom error message fault path for emails that fail to send to the contact</description>
     <environments>Default</environments>
     <formulas>
         <description>Formula to see if the case is new</description>
@@ -408,7 +422,7 @@
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <start>
-        <locationX>782</locationX>
+        <locationX>848</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Is_New_Case</targetReference>
