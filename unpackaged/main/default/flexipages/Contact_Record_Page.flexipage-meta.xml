@@ -291,6 +291,16 @@
                 <identifier>RecordDo_Not_Send_survey_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Last_Survey_Sent__c</fieldItem>
+                <identifier>RecordLast_Survey_Sent_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-09a0e772-ec55-4ffa-a855-1939d61a2777</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -3418,16 +3428,6 @@
                     <name>uiBehavior</name>
                     <value>readonly</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Zoho_Contact_ID__c</fieldItem>
-                <identifier>RecordZoho_Contact_ID_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>readonly</value>
-                </fieldInstanceProperties>
                 <fieldItem>Record.ZoomInfo_Individual_ID__c</fieldItem>
                 <identifier>RecordZoomInfo_Individual_ID_cField</identifier>
             </fieldInstance>
@@ -3556,16 +3556,6 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Email_Domain__c</fieldItem>
                 <identifier>RecordEmail_Domain_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Last_Survey_Sent__c</fieldItem>
-                <identifier>RecordLast_Survey_Sent_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-3f3c85fe-db4f-4a2f-9873-2d5eb257247e</name>
