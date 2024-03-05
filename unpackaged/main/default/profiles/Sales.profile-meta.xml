@@ -16871,7 +16871,7 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>Billing_Account__c</tab>
-        <visibility>Hidden</visibility>
+        <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>Billing_Invoice_Payment__c</tab>
