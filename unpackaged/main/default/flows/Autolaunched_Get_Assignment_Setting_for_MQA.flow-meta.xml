@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>act_GetAssignmentSettings</name>
+        <label>Get Assignment Settings</label>
+        <locationX>314</locationX>
+        <locationY>134</locationY>
+        <actionName>ExecuteSOQL</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>asg_Count</targetReference>
+        </connector>
+        <dataTypeMappings>
+            <typeName>U__sObjects</typeName>
+            <typeValue>Assignment_Setting__mdt</typeValue>
+        </dataTypeMappings>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>soqlQuery</name>
+            <value>
+                <stringValue>SELECT MasterLabel,Assignment_Type__c,Assignment_Name__c FROM Assignment_Setting__mdt WHERE Type__c = &#39;MQA&#39; AND MQA_Brand__c = &#39;{!var_LastMQABrand}&#39;</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>ExecuteSOQL</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>57.0</apiVersion>
+    <assignments>
+        <name>asg_AssignmentGroupName</name>
+        <label>Assign Assignment Group Name</label>
+        <locationX>402</locationX>
+        <locationY>866</locationY>
+        <assignmentItems>
+            <assignToReference>var_AssignmentGroupName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>loop_Collection.Assignment_Name__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>loop_Collection</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>asg_Count</name>
+        <label>Assign Count</label>
+        <locationX>314</locationX>
+        <locationY>242</locationY>
+        <assignmentItems>
+            <assignToReference>var_AssignmentSettingCount</assignToReference>
+            <operator>AssignCount</operator>
+            <value>
+                <elementReference>act_GetAssignmentSettings.sObjects</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>dec_CheckCount</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>dec_CheckCount</name>
+        <label>Check Count</label>
+        <locationX>314</locationX>
+        <locationY>350</locationY>
+        <defaultConnector>
+            <targetReference>loop_Collection</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>out_CheckCountIsZeroOrNull</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>var_AssignmentSettingCount</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>var_AssignmentSettingCount</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>sub_SendSlackZeroOrNull</targetReference>
+            </connector>
+            <label>Zero or Null</label>
+        </rules>
+        <rules>
+            <name>out_CheckCountIsGreaterThanOne</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>var_AssignmentSettingCount</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>1.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>sub_SendSlackTwoPlus</targetReference>
+            </connector>
+            <label>&gt; 1</label>
+        </rules>
+    </decisions>
+    <description>2/29/2024 - Created to support roll out of 6sense and MQA process</description>
+    <environments>Default</environments>
+    <interviewLabel>Autolaunched - Get Assignment Setting for MQA {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Autolaunched - Get Assignment Setting for MQA</label>
+    <loops>
+        <name>loop_Collection</name>
+        <label>Loop Collection</label>
+        <locationX>314</locationX>
+        <locationY>758</locationY>
+        <collectionReference>act_GetAssignmentSettings.sObjects</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>asg_AssignmentGroupName</targetReference>
+        </nextValueConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>act_GetAssignmentSettings</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>sub_SendSlackTwoPlus</name>
+        <label>Send Slack (2+)</label>
+        <locationX>314</locationX>
+        <locationY>458</locationY>
+        <connector>
+            <targetReference>loop_Collection</targetReference>
+        </connector>
+        <flowName>Autolaunched_Send_Slack_Message</flowName>
+        <inputAssignments>
+            <name>var_SlackConversationID</name>
+            <value>
+                <stringValue>C04UVF7SD5H</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_SlackMessage</name>
+            <value>
+                <elementReference>txt_SlackMessageTwoPlus</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>sub_SendSlackZeroOrNull</name>
+        <label>Send Slack (Zero or Null)</label>
+        <locationX>50</locationX>
+        <locationY>458</locationY>
+        <flowName>Autolaunched_Send_Slack_Message</flowName>
+        <inputAssignments>
+            <name>var_SlackConversationID</name>
+            <value>
+                <stringValue>C04UVF7SD5H</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_SlackMessage</name>
+            <value>
+                <elementReference>txt_SlackMessageZero</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <textTemplates>
+        <name>txt_SlackMessageTwoPlus</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>:error-triangle: *Opportunity Assignment Error*
+
+&gt; *What*
+&gt; 2+ Assignment Settings were found for {!var_LastMQABrand}.
+&gt;
+&gt; :salesforce-2: &lt;{!$Setup.Instance_Configuration__c.Instance_URL__c}/{!var_RecordId} |View in Salesforce&gt;
+&gt; 
+&gt; *Impact*
+&gt; The record was assigned, but the system is misconfigured.
+&gt; 
+&gt; *Investigation Required*
+&gt; 1. Add or update Assignment Settings to prevent this from happening again.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>txt_SlackMessageZero</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>:error-triangle: *Opportunity Assignment Failure*
+
+&gt; *What*
+&gt; No Assignment Settings were found for {!var_LastMQABrand}.
+&gt;
+&gt; :salesforce-2: &lt;{!$Setup.Instance_Configuration__c.Instance_URL__c}/{!var_RecordId} |View in Salesforce&gt;
+&gt; 
+&gt; *Impact*
+&gt; The record was not assigned.
+&gt; 
+&gt; *Investigation Required*
+&gt; 1. Assign the record to the relevant user.
+&gt; 2. Add or update Assignment Settings to prevent this from happening again.</text>
+    </textTemplates>
+    <variables>
+        <name>var_AssignmentGroupName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>var_AssignmentSettingCount</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <description>Last MQA Brand on Account</description>
+        <name>var_LastMQABrand</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var_OpportunityBrand</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var_QualifyingRepTeam</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var_RecordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

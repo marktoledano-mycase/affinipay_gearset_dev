@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Oppty_with_Prohibited_Status__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Account has an opportunity with a referral record that has Partner Software Non-Compete Type=Outbound and Inbound prohibited.  Updated via a flow</description>
+    <externalId>false</externalId>
+    <label>Oppty with Prohibited Status</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>
