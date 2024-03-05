@@ -5,7 +5,7 @@
         <name>Assign_MyCase_or_LawPay_Brand</name>
         <label>Assign MyCase or LawPay Brand</label>
         <locationX>182</locationX>
-        <locationY>431</locationY>
+        <locationY>503</locationY>
         <defaultConnector>
             <targetReference>Update_Account_LawPay</targetReference>
         </defaultConnector>
@@ -30,11 +30,11 @@
         <name>Check_for_Eligibility</name>
         <label>Check for Eligibility</label>
         <locationX>380</locationX>
-        <locationY>323</locationY>
+        <locationY>395</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Yes_is_Eligible</name>
-            <conditionLogic>(1 OR 2 OR 3) AND 4 AND (5 OR 6 OR 7 OR 8)</conditionLogic>
+            <conditionLogic>1 AND 2 AND 3 AND 4 AND (9 OR 10) AND (5 OR 6 OR 7 OR 8)</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.RecordType.Name</leftValueReference>
                 <operator>NotEqualTo</operator>
@@ -64,14 +64,14 @@
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>$Record.Owner_Active__c</leftValueReference>
+                <leftValueReference>Get_User.IsActive</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>$Record.Owner.Full_Name__c</leftValueReference>
+                <leftValueReference>Get_User.Name</leftValueReference>
                 <operator>Contains</operator>
                 <rightValue>
                     <stringValue>Integration</stringValue>
@@ -91,12 +91,27 @@
                     <elementReference>fx_30DaysAgo</elementReference>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>$Record.Last_MQA_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Last_MQA_Date__c</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <elementReference>fx_30DaysAgo</elementReference>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>Assign_MyCase_or_LawPay_Brand</targetReference>
             </connector>
             <label>Yes is Eligible</label>
         </rules>
     </decisions>
+    <description>3/4/2024 - Updated flow to include additional eligibility and made updates to the start trigger</description>
     <environments>Default</environments>
     <formulas>
         <name>fx_30DaysAgo</name>
@@ -124,12 +139,33 @@
         </value>
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_User</name>
+        <label>Get User</label>
+        <locationX>380</locationX>
+        <locationY>287</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_for_Eligibility</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <recordUpdates>
         <description>Update Account with Last MQA Date, Assign MQA and the correct Last MQA Brand</description>
         <name>Update_Account</name>
         <label>Update Account</label>
         <locationX>50</locationX>
-        <locationY>539</locationY>
+        <locationY>611</locationY>
         <inputAssignments>
             <field>Assign_MQA__c</field>
             <value>
@@ -154,7 +190,7 @@
         <name>Update_Account_LawPay</name>
         <label>Update Account LawPay</label>
         <locationX>314</locationX>
-        <locationY>539</locationY>
+        <locationY>611</locationY>
         <inputAssignments>
             <field>Assign_MQA__c</field>
             <value>
@@ -179,14 +215,20 @@
         <locationX>254</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Check_for_Eligibility</targetReference>
+            <targetReference>Get_User</targetReference>
         </connector>
         <filterFormula>{!$Record.Bypass_VR_and_Automation__c} = FALSE &amp;&amp;
-(CONTAINS({!$Record.X6Sense_Segment__c}, &quot;LawPay_6QA&quot;) &amp;&amp; NOT(CONTAINS( {!$Record__Prior.X6Sense_Segment__c},&quot;LawPay_6QA&quot;))) ||
-(CONTAINS({!$Record.X6Sense_Segment__c}, &quot;MyCase_6QA&quot;) &amp;&amp; NOT(CONTAINS( {!$Record__Prior.X6Sense_Segment__c},&quot;MyCase_6QA&quot;)))</filterFormula>
+(
+  (
+    CONTAINS({!$Record.X6Sense_Segment__c}, &quot;LawPay_6QA&quot;) &amp;&amp; (NOT(CONTAINS({!$Record__Prior.X6Sense_Segment__c}, &quot;LawPay_6QA&quot;)) || ISBLANK({!$Record__Prior.X6Sense_Segment__c}))
+  ) ||
+  (
+    CONTAINS({!$Record.X6Sense_Segment__c}, &quot;MyCase_6QA&quot;) &amp;&amp; (NOT(CONTAINS({!$Record__Prior.X6Sense_Segment__c}, &quot;MyCase_6QA&quot;)) || ISBLANK({!$Record__Prior.X6Sense_Segment__c}))
+  )
+)</filterFormula>
         <object>Account</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
-        <triggerType>RecordAfterSave</triggerType>
+        <triggerType>RecordBeforeSave</triggerType>
     </start>
     <status>Active</status>
 </Flow>
