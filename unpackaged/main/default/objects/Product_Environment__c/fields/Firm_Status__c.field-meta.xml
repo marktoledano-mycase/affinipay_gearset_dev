@@ -11,7 +11,7 @@
               &quot;trialing&quot; , &quot;In Trial&quot; ,
               &quot;unpaid&quot; , &quot;Expired Trial&quot; ,
               &quot;active&quot; , &quot;Customer&quot; ,
-              &quot;past due&quot; , &quot;Customer&quot; ,
+              &quot;past_due&quot; , &quot;Customer&quot; ,
               &quot;canceled&quot; , &quot;Churned&quot; ,
               &quot;Unknown DW Status&quot; ),
 

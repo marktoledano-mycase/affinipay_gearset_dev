@@ -9024,6 +9024,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Product_Environment__c.Alerts_CP__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Product_Environment__c.Attorney_Count__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -9095,6 +9100,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Product_Environment__c.Churn_Reason__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product_Environment__c.Contact_Counts_CP__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -9174,12 +9184,22 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Product_Environment__c.Firm_ID_CP__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Product_Environment__c.Firm_Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>Product_Environment__c.Firm_UUID_All_Brands__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product_Environment__c.Firm_UUID_CP__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -9195,6 +9215,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Product_Environment__c.Free_License_Count__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product_Environment__c.Health_Score__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -9265,6 +9290,16 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Product_Environment__c.Non_Active_Named_Users__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product_Environment__c.Notes_CP__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product_Environment__c.Notes_Last_30_CP__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -9384,6 +9419,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Product_Environment__c.Stripe_Customer_ID_CP__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Product_Environment__c.Stripe_Customer_Link__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -9393,8 +9433,28 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Product_Environment__c.Stripe_Subscription_ID_CP__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product_Environment__c.Stripe_Subscription_Item_ID_CP__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Product_Environment__c.Subscription_Tier__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product_Environment__c.Templates_CP__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product_Environment__c.Texting_CP__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
