@@ -1,0 +1,1186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <assignments>
+        <name>Assign_Enterprise_Variable_Yes</name>
+        <label>Assign Enterprise Variable Yes</label>
+        <locationX>1370</locationX>
+        <locationY>566</locationY>
+        <assignmentItems>
+            <assignToReference>var_EnterpriseVariable</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Yes</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_the_Business_Hours</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Slack_ID_from_Assignment_Group_Member</name>
+        <label>Assign Slack ID from Assignment Group Member</label>
+        <locationX>1898</locationX>
+        <locationY>1622</locationY>
+        <assignmentItems>
+            <assignToReference>var_SlackIDToUse</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_Assignment_Group_Member.var_AssignmentGroupMemberUserSlackID</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Send_Slack_to_User_from_Assignment_Group</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Assignment_Group_Member_Slack_ID_is_Null</name>
+        <label>Assignment Group Member Slack ID is Null</label>
+        <locationX>1766</locationX>
+        <locationY>1514</locationY>
+        <defaultConnector>
+            <targetReference>Assign_Slack_ID_from_Assignment_Group_Member</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>out_SlackIDisNull</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Assignment_Group_Member.var_AssignmentGroupMemberUserSlackID</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Assignment_Group_Member.var_AssignmentGroupMemberUserSlackID</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Slack_Missing_Slack_ID_for_Assignment_Group_Member</targetReference>
+            </connector>
+            <label>True</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Assignment_Group_Member_User_ID_is_Null</name>
+        <label>Assignment Group Member User ID is Null</label>
+        <locationX>1568</locationX>
+        <locationY>1190</locationY>
+        <defaultConnector>
+            <targetReference>Update_Account</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>out_AssignmentGroupMemberUserIDisNull</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Assignment_Group_Member.var_AssignmentGroupMemberUserID</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Assignment_Group_Member.var_AssignmentGroupMemberUserID</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <label>True</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Determine_Assignment_Type</name>
+        <label>Determine Assignment Type</label>
+        <locationX>1502</locationX>
+        <locationY>974</locationY>
+        <defaultConnectorLabel>Unhandled Condition</defaultConnectorLabel>
+        <rules>
+            <name>User</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Assignment_Settings.var_AssignmentType</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>User</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Account_Assign_to_Assignment_Name</targetReference>
+            </connector>
+            <label>User</label>
+        </rules>
+        <rules>
+            <name>Group</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Assignment_Settings.var_AssignmentType</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Assignment Group</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Assignment_Group_Member</targetReference>
+            </connector>
+            <label>Group</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Missing_Attributes</name>
+        <label>Missing Attributes?</label>
+        <locationX>776</locationX>
+        <locationY>350</locationY>
+        <defaultConnector>
+            <targetReference>Payments_Enterprise_Account</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Account.Last_MQA_Brand__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Slack_Missing_Attributes</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Payments_Enterprise_Account</name>
+        <label>Payments Enterprise Account?</label>
+        <locationX>1502</locationX>
+        <locationY>458</locationY>
+        <defaultConnector>
+            <targetReference>Check_the_Business_Hours</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Payments_Enterprise_Account</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Account.Payments_Enterprise_Account__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Yes</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Account.Last_MQA_Brand__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>LawPay</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Enterprise_Variable_Yes</targetReference>
+            </connector>
+            <label>Yes Payments Enterprise Account</label>
+        </rules>
+    </decisions>
+    <description>3/6/2024: Created Account Assign MQA to support assigning accounts based on Assignment Group</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>fx_LastMQABrand</name>
+        <dataType>String</dataType>
+        <expression>IF(ISPICKVAL({!Get_Account.Last_MQA_Brand__c}, &quot;LawPay&quot;), &quot;affinipay&quot;,
+    IF(ISPICKVAL({!Get_Account.Last_MQA_Brand__c}, &quot;MyCase&quot;), &quot;MyCase&quot;, &quot;&quot;))</expression>
+    </formulas>
+    <formulas>
+        <name>fx_OwnerName</name>
+        <dataType>String</dataType>
+        <expression>IF(
+ISPICKVAL({!Get_Assignment_Settings.var_AssignmentType}, &quot;Assignment Group&quot;), 
+&quot;Assignment Group&quot;,
+  {!Get_Inbound_Request.Qualifying_Rep__r.FirstName}&amp;&quot; &quot;&amp;{!Get_Inbound_Request.Qualifying_Rep__r.LastName}
+)</expression>
+    </formulas>
+    <formulas>
+        <name>fx_PaymentCustomerStatus</name>
+        <dataType>String</dataType>
+        <expression>IF(
+    ISPICKVAL({!Get_Account.AffiniPay_Customer_Status__c}, &quot;Active&quot;) ||
+    ISPICKVAL({!Get_Account.ClientPay_Customer_Status__c}, &quot;Active&quot;) ||
+    ISPICKVAL({!Get_Account.CPACharge_Customer_Status__c}, &quot;Active&quot;) ||
+    ISPICKVAL({!Get_Account.LawPay_Customer_Status__c}, &quot;Active&quot;),
+    &quot;Active&quot;,
+
+IF(
+    ISPICKVAL({!Get_Account.AffiniPay_Customer_Status__c}, &quot;Churned&quot;) ||
+    ISPICKVAL({!Get_Account.ClientPay_Customer_Status__c}, &quot;Churned&quot;) ||
+    ISPICKVAL({!Get_Account.CPACharge_Customer_Status__c}, &quot;Churned&quot;) ||
+    ISPICKVAL({!Get_Account.LawPay_Customer_Status__c}, &quot;Churned&quot;),
+    &quot;Churned&quot;,
+
+IF(
+    ISPICKVAL({!Get_Account.AffiniPay_Customer_Status__c}, &quot;Prospect&quot;) ||
+    ISPICKVAL({!Get_Account.ClientPay_Customer_Status__c}, &quot;Prospect&quot;) ||
+    ISPICKVAL({!Get_Account.CPACharge_Customer_Status__c}, &quot;Prospect&quot;) ||
+    ISPICKVAL({!Get_Account.LawPay_Customer_Status__c}, &quot;Prospect&quot;),
+    &quot;Prospect&quot;,&quot;Prospect&quot;)))</expression>
+    </formulas>
+    <formulas>
+        <name>fx_SoftwareCustomerStatus</name>
+        <dataType>String</dataType>
+        <expression>IF(
+    ISPICKVAL({!Get_Account.CASEpeer_Customer_Status__c}, &quot;Active&quot;) ||
+    ISPICKVAL({!Get_Account.Docketwise_Customer_Status__c}, &quot;Active&quot;) ||
+    ISPICKVAL({!Get_Account.MyCase_Customer_Status__c}, &quot;Active&quot;),
+    &quot;Active&quot;,
+
+IF(
+    ISPICKVAL({!Get_Account.CASEpeer_Customer_Status__c}, &quot;Churned&quot;) ||
+    ISPICKVAL({!Get_Account.Docketwise_Customer_Status__c}, &quot;Churned&quot;) ||
+    ISPICKVAL({!Get_Account.MyCase_Customer_Status__c}, &quot;Churned&quot;),
+    &quot;Churned&quot;,
+
+IF(
+    ISPICKVAL({!Get_Account.CASEpeer_Customer_Status__c}, &quot;Prospect&quot;) ||
+    ISPICKVAL({!Get_Account.Docketwise_Customer_Status__c}, &quot;Prospect&quot;) ||
+    ISPICKVAL({!Get_Account.MyCase_Customer_Status__c}, &quot;Prospect&quot;),
+    &quot;Prospect&quot;,&quot;Prospect&quot;)))</expression>
+    </formulas>
+    <interviewLabel>Autolaunched - Account Assign MQA {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Autolaunched - Account Assign MQA</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Inbound_Request</name>
+        <label>Create Inbound Request</label>
+        <locationX>314</locationX>
+        <locationY>1190</locationY>
+        <connector>
+            <targetReference>Get_Inbound_Request</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Send_Slack_Unhandled_Fault</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>Account_ID__c</field>
+            <value>
+                <elementReference>var_AccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>AffiniPay_Customer_Status__c</field>
+            <value>
+                <elementReference>Get_Account.AffiniPay_Customer_Status__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>AffiniPay_Product_Tier__c</field>
+            <value>
+                <elementReference>Get_Account.AffiniPay_Product_Tier__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Brand__c</field>
+            <value>
+                <elementReference>Get_Account.Last_MQA_Brand__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CASEpeer_Customer_Status__c</field>
+            <value>
+                <elementReference>Get_Account.CASEpeer_Customer_Status__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CASEpeer_Product_Tier__c</field>
+            <value>
+                <elementReference>Get_Account.CASEpeer_Product_Tier__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CPACharge_Customer_Status__c</field>
+            <value>
+                <elementReference>Get_Account.CPACharge_Customer_Status__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CPACharge_Product_Tier__c</field>
+            <value>
+                <elementReference>Get_Account.CPACharge_Product_Tier__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ClientPay_Customer_Status__c</field>
+            <value>
+                <elementReference>Get_Account.ClientPay_Customer_Status__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ClientPay_Product_Tier__c</field>
+            <value>
+                <elementReference>Get_Account.ClientPay_Product_Tier__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Docketwise_Customer_Status__c</field>
+            <value>
+                <elementReference>Get_Account.Docketwise_Customer_Status__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Docketwise_Product_Tier__c</field>
+            <value>
+                <elementReference>Get_Account.Docketwise_Product_Tier__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>LawPay_Customer_Status__c</field>
+            <value>
+                <elementReference>Get_Account.LawPay_Customer_Status__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>LawPay_Product_Tier__c</field>
+            <value>
+                <elementReference>Get_Account.LawPay_Product_Tier__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>LeadSource__c</field>
+            <value>
+                <stringValue>ABM</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Lead_Channel__c</field>
+            <value>
+                <stringValue>6sense</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MQA_Buying_Stage__c</field>
+            <value>
+                <elementReference>Get_Account_Score.sixsense__buying_stage__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MQA_Intent_Score__c</field>
+            <value>
+                <elementReference>Get_Account_Score.sixsense__intent_score__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MQA_Numerical_Reach_Score__c</field>
+            <value>
+                <elementReference>Get_Account_Score.sixsense__Numerical_Reach_Score__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MQA_Profile_Fit__c</field>
+            <value>
+                <elementReference>Get_Account_Score.sixsense__profile_fit__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MQA_Profile_Score__c</field>
+            <value>
+                <elementReference>Get_Account_Score.sixsense__ProfileScore__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MQA_Reach_Score__c</field>
+            <value>
+                <elementReference>Get_Account_Score.sixsense__Reach_Score__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MQA_Segment__c</field>
+            <value>
+                <elementReference>Get_Account.X6Sense_Segment__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MQL_Date_Time__c</field>
+            <value>
+                <elementReference>Get_Account.Last_MQA_Date__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MQL_Date__c</field>
+            <value>
+                <elementReference>Get_Account.Last_MQA_Date__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MQL_Status__c</field>
+            <value>
+                <stringValue>New MQA</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MyCase_Customer_Status__c</field>
+            <value>
+                <elementReference>Get_Account.MyCase_Customer_Status__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MyCase_Product_Tier__c</field>
+            <value>
+                <elementReference>Get_Account.MyCase_Product_Tier__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Qualifying_Rep__c</field>
+            <value>
+                <elementReference>Get_Assignment_Settings.var_AssignmentName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Request_Type__c</field>
+            <value>
+                <stringValue>Marketing</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Type__c</field>
+            <value>
+                <stringValue>MQA</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Website_Hosting_Customer_Status__c</field>
+            <value>
+                <elementReference>Get_Account.Websites_Customer_Status__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Websites_Product_Tier__c</field>
+            <value>
+                <elementReference>Get_Account.Websites_Product_Tier__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Woodpecker_Customer_Status__c</field>
+            <value>
+                <elementReference>Get_Account.Woodpecker_Customer_Status__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Woodpecker_Product_Tier__c</field>
+            <value>
+                <elementReference>Get_Account.Woodpecker_Product_Tier__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Trial_Request__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>Create_Inbound_Request_Assignment_Group_Member</name>
+        <label>Create Inbound Request Assignment Group Member</label>
+        <locationX>1766</locationX>
+        <locationY>1406</locationY>
+        <connector>
+            <targetReference>Assignment_Group_Member_Slack_ID_is_Null</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Send_Slack_Unhandled_Fault</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>Account_ID__c</field>
+            <value>
+                <elementReference>var_AccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>AffiniPay_Customer_Status__c</field>
+            <value>
+                <elementReference>Get_Account.AffiniPay_Customer_Status__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>AffiniPay_Product_Tier__c</field>
+            <value>
+                <elementReference>Get_Account.AffiniPay_Product_Tier__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Brand__c</field>
+            <value>
+                <elementReference>Get_Account.Last_MQA_Brand__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CASEpeer_Customer_Status__c</field>
+            <value>
+                <elementReference>Get_Account.CASEpeer_Customer_Status__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CASEpeer_Product_Tier__c</field>
+            <value>
+                <elementReference>Get_Account.CASEpeer_Product_Tier__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CPACharge_Customer_Status__c</field>
+            <value>
+                <elementReference>Get_Account.CPACharge_Customer_Status__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CPACharge_Product_Tier__c</field>
+            <value>
+                <elementReference>Get_Account.CPACharge_Product_Tier__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ClientPay_Customer_Status__c</field>
+            <value>
+                <elementReference>Get_Account.ClientPay_Customer_Status__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ClientPay_Product_Tier__c</field>
+            <value>
+                <elementReference>Get_Account.ClientPay_Product_Tier__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Docketwise_Customer_Status__c</field>
+            <value>
+                <elementReference>Get_Account.Docketwise_Customer_Status__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Docketwise_Product_Tier__c</field>
+            <value>
+                <elementReference>Get_Account.Docketwise_Product_Tier__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>LawPay_Customer_Status__c</field>
+            <value>
+                <elementReference>Get_Account.LawPay_Customer_Status__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>LawPay_Product_Tier__c</field>
+            <value>
+                <elementReference>Get_Account.LawPay_Product_Tier__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>LeadSource__c</field>
+            <value>
+                <stringValue>ABM</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Lead_Channel__c</field>
+            <value>
+                <stringValue>6sense</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MQA_Buying_Stage__c</field>
+            <value>
+                <elementReference>Get_Account_Score.sixsense__buying_stage__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MQA_Intent_Score__c</field>
+            <value>
+                <elementReference>Get_Account_Score.sixsense__intent_score__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MQA_Numerical_Reach_Score__c</field>
+            <value>
+                <elementReference>Get_Account_Score.sixsense__Numerical_Reach_Score__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MQA_Profile_Fit__c</field>
+            <value>
+                <elementReference>Get_Account_Score.sixsense__profile_fit__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MQA_Profile_Score__c</field>
+            <value>
+                <elementReference>Get_Account_Score.sixsense__ProfileScore__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MQA_Reach_Score__c</field>
+            <value>
+                <elementReference>Get_Account_Score.sixsense__Reach_Score__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MQA_Segment__c</field>
+            <value>
+                <elementReference>Get_Account.X6Sense_Segment__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MQL_Date_Time__c</field>
+            <value>
+                <elementReference>Get_Account.Last_MQA_Date__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MQL_Date__c</field>
+            <value>
+                <elementReference>Get_Account.Last_MQA_Date__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MQL_Status__c</field>
+            <value>
+                <stringValue>New MQA</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MyCase_Customer_Status__c</field>
+            <value>
+                <elementReference>Get_Account.MyCase_Customer_Status__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MyCase_Product_Tier__c</field>
+            <value>
+                <elementReference>Get_Account.MyCase_Product_Tier__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Qualifying_Rep__c</field>
+            <value>
+                <elementReference>Get_Assignment_Group_Member.var_AssignmentGroupMemberUserID</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Request_Type__c</field>
+            <value>
+                <stringValue>Marketing</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Type__c</field>
+            <value>
+                <stringValue>MQA</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Website_Hosting_Customer_Status__c</field>
+            <value>
+                <elementReference>Get_Account.Websites_Customer_Status__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Websites_Product_Tier__c</field>
+            <value>
+                <elementReference>Get_Account.Websites_Product_Tier__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Woodpecker_Customer_Status__c</field>
+            <value>
+                <elementReference>Get_Account.Woodpecker_Customer_Status__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Woodpecker_Product_Tier__c</field>
+            <value>
+                <elementReference>Get_Account.Woodpecker_Product_Tier__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Trial_Request__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>Get_Account</name>
+        <label>Get Account</label>
+        <locationX>776</locationX>
+        <locationY>134</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Account_Score</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Send_Slack_Unhandled_Fault</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>var_AccountId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Account_Score</name>
+        <label>Get Account Score</label>
+        <locationX>776</locationX>
+        <locationY>242</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Missing_Attributes</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Send_Slack_Unhandled_Fault</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>sixsense__account_id__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>var_AccountId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>fx_LastMQABrand</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>sixsense__X6sense_Account_Score__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Inbound_Request</name>
+        <label>Get Inbound Request</label>
+        <locationX>314</locationX>
+        <locationY>1298</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Send_Slack_to_User</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Send_Slack_Unhandled_Fault</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Create_Inbound_Request</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Trial_Request__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Account</name>
+        <label>Update Account</label>
+        <locationX>1766</locationX>
+        <locationY>1298</locationY>
+        <connector>
+            <targetReference>Create_Inbound_Request_Assignment_Group_Member</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Send_Slack_Unhandled_Fault</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>var_AccountId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Assign_MQA__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>Get_Assignment_Group_Member.var_AssignmentGroupMemberUserID</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Account_Assign_to_Assignment_Name</name>
+        <label>Update Account - Assign to Assignment Name</label>
+        <locationX>314</locationX>
+        <locationY>1082</locationY>
+        <connector>
+            <targetReference>Create_Inbound_Request</targetReference>
+        </connector>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Send_Slack_Unhandled_Fault</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>var_AccountId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Assign_MQA__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>Get_Assignment_Settings.var_AssignmentName</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordUpdates>
+    <start>
+        <locationX>650</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Account</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>Check_the_Business_Hours</name>
+        <label>Check the Business Hours</label>
+        <locationX>1502</locationX>
+        <locationY>758</locationY>
+        <connector>
+            <targetReference>Get_Assignment_Settings</targetReference>
+        </connector>
+        <flowName>Autolaunched_Evaluate_For_Business_Hours</flowName>
+        <inputAssignments>
+            <name>varBusinessHoursName</name>
+            <value>
+                <stringValue>Central Business Hours</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varDateTime</name>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </inputAssignments>
+        <outputAssignments>
+            <assignToReference>var_WithinBusinessHours</assignToReference>
+            <name>varResults</name>
+        </outputAssignments>
+    </subflows>
+    <subflows>
+        <name>Get_Assignment_Group_Member</name>
+        <label>Get Assignment Group Member</label>
+        <locationX>1568</locationX>
+        <locationY>1082</locationY>
+        <connector>
+            <targetReference>Assignment_Group_Member_User_ID_is_Null</targetReference>
+        </connector>
+        <flowName>Autolaunched_Get_Assignment_Group_Member</flowName>
+        <inputAssignments>
+            <name>var_AssignmentGroupName</name>
+            <value>
+                <elementReference>Get_Assignment_Settings.var_AssignmentGroupName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_NumberOfEmployees</name>
+            <value>
+                <elementReference>Get_Account.NumberOfEmployees</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_RecordId</name>
+            <value>
+                <elementReference>var_AccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <subflows>
+        <name>Get_Assignment_Settings</name>
+        <label>Get Assignment Settings</label>
+        <locationX>1502</locationX>
+        <locationY>866</locationY>
+        <connector>
+            <targetReference>Determine_Assignment_Type</targetReference>
+        </connector>
+        <flowName>Autolaunched_Get_Assignment_Setting_for_MQA</flowName>
+        <inputAssignments>
+            <name>var_LastMQABrand</name>
+            <value>
+                <elementReference>Get_Account.Last_MQA_Brand__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_RecordId</name>
+            <value>
+                <elementReference>var_AccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <subflows>
+        <name>Send_Slack_Missing_Attributes</name>
+        <label>Send Slack Missing Attributes</label>
+        <locationX>50</locationX>
+        <locationY>458</locationY>
+        <flowName>Autolaunched_Send_Slack_Message</flowName>
+        <inputAssignments>
+            <name>var_SlackConversationID</name>
+            <value>
+                <stringValue>C04UVF7SD5H</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_SlackMessage</name>
+            <value>
+                <elementReference>txt_SlackMessageMissingAttributes</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Send_Slack_Missing_Slack_ID_for_Assignment_Group_Member</name>
+        <label>Send Slack (Missing Slack ID for Assignment Group Member)</label>
+        <locationX>1634</locationX>
+        <locationY>1622</locationY>
+        <flowName>Autolaunched_Send_Slack_Message</flowName>
+        <inputAssignments>
+            <name>var_SlackConversationID</name>
+            <value>
+                <stringValue>C04UVF7SD5H</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_SlackMessage</name>
+            <value>
+                <elementReference>txt_SlackMessageMissingSlackIDAssignmentGroupMember</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Send_Slack_to_Channel</name>
+        <label>Send Slack to Channel</label>
+        <locationX>1502</locationX>
+        <locationY>2090</locationY>
+        <flowName>Autolaunched_Send_Slack_Message</flowName>
+        <inputAssignments>
+            <name>var_SlackConversationID</name>
+            <value>
+                <stringValue>C04UNPZNF2P</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_SlackMessage</name>
+            <value>
+                <elementReference>txt_SlackMessagetoUserwQualifyingRep</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Send_Slack_to_User</name>
+        <label>Send Slack to User</label>
+        <locationX>314</locationX>
+        <locationY>1406</locationY>
+        <connector>
+            <targetReference>Send_Slack_to_Channel</targetReference>
+        </connector>
+        <flowName>Autolaunched_Send_Slack_Message</flowName>
+        <inputAssignments>
+            <name>var_SlackConversationID</name>
+            <value>
+                <elementReference>Get_Assignment_Settings.var_SlackId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_SlackMessage</name>
+            <value>
+                <elementReference>txt_SlackMessagetoUserwQualifyingRep</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Send_Slack_to_User_from_Assignment_Group</name>
+        <label>Send Slack to User from Assignment Group</label>
+        <locationX>1898</locationX>
+        <locationY>1730</locationY>
+        <connector>
+            <targetReference>Send_Slack_to_Channel</targetReference>
+        </connector>
+        <flowName>Autolaunched_Send_Slack_Message</flowName>
+        <inputAssignments>
+            <name>var_SlackConversationID</name>
+            <value>
+                <elementReference>var_SlackIDToUse</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_SlackMessage</name>
+            <value>
+                <elementReference>txt_SlackMessagetoUserwQualifyingRep</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Send_Slack_Unhandled_Fault</name>
+        <label>Send Slack Unhandled Fault</label>
+        <locationX>3218</locationX>
+        <locationY>242</locationY>
+        <flowName>Autolaunched_Send_Slack_Message</flowName>
+        <inputAssignments>
+            <name>var_SlackConversationID</name>
+            <value>
+                <stringValue>C04UVF7SD5H</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>var_SlackMessage</name>
+            <value>
+                <elementReference>txt_SlackMessageUnhandledFault</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <textTemplates>
+        <name>txt_SlackMessageMissingAttributes</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>:error-triangle: *MQA Assignment Failure*
+
+ *What* 
+ &gt;An MQA assignment for &lt;{!$Setup.Instance_Configuration__c.Instance_URL__c}/{!var_AccountId}&gt; was triggered based on a sync from &gt;6sense; however, it&#39;s missing key attributes (Last MQA Brand) to assign the record.
+ 
+ &gt;*Last MQL Brand:* {!Get_Account.Last_MQA_Brand__c} 
+&gt; :salesforce-2: &lt;{!$Setup.Instance_Configuration__c.Instance_URL__c}/{!var_AccountId}|View in Salesforce&gt;
+ &gt; *Impact*
+ &gt;The record was not assigned because these fields are used in the assignment logic (and blank values are not supported).
+ 
+ &gt;*Investigation Required*
+ &gt;1. Assign the record to the relevant user.
+ &gt;2. Review the scenario with Marketing Operations to ensure that MQA fields are populated for all MQAs.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>txt_SlackMessageMissingSlackIDAssignmentGroupMember</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>:error-triangle: *Missing Slack ID*
+
+&gt; *What* 
+&gt; An Account was round robined via an Assignment Group; however, the assignee&#39;s Slack ID was blank.
+&gt; 
+&gt; *User*
+&gt; &lt;{!$Setup.Instance_Configuration__c.Instance_URL__c}/{!Get_Assignment_Group_Member.var_AssignmentGroupMemberUserID} |{!Get_Assignment_Group_Member.var_AssignmentGroupMemberUserName}&gt; 
+&gt; 
+&gt; *Impact*
+&gt; The record was assigned; however, the Slack notification did not fire.
+&gt; 
+&gt; *Investigation Required*
+&gt; 1. Add the user&#39;s Slack ID in Salesforce.
+&gt; 2. Escalate this to Business Systems and/or Transformation to address the root cause and prevent it from happening again.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>txt_SlackMessagetoUserwQualifyingRep</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>:office: *New MQA*
+
+&gt; *Company:* {!Get_Account.Name}
+&gt; *Website:* {!Get_Account.Website}
+&gt; *Phone:* {!Get_Account.Phone}
+&gt; *Employees:* {!Get_Account.NumberOfEmployees}
+&gt; *Country:* {!Get_Account.BillingCountry}
+&gt; *State:* {!Get_Account.BillingState}
+
+&gt; *Payments Customer Status:* {!fx_PaymentCustomerStatus}
+&gt; *Software Customer Status:* {!fx_SoftwareCustomerStatus}
+
+&gt; *Brand:* {!Get_Account.Last_MQA_Brand__c}
+&gt; *Buying Stage:* {!Get_Account_Score.sixsense__buying_stage__c}
+&gt; *Profile Fit:* {!Get_Account_Score.sixsense__profile_fit__c}
+&gt; *Reach Score:* {!Get_Account_Score.sixsense__Reach_Score__c}
+&gt; 
+&gt;*Assigned To:* {!fx_OwnerName}
+&gt; :salesforce-2:  &lt;{!$Setup.Instance_Configuration__c.Instance_URL__c}/{!var_AccountId} | View in Salesforce&gt;
+&gt; 
+&gt; _Review and action MQA within 1 business day._</text>
+    </textTemplates>
+    <textTemplates>
+        <name>txt_SlackMessageUnhandledFault</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>:error-triangle: *MQA Assignment Failure*
+&gt; *What* 
+&gt; An unhandled fault occurred.
+&gt; 
+&gt; :salesforce-2: &lt;{!$Setup.Instance_Configuration__c.Instance_URL__c}/{!var_AccountId} |View in Salesforce&gt;
+&gt; 
+&gt; *Fault Message*
+&gt; {!$Flow.FaultMessage}
+&gt; 
+&gt; *Investigation Required*
+&gt; 1. Assign the record to the relevant user.
+&gt; 2. Review the scenario with Marketing Operations to ensure that MQA fields are populated for all MQAs.</text>
+    </textTemplates>
+    <variables>
+        <name>var_AccountId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>var_EnterpriseVariable</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <stringValue>No</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>var_SlackIDToUse</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>var_WithinBusinessHours</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>
