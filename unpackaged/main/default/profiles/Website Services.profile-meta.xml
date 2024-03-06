@@ -9209,6 +9209,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Product_Environment__c.Alerts_CP__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Product_Environment__c.Attorney_Count__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -9295,6 +9300,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Product_Environment__c.Churn_Reason__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product_Environment__c.Contact_Counts_CP__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -9394,6 +9404,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Product_Environment__c.Firm_ID_CP__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Product_Environment__c.Firm_ID_DW__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -9434,6 +9449,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Product_Environment__c.Firm_UUID_CP__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Product_Environment__c.Firm_UUID_DW__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -9460,6 +9480,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Product_Environment__c.Free_Users_Total__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product_Environment__c.Health_Score__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -9535,6 +9560,16 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Product_Environment__c.Non_Active_Named_Users__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product_Environment__c.Notes_CP__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product_Environment__c.Notes_Last_30_CP__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -9689,6 +9724,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Product_Environment__c.Stripe_Customer_ID_CP__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Product_Environment__c.Stripe_Customer_ID_DW__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -9719,7 +9759,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Product_Environment__c.Stripe_Subscription_ID_CP__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Product_Environment__c.Stripe_Subscription_ID_DW__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product_Environment__c.Stripe_Subscription_Item_ID_CP__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -9740,6 +9790,16 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Product_Environment__c.Suspended_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product_Environment__c.Templates_CP__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product_Environment__c.Texting_CP__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
