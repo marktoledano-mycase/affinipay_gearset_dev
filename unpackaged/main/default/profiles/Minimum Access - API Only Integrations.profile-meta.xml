@@ -903,6 +903,11 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
+        <recordType>Product_Environment__c.Casepeer</recordType>
+        <visible>false</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
         <recordType>Product_Environment__c.Docketwise</recordType>
         <visible>false</visible>
     </recordTypeVisibilities>
@@ -1425,6 +1430,10 @@
     <layoutAssignments>
         <layout>CaseClose-Partner Close Case Layout</layout>
         <recordType>Case.Partner</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Product_Environment__c-Casepeer Product Environment Layout</layout>
+        <recordType>Product_Environment__c.Casepeer</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Product_Environment__c-Docketwise Product Environment Layout</layout>

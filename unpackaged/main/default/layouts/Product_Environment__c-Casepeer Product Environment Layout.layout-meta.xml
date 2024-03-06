@@ -16,11 +16,11 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Firm_ID_DW__c</field>
+                <field>Firm_ID_CP__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Firm_Activation_Date__c</field>
+                <field>Firm_UUID_CP__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -51,6 +51,61 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
+        <label>Firm Details</label>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Firm_Activation_Date__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Subscription_Tier__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Total_Users__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Total_Activated_Users__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Health_Score__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Contact_Counts_CP__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Notes_CP__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Notes_Last_30_CP__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Templates_CP__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Texting_CP__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Alerts_CP__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <style>TwoColumnsLeftToRight</style>
+    </layoutSections>
+    <layoutSections>
+        <customLabel>true</customLabel>
+        <detailHeading>true</detailHeading>
+        <editHeading>true</editHeading>
         <label>Owner/Business Information</label>
         <layoutColumns>
             <layoutItems>
@@ -61,12 +116,17 @@
                 <behavior>Edit</behavior>
                 <field>Owners_Last_Name__c</field>
             </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Business_Phone__c</field>
+            </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Owners_Email__c</field>
             </layoutItems>
         </layoutColumns>
-        <layoutColumns />
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
     <layoutSections>
@@ -91,23 +151,23 @@
                 <behavior>Edit</behavior>
                 <field>Stripe_Discount__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Trial_Expiration__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Stripe_Customer_ID_DW__c</field>
+                <field>Stripe_Customer_ID_CP__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Stripe_Subscription_ID_DW__c</field>
+                <field>Stripe_Subscription_ID_CP__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Stripe_Subscription_Item_ID_DW__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Stripe_Price_ID_DW__c</field>
+                <field>Stripe_Subscription_Item_ID_CP__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -127,7 +187,7 @@
                 <field>Account__c</field>
             </layoutItems>
         </layoutColumns>
-        <layoutColumns />
+        <layoutColumns/>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
     <layoutSections>
@@ -135,8 +195,8 @@
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
         <label>Information</label>
-        <layoutColumns />
-        <layoutColumns />
+        <layoutColumns/>
+        <layoutColumns/>
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>
     <layoutSections>
@@ -179,9 +239,9 @@
         <detailHeading>false</detailHeading>
         <editHeading>true</editHeading>
         <label>Custom Links</label>
-        <layoutColumns />
-        <layoutColumns />
-        <layoutColumns />
+        <layoutColumns/>
+        <layoutColumns/>
+        <layoutColumns/>
         <style>CustomLinks</style>
     </layoutSections>
     <relatedLists>
@@ -246,7 +306,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h79000000ZUIP</masterLabel>
+        <masterLabel>00hRT0000006aGv</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>2</sizeY>
         <summaryLayoutItems>

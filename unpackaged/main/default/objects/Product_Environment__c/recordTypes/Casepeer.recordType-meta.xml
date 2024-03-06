@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Docketwise</fullName>
+    <fullName>Casepeer</fullName>
     <active>true</active>
-    <label>Docketwise</label>
+    <label>Casepeer</label>
     <picklistValues>
         <picklist>Brand__c</picklist>
         <values>
-            <fullName>Docketwise</fullName>
+            <fullName>CASEpeer</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -267,10 +267,6 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Doesn%27t have certain features that I need</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Don%E2%80%99t Know%3A Went Dark%2FNon-Payment</fullName>
             <default>false</default>
         </values>
@@ -288,10 +284,6 @@
         </values>
         <values>
             <fullName>Financial</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Has more features than I need</fullName>
             <default>false</default>
         </values>
         <values>

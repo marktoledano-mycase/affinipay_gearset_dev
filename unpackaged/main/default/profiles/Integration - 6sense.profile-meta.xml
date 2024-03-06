@@ -12435,6 +12435,10 @@
         <recordType>Product_Environment__c.Affinipay</recordType>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Product_Environment__c-Casepeer Product Environment Layout</layout>
+        <recordType>Product_Environment__c.Casepeer</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Product_Environment__c-Docketwise Product Environment Layout</layout>
         <recordType>Product_Environment__c.Docketwise</recordType>
     </layoutAssignments>
@@ -13757,6 +13761,11 @@
         <default>false</default>
         <recordType>Product_Environment__c.Affinipay</recordType>
         <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Product_Environment__c.Casepeer</recordType>
+        <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
