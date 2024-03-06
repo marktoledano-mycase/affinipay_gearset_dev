@@ -9413,6 +9413,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Product_User__c.User_ID_CP__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Product_User__c.User_ID_DW__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -9424,6 +9429,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Product_User__c.User_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product_User__c.User_UUID_CP__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
