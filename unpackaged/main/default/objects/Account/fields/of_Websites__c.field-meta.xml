@@ -3,7 +3,7 @@
     <fullName>of_Websites__c</fullName>
     <description>R152407</description>
     <externalId>false</externalId>
-    <inlineHelpText>Count of V+ Website records where Stage = Live or Site Delivered</inlineHelpText>
+    <inlineHelpText>Count of V+ Website records where Stage = Live or ReActivate Site</inlineHelpText>
     <label>Websites Enabled</label>
     <summaryFilterItems>
         <field>ValuePlus__c.RecordTypeId</field>
@@ -13,7 +13,7 @@
     <summaryFilterItems>
         <field>ValuePlus__c.Stage__c</field>
         <operation>equals</operation>
-        <value>Live, Site Delivered/Final Changes</value>
+        <value>Live, ReActivate Site</value>
     </summaryFilterItems>
     <summaryForeignKey>ValuePlus__c.Account__c</summaryForeignKey>
     <summaryOperation>count</summaryOperation>
