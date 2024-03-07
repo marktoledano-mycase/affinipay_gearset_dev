@@ -109,6 +109,45 @@
         </values>
     </picklistValues>
     <picklistValues>
+        <picklist>Service__c</picklist>
+        <values>
+            <fullName>Accounting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dev Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payments Retention</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Software Retention</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Underwriting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Websites</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
         <picklist>Survey_Category__c</picklist>
         <values>
             <fullName>Admin%2FDupe</fullName>
