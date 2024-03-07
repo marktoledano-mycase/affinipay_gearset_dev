@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <excludeButtons>DataDotComClean</excludeButtons>
     <excludeButtons>DisableCustomerPortal</excludeButtons>
     <excludeButtons>DisablePartnerPortal</excludeButtons>
     <excludeButtons>DisablePrmSuperUser</excludeButtons>
     <excludeButtons>EnablePrmSuperUser</excludeButtons>
+    <excludeButtons>RequestUseSfdc</excludeButtons>
     <excludeButtons>Share</excludeButtons>
     <layoutSections>
         <customLabel>false</customLabel>
@@ -82,6 +84,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Do_Not_Send_survey__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Assign_MQL__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -489,7 +495,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>X6sense_Employee_Range__c</field>
+                <field>X6sense_Employee_Range2__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -626,6 +632,14 @@
                 <field>mkto_si__View_in_Marketo__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Facebook_Ad_Name__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Linkedin_Ad_Name__c</field>
+            </layoutItems>
+            <layoutItems>
                 <height>450</height>
                 <page>mkto_si__Contact</page>
                 <showLabel>false</showLabel>
@@ -678,6 +692,10 @@
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Bypass_Duplicate_Rules_on_Create__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Round_Robin_Locked__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>

@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>X6sense_Employee_Range__c</fullName>
-    <description>Enriched by 6sense.</description>
+    <fullName>Email_Status__c</fullName>
     <externalId>false</externalId>
-    <label>zzz6sense Employee Range</label>
+    <label>Email Status</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
     <trackHistory>false</trackHistory>
     <type>Picklist</type>
     <valueSet>
         <restricted>true</restricted>
-        <valueSetName>X6sense_Employee_Range</valueSetName>
+        <valueSetName>Email_Status</valueSetName>
     </valueSet>
 </CustomField>
