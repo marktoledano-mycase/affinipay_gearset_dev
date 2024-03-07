@@ -3304,6 +3304,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Contact.X6sense_Employee_Range2__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Contact.X6sense_Employee_Range__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -5895,6 +5900,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Lead.X6sense_Employee_Count_Est__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.X6sense_Employee_Range2__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
