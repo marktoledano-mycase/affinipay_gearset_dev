@@ -5,7 +5,7 @@
         <name>Evaluate_for_Actions_InProgress</name>
         <label>Evaluate for Actions</label>
         <locationX>182</locationX>
-        <locationY>455</locationY>
+        <locationY>431</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Account_Requires_Docketwise_Onboarding_Status_to_be_Updated</name>
@@ -33,8 +33,8 @@
     <decisions>
         <name>Evaluate_for_Actions_Live</name>
         <label>Evaluate for Actions</label>
-        <locationX>974</locationX>
-        <locationY>455</locationY>
+        <locationX>1106</locationX>
+        <locationY>431</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Account_Docketwise_Onboarding_Status_Needs_Updating</name>
@@ -58,12 +58,41 @@
             </connector>
             <label>Account Docketwise Onboarding Status Needs Updating</label>
         </rules>
+        <rules>
+            <name>CASEPeer_Live_Status_Changed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>CASEpeer</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Data_Migration_Stage__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Live</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Data_Migration_Stage__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Live</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_CASEpeer_Live_Date</targetReference>
+            </connector>
+            <label>CASEPeer Live Status Changed</label>
+        </rules>
     </decisions>
     <decisions>
         <name>Examine_Stage</name>
         <label>Examine Stage</label>
-        <locationX>908</locationX>
-        <locationY>335</locationY>
+        <locationX>1040</locationX>
+        <locationY>323</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Somwhere_in_Progress</name>
@@ -134,7 +163,8 @@
             <label>Churned</label>
         </rules>
     </decisions>
-    <description>Examines the Onboarding object&#39;s Onboarding Stage field changes</description>
+    <description>Examines the Onboarding object&#39;s Onboarding Stage field changes
+3/7/2024: Added automation to update CASEpeer records Live Date</description>
     <environments>Default</environments>
     <interviewLabel>Onboarding Status Monitor {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Onboarding Stage Monitor</label>
@@ -161,7 +191,7 @@
         <name>Copy_1_of_Update_Account_Docketwise_Onboarding_Status_Onboarded</name>
         <label>Copy 1 of Update Account.Docketwise_Onboarding_Status = Onboarded</label>
         <locationX>842</locationX>
-        <locationY>575</locationY>
+        <locationY>539</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -182,7 +212,7 @@
         <name>Update_Account_Docketwise_Onboarding_Status_In_Progress</name>
         <label>Update Account.Docketwise_Onboarding_Status = In Progress</label>
         <locationX>50</locationX>
-        <locationY>575</locationY>
+        <locationY>539</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -199,8 +229,21 @@
         </inputAssignments>
         <object>Account</object>
     </recordUpdates>
+    <recordUpdates>
+        <name>Update_CASEpeer_Live_Date</name>
+        <label>Update CASEpeer Live Date</label>
+        <locationX>1106</locationX>
+        <locationY>539</locationY>
+        <inputAssignments>
+            <field>Live_Date__c</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
     <start>
-        <locationX>782</locationX>
+        <locationX>914</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Examine_Stage</targetReference>
