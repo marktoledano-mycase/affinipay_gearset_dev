@@ -18248,6 +18248,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Survey__c.Product_Rating_Comments__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Survey__c.Product_Rating__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Survey__c.Product_User__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -18284,6 +18294,21 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Survey__c.Seeing_the_Benefits_I_Expected__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Survey__c.Service__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Survey__c.Support_Interaction_Comments__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Survey__c.Support_Interaction_Rating__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
