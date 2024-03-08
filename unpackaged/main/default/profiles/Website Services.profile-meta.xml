@@ -829,6 +829,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Account.Oppty_with_Prohibited_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Account.Other_N_A_Explained__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -860,6 +865,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.ParentId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Partner_ID_VT__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -930,6 +940,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Account.Rating</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Record_Type_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -1069,6 +1084,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Account.X6sense_Employee_Range2__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Account.X6sense_Employee_Range__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1105,6 +1125,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Account.Year_Established__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.oAuth_App_ID__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2808,6 +2833,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Contact.Email_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Contact.Event_Brands__c</field>
         <readable>true</readable>
@@ -3065,6 +3095,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Contact.Mark_Email_as_Spam__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Contact.Marketable__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3465,6 +3500,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Contact.X6sense_Employee_Count_Est__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Contact.X6sense_Employee_Range2__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -5398,6 +5438,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.Email_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Lead.Event_Brands__c</field>
         <readable>true</readable>
@@ -5689,6 +5734,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Lead.Marketable__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Lead.Marketing_Test__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -5861,6 +5911,16 @@
         <editable>false</editable>
         <readable>false</readable>
         <field>Lead.PartnerStack_Partner_Key__c</field>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Partner_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Partner_Referral_Email__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -6115,6 +6175,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Lead.X6sense_Employee_Count_Est__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.X6sense_Employee_Range2__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -6415,6 +6480,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Merchant_Application__c.Partner_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Merchant_Application__c.Partner_Token__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -7390,6 +7460,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Opportunity.Has_Referral_Partner__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.Has_Referral_with_Prohibited_Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -8998,11 +9073,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>Partnerships__c.LawPay_Enterprise_Partnership__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>false</editable>
         <field>Partnerships__c.Legacy_Notes__c</field>
         <readable>true</readable>
@@ -9030,6 +9100,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Partnerships__c.PartnerStack_Partner_Key__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Partnerships__c.Partner_Account_has_Prohibition__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -9209,6 +9284,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Product_Environment__c.Alerts_CP__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Product_Environment__c.Attorney_Count__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -9295,6 +9375,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Product_Environment__c.Churn_Reason__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product_Environment__c.Contact_Counts_CP__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -9394,6 +9479,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Product_Environment__c.Firm_ID_CP__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Product_Environment__c.Firm_ID_DW__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -9434,6 +9524,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Product_Environment__c.Firm_UUID_CP__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Product_Environment__c.Firm_UUID_DW__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -9460,6 +9555,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Product_Environment__c.Free_Users_Total__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product_Environment__c.Health_Score__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -9535,6 +9635,16 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Product_Environment__c.Non_Active_Named_Users__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product_Environment__c.Notes_CP__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product_Environment__c.Notes_Last_30_CP__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -9689,6 +9799,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Product_Environment__c.Stripe_Customer_ID_CP__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Product_Environment__c.Stripe_Customer_ID_DW__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -9719,7 +9834,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Product_Environment__c.Stripe_Subscription_ID_CP__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Product_Environment__c.Stripe_Subscription_ID_DW__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product_Environment__c.Stripe_Subscription_Item_ID_CP__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -9740,6 +9865,16 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Product_Environment__c.Suspended_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product_Environment__c.Templates_CP__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product_Environment__c.Texting_CP__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -10019,6 +10154,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Product_User__c.User_ID_CP__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Product_User__c.User_ID_DW__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -10055,6 +10195,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Product_User__c.User_Title__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Product_User__c.User_UUID_CP__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -11054,6 +11199,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Survey__c.Product_Rating_Comments__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Survey__c.Product_Rating__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Survey__c.Product_User__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -11075,6 +11230,21 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Survey__c.Score__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Survey__c.Service__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Survey__c.Support_Interaction_Comments__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Survey__c.Support_Interaction_Rating__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -11648,6 +11818,41 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Trial_Request__c.MQA_Buying_Stage__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Trial_Request__c.MQA_Intent_Score__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Trial_Request__c.MQA_Numerical_Reach_Score__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Trial_Request__c.MQA_Profile_Fit__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Trial_Request__c.MQA_Profile_Score__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Trial_Request__c.MQA_Reach_Score__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Trial_Request__c.MQA_Segment__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Trial_Request__c.MQL_Date_Expiration__c</field>
         <readable>true</readable>
@@ -11855,6 +12060,16 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Trial_Request__c.Professional_Service_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Trial_Request__c.Qualifying_Rep_Role__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Trial_Request__c.Qualifying_Rep__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -14464,6 +14679,10 @@
         <recordType>Product_Environment__c.Affinipay</recordType>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Product_Environment__c-Casepeer Product Environment Layout</layout>
+        <recordType>Product_Environment__c.Casepeer</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Product_Environment__c-Docketwise Product Environment Layout</layout>
         <recordType>Product_Environment__c.Docketwise</recordType>
     </layoutAssignments>
@@ -15914,6 +16133,11 @@
         <default>false</default>
         <recordType>Product_Environment__c.Affinipay</recordType>
         <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Product_Environment__c.Casepeer</recordType>
+        <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>

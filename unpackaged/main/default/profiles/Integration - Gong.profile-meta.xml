@@ -594,6 +594,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Account.Oppty_with_Prohibited_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Account.Other_N_A_Explained__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -610,6 +615,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.ParentId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Partner_ID_VT__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -630,6 +640,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Primary_Practice_Area__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.Record_Type_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -774,6 +789,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Account.oAuth_App_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Account.X6sense_Account_Source__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -795,6 +815,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Account.X6sense_Employee_Count_Est__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.X6sense_Employee_Range2__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2338,6 +2363,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Contact.Email_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Contact.FBCLID__c</field>
         <readable>true</readable>
@@ -2520,6 +2550,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Contact.Mark_Email_as_Spam__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Contact.Marketable__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -2830,6 +2865,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Contact.X6sense_Employee_Count_Est__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Contact.X6sense_Employee_Range2__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -4343,6 +4383,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.Email_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Lead.FBCLID__c</field>
         <readable>true</readable>
@@ -4579,6 +4624,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Lead.Marketable__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Lead.Merchant_App_ID__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -4701,6 +4751,16 @@
         <editable>false</editable>
         <readable>false</readable>
         <field>Lead.PartnerStack_Partner_Key__c</field>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Partner_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Partner_Referral_Email__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -4950,6 +5010,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Lead.X6sense_Employee_Count_Est__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.X6sense_Employee_Range2__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -5235,6 +5300,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Merchant_Application__c.Partner_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Merchant_Application__c.Partner_Token__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -6105,6 +6175,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Opportunity.Has_Referral_Partner__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.Has_Referral_with_Prohibited_Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -7445,6 +7520,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Partnerships__c.PartnerStack_Partner_Key__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Partnerships__c.Partner_Account_has_Prohibition__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -9154,6 +9234,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Survey__c.Product_Rating_Comments__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Survey__c.Product_Rating__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Survey__c.Product_User__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -9175,6 +9265,21 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Survey__c.Score__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Survey__c.Service__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Survey__c.Support_Interaction_Comments__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Survey__c.Support_Interaction_Rating__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -9333,6 +9438,41 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Trial_Request__c.MQA_Buying_Stage__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Trial_Request__c.MQA_Intent_Score__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Trial_Request__c.MQA_Numerical_Reach_Score__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Trial_Request__c.MQA_Profile_Fit__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Trial_Request__c.MQA_Profile_Score__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Trial_Request__c.MQA_Reach_Score__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Trial_Request__c.MQA_Segment__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Trial_Request__c.MQL_Date_Expiration__c</field>
         <readable>true</readable>
@@ -9405,6 +9545,16 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Trial_Request__c.Professional_Service_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Trial_Request__c.Qualifying_Rep_Role__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Trial_Request__c.Qualifying_Rep__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -10690,6 +10840,10 @@
         <recordType>Product_Environment__c.Affinipay</recordType>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Product_Environment__c-Casepeer Product Environment Layout</layout>
+        <recordType>Product_Environment__c.Casepeer</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Product_Environment__c-Docketwise Product Environment Layout</layout>
         <recordType>Product_Environment__c.Docketwise</recordType>
     </layoutAssignments>
@@ -11700,6 +11854,11 @@
         <default>false</default>
         <recordType>Product_Environment__c.Affinipay</recordType>
         <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Product_Environment__c.Casepeer</recordType>
+        <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
