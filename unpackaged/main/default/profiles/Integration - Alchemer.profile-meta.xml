@@ -2078,6 +2078,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Contact.Email_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Contact.GCLID__c</field>
         <readable>true</readable>
@@ -2160,6 +2165,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Contact.MQL_LawPay_Pro_Trial_Started_From__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Contact.Marketable__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3873,6 +3883,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.Email_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Lead.FBCLID__c</field>
         <readable>true</readable>
@@ -4105,6 +4120,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Lead.Mark_Email_as_Spam__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.Marketable__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

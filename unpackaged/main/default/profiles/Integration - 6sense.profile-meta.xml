@@ -2704,6 +2704,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Contact.Email_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Contact.FBCLID__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -2950,6 +2955,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Contact.Mark_Email_as_Spam__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Contact.Marketable__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -5214,6 +5224,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Lead.Email_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Lead.FBCLID__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -5490,6 +5505,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Lead.Mark_Email_as_Spam__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.Marketable__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

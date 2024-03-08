@@ -2708,6 +2708,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Contact.Email_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Contact.Event_Brands__c</field>
         <readable>true</readable>
@@ -2965,6 +2970,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Contact.Mark_Email_as_Spam__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Contact.Marketable__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -5408,6 +5418,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.Email_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Lead.Event_Brands__c</field>
         <readable>true</readable>
@@ -5795,6 +5810,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Lead.Mark_Email_as_Spam__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.Marketable__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
