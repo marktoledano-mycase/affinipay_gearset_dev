@@ -71,7 +71,7 @@
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>Get_User.Name</leftValueReference>
+                <leftValueReference>Get_User.Profile.Name</leftValueReference>
                 <operator>Contains</operator>
                 <rightValue>
                     <stringValue>Integration</stringValue>
@@ -111,7 +111,8 @@
             <label>Yes is Eligible</label>
         </rules>
     </decisions>
-    <description>3/4/2024 - Updated flow to include additional eligibility and made updates to the start trigger</description>
+    <description>3/4/2024 - Updated flow to include additional eligibility and made updates to the start trigger
+3/8/2024- Updated &quot;check for eligibility&quot; decision condition 6 to {!Get_User.Profile.Name} contains Integration</description>
     <environments>Default</environments>
     <formulas>
         <name>fx_30DaysAgo</name>
@@ -230,5 +231,5 @@
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordBeforeSave</triggerType>
     </start>
-    <status>Active</status>
+    <status>Obsolete</status>
 </Flow>
