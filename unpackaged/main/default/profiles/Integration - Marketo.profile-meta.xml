@@ -1529,6 +1529,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Contact.Email_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Contact.Event_Brands__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1695,6 +1700,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Contact.MQL_LawPay_Pro_Trial_Started_From__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.Marketable__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3209,6 +3219,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Lead.Email_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Lead.Event_Brands__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -3395,6 +3410,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Lead.MQL_LawPay_Pro_Trial_Started_From__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.Marketable__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
