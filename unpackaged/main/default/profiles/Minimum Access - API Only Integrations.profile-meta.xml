@@ -737,6 +737,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Trial_Request__c.Qualifying_Rep_Role__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Trial_Request__c.Time_to_Response_Min__c</field>
         <readable>true</readable>
