@@ -411,6 +411,30 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
+                    <name>lookupFieldName</name>
+                    <value>Product_Environment__c.LawPay_Pro_Product_Environment__c</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>titleFieldName</name>
+                    <value>LawPay Pro Product Environment</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>updateQuickActionName</name>
+                    <value>Product_Environment__c.MC_Case_Product_Enviornment</value>
+                </componentInstanceProperties>
+                <componentName>console:relatedRecord</componentName>
+                <identifier>console_relatedRecord2</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.LawPay_Pro_Product_Environment__r.Firm_ID__c}</leftValue>
+                        <operator>NE</operator>
+                    </criteria>
+                </visibilityRule>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
                     <name>tabs</name>
                     <value>Facet-1a02f057-099c-4fb0-8bbe-702ae63563f1</value>
                 </componentInstanceProperties>

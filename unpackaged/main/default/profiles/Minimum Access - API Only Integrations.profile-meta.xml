@@ -523,6 +523,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Product_Environment__c.LawPay_Pro_Product_Environment__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Product_Environment__c.Notes_CP__c</field>
         <readable>true</readable>
     </fieldPermissions>
