@@ -333,7 +333,7 @@
         </defaultConnector>
         <defaultConnectorLabel>Unsupported Record Type</defaultConnectorLabel>
         <rules>
-            <name>MyCase</name>
+            <name>LawPay_Pro</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>input_Prod_Env_Record.RecordTypeId</leftValueReference>
@@ -342,7 +342,17 @@
                     <elementReference>c_MyCase_Record_Type_ID</elementReference>
                 </rightValue>
             </conditions>
-            <label>MyCase</label>
+            <conditions>
+                <leftValueReference>input_Prod_Env_Record.Brand__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>LawPay</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Evaluate_Lawpay_Pro_Linking_Process</targetReference>
+            </connector>
+            <label>LawPay Pro</label>
         </rules>
         <rules>
             <name>Affinipay</name>
@@ -455,7 +465,7 @@
             <targetReference>Current_Links</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <subflows>
         <description>Launch Product Environment: Account Linking (Step 2: Affinipay)</description>
         <name>Evaluate_Affinipay_Linking_Process</name>
@@ -478,6 +488,19 @@
         <flowName>Product_Environment_Account_Linking_Step_2_Docketwise</flowName>
         <inputAssignments>
             <name>input_Prod_Env_Record</name>
+            <value>
+                <elementReference>input_Prod_Env_Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+    <subflows>
+        <name>Evaluate_Lawpay_Pro_Linking_Process</name>
+        <label>Evaluate Lawpay Pro Linking Process</label>
+        <locationX>842</locationX>
+        <locationY>782</locationY>
+        <flowName>Product_Environment_Account_Linking_Step_2_LPP</flowName>
+        <inputAssignments>
+            <name>input_Product_Env_Record</name>
             <value>
                 <elementReference>input_Prod_Env_Record</elementReference>
             </value>
@@ -510,15 +533,5 @@
         <isInput>false</isInput>
         <isOutput>false</isOutput>
         <objectType>Product_Environment__c</objectType>
-    </variables>
-    <variables>
-        <name>var_Created_Account_ID</name>
-        <dataType>String</dataType>
-        <isCollection>false</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-        <value>
-            <stringValue></stringValue>
-        </value>
     </variables>
 </Flow>
