@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MQA_Disposition_Required__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This is checked off automatically when a BDR dispositions an MQA (on the Inbound Request) via a screen flow that displays on the Account. It is used to guide Sales to disposition MQAs easily without needing to navigate to different objects and records.</description>
+    <externalId>false</externalId>
+    <label>MQA Disposition Required</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disposition_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Disposition Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Customer Client</fullName>
+                <default>false</default>
+                <label>Customer Client</label>
+            </value>
+            <value>
+                <fullName>Do Not Contact</fullName>
+                <default>false</default>
+                <label>Do Not Contact</label>
+            </value>
+            <value>
+                <fullName>Duplicate - Existing Customer</fullName>
+                <default>false</default>
+                <label>Duplicate - Existing Customer</label>
+            </value>
+            <value>
+                <fullName>Duplicate - Open Opportunity</fullName>
+                <default>false</default>
+                <label>Duplicate - Open Opportunity</label>
+            </value>
+            <value>
+                <fullName>Is Competitor</fullName>
+                <default>false</default>
+                <label>Is Competitor</label>
+            </value>
+            <value>
+                <fullName>Junk Data</fullName>
+                <default>false</default>
+                <label>Junk Data</label>
+            </value>
+            <value>
+                <fullName>Not in ICP</fullName>
+                <default>false</default>
+                <label>Not in ICP</label>
+            </value>
+            <value>
+                <fullName>Outside of US &amp; Canada</fullName>
+                <default>false</default>
+                <label>Outside of US &amp; Canada</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
