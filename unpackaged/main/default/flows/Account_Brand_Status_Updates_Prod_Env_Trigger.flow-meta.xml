@@ -52,12 +52,26 @@
         <connector>
             <targetReference>Account_Linked</targetReference>
         </connector>
-        <filterLogic>and</filterLogic>
+        <filterLogic>or</filterLogic>
         <filters>
             <field>RecordTypeId</field>
             <operator>EqualTo</operator>
             <value>
                 <stringValue>0128W000001Dm9MQAS</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>0128W000001Dm68QAC</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>01279000000L8OmAAK</stringValue>
             </value>
         </filters>
         <object>Product_Environment__c</object>

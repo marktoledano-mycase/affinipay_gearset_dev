@@ -4,7 +4,7 @@
     <assignments>
         <name>Account_from_Account_Record</name>
         <label>Account from Account Record</label>
-        <locationX>488</locationX>
+        <locationX>1038</locationX>
         <locationY>242</locationY>
         <assignmentItems>
             <assignToReference>var_Account_ID</assignToReference>
@@ -14,13 +14,13 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Get_Affinipay_PE_Record_Type</targetReference>
+            <targetReference>Get_Account_Linked_PE</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>Account_from_Prod_Env_Record</name>
         <label>Account from Prod Env Record</label>
-        <locationX>1102</locationX>
+        <locationX>2202</locationX>
         <locationY>242</locationY>
         <assignmentItems>
             <assignToReference>var_Account_ID</assignToReference>
@@ -31,7 +31,7 @@
         </assignmentItems>
         <connector>
             <isGoTo>true</isGoTo>
-            <targetReference>Get_Affinipay_PE_Record_Type</targetReference>
+            <targetReference>Get_Account_Linked_PE</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -83,7 +83,7 @@
     <assignments>
         <name>Assign_Brand_Totals</name>
         <label>Assign Brand Totals</label>
-        <locationX>488</locationX>
+        <locationX>1038</locationX>
         <locationY>1526</locationY>
         <assignmentItems>
             <assignToReference>rv_Account_Update.Prod_Env_Count_AffiniPay__c</assignToReference>
@@ -111,6 +111,20 @@
             <operator>Assign</operator>
             <value>
                 <elementReference>count_Lawpay_Total</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rv_Account_Update.Prod_Env_Count_MyCase__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>count_MyCase_Total</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rv_Account_Update.Prod_Env_Count_Docketwise__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>count_Docketwise_Total</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -210,9 +224,78 @@
         </connector>
     </assignments>
     <assignments>
+        <name>Assign_Docketwise_Active</name>
+        <label>Assign Docketwise Active</label>
+        <locationX>4890</locationX>
+        <locationY>998</locationY>
+        <assignmentItems>
+            <assignToReference>count_Docketwise_Churned</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>count_Docketwise_Total</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_through_Records</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Docketwise_Churned</name>
+        <label>Assign Docketwise Churned</label>
+        <locationX>4626</locationX>
+        <locationY>998</locationY>
+        <assignmentItems>
+            <assignToReference>count_Docketwise_Active</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>count_Docketwise_Total</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_through_Records</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Docketwise_Prospect</name>
+        <label>Assign Docketwise Prospect</label>
+        <locationX>4362</locationX>
+        <locationY>998</locationY>
+        <assignmentItems>
+            <assignToReference>count_Docketwise_Prospect</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>count_Docketwise_Total</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_through_Records</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>Assign_ID_and_Logging</name>
         <label>Assign ID and Logging</label>
-        <locationX>488</locationX>
+        <locationX>1038</locationX>
         <locationY>1742</locationY>
         <assignmentItems>
             <assignToReference>rv_Account_Update.Id</assignToReference>
@@ -286,6 +369,52 @@
         </connector>
     </assignments>
     <assignments>
+        <name>Assign_MC_Payments_Active</name>
+        <label>Assign MC Payments Active</label>
+        <locationX>3130</locationX>
+        <locationY>998</locationY>
+        <assignmentItems>
+            <assignToReference>count_MyCase_Payments_Active</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>count_MyCase_Total</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_through_Records</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_MC_Payments_Churned</name>
+        <label>Assign MC Payments Churned</label>
+        <locationX>3394</locationX>
+        <locationY>998</locationY>
+        <assignmentItems>
+            <assignToReference>count_MyCase_Payments_Churned</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>count_MyCase_Total</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_through_Records</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <description>MedPay to be included in the Affinipay count</description>
         <name>Assign_MedPay_Active</name>
         <label>Assign MedPay Active</label>
@@ -334,9 +463,55 @@
         </connector>
     </assignments>
     <assignments>
+        <name>Assign_MyCase_Active</name>
+        <label>Assign MyCase Active</label>
+        <locationX>3658</locationX>
+        <locationY>998</locationY>
+        <assignmentItems>
+            <assignToReference>count_MyCase_Active</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>count_MyCase_Total</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_through_Records</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_MyCase_Churned</name>
+        <label>Assign MyCase Churned</label>
+        <locationX>3922</locationX>
+        <locationY>998</locationY>
+        <assignmentItems>
+            <assignToReference>count_MyCase_Churned</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>count_MyCase_Total</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_through_Records</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>Assign_Status</name>
         <label>Assign Status</label>
-        <locationX>488</locationX>
+        <locationX>1038</locationX>
         <locationY>1634</locationY>
         <assignmentItems>
             <assignToReference>rv_Account_Update.AffiniPay_Customer_Status__c</assignToReference>
@@ -366,6 +541,20 @@
                 <elementReference>f_Lawpay_Status</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rv_Account_Update.MyCase_Payments_Customer_Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>f_MC_Payments_Status</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>rv_Account_Update.Docketwise_Customer_Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>f_Docketwise_Status</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Assign_ID_and_Logging</targetReference>
         </connector>
@@ -375,6 +564,20 @@
         <dataType>String</dataType>
         <value>
             <stringValue>0128W000001Dm9MQAS</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <name>c_PE_Docketwise_RecordType_ID</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>01279000000L8OmAAK</stringValue>
+        </value>
+    </constants>
+    <constants>
+        <name>c_PE_MyCase_RecordType_ID</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>0128W000001Dm68QAC</stringValue>
         </value>
     </constants>
     <decisions>
@@ -608,9 +811,85 @@
         </rules>
     </decisions>
     <decisions>
+        <name>Docketwise_Status_Cont</name>
+        <label>Docketwise Status Cont</label>
+        <locationX>4758</locationX>
+        <locationY>890</locationY>
+        <defaultConnector>
+            <targetReference>Loop_through_Records</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Docketwise_Prospect</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>Loop_through_Records.Status__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Loop_through_Records.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>trialing</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Loop_through_Records.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>unpaid</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Docketwise_Prospect</targetReference>
+            </connector>
+            <label>Docketwise Prospect</label>
+        </rules>
+        <rules>
+            <name>Docketwise_Active</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>Loop_through_Records.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>active</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Loop_through_Records.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>past due</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Docketwise_Churned</targetReference>
+            </connector>
+            <label>Docketwise Active</label>
+        </rules>
+        <rules>
+            <name>Docketwise_Churned</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Loop_through_Records.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>canceled</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Docketwise_Active</targetReference>
+            </connector>
+            <label>Docketwise Churned</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Is_Deleted_PE</name>
         <label>Is Deleted PE</label>
-        <locationX>1260</locationX>
+        <locationX>1810</locationX>
         <locationY>674</locationY>
         <defaultConnector>
             <targetReference>PE_Record_Type</targetReference>
@@ -633,9 +912,107 @@
         </rules>
     </decisions>
     <decisions>
+        <name>MyCase_Payments_Non_Payments_Cont</name>
+        <label>MyCase Payments / Non Payments Cont</label>
+        <locationX>3658</locationX>
+        <locationY>890</locationY>
+        <defaultConnector>
+            <targetReference>Loop_through_Records</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>MC_Payments_Active</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Loop_through_Records.Payments_Enabled__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Loop_through_Records.Firm_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Customer</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_MC_Payments_Active</targetReference>
+            </connector>
+            <label>MC Payments Active</label>
+        </rules>
+        <rules>
+            <name>MC_Payments_Churned</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Loop_through_Records.Payments_Enabled__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Loop_through_Records.Firm_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Churned</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_MC_Payments_Churned</targetReference>
+            </connector>
+            <label>MC Payments Churned</label>
+        </rules>
+        <rules>
+            <name>MyCase_Active</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Loop_through_Records.Payments_Enabled__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Loop_through_Records.Firm_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Customer</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_MyCase_Active</targetReference>
+            </connector>
+            <label>MyCase Active</label>
+        </rules>
+        <rules>
+            <name>MyCase_Churned</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Loop_through_Records.Payments_Enabled__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Loop_through_Records.Firm_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Churned</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_MyCase_Churned</targetReference>
+            </connector>
+            <label>MyCase Churned</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>PE_Record_Type</name>
         <label>PE Record Type</label>
-        <locationX>2382</locationX>
+        <locationX>3482</locationX>
         <locationY>782</locationY>
         <defaultConnector>
             <targetReference>Loop_through_Records</targetReference>
@@ -656,11 +1033,48 @@
             </connector>
             <label>Affinipay</label>
         </rules>
+        <rules>
+            <name>MyCase</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Loop_through_Records.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>c_PE_MyCase_RecordType_ID</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Loop_through_Records.Brand__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>MyCase</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>MyCase_Payments_Non_Payments_Cont</targetReference>
+            </connector>
+            <label>MyCase</label>
+        </rules>
+        <rules>
+            <name>Docketwise</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Loop_through_Records.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>c_PE_Docketwise_RecordType_ID</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Docketwise_Status_Cont</targetReference>
+            </connector>
+            <label>Docketwise</label>
+        </rules>
     </decisions>
     <decisions>
         <name>PE_Records_Found</name>
         <label>PE Records Found</label>
-        <locationX>488</locationX>
+        <locationX>1038</locationX>
         <locationY>458</locationY>
         <defaultConnector>
             <targetReference>Assign_Brand_Totals</targetReference>
@@ -670,7 +1084,7 @@
             <name>YES</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Get_Affinipay_PE_Record_Type</leftValueReference>
+                <leftValueReference>Get_Account_Linked_PE</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
@@ -685,7 +1099,7 @@
     <decisions>
         <name>Record_Type</name>
         <label>Record Type</label>
-        <locationX>927</locationX>
+        <locationX>1752</locationX>
         <locationY>134</locationY>
         <defaultConnectorLabel>Unknown Trigger</defaultConnectorLabel>
         <rules>
@@ -743,11 +1157,26 @@
       IF({!count_CPACharge_Chruned} &gt;0, &quot;Churned&quot;, &quot;&quot;)),&quot;&quot;)</expression>
     </formulas>
     <formulas>
+        <name>f_Docketwise_Status</name>
+        <dataType>String</dataType>
+        <expression>IF({!count_Docketwise_Total} &gt;0, 
+   IF({!count_Docketwise_Active} &gt;0, &quot;Active&quot;, 
+      IF({!count_Docketwise_Churned} &gt;0, &quot;Churned&quot;, 
+          IF( {!count_Docketwise_Prospect} &gt;0, &quot;Prospect&quot;, &quot;&quot;))),&quot;&quot;)</expression>
+    </formulas>
+    <formulas>
         <name>f_Lawpay_Status</name>
         <dataType>String</dataType>
         <expression>IF({!count_Lawpay_Total} &gt;0, 
    IF({!count_Lawpay_Active} &gt;0, &quot;Active&quot;, 
       IF({!count_Lawpay_Chruned} &gt;0, &quot;Churned&quot;, &quot;&quot;)),&quot;&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>f_MC_Payments_Status</name>
+        <dataType>String</dataType>
+        <expression>IF({!count_MyCase_Total} &gt;0, 
+   IF({!count_MyCase_Payments_Active} &gt;0, &quot;Active&quot;, 
+      IF({!count_MyCase_Payments_Churned} &gt;0, &quot;Churned&quot;, &quot;&quot;)),&quot;&quot;)</expression>
     </formulas>
     <interviewLabel>Account: Brand Status Updates By PE {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Account: Brand Status Updates By PE</label>
@@ -756,7 +1185,7 @@
         <label>Loop through Records</label>
         <locationX>50</locationX>
         <locationY>566</locationY>
-        <collectionReference>Get_Affinipay_PE_Record_Type</collectionReference>
+        <collectionReference>Get_Account_Linked_PE</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
             <targetReference>Is_Deleted_PE</targetReference>
@@ -785,15 +1214,29 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordLookups>
-        <name>Get_Affinipay_PE_Record_Type</name>
-        <label>Get Affinipay PE Record Type</label>
-        <locationX>488</locationX>
+        <name>Get_Account_Linked_PE</name>
+        <label>Get Account Linked PE</label>
+        <locationX>1038</locationX>
         <locationY>350</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>PE_Records_Found</targetReference>
         </connector>
-        <filterLogic>and</filterLogic>
+        <filterLogic>1 AND (2 OR 3 OR 4)</filterLogic>
+        <filters>
+            <field>Account__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>var_Account_ID</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>c_PE_MyCase_RecordType_ID</elementReference>
+            </value>
+        </filters>
         <filters>
             <field>RecordTypeId</field>
             <operator>EqualTo</operator>
@@ -802,10 +1245,10 @@
             </value>
         </filters>
         <filters>
-            <field>Account__c</field>
+            <field>RecordTypeId</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>var_Account_ID</elementReference>
+                <elementReference>c_PE_Docketwise_RecordType_ID</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>false</getFirstRecordOnly>
@@ -815,13 +1258,13 @@
     <recordUpdates>
         <name>Update_Account_Record</name>
         <label>Update Account Record</label>
-        <locationX>488</locationX>
+        <locationX>1038</locationX>
         <locationY>1850</locationY>
         <inputReference>rv_Account_Update</inputReference>
     </recordUpdates>
     <runInMode>SystemModeWithoutSharing</runInMode>
     <start>
-        <locationX>801</locationX>
+        <locationX>1626</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Record_Type</targetReference>
@@ -928,6 +1371,50 @@
         </value>
     </variables>
     <variables>
+        <name>count_Docketwise_Active</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <name>count_Docketwise_Churned</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <name>count_Docketwise_Prospect</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <name>count_Docketwise_Total</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
         <name>count_Lawpay_Active</name>
         <dataType>Number</dataType>
         <isCollection>false</isCollection>
@@ -984,6 +1471,61 @@
     </variables>
     <variables>
         <name>count_MedPay_Total</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <name>count_MyCase_Active</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <name>count_MyCase_Churned</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <name>count_MyCase_Payments_Active</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <name>count_MyCase_Payments_Churned</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <name>count_MyCase_Total</name>
         <dataType>Number</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
