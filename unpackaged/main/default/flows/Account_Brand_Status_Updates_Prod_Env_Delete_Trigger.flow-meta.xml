@@ -30,7 +30,7 @@
         <connector>
             <targetReference>Update_Account_Brand_Status</targetReference>
         </connector>
-        <filterLogic>and</filterLogic>
+        <filterLogic>(1 OR 3 OR 4) AND 2</filterLogic>
         <filters>
             <field>RecordTypeId</field>
             <operator>EqualTo</operator>
@@ -43,6 +43,20 @@
             <operator>IsNull</operator>
             <value>
                 <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>0128W000001Dm68QAC</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>01279000000L8OmAAK</stringValue>
             </value>
         </filters>
         <object>Product_Environment__c</object>
