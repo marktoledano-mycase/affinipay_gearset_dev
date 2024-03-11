@@ -4,15 +4,23 @@
     <protected>false</protected>
     <values>
         <field>Assignment_Name__c</field>
-        <value xsi:type="xsd:string">0058W00000CgpMXQAZ</value>
+        <value xsi:type="xsd:string">MQL - Associations</value>
     </values>
     <values>
         <field>Assignment_Type__c</field>
-        <value xsi:type="xsd:string">User</value>
+        <value xsi:type="xsd:string">Assignment Group</value>
     </values>
     <values>
         <field>Business_Hour_Consideration__c</field>
         <value xsi:type="xsd:string">All</value>
+    </values>
+    <values>
+        <field>Enterprise2__c</field>
+        <value xsi:type="xsd:string">No</value>
+    </values>
+    <values>
+        <field>MQA_Brand__c</field>
+        <value xsi:nil="true"/>
     </values>
     <values>
         <field>MQL_Brand__c</field>
@@ -39,7 +47,7 @@
         <value xsi:nil="true"/>
     </values>
     <values>
-        <field>Qualifying_Rep_Brand__c</field>
+        <field>Qualifying_Rep_Team__c</field>
         <value xsi:nil="true"/>
     </values>
     <values>

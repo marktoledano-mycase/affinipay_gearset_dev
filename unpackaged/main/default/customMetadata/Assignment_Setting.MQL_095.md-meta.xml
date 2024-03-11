@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <label>MQL-045</label>
+    <label>MQL-095</label>
     <protected>false</protected>
     <values>
         <field>Assignment_Name__c</field>
@@ -15,12 +15,20 @@
         <value xsi:type="xsd:string">All</value>
     </values>
     <values>
-        <field>MQL_Brand__c</field>
+        <field>Enterprise2__c</field>
         <value xsi:type="xsd:string">All</value>
     </values>
     <values>
+        <field>MQA_Brand__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>MQL_Brand__c</field>
+        <value xsi:type="xsd:string">CASEpeer</value>
+    </values>
+    <values>
         <field>MQL_Product_Tier__c</field>
-        <value xsi:type="xsd:string">All</value>
+        <value xsi:nil="true"/>
     </values>
     <values>
         <field>MQL_Type__c</field>
@@ -39,7 +47,7 @@
         <value xsi:nil="true"/>
     </values>
     <values>
-        <field>Qualifying_Rep_Brand__c</field>
+        <field>Qualifying_Rep_Team__c</field>
         <value xsi:nil="true"/>
     </values>
     <values>

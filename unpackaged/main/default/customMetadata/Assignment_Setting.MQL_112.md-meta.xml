@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>MQL-112</label>
+    <protected>false</protected>
+    <values>
+        <field>Assignment_Name__c</field>
+        <value xsi:type="xsd:string">MQL - LawPay Enterprise</value>
+    </values>
+    <values>
+        <field>Assignment_Type__c</field>
+        <value xsi:type="xsd:string">Assignment Group</value>
+    </values>
+    <values>
+        <field>Business_Hour_Consideration__c</field>
+        <value xsi:type="xsd:string">All</value>
+    </values>
+    <values>
+        <field>Enterprise2__c</field>
+        <value xsi:type="xsd:string">Yes</value>
+    </values>
+    <values>
+        <field>MQA_Brand__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>MQL_Brand__c</field>
+        <value xsi:type="xsd:string">Associations</value>
+    </values>
+    <values>
+        <field>MQL_Product_Tier__c</field>
+        <value xsi:type="xsd:string">All</value>
+    </values>
+    <values>
+        <field>MQL_Type__c</field>
+        <value xsi:type="xsd:string">Demo Request</value>
+    </values>
+    <values>
+        <field>Max_Demographic_Score__c</field>
+        <value xsi:type="xsd:double">9999.0</value>
+    </values>
+    <values>
+        <field>Min_Demographic_Score__c</field>
+        <value xsi:type="xsd:double">-9999.0</value>
+    </values>
+    <values>
+        <field>Opportunity_Brand__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Qualifying_Rep_Team__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Send_Slack_Alert__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Slack_ID__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Type__c</field>
+        <value xsi:type="xsd:string">MQL</value>
+    </values>
+</CustomMetadata>
