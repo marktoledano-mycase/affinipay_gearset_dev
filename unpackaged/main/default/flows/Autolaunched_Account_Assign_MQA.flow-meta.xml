@@ -851,12 +851,6 @@ IF(
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>MQA_Disposition_Required__c</field>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>OwnerId</field>
             <value>
                 <elementReference>Get_Assignment_Group_Member.var_AssignmentGroupMemberUserID</elementReference>
@@ -891,12 +885,6 @@ IF(
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>MQA_Disposition_Required__c</field>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>OwnerId</field>
             <value>
                 <elementReference>Get_Assignment_Settings.var_AssignmentName</elementReference>
@@ -911,7 +899,7 @@ IF(
             <targetReference>Get_Account</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <subflows>
         <name>Get_Assignment_Group_Member</name>
         <label>Get Assignment Group Member</label>
@@ -1084,17 +1072,17 @@ IF(
         <text>:error-triangle: *MQA Assignment Failure*
 
 &gt; *What* 
-&gt; An MQA assignment for &lt;{!$Setup.Instance_Configuration__c.Instance_URL__c}/{!var_AccountId}|{!Get_Account.Name}&gt; was triggered based on Last MQA Date; however, it&#39;s missing Last MQA Brand, which is required to assign the record (and blank values are not supported).
-&gt;
+&gt; An MQA assignment for &lt;{!$Setup.Instance_Configuration__c.Instance_URL__c}/{!var_AccountId}|{!Get_Account.Name}&gt; was triggered based on Last MQA Date; however, it&#39;s missing key attributes (Last MQA Brand) to assign the record.
+ 
+&gt; *Last MQA Brand:* {!Get_Account.Last_MQA_Brand__c} 
 &gt; :salesforce-2: &lt;{!$Setup.Instance_Configuration__c.Instance_URL__c}/{!var_AccountId}|View in Salesforce&gt;
 &gt;
 &gt; *Impact*
-&gt; * The Inbound Request was not created and the Account was not assigned.
+&gt; The record was not assigned because these fields are used in the assignment logic (and blank values are not supported).
 &gt; 
 &gt; *Investigation Required*
-&gt; 1. Update the Last MQA Brand field.
-&gt; 2. Update Assign MQA to true. Based on this, Workato will trigger the assignment logic and Inbound Request creation (this automation is not real-time, and instead runs every 15 minutes).
-&gt; 3. Review the scenario with Business Systems to ensure that data from the 6sense Account Score record is stamped on the MQA fields on the Account as expected.</text>
+&gt; 1. Assign the record to the relevant user.
+&gt; 2. Review the scenario with Business Systems to ensure that 6sense data (from the 6sense Account Score object) is stamped appropriately on the MQA fields on the Account.</text>
     </textTemplates>
     <textTemplates>
         <name>txt_SlackMessageMissingSlackIDAssignmentGroupMember</name>
@@ -1108,12 +1096,11 @@ IF(
 &gt; &lt;{!$Setup.Instance_Configuration__c.Instance_URL__c}/{!Get_Assignment_Group_Member.var_AssignmentGroupMemberUserID} |{!Get_Assignment_Group_Member.var_AssignmentGroupMemberUserName}&gt; 
 &gt; 
 &gt; *Impact*
-&gt; The Inbound Request was created and the record was assigned; however, the Slack notification did not fire.
+&gt; The record was assigned; however, the Slack notification did not fire.
 &gt; 
 &gt; *Investigation Required*
-&gt; 1. Alert the user of the MQA.
-&gt; 2. Add the user&#39;s Slack ID in Salesforce. 
-&gt; 3. Escalate this to Business Systems to address the root cause and prevent it from happening again.</text>
+&gt; 1. Add the user&#39;s Slack ID in Salesforce.
+&gt; 2. Escalate this to Business Systems to address the root cause and prevent it from happening again.</text>
     </textTemplates>
     <textTemplates>
         <name>txt_SlackMessageToChannel</name>
@@ -1169,22 +1156,17 @@ IF(
         <name>txt_SlackMessageUnhandledFault</name>
         <isViewedAsPlainText>true</isViewedAsPlainText>
         <text>:error-triangle: *MQA Assignment Failure*
-
 &gt; *What* 
 &gt; An unhandled fault occurred.
 &gt; 
 &gt; :salesforce-2: &lt;{!$Setup.Instance_Configuration__c.Instance_URL__c}/{!var_AccountId} |View in Salesforce&gt;
 &gt; 
-&gt; *Impact*
-&gt; Unknown. Depending on the nature of the fault, the Inbound Request may or may not have been created, and the record may or may not have been assigned.
-&gt;
 &gt; *Fault Message*
 &gt; {!$Flow.FaultMessage}
 &gt; 
 &gt; *Investigation Required*
-&gt; 1. Review the scenario to assess the impact.
-&gt; 2. If need be, re-trigger the automation to assign the record and create the Inbound Request.
-&gt; 3. Review the scenario with Business Systems to address the root cause of the error.</text>
+&gt; 1. Assign the record to the relevant user.
+&gt; 2. Review the scenario with Marketing Operations to ensure that MQA fields are populated for all MQAs.</text>
     </textTemplates>
     <variables>
         <name>var_AccountId</name>
