@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MQL_Within_Business_Hours__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is calculated and populated by CRM Analytics.  It indicates whether the MQL occurred between 9 am ET to 5 pm PT.</description>
+    <externalId>false</externalId>
+    <label>MQL Within Business Hours?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>
