@@ -4,9 +4,31 @@
     <decisions>
         <name>Account_Changed_Type</name>
         <label>Account Changed Type</label>
-        <locationX>666</locationX>
+        <locationX>490</locationX>
         <locationY>323</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>No_Account</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Account__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Run_Flag_Set</targetReference>
+            </connector>
+            <label>No Account</label>
+        </rules>
         <rules>
             <name>New_Account_Added</name>
             <conditionLogic>and</conditionLogic>
@@ -113,8 +135,8 @@
     <decisions>
         <name>Run_Flag_Set</name>
         <label>Run Flag Set</label>
-        <locationX>974</locationX>
-        <locationY>539</locationY>
+        <locationX>490</locationX>
+        <locationY>731</locationY>
         <defaultConnectorLabel>No</defaultConnectorLabel>
         <rules>
             <name>Yes</name>
@@ -158,8 +180,8 @@
     <recordUpdates>
         <name>Reset_Flag</name>
         <label>Reset Flag</label>
-        <locationX>842</locationX>
-        <locationY>647</locationY>
+        <locationX>358</locationX>
+        <locationY>839</locationY>
         <inputAssignments>
             <field>Run_Account_Status_Review__c</field>
             <value>
@@ -169,12 +191,12 @@
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <start>
-        <locationX>540</locationX>
+        <locationX>364</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Account_Changed_Type</targetReference>
         </connector>
-        <filterLogic>1 AND  (2 OR 3 OR 4 OR (5 AND 6) )</filterLogic>
+        <filterLogic>(1 OR 7 OR 8) AND (2 OR 3 OR 4 OR (5 AND 6) )</filterLogic>
         <filters>
             <field>RecordTypeId</field>
             <operator>EqualTo</operator>
@@ -217,6 +239,20 @@
                 <booleanValue>true</booleanValue>
             </value>
         </filters>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>0128W000001Dm68QAC</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>01279000000L8OmAAK</stringValue>
+            </value>
+        </filters>
         <object>Product_Environment__c</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
@@ -228,6 +264,9 @@
         <label>Update Added Account</label>
         <locationX>50</locationX>
         <locationY>431</locationY>
+        <connector>
+            <targetReference>Run_Flag_Set</targetReference>
+        </connector>
         <flowName>Account_Brand_Status_Updates_By_PE</flowName>
         <inputAssignments>
             <name>input_Product_Env_Record</name>
@@ -257,7 +296,7 @@
         <description>Account: Brand Status Updates By PE</description>
         <name>Update_Current_Account3</name>
         <label>Update Current Account</label>
-        <locationX>974</locationX>
+        <locationX>842</locationX>
         <locationY>431</locationY>
         <connector>
             <targetReference>Run_Flag_Set</targetReference>
@@ -276,6 +315,9 @@
         <label>Update Removed Account</label>
         <locationX>314</locationX>
         <locationY>431</locationY>
+        <connector>
+            <targetReference>Run_Flag_Set</targetReference>
+        </connector>
         <flowName>Account_Brand_Status_Updates_By_PE</flowName>
         <inputAssignments>
             <name>input_Product_Env_Record</name>
@@ -290,6 +332,9 @@
         <label>Update Removed Account</label>
         <locationX>578</locationX>
         <locationY>539</locationY>
+        <connector>
+            <targetReference>Run_Flag_Set</targetReference>
+        </connector>
         <flowName>Account_Brand_Status_Updates_By_PE</flowName>
         <inputAssignments>
             <name>input_Product_Env_Record</name>
