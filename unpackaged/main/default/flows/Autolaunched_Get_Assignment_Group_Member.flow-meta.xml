@@ -4,7 +4,7 @@
         <name>act_GetAssignmentGroupMembers</name>
         <label>Get Assignment Group Members</label>
         <locationX>226</locationX>
-        <locationY>614</locationY>
+        <locationY>542</locationY>
         <actionName>ExecuteSOQL</actionName>
         <actionType>apex</actionType>
         <connector>
@@ -18,17 +18,19 @@
         <inputParameters>
             <name>soqlQuery</name>
             <value>
-                <stringValue>SELECT Id,User__c,User_Name__c,User_Slack_ID__c FROM Assignment_Group_Member__c WHERE Assignment_Group_Name__c = &#39;{!var_AssignmentGroupName}&#39; AND Is_Active__c = TRUE AND IsDeleted = FALSE AND Min_Number_of_Employees__c &lt;= {!fx_NumberOfEmployees} ORDER BY Min_Number_of_Employees__c DESC, Last_Assignment__C ASC LIMIT 1</stringValue>
+                <stringValue>SELECT Id,User__c,User_Name__c,User_Slack_ID__c,User_Role_Name__c FROM Assignment_Group_Member__c WHERE Assignment_Group_Name__c = &#39;{!var_AssignmentGroupName}&#39; AND Is_Active__c = TRUE AND IsDeleted = FALSE AND Min_Number_of_Employees__c &lt;= {!fx_NumberOfEmployees} ORDER BY Min_Number_of_Employees__c DESC, Last_Assignment__C ASC LIMIT 1</stringValue>
             </value>
         </inputParameters>
+        <nameSegment>ExecuteSOQL</nameSegment>
         <storeOutputAutomatically>true</storeOutputAutomatically>
+        <versionSegment>1</versionSegment>
     </actionCalls>
     <apiVersion>56.0</apiVersion>
     <assignments>
         <name>asg_AssignmentGroupMemberCount</name>
         <label>Assign Assignment Group Member Count</label>
         <locationX>226</locationX>
-        <locationY>734</locationY>
+        <locationY>650</locationY>
         <assignmentItems>
             <assignToReference>var_AssignmentGroupMemberCount</assignToReference>
             <operator>AssignCount</operator>
@@ -44,7 +46,7 @@
         <name>asg_NumberOfEmployees</name>
         <label>Assign Number Of Employees</label>
         <locationX>94</locationX>
-        <locationY>278</locationY>
+        <locationY>242</locationY>
         <assignmentItems>
             <assignToReference>var_NumberOfEmployees</assignToReference>
             <operator>Assign</operator>
@@ -60,7 +62,7 @@
         <name>asg_NumberOfEmployeesToText</name>
         <label>Assign Number of Employees to Text</label>
         <locationX>226</locationX>
-        <locationY>494</locationY>
+        <locationY>434</locationY>
         <assignmentItems>
             <assignToReference>var_NumberOfEmployeesText</assignToReference>
             <operator>Assign</operator>
@@ -76,7 +78,7 @@
         <name>asg_Variables</name>
         <label>Assign Variables</label>
         <locationX>490</locationX>
-        <locationY>1094</locationY>
+        <locationY>974</locationY>
         <assignmentItems>
             <assignToReference>var_AssignmentGroupMemberID</assignToReference>
             <operator>Assign</operator>
@@ -105,6 +107,13 @@
                 <elementReference>loop_AssignmentGroupMembers.User_Slack_ID__c</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>var_AssignmentGroupMemberUserRoleName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>loop_AssignmentGroupMembers.User_Role_Name__c</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>loop_AssignmentGroupMembers</targetReference>
         </connector>
@@ -113,7 +122,7 @@
         <name>dec_CheckCount</name>
         <label>Check Count</label>
         <locationX>226</locationX>
-        <locationY>854</locationY>
+        <locationY>758</locationY>
         <defaultConnector>
             <targetReference>loop_AssignmentGroupMembers</targetReference>
         </defaultConnector>
@@ -145,7 +154,7 @@
         <name>dec_NumberOfEmployeesIsNullOrNegative</name>
         <label>Number Of Employees Is Null or Negative</label>
         <locationX>226</locationX>
-        <locationY>158</locationY>
+        <locationY>134</locationY>
         <defaultConnector>
             <targetReference>asg_NumberOfEmployeesToText</targetReference>
         </defaultConnector>
@@ -190,7 +199,7 @@
         <name>loop_AssignmentGroupMembers</name>
         <label>Loop</label>
         <locationX>402</locationX>
-        <locationY>974</locationY>
+        <locationY>866</locationY>
         <collectionReference>act_GetAssignmentGroupMembers.sObjects</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -223,7 +232,7 @@
         <name>up_AssignmentGroupMember</name>
         <label>Update Assignment Group Member</label>
         <locationX>402</locationX>
-        <locationY>1310</locationY>
+        <locationY>1166</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -253,7 +262,7 @@
         <name>sub_SendSlackMessage</name>
         <label>Send Slack Message</label>
         <locationX>50</locationX>
-        <locationY>974</locationY>
+        <locationY>866</locationY>
         <flowName>Autolaunched_Send_Slack_Message</flowName>
         <inputAssignments>
             <name>var_SlackConversationID</name>
@@ -315,6 +324,13 @@
     </variables>
     <variables>
         <name>var_AssignmentGroupMemberUserName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>var_AssignmentGroupMemberUserRoleName</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
