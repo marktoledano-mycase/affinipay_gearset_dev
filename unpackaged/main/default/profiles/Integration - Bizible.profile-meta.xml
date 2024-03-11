@@ -9398,6 +9398,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Trial_Request__c.MQL_Within_Business_Hours__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Trial_Request__c.Marketing_Campaign__c</field>
         <readable>true</readable>
