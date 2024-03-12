@@ -85,6 +85,10 @@
                 <behavior>Edit</behavior>
                 <field>Marketable__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Test_Lead__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
