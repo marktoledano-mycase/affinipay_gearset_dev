@@ -2263,6 +2263,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Lead.Test_Lead__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Lead.X6sense_Account_Source__c</field>
         <readable>true</readable>
     </fieldPermissions>
