@@ -851,6 +851,12 @@ IF(
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>MQA_Disposition_Required__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>OwnerId</field>
             <value>
                 <elementReference>Get_Assignment_Group_Member.var_AssignmentGroupMemberUserID</elementReference>
@@ -882,6 +888,12 @@ IF(
             <field>Assign_MQA__c</field>
             <value>
                 <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>MQA_Disposition_Required__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
             </value>
         </inputAssignments>
         <inputAssignments>
