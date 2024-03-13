@@ -23,6 +23,11 @@
                 <label>Do Not Contact</label>
             </value>
             <value>
+                <fullName>Foreign Lead</fullName>
+                <default>false</default>
+                <label>Foreign Lead</label>
+            </value>
+            <value>
                 <fullName>Is Competitor</fullName>
                 <default>false</default>
                 <label>Is Competitor</label>
