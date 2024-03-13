@@ -4,7 +4,11 @@
     <email>salesforce@mycase.com</email>
     <name>LawPay Customer Feedback</name>
     <queueMembers>
-        
+        <users>
+            <user>curtis.vandergriendt@mycase.com.newco</user>
+            <user>leiasa.horanic@mycase.com</user>
+            <user>tressa.schultze@mycase.com.newco</user>
+        </users>
     </queueMembers>
     <queueSobject>
         <sobjectType>Case</sobjectType>
