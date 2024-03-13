@@ -2251,16 +2251,21 @@
                 <componentName>flexipage:tabset</componentName>
                 <identifier>flexipage_tabset5</identifier>
                 <visibilityRule>
-                    <booleanFilter>1 OR 2</booleanFilter>
+                    <booleanFilter>1 OR 2 OR 3</booleanFilter>
                     <criteria>
                         <leftValue>{!Record.Record_Type_Name__c}</leftValue>
                         <operator>EQUAL</operator>
                         <rightValue>Websites</rightValue>
                     </criteria>
                     <criteria>
-                        <leftValue>{!Record.Type}</leftValue>
+                        <leftValue>{!Record.Record_Type_Name__c}</leftValue>
                         <operator>EQUAL</operator>
-                        <rightValue>Upsell</rightValue>
+                        <rightValue>CASEpeer</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!Record.Owner_Name__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>Alyssa Baltodano</rightValue>
                     </criteria>
                 </visibilityRule>
             </componentInstance>
