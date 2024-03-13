@@ -2,11 +2,16 @@
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Other_N_A_Explained</fullName>
     <active>true</active>
-    <errorConditionFormula>AND(
-     $Permission.Bypass_Defined_VR_s = FALSE,
-    INCLUDES( Strategy_Used_to_Retain__c, &quot;Other - see explanation&quot;),
-    ISBLANK( Other_N_A_Explained__c )
-    )</errorConditionFormula>
+    <errorConditionFormula>$Permission.Bypass_Defined_VR_s = FALSE &amp;&amp;
+
+(
+    ISNEW() ||
+    ISCHANGED(Strategy_Used_to_Retain__c) ||
+    ISCHANGED(Other_N_A_Explained__c)
+) &amp;&amp;
+
+INCLUDES(Strategy_Used_to_Retain__c, &quot;Other - see explanation&quot;) &amp;&amp;
+ISBLANK(Other_N_A_Explained__c)</errorConditionFormula>
     <errorDisplayField>Other_N_A_Explained__c</errorDisplayField>
     <errorMessage>Strategy Used to Retain value includes Other.  Please provide the other approach.</errorMessage>
 </ValidationRule>
