@@ -92,6 +92,11 @@
         <label>Pay-Per-Lead</label>
     </standardValue>
     <standardValue>
+        <fullName>Print Ad</fullName>
+        <default>false</default>
+        <label>Print Ad</label>
+    </standardValue>
+    <standardValue>
         <fullName>Product</fullName>
         <default>false</default>
         <label>Product</label>

@@ -1719,10 +1719,6 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>File Vine</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Firm Central</fullName>
             <default>false</default>
         </values>
@@ -1808,10 +1804,6 @@
         </values>
         <values>
             <fullName>PhoneSlips</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Practice Panther</fullName>
             <default>false</default>
         </values>
         <values>
@@ -2557,6 +2549,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Print Ad</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Product</fullName>
             <default>false</default>
         </values>
@@ -2750,6 +2746,10 @@
         </values>
         <values>
             <fullName>Surcharging</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>eCheck%2FACH Processing</fullName>
             <default>false</default>
         </values>
     </picklistValues>
