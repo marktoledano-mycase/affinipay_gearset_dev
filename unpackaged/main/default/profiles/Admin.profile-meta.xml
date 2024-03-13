@@ -2246,6 +2246,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Account.Partner_Software_Non_Compete_Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Account.Partner_Status_Overall__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -2752,6 +2757,16 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Sign_Up_Temp__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Software_Non_Compete_Expiry_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Software_Non_Compete_in_Effect__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
