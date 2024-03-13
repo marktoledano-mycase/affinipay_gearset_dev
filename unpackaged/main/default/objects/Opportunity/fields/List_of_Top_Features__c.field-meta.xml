@@ -236,6 +236,11 @@
                 <default>false</default>
                 <label>Workflow Automation</label>
             </value>
+            <value>
+                <fullName>eCheck/ACH Processing</fullName>
+                <default>false</default>
+                <label>eCheck/ACH Processing</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
     <visibleLines>4</visibleLines>

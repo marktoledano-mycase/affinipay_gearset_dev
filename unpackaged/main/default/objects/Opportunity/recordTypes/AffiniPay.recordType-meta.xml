@@ -2811,6 +2811,10 @@
             <fullName>Surcharging</fullName>
             <default>false</default>
         </values>
+        <values>
+            <fullName>eCheck%2FACH Processing</fullName>
+            <default>false</default>
+        </values>
     </picklistValues>
     <picklistValues>
         <picklist>Live__c</picklist>
